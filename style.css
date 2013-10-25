@@ -71,3 +71,11 @@ h1,
 #top a {
     color: #fff;
 }
+
+#bottom .content {
+    padding: 6px;
+}
+
+#copy {
+    margin: 6px;
+}
