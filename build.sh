@@ -1,6 +1,5 @@
 #!/bin/bash
 files=(
-    bg.png
     favicon.ico
     index.html
     resume.pdf
