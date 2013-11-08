@@ -28,8 +28,8 @@ module.exports = function(grunt) {
                             'resume.pdf',
                             'style.css',
                             'index.html',
-                            'favicon.ico'
-
+                            'favicon.ico',
+                            'img/'
                         ],
                         dest: 'dist/'
                     }
