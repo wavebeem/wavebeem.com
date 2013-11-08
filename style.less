@@ -1,6 +1,34 @@
+@footer_fg: #babdb6;
+@footer_bg: #555753;
+@normal_fg: #555753;
+@normal_bg: #eeeeec;
+@header_bg: #4e9a06;
+@h2_fg:     #babdb6;
+@link_fg:   #4e9a06;
+
+@image_bg:  fade(black, 10%);
+@image_fg:  black;
+
+@caption_bg:  fade(black, 30%);
+@caption_fg:  white;
+@caption_ts:  0px 0px 4px black;
+
+@code_fg: #d3d7cf;
+@code_bg: #2e3436;
+
+@header_fg: fade(white, 75%);
+@header_h2: fade(white, 85%);
+@header_link: white;
+
+@max_width: 800px;
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background: #d3d7cf;
-    color:      #555753;
+    background: @footer_bg;
+    color:      @footer_fg;
 
     font-family:
         "Calibri",
@@ -13,6 +41,45 @@ body {
     font-size: 18px;
 }
 
+img,
+code {
+    border-radius: 4px;
+}
+
+img {
+    width: 100%;
+}
+
+.group {
+    img {
+        width: 40%;
+        display: inline-block;
+    }
+}
+
+code {
+    display: block;
+    white-space: pre-wrap;
+    text-align: left;
+
+    font-family:
+        "Menlo",
+        "Consolas",
+        "DejaVu Sans Mono",
+        "BitStream Vera Sans Mono",
+        "Lucida Console",
+        monospace;
+
+    // border: 3px solid fade(white, 30%);
+
+    font-size: 90%;
+
+    padding: 6px;
+
+    background: @code_bg;
+    color:      @code_fg;
+}
+
 html,
 body {
     padding: 0px;
@@ -21,21 +88,26 @@ body {
 
 #top h2,
 #top {
-    background: #4e9a06;
-    color: rgba(255, 255, 255, 0.75);
+    background: @header_bg;
+    color:      @header_fg;
 }
 
 #top h2 {
-    color: rgba(255, 255, 255, 0.85);
+    color: @header_h2;
 }
 
-#middle {
-    background: #eeeeec;
+#middle.chunk {
+    background: @normal_bg;
+    color:      @normal_fg;
+}
+
+#middle h2,
+h1 {
+    float: right;
 }
 
 h1 {
     margin-top: 0px;
-    float: right;
 }
 
 h1 { font-size: 32px; }
@@ -48,13 +120,18 @@ h3 { font-size: 20px; }
 
 .content {
     padding: 16px;
-    max-width: 600px;
+
+    &,
+    & img {
+        max-width: @max_width;
+    }
+
     display: inline-block;
     text-align: left;
 }
 
 a {
-    color: #4e9a06;
+    color: @link_fg;
     text-decoration: underline;
 }
 
@@ -64,12 +141,17 @@ h3 a {
 }
 
 h2 {
-    color: #babdb6;
+    color: @h2_fg;
 }
 
 h1,
+#bottom a,
 #top a {
-    color: #fff;
+    color: @header_link;
+}
+
+#middle {
+    padding-bottom: 0.50em;
 }
 
 #bottom .content {

@@ -7,7 +7,10 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         watch: {
             files: ['style.less'],
-            tasks: ['clear', 'default']
+            tasks: ['clear', 'default'],
+            options: {
+                spawn: false
+            }
         },
         less: {
             style: {
