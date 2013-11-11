@@ -63,7 +63,6 @@ module.exports = function(grunt) {
                             'style.css',
                             'index.html',
                             'favicon.ico',
-                            'img/*'
                         ],
                         dest: 'dist/'
                     }
