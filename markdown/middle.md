@@ -14,18 +14,18 @@ I have blogged extensively about its development at
 
 ```
 procedure bubble_sort xs
-swapped := true
-while swapped
-  swapped := false
-  for i from 2 to #xs
-    if xs@(i - 1) &lt; xs@i
-      swap xs, i - 1, i
-      swapped := true
+    swapped := true
+    while swapped
+      swapped := false
+      for i from 2 to #xs
+        if xs@(i - 1) < xs@i
+          swap xs, i - 1, i
+          swapped := true
 
 procedure swap xs, i, j
-temp := xs@i
-xs@i := xs@j
-xs@j := temp
+    temp := xs@i
+    xs@i := xs@j
+    xs@j := temp
 
 xs := [3, 4, 5, 1, 2]
 bubble_sort xs
