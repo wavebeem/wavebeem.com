@@ -9,120 +9,85 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <div id="top" class="chunk">
-    <div class="content">
-      <h1><a href="mailto:mock.brian@gmail.com">Brian Mock</a></h1>
-      <h2>About Me</h2>
-      <p>
-        I'm a computer programmer, wannabe designer, game player, and music
-        lover.  In my free time, I like to make things. Below is an abridged
-        list of some of the cool things I've created or contributed to.
-      </p>
-      <p>
-        You can view
-        <a href="resume.pdf">my resume</a>
-        in PDF format.
-      </p>
-    </div>
-  </div>
 
-  <div id="middle" class="chunk">
-    <div class="content">
-      <h2>Cool Stuff</h2>
+<div id="top" class="chunk">
+<div class="content">
+<h1 id="-brian-mock-email-"><a href="mailto:mock.brian@gmail.com">Brian Mock</a></h1>
+<h2 id="about-me">About Me</h2>
+<p>I&#39;m a computer programmer, wannabe designer, game player, and music
+lover.  In my free time, I like to make things. Below is an abridged
+list of some of the cool things I&#39;ve created or contributed to.</p>
+<p>You can view <a href="resume.pdf">my resume</a> in PDF format.</p>
 
-      <h3><a href="http://lattescript.mockbrian.com">LatteScript</a></h3>
-      <p>
-        I love learning new programming languages, and I had an absolute blast
-        making one!  LatteScript is an educational programming language and
-        environment for use in web browsers. The syntax was inspired by Pascal
-        and Python, and it was designed to be as minimal as possible for ease
-        of learning.
-        <a href="http://lattescript.mockbrian.com/">You can try it out here</a>.
-        I have blogged extensively about its development at
-        <a href="http://lattescript.blogspot.com/"> the LatteScript blog</a>.
-        The
-        <a href="https://github.com/saikobee/lattescript/">source code is on GitHub</a>.
-      </p>
 
-<code>procedure bubble_sort xs
-  swapped := true
-  while swapped
-    swapped := false
-    for i from 2 to #xs
-      if xs@(i - 1) &lt; xs@i
-        swap xs, i - 1, i
-        swapped := true
+</div>
+</div>
+
+<div id="middle" class="chunk">
+<div class="content">
+<h2 id="cool-stuff">Cool Stuff</h2>
+<h3 id="-lattescript-ls-"><a href="http://lattescript.mockbrian.com">LatteScript</a></h3>
+<p>I love learning new programming languages, and I had an absolute blast
+making one!  LatteScript is an educational programming language and
+environment for use in web browsers. The syntax was inspired by Pascal
+and Python, and it was designed to be as minimal as possible for ease
+of learning.</p>
+<p><a href="http://lattescript.mockbrian.com">You can try it out here</a>.
+I have blogged extensively about its development at
+<a href="http://lattescript.blogspot.com/">the LatteScript blog</a> The <a href="https://github.com/saikobee/lattescript/">source code is on GitHub</a></p>
+<pre><code>procedure bubble_sort xs
+swapped := true
+while swapped
+  swapped := false
+  for i from 2 to #xs
+    if xs@(i - 1) &amp;lt; xs@i
+      swap xs, i - 1, i
+      swapped := true
 
 procedure swap xs, i, j
-  temp := xs@i
-  xs@i := xs@j
-  xs@j := temp
+temp := xs@i
+xs@i := xs@j
+xs@j := temp
 
 xs := [3, 4, 5, 1, 2]
 bubble_sort xs
-print xs</code>
+print xs</code></pre>
+<h3 id="-algebra-card-clutter-acc-"><a href="https://itunes.apple.com/us/app/algebra-card-clutter/id549330499">Algebra Card Clutter</a></h3>
+<p>I co-developed <a href="https://itunes.apple.com/us/app/algebra-card-clutter/id549330499">Algebra Card Clutter</a>
+for the <a href="http://www.algebraicthinking.org/">Center for Algebraic Thinking</a>.</p>
+<p>We were given a roughly two-sentence description of what the card game
+was like, and wrote a proposal about how we envisioned the game and how
+long we expected development to take.</p>
+<p>The app is a card game where you sort a deck of expressions without
+having to actually calculate the values. It helps develop quick
+mathematical reasoning about the relative sizes of various expressions,
+such as fractions, square roots, and exponents.</p>
+<p>We created all the levels, all the art, and programmed the entire app
+from scratch in around a month.</p>
+<p>The app is available for free on the App Store, only on iPad.</p>
+<!-- [![Algebra Card Clutter title screen][accTitle]][acc]-->
 
-      <h3><a href="https://itunes.apple.com/us/app/algebra-card-clutter/id549330499"
-      >Algebra Card Clutter</a></h3>
-      <p>
-        I co-developed <a href="https://itunes.apple.com/us/app/algebra-card-clutter/id549330499"
-        >Algebra Card Clutter</a>
-        for the <a href="http://www.algebraicthinking.org/"
-        >Center for Algebraic Thinking</a>.
-      </p>
-      <p>
-        We were given a roughly two-sentence description of what the card game
-        was like, and wrote a proposal about how we envisioned the game and how
-        long we expected development to take.
-      </p>
-      <p>
-        The app is a card game where you sort a deck of expressions without
-        having to actually calculate the values. It helps develop quick
-        mathematical reasoning about the relative sizes of various expressions,
-        such as fractions, square roots, and exponents.
-      </p>
-      <p>
-        We created all the levels, all the art, and programmed the entire app
-        from scratch in around a month.
-      </p>
-      <p>
-        The app is available for free on the App Store, only on iPad.
-      </p>
-      <a href="https://itunes.apple.com/us/app/algebra-card-clutter/id549330499"
-      ><img src="img/algebra-card-clutter.png"></a>
-
-      <h3><a href="https://github.com/saikobee/pypixel"
-      >pypixel</a></h3>
-      <p>
-        I learned programming using the graphics API in QBasic. It was
-        extremely simple, but perfect for a beginning programmer. Obviously
-        QBasic is of little use to a modern-day programmer, so I decided to
-        create a library for Python in the same spirit as QBasic graphics.
-      </p>
-      <p>
-        I spoke about this project at the SuperQuest Spring Conference in 2011.
-        You can watch a video of my presentation on
-        <a href="http://vimeo.com/20999218"
-        >Vimeo</a>.
-      </p>
-
-<code>from pypixel import *
+<h3 id="-pypixel-pypixel-"><a href="https://github.com/saikobee/pypixel">pypixel</a></h3>
+<p>I learned programming using the graphics API in QBasic. It was
+extremely simple, but perfect for a beginning programmer. Obviously
+QBasic is of little use to a modern-day programmer, so I decided to
+create a library for Python in the same spirit as QBasic graphics.</p>
+<p>I spoke about <a href="https://github.com/saikobee/pypixel">this project</a> at the SuperQuest Spring Conference in 2011.
+You can watch a video of my presentation on <a href="http://vimeo.com/20999218">Vimeo</a>.</p>
+<pre><code class="lang-python">from pypixel import *
 show()
-circle(RED, (WIDTH/2, HEIGHT/2), HEIGHT/2)
+center = (WIDTH/2, HEIGHT/2)
+radius = HEIGHT/2
+circle(RED, center, radius)
 update()
-pause()</code>
-
-      <p>
-        Compare this what is actually being abstracted away from the underlying
-        <a href="http://www.pygame.org/news.html"
-        >PyGame</a> library:
-      </p>
-
-<code>import pygame
+pause()</code></pre>
+<p>Compare this what is actually being abstracted away from the underlying
+<a href="http://www.pygame.org/news.html">PyGame</a> library:</p>
+<pre><code class="lang-python">import pygame
 SIZE  = (640, 480)
 OPTS  = pygame.DOUBLEBUF | pygame.HWSURFACE
 FPS   = 60
-TITLE = 'Hello, world!'
+TITLE = &#39;Hello, world!&#39;
 
 pygame.init()
 pygame.display.set_mode(SIZE, OPTS)
@@ -130,59 +95,48 @@ pygame.mouse.set_visible(False)
 pygame.display.set_caption(TITLE)
 clock = pygame.time.Clock()
 
-pygame.draw.circle(
-  pygame.display.get_surface(),
-  pygame.Color(255, 0, 0),
-  (WIDTH/2, HEIGHT/2),
-  HEIGHT/2
-)
+red    = pygame.Color(255, 0, 0)
+center = (WIDTH/2, HEIGHT/2)
+radius = HEIGHT/2
+surf   = pygame.display.get_surface()
+pygame.draw.circle(surf, red, center, radius)
 
 for event in pygame.event.get():
-    if event.type == pygame.locals.QUIT:
-        exit()
-    elif event.type == pygame.locals.KEYDOWN:
-        # TODO: Handle various keys:
-        # - fullscreen toggling
-        # - escape to quit
-        # - etc.
+  if event.type == pygame.locals.QUIT:
+      exit()
+  elif event.type == pygame.locals.KEYDOWN:
+      # TODO: Handle various keys:
+      # - fullscreen toggling
+      # - escape to quit
+      # - etc.
 
-    pygame.display.flip()
-    clock.tick(FPS)</code>
+  pygame.display.flip()
+  clock.tick(FPS)</code></pre>
+<h3 id="-snazzy-styles-yantp-"><a href="https://chrome.google.com/webstore/detail/yet-another-new-tab-page/imfkhhcponjpjhfpaccepedaabjclbjj?hl=en">Snazzy Styles</a></h3>
+<p>I love making things look nice. I&#39;ve written numerous themes for Linux,
+<a href="https://chrome.google.com/webstore/detail/eminence-dark/jjffinnkoeoaipfjhepbkocamgjhcpop">a couple</a> <a href="https://chrome.google.com/webstore/detail/eminence/bgblnalefabkfhneldemmeindkonhcna">for Chrome</a>, and even a replacement
+<a href="https://chrome.google.com/webstore/detail/yet-another-new-tab-page/imfkhhcponjpjhfpaccepedaabjclbjj?hl=en">new tab page extension</a> for Chrome. Click the thumbnails below to see
+in greater detail.</p>
+<!-- [![Royal Robo theme][royalRobo]][royalRobo]-->
 
-      <p>
-        And here's a more interesting example of something drawn using pypixel.
-      </p>
-      <a href="https://github.com/saikobee/pypixel"
-      ><img src="img/pypixel.png"></a>
+<!-- Royal Robo above, and Eminence below, are the two favorite Linux (GTK, etc.) themes I've made.-->
 
-      <h3><a href="https://chrome.google.com/webstore/search/Brian%20Mock"
-      >Snazzy Styles</a></h3>
-      <p>
-        I love making things look nice. I've written numerous themes for Linux,
-        <a href="https://chrome.google.com/webstore/search/Brian%20Mock"
-        >a few for Chrome</a>,
-        and even a replacement
-        <a href="https://chrome.google.com/webstore/detail/yet-another-new-tab-page/imfkhhcponjpjhfpaccepedaabjclbjj?hl=en"
-        >new tab page extension</a>
-        for Chrome. Click the thumbnails below to see in greater detail.
-      </p>
-      <a href="img/theme-robo.png"><img src="img/theme-robo.png"></a>
-      <p>
-        Royal Robo above, and Eminence below, are the two favorite Linux (GTK, etc.) themes I've made.
-      </p>
-      <a href="img/theme-eminence.jpg"><img src="img/theme-eminence.jpg"></a>
+<!-- [![Eminence theme][eminence]][eminence]-->
 
-    </div>
-  </div>
 
-  <div id="bottom" class="chunk">
-    <div class="content">
-      <p id="copy" class="center">
-        Copyright &copy; 2010&ndash;2013
-        <a href="mailto:mock.brian@gmail.com">Brian Mock</a>
-      </p>
-    </div>
-  </div>
+
+</div>
+</div>
+
+<div id="bottom" class="chunk">
+<div class="content">
+<p>Copyright &copy; 2010&ndash;2013
+<a href="mailto:mock.brian@gmail.com">Brian Mock</a></p>
+
+
+</div>
+</div>
+
 </body>
 </html>
-<!-- vim: set ts=2 sw=2 sts=2: -->
+<!-- vim: set ft=html: -->

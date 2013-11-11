@@ -5,11 +5,45 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        markdown: {
+            all: {
+                options: {
+                    template: 'template.jst',
+                    markdownOptions: {
+                        gfm: true
+                    }
+                },
+                files: [
+                    {
+                        flatten: true,
+                        expand: true,
+                        src: 'markdown/*.md',
+                        dest: 'html/',
+                        ext: '.md.html'
+                    }
+                ]
+            }
+        },
+        'import': {
+            build: {
+                src: 'html/main.html',
+                dest: 'index.html'
+            }
+        },
         watch: {
-            files: ['style.less'],
-            tasks: ['clear', 'default'],
-            options: {
-                spawn: false
+            all: {
+                files: ['style.less', 'markdown/**', 'html/**'],
+                tasks: ['clear', 'default'],
+                options: {
+                    spawn: false
+                }
+            },
+            less: {
+                files: ['style.less'],
+                tasks: ['clear', 'less'],
+                options: {
+                    spawn: false
+                }
             }
         },
         less: {
@@ -38,10 +72,12 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.loadNpmTasks('grunt-import');
+    grunt.loadNpmTasks('grunt-markdown');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['less', 'copy:dist']);
+    grunt.registerTask('default', ['markdown', 'import', 'less', 'copy:dist']);
     grunt.registerTask('clear', clear);
 };
