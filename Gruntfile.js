@@ -59,6 +59,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         src: [
+                            'ga.js',
                             'resume.pdf',
                             'style.css',
                             'index.html',

@@ -1,3 +1,3 @@
 #!/bin/bash
 grunt &&
-s3cmd sync --acl-public --no-progress build/ s3://mockbrian.com/
+s3cmd sync --acl-public --no-progress dist/ s3://mockbrian.com/
