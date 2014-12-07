@@ -1,7 +1,6 @@
 resume.aux
 resume.log
 style.css
-index.html
 html/*.md.html
 dist/
 node_modules/
