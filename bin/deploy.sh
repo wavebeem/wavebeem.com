@@ -9,14 +9,13 @@ Sync() {
 }
 
 files=(
+    favicon.ico
     index.html
     style.css
     me.jpg
     bootstrap
     resume
 )
-
-make
 
 for file in "${files[@]}"; do
     Sync "$file"
