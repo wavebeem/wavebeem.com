@@ -1,7 +1,8 @@
-resume: resume.tex
-	pdflatex resume
+resume:
+	mkdir -p resume
+	pandoc -s --template=template/resume.html resume.md > resume/index.html
 
-clean:
-	rm -f resume.pdf
+deploy:
+	./deploy.sh
 
-.PHONY:	clean
+.PHONY: deploy resume

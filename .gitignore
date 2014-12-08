@@ -1,6 +1,3 @@
-resume.aux
-resume.log
-style.css
-html/*.md.html
+/resume/
 dist/
 node_modules/
