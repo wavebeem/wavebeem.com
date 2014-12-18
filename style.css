@@ -44,7 +44,7 @@ footer {
 }
 
 .jumbotron-primary {
-    background: #4e9a06;
+    background: #095;
     color: #fff;
 }
 
@@ -66,5 +66,5 @@ footer {
 
 .btn.btn-outline-inverse:hover {
     background: #fff;
-    color: #4e9a06;
+    color: #095;
 }
