@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-host=s3://dev.mockbrian.com
-# host=s3://mockbrian.com
+# host=s3://dev.mockbrian.com
+host=s3://mockbrian.com
 
 Sync() {
     s3cmd sync --acl-public --no-progress "$@" "$host"
