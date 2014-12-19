@@ -20,7 +20,7 @@ main {
 }
 
 .selfie {
-    border: 1px solid rgba(255, 255, 255, 0.90);
+    border: 2px solid rgba(255, 255, 255, 0.50);
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.20);
 }
 
@@ -59,7 +59,7 @@ footer {
 }
 
 .btn.btn-outline-inverse {
-    border: 1px solid rgba(255, 255, 255, 0.75);
+    border: 2px solid rgba(255, 255, 255, 0.50);
     color: #fff;
     background: rgba(0, 0, 0, 0.10);
 }
