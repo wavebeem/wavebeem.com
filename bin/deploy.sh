@@ -5,7 +5,11 @@ set -e
 host=s3://mockbrian.com
 
 Sync() {
-    s3cmd sync --acl-public --no-progress "$@" "$host"
+    s3cmd sync \
+        --no-mime-magic \
+        --acl-public \
+        --no-progress \
+        "$@" "$host"
 }
 
 files=(
