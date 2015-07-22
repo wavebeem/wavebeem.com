@@ -25,7 +25,7 @@
 
 # Work Experience
 
-- **Janrain**, *JavaScript Software Engineer* (September 2012–August 2015)
+- **Janrain**, *JavaScript Software Engineer* (September 2012–July 2015)
     - Wrote graph database visualization using D3.js
     - Inherited and completed an AngularJS dashboard website and completed it
       on a tight time schedule
