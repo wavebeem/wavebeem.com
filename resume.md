@@ -17,12 +17,15 @@
 
 # Technology Talks
 
-- [Parsing with Jison](http://mockbrian.com/talk/jison/#/) lightning talk
-- [Parsing in JS](http://mockbrian.com/talk/parsing-jison/#/) full talk
+- [Parsing with Jison](http://mockbrian.com/talk/jison/#/)
+- [Parsing in JS](http://mockbrian.com/talk/parsing-jison/#/)
+- [PEG & Jison](http://mockbrian.com/talk/peg-jison/#/)
+- [JS Curry](http://mockbrian.com/talk/js-curry/#/)
+
 
 # Work Experience
 
-- **Janrain**, *JavaScript Software Engineer* (September 2012–current)
+- **Janrain**, *JavaScript Software Engineer* (September 2012–August 2015)
     - Wrote graph database visualization using D3.js
     - Inherited and completed an AngularJS dashboard website and completed it
       on a tight time schedule
@@ -48,7 +51,7 @@
 - Created [Pokemon type matchup calculator](http://mockbrian.com/pkmn/) [(GitHub 2013)](https://github.com/saikobee/pkmn-type-calc)
 - Enhanced Vim plugin [UltiSnips](https://github.com/SirVer/ultisnips) to support autodetecting preferred load path
 order [(GitHub 2013)](https://github.com/SirVer/ultisnips/pull/118)
-- Created [LatteScript](http://saikobee.github.com/lattescript) programming language (2012)
+- Created [LatteScript](http://mockbrian.com/lattescript/) programming language (2012)
 - Contributed code to [WMFS](http://wmfs.info/) (2011)
 - Contributed code to [Openbox](http://openbox.org/) (2011)
 - Created [8-Beat music synthesis program](http://eight-beat.sf.net) (2009)
