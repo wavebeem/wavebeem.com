@@ -71,10 +71,6 @@ header {
     }
 }
 
-.selfie {
-    // float: left;
-}
-
 header:after {
     content: "";
     display: table;
@@ -118,7 +114,6 @@ a {
 .selfie {
     border: $lightBorder;
     box-shadow: 0 3px 6px rgba(black, 0.20);
-    max-width: 300px;
     border-radius: $radius;
 }
 
