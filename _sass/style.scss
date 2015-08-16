@@ -1,0 +1,151 @@
+$brandPrimary: #096;
+$fontMain: Helvetica, sans-serif;
+$gap: 10px;
+$radius: 4px;
+$lightBorder: 2px solid rgba(white, 0.50);
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #eee;
+    font-family: $fontMain;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 1.2em;
+}
+
+h2 {
+    font-size: 1.0em;
+}
+
+header {
+    background: $brandPrimary;
+    color: #fff;
+    margin-bottom: 0;
+    padding: ($gap * 2);
+    text-align: center;
+
+    .me {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-top: 0;
+        margin-bottom: $gap;
+
+        img {
+            float: left;
+            height: 150px;
+            margin-right: ($gap * 2);
+        }
+    }
+
+    p {
+        font-size: 1.3em;
+        max-width: 900px;
+    }
+
+    a {
+        margin: ($gap / 4);
+        margin-top: $gap;
+    }
+
+    .header-links {
+        text-align: center;
+        a {
+            display: block;
+        }
+    }
+
+    & > .header-item {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+.selfie {
+    // float: left;
+}
+
+header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section {
+    margin: $gap;
+    flex: 1 1 250px;
+
+    & > h1 {
+        margin-left: $gap;
+    }
+
+    & > .item {
+        background: #fff;
+        padding: ($gap / 2) $gap;
+        border: 2px solid #ddd;
+        border-radius: $radius;
+        margin-bottom: 15px;
+
+        & > h2 {
+            margin-top: $gap;
+            padding-bottom: $gap;
+            border-bottom: 2px solid rgba(black, 0.10);
+        }
+    }
+}
+
+a {
+    font-weight: bold;
+    color: $brandPrimary;
+    text-decoration: none;
+}
+
+.selfie {
+    border: $lightBorder;
+    box-shadow: 0 3px 6px rgba(black, 0.20);
+    max-width: 300px;
+    border-radius: $radius;
+}
+
+footer {
+    color: #777;
+    padding: $gap;
+    margin: 0;
+    text-align: center;
+}
+
+a.round {
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    display: inline-block;
+    border: $lightBorder;
+    background: rgba(black, 0.10);
+    border-radius: $radius;
+
+    &:hover {
+        color: $brandPrimary;
+        background: #fff;
+    }
+}
+
+@media (min-width: 600px) {
+    header .header-links a {
+        display: inline-block;
+    }
+}
