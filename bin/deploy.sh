@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-host=s3://dev.mockbrian.com
-# host=s3://mockbrian.com
+# host=s3://dev.mockbrian.com
+host=s3://mockbrian.com
 
 bundle exec jekyll build
 
