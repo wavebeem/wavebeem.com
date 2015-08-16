@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap-theme.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="/ga.js"></script>
+</head>
+<body>
+    <div class="jumbotron jumbotron-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <img
+                        alt="picture of Brian Mock"
+                        src="me.jpg"
+                        class="selfie img-responsive img-rounded"
+                    >
+                </div>
+                <div class="col-sm-8">
+                    <h1>Brian Mock</h1>
+                    <p>
+                        I love programming and games. I obsess over style and
+                        user experience. I like functional programming and
+                        solid code reviews. I contribute to open source
+                        development from time to time. I live in Portland,
+                        OR.
+                    </p>
+                    <a
+                        class="btn btn-lg btn-outline-inverse"
+                        href="mailto:brian@mockbrian.com"
+                    >
+                        <span
+                            aria-hidden="true"
+                            class="glyphicon glyphicon-envelope"
+                        ></span>
+                        brian@mockbrian.com
+                    </a>
+
+                    <a
+                        class="btn btn-lg btn-outline-inverse"
+                        target="_blank"
+                        href="resume"
+                    >
+                        <span
+                            aria-hidden="true"
+                            class="glyphicon glyphicon-file"
+                        ></span>
+                        view resume
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main class="container">
+        {{ content }}
+    </main>
+    <footer class="footer">
+        <div class="container-fluid">
+        <p>
+            Base styles by
+            <a
+                target="_blank"
+                href="http://getbootstrap.com/"
+            >Bootstrap</a>.
+
+            Icons by
+            <a
+                target="_blank"
+                href="http://glyphicons.com/"
+            >Glyphicons</a>.
+        </p>
+
+        <p>
+            Copyright &copy;
+            <a href="mailt:brian@mockbrian.com"
+            >Brian Mock</a>
+            2010-2014
+        </p>
+        </div>
+    </footer>
+</body>
+</html>

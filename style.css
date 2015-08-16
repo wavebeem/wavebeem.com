@@ -3,12 +3,41 @@ html {
     position: relative;
 }
 
+html, body {
+    background: #eee;
+}
+
 h1, .h1 {
     font-size: 28px;
 }
 
 h2, .h2 {
     font-size: 18px;
+}
+
+main h2,
+main .h2 {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.10);
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section {
+    margin: 10px;
+    flex: 1 1 300px;
+}
+
+.item {
+    background: #fff;
+    padding: 5px 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
 }
 
 a {
@@ -21,17 +50,12 @@ main {
 
 .selfie {
     border: 2px solid rgba(255, 255, 255, 0.50);
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.20);
 }
 
 footer {
-    margin-top: 10px;
-    background: #eee;
     color: #777;
-}
-
-footer {
-    padding-top: 15px;
+    padding: 10px;
     margin: 0;
     height: 85px;
     position: absolute;
@@ -46,6 +70,7 @@ footer {
 .jumbotron-primary {
     background: #095;
     color: #fff;
+    margin-bottom: 0;
 }
 
 .jumbotron-primary a {
