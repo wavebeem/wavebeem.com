@@ -1,3 +1,8 @@
+---
+layout: resume
+title: "Resume – Brian Mock"
+---
+
 # Interests
 
 - Creating simple, usable interfaces with web technologies
@@ -45,6 +50,7 @@
     - Created weather simulation data visualizer
 
 # Projects
+
 - Co-developed educational iPad math game: [Algebra Card Clutter](http://itunes.apple.com/us/app/algebra-card-clutter/id549330499) (2012)
 - Created spec-compliant JSON parser in JavaScript using Jison [(GitHub 2014)](https://github.com/saikobee/json-crumpet)
 - Designed and implemented a new tab bar style for [iTerm](http://iterm2.com/) [(GitHub 2014)](https://github.com/gnachman/iTerm2/pull/185)
