@@ -4,12 +4,11 @@ set -e
 # host=s3://dev.mockbrian.com
 host=s3://mockbrian.com
 
-Sync() {
-    s3cmd sync \
-        --no-mime-magic \
-        --acl-public \
-        --no-progress \
-        "$1" "$host/"
-}
+bundle exec jekyll build
 
-Sync _site/ /
+s3cmd sync \
+    --no-mime-magic \
+    --acl-public \
+    --no-progress \
+    "_site/" \
+    "$host/"
