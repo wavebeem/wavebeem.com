@@ -25,6 +25,10 @@ h2 {
     font-size: 1.0em;
 }
 
+:focus {
+    outline: 3px solid rgba(orange, 0.80);
+}
+
 header {
     background: $brandPrimary;
     color: #fff;
