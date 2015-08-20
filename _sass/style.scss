@@ -109,6 +109,10 @@ a {
     font-weight: bold;
     color: $brandPrimary;
     text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .selfie {
@@ -132,6 +136,7 @@ a.round {
     border: $lightBorder;
     background: rgba(black, 0.10);
     border-radius: $radius;
+    text-decoration: none;
 
     &:hover {
         color: $brandPrimary;
