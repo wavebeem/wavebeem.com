@@ -52,9 +52,9 @@ title: "Resume – Brian Mock"
 # Projects
 
 - Co-developed educational iPad math game: [Algebra Card Clutter](http://itunes.apple.com/us/app/algebra-card-clutter/id549330499) (2012)
-- Created spec-compliant JSON parser in JavaScript using Jison [(GitHub 2014)](https://github.com/saikobee/json-crumpet)
+- Created spec-compliant JSON parser in JavaScript using Jison [(GitHub 2014)](https://github.com/wavebeem/json-crumpet)
 - Designed and implemented a new tab bar style for [iTerm](http://iterm2.com/) [(GitHub 2014)](https://github.com/gnachman/iTerm2/pull/185)
-- Created [Pokemon type matchup calculator](http://mockbrian.com/pkmn/) [(GitHub 2013)](https://github.com/saikobee/pkmn-type-calc)
+- Created [Pokemon type matchup calculator](http://mockbrian.com/pkmn/) [(GitHub 2013)](https://github.com/wavebeem/pkmn-type-calc)
 - Enhanced Vim plugin [UltiSnips](https://github.com/SirVer/ultisnips) to support autodetecting preferred load path
 order [(GitHub 2013)](https://github.com/SirVer/ultisnips/pull/118)
 - Created [LatteScript](http://mockbrian.com/lattescript/) programming language (2012)
