@@ -27,7 +27,6 @@ title: "Resume – Brian Mock"
 - [PEG & Jison](http://mockbrian.com/talk/peg-jison/#/)
 - [JS Curry](http://mockbrian.com/talk/js-curry/#/)
 
-
 # Work Experience
 
 - **Janrain**, *JavaScript Software Engineer* (September 2012–July 2015)
@@ -51,6 +50,7 @@ title: "Resume – Brian Mock"
 
 # Projects
 
+- Created [Squiggle](http://squiggle-lang.org/), a compile-to-JS programming language
 - Co-developed educational iPad math game: [Algebra Card Clutter](http://itunes.apple.com/us/app/algebra-card-clutter/id549330499) (2012)
 - Created spec-compliant JSON parser in JavaScript using Jison [(GitHub 2014)](https://github.com/wavebeem/json-crumpet)
 - Designed and implemented a new tab bar style for [iTerm](http://iterm2.com/) [(GitHub 2014)](https://github.com/gnachman/iTerm2/pull/185)
