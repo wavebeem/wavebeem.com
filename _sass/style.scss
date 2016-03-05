@@ -58,6 +58,7 @@ header {
     }
 
     a {
+        color: inherit;
         margin: ($gap / 4);
         margin-top: $gap;
     }
