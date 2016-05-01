@@ -1,5 +1,6 @@
 $brandPrimary: #097;
 $fontMain: Helvetica, sans-serif;
+$fontMono: Menlo, Consolas, monospace;
 $gap: 10px;
 $radius: 4px;
 $lightBorder: 2px solid rgba(white, 0.50);
@@ -8,17 +9,29 @@ html,
 body {
     margin: 0;
     padding: 0;
+
+    line-height: 1.5;
 }
 
 html {
     background: #eee;
     font-family: $fontMain;
     font-size: 16px;
-    line-height: 1.2;
+}
+
+code {
+    font-family: $fontMono;
+    color: complement($brandPrimary);
 }
 
 h1 {
     font-size: 1.2em;
+}
+
+main h1 {
+    font-weight: normal;
+    text-align: center;
+    color: #888;
 }
 
 h2 {
@@ -44,6 +57,7 @@ header {
         font-size: 3em;
         margin-top: 0;
         margin-bottom: $gap;
+        color: inherit;
 
         img {
             float: left;
@@ -59,8 +73,6 @@ header {
 
     a {
         color: inherit;
-        margin: ($gap / 4);
-        margin-top: $gap;
     }
 
     .header-links {
@@ -121,8 +133,8 @@ a {
 }
 
 .selfie {
-    border: 2px solid transparent;
-    background-color: rgba(white, 0.50);
+    border: $lightBorder;
+    background-color: transparent;
     box-shadow: 0 3px 6px rgba(black, 0.20);
     border-radius: $radius;
 }
@@ -143,6 +155,8 @@ a.round {
     background: rgba(black, 0.10);
     border-radius: $radius;
     text-decoration: none;
+    margin: ($gap / 4);
+    margin-top: $gap;
 
     &:hover {
         color: $brandPrimary;
