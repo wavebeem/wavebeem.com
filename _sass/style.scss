@@ -3,7 +3,9 @@ $fontMain: Helvetica, sans-serif;
 $fontMono: Menlo, Consolas, monospace;
 $gap: 10px;
 $radius: 4px;
-$lightBorder: 2px solid rgba(white, 0.50);
+$lightBorder: 1px solid rgba(white, 0.50);
+$darkBorder: 1px solid rgba(black, 0.10);
+$darkerBorder: 1px solid rgba(black, 0.15);
 
 html,
 body {
@@ -21,7 +23,7 @@ html {
 
 code {
     font-family: $fontMono;
-    color: complement($brandPrimary);
+    font-weight: 600;
 }
 
 h1 {
@@ -68,7 +70,7 @@ header {
 
     p {
         font-size: 1.3em;
-        max-width: 900px;
+        max-width: 700px;
     }
 
     a {
@@ -110,14 +112,14 @@ section {
     & > .item {
         background: #fff;
         padding: ($gap / 2) $gap;
-        border: 2px solid #ddd;
+        border: $darkerBorder;
         border-radius: $radius;
         margin-bottom: 15px;
 
         & > h2 {
             margin-top: $gap;
             padding-bottom: $gap;
-            border-bottom: 2px solid rgba(black, 0.10);
+            border-bottom: $darkBorder;
         }
     }
 }
@@ -133,9 +135,7 @@ a {
 }
 
 .selfie {
-    border: $lightBorder;
-    background-color: transparent;
-    box-shadow: 0 3px 6px rgba(black, 0.20);
+    box-shadow: 0 1px 2px rgba(black, 0.20);
     border-radius: $radius;
 }
 
