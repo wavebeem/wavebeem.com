@@ -43,6 +43,7 @@ h2 {
 
 :focus {
     outline: 3px solid rgba(orange, 0.80);
+    outline-offset: 1px;
 }
 
 header {
@@ -163,6 +164,10 @@ a.round {
     &:hover {
         color: $brandPrimary;
         background: #fff;
+    }
+
+    &:focus {
+        outline-offset: -5px;
     }
 }
 
