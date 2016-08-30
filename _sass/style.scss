@@ -1,6 +1,7 @@
 $brandPrimary: #097;
 $fontMain: Helvetica, sans-serif;
 $fontMono: Menlo, Consolas, monospace;
+$monoFg: #c34;
 $gap: 10px;
 $radius: 4px;
 $lightBorder: 1px solid rgba(white, 0.50);
@@ -23,7 +24,7 @@ html {
 
 code {
     font-family: $fontMono;
-    font-weight: 600;
+    color: $monoFg;
 }
 
 h1 {
@@ -125,12 +126,13 @@ section {
 }
 
 a {
-    font-weight: bold;
     color: $brandPrimary;
     text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 1px solid currentColor;
 
     &:hover {
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 
