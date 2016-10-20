@@ -8,17 +8,19 @@ title: "Resume – Brian Mock"
 - Creating simple, usable interfaces with web technologies
 - Organizing modular code and using functional programming techniques
 - Writing clear, comprehensive documentation and test coverage
+- Working with fun, kind people in a relaxed environment
+- Pairing with other developers and helping to grow their skills
 
 # Core Skills
 
-- JavaScript (ES5/ES6), HTML, CSS (and Sass/LESS)
+- JavaScript (ES5/ES6), HTML, CSS (and Sass/LESS), GitHub
 - React, Ember, Angular, Lodash/Underscore, Mocha
-- GitHub, JIRA
+- Can deep dive into JS; can switch between languages easily
 
 # Other Skills
 
+- Amazon S3, Cloudfront, Route 53, JIRA
 - Ruby, Python, Java, Bash, Perl, Objective-C, Haskell, Scala
-- Amazon S3, Cloudfront, Sinatra
 
 # Work Experience
 
@@ -47,16 +49,13 @@ title: "Resume – Brian Mock"
 
 - Became the maintainer of [Parsimmon](https://github.com/jneen/parsimmon/),
   a JavaScript parser combinator library (2016)
-- Created [Squiggle](http://squiggle-lang.org/), a compile-to-JS programming language
+- Created [Squiggle](http://squiggle-lang.org/), a compile-to-JS programming language (2015-2016)
 - Co-developed educational iPad math game: [Algebra Card Clutter](http://itunes.apple.com/us/app/algebra-card-clutter/id549330499) (2012)
 - Created spec-compliant JSON parser in JavaScript using Jison [(GitHub 2014)](https://github.com/wavebeem/json-crumpet)
 - Designed and implemented a new tab bar style for [iTerm](http://iterm2.com/) [(GitHub 2014)](https://github.com/gnachman/iTerm2/pull/185)
 - Created [Pokemon type matchup calculator](http://mockbrian.com/pkmn/) [(GitHub 2013)](https://github.com/wavebeem/pkmn-type-calc)
 order [(GitHub 2013)](https://github.com/SirVer/ultisnips/pull/118)
-- Created [LatteScript](http://mockbrian.com/lattescript/) programming language (2012)
-- Contributed code to [WMFS](http://wmfs.info/) (2011)
-- Contributed code to [Openbox](http://openbox.org/) (2011)
-- Created [8-Beat music synthesis program](http://eight-beat.sf.net) (2009)
+- Created [LatteScript](http://mockbrian.com/lattescript/) programming language (2011-2012)
 
 # Education
 
