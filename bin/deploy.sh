@@ -1,14 +1,19 @@
 #!/usr/bin/env bash
 set -e
 
-# host="s3://dev.mockbrian.com"
-host="s3://mockbrian.com"
+cf_distro="E1ENR65WLK5LCW"
+dev="s3://dev.mockbrian.com"
+prod="s3://mockbrian.com"
 
 bundle exec jekyll build
 convert favicon-16.png favicon-32.png favicon.ico
-s3cmd sync \
-    --no-mime-magic \
-    --acl-public \
-    --no-progress \
-    "_site/" \
-    "$host/"
+
+cd _site
+if [[ $1 = "-p" ]]; then
+  aws s3 sync --acl public-read ./ "$prod"
+  aws cloudfront create-invalidation \
+    --distribution-id "$cf_distro" \
+    --paths "/*"
+else
+  aws s3 sync --acl public-read ./ "$dev"
+fi
