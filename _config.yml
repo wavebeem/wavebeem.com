@@ -1,2 +1,7 @@
 markdown: redcarpet
 permalink: /blog/:year/:month/:day/:title/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - favicon-16.png
+  - favicon-32.png
