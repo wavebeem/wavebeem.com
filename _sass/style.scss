@@ -104,29 +104,6 @@ main {
     flex-flow: row wrap;
 }
 
-section {
-    margin: $gap;
-    flex: 1 1 250px;
-
-    & > h1 {
-        margin-left: $gap;
-    }
-
-    & > .item {
-        background: #fff;
-        padding: ($gap / 2) $gap;
-        border: $darkerBorder;
-        border-radius: $radius;
-        margin-bottom: 15px;
-
-        & > h2 {
-            margin-top: $gap;
-            padding-bottom: $gap;
-            border-bottom: $darkBorder;
-        }
-    }
-}
-
 a {
     color: $brandPrimary;
     text-decoration: none;

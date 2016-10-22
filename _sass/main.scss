@@ -1,0 +1,269 @@
+$brandPrimary: #097;
+$fontMain: Helvetica, sans-serif;
+$fontPara: Georgia, Cambria, Palatino, serif;
+$fontMonospace: Menlo, Consolas, monospace;
+$fontHeading: "Lucida Grande", Verdana, sans-serif;
+$codeColor: #c34;
+$gap: 1rem;
+$radius: 4px;
+$lightBorder: 2px solid rgba(white, 0.50);
+$smallGap: ($gap / 2);
+$contentWidth: 700px;
+$smallSize: $contentWidth;
+$linkFg: darken($brandPrimary, 3%);
+
+@mixin fitToMain() {
+  border-radius: 4px;
+  padding: $smallGap;
+}
+
+.HeaderLinks a {
+  display: inline-block;
+  margin: 1em 0;
+
+  @media (max-width: $contentWidth) {
+    display: block;
+  }
+}
+
+.OutlineButton {
+  color: white;
+  background: rgba(black, 0.05);
+  border: 2px solid rgba(white, 0.5);
+  border-radius: 4px;
+  padding: 0.75em 1.25em;
+  font-size: 1.2rem;
+
+  &:hover {
+    color: $brandPrimary;
+    background: white;
+  }
+}
+
+header h1 {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.Selfie {
+  border-radius: 4px;
+  box-shadow: 0 2px 3px rgba(black, 0.3);
+}
+
+header p {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: white;
+  max-width: 25em;
+  display: block;
+  margin: 1em auto;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #fff;
+  color: black;
+  font-family: $fontMain;
+  font-size: 16px;
+  line-height: 1.2;
+
+  @media (max-width: $smallSize) {
+    font-size: 12px;
+  }
+}
+
+.NotCommentArea {
+  background: rgba(#cccc00, 0.10);
+  color: rgba(#000, 0.70);
+  border: 1px dotted rgba(#000, 0.10);
+  padding: $smallGap;
+  border-radius: $radius;
+  font-size: 1rem;
+  font-family: $fontMain;
+
+  @include fitToMain();
+
+  a {
+    font-weight: bold;
+    color: inherit;
+  }
+}
+
+.Wrapper {
+  padding: $smallGap $gap;
+
+    @media (max-width: $smallSize) {
+      padding: 0;
+    }
+}
+
+.PostDate {
+  font-size: 1rem;
+  font-family: $fontMain;
+  margin-top: (-$smallGap);
+  color: #555;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $fontHeading;
+}
+
+section:not(:first-child) {
+  margin-top: 3em;
+}
+
+main {
+  background: #fff;
+  // border: 1px solid #ddd;
+  border-radius: $radius;
+  max-width: $contentWidth;
+  margin: 0 auto;
+  padding: $smallGap $gap;
+  font-family: $fontPara;
+  font-size: 1.2rem;
+  line-height: 1.5;
+
+  @media (max-width: $smallSize) {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-radius: 0;
+  }
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.BlogPostListing {
+  list-style: none;
+  padding-left: 0;
+  font-size: 1.3rem;
+  line-height: 1.4;
+
+  li {
+    margin-bottom: 1rem;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0;
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: (-$smallGap);
+  padding-top: 1rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #eee;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: (-$smallGap);
+  padding-top: 1rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px dotted #ddd;
+}
+
+:focus {
+  outline: 3px solid rgba(orange, 0.80);
+}
+
+header {
+  background: $brandPrimary;
+  color: rgba(white, 0.5);
+  text-align: center;
+  font-weight: bold;
+
+  font-size: 3em;
+  padding: ($gap * 2);
+  margin-top: 0;
+  margin-bottom: $gap;
+
+  @media (max-width: $smallSize) {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 1.5em !important;
+  }
+
+  .GoHome {
+    color: rgba(white, 1);
+  }
+
+  .GoMain {
+    color: rgba(white, 0.8);
+  }
+
+  a {
+    color: inherit;
+    border: none;
+
+    &:hover {
+      text-decoration: inherit;
+    }
+  }
+}
+
+a {
+  color: $brandPrimary;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid currentColor;
+
+  &:hover {
+    border-bottom-style: solid;
+  }
+}
+
+.GoBack {
+  font-family: $fontMain;
+  padding: 0;
+  padding-top: $gap;
+  padding-bottom: $gap;
+  display: block;
+}
+
+footer {
+  color: #888;
+  padding: $gap;
+  margin: 0;
+  text-align: center;
+}
+
+p code {
+  color: $codeColor;
+}
+
+pre,
+code {
+  font-size: 0.8em;
+  font-family: $fontMonospace;
+}
+
+pre {
+  border-radius: $radius;
+  overflow-x: auto;
+  line-height: 1;
+  font-size: 1em;
+  border: 1px solid rgba(black, 0.05);
+  @include fitToMain();
+}

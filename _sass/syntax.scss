@@ -1,0 +1,60 @@
+// Using colors from the Google color guide:
+// https://www.google.com/design/spec/style/color.html#color-color-palette
+
+// Handy guide for Pygments cryptic CSS classes:
+// https://gist.github.com/scotu/1272660
+
+.highlight {
+  $bg: #f8f8f8;
+  $fg: #222;
+  $red: #c0392b;
+  $blue: #2980b9;
+  $gray: #95a5a6;
+  $green: #27ae60;
+  $orange: #e67e22;
+
+  pre {
+    background: $bg;
+  }
+
+  pre code {
+    color: $fg;
+  }
+
+  // .kd = Function
+  // .k = Keyword
+  // .kr = Keyword
+  .kd, .k, .kr { font-weight: bold; }
+
+  // .nx = Normal
+  .nx { color: $fg; }
+
+  // .na = Name attribute
+  // .nb = Name builtin
+  // .nn = Namespace
+  .na, .nb, .nn { color: $blue; }
+
+  // .p = Punctuation
+  // .o = Operator
+  // .si = String interpolation
+  .p, .o, .si, .se { color: $gray; }
+
+  // .s = String
+  // .s1 = String
+  // .s2 = String
+  // .sr = Regexp
+  // .si = String escape
+  .s, .s1, .s2, .sr, .se { color: $red; }
+
+  // .no = Named constant
+  // .kc = Constant
+  // .kt = Type constant
+  // .mi = Number
+  // .py = Named property
+  .no, .kc, .mi, .kt, .py { color: $orange; }
+
+  // .c = Comment
+  // .c1 = Comment
+  // .cm = Comment
+  .c, .c1, .cm { color: $green; }
+}

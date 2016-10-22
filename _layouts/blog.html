@@ -1,0 +1,22 @@
+---
+layout: bare
+---
+
+<main>
+  <h1>Posts</h1>
+
+  <ul class="BlogPostListing">
+    {% for post in site.posts %}
+      <li>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+        <div class="date">
+          {{ post.date | date: "%B %-d, %Y" }}
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</main>
+
+{{ content }}
