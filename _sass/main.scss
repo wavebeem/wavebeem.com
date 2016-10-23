@@ -10,7 +10,7 @@ $lightBorder: 2px solid rgba(white, 0.50);
 $smallGap: ($gap / 2);
 $contentWidth: 700px;
 $smallSize: $contentWidth;
-$linkFg: darken($brandPrimary, 3%);
+$linkFg: darken($brandPrimary, 7%);
 
 @mixin fitToMain() {
   border-radius: 4px;
@@ -188,7 +188,7 @@ h3 {
 
 header {
   background: $brandPrimary;
-  color: rgba(white, 0.5);
+  color: rgba(white, 0.7);
   text-align: center;
   font-weight: bold;
 
@@ -210,7 +210,7 @@ header {
   }
 
   .GoMain {
-    color: rgba(white, 0.8);
+    color: rgba(white, 0.9);
   }
 
   a {
@@ -224,7 +224,7 @@ header {
 }
 
 a {
-  color: $brandPrimary;
+  color: $linkFg;
   text-decoration: none;
   padding-bottom: 1px;
   border-bottom: 1px solid currentColor;
@@ -243,7 +243,7 @@ a {
 }
 
 footer {
-  color: #888;
+  color: #767676;
   padding: $gap;
   margin: 0;
   text-align: center;
