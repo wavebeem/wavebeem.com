@@ -1,6 +1,6 @@
 ---
 layout: resume
-title: "Resume – Brian Mock"
+title: "Resume • Brian Mock"
 ---
 
 # Interests
