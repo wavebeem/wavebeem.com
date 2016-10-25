@@ -21,6 +21,65 @@ One of the smallest programming languages I could choose to implement is [Lambda
 
 In the interest of space, I will not be diving into a full explanation of how [Parsimmon][1] works. You should check out the repo for more information, or just read this post anyway.
 
+## What is Duckweed?
+
+A lot of people get scared at the idea of Lisp because they hear it's a "hacker language" or some other gatekeeping nonsense. The short of it is, Lisp is just a style of programming language with very simple and regular syntax, perfect for a short example like this blog post.
+
+Some Lisp languages have many features, but Duckweed intentionally has very few. In terms of JavaScript, Duckweed has operations similar to `function`, `call()`, `var`, `+`, `*`, `-`, `if`, and not really much of anything else.
+
+Here's the [hello world][12] program in Duckweed:
+
+```clojure
+(print "hello world")
+```
+
+Now let's cover a basic [factorial][11] program in JavaScript.
+
+In math factorial can be defined as follows:
+
+```haskell
+factorial(0) = 1
+factorial(n) = n * factorial(n - 1)
+```
+
+In English, when `factorial` is given 0, it returns 1. When factorial is given any other number (n), it returns `n * factorial(n - 1)`. In JavaScript, this looks like the following:
+
+```javascript
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+console.log(factorial(4));
+```
+
+Duckweed doesn't have the concept of a function declaration, just anonymous functions, so the Duckweed program is a little closer to this JavaScript program:
+
+```javascript
+var factorial = function(n) {
+  if (n === 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+};
+console.log(factorial(4));
+```
+
+In Duckweed, `let` is the word for `var`, and it takes an expression at the end to evaluate. Also `lambda` is the word for `function`.
+
+```clojure
+(let ((factorial (lambda (n)
+       (if (= n 0)
+        1
+        (* n (factorial (- n 1)))))))
+  (print (factorial 4)))
+```
+
+So that's what Duckweed looks like, and you can see it's capable of doing at least basic math.
+
 ## First things first
 
 Let's start off with the top level of Duckweed: `main.js`.
@@ -458,6 +517,99 @@ let(stack, scope, node) {
 }
 ```
 
+## Global built-ins
+
+We have all the core operations at this point, but usually programming languages don't ask you to implement basic math, numbers, and printing yourself, so we'll provide that from JavaScript via some globals in the evaluator.
+
+Just a few simple imports.
+
+```javascript
+const Scope = require('./scope');
+const U = require('./util')
+const E = require('./evaluate');
+```
+
+The basic boolean constants we expect to see in any language.
+
+```javascript
+const TRUE = {type: 'True'};
+const FALSE = {type: 'False'};
+```
+
+Numbers are pretty basic too.
+
+```javascript
+function NUMBER(value) {
+  return {type: 'Number', value};
+}
+```
+
+You might notice a pattern at this point: "basic" values are usually represented in an evaluator as a `type` field and a `value` field if necessary.
+
+This printing function isn't a whole lot of fun, so just check out `util.js` yourself if you want to.
+
+```javascript
+function print(stack, scope, x) {
+  console.log(U.showSexp(x));
+  return x;
+}
+```
+
+We just need to reach inside the wrapped numbers and then re-wrap them, reusing JavaScript's operators to accomplish the basic math.
+
+```javascript
+function add(stack, scope, a, b) {
+  return NUMBER(a.value + b.value);
+}
+
+function subtract(stack, scope, a, b) {
+  return NUMBER(a.value - b.value);
+}
+
+function multiply(stack, scope, a, b) {
+  return NUMBER(a.value * b.value);
+}
+
+function lessThan(stack, scope, a, b) {
+  return a.value < b.value ? TRUE : FALSE;
+}
+```
+
+Ideally these math functions should add to the stack also, but it's not strictly necessary for the evaluator to work. It just would make a stack trace nicer if the program crashed.
+
+`eval` is just using the `EVAL` function we built-up earlier! We're just exposing it for the code to use.
+
+```javascript
+function evaluate(stack, scope, sexp) {
+  return E.EVAL(stack, scope, sexp);
+}
+```
+
+Now we make the actual top level scope the evaluator will user later.
+
+```javascript
+const api = {
+  print,
+  '+': add,
+  '-': subtract,
+  '*': multiply,
+  '<': lessThan,
+  eval: evaluate
+};
+
+Object.keys(api).forEach(k => {
+  api[k] = {type: 'JSFunction', f: api[k]}
+});
+
+const globals = Scope.create(Scope.Empty, api);
+
+exports.globals = globals;
+```
+
+## Wrapping up
+
+This covers basically everything about the [Duckweed][4] language and evaluator. Check out the repo for the full code. Once you understand that, check out my other language [Hibiscus][10] for a (slightly larger) example of a small JS-like language.
+
 [1]: https://github.com/jneen/parsimmon
 [2]: https://en.wikipedia.org/wiki/Chomsky_hierarchy
 [3]: http://stackoverflow.com/a/1732454
@@ -467,3 +619,6 @@ let(stack, scope, node) {
 [7]: https://en.wikipedia.org/wiki/Variable_shadowing
 [8]: https://en.wikipedia.org/wiki/Recursion_(computer_science)
 [9]: https://en.wikipedia.org/wiki/Closure_(computer_programming)
+[10]: https://github.com/wavebeem/hibiscus
+[11]: https://en.wikipedia.org/wiki/Factorial
+[12]: https://en.wikipedia.org/wiki/%22Hello,_World!%22_program
