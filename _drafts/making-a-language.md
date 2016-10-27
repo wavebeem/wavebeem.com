@@ -5,7 +5,7 @@ layout: post
 
 ## What's in a programming language?
 
-Programming languages implementations vary wildly, but the steps are roughly as follows:
+Programming language implementations vary wildly, but the steps are roughly as follows:
 
 - Parse source code text into abstract syntax tree (AST) such as JSON
 - *(Optional)* Static analysis of AST to report warnings and errors
