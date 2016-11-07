@@ -286,14 +286,15 @@ Now that we have creation, we need a way to look up variables by their names. It
 function lookup(scope, key) {
   if (scope[0] === 'Scope.Empty') {
     throw new Error('no such variable ' + key);
-  } else if (scope[0] === 'Scope.Nonempty') {
-    if (scope[1].hasOwnProperty(key)) {
-      return scope[1][key];
-    } else {
-      return lookup(scope[2], key);
-    }
   }
-  throw new Error('not a valid scope');
+  if (scope[0] !== 'Scope.Nonempty') {
+    throw new Error('not a valid scope');
+  }
+
+  if (scope[1].hasOwnProperty(key)) {
+    return scope[1][key];
+  }
+  return lookup(scope[2], key);
 }
 ```
 
@@ -390,32 +391,34 @@ List(stack, scope, node) {
   // Evaluate special form such as `if` or `lambda`
   if (first.type === 'Symbol' && special.hasOwnProperty(first.name)) {
     return special[first.name](stack, scope, node);
+  }
   // Regular function call
-  } else {
-    const f = EVAL(stack, scope, first);
-    const args = node
-      .items
-      .slice(1)
-      .map(x => EVAL(stack, scope, x));
-    if (f.type === 'JSFunction') {
-      const args2 = [stack, scope].concat(args);
-      return f.f.apply(null, args2);
-    } else if (f.type === 'Function') {
-      const newStack = stack.concat(['#<lambda>']);
-      const obj = {};
-      f.parameters.items.forEach((p, i) => {
-        obj[p.name] = args[i];
-      });
-      const newScope = Scope.create(f.scope, obj);
-      const values = f.body.map(x => EVAL(newScope, newScope, x));
-      return values[values.length - 1];
-    }
+  const f = EVAL(stack, scope, first);
+  // but first, let's make sure we're right here!
+  if (f.type !== 'JSFunction' && f.type !== 'Function') {
     throw new Error('cannot call non-function');
+  }
+  const args = node
+    .items
+    .slice(1)
+    .map(x => EVAL(stack, scope, x));
+  if (f.type === 'JSFunction') {
+    const args2 = [stack, scope].concat(args);
+    return f.f.apply(null, args2);
+  } else if (f.type === 'Function') {
+    const newStack = stack.concat(['#<lambda>']);
+    const obj = {};
+    f.parameters.items.forEach((p, i) => {
+      obj[p.name] = args[i];
+    });
+    const newScope = Scope.create(f.scope, obj);
+    const values = f.body.map(x => EVAL(newScope, newScope, x));
+    return values[values.length - 1];
   }
 },
 ```
 
-It's a little messy, but there's only three real cases.
+There are three cases here, and we try to deal with them as early as possible:
 
 1. The symbol is a special form, not a function call (such as `if`).
 2. The symbol references a native JavaScript function.
