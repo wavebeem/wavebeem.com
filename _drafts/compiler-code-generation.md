@@ -10,7 +10,7 @@ High level compiler design. Reminder about ASTs, and explain how code generation
 
 ## Code generation vs interpretation
 
-Link to previous blog post demonstrating interpretation. Also, explain why compile-to-JS is a unique case (readability of generated code, ease of debugging, etc).
+Link to [previous blog post][1] demonstrating interpretation. Also, explain why compile-to-JS is a unique case (readability of generated code, ease of debugging, etc).
 
 ## What are we gonna code for?
 
@@ -27,3 +27,5 @@ TODO
 ## Our own code generator for those AST bits
 
 TODO
+
+[1]: /blog/2016/11/01/making-a-language/
