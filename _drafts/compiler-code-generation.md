@@ -31,9 +31,43 @@ Compiling to JavaScript is a bit of a unique case though, compared to compiling 
 
 ## What are we gonna code for?
 
-To save time, no parser here. Show some example code then talk in AST afterward.
+It's hard to pick a language small enough to fit in a blog post but large enough to actually be a useful demonstration. So I'll just cover function definition and function invocation.
 
+So we'll have an AST with three different kinds of nodes:
 
+```javascript
+{
+  type: "FunctionCall",
+  fn: someFunction,
+  arguments: [node1, node2, ...]
+}
+
+// Which would look like this in JS:
+someFunction(node1, node2, ...)
+```
+
+```javascript
+{
+  type: "Function",
+  parameters: [variable1, variable2, ...],
+  expression: ...
+}
+
+// Which would look like this in JS:
+function(variable1, variable2, ...) {
+  return (...);
+}
+```
+
+```javascript
+{
+  type: "Variable",
+  name: "foo"
+}
+
+// Which would look like this in JS:
+foo
+```
 
 ## escodegen
 
