@@ -1,8 +1,8 @@
 $brandPrimary: #097;
-$fontMain: Helvetica, sans-serif;
-$fontPara: Georgia, Cambria, Palatino, serif;
-$fontMonospace: Menlo, Consolas, monospace;
-$fontHeading: "Lucida Grande", Verdana, sans-serif;
+$fontMain: "Helvetica", sans-serif;
+$fontPara: "Georgia", "Cambria", "Palatino", serif;
+$fontMonospace: "Fira Code", "Menlo", "Consolas", monospace;
+$fontHeading: "Lucida Grande", "Verdana", sans-serif;
 $codeColor: #c34;
 $gap: 1rem;
 $radius: 4px;
@@ -12,14 +12,10 @@ $contentWidth: 700px;
 $smallSize: $contentWidth;
 $linkFg: darken($brandPrimary, 7%);
 
-@mixin fitToMain() {
-  border-radius: 4px;
-  padding: $smallGap;
-}
-
 .HeaderLinks a {
   display: inline-block;
-  margin: 1em 0;
+  margin: 0;
+  margin-top: 1em;
 
   @media (max-width: $contentWidth) {
     display: block;
@@ -30,7 +26,7 @@ $linkFg: darken($brandPrimary, 7%);
   color: white;
   background: rgba(black, 0.05);
   border: 2px solid rgba(white, 0.5);
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 0.75em 1.25em;
   font-size: 1.2rem;
 
@@ -47,7 +43,8 @@ header h1 {
 }
 
 .Selfie {
-  border-radius: 4px;
+  border-radius: 16px;
+  border: 2px solid rgba(white, 0.3);
   box-shadow: 0 2px 3px rgba(black, 0.3);
 }
 
@@ -88,20 +85,11 @@ html {
   font-size: 1rem;
   font-family: $fontMain;
 
-  @include fitToMain();
 
   a {
     font-weight: bold;
     color: inherit;
   }
-}
-
-.Wrapper {
-  padding: $smallGap $gap;
-
-    @media (max-width: $smallSize) {
-      padding: 0;
-    }
 }
 
 .PostDate {
@@ -123,21 +111,12 @@ section:not(:first-child) {
 
 main {
   background: #fff;
-  // border: 1px solid #ddd;
-  border-radius: $radius;
   max-width: $contentWidth;
   margin: 0 auto;
   padding: $smallGap $gap;
   font-family: $fontPara;
   font-size: 1.2rem;
   line-height: 1.5;
-
-  @media (max-width: $smallSize) {
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    border-radius: 0;
-  }
 }
 
 hr {
@@ -196,15 +175,7 @@ header {
   font-size: 3em;
   padding: ($gap * 2);
   margin-top: 0;
-  margin-bottom: $gap;
-
-  @media (max-width: $smallSize) {
-    margin-bottom: 0;
-  }
-
-  @media (max-width: 500px) {
-    font-size: 1.5em !important;
-  }
+  margin-bottom: 0;
 
   .GoHome {
     color: rgba(white, 1);
@@ -262,9 +233,9 @@ code {
 
 pre {
   border-radius: $radius;
+  padding: $smallGap;
   overflow-x: auto;
   line-height: 1;
   font-size: 1em;
   border: 1px solid rgba(black, 0.05);
-  @include fitToMain();
 }
