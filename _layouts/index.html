@@ -3,10 +3,10 @@
 <head>
 {% include head.html %}
 </head>
-<body>
-{% include index-header.html %}
+<body class="flex flex-column min-vh-100">
 
-<div class="Wrapper">
+<div class="flex-auto">
+{% include index-header.html %}
 {{ content }}
 </div>
 

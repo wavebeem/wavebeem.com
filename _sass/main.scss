@@ -12,6 +12,11 @@ $contentWidth: 700px;
 $smallSize: $contentWidth;
 $linkFg: darken($brandPrimary, 7%);
 
+.min-vh-100 { min-height: 100vh; }
+.flex { display: flex; }
+.flex-column { flex-direction: column; }
+.flex-auto { flex: 1 1 auto; }
+
 .HeaderLinks a {
   display: inline-block;
   margin: 0;
@@ -215,10 +220,15 @@ a {
 }
 
 footer {
-  color: #767676;
+  background: #eee;
+  color: black;
   padding: $gap;
   margin: 0;
   text-align: center;
+
+  a {
+    color: inherit;
+  }
 }
 
 p code {
