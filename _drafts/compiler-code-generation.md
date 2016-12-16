@@ -29,58 +29,157 @@ This means that the more different your input and output languages are, the hard
 
 Compiling to JavaScript is a bit of a unique case though, compared to compiling to machine code or some kind of bytecode. JavaScript is actually intended as a language for programmers to program in, unlike, say, JVM bytecode. So JavaScript environments expect you to debug and inspect JavaScript code. Nobody really cares if the JVM bytecode from a compiler looks *weird*, but if you generate really weird looking code from a language that compiles to JavaScript, it can bother people when they're debugging. [Source maps][4] can help with that problem, but it's only a partial debugging solution.
 
-## What are we gonna code for?
+## Code generation
 
-It's hard to pick a language small enough to fit in a blog post but large enough to actually be a useful demonstration. So I'll just cover function definition and function invocation.
+Code generation can be quite a bit harder, since you're translating one language into another, and at least in JavaScript, there aren't any great libraries to help make the task easier. Ideally you would take the AST for your source language, and translate it into an AST for your destination language, and then use a code generator for your destination language. Meaning a pipeline like this:
 
-So we'll have an AST with three different kinds of nodes:
-
-```javascript
+```js
 {
-  type: "FunctionCall",
-  fn: someFunction,
-  arguments: [node1, node2, ...]
-}
-
-// Which would look like this in JS:
-someFunction(node1, node2, ...)
-```
-
-```javascript
-{
-  type: "Function",
-  parameters: [variable1, variable2, ...],
-  expression: ...
-}
-
-// Which would look like this in JS:
-function(variable1, variable2, ...) {
-  return (...);
+  type: "cool.Add",
+  left: {type: "cool.Number", value: 3},
+  right: {type: "cool.Number", value: 4},
 }
 ```
 
-```javascript
-{
-  type: "Variable",
-  name: "foo"
-}
+…which would become…
 
-// Which would look like this in JS:
-foo
+```js
+{
+  type: "js.Operator",
+  operator: "+",
+  left: {type: "js.Literal", value: 3},
+  right: {type: "js.Literal", value: 4},
+}
 ```
 
-## escodegen
+…and then some lovely library converts that data into…
 
-Mozilla JS AST is complicated, and escodegen doesn't perform correctness checking. It's not a bad idea to use this, but for educational purposes we're making our own stuff here.
+```js
+3 + 4
+```
 
-## Our own AST for the bits we care about
+You can use [escodegen][4] to help with this, but it is lacking in error reporting and documentation currently, so it can be a bit rough.
 
-TODO
+## An example pipeline from start to finish
 
-## Our own code generator for those AST bits
+In the interest of time, I'll just be going over a high level view of the steps in transforming a simple language with just basic math through the entire compiler process, but ommitting any code.
 
-TODO
+## Step 0: The input
+
+This is just the text that would be in a code text file.
+
+```js
+let x = 1
+let y = 2
+print x + y ^ 3
+```
+
+## Step 1: Tokenization
+
+This is the output from the tokenization substep of parsing. Note that not all parsing techniques have a tokenization step.
+
+```js
+[ // line 1
+  { type: 'Let', value: 'let' },
+  { type: 'Var', value: 'x' },
+  { type: 'Eq', value: '=' },
+  { type: 'Number', value: '1' },
+  { type: 'Newline', value: '\n' },
+
+  // line 2
+  { type: 'Let', value: 'let' },
+  { type: 'Var', value: 'y' },
+  { type: 'Eq', value: '=' },
+  { type: 'Number', value: '2' },
+  { type: 'Newline', value: '\n' },
+
+  // line 3
+  { type: 'Print', value: 'print' },
+  { type: 'Var', value: 'x' },
+  { type: 'Op', value: '+' },
+  { type: 'Var', value: 'y' },
+  { type: 'Op', value: '^' },
+  { type: 'Number', value: '3' } ]
+```
+
+## Step 2: Parsing
+
+This is the step where either the source code or source tokens are converted into JSON data that can be easily processed by the rest of the compiler. Importantly, this takes a linear sequence of data (either text or tokens), and turns it into deep, nested data.
+
+```js
+{ type: 'Program',
+  statements:
+   [ { type: 'cool.Let',
+       name: 'x',
+       value: { type: 'cool.Number', value: 1 } },
+     { type: 'cool.Let',
+       name: 'y',
+       value: { type: 'cool.Number', value: 2 } },
+     { type: 'cool.Print',
+       value:
+        { type: 'cool.Add',
+          left: { type: 'cool.Var', name: 'x' },
+          right:
+           { type: 'cool.Pow',
+             left: { type: 'cool.Var', name: 'y' },
+             right: { type: 'cool.Number', value: 3 } } } } ] }
+```
+
+## Step 3: Translating to JS
+
+This step is translating from the source language AST (cool) to the destination language AST (JavaScript). This is definitely the hardest part of the compiler.
+
+```js
+{ type: 'Program',
+  body:
+   [ { type: 'VariableDeclaration',
+       declarations:
+        [ { type: 'VariableDeclarator',
+            id: { type: 'Identifier', name: 'x' },
+            init: { type: 'Literal', value: 1, raw: '1' } } ],
+       kind: 'var' },
+     { type: 'VariableDeclaration',
+       declarations:
+        [ { type: 'VariableDeclarator',
+            id: { type: 'Identifier', name: 'y' },
+            init: { type: 'Literal', value: 2, raw: '2' } } ],
+       kind: 'var' },
+     { type: 'ExpressionStatement',
+       expression:
+        { type: 'CallExpression',
+          callee:
+           { type: 'MemberExpression',
+             computed: false,
+             object: { type: 'Identifier', name: 'console' },
+             property: { type: 'Identifier', name: 'log' } },
+          arguments:
+           [ { type: 'BinaryExpression',
+               operator: '+',
+               left: { type: 'Identifier', name: 'x' },
+               right:
+                { type: 'CallExpression',
+                  callee:
+                   { type: 'MemberExpression',
+                     computed: false,
+                     object: { type: 'Identifier', name: 'Math' },
+                     property: { type: 'Identifier', name: 'pow' } },
+                  arguments:
+                   [ { type: 'Identifier', name: 'y' },
+                     { type: 'Literal', value: 3, raw: '3' } ] } } ] } } ],
+  sourceType: 'script' }
+```
+
+## Step 4: Code generation
+
+For code generation the JS AST is turned into JS source code.
+
+```js
+var x = 1;
+var y = 2;
+console.log(x + Math.pow(y, 3));
+```
 
 [1]: /blog/2016/11/01/making-a-language/
 [2]: http://coffeescript.org/
 [3]: http://www.purescript.org/
+[4]: https://github.com/estools/escodegen
