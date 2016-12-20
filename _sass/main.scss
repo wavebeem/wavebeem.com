@@ -25,6 +25,7 @@ $linkFg: darken($brandPrimary, 7%);
 }
 
 .mt1 { margin-top: 1em; }
+.mt2 { margin-top: 2em; }
 .font-main { font-family: $fontMain; }
 .tc { text-align: center; }
 .flex { display: flex; }
@@ -54,7 +55,7 @@ $linkFg: darken($brandPrimary, 7%);
   }
 
   img {
-    height: 3em;
+    height: 100%;
     width: auto;
   }
 
@@ -83,8 +84,8 @@ $linkFg: darken($brandPrimary, 7%);
   background: rgba(black, 0.05);
   border: 2px solid rgba(white, 0.5);
   border-radius: 8px;
-  padding: 0.75em 1.25em;
-  font-size: 1.2rem;
+  padding: 0.5em 1em;
+  font-size: 1.6rem;
   text-align: center;
 
   &:hover {
@@ -132,7 +133,7 @@ html {
 }
 
 .NotCommentArea {
-  margin-top: 30px;
+  margin-top: (2 * $gap);
   background: rgba(#cccc00, 0.10);
   color: rgba(#000, 0.70);
   border: 1px dotted rgba(#000, 0.10);
@@ -204,6 +205,8 @@ h2 {
   font-weight: 600;
   margin-bottom: (-$gap);
   padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 h3 {
@@ -263,8 +266,8 @@ a {
 .GoBack {
   font-family: $fontMain;
   padding: 0;
-  padding-top: $gap;
-  padding-bottom: $gap;
+  padding-top: (2 * $gap);
+  padding-bottom: (2 * $gap);
   display: block;
 }
 
