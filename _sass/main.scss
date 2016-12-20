@@ -12,6 +12,18 @@ $contentWidth: 700px;
 $smallSize: $contentWidth;
 $linkFg: darken($brandPrimary, 7%);
 
+@media screen {
+  .print {
+    display: none;
+  }
+}
+
+@media print {
+  .screen {
+    display: none;
+  }
+}
+
 .min-vh-100 { min-height: 100vh; }
 .flex { display: flex; }
 .flex-column { flex-direction: column; }
@@ -249,4 +261,8 @@ pre {
   line-height: 1;
   font-size: 1em;
   border: 1px solid rgba(black, 0.05);
+}
+
+.resume {
+  @import "./resume";
 }

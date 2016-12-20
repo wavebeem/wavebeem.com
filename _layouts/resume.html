@@ -1,59 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ page.title }}</title>
+
+{% include head.html %}
+
 <style>
-html {
-    font-family: Georgia, serif;
-    font-size: 12px;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 10px;
-}
-.contact-info li {
-    margin-top: 0.25em;
-}
-.contact-info .name {
-    font-size: 20px;
-    font-weight: bold;
-}
-main li { margin-top: 0.35em; }
-main h1 { font-size: 15px; }
-footer {
-    font-size: 10px;
-    text-align: right;
-}
-a {
-  color: blue;
-  text-decoration: none;
-  border-bottom: 1px solid;
-  padding-bottom: 1px;
-}
-.contact-info { float: right; }
-.contact-info ul {
-    list-style: none;
-    clear: both;
+@media print {
+    .screen { display: none; }
+    html {
+        font-family: Georgia, serif;
+        font-size: 12px;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    header {
+        display: none;
+    }
+    .contact-info li {
+        margin-top: 0.25em;
+    }
+    .contact-info .name h1 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    main li { margin-top: 0.35em; }
+    main h1 { font-size: 15px; }
+    footer {
+        font-size: 10px;
+        text-align: right;
+    }
+    a {
+    color: blue;
+    text-decoration: none;
+    border-bottom: 1px solid;
+    padding-bottom: 1px;
+    }
+    .contact-info { float: right; }
+    .contact-info ul { list-style: none; }
 }
 </style>
 </head>
-<body>
-<aside class="contact-info">
-<ul>
-    <li class="name">Brian Mock</li>
-    <li><a href="mailto:brian@mockbrian.com">brian@mockbrian.com</a></li>
-    <li><a href="https://mockbrian.com">mockbrian.com</a></li>
-    <li>
-        5227 NE 35th Pl<br>
-        Portland, OR 97211
-    </li>
-    <li>503-409-7863</li>
-</ul>
-</aside>
+<body class="resume">
+
+<header>
+  <a class="GoMain" href="/">Brian Mock</a> /
+  <a class="GoHome" href="#">Resume</a>
+</header>
+
 <main>
+
+<h2 class="screen">Contact Information</h2>
+<div class="contact-info">
+    <ul>
+        <li class="name print"><h1>Brian Mock</h1></li>
+        <li><a href="mailto:brian@mockbrian.com">brian@mockbrian.com</a></li>
+        <li><a href="https://mockbrian.com">mockbrian.com</a></li>
+        <li>
+            5227 NE 35th Pl<br>
+            Portland, OR 97211
+        </li>
+        <li>503-409-7863</li>
+    </ul>
+</div>
+
 {{ content }}
-<footer>PDF available upon request.</footer>
 </main>
+
+<footer>PDF available upon request.</footer>
+
 </body>
 </html>

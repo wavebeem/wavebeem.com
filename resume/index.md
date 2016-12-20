@@ -3,7 +3,7 @@ layout: resume
 title: "Resume • Brian Mock"
 ---
 
-# Interests
+## Interests
 
 - Creating simple, usable interfaces with web technologies
 - Organizing modular code and using functional programming techniques
@@ -11,18 +11,18 @@ title: "Resume • Brian Mock"
 - Working with fun, kind people in a relaxed environment
 - Pairing with other developers and helping to grow their skills
 
-# Core Skills
+## Core Skills
 
 - JavaScript (ES5/ES6), HTML, CSS (and Sass/LESS), GitHub
 - React, Ember, Angular, Lodash/Underscore, Mocha
 - Can deep dive into JS; can switch between languages easily
 
-# Other Skills
+## Other Skills
 
 - Amazon S3, Cloudfront, Route 53, JIRA
 - Ruby, Python, Java, Bash, Perl, Objective-C, Haskell, Scala
 
-# Work Experience
+## Work Experience
 
 - **CrowdCompass**, *JavaScript Engineer* (February 2016)
     - Maintained event planner dashboard (Rails/jQuery)
@@ -45,25 +45,23 @@ title: "Resume • Brian Mock"
 - **NOAA**, *Undergraduate Research Intern* (Summer 2011)
     - Created weather simulation data visualizer
 
-# Projects
+## Projects
 
-- Became the maintainer of [Parsimmon](https://github.com/jneen/parsimmon/),
-  a JavaScript parser combinator library (2016)
+- Maintains [Parsimmon](https://github.com/jneen/parsimmon/), a JavaScript parser combinator library (2016)
 - Created [Squiggle](http://squiggle-lang.org/), a compile-to-JS programming language (2015-2016)
+- Made [Screenhive](https://github.com/wavebeem/screenhive), an app for organizing Steam screenshots (2016)
 - Co-developed educational iPad math game: [Algebra Card Clutter](http://itunes.apple.com/us/app/algebra-card-clutter/id549330499) (2012)
-- Created spec-compliant JSON parser in JavaScript using Jison [(GitHub 2014)](https://github.com/wavebeem/json-crumpet)
 - Designed and implemented a new tab bar style for [iTerm](http://iterm2.com/) [(GitHub 2014)](https://github.com/gnachman/iTerm2/pull/185)
 - Created [Pokemon type matchup calculator](https://pkmn.help) [(GitHub 2013)](https://github.com/wavebeem/pkmn-type-calc)
-order [(GitHub 2013)](https://github.com/SirVer/ultisnips/pull/118)
 - Created [LatteScript](http://misc.mockbrian.com/lattescript/) programming language (2011-2012)
 
-# Education
+## Education
 
-- B.A., Computer Science, Willamette University, Salem OR May 2012
+- B.A., Computer Science, Willamette University, Salem OR (2012)
 
-# Technology Talks
+## Technology Talks
 
-- [Parsing with Jison](http://mockbrian.com/talk/jison/#/)
-- [Parsing in JS](http://mockbrian.com/talk/parsing-jison/#/)
-- [PEG & Jison](http://mockbrian.com/talk/peg-jison/#/)
-- [JS Curry](http://mockbrian.com/talk/js-curry/#/)
+[Parsing with Jison](http://mockbrian.com/talk/jison/#/)
+/ [Parsing in JS](http://mockbrian.com/talk/parsing-jison/#/)
+/ [PEG & Jison](http://mockbrian.com/talk/peg-jison/#/)
+/ [JS Curry](http://mockbrian.com/talk/js-curry/#/)
