@@ -26,21 +26,31 @@ $linkFg: darken($brandPrimary, 7%);
 
 .mt1 { margin-top: 1em; }
 .mt2 { margin-top: 2em; }
+.pa1 { padding: 1em; }
 .font-main { font-family: $fontMain; }
 .ttu { text-transform: uppercase; }
 .ttl { text-transform: lowercase; }
 .tc { text-align: center; }
 .flex { display: flex; }
-.flex-column { display: flex-column; }
+.flex-column { flex-direction: column; }
+.flex-auto { flex: 1 1 auto; }
 .align-center { align-items: center; }
 .justify-ceter { justify-content: center; }
 .di { display: inline; }
 .dib { display: inline-block; }
 .db { display: block; }
+.min-vh-100 { min-height: 100vh; }
+.bold { font-weight: bold; }
+.list-reset { list-style: none; padding-left: initial; }
+.line-height-2 { line-height: 2; }
 
 .main-page {
   background: $brandPrimary;
   color: white;
+
+  a {
+    color: inherit;
+  }
 
   p {
     font-family: $fontMain;
@@ -51,69 +61,58 @@ $linkFg: darken($brandPrimary, 7%);
     max-width: 400px;
   }
 
-  .me {
-    padding-top: 1em;
-    height: 3rem;
-  }
-
   img {
-    height: 100%;
+    height: auto;
     width: auto;
   }
 
   h1 {
     line-height: 3rem;
-    margin: 0 0.3em;
+    margin: 0;
     font-size: 2.8rem;
   }
 }
 
-.min-vh-100 { min-height: 100vh; }
-.flex { display: flex; }
-.flex-column { flex-direction: column; }
-.flex-auto { flex: 1 1 auto; }
-
-.HeaderLinks a {
-  font-family: $fontMain;
-  font-weight: bold;
-  display: block;
-  margin: 0;
-  margin-top: 1em;
-}
-
 .OutlineButton {
   color: white;
-  background: rgba(black, 0.05);
-  border: 2px solid rgba(white, 0.5);
-  border-radius: 8px;
-  padding: 0.5em 1em;
+  display: inline-block;
+  border: 0;
+  margin: 0.6em 0.2em;
   font-size: 1.6rem;
-  text-align: center;
+  text-align: left;
 
-  &:hover {
+  span {
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid;
+  }
+
+  &:hover span {
     color: $brandPrimary;
     background: white;
   }
 }
 
+header > * {
+  vertical-align: middle;
+}
+
 header h1 {
-  font-size: 2rem;
+  margin: 0;
+  font-size: 4rem;
   color: white;
   font-weight: bold;
 }
 
-.Selfie {
-  border-radius: 8px;
-  border: 1px solid rgba(white, 0.3);
+header > .active {
+  color: white;
 }
 
-header p {
-  font-size: 1.5rem;
-  font-weight: normal;
-  color: white;
-  max-width: 25em;
-  display: block;
-  margin: 1em auto;
+.Selfie {
+  margin-right: 0.3rem;
+  height: 2rem;
+  width: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(white, 0.3);
 }
 
 html,
@@ -231,7 +230,7 @@ header {
   text-align: center;
   font-weight: bold;
 
-  font-size: 2em;
+  font-size: 2rem;
   padding: $gap;
   margin-top: 0;
   margin-bottom: 0;
@@ -302,6 +301,16 @@ pre {
   line-height: 1;
   font-size: 1em;
   // border: 1px solid rgba(black, 0.05);
+}
+
+header.big {
+  $size: 3rem;
+
+  font-size: $size;
+
+  .Selfie {
+    height: $size;
+  }
 }
 
 .resume {
