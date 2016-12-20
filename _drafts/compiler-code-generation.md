@@ -10,11 +10,11 @@ Compilers and interpreters are basically big pipelines, transforming one type of
 
 At a very high level, the steps are:
 
-- Read the source code
-- Parse the code into an abstract syntax tree (AST)
-- *(optional)* Emit warnings based on the AST
-- *(optional)* Typecheck the AST
-- Generate code or run the program
+- 📚 Read the source code
+- 🌲 Parse the code into an abstract syntax tree (AST)
+- ️️⚠️ *(optional)* Emit warnings based on the AST
+- 🔍 *(optional)* Typecheck the AST
+- 💻 Generate code or run the program
 
 Technically the AST step is optional (PHP only recently started using an AST), but basically every language implementation uses this step.
 
@@ -25,40 +25,9 @@ Code generation is the final step in a compiler. The compiler generates code tha
 
 My [previous blog post][1] about making a programming language covers making an interpreter. Interpreters are easy to make because all you have to do is write a program that has the right behavior, whereas with a compiler, you have to generate code in another language that happens to have the same behavior as your source language.
 
-This means that the more different your input and output languages are, the harder it is to do the code generation. [CoffeeScript][2] is extremely similar to JavaScript, so it is able to produce a similar amount of JavaScript as CoffeeScript to achive its code generation. [PureScript][3] requires a *lot* more JavaScript code output to achieve the correct program, because it is a lot different than JavaScript.
+This means that the more different your input and output languages are, the harder it is to do the code generation. [CoffeeScript][2] is extremely similar to JavaScript, so it is able to produce a similar amount of JavaScript as CoffeeScript to achive its code generation. [PureScript][3] requires a *lot* more JavaScript code output to achieve the correct program, because it is a lot more different than JavaScript.
 
 Compiling to JavaScript is a bit of a unique case though, compared to compiling to machine code or some kind of bytecode. JavaScript is actually intended as a language for programmers to program in, unlike, say, JVM bytecode. So JavaScript environments expect you to debug and inspect JavaScript code. Nobody really cares if the JVM bytecode from a compiler looks *weird*, but if you generate really weird looking code from a language that compiles to JavaScript, it can bother people when they're debugging. [Source maps][4] can help with that problem, but it's only a partial debugging solution.
-
-## Code generation
-
-Code generation can be quite a bit harder, since you're translating one language into another, and at least in JavaScript, there aren't any great libraries to help make the task easier. Ideally you would take the AST for your source language, and translate it into an AST for your destination language, and then use a code generator for your destination language. Meaning a pipeline like this:
-
-```js
-{
-  type: "cool.Add",
-  left: {type: "cool.Number", value: 3},
-  right: {type: "cool.Number", value: 4},
-}
-```
-
-…which would become…
-
-```js
-{
-  type: "js.Operator",
-  operator: "+",
-  left: {type: "js.Literal", value: 3},
-  right: {type: "js.Literal", value: 4},
-}
-```
-
-…and then some lovely library converts that data into…
-
-```js
-3 + 4
-```
-
-You can use [escodegen][4] to help with this, but it is lacking in error reporting and documentation currently, so it can be a bit rough.
 
 ## An example pipeline from start to finish
 
@@ -66,7 +35,7 @@ In the interest of time, I'll just be going over a high level view of the steps 
 
 ## Step 0: The input
 
-This is just the text that would be in a code text file.
+This is just the text that would be in a code text file. Let's call it CoolScript™.
 
 ```js
 let x = 1
@@ -127,7 +96,7 @@ This is the step where either the source code or source tokens are converted int
 
 ## Step 3: Translating to JS
 
-This step is translating from the source language AST (cool) to the destination language AST (JavaScript). This is definitely the hardest part of the compiler.
+This step is translating from the source language AST (CoolScript) to the destination language AST (JavaScript). This is definitely the hardest part of the compiler.
 
 ```js
 { type: 'Program',
@@ -171,7 +140,7 @@ This step is translating from the source language AST (cool) to the destination 
 
 ## Step 4: Code generation
 
-For code generation the JS AST is turned into JS source code.
+For code generation the JS AST is turned into JS source code. Given the immense object from step 3, [escodegen][4] can be used to get this next step essentially for free.
 
 ```js
 var x = 1;
@@ -181,11 +150,10 @@ console.log(x + Math.pow(y, 3));
 
 ## Wrapping up
 
-For now, actually coding the pipeline for the demonstration above will be left as an exercise for the reader. I can suggest using [Parsimmon][5] as per my last blog post. The AST translation will require your own hard work, but [Esprima][6] can be used to turn the JS AST into JS code with ease.
+For now, actually coding the pipeline for the demonstration above will be left as an exercise for the reader. I can suggest using [Parsimmon][5] as per my last blog post. The AST translation will require your own hard work, but escodegen can be used to turn the JS AST into JS code with ease.
 
 [1]: /blog/2016/11/01/making-a-language/
 [2]: http://coffeescript.org/
 [3]: http://www.purescript.org/
 [4]: https://github.com/estools/escodegen
 [5]: https://github.com/jneen/parsimmon
-[6]: http://esprima.org/
