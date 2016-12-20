@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="{{ page.root_class }}">
 <head>
 {% include head.html %}
 </head>
 <body class="flex flex-column min-vh-100">
 
-<div class="flex-auto">
-{% include index-header.html %}
+<main class="flex-auto">
 {{ content }}
-</div>
+</main>
 
-{% include footer.html %}
 </body>
 </html>
