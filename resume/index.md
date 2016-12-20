@@ -25,22 +25,15 @@ title: "Resume • Brian Mock"
 ## Work Experience
 
 - **CrowdCompass**, *JavaScript Engineer* (February 2016)
-    - Maintained event planner dashboard (Rails/jQuery)
-    - Maintained event attendee web app (Ember)
-    - Worked closely with product managers and UX/UI team
+    - Maintained web app for event attendees (Ember)
+    - Maintained dashboard for event planners (Rails/jQuery)
+    - Helped to migrate from CoffeeScript to ES6; developed ESLint strategy
 - **Janrain**, *JavaScript Software Engineer* (September 2012–July 2015)
     - Wrote graph database visualization using D3.js
-    - Inherited and completed an Angular dashboard website and completed it
-      on a tight time schedule
-    - Built new social sharing product (with 75% test coverage) against
-      legacy APIs
-    - Created tools for debugging customer production sites using
-      local code in any browser
-    - Solved multiple critical customer issues in production
-      environments while on call
-    - Maintained, bug-fixed, and enhanced legacy code base in
-      production on numerous websites maintaining backwards
-      compatibility and IE 8 support
+    - Built Angular dashboard site; built new social sharing widget (with 75% test coverage)
+    - Created tools for debugging customer production sites using local code in any browser
+    - Solved multiple critical customer issues in production environments while on call
+    - Maintained legacy code in production on thousands of sites, maintaining backwards compatibility and IE 8 support
     - Wrote API documentation for a core section of code base
 - **NOAA**, *Undergraduate Research Intern* (Summer 2011)
     - Created weather simulation data visualizer
@@ -48,12 +41,14 @@ title: "Resume • Brian Mock"
 ## Projects
 
 - Maintains [Parsimmon](https://github.com/jneen/parsimmon/), a JavaScript parser combinator library (2016)
+- Created [pkmn.help](https://pkmn.help) type matchup calculator [(GitHub 2013)](https://github.com/wavebeem/pkmn-type-calc)
 - Created [Squiggle](http://squiggle-lang.org/), a compile-to-JS programming language (2015-2016)
 - Made [Screenhive](https://github.com/wavebeem/screenhive), an app for organizing Steam screenshots (2016)
 - Co-developed educational iPad math game: [Algebra Card Clutter](http://itunes.apple.com/us/app/algebra-card-clutter/id549330499) (2012)
 - Designed and implemented a new tab bar style for [iTerm](http://iterm2.com/) [(GitHub 2014)](https://github.com/gnachman/iTerm2/pull/185)
-- Created [Pokemon type matchup calculator](https://pkmn.help) [(GitHub 2013)](https://github.com/wavebeem/pkmn-type-calc)
-- Created [LatteScript](http://misc.mockbrian.com/lattescript/) programming language (2011-2012)
+- Created [LatteScript](http://misc.mockbrian.com/lattescript/), an educational programming language (2011-2012)
+- Developed [yantp](https://chrome.google.com/webstore/detail/yet-another-new-tab-page/imfkhhcponjpjhfpaccepedaabjclbjj) Chrome tab page extension (2013-2016)
+- Wrote a large amount of documentation for [Ramda](https://github.com/ramda/ramda/pulls?q=is%3Apr+author%3Awavebeem+is%3Aclosed) (2013-2014)
 
 ## Education
 
@@ -61,7 +56,6 @@ title: "Resume • Brian Mock"
 
 ## Technology Talks
 
-[Parsing with Jison](http://mockbrian.com/talk/jison/#/)
-/ [Parsing in JS](http://mockbrian.com/talk/parsing-jison/#/)
-/ [PEG & Jison](http://mockbrian.com/talk/peg-jison/#/)
-/ [JS Curry](http://mockbrian.com/talk/js-curry/#/)
+[Parsing in JS](http://misc.mockbrian.com/talk/parsing-jison/#/)
+/ [PEG & Jison](http://misc.mockbrian.com/talk/peg-jison/#/)
+/ [JS Curry](http://misc.mockbrian.com/talk/js-curry/#/)
