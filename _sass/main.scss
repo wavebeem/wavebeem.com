@@ -27,6 +27,8 @@ $linkFg: darken($brandPrimary, 7%);
 .mt1 { margin-top: 1em; }
 .mt2 { margin-top: 2em; }
 .font-main { font-family: $fontMain; }
+.ttu { text-transform: uppercase; }
+.ttl { text-transform: lowercase; }
 .tc { text-align: center; }
 .flex { display: flex; }
 .flex-column { display: flex-column; }
