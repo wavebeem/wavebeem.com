@@ -6,7 +6,19 @@ description: "How to use and how not to use promises"
 
 ## Notes
 
-In this blog post I'm going to be using some [ES6][1] syntax. ES6 is the latest version of JavaScript. When you see `x => x + 1`, that's basically the same as `function(x) { return x + 1; }`. If you're not sure if you can use ES6, you should google it.
+In this blog post I'm going to be using some ES6 syntax. ES6 is the latest version of JavaScript. When you see:
+
+```js
+x => x + 1
+```
+
+That's basically the same as:
+
+```js
+function(x) { return x + 1; }
+```
+
+If you're not sure if you can use ES6, check out the [ES6 compatibility table][1] and [Babel][2].
 
 ## Error handling
 
@@ -20,8 +32,8 @@ var p = Promise.resolve(1)
   .then(x => x + 1)
   .then(x => x + 1);
 
-p.then(x => console.log(x));
 // Prints 4
+p.then(x => console.log(x));
 ```
 
 If one of those steps fail, then the final `console.log` there will never happen.
@@ -34,8 +46,8 @@ var p = Promise.resolve(1)
   })
   .then(x => x + 1);
 
-p.then(x => console.log(x));
 // Nothing is ever printed
+p.then(x => console.log(x));
 ```
 
 There's also `p.then(ok, fail)`. If the promise `p` succeeds, it calls `ok(x)` where `x` is the data returned from `p`. If `p` fails, then it calls `fail(err)` where `err` is the error thrown by `p`. But remember that promises are *values*. So what is the value of a promise after its fail handler has been called? It's the value the fail handler returns. This means that unless you throw *again* inside your fail handler, you've effectively saved your promise from failure and are substituting a new value into your promise. Also, `.catch(fail)` is just a shorthand for `.then(null, fail)`, which is pretty handy to use.
@@ -47,14 +59,14 @@ var p = Promise.resolve(1)
     throw new Error("some error");
   })
   .catch(function() {
-    console.error("There was an error");
     // Prints "There was an error"
+    console.error("There was an error");
     return 1;
   })
   .then(x => x + 1);
 
-p.then(x => console.log(x));
 // Prints 2
+p.then(x => console.log(x));
 ```
 
 You should always either `throw` or `return` from the fail handlers for your promises, because JavaScript will implicitly `return undefined` at the end of a function for you, which you probably don't want in your promise value:
@@ -65,12 +77,12 @@ var p = Promise.resolve(1)
     throw new Error("oopsy");
   })
   .catch(function(err) {
-    console.error("I found an error:", err);
     // Prints "I found an error:", and the error
+    console.error("I found an error:", err);
   });
 
-p.then(x => console.log(x));
 // Prints undefined
+p.then(x => console.log(x));
 ```
 
 So if you just rethrow the error for errors you can't actually recover from, you'll be fine:
@@ -81,18 +93,18 @@ var p = Promise.resolve(1)
     throw new Error("oopsy");
   })
   .catch(function(err) {
-    console.error("I found an error:", err);
     // Prints "I found an error:", and the error
+    console.error("I found an error:", err);
     throw err;
   });
 
-p.then(x => console.log(x));
 // Doesn't print anything
+p.then(x => console.log(x));
 ```
 
 ## Value your promises
 
-The most important thing about promises (especially compared to callbacks) is that promises are *values*. That means you can assign them to a variable, return them from a function, or pass them to another function. If you don't do something with the value of your promise, you're losing information! You might not always need this information, but it's there, and don't forget it.
+The most important thing about promises, compared to callbacks, is that promises are *values*. That means you can assign them to a variable, return them from a function, or pass them to another function. If you don't do something with the value of your promise, you're losing information! You might not always need this information, but it's there, and don't forget it.
 
 So instead of something like this:
 
@@ -229,3 +241,5 @@ function asyncThing(x) {
   });
 }
 ```
+[1]: https://kangax.github.io/compat-table/es6/
+[2]: https://babeljs.io/

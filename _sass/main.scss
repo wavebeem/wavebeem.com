@@ -44,6 +44,20 @@ $linkFg: darken($brandPrimary, 7%);
 .list-reset { list-style: none; padding-left: initial; }
 .line-height-2 { line-height: 2; }
 
+.header-link {
+  color: inherit;
+  opacity: 0.1;
+  text-decoration: none;
+  border: 0;
+  margin-left: 0.4em;
+
+  &:hover {
+    opacity: 1;
+    color: $brandPrimary;
+    border-bottom: 2px solid currentColor;
+  }
+}
+
 .main-page {
   background: $brandPrimary;
   color: white;
@@ -62,8 +76,9 @@ $linkFg: darken($brandPrimary, 7%);
   }
 
   img {
-    height: auto;
-    width: auto;
+    margin: 0;
+    height: 150px;
+    width: 150px;
   }
 
   h1 {

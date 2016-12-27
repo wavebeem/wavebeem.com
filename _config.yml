@@ -1,4 +1,7 @@
 markdown: redcarpet
+redcarpet:
+  extensions:
+    - with_toc_data
 permalink: /blog/:year/:month/:day/:title/
 exclude:
   - Gemfile
