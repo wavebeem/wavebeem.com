@@ -4,9 +4,9 @@ layout: post
 description: "How to use promises effectively"
 ---
 
-## Notes
+## About
 
-In this blog post I'm going to be using some ES6 syntax. ES6 is the latest version of JavaScript. When you see:
+This post is about how to use promises effectively. In it, I'm going to use some ES6 syntax. ES6 is the latest version of JavaScript. When you see:
 
 ```js
 x => x + 1
