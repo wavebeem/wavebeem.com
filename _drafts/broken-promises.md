@@ -1,7 +1,7 @@
 ---
 title: "Broken Promises"
 layout: post
-description: "How to use and how not to use promises"
+description: "How to use promises effectively"
 ---
 
 ## Notes

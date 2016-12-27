@@ -1,4 +1,5 @@
 $brandPrimary: #097;
+$yellow: #cc0;
 $fontMain: "Helvetica", sans-serif;
 $fontPara: "Georgia", "Cambria", "Palatino", serif;
 $fontMonospace: "Fira Code", "Menlo", "Consolas", monospace;
@@ -44,18 +45,9 @@ $linkFg: darken($brandPrimary, 7%);
 .list-reset { list-style: none; padding-left: initial; }
 .line-height-2 { line-height: 2; }
 
-.header-link {
-  color: inherit;
-  opacity: 0.1;
-  text-decoration: none;
+.anchorjs-link {
   border: 0;
-  margin-left: 0.4em;
-
-  &:hover {
-    opacity: 1;
-    color: $brandPrimary;
-    border-bottom: 2px solid currentColor;
-  }
+  text-decoration: none;
 }
 
 .main-page {
@@ -150,9 +142,9 @@ html {
 
 .NotCommentArea {
   margin-top: (2 * $gap);
-  background: rgba(#cccc00, 0.10);
-  color: rgba(#000, 0.70);
-  border: 1px dotted rgba(#000, 0.10);
+  background: rgba($yellow, 0.10);
+  color: rgba(black, 0.70);
+  border: 1px dotted rgba(black, 0.10);
   padding: $smallGap;
   border-radius: $radius;
   font-size: 1rem;
