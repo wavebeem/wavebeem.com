@@ -171,6 +171,12 @@ h3 {
   font-family: $fontHeading;
 }
 
+h1 > a {
+  color: inherit;
+  text-decoration: inherit;
+  border: none;
+}
+
 section:not(:first-child) {
   margin-top: 3em;
 }

@@ -9,16 +9,18 @@ description: "How to use promises effectively"
 This post is about how to use promises effectively. In it, I'm going to use some ES6 syntax. ES6 is the latest version of JavaScript. When you see:
 
 ```js
+// Arrow function
 x => x + 1
 ```
 
 That's basically the same as:
 
 ```js
+// Regular function
 function(x) { return x + 1; }
 ```
 
-If you're not sure if you can use ES6, check out the [ES6 compatibility table][1] and [Babel][2].
+If you're not sure if you can use ES6, check out the [ES6 compatibility table][1] and [Babel][2]. Otherwise, just manually change the arrow functions like shown above.
 
 ## Error handling
 
@@ -241,5 +243,10 @@ function asyncThing(x) {
   });
 }
 ```
+
+## The future holds promise
+
+Go forth and use promises elegantly! Good luck and have fun with JavaScript! ☕️
+
 [1]: https://kangax.github.io/compat-table/es6/
 [2]: https://babeljs.io/
