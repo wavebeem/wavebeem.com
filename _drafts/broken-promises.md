@@ -52,7 +52,7 @@ var p = Promise.resolve(1)
 p.then(x => console.log(x));
 ```
 
-There's also `p.then(ok, fail)`. If the promise `p` succeeds, it calls `ok(x)` where `x` is the data returned from `p`. If `p` fails, then it calls `fail(err)` where `err` is the error thrown by `p`. But remember that promises are *values*. So what is the value of a promise after its fail handler has been called? It's the value the fail handler returns. This means that unless you throw *again* inside your fail handler, you've effectively saved your promise from failure and are substituting a new value into your promise. Also, `.catch(fail)` is just a shorthand for `.then(null, fail)`, which is pretty handy to use.
+There's also `p.then(ok, fail)`. This calls `fail` if `p` is rejected, but does *not* call `fail` if the `ok` handler is rejected. Also, `p.catch(fail)` is a shortcut for `p.then(null, fail)`.
 
 ```js
 var p = Promise.resolve(1)
