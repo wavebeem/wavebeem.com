@@ -1,0 +1,15 @@
+<script src="https://twemoji.maxcdn.com/2/twemoji.min.js?2.2.3"></script>
+<script>
+  twemoji.parse(document.body, {
+    callback: function(icon, options, variant) {
+      switch (icon) {
+      case "a9": // © copyright
+      case "ae": // ® registered trademark
+      case "2122": // ™ trademark
+        return false;
+      default:
+        return options.base + options.size + "/" + icon + options.ext;
+      }
+    }
+  });
+</script>

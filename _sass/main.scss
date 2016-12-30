@@ -46,13 +46,21 @@ $linkFg: darken($brandPrimary, 7%);
 .line-height-2 { line-height: 2; }
 .black-50 { color: rgba(0, 0, 0, 0.5); }
 
+// Twemoji styles
+img.emoji {
+  height: 1em;
+  width: 1em;
+  margin: 0 .05em 0 .1em;
+  vertical-align: -0.1em;
+}
+
 .anchorjs-link {
   border: 0;
   text-decoration: none;
 }
 
 .emoji-bullet {
-  padding-right: 0.5em;
+  padding-right: 0.2em;
 }
 
 .main-page {
@@ -64,7 +72,7 @@ $linkFg: darken($brandPrimary, 7%);
     max-width: 400px;
   }
 
-  img {
+  .Selfie {
     margin: 0;
     height: 150px;
     width: 150px;
