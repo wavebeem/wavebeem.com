@@ -60,7 +60,29 @@ img.emoji {
 }
 
 .emoji-bullet {
-  padding-right: 0.2em;
+  margin-right: 0.2em;
+}
+
+.button-list li {
+  display: inline;
+}
+
+.button-list a {
+  padding: 0.3em 1em;
+  margin-bottom: 1em;
+  border: 2px solid;
+  border-radius: 0.5em;
+  font-size: 1rem;
+
+  &:hover {
+    border-color: $linkFg;
+    background: $linkFg;
+    color: white;
+  }
+}
+
+.button-list li:last-child a {
+  margin-bottom: 0;
 }
 
 .main-page {
