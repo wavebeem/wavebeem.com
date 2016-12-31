@@ -1,4 +1,4 @@
-$brandPrimary: darken(#097, 7%);
+$brandPrimary: #00755b;
 $yellow: #cc0;
 $fontMain: "Helvetica", sans-serif;
 $fontPara: "Georgia", "Cambria", "Palatino", serif;
@@ -11,7 +11,6 @@ $lightBorder: 2px solid rgba(white, 0.50);
 $smallGap: ($gap / 2);
 $contentWidth: 700px;
 $smallSize: $contentWidth;
-$linkFg: $brandPrimary;
 
 @media screen {
   .print {
@@ -100,8 +99,8 @@ img.emoji {
   font-size: 1rem;
 
   &:hover {
-    border-color: $linkFg;
-    background: $linkFg;
+    border-color: $brandPrimary;
+    background: $brandPrimary;
     color: white;
   }
 }
@@ -340,7 +339,7 @@ header {
 }
 
 a {
-  color: $linkFg;
+  color: $brandPrimary;
   text-decoration: none;
   padding-bottom: 1px;
   border-bottom: 1px solid currentColor;
