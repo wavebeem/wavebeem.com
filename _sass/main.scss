@@ -49,10 +49,26 @@ $linkFg: $brandPrimary;
 .line-height-2 { line-height: 2; }
 .black-50 { color: rgba(0, 0, 0, 0.5); }
 
-.header-links a {
-  padding: 0.2em 0.1em;
-  margin: 0 0.2em;
-  border-bottom: 2px solid;
+.header-links {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 400px;
+
+  a {
+    padding: 0.5em 1em;
+    margin: 0.3em 0.2em;
+    border: 2px solid rgba(white, 0.5);
+    background: rgba(black, 0.1);
+    border-radius: 9999px;
+    text-align: left;
+
+    &:hover {
+      border-color: white;
+      background: white;
+      color: $brandPrimary;
+    }
+  }
 }
 
 // Twemoji styles
@@ -155,8 +171,9 @@ header > .active {
   margin-right: 0.3rem;
   height: 2rem;
   width: auto;
-  border-radius: 8px;
-  border: 1px solid rgba(white, 0.4);
+  border-radius: 50%;
+  border: 2px solid rgba(white, 0.4);
+  box-shadow: 0 2px 2px rgba(black, 0.3);
 }
 
 html,
@@ -238,8 +255,27 @@ hr {
   font-size: 1.3rem;
   line-height: 1.4;
 
+  .date {
+    font-family: $fontMain;
+    color: #555;
+  }
+
+  a {
+    padding-bottom: 2px;
+    border-bottom-width: 2px;
+    font-weight: bold;
+    font-family: $fontMain;
+    font-size: 1.2em;
+  }
+
   li {
+    border-bottom: 1px solid #eee;
     margin-bottom: 1rem;
+
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: 0;
+    }
   }
 }
 
