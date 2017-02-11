@@ -1,7 +1,7 @@
 ---
 title: "JS Gotchas with This and New"
 layout: post
-description: "Love it or hate it, you’ve probably used JavaScript at some point. JavaScript has two keywords to aid in writing object-oriented code: this and new. Despite the Java namesake for JavaScript, these keywords work completely differently in JavaScript, and are frequently misunderstood or used improperly on accident. This post explains the behavior of this and new, and explores common mistakes with using them, as well as how to write more resilient code without them."
+description: "How JS's 'this' and 'new' work, and how to avoid issues with them"
 ---
 
 ## Note
