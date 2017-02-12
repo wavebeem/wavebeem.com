@@ -24,12 +24,12 @@ $smallSize: $contentWidth;
   }
 }
 
-.font-75pc { font-size: 75%; }
-.mb1 { margin-bottom: 1em; }
-.mb2 { margin-bottom: 2em; }
-.mt1 { margin-top: 1em; }
-.mt2 { margin-top: 2em; }
-.pa1 { padding: 1em; }
+@media (max-width: 320px) {
+  html {
+    font-size: 12px;
+  }
+}
+
 .font-main { font-family: $fontMain; }
 .ttu { text-transform: uppercase; }
 .ttl { text-transform: lowercase; }
@@ -46,28 +46,6 @@ $smallSize: $contentWidth;
 .list-reset { list-style: none; padding-left: initial; }
 .line-height-2 { line-height: 2; }
 .black-50 { color: rgba(0, 0, 0, 0.5); }
-
-.header-links {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  max-width: 400px;
-
-  a {
-    padding: 0.5em 1em;
-    margin: 0.3em 0.2em;
-    border: 2px solid rgba(white, 0.3);
-    background: rgba(black, 0.1);
-    border-radius: 9999px;
-    text-align: left;
-
-    &:hover {
-      border-color: white;
-      background: white;
-      color: $brandPrimary;
-    }
-  }
-}
 
 // Twemoji styles
 img.emoji {
@@ -86,10 +64,6 @@ img.emoji {
   margin-right: 0.2em;
 }
 
-.button-list li {
-  display: inline;
-}
-
 .button-list a {
   padding: 0.3em 1em;
   margin-bottom: 1em;
@@ -104,75 +78,15 @@ img.emoji {
   }
 }
 
-.button-list li:last-child a {
-  margin-bottom: 0;
-}
-
-.main-page {
-  ul, p {
-    font-size: 1.4rem;
-  }
-
-  main ul {
-    max-width: 400px;
-  }
-
-  .Selfie {
-    margin: 0;
-    height: 150px;
-    width: 150px;
-  }
-
-  h1 {
-    margin-top: 0.5em;
-    margin-bottom: 0.25em;
-    line-height: 3rem;
-    font-size: 2.8rem;
-  }
-}
-
-.OutlineButton {
-  color: white;
-  display: inline-block;
-  border: 0;
-  margin: 0.6em 0.2em;
-  font-size: 1.6rem;
-  text-align: left;
-
-  span {
-    padding-bottom: 0.2em;
-    border-bottom: 2px solid;
-  }
-
-  &:hover span {
-    color: $brandPrimary;
-    background: white;
-  }
-}
-
-header > * {
-  vertical-align: middle;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 4rem;
-  color: white;
-  font-weight: bold;
-}
-
-header > .active {
-  color: white;
-}
-
 .Selfie {
-  margin-right: 0.3rem;
-  height: 2rem;
-  width: 2rem;
+  margin: 0;
+  margin-top: 1rem;
+  height: 150px;
+  width: 150px;
   background-color: rgba(white, 0.2);
   border-radius: 50%;
   border: 2px solid transparent;
-  box-shadow: 0 2px 2px rgba(black, 0.3);
+  box-shadow: 0 2px 2px rgba(black, 0.2);
 }
 
 html,
@@ -251,22 +165,12 @@ hr {
 .BlogPostListing {
   list-style: none;
   padding-left: 0;
-  font-size: 1.3rem;
-  line-height: 1.4;
 
   .date {
     display: block;
     padding-top: 0.3em;
     font-family: $fontMain;
     color: #555;
-  }
-
-  a {
-    padding-bottom: 2px;
-    border-bottom-width: 2px;
-    font-weight: bold;
-    font-family: $fontMain;
-    font-size: 1.2em;
   }
 
   li {
@@ -308,19 +212,26 @@ h3 {
 }
 
 :focus {
-  outline: 3px solid rgba(orange, 0.80);
+  outline: none;
+  box-shadow:
+    0 0 0 2px white,
+    0 0 0 4px black;
 }
 
 header {
   background: $brandPrimary;
   color: white;
-  text-align: center;
-  font-weight: bold;
+  padding: 0 1rem;
+  box-shadow: 0 2px 10px rgba(black, 0.25);
 
-  font-size: 2rem;
-  padding: $gap;
+  font-size: 1.5rem;
+
+  @media (max-width: 320px) {
+    font-size: 1.2rem;
+  }
+
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
 
   img {
     height: 2rem;
@@ -329,6 +240,8 @@ header {
   }
 
   a {
+    display: inline-block;
+    padding: 1.5rem 1rem;
     color: inherit;
     border: none;
 
@@ -356,8 +269,6 @@ a {
 footer {
   background: #eee;
   color: black;
-  padding: $gap;
-  margin: 0;
   text-align: center;
 
   a {

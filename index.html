@@ -4,36 +4,29 @@ title: "Brian Mock"
 root_class: "main-page"
 ---
 
-<header class="tc">
-  {% include selfie.html %}
-  <h1>Brian Mock</h1>
-  <div class="mt1 font-75pc header-links">
-    <a class="dib" href="mailto:brian@mockbrian.com">
-      <span class="emoji-bullet">📧</span>
-      brian@mockbrian.com
-    </a>
-  </div>
-  <div class="mt1 mb1 font-75pc header-links">
-    <a class="dib" href="resume">
-      <span class="emoji-bullet">📜</span>
-      resume
-    </a>
-    <a class="dib" href="blog">
-      <span class="emoji-bullet">📝</span>
-      blog
-    </a>
-    <a class="dib" href="https://github.com/wavebeem/">
-      <span class="emoji-bullet">💻</span>
-      github
-    </a>
-  </div>
+<header>
+  <a class="ttu mr1 bb bw2 b--white bold" href="#">Brian Mock</a>
+  <a class="ttu mr1" href="/blog">Blog</a>
+  <a class="ttu" href="/resume">Resume</a>
 </header>
 
 <main class="flex-auto">
 
-<div class="mt1 button-list font-main bold list-reset line-height-2" style="font-size: 1.5rem">
-
+<div class="tc mt2">
+  {% include selfie.html %}
+  <h1 class="mb2 mt0">Brian Mock</h1>
 </div>
+
+<ul class="list-reset">
+  <li>
+    <span class="emoji-bullet">👉</span>
+    <a class="" href="mailto:brian@mockbrian.com">brian@mockbrian.com</a>
+  </li>
+  <li>
+    <span class="emoji-bullet">👉</span>
+    <a class="" href="https://github.com/wavebeem/">github.com/wavebeem</a>
+  </li>
+</ul>
 
 <ul class="list-reset">
   <li><span class="emoji-bullet">🤓</span> he/him</li>
@@ -47,6 +40,4 @@ root_class: "main-page"
 
 </main>
 
-<footer class="tc font-main mt1 pa1">
-  Copyright &copy; Brian Mock 2016
-</footer>
+{% include footer.html %}
