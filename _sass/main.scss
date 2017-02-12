@@ -80,12 +80,8 @@ img.emoji {
 
 .Selfie {
   margin: 0;
-  margin-top: 1rem;
-  height: 150px;
-  width: 150px;
   background-color: rgba(white, 0.2);
-  border-radius: 50%;
-  border: 2px solid transparent;
+  border-radius: 4px;
   box-shadow: 0 2px 2px rgba(black, 0.2);
 }
 
@@ -227,15 +223,20 @@ header {
   color: white;
   padding: 0 1rem;
   box-shadow: 0 2px 10px rgba(black, 0.25);
-
   font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
 
   @media (max-width: 320px) {
     font-size: 1.2rem;
   }
 
-  margin-top: 0;
-  margin-bottom: 2rem;
+  :focus {
+    outline: none;
+    box-shadow:
+      inset 0 0 0 2px $brandPrimary,
+      inset 0 0 0 4px white;
+  }
 
   img {
     height: 2rem;
@@ -271,10 +272,19 @@ a {
 }
 
 footer {
+  $bg: #eee;
+
   box-shadow: inset 0 2px 8px rgba(black, 0.1);
-  background: #eee;
+  background: $bg;
   color: black;
   text-align: center;
+
+  :focus {
+    outline: none;
+    box-shadow:
+      0 0 0 2px $bg,
+      0 0 0 4px black;
+  }
 
   a {
     color: inherit;
