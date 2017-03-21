@@ -2,17 +2,16 @@
 layout: bare
 ---
 
-<main>
-  <ul class="BlogPostListing">
+<main class="ph4 mw7 center flex-auto">
+  <ul class="list-reset">
     {% for post in site.posts %}
-      <li>
-        <a class="font-main b f3" href="{{ post.url }}">
-          ➡️ {{ post.title }}
+      <li class="mb4">
+        <a class="font-main b f2 link brand" href="{{ post.url }}">
+          {{ post.title }}
         </a>
-        <div class="date f5">
+        <div class="mt1 f3">
           {{ post.date | date: "%B %-d, %Y" }}
         </div>
-        <p>{{ post.description }}</p>
       </li>
     {% endfor %}
   </ul>
