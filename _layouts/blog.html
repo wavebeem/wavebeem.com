@@ -3,12 +3,17 @@ layout: bare
 ---
 
 <main class="ph4 mw7 center flex-auto">
+  <h1 class="black-50 f3 ttl normal">
+    Occasional Blog Posts by Me
+  </h1>
   <ul class="list-reset">
     {% for post in site.posts %}
-      <li class="mb4">
-        <a class="font-main b f2 link brand" href="{{ post.url }}">
-          {{ post.title }}
-        </a>
+      <li class="mb4m bt b--black-10 pv4">
+        <h2 class="f2 mt0 mb0">
+          <a class="font-main b link brand" href="{{ post.url }}">
+            {{ post.title }}
+          </a>
+        </h2>
         <div class="mt1 f3">
           {{ post.date | date: "%B %-d, %Y" }}
         </div>

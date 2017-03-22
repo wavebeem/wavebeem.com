@@ -218,6 +218,35 @@ html {
     line-height: 1;
     font-size: 1em;
   }
+
+  .GoBack a {
+    border: 0;
+  }
+}
+
+.resume main {
+  ul {
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  ul ul {
+    padding-left: 2.5rem;
+    list-style-type: disc;
+  }
+
+  ul li ul li,
+  ul li + li {
+    margin-top: 1.5rem;
+  }
+
+  ul li ul li {
+    margin-top: 0.5rem;
+  }
+
+  .contact-info li {
+    margin-top: 0.5rem;
+  }
 }
 
 :focus {
@@ -225,9 +254,4 @@ html {
   box-shadow:
     0 0 0 2px white,
     0 0 0 4px black;
-}
-
-
-.resume {
-  @import "./resume";
 }

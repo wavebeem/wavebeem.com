@@ -184,7 +184,10 @@ In this scenario, there's a handy promise function called `Promise.all`:
 
 ```js
 function something(urlA, urlB) {
-  return Promise.all([urlA, urlB]);
+  return Promise.all([
+    request(urlA),
+    request(urlB)
+  ]);
 }
 ```
 
