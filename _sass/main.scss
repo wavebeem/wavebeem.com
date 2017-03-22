@@ -196,9 +196,9 @@ html {
 
   a {
     color: $brandPrimary;
-    text-decoration: none;
-    padding-bottom: 1px;
-    border-bottom: 1px solid currentColor;
+    text-decoration: underline;
+    // padding-bottom: 1px;
+    // border-bottom: 1px solid currentColor;
   }
 
   p code {
