@@ -1,10 +1,10 @@
-$brandPrimary: #00755b;
-$yellow: #cc0;
+$green: #19a974;
+$darkGreen: #137752;
 $fontMain: "Helvetica", sans-serif;
 $fontPara: "Georgia", "Cambria", "Palatino", serif;
 $fontMonospace: "Fira Code", "Menlo", "Consolas", monospace;
 $fontHeading: "Lucida Grande", "Verdana", sans-serif;
-$codeColor: #c34;
+$codeColor: #e7040f;
 $gap: 1rem;
 $radius: 4px;
 $lightBorder: 2px solid rgba(white, 0.50);
@@ -46,18 +46,11 @@ $smallSize: $contentWidth;
 .list-reset { list-style: none; padding-left: initial; }
 .line-height-2 { line-height: 2; }
 .black-50 { color: rgba(0, 0, 0, 0.5); }
-.bg-brand { background-color: $brandPrimary; }
-.brand { color: $brandPrimary; }
 
 @mixin pretty-underline {
-  text-shadow:
-    1px 0 white,
-    0 1px white,
-    -1px 0 white,
-    0 -1px white;
   box-shadow:
     inset 0 -1px white,
-    inset 0 -2px currentColor;
+    inset 0 -2px rgba(black, 0.4);
 }
 
 .pretty-underline {
@@ -74,20 +67,6 @@ img.emoji {
 
 .emoji-bullet {
   margin-right: 0.2em;
-}
-
-.button-list a {
-  padding: 0.3em 1em;
-  margin-bottom: 1em;
-  border: 2px solid;
-  border-radius: 0.5em;
-  font-size: 1rem;
-
-  &:hover {
-    border-color: $brandPrimary;
-    background: $brandPrimary;
-    color: white;
-  }
 }
 
 .Selfie {
@@ -132,22 +111,6 @@ html {
     margin-bottom: 3.5rem;
   }
 
-  .NotCommentArea {
-    margin-top: (2 * $gap);
-    background: rgba($yellow, 0.10);
-    color: rgba(black, 0.70);
-    border: 1px dotted rgba(black, 0.10);
-    padding: $smallGap;
-    border-radius: $radius;
-    font-size: 1rem;
-    font-family: $fontMain;
-
-    a {
-      font-weight: bold;
-      color: inherit;
-    }
-  }
-
   .anchorjs-link {
     border: 0;
     text-decoration: none;
@@ -155,7 +118,6 @@ html {
 
   p,
   ul li {
-    // margin: 0.2em 0;
     line-height: 1.5;
   }
 
@@ -208,7 +170,7 @@ html {
   }
 
   a {
-    color: $brandPrimary;
+    color: $darkGreen;
     text-decoration: none;
     @include pretty-underline;
   }
@@ -264,6 +226,7 @@ html {
   }
 }
 
+.link:focus,
 :focus {
   outline: none;
   box-shadow:
