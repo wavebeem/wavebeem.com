@@ -49,6 +49,21 @@ $smallSize: $contentWidth;
 .bg-brand { background-color: $brandPrimary; }
 .brand { color: $brandPrimary; }
 
+@mixin pretty-underline {
+  text-shadow:
+    1px 0 white,
+    0 1px white,
+    -1px 0 white,
+    0 -1px white;
+  box-shadow:
+    inset 0 -1px white,
+    inset 0 -2px currentColor;
+}
+
+.pretty-underline {
+  @include pretty-underline;
+}
+
 // Twemoji styles
 img.emoji {
   height: 1em;
@@ -77,9 +92,7 @@ img.emoji {
 
 .Selfie {
   margin: 0;
-  background-color: rgba(black, 0.2);
-  border-radius: 9999px;
-  box-shadow: 0 2px 2px rgba(black, 0.2);
+  box-shadow: 0 4px 6px rgba(black, 0.2);
 }
 
 html,
@@ -196,9 +209,15 @@ html {
 
   a {
     color: $brandPrimary;
-    text-decoration: underline;
-    // padding-bottom: 1px;
-    // border-bottom: 1px solid currentColor;
+    text-decoration: none;
+    @include pretty-underline;
+  }
+
+  h1 a,
+  .GoBack a,
+  .anchorjs-link {
+    box-shadow: none;
+    text-shadow: none;
   }
 
   p code {
@@ -217,10 +236,6 @@ html {
     overflow-x: auto;
     line-height: 1;
     font-size: 1em;
-  }
-
-  .GoBack a {
-    border: 0;
   }
 }
 
