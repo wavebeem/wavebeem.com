@@ -2,21 +2,21 @@
 layout: bare
 ---
 
-<main class="ph4 mw7 center flex-auto">
-  <h1 class="black-50 f3 ttl normal">
+<main class="mw7 center flex-auto">
+  <h1 class="ph4 black-50 f3 ttl normal">
     Occasional Blog Posts by Me
   </h1>
   <ul class="list-reset">
     {% for post in site.posts %}
-      <li class="mb4m bt b--black-10 pv4">
-        <h2 class="f2 mt0 mb0">
-          <a class="font-main b link green" href="{{ post.url }}">
+      <li class="bt b--black-10">
+        <a class="db no-underline black pa4" href="{{ post.url }}">
+          <h2 class="f2 mt0 mb0 font-main b link green">
             {{ post.title }}
-          </a>
-        </h2>
-        <div class="mt1 f3">
-          {{ post.date | date: "%B %-d, %Y" }}
-        </div>
+          </h2>
+          <div class="mt1 f3">
+            {{ post.date | date: "%B %-d, %Y" }}
+          </div>
+        </a>
       </li>
     {% endfor %}
   </ul>
