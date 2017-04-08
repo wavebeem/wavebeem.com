@@ -100,9 +100,7 @@ html {
 .BlogPost,
 .resume main {
   max-width: 700px;
-  margin: 0 auto;
   max-width: $contentWidth;
-  margin: 0 auto;
   padding: $smallGap $gap;
   font-family: $fontPara;
   font-size: 1.2rem;
