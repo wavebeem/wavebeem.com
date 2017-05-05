@@ -176,17 +176,18 @@ html {
     border-top: 1px dotted #ddd;
   }
 
-  a {
+  .anchorjs-link,
+  .GoBack a,
+  li a,
+  p a {
     color: $darkGreen;
     text-decoration: none;
     @include pretty-underline;
   }
 
-  h1 a,
-  .GoBack a,
   .anchorjs-link {
-    box-shadow: none;
-    text-shadow: none;
+    background: transparent;
+    border-bottom: 0;
   }
 
   p code {
