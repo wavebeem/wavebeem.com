@@ -23,7 +23,7 @@ title: "Resume • Brian Mock"
 
 ## Work Experience
 
-- **CrowdCompass**, *JavaScript Engineer* (February 2016–present)
+- **CrowdCompass**, *JavaScript Engineer* (February 2016–May 2017)
     - Pair programmed and mentored other developers and QA engineers
     - Developed client/server data contracts
     - Maintained web app for event attendees (Ember)
