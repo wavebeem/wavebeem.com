@@ -148,7 +148,7 @@ var y = 2;
 console.log(x + Math.pow(y, 3));
 ```
 
-## Wrapping up
+<h2>Wrapping up</h2>
 
 For now, actually coding the pipeline for the demonstration above will be left as an exercise for the reader. I can suggest using [Parsimmon][5] as per my last blog post. The AST translation will require your own hard work, but escodegen can be used to turn the JS AST into JS code with ease.
 

@@ -382,7 +382,7 @@ exports.evaluate = evaluate;
 
 So to evaluate a symbol you look it up in the variable scope, and everything else is just passed through as raw data.
 
-### List eval
+## List eval
 
 Now here's the list evaluation function.
 
@@ -427,7 +427,7 @@ There are three cases here, and we try to deal with them as early as possible:
 
 So for the first case we just dispatch to a table with the unevaluated list data. Note that *all* list evaluations pass through the current call stack and the current variable scope.
 
-### Special eval
+## Special eval
 
 ```javascript
 quote(stack, scope, node) {
@@ -610,7 +610,7 @@ const globals = Scope.create(Scope.Empty, api);
 exports.globals = globals;
 ```
 
-## Wrapping up
+<h2>Wrapping up</h2>
 
 This covers basically everything about the [Duckweed][4] language and evaluator. Check out the repo for the full code. Once you understand that, check out my other language [Hibiscus][10] for a (slightly larger) example of a small JS-like language.
 

@@ -97,7 +97,7 @@ console.log(f());
 
 ES6 symbols are a fairly complicated feature that really can't be compiled easily. Unfortunately, Babel ships with two different Symbols compilation modes, both with large caveats. Technically the "library" portions of ES6 are covered by the [core-js][7] project, but Babel encourages you to use it.
 
-### Global Symbols
+## Global Symbols
 
 The first polyfill route for symbols is to put all symbol keys as properties on `Object.prototype`, meaning that a seemingly harmless loop like this actually creates a massive memory leak.
 
@@ -117,7 +117,7 @@ s2 in {};               // true, but shouldn't be
 Object.keys({a: 1});    // ["a"], which is correct
 ```
 
-### Funny keys
+## Funny keys
 
 The other option is just to put the "symbol" keys into an object using a funny name that looks like gibberish. This clever hack is done by producing an object with a funny `toString` method, since objects are converted via `toString` automatically when used as keys to other objects. The implementation could look something like this:
 
@@ -137,7 +137,7 @@ o[s] = 1; // {"#Symbol(nice)#0": 1}
 
 This hack is simple and won't leak memory, but obviously it can cause problems with anything trying to enumerate the keys in an object, such as `Object.keys` or a `for (k in obj)` loop.
 
-### Weird typeof
+## Weird typeof
 
 The operator `typeof` is not extensible in ES5, so that also means that any use of `typeof` has to be converted into something more complicated so the new type `"symbol"` can be returned. This is how Babel currently handles it:
 
@@ -147,7 +147,7 @@ The operator `typeof` is not extensible in ES5, so that also means that any use 
 (typeof foo === "undefined" ? "undefined" : _typeof(foo)) === "symbol";
 ```
 
-### Generators / async+await
+## Generators / async+await
 
 Generators and `async` + `await` are very powerful features, but have to do with flow control in such a way that compiled output is extremely large and difficult to debug, plus generators still require a runtime library too. Look at how this simple example balloons in complexity.
 

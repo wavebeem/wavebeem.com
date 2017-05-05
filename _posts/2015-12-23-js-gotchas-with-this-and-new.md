@@ -18,7 +18,7 @@ The current version of ECMAScript (the official standard name for JavaScript) is
 
 I will start with an explanation of how `this` works in strict mode, since it’s easier to follow. You can think of `this` as an implicit parameter to *every* JavaScript function. You do not declare it in the parameter list and you can’t pass it like a normal argument.
 
-### This with Function Calls
+## This with Function Calls
 
 ```js
 function add(x, y) {
@@ -31,7 +31,7 @@ add(3, 4); // Prints "this = undefined"
 
 In the example above, `this` is implicitly a parameter of `add`, like it is with every function, and it’s implicitly passed to the function in the `console.log` line. When a function is invoked in the default manner like `foo(x)`, `this` is set to `undefined`.
 
-### This with Method Calls
+## This with Method Calls
 
 There is another case where `this` is passed implicitly: `foo.bar()` and `foo["bar"]()`. When the function itself is being referenced directly from an object, the parent object itself is passed as `this`, which would be `foo` in this case.
 
@@ -47,7 +47,7 @@ console.log(janelle.getName());
 
 This will log "Janelle" to the console, as we wanted. But let’s make a slight change and see how this works:
 
-### Gotcha: Forgetting This
+## Gotcha: Forgetting This
 
 ```js
 var janelle = {
@@ -71,7 +71,7 @@ Ok, so what happened here? Notice that even though we get the function from `jan
 
 Functions which accept functions as parameters (known as [higher-order functions](https://en.wikipedia.org/wiki/Higher-order_function)) are all over the place in JavaScript: [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setTimeout), [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [Array.prototype.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [Promise.prototype.then](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then), and many more. Any of these functions are potential places for errors when passing functions using `this` from an object as an argument.
 
-### An Infuriating Real Life Example
+## An Infuriating Real Life Example
 
 A practical example you may have run into before involves promises and `console.log`. Unfortunately, the `console` object is not governed by any standard, so any JavaScript implementation can omit it or change the behavior however they want. In the past, the methods on `console` did not use `this`, so they were resilient in the face of plain invocation. That means this code sample used to work just fine:
 
@@ -93,7 +93,7 @@ Promise.resolve("hello world")
 
 Neither of those are particularly nice, and could be avoided by using a function that never used `this` in the first place.
 
-### Explicitly Passing This
+## Explicitly Passing This
 
 There are also two explicit ways to pass `this` to a function: [.call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) and [.apply](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply). They are invoked as methods from a function, as follows:
 
@@ -104,7 +104,7 @@ console.log.apply(console, [1, 2, 3, 4]);
 
 Both lines are equivalent. The first parameter in both is the value of `this` to send, and then `call` takes the arguments normally afterward, whereas `apply` takes an array of arguments as its second and final parameter.
 
-### Another Common Workaround
+## Another Common Workaround
 
 The method `call` is used in functions like `map` and `forEach` which have optional "context" parameters (the value of `this` to use in the callback).
 
@@ -145,11 +145,11 @@ anika.speak(); // "Hello, I am Anika"
 
 Notice how the function `Person` implicitly returns `undefined` (not an object) so that "else" branch of step 4 will be executed. Functions intended to be used only with `new` are called *constructor functions*.
 
-### Gotcha: Forgetting New
+## Gotcha: Forgetting New
 
 Most functions are called without using the keyword `new` in JavaScript, so it’s easy to forget. If you call a function made like the above `Person` without `new`, the value of `this` will be set to `undefined`, and `this.name` will throw an error.
 
-### Workaround: Not Using a Constructor Function
+## Workaround: Not Using a Constructor Function
 
 Luckily, it’s actually easier to just not use `new` or constructor functions at all.
 

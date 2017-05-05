@@ -57,6 +57,7 @@ $smallSize: $contentWidth;
   padding: 2px 4px;
   border-bottom: 1px solid $green;
   text-decoration: none;
+  font-size: 0.9em;
 }
 
 .pretty-underline {
@@ -130,6 +131,7 @@ html {
   h2,
   h3 {
     font-family: $fontHeading;
+    text-transform: uppercase;
   }
 
   h1 > a {
@@ -150,7 +152,7 @@ html {
   }
 
   h1 {
-    font-size: 2.4rem;
+    font-size: 2rem;
     margin-top: 0;
     margin-bottom: $smallGap;
     padding-bottom: 0;
@@ -158,7 +160,7 @@ html {
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: (-$gap);
     padding-top: 1rem;
@@ -194,6 +196,7 @@ html {
     color: $codeColor;
     padding: 2px 4px;
     background-color: rgba($codeColor, 0.05);
+    font-size: 0.7em;
   }
 
   pre,
@@ -215,7 +218,6 @@ html {
   h1,
   h2 {
     text-transform: uppercase;
-    letter-spacing: 0.1em;
   }
 
   h1 {
