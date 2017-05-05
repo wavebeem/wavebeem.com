@@ -15,43 +15,43 @@ S3_DEV = 's3://dev.mockbrian.com'
 S3_PROD = 's3://mockbrian.com'
 
 
-def run(*args, **kwargs):
-    """Run a command using var args"""
-    return subprocess.check_call(args, **kwargs)
+def run(command):
+    """Runs a command in the shell and checks its return code"""
+    subprocess.run(command, shell=True, check=True)
 
 
 def make_favicon():
     """Build the favicon"""
-    return run(
-        'convert',
-        'favicon-16.png',
-        'favicon-32.png',
-        'favicon.ico'
-    )
+    return run("""
+        convert
+        favicon-16.png
+        favicon-32.png
+        favicon.ico
+    """)
 
 
 def jekyll(*args):
     """Invoke jekyll build with optional args"""
-    run('bundle', 'exec', 'jekyll', 'build', *args)
+    run('bundle exec jekyll build {}'.format(' '.join(args)))
 
 
 def sync(bucket):
     """Sync to a specified S3 bucket"""
-    run(
-        'aws', 's3', 'sync',
-        '--acl', 'public-read',
-        '_site/',
-        bucket
-    )
+    run("""
+        aws s3 sync,
+        --acl public-read
+        _site/
+        {}
+    """.format(bucket))
 
 
 def invalidate(distro):
     """Invalidate a given Cloudfront distribution"""
-    run(
-        'aws', 'cloudfront', 'create-invalidation',
-        '--distribution-id', distro,
-        '--paths', '/*'
-    )
+    run("""
+        aws cloudfront create-invalidation
+        --distribution-id {}
+        --paths /*
+    """.format(distro))
 
 
 def main():

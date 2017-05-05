@@ -138,7 +138,7 @@ This step is translating from the source language AST (CoolScript) to the destin
   sourceType: 'script' }
 ```
 
-## Step 4: Code generation
+<h2>Step 4: Code generation</h2>
 
 For code generation the JS AST is turned into JS source code. Given the immense object from step 3, [escodegen][4] can be used to get this next step essentially for free.
 
