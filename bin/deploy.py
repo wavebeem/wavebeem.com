@@ -5,7 +5,7 @@ $ ./bin/deploy.py
 $ ./bin/deploy.py -p
 """
 
-
+import re
 import subprocess
 from argparse import ArgumentParser
 
@@ -17,7 +17,8 @@ S3_PROD = 's3://mockbrian.com'
 
 def run(command):
     """Runs a command in the shell and checks its return code"""
-    subprocess.run(command, shell=True, check=True)
+    text = re.sub(r'[\r\n]', ' ', command.strip())
+    subprocess.run(text, shell=True, check=True)
 
 
 def make_favicon():
@@ -38,7 +39,7 @@ def jekyll(*args):
 def sync(bucket):
     """Sync to a specified S3 bucket"""
     run("""
-        aws s3 sync,
+        aws s3 sync
         --acl public-read
         _site/
         {}
