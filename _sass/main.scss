@@ -113,7 +113,7 @@ html {
     font-family: $fontMain;
     margin-top: (-$smallGap);
     color: #555;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .anchorjs-link {
@@ -165,17 +165,6 @@ html {
     margin-bottom: (-$gap);
     padding-top: 1rem;
     padding-bottom: 0.5rem;
-    border-top: 1px solid #eee;
-  }
-
-  h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #666;
-    margin-bottom: (-$gap);
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
-    border-top: 1px dotted #ddd;
   }
 
   .anchorjs-link,
@@ -222,6 +211,10 @@ html {
 
   h1 {
     text-align: center;
+  }
+
+  h2 {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   ul {
