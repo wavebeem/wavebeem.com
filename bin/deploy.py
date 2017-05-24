@@ -51,7 +51,7 @@ def invalidate(distro):
     run("""
         aws cloudfront create-invalidation
         --distribution-id {}
-        --paths /*
+        --paths "/*"
     """.format(distro))
 
 
