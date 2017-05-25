@@ -6,7 +6,7 @@ $fontMonospace: "Fira Code", "Menlo", "Consolas", monospace;
 $fontHeading: "Lucida Grande", "Verdana", sans-serif;
 $codeColor: #e7040f;
 $gap: 1rem;
-$radius: 4px;
+$radius: 0.125em;
 $lightBorder: 2px solid rgba(white, 0.50);
 $smallGap: ($gap / 2);
 $contentWidth: 700px;
@@ -53,11 +53,12 @@ $smallSize: $contentWidth;
 }
 
 @mixin pretty-underline {
+  border-radius: $radius;
   background-color: rgba($green, 0.1);
-  padding: 2px 4px;
-  border-bottom: 1px solid $green;
-  text-decoration: none;
-  font-size: 0.9em;
+  padding: 2px;
+  text-decoration: underline;
+  -webkit-text-decoration-skip: skip;
+  text-decoration-skip: ink;
 }
 
 .pretty-underline {
@@ -109,7 +110,7 @@ html {
   line-height: 1.5;
 
   .PostDate {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: $fontMain;
     margin-top: (-$smallGap);
     color: #555;
@@ -131,7 +132,6 @@ html {
   h2,
   h3 {
     font-family: $fontHeading;
-    text-transform: uppercase;
   }
 
   h1 > a {
@@ -153,7 +153,7 @@ html {
 
   h1 {
     font-size: 2rem;
-    margin-top: 0;
+    margin-top: $gap;
     margin-bottom: $smallGap;
     padding-bottom: 0;
     font-weight: 600;
@@ -162,13 +162,12 @@ html {
   h2 {
     font-size: 1.3rem;
     font-weight: 600;
+    margin-top: $gap;
     margin-bottom: (-$gap);
     padding-top: 1rem;
     padding-bottom: 0.5rem;
   }
 
-  .anchorjs-link,
-  .GoBack a,
   li a,
   p a {
     color: $darkGreen;
@@ -176,16 +175,18 @@ html {
     @include pretty-underline;
   }
 
+  .GoBack a {
+    color: $green;
+  }
   .anchorjs-link {
-    background: transparent;
-    border-bottom: 0;
+    color: $darkGreen;
   }
 
   p code {
+    border-radius: $radius;
     color: $codeColor;
-    padding: 2px 4px;
+    padding: 2px;
     background-color: rgba($codeColor, 0.05);
-    font-size: 0.7em;
   }
 
   pre,
@@ -211,6 +212,7 @@ html {
 
   h1 {
     text-align: center;
+    font-size: 3rem;
   }
 
   h2 {

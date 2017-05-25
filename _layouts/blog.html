@@ -3,17 +3,17 @@ layout: bare
 ---
 
 <main class="mw7 center flex-auto">
-  <h1 class="pt3 ph4 f3 black-50 ttu normal">
+  <h1 class="pt3 ph4 f3 black-50 ttl normal">
     Blog Posts
   </h1>
   <ul class="mb0 list-reset bt b--black-10">
     {% for post in site.posts %}
       <li class="bb b--black-10">
         <a class="db no-underline black pa4" href="{{ post.url }}">
-          <h2 class="ttu f3 mt0 mb0 font-main b link green">
+          <h2 class="f3 mt0 mb0 font-main b link green">
             {{ post.title }}
           </h2>
-          <div class="mt1 ttl f4">
+          <div class="mt1 f4">
             {{ post.date | date: "%B %-d, %Y" }}
           </div>
         </a>
