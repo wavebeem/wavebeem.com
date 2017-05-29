@@ -110,7 +110,7 @@ html {
   line-height: 1.5;
 
   .PostDate {
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-family: $fontMain;
     margin-top: (-$smallGap);
     color: #555;
@@ -148,11 +148,11 @@ html {
 
   hr {
     border: 0;
-    border-bottom: 1px dashed #ddd;
+    border-bottom: 1px solid #eee;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin-top: $gap;
     margin-bottom: $smallGap;
     padding-bottom: 0;
@@ -160,8 +160,8 @@ html {
   }
 
   h2 {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.8rem;
+    font-weight: normal;
     margin-top: $gap;
     margin-bottom: (-$gap);
     padding-top: 1rem;
@@ -212,11 +212,15 @@ html {
 
   h1 {
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
   }
 
   h2 {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   ul {

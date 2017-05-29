@@ -3,6 +3,8 @@ layout: resume
 title: "Resume • Brian Mock"
 ---
 
+* * *
+
 ## Interests
 
 - Creating simple, usable, delightful, and accessible web applications
@@ -10,16 +12,22 @@ title: "Resume • Brian Mock"
 - Working with fun, kind people of many disciplines in a relaxed environment
 - Pairing with other developers and helping to grow their skills
 
+* * *
+
 ## Core Skills
 
 - JavaScript (ES5/ES6), HTML, CSS (and Sass/LESS), GitHub
 - React, Ember, Angular, Lodash/Underscore, Mocha, Tachyons
 - Can deep dive into JS; can switch between languages easily
 
+* * *
+
 ## Other Skills
 
 - Amazon S3, Cloudfront, Route 53, JIRA
 - Ruby, Python, Java, Bash, Perl, Objective-C, Haskell, Scala
+
+* * *
 
 ## Work Experience
 
@@ -38,6 +46,8 @@ title: "Resume • Brian Mock"
 - **NOAA**, *Undergraduate Research Intern* (Summer 2011)
     - Created weather simulation data visualizer JavaScript app using Google Maps
 
+* * *
+
 ## Projects
 
 - Maintains [Parsimmon](https://github.com/jneen/parsimmon/), a JavaScript parser combinator library (2016)
@@ -52,7 +62,11 @@ title: "Resume • Brian Mock"
 
 ## Education
 
+* * *
+
 - B.A., Computer Science, Willamette University, Salem OR (2012)
+
+* * *
 
 ## Technology Talks
 
