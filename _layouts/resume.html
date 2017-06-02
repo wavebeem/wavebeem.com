@@ -6,16 +6,17 @@
 
 <style>
 @media print {
-    .screen { display: none; }
+    .screen,
+    hr,
+    header {
+        display: none;
+    }
     html {
         font-family: Georgia, serif;
         font-size: 12px;
         max-width: 800px;
         margin: 0 auto;
         padding: 0 10px;
-    }
-    header {
-        display: none;
     }
     .contact-info li {
         margin-top: 0.25em;
@@ -45,16 +46,17 @@
 
 
 <div class="screen">
-    <nav class="justify-center b ttu f3-ns f4 flex ph3 mb4 bb bw1 b--black-10">
-    <a class="link fb ph3 pv4 bn black-60" href="/">Home</a>
-    <a class="link fb ph3 pv4 bn black-60" href="/blog">Blog</a>
-    <a class="link fb ph3 pv4 green bb bw2" href="#">Resume</a>
+    <nav class="b ttu f3-ns f4 flex ph3 mb4 bb bw1 b--black-10">
+        <a class="link fb ph3 pv4 bn black-60" href="/">Brian Mock</a>
+        <a class="link fb ph3 pv4 bn black-60" href="/blog">Blog</a>
+        <a class="link fb ph3 pv4 green bb bw2" href="#">Resume</a>
     </nav>
 </div>
 
 <main class="ph4 mw7 center flex-auto">
 
 <h1 class="screen">Brian Mock</h1>
+<hr class="screen">
 <h2 class="screen">Contact Information</h2>
 <div class="contact-info">
     <ul>

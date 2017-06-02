@@ -61,6 +61,11 @@ $smallSize: $contentWidth;
   text-decoration-skip: ink;
 }
 
+.underline-ink {
+  -webkit-text-decoration-skip: skip;
+  text-decoration-skip: ink;
+}
+
 .pretty-underline {
   @include pretty-underline;
 }
