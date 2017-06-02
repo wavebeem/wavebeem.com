@@ -610,7 +610,7 @@ const globals = Scope.create(Scope.Empty, api);
 exports.globals = globals;
 ```
 
-<h2>Wrapping up</h2>
+## Wrapping up
 
 This covers basically everything about the [Duckweed][4] language and evaluator. Check out the repo for the full code. Once you understand that, check out my other language [Hibiscus][10] for a (slightly larger) example of a small JS-like language.
 
