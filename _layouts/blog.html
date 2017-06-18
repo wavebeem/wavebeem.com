@@ -9,11 +9,11 @@ layout: bare
   <ul class="mb0 list-reset bt b--black-10">
     {% for post in site.posts %}
       <li class="bb b--black-10">
-        <a class="db no-underline black pa4" href="{{ post.url }}">
-          <h2 class="f2 mt0 mb0 font-main b link green">
+        <a class="db no-underline green hover-dark-green pa4" href="{{ post.url }}">
+          <h2 class="f2 mt0 mb0 font-main b link">
             {{ post.title }}
           </h2>
-          <div class="mt1 f4">
+          <div class="mt1 f4 black">
             {{ post.date | date: "%B %-d, %Y" }}
           </div>
         </a>

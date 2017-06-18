@@ -46,6 +46,7 @@ $smallSize: $contentWidth;
 .list-reset { list-style: none; padding-left: initial; }
 .line-height-2 { line-height: 2; }
 .black-50 { color: rgba(0, 0, 0, 0.5); }
+.shadow-down { box-shadow: 0 2px 4px rgba(black, 0.15); }
 
 .width-fit-content {
   width: -webkit-fit-content;
@@ -59,6 +60,11 @@ $smallSize: $contentWidth;
   text-decoration: underline;
   -webkit-text-decoration-skip: skip;
   text-decoration-skip: ink;
+
+  &:hover {
+    text-decoration: none;
+    box-shadow: 0 0 0 1px rgba($darkGreen, 0.3);
+  }
 }
 
 .underline-ink {

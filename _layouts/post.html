@@ -5,7 +5,10 @@ layout: bare
 <main class="ph4 mb3 center flex-auto BlogPost">
 
 <h1><a href="#">{{ page.title }}</a></h1>
-<div class="PostDate">{{ page.date | date: "%B %-d, %Y" }}</div>
+<div class="PostDate">
+  <i class="fa fa-calendar" aria-hidden="true"></i>
+  {{ page.date | date: "%B %-d, %Y" }}
+</div>
 
 {{ content }}
 
