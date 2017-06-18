@@ -47,6 +47,7 @@ $smallSize: $contentWidth;
 .line-height-2 { line-height: 2; }
 .black-50 { color: rgba(0, 0, 0, 0.5); }
 .shadow-down { box-shadow: 0 2px 4px rgba(black, 0.15); }
+.transition-none { transition: none !important; }
 
 .width-fit-content {
   width: -webkit-fit-content;
