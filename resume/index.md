@@ -31,6 +31,7 @@ title: "Resume • Brian Mock"
 
 ## Work Experience
 
+- **AWS Elemental**, *Software Development Engineer* (May 2017–*present*)
 - **CrowdCompass**, *JavaScript Engineer* (February 2016–May 2017)
     - Pair programmed and mentored other developers and QA engineers
     - Developed client/server data contracts
