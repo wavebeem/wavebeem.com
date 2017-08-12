@@ -190,6 +190,7 @@ html {
   }
 
   p code {
+    display: inline-block;
     border-radius: $radius;
     color: $codeColor;
     padding: 2px;

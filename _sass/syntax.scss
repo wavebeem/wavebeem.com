@@ -21,10 +21,11 @@
     color: $fg;
   }
 
+  // .nt = Name tag
   // .kd = Function
   // .k = Keyword
   // .kr = Keyword
-  .kd, .k, .kr { color: $green; }
+  .nt, .kd, .k, .kr { color: $green; }
 
   // .nx = Normal
   .nx { color: $fg; }
