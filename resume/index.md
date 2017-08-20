@@ -72,6 +72,8 @@ tab: resume
 
 ## Technology Talks
 
-[Parsing in JS](http://misc.mockbrian.com/talk/parsing-jison/#/)
-/ [PEG & Jison](http://misc.mockbrian.com/talk/peg-jison/#/)
-/ [JS Curry](http://misc.mockbrian.com/talk/js-curry/#/)
+[Parsing in JS][talk_1] / [PEG & Jison][talk_2] / [JS Curry][talk_3]
+
+[talk_1]: http://misc.mockbrian.com/talk/parsing-jison/#/
+[talk_2]: http://misc.mockbrian.com/talk/peg-jison/#/
+[talk_3]: http://misc.mockbrian.com/talk/js-curry/#/
