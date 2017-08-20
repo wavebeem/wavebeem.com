@@ -46,7 +46,7 @@ $smallSize: $contentWidth;
 .list-reset { list-style: none; padding-left: initial; }
 .line-height-2 { line-height: 2; }
 .black-50 { color: rgba(0, 0, 0, 0.5); }
-.shadow-down { box-shadow: 0 2px 4px rgba(black, 0.15); }
+.shadow-down { box-shadow: 0 1px 4px rgba(black, 0.35); }
 .transition-none { transition: none !important; }
 
 .width-fit-content {
@@ -54,7 +54,7 @@ $smallSize: $contentWidth;
   width: fit-content;
 }
 
-@mixin pretty-underline {
+@mixin pretty-link {
   border-radius: $radius;
   background-color: rgba($green, 0.1);
   padding: 2px;
@@ -71,10 +71,6 @@ $smallSize: $contentWidth;
 .underline-ink {
   -webkit-text-decoration-skip: skip;
   text-decoration-skip: ink;
-}
-
-.pretty-underline {
-  @include pretty-underline;
 }
 
 // Twemoji styles
@@ -179,7 +175,7 @@ html {
   p a {
     color: $darkGreen;
     text-decoration: none;
-    @include pretty-underline;
+    @include pretty-link;
   }
 
   .GoBack a {
