@@ -9,11 +9,13 @@
 <meta name="twitter:site" content="@wavebeem">
 <meta name="twitter:title" content="{{ page.title }}">
 <meta name="twitter:description" content="{{ page.description }}">
-<meta name="twitter:image" content="https://gravatar.com/avatar/c32e7e8baaee948e2ba1f607646da74d?s=150">
+<meta name="twitter:image" content="https://mockbrian.com/brian.png">
 
 <title>{{ page.title }}</title>
 
-<link rel="stylesheet" media="screen" href="/tachyons.min.css?t={{ site.time | date: '%s%N' }}">
-<link rel="stylesheet" media="screen" href="/style.css?t={{ site.time | date: '%s%N' }}">
+{% assign t = site.time | date: '%s%N' %}
+
+<link rel="stylesheet" media="screen" href="/tachyons.min.css?t={{ t }}">
+<link rel="stylesheet" media="screen" href="/style.css?t={{ t }}">
 
 <script async src="/ga.js"></script>
