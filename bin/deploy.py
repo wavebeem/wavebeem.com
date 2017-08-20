@@ -25,8 +25,7 @@ def make_favicon():
     """Build the favicon"""
     return run("""
         convert
-        favicon-16.png
-        favicon-32.png
+        favicon.png
         favicon.ico
     """)
 
