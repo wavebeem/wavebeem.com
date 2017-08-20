@@ -62,9 +62,15 @@ $smallSize: $contentWidth;
   -webkit-text-decoration-skip: skip;
   text-decoration-skip: ink;
 
+  &,
+  &:link {
+    transition: none;
+  }
+
   &:hover {
+    background-color: $green;
+    color: white;
     text-decoration: none;
-    box-shadow: 0 0 0 1px rgba($darkGreen, 0.3);
   }
 }
 
