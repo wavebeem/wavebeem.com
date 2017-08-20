@@ -2,6 +2,7 @@
 title: "React Without JSX"
 description: "A quick overview on using React without JSX or any build tools"
 layout: post
+tab: blog
 ---
 
 ## Misconceptions about React

@@ -2,6 +2,7 @@
 title: "Broken Promises"
 layout: post
 description: "How to use promises effectively"
+tab: blog
 ---
 
 ## About

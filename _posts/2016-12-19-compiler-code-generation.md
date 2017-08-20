@@ -2,6 +2,7 @@
 title: "Compiler Code Generation"
 description: "How to make code generation for a compiler"
 layout: post
+tab: blog
 ---
 
 ## What is code generation?
