@@ -68,17 +68,13 @@ $smallSize: $contentWidth;
   }
 }
 
+.pretty-link {
+  @include pretty-link;
+}
+
 .underline-ink {
   -webkit-text-decoration-skip: skip;
   text-decoration-skip: ink;
-}
-
-// Twemoji styles
-img.emoji {
-  height: 1em;
-  width: 1em;
-  margin: 0 .05em 0 .1em;
-  vertical-align: -0.1em;
 }
 
 .emoji-bullet {
