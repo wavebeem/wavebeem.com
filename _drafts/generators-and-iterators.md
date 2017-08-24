@@ -1,66 +1,21 @@
 ---
-title: "Generators and Iterators"
-description: "A comparison and overview of generators and iterators in JS"
+title: "Generators, Iterators, and Iterables"
+description: "A comparison and overview of generators, iterators, and iterables in JS"
 layout: post
 tab: blog
 ---
 
-## New syntax to know
+## Why
 
-This shortcut lets you put a method into an object literal with less fuss:
+TODO
 
-```js
-var greeter = {
-  phrase: "Hello, world",
-  speak() {
-    console.log(this.phrase);
-  }
-};
-greeter.speak();
-```
+## Note
 
-It works like this:
-
-```js
-var greeter = {
-  phrase: "Hello, world",
-  speak: function() {
-    console.log(this.phrase);
-  }
-};
-greeter.speak();
-```
-
-Keys inside square brackets are evaluated instead of treated as strings:
-
-```js
-var key = "x";
-var obj = { [key]: 1 };
-```
-
-In this simple case, it works like the following:
-
-```js
-var key = "x";
-var obj = {};
-obj[key] = 1;
-```
-
-It's even more convenient in more complicated cases.
-
-## Symbols
-
-Symbols also come up here. If you don't know what they are, they're basically just strings, so don't worry about it.
-
-## Terms
-
-Iterators are sort of like arrays, except their values are not stored in memory. This means that they can be infinite if you'd like (e.g. all whole numbers greater than zero).
-
-Generators are just a convenient way of making iterators that looks sort of like functions that can "return" multiple times as they complete.
+Check out the [glossary](#glossary) and [terms](#terms) for info on new ES6 features, and definitions for the terms "generator", "iterator", "iterable", and "iterable iterator".
 
 ## First generator
 
-Let's start with a simple finite iterator:
+Generators are written with `function*` in front. The keyword `yield` can only be used inside them, and it's sort of like `return` except you can call it more than once, and the function can keep going after `yield` if more values are required.
 
 ```js
 function* oneTwoThree() {
@@ -70,7 +25,7 @@ function* oneTwoThree() {
 }
 ```
 
-The usual way to use an iteartor is the new `for...of` loop (note: not `for...in`, that's completely different):
+The usual way to use an iterable is the new `for...of` loop (note: not `for...in`, that's completely different):
 
 ```js
 for (var x of oneTwoThree()) {
@@ -82,14 +37,16 @@ This will log 1, 2, 3 in succession. Note that the `oneTwoThree()` has to be cal
 
 ## Gotcha: once only
 
-```js
-var iterator = oneTwoThree();
+Iterators can only be iterated over a single time, and cannot go backwards. For example:
 
-for (var x of iterator) {
+```js
+var iterableIterator = oneTwoThree();
+
+for (var x of iterableIterator) {
   console.log(x);
 }
 
-for (var y of iterator) {
+for (var y of iterableIterator) {
   console.log(y);
 }
 ```
@@ -109,8 +66,6 @@ for (var y of oneTwoThree()) {
   console.log(y);
 }
 ```
-
-## But really once only?
 
 It can be kinda inconvenient, but consider a generator like this:
 
@@ -134,22 +89,15 @@ First, you generally start with an *iterable*, something that can give you back 
 var iterable = {
   [Symbol.iterator]() {
     return {
-      // ...
+      next() {
+        // ...
+      }
     };
   }
 };
 ```
 
-Too much syntax? Let me desugar that to old JS syntax.
-
-```js
-var iterable = {};
-iterable[Symbol.iterator] = function() {
-  return {
-    // ...
-  };
-}
-```
+Check the [glossary](#glossary) if this syntax looks weird to you.
 
 OK so you have to have a particular method, but of course this method needs to do specific things too. Minimally, it needs to return an object with a `next()` method. The next method returns an object with two keys:
 
@@ -160,21 +108,21 @@ OK so you have to have a particular method, but of course this method needs to d
 }
 ```
 
-If the iterator *is* done, then obviously `done` should be set to true. `value` can have any value if the iterator is done, since it is ignored.
+If the iterator *is* done, then obviously `done` should be set to true. `value` can have any value if the iterator is done, since it is generally ignored.
 
 So let's make the 1, 2, 3 generator as a hand-rolled iterator now:
 
 ```js
 var oneTwoThreeAgain = {
   [Symbol.iterator]() {
-    var i = 0;
     return {
+      i: 0,
       next() {
-        i++;
-        if (i > 3) {
+        this.i++;
+        if (this.i > 3) {
           return { done: true };
         }
-        return { done: false, value: i };
+        return { done: false, value: this.i };
       }
     };
   }
@@ -382,5 +330,86 @@ Iterators are fairly easy to compile down to ES5 code to run in older browsers, 
 
 But iterators are really cool, and even though they're a bit confusing, it's one of the first things in JS where we really have built-in extensibility on a feature, so we're not just limited to the language's built-in assumptions.
 
+## Other cool stuff
+
+Iterators and generators can be used for more than just array-like stream applications. I might cover this myself later, but I recommend checking out the [co library][4] for one example.
+
+## Glossary
+
+This shortcut lets you put a method into an object literal with less fuss:
+
+```js
+var greeter = {
+  phrase: "Hello, world",
+  speak() {
+    console.log(this.phrase);
+  }
+};
+greeter.speak();
+```
+
+It works like this:
+
+```js
+var greeter = {
+  phrase: "Hello, world",
+  speak: function() {
+    console.log(this.phrase);
+  }
+};
+greeter.speak();
+```
+
+Keys inside square brackets are evaluated instead of treated as strings:
+
+```js
+var key = "x";
+var obj = { [key]: 1 };
+```
+
+In this simple case, it works like the following:
+
+```js
+var key = "x";
+var obj = {};
+obj[key] = 1;
+```
+
+It's even more convenient in more complicated cases.
+
+Combining that with iterables is what leads us to:
+
+```js
+var iterable = {
+  [Symbol.iterator]: function() {
+    // ...
+  }
+};
+```
+
+or the method shorthand:
+
+```js
+var iterable = {
+  [Symbol.iterator]() {
+    // ...
+  }
+};
+```
+
+Also, `Symbol.iterator` is *basically* a special kind of string. The [MDN page on symbols][3] explain them in more detail.
+
+## Terms
+
+Iterators are objects that have a `next()` method that returns an object with keys `done` and `value` (not a complete definition).
+
+Iterables are objects that have a method `[Symbol.iterator]()` which returns an iterator.
+
+Iterable iterators are iterator objects with a `[Symbol.iterator]()` method that just returns `this` (the object itself).
+
+Generators are functions that return iterable iterators.
+
 [1]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 [2]: https://lodash.com/
+[3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
+[4]: https://github.com/tj/co
