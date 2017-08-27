@@ -14,11 +14,11 @@ for x in [0, 1, 2]:
     print(x)
 ```
 
-This *iterates* over the values in the array `[1, 2, 3]`. But it turns out not everything you might want to iterate over is best represented as an array. In python you might want to iterate over a set `{0, 1, 2}`, a tuple `(0, 1, 2)`, or even a range (!) `range(3)`.
+This *iterates* over the values in the array `[0, 1, 2]`. But it turns out not everything you might want to iterate over is best represented as an array. In python you might want to iterate over a set `{0, 1, 2}`, a tuple `(0, 1, 2)`, or even a range `range(3)`.
 
 ## JS interfaces
 
-In JavaScript, iterables are objects which have a method `Symbol.iterator` which return an iterator. Not sure about symbols? Check out the [MDN page on symbols][3]. If you're familiar with Python, this is where you would use a method name like `__iter__`. But JavaScript symbol keys are a bit more powerful than underscores.
+In JavaScript, iterables are objects which have a method `Symbol.iterator` which return an iterator. Not sure about symbols? Check out the [MDN page on symbols][3]. If you're familiar with Python, this is sort of like making a `__iter__` method.
 
 ```js
 var iterable = {
@@ -43,6 +43,7 @@ Iterators are objects with a `next` method that returns an object with keys `don
 ```js
 var iterator = {
   i: 0,
+
   // This new ES6 syntax is like `next: function()`
   next() {
     this.i++;
@@ -89,6 +90,7 @@ function range(start, end) {
     [Symbol.iterator]() {
       return {
         i: start,
+
         next() {
           this.i++;
           if (this.i > end) {
@@ -110,7 +112,7 @@ Iterators involve manually tracking "how far" you've made it, which in the case 
 
 But what if you didn't have to keep track of all this mess? Generators are here to help.
 
-Strangely enough "generator" is spelled `function*` in JavaScript. Generators are special functions that return iterable iterators for you! Instead of using `return` you write `yield` to send values back! The generator automatically pauses after calling `yield` and waits until more values are needed.
+Strangely enough "generator" is spelled `function*` in JavaScript. Generators are special functions that return iterable iterators for you. Instead of using `return` you write `yield` to send values back. The generator automatically pauses after calling `yield` and waits until more values are needed.
 
 ```js
 function* oneTwoThree() {
@@ -247,7 +249,7 @@ var evenNumbers = {
 };
 ```
 
-If you use a `for...of` loop on this, it will never end! So you'll need to add a `break` or `return` into the loop at some point to jump back out.
+If you use a `for...of` loop on this, it will never end. So you'll need to add a `break` or `return` into the loop at some point to jump back out.
 
 ```js
 for (var n of evenNumbers) {
