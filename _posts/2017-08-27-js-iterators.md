@@ -340,7 +340,7 @@ function myFunction(/* ... */) {
 }
 ```
 
-Unless you're making network calls or reading values which may change. In that case, just use regular generator functions and make it someone else's responsibility.
+Unless you're making network calls or reading values which may change. In that case, just use regular generator functions and make it someone else's responsibility to call your generator more than once.
 
 ```js
 function* myGenerator(/* ... */) {
