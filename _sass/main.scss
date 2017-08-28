@@ -55,9 +55,8 @@ $smallSize: $contentWidth;
 }
 
 @mixin pretty-link {
-  border-radius: $radius;
   background-color: rgba($green, 0.1);
-  padding: 2px;
+  padding: 0 2px;
   text-decoration: underline;
   -webkit-text-decoration-skip: skip;
   text-decoration-skip: ink;
@@ -180,18 +179,14 @@ html {
     @include pretty-link;
   }
 
-  .GoBack a {
-    color: $green;
-  }
   .anchorjs-link {
     color: $darkGreen;
   }
 
   p code {
     display: inline-block;
-    border-radius: $radius;
+    padding: 0 2px;
     color: $codeColor;
-    padding: 2px;
     background-color: rgba($codeColor, 0.05);
   }
 

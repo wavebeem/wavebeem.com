@@ -14,7 +14,7 @@ for x in [0, 1, 2]:
     print(x)
 ```
 
-This *iterates* over the values in the array `[0, 1, 2]`. But it turns out not everything you might want to iterate over is best represented as an array. In python you might want to iterate over a set `{0, 1, 2}`, a tuple `(0, 1, 2)`, or even a range `range(3)`.
+This *iterates* over the values in the array `[0, 1, 2]`. But it turns out not everything you might want to iterate over is best represented as an array. In Python you might want to iterate over a set `{0, 1, 2}`, a tuple `(0, 1, 2)`, or even a range `range(3)`.
 
 ## JS interfaces
 
@@ -134,7 +134,7 @@ This will log 1, 2, 3 in succession. Note that the `oneTwoThree()` has to be cal
 
 ## Gotcha: once only
 
-Imagine a generator which made an HTTP call. If you wanted to be able to iterate the value multiple times, you would either have to make the HTTP call again (this may not produce the same value!) or store the value. Both of these are not ideal. So default generators can only be iterated once because they return iterables which are their own iterators.
+Imagine a generator which made an HTTP call. If you wanted to be able to iterate the value multiple times, you would either have to make the HTTP call again—**which may not produce the same value**—or store the value. Both of these are not ideal. So default generators can only be iterated once because they return iterables which are their own iterators.
 
 ```js
 var iterable = oneTwoThree();
@@ -295,7 +295,7 @@ var count123 = {
         return { done: false, value: this.i };
       },
 
-      done() {
+      return() {
         this.i = 0;
       }
     }
@@ -337,6 +337,14 @@ function myFunction(/* ... */) {
       // yield ...
     }
   };
+}
+```
+
+Unless you're making network calls or reading values which may change. In that case, just use regular generator functions and make it someone else's responsibility.
+
+```js
+function* myGenerator(/* ... */) {
+  // yield ...
 }
 ```
 

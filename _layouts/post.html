@@ -12,14 +12,14 @@ layout: bare
 
 {{ content }}
 
-<div class="bg-washed-yellow black-80 br1 b--black-10 ba b--dotted font-main pa2 f5">
+<div class="bg-washed-yellow black-80 br1 b--black-10 ba font-main pa2 f5">
   There are no comments and there never will be. You can
   <a class="b black" href="https://twitter.com/wavebeem">tweet me</a>
   or write your own blog or something.
 </div>
 
-<div class="GoBack font-main f3 mt4 mb1">
-  <a class="ttu link" href="/blog">
+<div class="font-main f3 mt4 mb1">
+  <a class="green hover-dark-green ttu link" href="/blog">
     ◀ Back to blog posts
   </a>
 </div>
@@ -27,4 +27,6 @@ layout: bare
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
-<script src="/header-links.js"></script>
+<script>
+  (new AnchorJS({visible: "always"})).add("h2, h3, h4, h5, h6");
+</script>
