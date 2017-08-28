@@ -134,7 +134,7 @@ This will log 1, 2, 3 in succession. Note that the `oneTwoThree()` has to be cal
 
 ## Gotcha: once only
 
-Imagine a generator which made an HTTP call. If you wanted to be able to iterate the value multiple times, you would either have to make the HTTP call again (!) or store the value. Both of these are not ideal. So default generators can only be iterated once because they return iterables which are their own iterators.
+Imagine a generator which made an HTTP call. If you wanted to be able to iterate the value multiple times, you would either have to make the HTTP call again (this may not produce the same value!) or store the value. Both of these are not ideal. So default generators can only be iterated once because they return iterables which are their own iterators.
 
 ```js
 var iterable = oneTwoThree();
@@ -163,6 +163,8 @@ for (var y of oneTwoThree()) {
 This prints 1, 2, 3 two times instead of just once.
 
 ## Reusable Generators
+
+If you know that your generator does not rely on external state that might change, you can make it restartable safely.
 
 JS normally wants *iterables* not *iterators* themselves, so if we wrap the iterable iterators returned from generators then we can iterate over them multiple times:
 
