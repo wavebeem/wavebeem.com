@@ -106,7 +106,7 @@ function range(start, end) {
 
 Wow, sort of a mouthful, huh? Fortunately, there's a better way to write this!
 
-## Yield to the Generators
+## Yield to the generators
 
 Iterators involve manually tracking "how far" you've made it, which in the case of counting from 0 to 9 is rather annoying, but more complicated iterators get incredibly unwieldy very quickly.
 
@@ -162,7 +162,7 @@ for (var y of oneTwoThree()) {
 
 This prints 1, 2, 3 two times instead of just once.
 
-## Reusable Generators
+## Reusable generators
 
 If you know that your generator does not rely on external state that might change, you can make it restartable safely.
 
