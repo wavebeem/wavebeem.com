@@ -1,8 +1,25 @@
-{% assign nav_default = "link fb ph3 pv4 bn black-60 hover-black" %}
-{% assign nav_current = "link fb ph3 pv4 green bb bw2" %}
+{% assign nav_default = "link fb ph3 pv3 pv4-ns bn black-60 hover-black" %}
+{% assign nav_current = "link fb ph3 pv3 pv4-ns green bb bw2" %}
 
-<nav class="b ttu f3-ns f4 flex ph3 mb4 bb bw1 b--black-10">
-  <a class="{% if page.tab == 'home' %}{{ nav_current }}{% else %}{{ nav_default }}{% endif %}" href="/">Brian Mock</a>
-  <a class="{% if page.tab == 'blog' %}{{ nav_current }}{% else %}{{ nav_default }}{% endif %}" href="/blog">Blog</a>
-  <a class="{% if page.tab == 'resume' %}{{ nav_current }}{% else %}{{ nav_default }}{% endif %}" href="/resume">Resume</a>
-</nav>
+{% assign home_class = nav_default %}
+{% assign blog_class = nav_default %}
+{% assign resume_class = nav_default %}
+
+{% if page.tab == 'home' %}
+  {% assign home_class = nav_current %}
+{% elsif page.tab == 'blog' %}
+  {% assign blog_class = nav_current %}
+{% else %}
+  {% assign resume_class = nav_current %}
+{% endif %}
+
+<div class="flex-ns bb bw1 b--black-10 mb4 align-center">
+  <header class="ph3">
+    <h1 class="ph3 mt4 mt0-ns mb3 mb0-ns f3">Brian Mock</h1>
+  </header>
+  <nav class="ttu f3-ns f4 flex ph3">
+    <a class="{{ home_class }}" href="/">Home</a>
+    <a class="{{ blog_class }}" href="/blog">Blog</a>
+    <a class="{{ resume_class }}" href="/resume">Resume</a>
+  </nav>
+</div>
