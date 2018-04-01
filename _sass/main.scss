@@ -169,12 +169,12 @@ html {
   }
 
   h2 {
-    font-size: 1.8rem;
     font-weight: normal;
-    margin-top: $gap;
-    margin-bottom: (-$gap);
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
+    font-size: 1.8rem;
+    margin-top: 0;
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   }
 
   li a,
@@ -212,24 +212,10 @@ html {
 }
 
 .Resume {
-  h1,
-  h2 {
-    text-transform: uppercase;
-  }
-
   h1 {
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 3rem;
-  }
-
-  h2 {
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-top: 0;
-    padding-bottom: 0.25rem;
-    margin-bottom: 0.75rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   }
 
   * + h2 {
