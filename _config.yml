@@ -5,5 +5,7 @@ exclude:
   - Gemfile.lock
   - favicon-16.png
   - favicon-32.png
+  - README.md
+  - bin
 sass:
   style: compressed
