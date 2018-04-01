@@ -11,7 +11,8 @@
   $blue: #96ccff;
   $gray1: #ccc;
   $gray2: #bbb;
-  $orange: #ffde37;
+  $yellow: #ffde37;
+  $orange: #e4a46c;
 
   pre {
     background: $bg;
@@ -45,14 +46,16 @@
   // .s2 = String
   // .sr = Regexp
   // .si = String escape
-  .s, .s1, .s2, .sr, .se { color: $orange; }
+  .s, .s1, .s2, .sr, .se { color: $yellow; }
 
   // .no = Named constant
   // .kc = Constant
   // .kt = Type constant
-  // .mi = Number
   // .py = Named property
   .no, .kc, .mi, .kt, .py { color: $gray1; }
+
+  // .mi = Number
+  .mi { color: $orange; }
 
   // .c = Comment
   // .c1 = Comment

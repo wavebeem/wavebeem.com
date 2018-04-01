@@ -7,58 +7,89 @@
 
 <style>
 @media print {
-    .screen,
-    hr,
-    header {
-        display: none;
-    }
-    html {
-        font-family: Georgia, serif;
-        font-size: 12px;
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0 10px;
-    }
-    .contact-info li {
-        margin-top: 0.25em;
-    }
-    .contact-info .name h1 {
-        font-size: 20px;
-        font-weight: bold;
-    }
-    main li { margin-top: 0.35em; }
-    main h1 { font-size: 15px; }
-    footer {
-        font-size: 10px;
-        text-align: right;
-    }
-    a {
-        color: blue;
-        text-decoration: none;
-        border-bottom: 1px solid;
-        padding-bottom: 1px;
-    }
-    .contact-info { float: right; }
-    .contact-info ul { list-style: none; }
+  html {
+    font-family: Georgia, serif;
+    font-size: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .screen,
+  footer,
+  nav,
+  hr,
+  header {
+    display: none;
+  }
+
+  main li {
+    margin-top: 0.35em;
+  }
+
+  main h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  main h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    margin-bottom: 0;
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  main > ul {
+    padding-left: 1.5em;
+  }
+
+  footer {
+    font-size: 10px;
+    text-align: right;
+  }
+
+  a {
+    color: blue;
+  }
+
+  .contact-info {
+    font-size: 1.5rem;
+    float: right;
+    background: white;
+    padding: 0;
+    padding-left: 3em;
+    padding-bottom: 3em;
+  }
+
+  .contact-info p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact-info a {
+    text-decoration: none;
+  }
 }
 </style>
 </head>
-<body class="resume">
+<body>
 
 <div class="screen">
-    {% include nav.html %}
+  {% include nav.html %}
 </div>
 
-<main class="ph4 mw7 center flex-auto">
+<main class="ph4 mw7 center flex-auto Resume">
 
 <h2 class="screen">Contact Information</h2>
 <div class="contact-info">
-    <ul>
-        <li class="name print"><h1>Brian Mock</h1></li>
-        <li><a href="mailto:brian@mockbrian.com">brian@mockbrian.com</a></li>
-        <li><a href="https://mockbrian.com">mockbrian.com</a></li>
-        <li>503-409-7863</li>
-    </ul>
+  <h1 class="name print">Brian Mock</h1>
+  <p>
+    <a href="mailto:brian@mockbrian.com">brian@mockbrian.com</a><br>
+    <a href="https://mockbrian.com">mockbrian.com</a><br>
+    503-409-7863
+  </p>
 </div>
 
 {{ content }}

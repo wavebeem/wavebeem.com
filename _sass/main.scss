@@ -6,22 +6,14 @@ $fontMonospace: "Fira Code", "Menlo", "Consolas", monospace;
 $fontHeading: "Lucida Grande", "Verdana", sans-serif;
 $codeColor: #e7040f;
 $gap: 1rem;
-$radius: 0.125em;
+$radius: 0;
 $lightBorder: 2px solid rgba(white, 0.50);
 $smallGap: ($gap / 2);
 $contentWidth: 700px;
 $smallSize: $contentWidth;
 
-@media screen {
-  .print {
-    display: none;
-  }
-}
-
-@media print {
-  .screen {
-    display: none;
-  }
+.print {
+  display: none;
 }
 
 @media (max-width: 320px) {
@@ -49,11 +41,6 @@ $smallSize: $contentWidth;
 .shadow-down { box-shadow: 0 2px 4px rgba(black, 0.35); }
 .transition-none { transition: none !important; }
 
-.width-fit-content {
-  width: -webkit-fit-content;
-  width: fit-content;
-}
-
 @mixin pretty-link {
   background-color: rgba($green, 0.1);
   padding: 0 2px;
@@ -77,13 +64,25 @@ $smallSize: $contentWidth;
   @include pretty-link;
 }
 
-.underline-ink {
-  -webkit-text-decoration-skip: skip;
-  text-decoration-skip: ink;
+.SpeechBubble {
+  background: #333;
+  color: white;
+  position: relative;
 }
 
-.emoji-bullet {
-  margin-right: 0.2em;
+.SpeechBubble:after {
+  $size: 8px;
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-left: $size solid transparent;
+  border-right: $size solid transparent;
+  border-top: $size solid #333;
+  border-bottom: 0;
+  margin-left: (-$size);
+  bottom: (-$size);
+  left: 50%;
 }
 
 html,
@@ -105,8 +104,7 @@ html {
 }
 
 .BlogPost,
-.resume main {
-  max-width: 700px;
+.Resume {
   max-width: $contentWidth;
   padding: $smallGap $gap;
   font-family: $fontPara;
@@ -121,10 +119,17 @@ html {
     margin-bottom: 1.5rem;
   }
 
-  .anchorjs-link {
-    background: transparent;
-    border: 0;
-    text-decoration: none;
+  pre,
+  code {
+    font-size: 1rem;
+    font-family: $fontMonospace;
+  }
+
+  pre {
+    padding: 0.5rem;
+    margin: 1em 0;
+    border-radius: $radius;
+    overflow-x: auto;
   }
 
   p,
@@ -152,7 +157,7 @@ html {
 
   hr {
     border: 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   }
 
   h1 {
@@ -185,27 +190,28 @@ html {
 
   p code {
     display: inline-block;
-    padding: 0 2px;
+    padding: 0;
     color: $codeColor;
     background-color: rgba($codeColor, 0.05);
   }
+}
 
-  pre,
-  code {
-    font-size: 0.8em;
-    font-family: $fontMonospace;
+.BlogPost {
+  .toc {
+    margin: 0;
+    list-style: none;
+    padding-left: initial;
   }
 
-  pre {
-    border-radius: $radius;
-    padding: $smallGap;
-    overflow-x: auto;
-    line-height: 1;
-    font-size: 1em;
+  .toc-link {
+    display: block;
+    background: transparent;
+    text-decoration: none;
+    font-size: 1.4rem;
   }
 }
 
-.resume main {
+.Resume {
   h1,
   h2 {
     text-transform: uppercase;
@@ -219,28 +225,24 @@ html {
 
   h2 {
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     margin-top: 0;
-    padding-top: 0;
+    padding-bottom: 0.25rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+  * + h2 {
+    padding-top: 2rem;
   }
 
   ul {
-    padding-left: 0;
-    list-style-type: none;
-  }
-
-  ul ul {
-    padding-left: 2.5rem;
+    padding-left: 1.5rem;
     list-style-type: disc;
   }
 
-  ul li ul li,
   ul li + li {
-    margin-top: 1.5rem;
-  }
-
-  ul li ul li {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
   }
 
   .contact-info li {

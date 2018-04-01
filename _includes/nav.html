@@ -1,5 +1,5 @@
-{% assign nav_default = "link fb ph3 pv3 pv4-ns bn black-60 hover-black" %}
-{% assign nav_current = "link fb ph3 pv3 pv4-ns green bb bw2" %}
+{% assign nav_default = "bb bw2 hover-bg-near-white link fb pa3 pv4-ns flex align-center b--transparent black-60" %}
+{% assign nav_current = "bb bw2 hover-bg-near-white link fb pa3 pv4-ns flex align-center green" %}
 
 {% assign home_class = nav_default %}
 {% assign blog_class = nav_default %}
@@ -13,13 +13,44 @@
   {% assign resume_class = nav_current %}
 {% endif %}
 
-<div class="flex-ns bb bw1 b--black-10 mb4 align-center">
-  <header class="ph3">
-    <h1 class="ph3 mt4 mt0-ns mb3 mb0-ns f3">Brian Mock</h1>
-  </header>
-  <nav class="ttu f3-ns f4 flex ph3">
-    <a class="{{ home_class }}" href="/">Home</a>
-    <a class="{{ blog_class }}" href="/blog">Blog</a>
-    <a class="{{ resume_class }}" href="/resume">Resume</a>
-  </nav>
+<!-- Small nav -->
+<div class="dn-ns">
+  <div class="bb bw1 b--black-10 mb4">
+    <header>
+      <h1 class="ma0 f2">
+        <a href="/" class="hover-bg-near-white pa3 flex h-100 black no-underline">
+          <span class="db center">Brian Mock</span>
+        </a>
+      </h1>
+    </header>
+    <nav class="ttu f3 flex">
+      <a class="{{ home_class }} tc h-100 flex-auto" href="/">
+        <span class="db center">Home</span>
+      </a>
+      <a class="{{ blog_class }} tc h-100 flex-auto" href="/blog">
+        <span class="db center">Blog</span>
+      </a>
+      <a class="{{ resume_class }} tc h-100 flex-auto" href="/resume">
+        <span class="db center">Resume</span>
+      </a>
+    </nav>
+  </div>
+</div>
+
+<!-- Big nav -->
+<div class="dn db-ns">
+  <div class="flex bb bw1 b--black-10 mb4 align-center" style="height: 100px">
+    <header class="h-100">
+      <h1 class="h-100 mt0 mb0 f3">
+        <a href="/" class="hover-bg-near-white ph4 flex align-center h-100 black no-underline">
+          <span>Brian Mock</span>
+        </a>
+      </h1>
+    </header>
+    <nav class="h-100 ttu f3 flex">
+        <a class="{{ home_class }}" href="/"><span>Home</span></a>
+        <a class="{{ blog_class }}" href="/blog"><span>Blog</span></a>
+        <a class="{{ resume_class }}" href="/resume"><span>Resume</span></a>
+      </nav>
+  </div>
 </div>

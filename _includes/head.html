@@ -27,12 +27,12 @@
 
   (function(host) {
     var ids = {
-      'dev.mockbrian.com': 'UA-52704502-2',
-      'mockbrian.com': 'UA-52704502-1',
+      "dev.mockbrian.com": "UA-52704502-2",
+      "mockbrian.com": "UA-52704502-1",
     };
     if (host in ids) {
-      ga('create', ids[host], 'auto');
-      ga('send', 'pageview');
+      ga("create", ids[host], "auto");
+      ga("send", "pageview");
     }
   }(window.location.host));
 </script>
