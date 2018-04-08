@@ -65,7 +65,7 @@ $smallSize: $contentWidth;
 }
 
 .SpeechBubble {
-  background: black;
+  background: #222;
   color: white;
   position: relative;
 }
@@ -78,7 +78,7 @@ $smallSize: $contentWidth;
   position: absolute;
   border-left: $size solid transparent;
   border-right: $size solid transparent;
-  border-top: $size solid black;
+  border-top: $size solid #222;
   border-bottom: 0;
   margin-left: (-$size);
   bottom: (-$size);
