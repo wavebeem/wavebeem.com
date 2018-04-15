@@ -7,7 +7,6 @@ $fontHeading: "Lucida Grande", "Verdana", sans-serif;
 $codeColor: #e7040f;
 $gap: 1rem;
 $radius: 0;
-$lightBorder: 2px solid rgba(white, 0.50);
 $smallGap: ($gap / 2);
 $contentWidth: 700px;
 $smallSize: $contentWidth;
@@ -16,12 +15,7 @@ $smallSize: $contentWidth;
   display: none;
 }
 
-@media (max-width: 320px) {
-  html {
-    font-size: 12px;
-  }
-}
-
+.font-para { font-family: $fontPara; }
 .font-main { font-family: $fontMain; }
 .ttu { text-transform: uppercase; }
 .ttl { text-transform: lowercase; }
@@ -96,145 +90,13 @@ html {
   color: black;
   font-family: $fontMain;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.5;
 
-  @media (max-width: $smallSize) {
+  @media (max-width: 600px) {
     font-size: 12px;
   }
 }
 
-.BlogPost,
-.Resume {
-  max-width: $contentWidth;
-  padding: $smallGap $gap;
-  font-family: $fontPara;
-  font-size: 1.2rem;
-  line-height: 1.5;
-
-  .PostDate {
-    font-size: 1.3rem;
-    font-family: $fontMain;
-    margin-top: (-$smallGap);
-    color: #555;
-    margin-bottom: 1.5rem;
-  }
-
-  pre,
-  code {
-    font-size: 1rem;
-    font-family: $fontMonospace;
-  }
-
-  pre {
-    padding: 0.5rem;
-    margin: 1em 0;
-    border-radius: $radius;
-    overflow-x: auto;
-  }
-
-  p,
-  ul li {
-    line-height: 1.5;
-  }
-
-  h1,
-  h2,
-  h3 {
-    font-family: $fontHeading;
-  }
-
-  h1 > a {
-    padding: 0;
-    color: inherit;
-    text-decoration: inherit;
-    border: none;
-    background: transparent;
-  }
-
-  section:not(:first-child) {
-    margin-top: 3em;
-  }
-
-  hr {
-    border: 0;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  }
-
-  h1 {
-    font-size: 2.4rem;
-    margin-top: $gap;
-    margin-bottom: $smallGap;
-    padding-bottom: 0;
-    font-weight: 600;
-  }
-
-  h2 {
-    font-weight: normal;
-    font-size: 1.8rem;
-    margin-top: 0;
-    padding-bottom: 0.25rem;
-    margin-bottom: 0.75rem;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  }
-
-  li a,
-  p a {
-    color: $darkGreen;
-    text-decoration: none;
-    @include pretty-link;
-  }
-
-  .anchorjs-link {
-    color: $darkGreen;
-  }
-
-  p code {
-    display: inline-block;
-    padding: 0;
-    color: $codeColor;
-    background-color: rgba($codeColor, 0.05);
-  }
-}
-
-.BlogPost {
-  .toc {
-    margin: 0;
-    list-style: none;
-    padding-left: initial;
-  }
-
-  .toc-link {
-    display: block;
-    background: transparent;
-    text-decoration: none;
-    font-size: 1.4rem;
-  }
-}
-
-.Resume {
-  h1 {
-    text-align: center;
-    font-size: 2.6rem;
-    margin-bottom: 3rem;
-  }
-
-  * + h2 {
-    padding-top: 2rem;
-  }
-
-  ul {
-    padding-left: 1.5rem;
-    list-style-type: disc;
-  }
-
-  ul li + li {
-    margin-top: 0.25rem;
-  }
-
-  .contact-info li {
-    margin-top: 0.5rem;
-  }
-}
 
 .link:focus,
 :focus {

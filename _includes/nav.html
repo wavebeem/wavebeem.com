@@ -1,6 +1,8 @@
 {% assign nav_default = "bb bw2 hover-bg-near-white link fb pa3 pv4-ns flex align-center b--transparent black-60" %}
 {% assign nav_current = "bb bw2 hover-bg-near-white link fb pa3 pv4-ns flex align-center green" %}
 
+{% assign mini_class = "tc h-100 flex-auto" %}
+
 {% assign home_class = nav_default %}
 {% assign blog_class = nav_default %}
 {% assign resume_class = nav_default %}
@@ -24,13 +26,13 @@
       </h1>
     </header>
     <nav class="ttu f3 flex">
-      <a class="{{ home_class }} tc h-100 flex-auto" href="/">
+      <a class="{{ home_class }} {{ mini_class }}" href="/">
         <span class="db center">Home</span>
       </a>
-      <a class="{{ blog_class }} tc h-100 flex-auto" href="/blog">
+      <a class="{{ blog_class }} {{ mini_class }}" href="/blog">
         <span class="db center">Blog</span>
       </a>
-      <a class="{{ resume_class }} tc h-100 flex-auto" href="/resume">
+      <a class="{{ resume_class }} {{ mini_class }}" href="/resume">
         <span class="db center">Resume</span>
       </a>
     </nav>

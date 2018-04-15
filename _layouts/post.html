@@ -2,12 +2,12 @@
 layout: bare
 ---
 
-<main class="ph4 mb3 center flex-auto BlogPost">
+<main class="ph4 mb3 center flex-auto lh-copy BlogPost">
 
-<h1><a href="#">{{ page.title }}</a></h1>
-<div class="PostDate">
-  {{ page.date | date: "%B %-d, %Y" }}
-</div>
+<h1 class="ma0 f1 lh-title">
+  <a href="#">{{ page.title }}</a>
+</h1>
+<p class="ma0">{{ page.date | date: "%B %-d, %Y" }}</p>
 
 {{ content }}
 

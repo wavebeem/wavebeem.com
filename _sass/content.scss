@@ -1,0 +1,83 @@
+.BlogPost,
+.Resume {
+  max-width: $contentWidth;
+  padding: $smallGap $gap;
+  font-family: $fontPara;
+  font-size: 1.5rem;
+
+  pre,
+  code {
+    font-size: 1rem;
+    font-family: $fontMonospace;
+  }
+
+  pre {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: $radius;
+    overflow-x: auto;
+  }
+
+  p,
+  ul li {
+    line-height: 1.5;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: $fontHeading;
+  }
+
+  h1 > a {
+    padding: 0;
+    color: inherit;
+    text-decoration: inherit;
+    border: none;
+    background: transparent;
+  }
+
+  section:not(:first-child) {
+    margin-top: 3em;
+  }
+
+  hr {
+    border: 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    padding-top: 2rem;
+    padding-bottom: 0.25rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+
+  li a,
+  p a {
+    color: $darkGreen;
+    @include pretty-link;
+  }
+
+  ul {
+    padding-left: 1.5rem;
+    list-style-type: disc;
+  }
+
+  li + li {
+    margin-top: 0.25rem;
+  }
+
+  .anchorjs-link {
+    color: $darkGreen;
+  }
+
+  p code {
+    display: inline-block;
+    padding: 0;
+    color: $codeColor;
+    background-color: rgba($codeColor, 0.05);
+  }
+}
