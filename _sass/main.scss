@@ -17,23 +17,6 @@ $smallSize: $contentWidth;
 
 .font-para { font-family: $fontPara; }
 .font-main { font-family: $fontMain; }
-.ttu { text-transform: uppercase; }
-.ttl { text-transform: lowercase; }
-.tc { text-align: center; }
-.flex { display: flex; }
-.flex-column { flex-direction: column; }
-.flex-auto { flex: 1 1 auto; }
-.align-center { align-items: center; }
-.di { display: inline; }
-.dib { display: inline-block; }
-.db { display: block; }
-.min-vh-100 { min-height: 100vh; }
-.bold { font-weight: bold; }
-.list-reset { list-style: none; padding-left: initial; }
-.line-height-2 { line-height: 2; }
-.black-50 { color: rgba(0, 0, 0, 0.5); }
-.shadow-down { box-shadow: 0 2px 4px rgba(black, 0.35); }
-.transition-none { transition: none !important; }
 
 @mixin pretty-link {
   background-color: rgba($green, 0.1);
@@ -79,12 +62,6 @@ $smallSize: $contentWidth;
   left: 50%;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
 html {
   background: #fff;
   color: black;
@@ -97,7 +74,7 @@ html {
   }
 }
 
-
+// Specificity fun!
 .link:focus,
 :focus {
   outline: none;
