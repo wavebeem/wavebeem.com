@@ -32,11 +32,6 @@ system commands or environment variables
 
 TODO
 
-## getopts
-
-TODO: It's a lot nicer than writing this yourself, but maybe this should be a
-separate blog post?
-
 ## set -e
 
 > Exit immediately if a simple command (see SHELL GRAMMAR above) exits with a
