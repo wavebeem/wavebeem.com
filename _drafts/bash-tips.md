@@ -58,3 +58,5 @@ TODO: Explain how to turn this on and off to debug particular sections of bash
 ## Conclusion
 
 TODO
+
+Further reading: `getopts`
