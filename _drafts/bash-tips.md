@@ -5,8 +5,6 @@ layout: post
 tab: blog
 ---
 
-Ask Brian Arn and Cory for editing help
-
 ## What
 
 TODO: Mention that I'll be citing pieces of the bash man page and giving advice
