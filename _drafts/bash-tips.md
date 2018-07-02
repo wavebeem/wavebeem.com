@@ -7,8 +7,11 @@ tab: blog
 
 ## What
 
-TODO: Mention that I'll be citing pieces of the bash man page and giving advice
-on writing bash scripts with hopefully less bugs
+So, you're writing a bash script. You use bash in the terminal, but you kinda
+are fumbling your way through using bash to write more complicated programs.
+Well, keep reading. It can be hard to use bash effectively because it works so
+differently from most other programming languages, but it is not impossible to
+get better at it.
 
 This post assumes you have familiarity with using bash interactively ("in the
 terminal") and want to get better at writing scripts ("programs") to automate
@@ -27,9 +30,9 @@ Make sure the first line of your file is this:
 
 Now you have two choices:
 
-1. Name the file `my-file`, run `chmod +x my-file`, and then use `./my-file` to
-   run your script
-2. Save your file as `my-file.sh` and run your script using `bash my-file.sh`
+1.  Name the file `my-file`, run `chmod +x my-file`, and then use `./my-file` to
+    run your script
+2.  Save your file as `my-file.sh` and run your script using `bash my-file.sh`
 
 Do not write `#!/bin/bash` or `#!/bin/sh` in your files, and do not run youe
 scripts using `sh my-file`. The commands `bash` and `sh` refer to separate
@@ -85,19 +88,41 @@ sentences=(
 for sentence in "${sentence[@]}"; do
   echo "$sentence"
 done
+# echo "bash can be kind of tough"
+# echo "but it's useful to know how to use it"
+# echo "so please keep reading"
 ```
 
 Oddly enough this is the correct way to iterate over a bash array!
 
 Finally, don't forget to also use quotes around command interpolation also:
 
-TODO: Better example here
-
 ```bash
-mkdir "$(date)"
+if [ $(echo "hello world") = "hello world" ]; then
+  echo "true"
+fi
+# bash: [: too many arguments
 ```
 
-Otherwise you would end up with several folders with useless names.
+This basically expands to the following after bash runs `$()` and splits the
+result on whitespace:
+
+```bash
+if [ hello world = "hello world" ]; then
+  echo "true"
+fi
+```
+
+Don't forget to use double quotes whenever you use `$`. It looks weird, but it's
+actually OK to have `"` inside of `"` when you have `$()`! The correct version
+looks like this:
+
+```bash
+if [ "$(echo "hello world")" = "hello world" ]; then
+  echo "true"
+fi
+# bash: [: too many arguments
+```
 
 ## Naming Conventions
 
@@ -174,7 +199,12 @@ script. The full details from the bash man page are:
 Which roughly means that any standalone command will crash your script if it
 exits with a nonzero code.
 
-If you want to force a command to not crash your script 
+If you want to force a command to not crash your script you can append `|| true`
+to the command and then it will always succeed:
+
+```bash
+grep "something" my-file.txt || true
+```
 
 ## set -u
 
@@ -226,11 +256,20 @@ value="${my_var:-$fallback}"
 echo "$value"
 ```
 
+Or even multiple levels:
+
+```bash
+set -u
+echo "${a:-${b:-c}}"
+# echo "c"
+```
+
 In a lot of cases it's actually ok to get an empty string back, which is totally possible here by putting _nothing_ after the `:-`:
 
 ```bash
 set -u
 echo "${value:-}"
+# echo ""
 ```
 
 Admittedly this syntax is pretty cryptic, but here's how I remember it: the
@@ -266,18 +305,14 @@ And boom, you're now debugging just one function.
 
 ## Conclusion
 
-TODO
-
-Here's an example script showing off bash best practices:
+This might be a lot to take in. You can review this script which follows best
+practices.
 
 TODO: Make sure this script isn't garbage
 
 ```bash
 #!/usr/bin/env bash
 set -eu
-
-# Run the script like `VERBOSE=1 bash my-script` to show all the commands being run
-[[ "${VERBOSE:-0}" = 1 ]] && set -x
 
 environment="${NODE_ENV:-production}"
 
@@ -288,21 +323,56 @@ files=(
 )
 
 Build() {
-  webpack -p --env "$environment"
+  webpack --env "$environment"
   less main.less > dist/style.css
 }
 
 Deploy() {
-  copy-files-to-server
+  aws s3 sync dist/ s3://my-bucket
 }
 
 Build
 Deploy
 ```
 
-Further reading:
+## Further reading
 
-- `getopts`
-- `trap`
-- `[` vs `[[`
-- Dynamic scoping
+### ["Strict mode" for bash][1]
+
+This article is the inspiration for this blog post. I don't agree with it
+100%, but it's still a fun read, and goes into some things not mentioned here.
+
+### [\[ vs \[\[][2]
+
+If you need to write an `if` statement in your script you should use `[[`
+instead of the archaic `[` because it offers many convenience features for
+easy to read code.
+
+### [Dynamic scoping][3]
+
+Variable scoping is a lot different in bash from almost every other language.
+
+### [getopts][4]
+
+If you need to accept command line arguments you should use `getopts`.
+
+### [trap][5]
+
+If you need to do cleanup at the end of your script, look into `trap`.
+
+### [Setting the working directory][6]
+
+Some scripts benefit from assuming they run in the directory where they live,
+instead of your current working directory.
+
+### [Using arrays][7]
+
+It may seem like bash is entirely based around strings, but you can also have arrays of strings!
+
+[1]: http://redsymbol.net/articles/unofficial-bash-strict-mode/
+[2]: https://stackoverflow.com/a/3427931
+[3]: https://gist.github.com/jonpryor/b44439f7f01ad2af73c0
+[4]: https://stackoverflow.com/a/16496491
+[5]: http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_12_02.html
+[6]: https://stackoverflow.com/a/3355423
+[7]: http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_10_02.html
