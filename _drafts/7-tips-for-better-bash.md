@@ -1,6 +1,6 @@
 ---
-title: "Better Bash in 7 Steps"
-description: "7 steps for writing better bash code"
+title: "7 Tips for Better Bash"
+description: "You'll be writing better bash code after following these 7 tips"
 layout: post
 tab: blog
 ---
