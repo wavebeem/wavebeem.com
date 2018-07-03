@@ -7,9 +7,9 @@ tab: blog
 
 ## What
 
-So, you're writing a bash script. You use bash in the terminal, but you kinda
-are fumbling your way through using bash to write more complicated programs.
-Well, keep reading. It can be hard to use bash effectively because it works so
+So, you're writing a bash script. You use bash in the terminal, but you're kinda
+fumbling your way through using bash to write more complicated programs. Well,
+keep reading. It can be hard to use bash effectively because it works so
 differently from most other programming languages, but it is not impossible to
 get better at it.
 
@@ -34,11 +34,12 @@ Now you have two choices:
     run your script
 2.  Save your file as `my-file.sh` and run your script using `bash my-file.sh`
 
-Do not write `#!/bin/bash` or `#!/bin/sh` in your files, and do not run youe
-scripts using `sh my-file`. The commands `bash` and `sh` refer to separate
-programs on many Linux computers, so you can have problems there. Additionally,
-bash is not always installed in `/bin`. Remember that `bash` is the successor
-program to `sh` and that is what we want to use.
+Do not write `#!/bin/bash` or `#!/bin/sh` in your files, and do not run you're
+scripts using `sh my-file`. The commands `bash` and `sh` effectively refer to
+separate programs on many Linux computers, so you can have problems there.
+Additionally, bash is not always installed in `/bin`. Remember that bash is a
+more powerful language than sh and has more features due to it being over a
+decade newer.
 
 ## Double Quotes
 
@@ -98,30 +99,25 @@ Oddly enough this is the correct way to iterate over a bash array!
 Finally, don't forget to also use quotes around command interpolation also:
 
 ```bash
-if [ $(echo "hello world") = "hello world" ]; then
-  echo "true"
-fi
-# bash: [: too many arguments
+mkdir $(echo "hello world")
 ```
 
 This basically expands to the following after bash runs `$()` and splits the
 result on whitespace:
 
 ```bash
-if [ hello world = "hello world" ]; then
-  echo "true"
-fi
+mkdir "hello" "world"
 ```
+
+Which makes two directories: one named `hello`, and the other named `world`.
 
 Don't forget to use double quotes whenever you use `$`. It looks weird, but it's
 actually OK to have `"` inside of `"` when you have `$()`! The correct version
 looks like this:
 
 ```bash
-if [ "$(echo "hello world")" = "hello world" ]; then
-  echo "true"
-fi
-# bash: [: too many arguments
+mkdir "$(echo "hello world")"
+# correctly makes one directory named "hello world" without quotes
 ```
 
 ## Naming Conventions
@@ -322,15 +318,21 @@ files=(
   "legal document.pdf"
 )
 
+Clean() {
+  rm -rf dist
+  mkdir dist
+}
+
 Build() {
   webpack --env "$environment"
   less main.less > dist/style.css
 }
 
 Deploy() {
-  aws s3 sync dist/ s3://my-bucket
+  aws s3 sync dist/ s3://my-bucket/assets/
 }
 
+Clean
 Build
 Deploy
 ```
