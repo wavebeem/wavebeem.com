@@ -94,7 +94,31 @@ done
 # echo "so please keep reading"
 ```
 
-Oddly enough this is the correct way to iterate over a bash array!
+Oddly enough this is the correct way to iterate over a bash array! If you forget
+the quotes then bash will split up each word from the sentence and iterate over
+that separately, giving you every word on a separate line:
+
+```
+bash
+can
+be
+kind
+of
+tough
+but
+it's
+useful
+to
+know
+how
+to
+use
+it
+so
+please
+keep
+reading
+```
 
 Finally, don't forget to also use quotes around command interpolation also:
 
@@ -106,7 +130,7 @@ This basically expands to the following after bash runs `$()` and splits the
 result on whitespace:
 
 ```bash
-mkdir "hello" "world"
+mkdir hello world
 ```
 
 Which makes two directories: one named `hello`, and the other named `world`.
@@ -117,7 +141,7 @@ looks like this:
 
 ```bash
 mkdir "$(echo "hello world")"
-# correctly makes one directory named "hello world" without quotes
+# correctly makes one directory named "hello world"
 ```
 
 ## Naming Conventions
@@ -193,13 +217,15 @@ script. The full details from the bash man page are:
 > shell exits.
 
 Which roughly means that any standalone command will crash your script if it
-exits with a nonzero code.
+exits with a nonzero code. So if your failing command is part of a pipeline or
+an `if` condition it's not a problem and will still work great.
 
 If you want to force a command to not crash your script you can append `|| true`
 to the command and then it will always succeed:
 
 ```bash
-grep "something" my-file.txt || true
+mkdir /tmp || true
+# Make directory /tmp or silently fail if permission denied or it exists already
 ```
 
 ## set -u
@@ -302,9 +328,7 @@ And boom, you're now debugging just one function.
 ## Conclusion
 
 This might be a lot to take in. You can review this script which follows best
-practices.
-
-TODO: Make sure this script isn't garbage
+practices:
 
 ```bash
 #!/usr/bin/env bash
@@ -338,6 +362,10 @@ Deploy
 ```
 
 ## Further reading
+
+There is a lot to know with bash! So once you think you've mastered these tips,
+you might want to check out the following links to learn more about programming
+in bash.
 
 ### ["Strict mode" for bash][1]
 
