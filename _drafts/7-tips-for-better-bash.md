@@ -1,11 +1,9 @@
 ---
-title: "7 Tips for Better Bash"
-description: "You'll be writing better bash code after following these 7 tips"
-layout: post
-tab: blog
+title: "7 Tips for Better Bash" description: "You'll be writing better bash code
+after following these 7 tips" layout: post tab: blog
 ---
 
-## What
+## Who is this post for?
 
 So, you're writing a bash script. You use bash in the terminal, but you're kinda
 fumbling your way through using bash to write more complicated programs. Well,
@@ -133,10 +131,10 @@ result on whitespace:
 mkdir hello world
 ```
 
-Which makes two directories: one named `hello`, and the other named `world`.
+Which makes two directories: one named "hello", and the other named "world".
 
 Don't forget to use double quotes whenever you use `$`. It looks weird, but it's
-actually OK to have `"` inside of `"` when you have `$()`! The correct version
+actually ok to have `"` inside of `"` when you have `$()`! The correct version
 looks like this:
 
 ```bash
@@ -204,7 +202,10 @@ cp build/bundle.css dist || exit 1
 
 or:
 
-Most other languages would allow you to omit the error handling logic there and automatically crash the script when a `cp` or `mv` command fails. But bash is designed to be used interactively. Can you imagine if making a typo in your `cp` command closed your terminal? That would be sad.
+Most other languages would allow you to omit the error handling logic there and
+automatically crash the script when a `cp` or `mv` command fails. But bash is
+designed to be used interactively. Can you imagine if making a typo in your `cp`
+command closed your terminal? That would be sad.
 
 But you can opt-in to this behavior by putting `set -e` at the top of your
 script. The full details from the bash man page are:
@@ -286,7 +287,8 @@ echo "${a:-${b:-c}}"
 # echo "c"
 ```
 
-In a lot of cases it's actually ok to get an empty string back, which is totally possible here by putting _nothing_ after the `:-`:
+In a lot of cases it's actually ok to get an empty string back, which is totally
+possible here by putting _nothing_ after the `:-`:
 
 ```bash
 set -u
@@ -295,12 +297,13 @@ echo "${value:-}"
 ```
 
 Admittedly this syntax is pretty cryptic, but here's how I remember it: the
-`:-}` is a little guy with a mustache saying "I hope you defined that variable,
-but if not, I'm gonna give you an empty string!".
+`:-}` is a little friend with a mustache saying "I hope you defined that
+variable, but if not, I'm gonna give you an empty string!".
 
 ## set -x
 
-`set -x` enables a debugging mode that prints out every command before bash runs it.
+`set -x` enables a debugging mode that prints out every command before bash runs
+it.
 
 ```bash
 set -x
@@ -312,7 +315,9 @@ date
 # Wed Jun 27 22:30:10 PDT 2018
 ```
 
-If you want to debug your whole script you can just put it right at the top, but you can actually turn this _off_ by using `set +x` (yeah, it seems backwards to me too).
+If you want to debug your whole script you can just put it right at the top, but
+you can actually turn this _off_ by using `set +x` (yeah, it seems backwards to
+me too).
 
 ```bash
 FunctionOne
@@ -369,14 +374,14 @@ in bash.
 
 ### ["Strict mode" for bash][1]
 
-This article is the inspiration for this blog post. I don't agree with it
-100%, but it's still a fun read, and goes into some things not mentioned here.
+This article is the inspiration for this blog post. I don't agree with it 100%,
+but it's still a fun read, and goes into some things not mentioned here.
 
 ### [\[ vs \[\[][2]
 
 If you need to write an `if` statement in your script you should use `[[`
-instead of the archaic `[` because it offers many convenience features for
-easy to read code.
+instead of the archaic `[` because it offers many convenience features for easy
+to read code.
 
 ### [Dynamic scoping][3]
 
@@ -397,7 +402,8 @@ instead of your current working directory.
 
 ### [Using arrays][7]
 
-It may seem like bash is entirely based around strings, but you can also have arrays of strings!
+It may seem like bash is entirely based around strings, but you can also have
+arrays of strings!
 
 [1]: http://redsymbol.net/articles/unofficial-bash-strict-mode/
 [2]: https://stackoverflow.com/a/3427931
