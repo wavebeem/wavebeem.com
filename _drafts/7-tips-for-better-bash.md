@@ -76,7 +76,7 @@ Main "I love" 3.14159
 ```
 
 This will correctly print `I love 3.14159` whereas if you used `$@` instead of
-`"$@"` then it would expand two _three_ words and printf would fail by trying to
+`"$@"` then it would expand to _three_ words and printf would fail by trying to
 print `love` as a floating point number.
 
 ```bash
@@ -86,7 +86,7 @@ sentences=(
   "so please keep reading"
 )
 
-for sentence in "${sentence[@]}"; do
+for sentence in "${sentences[@]}"; do
   echo "$sentence"
 done
 # echo "bash can be kind of tough"
