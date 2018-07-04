@@ -1,6 +1,8 @@
 ---
-title: "7 Tips for Better Bash" description: "You'll be writing better bash code
-after following these 7 tips" layout: post tab: blog
+title: "7 Tips for Better Bash"
+description: "You'll be writing better bash code after following these 7 tips"
+layout: post
+tab: blog
 ---
 
 ## Who is this post for?
