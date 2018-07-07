@@ -228,7 +228,8 @@ to the command and then it will always succeed:
 
 ```bash
 mkdir /tmp || true
-# Make directory /tmp or silently fail if permission denied or it exists already
+# Make directory /tmp or silently fail if
+# permission denied or it exists already
 ```
 
 ## set -u
@@ -374,38 +375,22 @@ There is a lot to know with bash! So once you think you've mastered these tips,
 you might want to check out the following links to learn more about programming
 in bash.
 
-### ["Strict mode" for bash][1]
+The article [Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)][1] is the inspiration for this blog post. I
+don't agree with it 100%, but it's still a fun read, and goes into some things
+not mentioned here.
 
-This article is the inspiration for this blog post. I don't agree with it 100%,
-but it's still a fun read, and goes into some things not mentioned here.
+If you need to write an `if` statement in your script [you should use \[\[][2] because it offers many useful features over the classic `[` conditional expression.
 
-### [\[ vs \[\[][2]
+The [dynamic variable scoping][3] in bash is different from almost every other language.
 
-If you need to write an `if` statement in your script you should use `[[`
-instead of the archaic `[` because it offers many convenience features for easy
-to read code.
+[getopts][4] is the standard way to accept command line arguments.
 
-### [Dynamic scoping][3]
+Cleanup at the end of your script can be done via [trap][5].
 
-Variable scoping is a lot different in bash from almost every other language.
-
-### [getopts][4]
-
-If you need to accept command line arguments you should use `getopts`.
-
-### [trap][5]
-
-If you need to do cleanup at the end of your script, look into `trap`.
-
-### [Setting the working directory][6]
-
-Some scripts benefit from assuming they run in the directory where they live,
-instead of your current working directory.
-
-### [Using arrays][7]
+Some scripts benefit from assuming they [run in the directory where they live][6], instead of your current working directory.
 
 It may seem like bash is entirely based around strings, but you can also have
-arrays of strings!
+[arrays of strings][7]!
 
 [1]: http://redsymbol.net/articles/unofficial-bash-strict-mode/
 [2]: https://stackoverflow.com/a/3427931
