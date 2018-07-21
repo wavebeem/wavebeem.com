@@ -81,9 +81,17 @@ OK so o-rings aren't a switch type, but you can add them on to keycaps as a litt
 
 ## Keycap profiles
 
+Keycaps are easily removable from keyswitches using a wire keycap puller. Pullers are cheap and frequently come for free with your keyboard. YouTube has many tutorials on using them.
+
+Because they are easily removable, many different types of keycaps have been made for your typing enjoyment.
+
+Images are worth a thousand words here, and you should check out this famous picture for a visual comparison: https://www.reddit.com/r/MechanicalKeyboards/comments/2v9zf5/keycap_profiles/
+
 OEM/Cherry
 
-SA
+The most popular profile is probably OEM. Unsurprisingly it is a middleground of size and shape compared to other popular profiles.
+
+The SA profile is also quite popular TODO
 
 DSA
 
