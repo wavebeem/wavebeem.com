@@ -13,6 +13,8 @@ Are there any Creative Commons photos I could use with attribution here?
 
 I am not a good photographer and am missing many things I would like to show pictures of
 
+Should I mention Costar vs Cherry stabilizers?
+
 ## Introduction
 
 Hey there, fellow human! I bet you're reading this because you're curious what all the fuss is about mechanical keyboards lately. Maybe your friend has one and you are kinda interested in getting your own, but don't know where to start. The good news is, it's not just you, it is a little confusing to find the right keyboard for you. In fact, I'm still learning new things about keyboards all the time.
