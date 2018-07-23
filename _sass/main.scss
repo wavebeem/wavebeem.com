@@ -1,8 +1,8 @@
 $green: #19a974;
 $darkGreen: #137752;
-$fontMain: "Helvetica", sans-serif;
+$fontMain: "Helvetica", "Arial", sans-serif;
 $fontPara: "Georgia", "Cambria", "Palatino", serif;
-$fontMonospace: "Fira Code", "Menlo", "Consolas", monospace;
+$fontMonospace: "Menlo", "Consolas", monospace;
 $fontHeading: "Lucida Grande", "Verdana", sans-serif;
 $codeColor: #e7040f;
 $gap: 1rem;
@@ -18,9 +18,8 @@ $smallSize: $contentWidth;
 .font-para { font-family: $fontPara; }
 .font-main { font-family: $fontMain; }
 
-@mixin pretty-link {
-  background-color: rgba($green, 0.1);
-  padding: 0 2px;
+@mixin pretty-link($color) {
+  color: $color;
   text-decoration: underline;
   -webkit-text-decoration-skip: skip;
   text-decoration-skip: ink;
@@ -31,14 +30,12 @@ $smallSize: $contentWidth;
   }
 
   &:hover {
-    background-color: $green;
-    color: white;
-    text-decoration: none;
+    opacity: 0.6;
   }
 }
 
 .pretty-link {
-  @include pretty-link;
+  @include pretty-link($darkGreen);
 }
 
 .SpeechBubble {

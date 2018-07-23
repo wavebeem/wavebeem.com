@@ -5,6 +5,31 @@
   font-family: $fontPara;
   font-size: 1.25rem;
 
+  figure {
+    box-sizing: border-box;
+    color: #fff;
+    background: #333;
+    border: 6px solid transparent;
+    margin: 20px 0;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  figure img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  figcaption {
+    font-family: $fontHeading;
+  }
+
+  figcaption a {
+    @include pretty-link(#fff);
+  }
+
   pre,
   code {
     font-size: 1rem;
@@ -57,8 +82,7 @@
 
   li a,
   p a {
-    color: $darkGreen;
-    @include pretty-link;
+    @include pretty-link($darkGreen);
   }
 
   ul {

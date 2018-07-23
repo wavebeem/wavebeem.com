@@ -37,6 +37,17 @@ Finally, you may want to be careful getting into the hobby because there are so 
 
 ## Keyboard form factors
 
+<figure>
+  <img src="https://placehold.it/300x300" alt="">
+  <figcaption>
+    <a target="_blank" href="https://example.com/#source">title</a>
+    by
+    <a target="_blank" href="https://example.com/#author">author</a>
+    is licensed under
+    <a target="_blank" href="https://example.com/#license">license</a>
+  </figcaption>
+</figure>
+
 Keyboard form factors refer generally to how many keys a keyboard has. Full size refers to roughly 104 keys, and everything else is measured relative to that. Usually it's possible to type missing keys by doing key combinations on smaller keyboards.
 
 ## Full size form factor
