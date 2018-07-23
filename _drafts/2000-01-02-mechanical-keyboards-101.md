@@ -37,6 +37,10 @@ Finally, you may want to be careful getting into the hobby because there are so 
 
 ## Keyboard form factors
 
+Keyboard form factors refer generally to how many keys a keyboard has. Full size refers to roughly 104 keys, and everything else is measured relative to that. Usually it's possible to type missing keys by doing key combinations on smaller keyboards.
+
+## Full size form factor
+
 Full size keyboards are the classic size many people are used to seeing. The typically have around 104 keys, including a numpad and arrow keys. You definitely won't have any problems typing on this form factor, but it means you have to move your right hand really far to access your mouse or touchpad. I personally almost never used the numpad even though it's faster for number inputs, just because I don't type a lot of long numbers. I imagine folks who use Excel all day might have a different thought here (more on numpads in a few paragraphs).
 
 ## Tenkeyless form factor
