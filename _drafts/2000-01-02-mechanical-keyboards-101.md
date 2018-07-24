@@ -202,23 +202,29 @@ Because they are easily removable, many different types of keycaps have been mad
 
 Images are worth a thousand words here, and you should check out this famous picture for a [visual comparison of keycap profiles][7]. This comparison chart from [PMK][11] is also really useful.
 
-## OEM and Cherry keycap profiles
+## Medium profile keycaps
 
 The most popular profile is probably OEM. Unsurprisingly it is a middleground of size and shape compared to other popular profiles. Cherry profile is also very similar.
 
 OEM keycaps have what's called a cylindrical sculpt. This means the top of each key cap is slightly U-shaped.
 
-## SA keycap profile
+There is also the very similarly shaped Cherry profile which is quite a lot less common than OEM.
+
+## High profile keycaps
 
 The SA keycap profile is also pretty popular. The sculpt on they keycaps is spherical which means it's sort of like a very shallow bowl.
 
 Additionally, the shape between rows varies dramatically, giving you a retro U-shape across the entire keyboard.
 
-## DSA keycap profile
+A new high profile set called [MT3][12] was developed by matt3o recently.
+
+## Low profile keycaps
 
 The DSA keycap profile is quite short, completely uniform across all keys, and has a very comfortable spherical sculpt on the keycaps.
 
 This means that you can mix and match they keycaps anywhere you like as long as the size is the same. So you if you want to try out Dvorak you can actually swap the keycaps around.
+
+There is a niche profile called XDA which is very similar but slightly taller and a little less sloped along the sides.
 
 ## Keycap thoughts
 
@@ -265,3 +271,4 @@ Hopefully you know more about mechanical keyboards now. I wanted to present a si
 [9]: https://kono.store
 [10]: https://pimpmykeyboard.com
 [11]: https://www.reddit.com/r/MechanicalKeyboards
+[12]: https://matt3o.com/about-mt3-profile-and-devtty-set/
