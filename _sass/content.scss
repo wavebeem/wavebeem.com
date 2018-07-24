@@ -5,10 +5,13 @@
   font-size: 1.25rem;
 
   figure {
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     color: #fff;
     background: #333;
-    border: 6px solid transparent;
+    padding: 0.5rem;
+    // box-shadow: 0 0 8px rgba(black, 0.4);
     margin: 20px 0;
     max-width: 100%;
     width: 100%;
@@ -16,13 +19,17 @@
   }
 
   figure img {
+    box-sizing: border-box;
+    border: 1px solid black;
     max-width: 100%;
     width: 100%;
     height: auto;
   }
 
   figcaption {
+    padding-top: 0.5rem;
     font-family: $fontHeading;
+    font-size: 1rem;
   }
 
   figcaption a {

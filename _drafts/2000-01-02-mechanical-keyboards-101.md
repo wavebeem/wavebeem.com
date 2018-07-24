@@ -37,20 +37,33 @@ Finally, you may want to be careful getting into the hobby because there are so 
 
 ## Keyboard form factors
 
+Keyboard form factors refer generally to how many keys a keyboard has. Full size refers to roughly 104 keys, and everything else is measured relative to that. Usually it's possible to type missing keys by doing key combinations on smaller keyboards.
+
 <figure>
-  <img src="https://placehold.it/300x300" alt="">
+  <img src="/img/keyboard-model-m.jpg" alt="">
   <figcaption>
-    <a target="_blank" href="https://example.com/#source">title</a>
-    by
-    <a target="_blank" href="https://example.com/#author">author</a>
+    <a target="_blank" href="https://commons.wikimedia.org/wiki/File:IBM_Model_M.png">IBM Model M</a>
+    from
+    <a target="_blank" href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia</a>
     is licensed under
-    <a target="_blank" href="https://example.com/#license">license</a>
+    <a target="_blank" href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0</a>
   </figcaption>
 </figure>
 
-Keyboard form factors refer generally to how many keys a keyboard has. Full size refers to roughly 104 keys, and everything else is measured relative to that. Usually it's possible to type missing keys by doing key combinations on smaller keyboards.
+Pictured above is the classic IBM Model M mechanical keyboard. Fortunately for us, mechanical keyboards have gotten a lot smaller and quieter since this one was released.
 
 ## Full size form factor
+
+<figure>
+  <img src="/img/keyboard-das-ultimate-4.jpg" alt="">
+  <figcaption>
+    <a target="_blank" href="https://www.flickr.com/photos/mccaughan/27571492442">Das Keyboard Ultimate 4</a>
+    by
+    <a target="_blank" href="https://www.flickr.com/photos/mccaughan/">Doug McCaughan</a>
+    is licensed under
+    <a target="_blank" href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>
+  </figcaption>
+</figure>
 
 Full size keyboards are the classic size many people are used to seeing. The typically have around 104 keys, including a numpad and arrow keys. You definitely won't have any problems typing on this form factor, but it means you have to move your right hand really far to access your mouse or touchpad. I personally almost never used the numpad even though it's faster for number inputs, just because I don't type a lot of long numbers. I imagine folks who use Excel all day might have a different thought here (more on numpads in a few paragraphs).
 
@@ -78,9 +91,31 @@ I would recommend looking into either a TKL or 75% keyboard to get started with,
 
 ## Keyboard extras
 
+<figure>
+  <img src="/img/keyboard-feet.jpg" alt="">
+  <figcaption>
+    <a target="_blank" href="https://www.flickr.com/photos/mawari/28692415581">Digstar StarTop USB mechanical gaming keyboard 22</a>
+    by
+    <a target="_blank" href="https://www.flickr.com/photos/mawari/">Hideya HAMANO</a>
+    is licensed under
+    <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>
+  </figcaption>
+</figure>
+
 Additionally, you may want to consider keyboard angle. Having a very high angled keyboard strains your fingers more. Try miming a typing action with your fingers angled up compared with down and you'll see how much more exhausting it is. Many keyboards are naturally sloped and deploying keyboard feet only makes them even more sloped, furthering finger fatigue.
 
 Most keyboards come with black plastic cases, and hopefully a matte finish. You might also find some in white plastic, or even aluminum. You should pick whichever material you think will look nicest on your desk, but note that if the keys are mounted directly on metal with no plastic in-between, you can have a slight metallic clang when fully pressing a key.
+
+<figure>
+  <img src="/img/keyboard-led.jpg" alt="">
+  <figcaption>
+    <a target="_blank" href="https://www.flickr.com/photos/bagogames/33836220354">DigsRoccat Suora FX RGB Mechanical Keyboard Review</a>
+    by
+    <a target="_blank" href="https://www.flickr.com/photos/bagogames/">BagoGames</a>
+    is licensed under
+    <a target="_blank" href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
+  </figcaption>
+</figure>
 
 LEDs are also a topic of great interest for some folks. I generally type without looking at the keyboard, so I regard them mostly as a fun addition of color to my desk and not a typing aid. Many mechanical keyboards do not come with LEDs and have no support for them, so know that you're going to have limited options if you want LEDs. Generally "gaming keyboards" have these, so you may want to look there if it's important to you.
 
