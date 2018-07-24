@@ -83,6 +83,17 @@ Full size keyboards are the classic size many people are used to seeing. The typ
 
 ## Tenkeyless form factor
 
+<figure>
+  <img src="/img/keyboards/tkl.jpg" alt="">
+  <figcaption>
+    <a target="_blank" href="https://www.flickr.com/photos/pdc/28266574949">MT3 /dev/tty</a>
+    by
+    <a target="_blank" href="https://www.flickr.com/photos/pdc/">Damian Cugley</a>
+    is licensed under
+    <a target="_blank" href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>
+  </figcaption>
+</figure>
+
 Tenkeyless (TKL) keyboards typically have around 87 keys, including arrow keys but discarding the numpad area. This is usually about as many keys as a laptop has, so this might be the most familiar form factor for you to get started with. I think it's hard to go wrong with a TKL board since it makes few compromises.
 
 ## 75% form factor
