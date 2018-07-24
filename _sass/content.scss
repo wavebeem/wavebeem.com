@@ -32,7 +32,7 @@
   }
 
   figcaption a {
-    @include pretty-link(inherit);
+    @include pretty-link(#fff);
   }
 
   pre,
