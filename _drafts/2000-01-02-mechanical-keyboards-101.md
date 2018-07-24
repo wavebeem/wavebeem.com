@@ -21,6 +21,17 @@ Hey there, fellow human! I bet you're reading this because you're curious what a
 
 ## Why
 
+<figure>
+  <img src="/img/keyboard-ducky.jpg" alt="">
+  <figcaption>
+    <a target="_blank" href="https://www.flickr.com/photos/asianoni/21181683774/in/photostream/">Ducky 9008G2 - Year Of The Tiger</a>
+    by
+    <a target="_blank" href="https://www.flickr.com/photos/asianoni/">A. TSF</a>
+    is licensed under
+    <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>
+  </figcaption>
+</figure>
+
 You might be wondering _why_ you should get a mechanical keyboard. Well, I think the single most important reason is they feel nicer to type on. Granted, this is extremely subjective, and people adapt pretty well to different devices given enough time, so take it with a grain of salt.
 
 I am a software developer and avid Twitter user, so I spend a huge chunk of my day typing on computer keyboards, so I figure it's worth it for myself to invest the money in getting the best tools for doing the job.
@@ -79,6 +90,17 @@ These keyboards are closest in size to a 13" laptop keyboard, freeing up plenty 
 
 ## 60% form factor
 
+<figure>
+  <img src="/img/keyboard-poker-3.jpg" alt="">
+  <figcaption>
+    <a target="_blank" href="https://www.flickr.com/photos/66451944@N03/42839323381">Pok3r keyboard with custom keycabs</a>
+    by
+    <a target="_blank" href="https://www.flickr.com/photos/66451944@N03/">Thomas Vogt</a>
+    is licensed under
+    <a target="_blank" href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>
+  </figcaption>
+</figure>
+
 60% keyboards typically are missing the F1-F12 key strip along the top, generally opting for holding down the Fn key to access the numerous missing keys. Some 60% keyboards even omit the arrow keys, generally opting for Fn+IJKL as a replacement arrow key cluster.
 
 Many of these keyboards also offer media and volume keys by holding Fn and pressing other keys on the keyboard. Often this is the F1-F12 keys at the top, but some more ergonomic layouts have media/volume key clusters that can be accessed using one hand.
@@ -101,6 +123,15 @@ I would recommend looking into either a TKL or 75% keyboard to get started with,
 </figure>
 
 Additionally, you may want to consider keyboard angle. Having a very high angled keyboard strains your fingers more. Try miming a typing action with your fingers angled up compared with down and you'll see how much more exhausting it is. Many keyboards are naturally sloped and deploying keyboard feet only makes them even more sloped, furthering finger fatigue.
+
+<figure>
+  <img src="/img/keyboard-hhkb.jpg" alt="">
+  <figcaption>
+    <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Happy_Hacking_Keyboard_Professional_2.jpg">Happy Hacking Keyboard Professional 2</a>
+    by Aon fi is licensed under
+    <a target="_blank" href="https://creativecommons.org/licenses/by/3.0/deed.en">CC BY 3.0</a>
+  </figcaption>
+</figure>
 
 Most keyboards come with black plastic cases, and hopefully a matte finish. You might also find some in white plastic, or even aluminum. You should pick whichever material you think will look nicest on your desk, but note that if the keys are mounted directly on metal with no plastic in-between, you can have a slight metallic clang when fully pressing a key.
 
