@@ -43,9 +43,7 @@ Keyboard form factors refer generally to how many keys a keyboard has. Full size
   <img src="/img/keyboard-model-m.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://commons.wikimedia.org/wiki/File:IBM_Model_M.png">IBM Model M</a>
-    from
-    <a target="_blank" href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia</a>
-    is licensed under
+    by Raymangold22 is licensed under
     <a target="_blank" href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0</a>
   </figcaption>
 </figure>
