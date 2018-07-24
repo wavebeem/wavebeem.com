@@ -7,13 +7,7 @@ tab: blog
 
 ## TODO
 
-This post would probably benefit greatly from some pictures
-
-Are there any Creative Commons photos I could use with attribution here?
-
-I am not a good photographer and am missing many things I would like to show pictures of
-
-Should I mention Costar vs Cherry stabilizers?
+Try to get about one picture per section?
 
 ## Introduction
 
