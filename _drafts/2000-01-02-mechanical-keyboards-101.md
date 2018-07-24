@@ -22,9 +22,9 @@ Hey there, fellow human! I bet you're reading this because you're curious what a
 ## Why
 
 <figure>
-  <img src="/img/keyboard-ducky.jpg" alt="">
+  <img src="/img/keyboards/ducky.jpg" alt="">
   <figcaption>
-    <a target="_blank" href="https://www.flickr.com/photos/asianoni/21181683774/in/photostream/">Ducky 9008G2 - Year Of The Tiger</a>
+    <a target="_blank" href="https://www.flickr.com/photos/asianoni/21181683774">Ducky 9008G2 - Year Of The Tiger</a>
     by
     <a target="_blank" href="https://www.flickr.com/photos/asianoni/">A. TSF</a>
     is licensed under
@@ -44,6 +44,17 @@ It's not all perfect in mechanical keyboard land, though. For one thing, mechani
 
 And the real elephant in the room is that mechanical keyboards are often a good bit louder, which can be a problem for office environments. Under the switch types section I will discuss more about noise and respect for your neighbors.
 
+<figure>
+  <img src="/img/keyboards/varmillo.jpg" alt="">
+  <figcaption>
+    <a target="_blank" href="https://www.flickr.com/photos/taylor90/18779769209">varmillo4</a>
+    by
+    <a target="_blank" href="https://www.flickr.com/photos/taylor90/">Taylor Bennett</a>
+    is licensed under
+    <a target="_blank" href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC 2.0</a>
+  </figcaption>
+</figure>
+
 Finally, you may want to be careful getting into the hobby because there are so many cool keyboards to try out, you just might find yourself spending a lot of money just to get things that look cool. I currently have more keyboards than I do computers.
 
 ## Keyboard form factors
@@ -51,7 +62,7 @@ Finally, you may want to be careful getting into the hobby because there are so 
 Keyboard form factors refer generally to how many keys a keyboard has. Full size refers to roughly 104 keys, and everything else is measured relative to that. Usually it's possible to type missing keys by doing key combinations on smaller keyboards.
 
 <figure>
-  <img src="/img/keyboard-model-m.jpg" alt="">
+  <img src="/img/keyboards/model-m.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://commons.wikimedia.org/wiki/File:IBM_Model_M.png">IBM Model M</a>
     by Raymangold22 is licensed under
@@ -64,7 +75,7 @@ Pictured above is the classic IBM Model M mechanical keyboard. Fortunately for u
 ## Full size form factor
 
 <figure>
-  <img src="/img/keyboard-das-ultimate-4.jpg" alt="">
+  <img src="/img/keyboards/das-ultimate-4.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://www.flickr.com/photos/mccaughan/27571492442">Das Keyboard Ultimate 4</a>
     by
@@ -91,7 +102,7 @@ These keyboards are closest in size to a 13" laptop keyboard, freeing up plenty 
 ## 60% form factor
 
 <figure>
-  <img src="/img/keyboard-poker-3.jpg" alt="">
+  <img src="/img/keyboards/poker-3.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://www.flickr.com/photos/66451944@N03/42839323381">Pok3r keyboard with custom keycabs</a>
     by
@@ -112,7 +123,7 @@ I would recommend looking into either a TKL or 75% keyboard to get started with,
 ## Keyboard extras
 
 <figure>
-  <img src="/img/keyboard-feet.jpg" alt="">
+  <img src="/img/keyboards/feet.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://www.flickr.com/photos/mawari/28692415581">Digstar StarTop USB mechanical gaming keyboard 22</a>
     by
@@ -125,7 +136,7 @@ I would recommend looking into either a TKL or 75% keyboard to get started with,
 Additionally, you may want to consider keyboard angle. Having a very high angled keyboard strains your fingers more. Try miming a typing action with your fingers angled up compared with down and you'll see how much more exhausting it is. Many keyboards are naturally sloped and deploying keyboard feet only makes them even more sloped, furthering finger fatigue.
 
 <figure>
-  <img src="/img/keyboard-hhkb.jpg" alt="">
+  <img src="/img/keyboards/hhkb.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Happy_Hacking_Keyboard_Professional_2.jpg">Happy Hacking Keyboard Professional 2</a>
     by Aon fi is licensed under
@@ -136,7 +147,7 @@ Additionally, you may want to consider keyboard angle. Having a very high angled
 Most keyboards come with black plastic cases, and hopefully a matte finish. You might also find some in white plastic, or even aluminum. You should pick whichever material you think will look nicest on your desk, but note that if the keys are mounted directly on metal with no plastic in-between, you can have a slight metallic clang when fully pressing a key.
 
 <figure>
-  <img src="/img/keyboard-led.jpg" alt="">
+  <img src="/img/keyboards/led.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://www.flickr.com/photos/bagogames/33836220354">DigsRoccat Suora FX RGB Mechanical Keyboard Review</a>
     by
