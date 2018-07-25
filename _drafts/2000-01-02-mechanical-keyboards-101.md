@@ -5,10 +5,6 @@ layout: post
 tab: blog
 ---
 
-## TODO
-
-Try to get about one picture per section?
-
 ## Introduction
 
 Hey there, fellow human! I bet you're reading this because you're curious what all the fuss is about mechanical keyboards lately. Maybe your friend has one and you are kinda interested in getting your own, but don't know where to start. The good news is, it's not just you, it is a little confusing to find the right keyboard for you. In fact, I'm still learning new things about keyboards all the time.
@@ -98,6 +94,8 @@ Tenkeyless (TKL) keyboards typically have around 87 keys, including arrow keys b
 
 ## 75% form factor
 
+TODO image of my Race 3
+
 So-called 75% keyboards are called this because they typically have about 75% as many keys as a full size board. Usually these keyboards do have arrow keys, but have smaller Right Shift keys. Often the Page Up/Page Down/Home/End keys are arranged vertically in a strip on the right side of the keyboard.
 
 Missing keys such as Print Screen or Pause are typically accessed by holding down the Function (Fn) key to right of Right Alt and pressing another one.
@@ -172,17 +170,23 @@ Also note that all Cherry keyswitches activate before the reach the bottom of th
 
 ## Clicky keyswitches
 
+TODO image of MX blue + green
+
 Clicky switches are the classic style that is probably most well-known. Clicky switches are known for their somewhat high pitched clicking noise produced when activating the switch. This gives amazing feedback when pressing a key, but can be overwhelming in a shared space setting such as an open office environment. Clicky switches also typically have a "bump" feeling where the key switch makes a little jump on an internal track, giving you physical feedback on your fingers as the key activates.
 
 Cherry MX Blues are the most popular clicky switch, which required 50g of force to press the switch. MX Greens on the other hand require a firm 70g of force to be pressed.
 
 ## Tactile keyswitches
 
+TODO image of MX brown + clear
+
 Tactile switches are basically just clicky switches minus the clicky noise. The still have a satisfying "bump" feeling as you type on them, but they lose the clicking noise. Note that _all_ key switches still make a nontrivial amount of noise when they key is pushed all the way to the bottom of the switch, transferring force into the keyboard frame, and typically making a low thud noise.
 
 The most popular tactile key switch is the Cherry MX Brown, which requires 45g to be pressed. There's also the MX Clear which requires 65g.
 
 ## Linear keyswitches
+
+TODO image of MX black + red
 
 Linear switches are often marketed towards gamers because they have a completely smooth movement as you push them, no "bump" on the way down. They also lack the "click" noise.
 
@@ -204,6 +208,8 @@ Images are worth a thousand words here, and you should check out this famous pic
 
 ## Medium profile keycaps
 
+TODO side shot of Race 3 with OEM
+
 The most popular profile is probably OEM. Unsurprisingly it is a middleground of size and shape compared to other popular profiles. Cherry profile is also very similar.
 
 OEM keycaps have what's called a cylindrical sculpt. This means the top of each key cap is slightly U-shaped.
@@ -212,6 +218,8 @@ There is also the very similarly shaped Cherry profile which is quite a lot less
 
 ## High profile keycaps
 
+TODO side shot of Race 3 with MT3
+
 The SA keycap profile is also pretty popular. The sculpt on they keycaps is spherical which means it's sort of like a very shallow bowl.
 
 Additionally, the shape between rows varies dramatically, giving you a retro U-shape across the entire keyboard.
@@ -219,6 +227,8 @@ Additionally, the shape between rows varies dramatically, giving you a retro U-s
 A new high profile set called [MT3][12] was developed by matt3o recently.
 
 ## Low profile keycaps
+
+TODO side shot of Race 3 with stock DSA
 
 The DSA keycap profile is quite short, completely uniform across all keys, and has a very comfortable spherical sculpt on the keycaps.
 
@@ -238,7 +248,7 @@ I got my first start with mechanical keyboards using the [WASD v2 keyboard][2]. 
 
 If you want to get an even smaller keyboard, I would say start off with a Vortex Race 3 or a Vortex Poker 3. The only caveat about the Race 3 is it uses two nonstandard keycap sizes that will be hard to replace, and you need to use Windows to upgrade the firmware when you buy the keyboard.
 
-If your keyboard doesn't come with a [keycap puller][4], make sure to get one.
+If your keyboard doesn't come with a [keycap puller][4], make sure to get one and look up how to use it.
 
 Palm rests are technically optional, but they make typing a lot more comfortable. Make sure to find one the right size for your keyboard so you don't waste space on your desk.
 
