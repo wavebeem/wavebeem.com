@@ -164,15 +164,15 @@ LEDs are also a topic of great interest for some folks. I generally type without
 
 ## Keyboard switch types
 
-Most keyboard switches (keyswitches) are made by Cherry and are part of the MX family. There exist many new manufacturers, but I won't get into them here today. The primary differences between these types are the strength of the spring inside the switch, affecting how much force (measured in g=grams) is required to press the switch, and also the "track" the key switch follows along the way, which may have bumps or other affects to give you physical feedback while typing.
+Most keyboard switches (keyswitches) are made by Cherry and are part of the MX family. There exist many new manufacturers, but I won't get into them here today. The primary differences between these types are the strength of the spring inside the switch, affecting how much force (measured in g=grams) is required to press the switch, and also the "track" the key switch follows along the way, which may have bumps or other effects to give you physical feedback while typing.
 
-Also note that all Cherry keyswitches activate before the reach the bottom of the spring (bottoming out). It is generally recommend to avoiding bottoming out when typing if possible since it is wasted effort and will make your typing louder, but I can personally say this is a hard habit to break.
+Also note that all Cherry keyswitches actuate before the reach the bottom of the spring (bottoming out). It is generally recommend to avoiding bottoming out when typing if possible since it is wasted effort and will make your typing louder, but I can personally say this is a hard habit to break.
 
 ## Clicky keyswitches
 
 TODO image of MX blue + green
 
-Clicky switches are the classic style that is probably most well-known. Clicky switches are known for their somewhat high pitched clicking noise produced when activating the switch. This gives amazing feedback when pressing a key, but can be overwhelming in a shared space setting such as an open office environment. Clicky switches also typically have a "bump" feeling where the key switch makes a little jump on an internal track, giving you physical feedback on your fingers as the key activates.
+Clicky switches are the classic style that is probably most well-known. Clicky switches are known for their somewhat high-pitched clicking noise produced when activating the switch. This gives amazing feedback when pressing a key, but can be overwhelming in a shared space setting such as an open office environment. Clicky switches also typically have a "bump" feeling where the key switch makes a little jump on an internal track, giving you physical feedback on your fingers as the key actuates.
 
 Cherry MX Blues are the most popular clicky switch, which required 50g of force to press the switch. MX Greens on the other hand require a firm 70g of force to be pressed.
 
@@ -220,7 +220,7 @@ There is also the very similarly shaped Cherry profile which is quite a lot less
 
 TODO side shot of Race 3 with MT3
 
-The SA keycap profile is also pretty popular. The sculpt on they keycaps is spherical which means it's sort of like a very shallow bowl.
+The SA keycap profile is also pretty popular. The sculpt on the keycaps is spherical which means it's sort of like a very shallow bowl.
 
 Additionally, the shape between rows varies dramatically, giving you a retro U-shape across the entire keyboard.
 
@@ -232,13 +232,13 @@ TODO side shot of Race 3 with stock DSA
 
 The DSA keycap profile is quite short, completely uniform across all keys, and has a very comfortable spherical sculpt on the keycaps.
 
-This means that you can mix and match they keycaps anywhere you like as long as the size is the same. So you if you want to try out Dvorak you can actually swap the keycaps around.
+This means that you can mix and match the keycaps anywhere you like as long as the size is the same. So you if you want to try out Dvorak you can actually swap the keycaps around.
 
 There is a niche profile called XDA which is very similar but slightly taller and a little less sloped along the sides.
 
 ## Keycap thoughts
 
-You can't go wrong with the classic OEM profile, and many keyboards come with that type preinsatlled, so you're likely going to get to try it. But I personally find the DSA profile to be pretty comfortable, and it's very easy to transition between DSA and a laptop keyboard, especially if you choose one of the smaller form factors.
+You can't go wrong with the classic OEM profile, and many keyboards come with that type preinstalled, so you're likely going to get to try it. But I personally find the DSA profile to be pretty comfortable, and it's very easy to transition between DSA and a laptop keyboard, especially if you choose one of the smaller form factors.
 
 ## Suggested starter equipment
 
@@ -250,7 +250,7 @@ If you want to get an even smaller keyboard, I would say start off with a Vortex
 
 If your keyboard doesn't come with a [keycap puller][4], make sure to get one and look up how to use it.
 
-Palm rests are technically optional, but they make typing a lot more comfortable. Make sure to find one the right size for your keyboard so you don't waste space on your desk.
+Palm rests are technically optional, but they can make typing a lot more comfortable. Make sure to find one the right size for your keyboard so you don't waste space on your desk.
 
 If you're looking to save money, you can get a foam and fabric palm rest like the [Grifiti][5]. If you want something a bit more durable and classy I would recommend getting one of the wooden palm rests from [Filco][6].
 
