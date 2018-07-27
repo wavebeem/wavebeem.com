@@ -1,58 +1,35 @@
-{% assign nav_default = "bb bw2 hover-bg-near-white link fb pa3 pv4-ns flex items-center b--transparent black-60" %}
-{% assign nav_current = "bb bw2 hover-bg-near-white link fb pa3 pv4-ns flex items-center green" %}
+{% assign nav_default = "bb bw2 hover-bg-black-10 link fb pa3 flex items-center b--transparent color-inherit" %}
 
-{% assign mini_class = "tc h-100 flex-auto" %}
-
-{% assign home_class = nav_default %}
-{% assign blog_class = nav_default %}
-{% assign resume_class = nav_default %}
-
-{% if page.tab == 'home' %}
-  {% assign home_class = nav_current %}
-{% elsif page.tab == 'blog' %}
-  {% assign blog_class = nav_current %}
-{% else %}
-  {% assign resume_class = nav_current %}
-{% endif %}
+{% assign mini_class = "pv3 ph4 h-100 flex-auto" %}
 
 <!-- Small nav -->
 <div class="dn-ns">
-  <div class="bb bw1 b--black-10 mb4">
-    <header>
-      <h1 class="ma0 f2">
-        <a href="/" class="hover-bg-near-white pa3 flex h-100 black no-underline">
-          <span class="db center">Brian Mock</span>
-        </a>
-      </h1>
-    </header>
-    <nav class="f3 flex">
-      <a class="{{ home_class }} {{ mini_class }}" href="/">
-        <span class="db center">Home</span>
-      </a>
-      <a class="{{ blog_class }} {{ mini_class }}" href="/blog">
-        <span class="db center">Blog</span>
-      </a>
-      <a class="{{ resume_class }} {{ mini_class }}" href="/resume">
-        <span class="db center">Resume</span>
-      </a>
+  <div class="bb bw1 b--black-10 mb4 bg-green white">
+    <h1 class="ma0 f1">
+      <span href="/" class="pv3 ph4 flex h-100">
+        Brian Mock
+      </span>
+    </h1>
+    <nav class="f2 flex flex-column">
+      <a class="{{ nav_default }} {{ mini_class }}" href="/">Home</a>
+      <a class="{{ nav_default }} {{ mini_class }}" href="/blog">Blog</a>
+      <a class="{{ nav_default }} {{ mini_class }}" href="/resume">Resume</a>
     </nav>
   </div>
 </div>
 
 <!-- Big nav -->
 <div class="dn db-ns">
-  <div class="flex bb bw1 b--black-10 mb4 items-center" style="height: 100px">
-    <header class="h-100">
+  <div class="flex bb bw1 b--black-10 mb4 items-center bg-green white">
       <h1 class="h-100 mt0 mb0 f3">
-        <a href="/" class="hover-bg-near-white ph4 flex items-center h-100 black no-underline">
-          <span>Brian Mock</span>
-        </a>
+        <span class="ph4 flex items-center h-100">
+          Brian Mock
+        </span>
       </h1>
-    </header>
-    <nav class="h-100 f3 flex">
-        <a class="{{ home_class }}" href="/"><span>Home</span></a>
-        <a class="{{ blog_class }}" href="/blog"><span>Blog</span></a>
-        <a class="{{ resume_class }}" href="/resume"><span>Resume</span></a>
+    <nav class="f3 flex">
+        <a class="{{ nav_default }}" href="/"><span>Home</span></a>
+        <a class="{{ nav_default }}" href="/blog"><span>Blog</span></a>
+        <a class="{{ nav_default }}" href="/resume"><span>Resume</span></a>
       </nav>
   </div>
 </div>

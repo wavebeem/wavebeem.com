@@ -2,7 +2,6 @@
 title: "Thoughts on Generics"
 description: "My thoughts on generics in Java and Go"
 layout: post
-tab: blog
 ---
 
 ## My background with Java

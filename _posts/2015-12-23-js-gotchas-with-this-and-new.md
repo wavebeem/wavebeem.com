@@ -1,8 +1,7 @@
 ---
 title: "JS Gotchas with This and New"
-layout: post
 description: "How JS's 'this' and 'new' work, and how to avoid issues with them"
-tab: blog
+layout: post
 ---
 
 ## Note
