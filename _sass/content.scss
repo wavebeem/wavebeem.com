@@ -59,12 +59,18 @@
     font-family: $fontHeading;
   }
 
-  h1 > a {
-    padding: 0;
-    color: inherit;
-    text-decoration: inherit;
-    border: none;
-    background: transparent;
+  h1, h2, h3 {
+    a {
+      padding: 0;
+      color: inherit;
+      text-decoration: inherit;
+      border: none;
+      background: transparent;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
   }
 
   section:not(:first-child) {
@@ -101,6 +107,10 @@
 
   .anchorjs-link {
     color: $darkGreen;
+
+    &:hover {
+      opacity: 0.6 !important;
+    }
   }
 
   li code,

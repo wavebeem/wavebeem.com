@@ -35,13 +35,9 @@ It's not all perfect in mechanical keyboard land, though. For one thing, mechani
 And the real elephant in the room is that mechanical keyboards are often a good bit louder, which can be a problem for office environments. Under the switch types section I will discuss more about noise and respect for your neighbors.
 
 <figure>
-  <img src="/img/keyboards/varmillo.jpg" alt="">
+  <img src="/img/keyboards/whitefox.jpg" alt="">
   <figcaption>
-    <a target="_blank" href="https://www.flickr.com/photos/taylor90/18779769209">varmillo4</a>
-    by
-    <a target="_blank" href="https://www.flickr.com/photos/taylor90/">Taylor Bennett</a>
-    is licensed under
-    <a target="_blank" href="https://creativecommons.org/licenses/by-nc/2.0/">CC BY-NC 2.0</a>
+    WhiteFox with Cherry keycaps and Filco palm rest
   </figcaption>
 </figure>
 
@@ -94,7 +90,12 @@ Tenkeyless (TKL) keyboards typically have around 87 keys, including arrow keys b
 
 ## 75% form factor
 
-TODO image of my Race 3
+<figure>
+  <img src="/img/keyboards/race-3.jpg" alt="">
+  <figcaption>
+    Vortex Race 3 with DSA keycaps and Filco palm rest
+  </figcaption>
+</figure>
 
 So-called 75% keyboards are called this because they typically have about 75% as many keys as a full size board. Usually these keyboards do have arrow keys, but have smaller Right Shift keys. Often the Page Up/Page Down/Home/End keys are arranged vertically in a strip on the right side of the keyboard.
 
@@ -170,7 +171,12 @@ Also note that all Cherry keyswitches actuate before the reach the bottom of the
 
 ## Clicky keyswitches
 
-TODO image of MX blue + green
+<figure>
+  <img src="/img/keyboards/mx-clicky.jpg" alt="">
+  <figcaption>
+    Cherry MX Blue and Cherry MX Green Switches
+  </figcaption>
+</figure>
 
 Clicky switches are the classic style that is probably most well-known. Clicky switches are known for their somewhat high-pitched clicking noise produced when activating the switch. This gives amazing feedback when pressing a key, but can be overwhelming in a shared space setting such as an open office environment. Clicky switches also typically have a "bump" feeling where the key switch makes a little jump on an internal track, giving you physical feedback on your fingers as the key actuates.
 
@@ -178,7 +184,12 @@ Cherry MX Blues are the most popular clicky switch, which required 50g of force 
 
 ## Tactile keyswitches
 
-TODO image of MX brown + clear
+<figure>
+  <img src="/img/keyboards/mx-tactile.jpg" alt="">
+  <figcaption>
+    Cherry MX Brown and Cherry MX Clear Switches
+  </figcaption>
+</figure>
 
 Tactile switches are basically just clicky switches minus the clicky noise. The still have a satisfying "bump" feeling as you type on them, but they lose the clicking noise. Note that _all_ key switches still make a nontrivial amount of noise when they key is pushed all the way to the bottom of the switch, transferring force into the keyboard frame, and typically making a low thud noise.
 
@@ -186,7 +197,12 @@ The most popular tactile key switch is the Cherry MX Brown, which requires 45g t
 
 ## Linear keyswitches
 
-TODO image of MX black + red
+<figure>
+  <img src="/img/keyboards/mx-linear.jpg" alt="">
+  <figcaption>
+    Cherry MX Black and Cherry MX Red Switches
+  </figcaption>
+</figure>
 
 Linear switches are often marketed towards gamers because they have a completely smooth movement as you push them, no "bump" on the way down. They also lack the "click" noise.
 
@@ -204,11 +220,16 @@ Keycaps are easily removable from keyswitches using a wire keycap puller. Puller
 
 Because they are easily removable, many different types of keycaps have been made for your typing enjoyment.
 
-Images are worth a thousand words here, and you should check out this famous picture for a [visual comparison of keycap profiles][7]. This comparison chart from [PMK][11] is also really useful.
+Images are worth a thousand words here, and you should check out this famous picture for a [**visual comparison of keycap profiles**][7]. This [*comparison chart from PMK*][13] is also really useful.
 
 ## Medium profile keycaps
 
-TODO side shot of Race 3 with OEM
+<figure>
+  <img src="/img/keyboards/profile-cherry.jpg" alt="">
+  <figcaption>
+    WhiteFox with Cherry keycaps
+  </figcaption>
+</figure>
 
 The most popular profile is probably OEM. Unsurprisingly it is a middleground of size and shape compared to other popular profiles. Cherry profile is also very similar.
 
@@ -218,7 +239,12 @@ There is also the very similarly shaped Cherry profile which is quite a lot less
 
 ## High profile keycaps
 
-TODO side shot of Race 3 with MT3
+<figure>
+  <img src="/img/keyboards/profile-mt3.jpg" alt="">
+  <figcaption>
+    Vortex Race 3 with MT3 keycaps
+  </figcaption>
+</figure>
 
 The SA keycap profile is also pretty popular. The sculpt on the keycaps is spherical which means it's sort of like a very shallow bowl.
 
@@ -228,7 +254,12 @@ A new high profile set called [MT3][12] was developed by matt3o recently.
 
 ## Low profile keycaps
 
-TODO side shot of Race 3 with stock DSA
+<figure>
+  <img src="/img/keyboards/profile-dsa.jpg" alt="">
+  <figcaption>
+    Vortex Race 3 with DSA keycaps
+  </figcaption>
+</figure>
 
 The DSA keycap profile is quite short, completely uniform across all keys, and has a very comfortable spherical sculpt on the keycaps.
 
@@ -260,7 +291,7 @@ While there is a lot of in-stock mass-produced items ready for purchase, there a
 
 Given that keyboards require massive physical production, a lot of niche products require "group buys" which sometimes also happen on [Massdrop][8]. This is basically a pre-order system where the order isn't fulfilled until enough people pre-order to make it economically viable to do a production run.
 
-Also, it's always a good idea to get on some keyboard centric mailing lists. In addition Massdrop, I would suggest subscribing to [Kono Store][9]. Despite the terrible company name, I can also recommend [PMK][10].
+Also, it's always a good idea to get on some keyboard centric mailing lists. In addition Massdrop, I would suggest subscribing to [Kono Store][9]. Despite the terrible company name, I can also recommend [Signature Plastics][10].
 
 I also like browsing the pictures on [r/MechanicalKeyboards][11] for inspiration, though I've yet to contribute to the discussion.
 
@@ -282,3 +313,4 @@ Hopefully you know more about mechanical keyboards now. I wanted to present a si
 [10]: https://pimpmykeyboard.com
 [11]: https://www.reddit.com/r/MechanicalKeyboards
 [12]: https://matt3o.com/about-mt3-profile-and-devtty-set/
+[13]: https://pimpmykeyboard.com/key-cap-family-specs/

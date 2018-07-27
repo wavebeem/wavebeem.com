@@ -4,22 +4,33 @@ layout: bare
 
 <main class="ph4 mb3 center flex-auto lh-copy Content">
 
-<h1 class="ma0 f1 lh-title">
-  <a href="#">{{ page.title }}</a>
-</h1>
-<p class="ma0 font-main">{{ page.date | date: "%B %-d, %Y" }}</p>
+  <h1 class="ma0 f1 lh-title">
+    <a href="#">{{ page.title }}</a>
+  </h1>
+  <p class="ma0 font-main">{{ page.date | date: "%B %-d, %Y" }}</p>
 
-{{ content }}
+  {{ content }}
 
-<div class="font-main f3 mt4">
-  <a class="b bl bw2 green db pa2 hover-bg-near-white ttu no-underline" href="/blog">
-    ◀ Back to blog posts
-  </a>
-</div>
+  <div class="font-main f3 mt4">
+    <a class="b bl bw2 green db pa2 hover-bg-near-white ttu no-underline" href="/blog">
+      ◀ Back to blog posts
+    </a>
+  </div>
 
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
-<script>
-  new AnchorJS({ visible: "always" }).add("h2, h3, h4, h5, h6");
+<script type="module">
+  const slug = text =>
+    text.trim()
+      .toLowerCase()
+      .replace(/\'/gi, "")
+      .replace(/[^a-z0-9]/gi, "-")
+      .replace(/-{2,}/g, "-")
+      .replace(/^-+|-+$/gm, "")
+      .substring(0, 64);
+
+  for (const h of document.querySelectorAll("h2, h3")) {
+    h.id = h.id || slug(h.textContent);
+    h.innerHTML = "<a href='#" + h.id + "'>" + h.innerHTML + "</a>";
+  }
 </script>
