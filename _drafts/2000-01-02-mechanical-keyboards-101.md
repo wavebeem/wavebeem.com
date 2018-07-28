@@ -292,7 +292,7 @@ There is a niche profile called XDA which is very similar but slightly taller an
 
 ## Keycap thoughts
 
-You can't go wrong with the classic OEM profile, and many keyboards come with that type preinstalled, so you're likely going to get to try it. But I personally find the DSA profile to be pretty comfortable, and it's very easy to transition between DSA and a laptop keyboard, especially if you choose one of the smaller form factors.
+You can't go wrong with the classic OEM profile, and many keyboards come with that type preinstalled. But I personally find the DSA profile to be pretty comfortable. It's very easy to transition between DSA and a laptop keyboard, especially if you choose one of the smaller form factors.
 
 ## Suggested starter equipment
 
