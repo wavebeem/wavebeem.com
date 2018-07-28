@@ -324,7 +324,9 @@ It's worth checking out if your city has a local keyboard club meetup you can at
 
 ## Conclusion
 
-Hopefully you know more about mechanical keyboards now. I wanted to present a simplified and slightly opinionated guide to help out newcomers. Thanks for reading and please share this with your friends and social networks.
+You should now know enough to start shopping for your first mechanical keyboard without feeling completely lost, or at least understand the basic technical jargon to ask your friends for more info about mechanical keyboards.
+
+Thanks for reading and please consider sharing this post on social media if you enjoyed it.
 
 [1]: https://www.amazon.com/Cooler-Master-MasterKeys-Tenkeyless-Mechanical/dp/B071W2697M/
 [2]: http://www.wasdkeyboards.com/index.php/products/mechanical-keyboard.html
