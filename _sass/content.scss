@@ -1,8 +1,18 @@
+$lh-copy: 1.5;
+$lh-title: 1.25;
+
+$f1: 3rem;
+$f2: 2.25rem;
+$f3: 1.5rem;
+$f4: 1.25rem;
+$f5: 1rem;
+$f6: 0.875rem;
+
 .Content {
   max-width: $contentWidth;
   padding: $smallGap $gap;
   font-family: $fontPara;
-  font-size: 1.25rem;
+  font-size: $f4;
 
   figure {
     display: flex;
@@ -11,7 +21,7 @@
     color: #ddd;
     background: #333;
     padding: 0.5rem;
-    margin: 20px 0;
+    margin: 1rem 0;
     max-width: 100%;
     width: 100%;
     height: auto;
@@ -28,7 +38,7 @@
   figcaption {
     padding-top: 0.5rem;
     font-family: $fontHeading;
-    font-size: 1rem;
+    font-size: $f5;
   }
 
   figcaption a {
@@ -37,7 +47,7 @@
 
   pre,
   code {
-    font-size: 1rem;
+    font-size: $f5;
     font-family: $fontMonospace;
   }
 
@@ -50,13 +60,14 @@
 
   p,
   ul li {
-    line-height: 1.5;
+    line-height: $lh-copy;
   }
 
   h1,
   h2,
   h3 {
     font-family: $fontHeading;
+    line-height: $lh-title;
   }
 
   h1, h2, h3 {
@@ -73,21 +84,16 @@
     }
   }
 
-  section:not(:first-child) {
-    margin-top: 3em;
-  }
-
   hr {
     border: 0;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   }
 
   h2 {
-    font-size: 1.8rem;
-    padding-top: 2rem;
-    padding-bottom: 0.25rem;
-    margin-top: 0;
-    margin-bottom: 0.75rem;
+    font-size: $f2;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   }
 
