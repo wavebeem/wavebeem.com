@@ -201,8 +201,6 @@ npm run build:css || exit 1
 cp build/bundle.css dist || exit 1
 ```
 
-or:
-
 Most other languages would allow you to omit the error handling logic there and
 automatically crash the script when a `cp` or `mv` command fails. But bash is
 designed to be used interactively. Can you imagine if making a typo in your `cp`

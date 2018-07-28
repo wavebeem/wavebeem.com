@@ -37,12 +37,21 @@ $f6: 0.875rem;
 
   figcaption {
     padding-top: 0.5rem;
-    font-family: $fontHeading;
+    font-family: $fontMain;
     font-size: $f5;
   }
 
   figcaption a {
     @include pretty-link(#fff);
+  }
+
+  blockquote {
+    color: #333;
+    margin-left: -2rem;
+    margin-right: 0;
+    padding-left: 2rem;
+    border-left: 0.25rem solid #777;
+    font-style: italic;
   }
 
   pre,
@@ -66,7 +75,7 @@ $f6: 0.875rem;
   h1,
   h2,
   h3 {
-    font-family: $fontHeading;
+    font-family: $fontMain;
     line-height: $lh-title;
   }
 
