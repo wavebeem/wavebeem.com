@@ -273,7 +273,7 @@ The SA keycap profile is also pretty popular. The sculpt on the keycaps is spher
 
 Additionally, the shape between rows varies dramatically, giving you a retro U-shape across the entire keyboard.
 
-A new high profile set called [MT3][12] was developed by matt3o recently.
+A new high profile set called [MT3][12] was developed by matt3o recently, which is even more sculpted than SA.
 
 ## Low profile keycaps
 
@@ -300,7 +300,7 @@ As stated before I would highly recommend going for a TKL (tenkeyless) keyboard 
 
 I got my first start with mechanical keyboards using the [WASD v2 keyboard][2]. It comes in multiple sizes, black or white cases, and you can customize the color on each key if you want. Also the media keys are fantastic on them. And one of the coolest things is their new [maker designs][3] which are community contributed keycap designs that are _really_ cool.
 
-If you want to get an even smaller keyboard, I would say start off with a Vortex Race 3 or a Vortex Poker 3. The only caveat about the Race 3 is it uses two nonstandard keycap sizes that will be hard to replace, and you need to use Windows to upgrade the firmware when you buy the keyboard.
+If you want to get an even smaller keyboard, I would say start off with a [Vortex Poker 3][14] or a [Vortex Race 3][15]. The only caveat about the Race 3 is it uses two nonstandard keycap sizes that will be hard to replace, and you need to use Windows to upgrade the firmware when you buy the keyboard.
 
 If your keyboard doesn't come with a [keycap puller][4], make sure to get one and look up how to use it.
 
@@ -310,15 +310,17 @@ If you're looking to save money, you can get a foam and fabric palm rest like th
 
 ## Artisans, group buys, and Massdrop
 
-While there is a lot of in-stock mass-produced items ready for purchase, there are also a lot of really cool artisan and maker pieces in the community.
+If you are interested in elevating your keyboard to art, [Jelly Key][16] provides handmade limited-run single keycaps which are expensive but gorgeous.
 
 Given that keyboards require massive physical production, a lot of niche products require "group buys" which sometimes also happen on [Massdrop][8]. This is basically a pre-order system where the order isn't fulfilled until enough people pre-order to make it economically viable to do a production run.
 
-Also, it's always a good idea to get on some keyboard-centric mailing lists. In addition to Massdrop, I would suggest subscribing to [Kono Store][9]. Despite the terrible company name, I can also recommend [Signature Plastics][10].
+Group buys are sort of like a Kickstarter in that they usually take a long time and sometimes they get cancelled because something horrible happens.
 
-I also like browsing the pictures on [r/MechanicalKeyboards][11] for inspiration, though I've yet to contribute to the discussion.
+Keyboard company mailing lists are useful for new product awareness. In addition to Massdrop, [Kono Store][9] and [Signature Plastics][10] are nice.
 
-It's worth checking out if your city has a local keyboard club you can visit.
+You can browse the pictures on [r/MechanicalKeyboards][11] for inspiration.
+
+It's worth checking out if your city has a local keyboard club meetup you can attend.
 
 ## Conclusion
 
@@ -337,3 +339,6 @@ Hopefully you know more about mechanical keyboards now. I wanted to present a si
 [11]: https://www.reddit.com/r/MechanicalKeyboards
 [12]: https://matt3o.com/about-mt3-profile-and-devtty-set/
 [13]: https://pimpmykeyboard.com/key-cap-family-specs/
+[14]: https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3633
+[15]: https://mechanicalkeyboards.com/shop/index.php?l=product_detail&p=3917
+[16]: https://www.jellykey.com/artisan-keycaps/
