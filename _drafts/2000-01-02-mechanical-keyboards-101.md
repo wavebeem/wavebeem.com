@@ -6,7 +6,7 @@ layout: post
 
 ## Introduction
 
-Hey there, fellow human! I bet you're reading this because you're curious what all the fuss is about mechanical keyboards lately. Maybe your friend has one and you are kinda interested in getting your own, but don't know where to start. The good news is, it's not just you, it is a little confusing to find the right keyboard for you. In fact, I'm still learning new things about keyboards all the time.
+Hey there, fellow human! I bet you're reading this because you're curious what all the fuss is about mechanical keyboards lately. Maybe your friend has one and you're kinda interested in getting your own, but don't know where to start. The good news is, it's not just you, it is a little confusing to find the right keyboard for you. In fact, I'm still learning new things about keyboards all the time.
 
 ## Why
 
@@ -53,7 +53,7 @@ It's not all perfect in mechanical keyboard land, though. Here are some reasons 
 
 - **They're loud**
 
-    Ahh, the real elephant in the room. Mechanical keyboards are often a good bit louder than other keyboards, which can be a problem for office environments. Under the switch types section I will discuss more about noise and respect for your neighbors.
+    Ah, the elephant in the room. Mechanical keyboards are often a good bit louder than other keyboards, which can be a problem for office environments. Under the switch types section I will discuss more about noise and respect for your neighbors.
 
 <figure>
   <img src="/img/keyboards/whitefox.jpg" alt="">
@@ -145,7 +145,7 @@ Many of these keyboards also offer media and volume keys by holding Fn and press
 
 ## Form factor thoughts
 
-For getting started, I would recommend looking into either a TKL or 75% keyboard. More advanced users may be interested in split and/or ortholinear (ortho) keyboards which have various unique layouts in order to help with typing ergonomics, but which are quite foreign and take time to get used to.
+For getting started, I would recommend looking into either a TKL or 75% keyboard. More advanced users may be interested in split and/or ortholinear (ortho) keyboards which have various unique layouts. They can help with typing ergonomics if you are willing to deal with their learning curves.
 
 ## Keyboard extras
 
@@ -235,7 +235,7 @@ You can choose the Cherry MX Reds for 45g, or the MX Black for 60g. I personally
 
 Note that MX Browns and MX Blues are typically the easiest key switches to find on keyboards.
 
-O-rings aren't a switch type, but you can add them on to keycaps as a little soft "buffer" that helps absorb the force of bottoming out a keyswitch. In my opinion, the difference in feeling with o-rings installed is not that big, but the audible difference is fairly noticeable. These can be nice to install for an office setting if you know you are a forceful typist.
+O-rings aren't a switch type, but you can add them on to keycaps as a little soft "buffer" that helps absorb the force of bottoming out a keyswitch. In my opinion, the difference in feeling with o-rings installed is not that big, but the audible difference is fairly noticeable. These can be nice to install for an office setting if you know you're a forceful typist.
 
 ## Keycap profiles
 
