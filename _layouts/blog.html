@@ -2,10 +2,11 @@
 layout: bare
 ---
 
-<main class="mw7 center flex-auto nt4">
+<main class="mw7 center flex-auto">
+  <h1 class="ph4 f1 lh-title">Posts</h1>
   <ul class="pa0 ma0 list">
     {% for post in site.posts %}
-      <li class="bb bw1 b--black-10">
+      <li class="bt bw1 b--black-10">
         <a class="db no-underline hover-bg-near-white green pa4" href="{{ post.url }}">
           <h2 class="f3 mt0 mb0 font-main link">
             {{ post.title }}
