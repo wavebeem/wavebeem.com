@@ -1,15 +1,34 @@
+<<<<<<< HEAD
 {% assign nav_item = "hover-bg-black-10 link pa3 color-inherit" %}
+=======
+{% assign nav_default = "hover-bg-black-10 link fb pa3 flex items-center color-inherit" %}
+>>>>>>> 0d11aaa60f2c16fcd0703c14008bbe63e3982160
 
-{% assign mini_class = "pv3 ph4 h-100 flex-auto" %}
+{% assign mini_class = "pv3 ph4 flex-auto" %}
 
 <!-- Small nav -->
 <div class="dn-ns">
+<<<<<<< HEAD
   <nav class="f2 flex flex-column bb b1 b--black-10 mb4 bg-green white">
     <a class="{{ nav_item }} {{ mini_class }} b" href="/">Brian Mock</a>
     <a class="{{ nav_item }} {{ mini_class }}" href="/">Home</a>
     <a class="{{ nav_item }} {{ mini_class }}" href="/blog">Blog</a>
     <a class="{{ nav_item }} {{ mini_class }}" href="/resume">Resume</a>
   </nav>
+=======
+  <div class="bb bw1 b--black-10 mb4 bg-green white">
+    <h1 class="ma0 f3">
+      <span href="/" class="pv3 ph4 flex h-100">
+        Brian Mock
+      </span>
+    </h1>
+    <nav class="f3 flex flex-column">
+      <a class="{{ nav_default }} {{ mini_class }}" href="/">Home</a>
+      <a class="{{ nav_default }} {{ mini_class }}" href="/blog">Blog</a>
+      <a class="{{ nav_default }} {{ mini_class }}" href="/resume">Resume</a>
+    </nav>
+  </div>
+>>>>>>> 0d11aaa60f2c16fcd0703c14008bbe63e3982160
 </div>
 
 <!-- Big nav -->
