@@ -6,7 +6,7 @@ layout: post
 
 ## Introduction
 
-Hey there, fellow human! I bet you're reading this because you're curious what all the fuss is about mechanical keyboards lately. Maybe your friend has one and you're kinda interested in getting your own, but don't know where to start. The good news is, it's not just you, it is a little confusing to find the right keyboard for you. In fact, I'm still learning new things about keyboards all the time.
+I bet you're reading this because you're curious what all the fuss is about mechanical keyboards lately. Maybe your friend has one and you're kinda interested in getting your own, but don't know where to start. It's not just you, it is a little confusing to find the right keyboard for you. In fact, I'm still learning new things about keyboards all the time.
 
 ## Why
 
@@ -21,39 +21,23 @@ Hey there, fellow human! I bet you're reading this because you're curious what a
   </figcaption>
 </figure>
 
-You might be wondering _why_ you should get a mechanical keyboard. Here are some reasons:
+Here are some reasons you might want to get a mechanical keyboard:
 
 - **They feel good to type on**
 
-    This is the main reason I think people who enjoy mechanical keyboards opt for them over other choices. If you type a lot, comfort is probably important to you. I personally find mechanical keyboards to improve my typing comfort, and plus, they're actually fun to type on. This is (obviously) subjective, so you may want to try typing on one before you make a purchase.
+    If you type a lot, comfort is probably important to you. I find mechanical keyboards fun and comfortable to type on. This is subjective, so you may want to try typing on one before you make a purchase.
 
     Keep in mind that people can usually adapt pretty well to different devices given enough time, so it might feel weird at first and become comfortable with use.
 
-    I am a software developer and avid Twitter user, so I spend a huge chunk of my day typing on computer keyboards. I figure it's worth it for myself to invest the money in getting the best tools for doing the job.
-
 - **They're easily customizable**
 
-    Mechanical keyboards tend to be pretty easily customizable compared to traditional keyboards. You can change out keycaps for a new look, or often even change aspects of your key layout. Which brings me to my next point...
+    Mechanical keyboards tend to be pretty easily customizable compared to other keyboards. You can change out keycaps for a new look, or often even change aspects of your key layout. Which brings me to my next point...
 
 - **They're pretty**
 
-    Mechanical keyboards are becoming more popular these days, and the aesthetic options are wide and growing. If you want a keyboard that looks beautiful, unique, or interesting, a mechanical keyboard might be for you.
+    Many mechanical keyboards are beautiful out of the box, and the bevy of aftermarket keycaps can allow you to get a custom look that really suits you.
 
 ## Why not
-
-It's not all perfect in mechanical keyboard land, though. Here are some reasons why you might want to pass on getting one:
-
-- **They're expensive**
-
-    Mechanical keyboards tend to be quite a lot more expensive than traditional keyboards
-
-- **You need a wireless keyboard**
-
-    They're almost never wireless. If this is important for you, you should probably not get a mechanical keyboard.
-
-- **They're loud**
-
-    Ah, the elephant in the room. Mechanical keyboards are often a good bit louder than other keyboards, which can be a problem for office environments. Under the switch types section I will discuss more about noise and respect for your neighbors.
 
 <figure>
   <img src="/img/keyboards/whitefox.jpg" alt="">
@@ -61,6 +45,20 @@ It's not all perfect in mechanical keyboard land, though. Here are some reasons 
     WhiteFox with Cherry keycaps and Filco palm rest
   </figcaption>
 </figure>
+
+Here are some reasons why you might not want to get a mechanical keyboard:
+
+- **They're expensive**
+
+    Mechanical keyboards tend to be more expensive than traditional keyboards.
+
+- **You need a wireless keyboard**
+
+    They're almost never wireless. If this is important for you, you should probably not get a mechanical keyboard.
+
+- **They're loud**
+
+    Mechanical keyboards are often a good bit louder than other keyboards, which can be a problem for office environments.
 
 - **They can be addictive**
 
@@ -79,7 +77,7 @@ Keyboard form factors refer generally to how many keys a keyboard has. Full size
   </figcaption>
 </figure>
 
-Pictured above is the classic IBM Model M mechanical keyboard. Fortunately for us, mechanical keyboards have gotten a lot smaller and quieter since this one was released.
+Pictured above is the classic IBM Model M mechanical keyboard. Fortunately, mechanical keyboards have gotten a lot smaller and quieter since this one was released.
 
 ## Full size form factor
 
@@ -120,7 +118,7 @@ Tenkeyless (TKL) keyboards typically have around 87 keys, including arrow keys b
   </figcaption>
 </figure>
 
-So-called 75% keyboards are called this because they typically have about 75% as many keys as a full size board. Usually these keyboards do have arrow keys, but have smaller Right Shift keys. Often the Page Up/Page Down/Home/End keys are arranged vertically in a strip on the right side of the keyboard.
+75% keyboards typically have about 75% as many keys as a full size board. Usually these keyboards do have arrow keys, but have smaller Right Shift keys. Often the Page Up/Page Down/Home/End keys are arranged vertically in a strip on the right side of the keyboard.
 
 Missing keys such as Print Screen or Pause are typically accessed by holding down the Function (Fn) key to right of Right Alt and pressing another one.
 
@@ -145,7 +143,7 @@ Many of these keyboards also offer media and volume keys by holding Fn and press
 
 ## Form factor thoughts
 
-For getting started, I would recommend looking into either a TKL or 75% keyboard. More advanced users may be interested in split and/or ortholinear (ortho) keyboards which have various unique layouts. They can help with typing ergonomics if you are willing to deal with their learning curves.
+I would recommend starting with either a TKL or 75% keyboard since they should be a smooth transition for most typists. If you have strict ergnomic requirements, you may want to look into ortholinear (ortho) and split layout keyboards.
 
 ## Keyboard extras
 
@@ -237,6 +235,8 @@ Note that MX Browns and MX Blues are typically the easiest key switches to find 
 
 O-rings aren't a switch type, but you can add them on to keycaps as a little soft "buffer" that helps absorb the force of bottoming out a keyswitch. In my opinion, the difference in feeling with o-rings installed is not that big, but the audible difference is fairly noticeable. These can be nice to install for an office setting if you know you're a forceful typist.
 
+Note that O-rings will not make clicky keyswitches quieter since the click noise does not come from bottoming out the key.
+
 ## Keycap profiles
 
 Keycaps are easily removable from keyswitches using a wire keycap puller. Pullers are cheap and frequently come for free with your keyboard. YouTube has many tutorials on using them.
@@ -296,9 +296,9 @@ You can't go wrong with the classic OEM profile, and many keyboards come with th
 
 ## Suggested starter equipment
 
-As stated before I would highly recommend going for a TKL (tenkeyless) keyboard for your first mechanical keyboard. If you want a relatively inexpensive TKL board with Cherry MX Browns you can check out the [Cooler Master Tenkeyless][1] for about $70.
+I recommend buying a TKL (tenkeyless) keyboard for your first mechanical keyboard. If you want a relatively inexpensive TKL board with Cherry MX Browns you can check out the [Cooler Master Tenkeyless][1] for about $70.
 
-I got my first start with mechanical keyboards using the [WASD v2 keyboard][2]. It comes in multiple sizes, black or white cases, and you can customize the color on each key if you want. Also the media keys are fantastic on them. And one of the coolest things is their new [maker designs][3] which are community contributed keycap designs that are _really_ cool.
+I personally like the [WASD v2 keyboard][2]. It comes in multiple sizes, black or white cases, and you can customize the color on each key if you want. Also the media keys are fantastic on them. And one of the coolest things is their new [maker designs][3] which are community contributed keycap designs that are _really_ cool.
 
 If you want to get an even smaller keyboard, I would say start off with a [Vortex Poker 3][14] or a [Vortex Race 3][15]. The only caveat about the Race 3 is it uses two nonstandard keycap sizes that will be hard to replace, and you need to use Windows to upgrade the firmware when you buy the keyboard.
 
