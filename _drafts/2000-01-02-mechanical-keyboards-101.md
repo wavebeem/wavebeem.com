@@ -1,6 +1,6 @@
 ---
 title: "Mechanical Keyboards 101"
-description: "An introduction to exciting world of mechanical keyboards"
+description: "An introduction to the exciting world of mechanical keyboards"
 layout: post
 ---
 
@@ -21,17 +21,39 @@ Hey there, fellow human! I bet you're reading this because you're curious what a
   </figcaption>
 </figure>
 
-You might be wondering _why_ you should get a mechanical keyboard. Well, I think the single most important reason is they feel nicer to type on. Granted, this is extremely subjective, and people adapt pretty well to different devices given enough time, so take it with a grain of salt.
+You might be wondering _why_ you should get a mechanical keyboard. Here are some reasons:
 
-I am a software developer and avid Twitter user, so I spend a huge chunk of my day typing on computer keyboards, so I figure it's worth it for myself to invest the money in getting the best tools for doing the job.
+- #### They feel good to type on
 
-In addition, mechanical keyboards tend to be pretty easily customizable compared to traditional keyboards, like changing out keycaps for a new look, or often even changing aspects of keyboard key layouts.
+    This is the main reason I think people who enjoy mechanical keyboards opt for them over other choices. If you type a lot, comfort is probably important to you. I personally find mechanical keyboards to improve my typing comfort, and plus, they're actually fun to type on. This is (obviously) subjective, so you may want to try typing on one before you make a purchase.
+
+    Keep in mind that people can usually adapt pretty well to different devices given enough time, so it might feel weird at first and become comfortable with use.
+
+    I am a software developer and avid Twitter user, so I spend a huge chunk of my day typing on computer keyboards. I figure it's worth it for myself to invest the money in getting the best tools for doing the job.
+
+- #### They're easily customizable
+
+    Mechanical keyboards tend to be pretty easily customizable compared to traditional keyboards. You can change out keycaps for a new look, or often even change aspects of your key layout. Which brings me to my next point...
+
+- #### They're pretty
+
+    Mechanical keyboards are becoming more popular these days, and the aesthetic options are wide and growing. If you want a keyboard that looks beautiful, unique, or interesting, a mechanical keyboard might be for you.
 
 ## Why not
 
-It's not all perfect in mechanical keyboard land, though. For one thing, mechanical keyboards tend to be quite a lot more expensive than traditional keyboards, and are almost never wireless.
+It's not all perfect in mechanical keyboard land, though. Here are some reasons why you might want to pass on getting one:
 
-And the real elephant in the room is that mechanical keyboards are often a good bit louder, which can be a problem for office environments. Under the switch types section I will discuss more about noise and respect for your neighbors.
+- #### They're expensive
+
+    Mechanical keyboards tend to be quite a lot more expensive than traditional keyboards
+
+- #### You need a wireless keyboard
+
+    They're almost never wireless. If this is important for you, you should probably not get a mechanical keyboard.
+
+- #### They're loud
+
+    Ahh, the real elephant in the room. Mechanical keyboards are often a good bit louder than other keyboards, which can be a problem for office environments. Under the switch types section I will discuss more about noise and respect for your neighbors.
 
 <figure>
   <img src="/img/keyboards/whitefox.jpg" alt="">
@@ -40,7 +62,9 @@ And the real elephant in the room is that mechanical keyboards are often a good 
   </figcaption>
 </figure>
 
-Finally, you may want to be careful getting into the hobby because there are so many cool keyboards to try out, you just might find yourself spending a lot of money just to get things that look cool. I currently have more keyboards than I do computers.
+- #### They can be addictive
+
+    There are so many cool keyboards to try out, you just might find yourself spending a lot of money just to get things that look cool. I currently have more keyboards than I do computers.
 
 ## Keyboard form factors
 
@@ -121,7 +145,7 @@ Many of these keyboards also offer media and volume keys by holding Fn and press
 
 ## Form factor thoughts
 
-I would recommend looking into either a TKL or 75% keyboard to get started with, but more advanced users may be interested in split and/or ortholinear (ortho) keyboards which have various unique layouts in order to help with typing ergonomics, but which are quite foreign and take time to get used to.
+For getting started, I would recommend looking into either a TKL or 75% keyboard. More advanced users may be interested in split and/or ortholinear (ortho) keyboards which have various unique layouts in order to help with typing ergonomics, but which are quite foreign and take time to get used to.
 
 ## Keyboard extras
 
@@ -147,7 +171,7 @@ Additionally, you may want to consider keyboard angle. Having a very high angled
   </figcaption>
 </figure>
 
-Most keyboards come with black plastic cases, and hopefully a matte finish. You might also find some in white plastic, or even aluminum. You should pick whichever material you think will look nicest on your desk, but note that if the keys are mounted directly on metal with no plastic in-between, you can have a slight metallic clang when fully pressing a key.
+Most keyboards come with black plastic cases and a matte finish. You might also find some in white plastic, or even aluminum. You should pick whichever material you think will look nicest on your desk, but note that if the keys are mounted directly on metal with no plastic in-between, you can have a slight metallic clang when fully pressing a key.
 
 <figure>
   <img src="/img/keyboards/led.jpg" alt="">
@@ -164,9 +188,9 @@ LEDs are also a topic of great interest for some folks. I generally type without
 
 ## Keyboard switch types
 
-Most keyboard switches (keyswitches) are made by Cherry and are part of the MX family. There exist many new manufacturers, but I won't get into them here today. The primary differences between these types are the strength of the spring inside the switch, affecting how much force (measured in g=grams) is required to press the switch, and also the "track" the key switch follows along the way, which may have bumps or other effects to give you physical feedback while typing.
+Most keyboard switches (keyswitches) are made by Cherry and are part of the MX family. There exist many new manufacturers, but I won't get into them here. The primary differences between these types are the strength of the spring inside the switch, affecting how much force (measured in g=grams) is required to press the switch, and also the "track" the key switch follows along the way, which may have bumps or other effects to give you physical feedback while typing.
 
-Also note that all Cherry keyswitches actuate before the reach the bottom of the spring (bottoming out). It is generally recommend to avoiding bottoming out when typing if possible since it is wasted effort and will make your typing louder, but I can personally say this is a hard habit to break.
+Also note that all Cherry keyswitches actuate before they reach the bottom of the spring (this is called "bottoming out"). It is generally recommend to avoiding bottoming out when typing if possible since it is wasted effort and will make your typing louder, but I can personally say this is a hard habit to break.
 
 ## Clicky keyswitches
 
@@ -177,9 +201,9 @@ Also note that all Cherry keyswitches actuate before the reach the bottom of the
   </figcaption>
 </figure>
 
-Clicky switches are the classic style that is probably most well-known. Clicky switches are known for their somewhat high-pitched clicking noise produced when activating the switch. This gives amazing feedback when pressing a key, but can be overwhelming in a shared space setting such as an open office environment. Clicky switches also typically have a "bump" feeling where the key switch makes a little jump on an internal track, giving you physical feedback on your fingers as the key actuates.
+Clicky switches are the classic style that is probably most well-known. Clicky switches are known for their somewhat high-pitched clicking noise produced when activating the switch. This gives amazing feedback when pressing a key, but can be disruptive in a shared space setting such as an open office environment. Clicky switches also typically have a "bump" feeling where the key switch makes a little jump on an internal track, giving you physical feedback on your fingers as the key actuates.
 
-Cherry MX Blues are the most popular clicky switch, which required 50g of force to press the switch. MX Greens on the other hand require a firm 70g of force to be pressed.
+Cherry MX Blues are the most popular clicky switch. MX Blues require 50g of force to press the switch. MX Greens on the other hand require a firm 70g of force to be pressed.
 
 ## Tactile keyswitches
 
@@ -190,7 +214,7 @@ Cherry MX Blues are the most popular clicky switch, which required 50g of force 
   </figcaption>
 </figure>
 
-Tactile switches are basically just clicky switches minus the clicky noise. The still have a satisfying "bump" feeling as you type on them, but they lose the clicking noise. Note that _all_ key switches still make a nontrivial amount of noise when they key is pushed all the way to the bottom of the switch, transferring force into the keyboard frame, and typically making a low thud noise.
+Tactile switches are basically just clicky switches minus the clicky noise. They still have a satisfying "bump" feeling as you type on them, but they lose the clicking noise. Note that _all_ key switches still make a nontrivial amount of noise when the key is pressed all the way to the bottom of the switch, transferring force into the keyboard frame, and typically making a low thud noise.
 
 The most popular tactile key switch is the Cherry MX Brown, which requires 45g to be pressed. There's also the MX Clear which requires 65g.
 
@@ -203,7 +227,7 @@ The most popular tactile key switch is the Cherry MX Brown, which requires 45g t
   </figcaption>
 </figure>
 
-Linear switches are often marketed towards gamers because they have a completely smooth movement as you push them, no "bump" on the way down. They also lack the "click" noise.
+Linear switches are often marketed towards gamers because they have a completely smooth movement as you push them, lacking the  "bump" on the way down. They also lack the "click" noise.
 
 You can choose the Cherry MX Reds for 45g, or the MX Black for 60g. I personally find both to be somewhat alarming for typing on since they are so quiet and smooth, but you may enjoy them.
 
@@ -211,13 +235,13 @@ You can choose the Cherry MX Reds for 45g, or the MX Black for 60g. I personally
 
 Note that MX Browns and MX Blues are typically the easiest key switches to find on keyboards.
 
-OK so o-rings aren't a switch type, but you can add them on to keycaps as a little soft "buffer" that helps absorb the force of bottoming out a keyswitch. In my opinion, the difference in feeling with o-rings installed is not that big, but the audible difference is fairly decent. These can be nice to install for an office setting if you know you are a forceful typist.
+O-rings aren't a switch type, but you can add them on to keycaps as a little soft "buffer" that helps absorb the force of bottoming out a keyswitch. In my opinion, the difference in feeling with o-rings installed is not that big, but the audible difference is fairly noticeable. These can be nice to install for an office setting if you know you are a forceful typist.
 
 ## Keycap profiles
 
 Keycaps are easily removable from keyswitches using a wire keycap puller. Pullers are cheap and frequently come for free with your keyboard. YouTube has many tutorials on using them.
 
-Because they are easily removable, many different types of keycaps have been made for your typing enjoyment.
+Because they are easily removable, many different types of keycaps exist for your typing enjoyment.
 
 Images are worth a thousand words here, and you should check out this famous picture for a [**visual comparison of keycap profiles**][7]. This [*comparison chart from PMK*][13] is also really useful.
 
@@ -262,7 +286,7 @@ A new high profile set called [MT3][12] was developed by matt3o recently.
 
 The DSA keycap profile is quite short, completely uniform across all keys, and has a very comfortable spherical sculpt on the keycaps.
 
-This means that you can mix and match the keycaps anywhere you like as long as the size is the same. So you if you want to try out Dvorak you can actually swap the keycaps around.
+This means that you can mix and match the keycaps anywhere you like as long as the size is the same. So, if you want to try out a different keyboard layout like Dvorak you can actually swap the keycaps around.
 
 There is a niche profile called XDA which is very similar but slightly taller and a little less sloped along the sides.
 
@@ -290,7 +314,7 @@ While there is a lot of in-stock mass-produced items ready for purchase, there a
 
 Given that keyboards require massive physical production, a lot of niche products require "group buys" which sometimes also happen on [Massdrop][8]. This is basically a pre-order system where the order isn't fulfilled until enough people pre-order to make it economically viable to do a production run.
 
-Also, it's always a good idea to get on some keyboard centric mailing lists. In addition Massdrop, I would suggest subscribing to [Kono Store][9]. Despite the terrible company name, I can also recommend [Signature Plastics][10].
+Also, it's always a good idea to get on some keyboard-centric mailing lists. In addition to Massdrop, I would suggest subscribing to [Kono Store][9]. Despite the terrible company name, I can also recommend [Signature Plastics][10].
 
 I also like browsing the pictures on [r/MechanicalKeyboards][11] for inspiration, though I've yet to contribute to the discussion.
 
