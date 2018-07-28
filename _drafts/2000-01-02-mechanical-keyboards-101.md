@@ -23,7 +23,7 @@ Hey there, fellow human! I bet you're reading this because you're curious what a
 
 You might be wondering _why_ you should get a mechanical keyboard. Here are some reasons:
 
-- #### They feel good to type on
+- **They feel good to type on**
 
     This is the main reason I think people who enjoy mechanical keyboards opt for them over other choices. If you type a lot, comfort is probably important to you. I personally find mechanical keyboards to improve my typing comfort, and plus, they're actually fun to type on. This is (obviously) subjective, so you may want to try typing on one before you make a purchase.
 
@@ -31,11 +31,11 @@ You might be wondering _why_ you should get a mechanical keyboard. Here are some
 
     I am a software developer and avid Twitter user, so I spend a huge chunk of my day typing on computer keyboards. I figure it's worth it for myself to invest the money in getting the best tools for doing the job.
 
-- #### They're easily customizable
+- **They're easily customizable**
 
     Mechanical keyboards tend to be pretty easily customizable compared to traditional keyboards. You can change out keycaps for a new look, or often even change aspects of your key layout. Which brings me to my next point...
 
-- #### They're pretty
+- **They're pretty**
 
     Mechanical keyboards are becoming more popular these days, and the aesthetic options are wide and growing. If you want a keyboard that looks beautiful, unique, or interesting, a mechanical keyboard might be for you.
 
@@ -43,15 +43,15 @@ You might be wondering _why_ you should get a mechanical keyboard. Here are some
 
 It's not all perfect in mechanical keyboard land, though. Here are some reasons why you might want to pass on getting one:
 
-- #### They're expensive
+- **They're expensive**
 
     Mechanical keyboards tend to be quite a lot more expensive than traditional keyboards
 
-- #### You need a wireless keyboard
+- **You need a wireless keyboard**
 
     They're almost never wireless. If this is important for you, you should probably not get a mechanical keyboard.
 
-- #### They're loud
+- **They're loud**
 
     Ahh, the real elephant in the room. Mechanical keyboards are often a good bit louder than other keyboards, which can be a problem for office environments. Under the switch types section I will discuss more about noise and respect for your neighbors.
 
@@ -62,7 +62,7 @@ It's not all perfect in mechanical keyboard land, though. Here are some reasons 
   </figcaption>
 </figure>
 
-- #### They can be addictive
+- **They can be addictive**
 
     There are so many cool keyboards to try out, you just might find yourself spending a lot of money just to get things that look cool. I currently have more keyboards than I do computers.
 
