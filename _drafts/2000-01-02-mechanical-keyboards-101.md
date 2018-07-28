@@ -169,7 +169,7 @@ Additionally, you may want to consider keyboard angle. Having a very high angled
   </figcaption>
 </figure>
 
-Most keyboards come with black plastic cases and a matte finish. You might also find some in white plastic, or even aluminum. You should pick whichever material you think will look nicest on your desk, but note that if the keys are mounted directly on metal with no plastic in-between, you can have a slight metallic clang when fully pressing a key.
+Most keyboards come with black plastic cases and a matte finish. You might also find some in white plastic, or even aluminum. You should pick whichever material you think will look nicest on your desk, but note that if the keys are mounted directly on metal with no plastic, you can have a slight metallic clang when fully pressing a key.
 
 <figure>
   <img src="/img/keyboards/led.jpg" alt="">
@@ -199,7 +199,7 @@ Also note that all Cherry keyswitches actuate before they reach the bottom of th
   </figcaption>
 </figure>
 
-Clicky switches are the classic style that is probably most well-known. Clicky switches are known for their somewhat high-pitched clicking noise produced when activating the switch. This gives amazing feedback when pressing a key, but can be disruptive in a shared space setting such as an open office environment. Clicky switches also typically have a "bump" feeling where the key switch makes a little jump on an internal track, giving you physical feedback on your fingers as the key actuates.
+Clicky switches are the classic style that is probably most well known. Clicky switches are known for their somewhat high pitched clicking noise produced when activating the switch. This gives amazing feedback when pressing a key, but can be disruptive in a shared space setting such as an open office environment. Clicky switches also typically have a "bump" feeling where the key switch makes a little jump on an internal track, giving you physical feedback on your fingers as the key actuates.
 
 Cherry MX Blues are the most popular clicky switch. MX Blues require 50g of force to press the switch. MX Greens on the other hand require a firm 70g of force to be pressed.
 
@@ -254,7 +254,7 @@ Images are worth a thousand words here, and you should check out this famous pic
   </figcaption>
 </figure>
 
-The most popular profile is probably OEM. Unsurprisingly it is a middleground of size and shape compared to other popular profiles. Cherry profile is also very similar.
+The most popular profile is probably OEM. Unsurprisingly it is a middle ground of size and shape compared to other popular profiles. Cherry profile is also very similar.
 
 OEM keycaps have what's called a cylindrical sculpt. This means the top of each key cap is slightly U-shaped.
 
@@ -310,7 +310,7 @@ If you're looking to save money, you can get a foam and fabric palm rest like th
 
 ## Artisans, group buys, and Massdrop
 
-If you are interested in elevating your keyboard to art, [Jelly Key][16] provides handmade limited-run single keycaps which are expensive but gorgeous.
+If you are interested in elevating your keyboard to art, [Jelly Key][16] provides handmade limited run single keycaps which are expensive but gorgeous.
 
 Given that keyboards require massive physical production, a lot of niche products require "group buys" which sometimes also happen on [Massdrop][8]. This is basically a pre-order system where the order isn't fulfilled until enough people pre-order to make it economically viable to do a production run.
 
