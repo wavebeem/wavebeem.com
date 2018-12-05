@@ -1,1 +1,4 @@
 https://mockbrian.com/ http://mockbrian.com/ 302!
+
+http://blog.mockbrian.com/* http://mockbrian.com/blog/:splat 302!
+https://blog.mockbrian.com/* http://mockbrian.com/blog/:splat 302!
