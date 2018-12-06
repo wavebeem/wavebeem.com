@@ -1,5 +1,7 @@
 markdown: redcarpet
 permalink: /blog/:year/:month/:day/:title/
+include:
+  - _redirects
 exclude:
   - Gemfile
   - Gemfile.lock
