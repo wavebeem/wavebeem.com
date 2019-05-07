@@ -61,7 +61,7 @@ Ruby, Python, Bash, Java, Amazon S3, Cloudfront, Route 53, JIRA
 - Made [Screenhive](https://github.com/wavebeem/screenhive), an app for organizing Steam screenshots (2016)
 - Co-developed educational iPad math game: [Algebra Card Clutter](http://itunes.apple.com/us/app/algebra-card-clutter/id549330499) (2012)
 - Designed and implemented a new tab bar style for [iTerm](http://iterm2.com/) [(2014)](https://github.com/gnachman/iTerm2/pull/185)
-- Created [LatteScript](http://misc.mockbrian.com/lattescript/), an educational programming language (2011-2012)
+- Created [LatteScript](https://lattescript.netlify.com), an educational programming language (2011-2012)
 - Developed [yantp](https://chrome.google.com/webstore/detail/yet-another-new-tab-page/imfkhhcponjpjhfpaccepedaabjclbjj) Chrome tab page extension (2013-2016)
 
 ## Education
