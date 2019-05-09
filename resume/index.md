@@ -7,7 +7,7 @@ title: "Resume • Brian Mock"
 
 JavaScript (ES5/ES6), TypeScript, HTML, CSS (and Sass/LESS), Git
 
-React, Ember, Lodash, Mocha, Tachyons, ESLint, Webpack, Angular 1.x
+React, Ember, Lodash, Mocha, Tachyons, Emotion, ESLint, Webpack, Angular 1.x
 
 ## Other Technical Skills
 
@@ -15,8 +15,15 @@ Ruby, Python, Bash, Java, Amazon S3, Cloudfront, Route 53, JIRA
 
 ## Work Experience
 
+**Aruba Networks**, *Frontend Team Manager* (January 2019-*present*)
 
-**Aruba Networks**, *Senior JavaScript Developer* (February 2018-*present*)
+- Managed team of three other developers
+- Contributed as lead developer on a WebGL map and routing editor application
+- Organized parallel work on code migrations
+
+* * *
+
+**Aruba Networks**, *Senior JavaScript Developer* (February 2018-January 2019)
 
 - Migrated frontend to new technology stack (React SPA, component library)
 - Enhanced, debugged, and refactored internal component library
@@ -33,7 +40,6 @@ Ruby, Python, Bash, Java, Amazon S3, Cloudfront, Route 53, JIRA
 **CrowdCompass**, *JavaScript Engineer* (February 2016–May 2017)
 
 - Pair programmed and mentored other developers and QA engineers
-- Developed client/server data contracts
 - Maintained web app for event attendees (Ember), dashboard for event planners (Rails/jQuery)
 - Migrated CoffeeScript to ES6; developed ESLint code quality strategy
 
@@ -43,7 +49,6 @@ Ruby, Python, Bash, Java, Amazon S3, Cloudfront, Route 53, JIRA
 
 - Built Angular dashboard site; built new social sharing widget (with 75% test coverage)
 - Created tools for debugging customer production sites using local code overrides in any browser
-- Solved multiple critical customer issues in production environments while on call
 - Maintained legacy code in production on thousands of sites, maintaining backwards compatibility and IE8 support
 - Documented hundreds of features through extensive code research
 
