@@ -60,6 +60,7 @@ Ruby, Python, Bash, Java, Amazon S3, Cloudfront, Route 53, JIRA
 
 ## Projects
 
+- Created [jsx-info](https://github.com/wavebeem/jsx-info), a static code analysis tool for React (2019)
 - Maintains [Parsimmon](https://github.com/jneen/parsimmon/), a JavaScript parser combinator library [(2016-present)](https://github.com/jneen/parsimmon)
 - Created [pkmn.help](https://pkmn.help) type matchup calculator [(2013-present)](https://github.com/wavebeem/pkmn-type-calc)
 - Implemented [Squiggle](http://squiggle-lang.org/), a compile-to-JS programming language (2015-2016)
@@ -67,7 +68,6 @@ Ruby, Python, Bash, Java, Amazon S3, Cloudfront, Route 53, JIRA
 - Co-developed educational iPad math game: [Algebra Card Clutter](http://itunes.apple.com/us/app/algebra-card-clutter/id549330499) (2012)
 - Designed and implemented a new tab bar style for [iTerm](http://iterm2.com/) [(2014)](https://github.com/gnachman/iTerm2/pull/185)
 - Created [LatteScript](https://lattescript.netlify.com), an educational programming language (2011-2012)
-- Developed [yantp](https://chrome.google.com/webstore/detail/yet-another-new-tab-page/imfkhhcponjpjhfpaccepedaabjclbjj) Chrome tab page extension (2013-2016)
 
 ## Education
 
