@@ -37,27 +37,6 @@ $smallSize: $contentWidth;
   @include pretty-link($linkColor);
 }
 
-.SpeechBubble {
-  background: #333;
-  color: white;
-  position: relative;
-}
-
-.SpeechBubble:after {
-  $size: 8px;
-  content: "";
-  width: 0;
-  height: 0;
-  position: absolute;
-  border-left: $size solid transparent;
-  border-right: $size solid transparent;
-  border-top: $size solid #333;
-  border-bottom: 0;
-  margin-left: (-$size);
-  bottom: (-$size);
-  left: 50%;
-}
-
 html {
   font-family: $fontMain;
   font-size: 16px;
