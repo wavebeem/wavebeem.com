@@ -1,9 +1,9 @@
-$green: #19a974;
-$darkGreen: #137752;
+$nearBlack: #111;
+$linkColor: #d5008f;
 $fontMain: "Helvetica", "Arial", sans-serif;
 $fontPara: "Georgia", "Cambria", "Palatino", serif;
 $fontMonospace: "Menlo", "Consolas", monospace;
-$codeColor: #e7040f;
+$codeColor: #5e2ca5;
 $gap: 1rem;
 $radius: 0;
 $smallGap: ($gap / 2);
@@ -34,33 +34,10 @@ $smallSize: $contentWidth;
 }
 
 .pretty-link {
-  @include pretty-link($darkGreen);
-}
-
-.SpeechBubble {
-  background: #333;
-  color: white;
-  position: relative;
-}
-
-.SpeechBubble:after {
-  $size: 8px;
-  content: "";
-  width: 0;
-  height: 0;
-  position: absolute;
-  border-left: $size solid transparent;
-  border-right: $size solid transparent;
-  border-top: $size solid #333;
-  border-bottom: 0;
-  margin-left: (-$size);
-  bottom: (-$size);
-  left: 50%;
+  @include pretty-link($linkColor);
 }
 
 html {
-  background: #fff;
-  color: #111;
   font-family: $fontMain;
   font-size: 16px;
   line-height: 1.5;
