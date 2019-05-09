@@ -1,10 +1,10 @@
-{% assign nav_item = "hover-bg-black-10 link pa3 color-inherit" %}
-
+{% assign nav_item = "hover-bg-white-50 link pa3 color-inherit" %}
+{% assign color = "bb dark-pink bw1 b--black-10" %}
 {% assign mini_class = "pv3 ph4 flex-auto" %}
 
 <!-- Small nav -->
 <div class="dn-ns">
-  <nav class="f2 flex flex-column bb bw1 b--black-10 mb4 bg-green white">
+  <nav class="f2 flex flex-column mb4 {{ color }}">
     <a class="{{ nav_item }} {{ mini_class }} b" href="/">Brian Mock</a>
     <a class="{{ nav_item }} {{ mini_class }}" href="/">Home</a>
     <a class="{{ nav_item }} {{ mini_class }}" href="/blog">Blog</a>
@@ -14,7 +14,7 @@
 
 <!-- Big nav -->
 <div class="dn db-ns">
-  <nav class="f3 flex bb bw1 b--black-10 mb4 items-center bg-green white">
+  <nav class="f3 flex mb4 items-center {{ color }}">
     <a class="{{ nav_item }} b" href="/">Brian Mock</a>
     <a class="{{ nav_item }}" href="/">Home</a>
     <a class="{{ nav_item }}" href="/blog">Blog</a>
