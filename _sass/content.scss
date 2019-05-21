@@ -10,7 +10,6 @@ $f6: 0.875rem;
 
 .Content {
   max-width: $contentWidth;
-  padding: 0 2rem;
   font-family: $fontPara;
   font-size: $f4;
 
@@ -99,6 +98,11 @@ $f6: 0.875rem;
 
   h2 {
     font-size: $f2;
+
+    @media (max-width: 30em) {
+      font-size: $f3;
+    }
+
     padding-bottom: 0.5rem;
     margin-top: 2rem;
     margin-bottom: 0.5rem;
