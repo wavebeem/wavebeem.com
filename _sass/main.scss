@@ -31,6 +31,7 @@ $smallSize: $contentWidth;
   @include pretty-link($linkColor);
 }
 
+.link:focus, // battling tachyons here
 :focus {
   outline: none;
   box-shadow: 0 0 0 2px white, 0 0 0 4px black;
