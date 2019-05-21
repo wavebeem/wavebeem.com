@@ -1,7 +1,7 @@
 $nearBlack: #111;
 $linkColor: #d5008f;
 $fontMain: "Helvetica", "Arial", sans-serif;
-$fontPara: "Georgia", "Cambria", "Palatino", serif;
+$fontPara: "helvetica", "Cambria", "Palatino", serif;
 $fontMonospace: "Menlo", "Consolas", monospace;
 $codeColor: #5e2ca5;
 $gap: 1rem;
@@ -14,17 +14,11 @@ $smallSize: $contentWidth;
   display: none;
 }
 
-.font-para { font-family: $fontPara; }
-.font-main { font-family: $fontMain; }
-
 @mixin pretty-link($color) {
   color: $color;
   text-decoration: underline;
-  -webkit-text-decoration-skip: skip;
-  text-decoration-skip: ink;
 
-  &,
-  &:link {
+  & {
     transition: none;
   }
 
@@ -37,21 +31,7 @@ $smallSize: $contentWidth;
   @include pretty-link($linkColor);
 }
 
-html {
-  font-family: $fontMain;
-  font-size: 16px;
-  line-height: 1.5;
-
-  @media (max-width: 600px) {
-    font-size: 12px;
-  }
-}
-
-// Specificity fun!
-.link:focus,
 :focus {
   outline: none;
-  box-shadow:
-    0 0 0 2px white,
-    0 0 0 4px black;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px black;
 }
