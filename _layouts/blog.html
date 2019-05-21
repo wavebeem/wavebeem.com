@@ -3,19 +3,22 @@ layout: bare
 ---
 
 <main class="mw7 center flex-auto">
-  <h1 class="ph4 f1 lh-title">Posts</h1>
+  <h1 class="ph4 f1-ns f2 lh-title">Posts</h1>
   <ul class="pa0 ma0 list">
     {% for post in site.posts %}
-      <li class="bt bw1 b--black-10">
-        <a class="db no-underline hover-bg-white-50 dark-pink pa4" href="{{ post.url }}">
-          <h2 class="f3 mt0 mb0 helvetica link">
-            {{ post.title }}
-          </h2>
-          <p class="mb0 nt1 f4 black">
-            {{ post.date | date: "%B %-d, %Y" }}
-          </p>
-        </a>
-      </li>
+    <li class="bt bw1 b--black-10">
+      <a
+        class="db no-underline hover-bg-white-50 dark-pink pa4"
+        href="{{ post.url }}"
+      >
+        <h2 class="f3 mt0 mb0 helvetica link">
+          {{ post.title }}
+        </h2>
+        <p class="mb0 nt1 f4 black">
+          {{ post.date | date: "%B %-d, %Y" }}
+        </p>
+      </a>
+    </li>
     {% endfor %}
   </ul>
 </main>

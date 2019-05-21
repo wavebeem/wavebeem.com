@@ -3,7 +3,6 @@ layout: bare
 ---
 
 <main class="ph4 center flex-auto lh-copy Content">
-
   <h1 class="ma0 f1 lh-title">
     <a href="#">{{ page.title }}</a>
   </h1>
@@ -12,22 +11,26 @@ layout: bare
   {{ content }}
 
   <div class="helvetica f3 mv4">
-    <a class="ba bw1 dark-pink db pa2 hover-bg-white-50 no-underline" href="/blog">
+    <a
+      class="ba bw1 dark-pink db pa2 hover-bg-white-50 no-underline"
+      href="/blog"
+    >
       &larr; Read other posts
     </a>
   </div>
-
 </main>
 
 <script type="module">
-  const slug = text =>
-    text.trim()
+  function slug(text) {
+    return text
+      .trim()
       .toLowerCase()
       .replace(/\'/gi, "")
       .replace(/[^a-z0-9]/gi, "-")
       .replace(/-{2,}/g, "-")
       .replace(/^-+|-+$/gm, "")
       .substring(0, 64);
+  }
 
   for (const h of document.querySelectorAll("h2, h3")) {
     h.id = h.id || slug(h.textContent);
