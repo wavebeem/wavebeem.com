@@ -50,19 +50,19 @@ Here are some reasons why you might not want to get a mechanical keyboard:
 
 - **They're expensive**
 
-    Mechanical keyboards tend to be more expensive than traditional keyboards.
+  Mechanical keyboards tend to be more expensive than traditional keyboards.
 
 - **You need a wireless keyboard**
 
-    They're almost never wireless. If this is important for you, you should probably not get a mechanical keyboard.
+  They're almost never wireless. If this is important for you, you should probably not get a mechanical keyboard.
 
 - **They're loud**
 
-    Mechanical keyboards are often a good bit louder than other keyboards, which can be a problem for office environments.
+  Mechanical keyboards are often a good bit louder than other keyboards, which can be a problem for office environments.
 
 - **They can be addictive**
 
-    There are so many cool keyboards to try out, you just might find yourself spending a lot of money just to get things that look cool. I currently have more keyboards than I do computers.
+  There are so many cool keyboards to try out, you just might find yourself spending a lot of money just to get things that look cool. I currently have more keyboards than I do computers.
 
 ## Keyboard form factors
 
@@ -225,7 +225,7 @@ The most popular tactile key switch is the Cherry MX Brown, which requires 45g t
   </figcaption>
 </figure>
 
-Linear switches are often marketed towards gamers because they have a completely smooth movement as you push them, lacking the  "bump" on the way down. They also lack the "click" noise.
+Linear switches are often marketed towards gamers because they have a completely smooth movement as you push them, lacking the "bump" on the way down. They also lack the "click" noise.
 
 You can choose the Cherry MX Reds for 45g, or the MX Black for 60g. I personally find both to be somewhat alarming for typing on since they are so quiet and smooth, but you may enjoy them.
 
@@ -243,7 +243,7 @@ Keycaps are easily removable from keyswitches using a wire keycap puller. Puller
 
 Because they are easily removable, many different types of keycaps exist for your typing enjoyment.
 
-Images are worth a thousand words here, and you should check out this famous picture for a [**visual comparison of keycap profiles**][7]. This [*comparison chart from PMK*][13] is also really useful.
+Images are worth a thousand words here, and you should check out this famous picture for a [**visual comparison of keycap profiles**][7]. This [_comparison chart from PMK_][13] is also really useful.
 
 ## Medium profile keycaps
 
@@ -296,7 +296,7 @@ You can't go wrong with the classic OEM profile, and many keyboards come with th
 
 ## Suggested starter equipment
 
-I recommend buying a TKL (tenkeyless) keyboard for your first mechanical keyboard. If you want a relatively inexpensive TKL board with Cherry MX Browns you can check out the [Cooler Master Tenkeyless][1] for about $70.
+I recommend buying a TKL (tenkeyless) keyboard for your first mechanical keyboard. If you want a relatively inexpensive TKL board with Cherry MX Browns you can check out the [Cooler Master Tenkeyless][1] for about \$70.
 
 I personally like the [WASD v2 keyboard][2]. It comes in multiple sizes, black or white cases, and you can customize the color on each key if you want. Also the media keys are fantastic on them. And one of the coolest things is their new [maker designs][3] which are community contributed keycap designs that are _really_ cool.
 
