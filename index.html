@@ -3,9 +3,10 @@ layout: index
 title: "Brian Mock"
 ---
 
-{% assign t = site.time | date: '%s%N' %} {% include nav.html %}
+{% assign t = site.time | date: '%s%N' %}
+{% include nav.html %}
 
-<main class="ph4-ns ph3 mw7 center flex-auto lh-copy">
+<main class="ph4-ns ph3 mw7 center flex-auto lh-copy f3">
   <img
     src="/brian.png?t={{ t }}"
     width="200"
@@ -17,45 +18,43 @@ title: "Brian Mock"
     alt=""
   />
 
-  <div class="tl f3">
-    <p class="cf">
-      Hi, I'm <b>Brian Mock</b>. My pronouns are he/him. I'm a software
-      developer in Portland, OR. When I'm not programming I like to play video
-      games, pet my cat, and go running.
-    </p>
+  <p class="cf">
+    Hi, I'm <b>Brian Mock</b>. My pronouns are he/him. I'm a software developer
+    in Portland, OR. When I'm not programming I like to play video games, pet my
+    cat, and go running.
+  </p>
 
-    <p>
-      I run Portland's monthly mechanical keyboard meetup,
-      <a class="pretty-link" href="https://pdxkbc.com/">PDXKBC</a>.
-    </p>
+  <p>
+    I run Portland's monthly mechanical keyboard meetup,
+    <a class="pretty-link" href="https://pdxkbc.com/">PDXKBC</a>.
+  </p>
 
-    <p>
-      I'm the maintainer of a really great parsing library for JavaScript called
-      <a class="pretty-link" href="https://github.com/jneen/parsimmon/"
-        >Parsimmon</a
-      >.
-    </p>
+  <p>
+    I'm the maintainer of a really great parsing library for JavaScript called
+    <a class="pretty-link" href="https://github.com/jneen/parsimmon/"
+      >Parsimmon</a
+    >.
+  </p>
 
-    <p>
-      And I created
-      <a class="pretty-link" href="https://pkmn.help">pkmn.help</a>, a Pokémon
-      strategy web app with thousands of monthly users.
-    </p>
+  <p>
+    And I created
+    <a class="pretty-link" href="https://pkmn.help">pkmn.help</a>, a Pokémon
+    strategy web app with thousands of monthly users.
+  </p>
 
-    <p>
-      Check out the rest of my projects on
-      <a class="pretty-link" href="https://github.com/wavebeem/">GitHub</a>.
-    </p>
+  <p>
+    Check out the rest of my projects on
+    <a class="pretty-link" href="https://github.com/wavebeem/">GitHub</a>.
+  </p>
 
-    <p>
-      Email me at
-      <a class="pretty-link" href="mailto:brian@mockbrian.com"
-        >brian@mockbrian.com</a
-      >
-      or tweet me at
-      <a class="pretty-link" href="https://twitter.com/wavebeem/">@wavebeem</a>.
-    </p>
-  </div>
+  <p>
+    Email me at
+    <a class="pretty-link" href="mailto:brian@mockbrian.com"
+      >brian@mockbrian.com</a
+    >
+    or tweet me at
+    <a class="pretty-link" href="https://twitter.com/wavebeem/">@wavebeem</a>.
+  </p>
 </main>
 
 {% include footer.html %}
