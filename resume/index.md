@@ -5,7 +5,7 @@ title: "Resume • Brian Mock"
 
 ## Core Technical Skills
 
-JavaScript (ES5/ES6), TypeScript, HTML, CSS (and Sass/LESS), Git
+JavaScript (ES5/ES6), TypeScript, HTML, CSS (and Sass, LESS), Git
 
 React, Ember, Lodash, Mocha, Tachyons, Emotion, ESLint, Webpack, Angular 1.x
 
