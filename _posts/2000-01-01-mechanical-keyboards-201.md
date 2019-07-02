@@ -6,11 +6,28 @@ layout: post
 
 ## Introduction
 
-## Building Your Own
+- Why not just use a pre-built?
+- Rabbit hole
+- Pricing
 
-- GMMK TKL
+## Kits & Builds
 
-## Gateron and Kailh
+- Soldering vs Hotswap
+- https://www.1upkeyboards.com/shop/controllers/1up-rgb-pcb-hse/
+- https://www.1upkeyboards.com/shop/bases-and-cases/acrylic-60-base-frosted/
+- https://kbdfans.cn/collections/diy-kit/products/kbdfans-dz60rgb-ansi-hot-swap-diy-kit
+- https://kbdfans.cn/collections/diy-kit/products/tada68-keyboard-diy-kit
+- Please google soldering tutorials and build guides
+
+## QMK
+
+
+
+## Switches
+
+- Gateron
+- Kailh
+- Plate mount vs PCB mount
 
 ## Lube and Stabilizer Mods
 
@@ -20,3 +37,8 @@ layout: post
 - 40%
 - ortholinear
 - split
+
+## Group Buys
+
+- IC
+- GB info
