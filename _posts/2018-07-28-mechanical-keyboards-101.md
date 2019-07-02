@@ -296,7 +296,7 @@ You can't go wrong with the classic OEM profile, and many keyboards come with th
 
 ## Suggested starter equipment
 
-I recommend buying a TKL (tenkeyless) keyboard for your first mechanical keyboard. If you want a relatively inexpensive TKL board with Cherry MX Browns you can check out the [Cooler Master Tenkeyless][1] for about \$70.
+I recommend buying a TKL (tenkeyless) keyboard for your first mechanical keyboard. If you want a relatively inexpensive TKL board with Cherry MX Browns you can check out the [Cooler Master Tenkeyless][1] for about $70.
 
 I personally like the [WASD v2 keyboard][2]. It comes in multiple sizes, black or white cases, and you can customize the color on each key if you want. Also the media keys are fantastic on them. And one of the coolest things is their new [maker designs][3] which are community contributed keycap designs that are _really_ cool.
 
