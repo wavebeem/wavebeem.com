@@ -6,6 +6,7 @@ layout: post
 
 ## Introduction
 
+- Who is this article for
 - Why not just use a pre-built?
 - Nice cases, enthusiast switches, better build quality
 - Rabbit hole, pricing, lack of TKL or full size options
@@ -31,7 +32,6 @@ layout: post
 - <https://www.1upkeyboards.com/shop/keyboard-kits/macro-pads/sweet-16-macro-pad-black>
 
 - Please google soldering tutorials and build guides
-
 
 ## QMK
 
