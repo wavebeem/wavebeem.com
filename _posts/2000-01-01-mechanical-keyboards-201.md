@@ -106,15 +106,15 @@ You can search for soldering tutorials yourself, but at the end of the day it's 
 
 That being said, solder-free builds can be really nice. They are typically made using boards that come with "hot swap sockets" preinstalled. These are basically a tight fitting hole that the plugs on the keyboard switches can fit snugly into, like a cable into a port. It's less durable than soldering, but way faster if you want to change things later.
 
-- Simple solder-free plate-free build for easy maintenance and trial
-  - <https://www.1upkeyboards.com/shop/controllers/1up-rgb-pcb-hse>
-  - <https://www.1upkeyboards.com/shop/bases-and-cases/acrylic-60-base-frosted>
-  - <https://www.1upkeyboards.com/shop/parts-and-tools/parts/gmk-screw-in-stabilizers>
+- Solder-free hot-swap plate-free build for easy maintenance and trial
+  - [1upkeyboards RGB PCB hot-swap edition](https://www.1upkeyboards.com/shop/controllers/1up-rgb-pcb-hse)
+  - [Frosted acrylic 60% case](https://www.1upkeyboards.com/shop/bases-and-cases/acrylic-60-base-frosted)
+  - [GMK screw-in stabilizers](https://www.1upkeyboards.com/shop/parts-and-tools/parts/gmk-screw-in-stabilizers)
 
 This is a great setup for getting started. It's $108, ships from the US, and the only things left to buy are switches and keycaps. It's also incredibly easy to maintain since you can just pull the switches or stabilizers right out to work on them, if you decide to wait on lubing them until later.
 
-- More expensive hot swap
-  - <https://kbdfans.cn/collections/diy-kit/products/kbdfans-dz60rgb-ansi-hot-swap-diy-kit>
+- More expensive hot swap kit
+  - [DZ60RGB hot-swap DIY kit](https://kbdfans.cn/collections/diy-kit/products/kbdfans-dz60rgb-ansi-hot-swap-diy-kit)
 
   This is a top of the line case and PCB. The only things you need to buy for this build are switches and keycaps. The kit is $159, plus the cost of your switches and keycaps.
 
@@ -123,11 +123,19 @@ This is a great setup for getting started. It's $108, ships from the US, and the
   As for plate options, this is really a personal preference thing. Polycarbonate is transparent and would look really good with the acrylic case, whereas brass is really heavy and will provide a very solid feel for your keyboard.
 
 - Cheaper 65%
-  - <https://kbdfans.cn/collections/diy-kit/products/tada68-keyboard-diy-kit>
+  - [Tada68 keyboard DIY kit](https://kbdfans.cn/collections/diy-kit/products/tada68-keyboard-diy-kit)
+
+Still not sure you can live without dedicated arrow keys? Don't worry, this inexpensive DIY kit for the Tada68 is a great deal. If you have a bit more money, you can upgrade to the aluminum case option for a bit more weight and elegance.
+
 - Straightforward 40% option with minimal soldering
-  - <https://www.1upkeyboards.com/shop/keyboard-kits/diy-40-kits/zlant-40-keyboard-kit>
+  - [Zlant 40% keyboard kit](https://www.1upkeyboards.com/shop/keyboard-kits/diy-40-kits/zlant-40-keyboard-kit)
+
+This DIY kit has everything you need to make your first 40% keyboard, and at only 48 keys the build should go by quickly.
+
 - Good soldering tutorial macro pad
-  - <https://www.1upkeyboards.com/shop/keyboard-kits/macro-pads/sweet-16-macro-pad-black>
+  - [Sweet 16 macro pad](https://www.1upkeyboards.com/shop/keyboard-kits/macro-pads/sweet-16-macro-pad-black)
+
+This relatively affordable macro pad is a low stress option for your first soldering project. Note that this macro pad requires you to solder your own microcontroller (Pro Micro) and diodes, a step that is often not required for other PCBs. This will make the build take a bit longer, but it's also great practice for building other niche keyboards that do not come with these components preinstalled on the PCB.
 
 ## QMK
 
