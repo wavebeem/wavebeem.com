@@ -139,7 +139,11 @@ This relatively affordable macro pad is a low stress option for your first solde
 
 ## QMK
 
-- What is it and why do I care
+QMK is the firmware that powers most custom built keyboards. If you're feeling nerdy, you can clone the [QMK GitHub repo](https://config.qmk.fm) and compile your own keymap locally, though it's easier to get started using their [online programmer](https://config.qmk.fm). You will then need to install [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) in order to install the firmware on your keyboard. Please note that Windows users must install [some drivers](https://github.com/qmk/qmk_driver_installer/releases) first.
+
+This part can be a bit confusing, but the plus side is that QMK firmware is code that runs **on** the keyboard, so your keyboard will work exactly how you want when plugged in to *any* device.
+
+The biggest feature of QMK is layers. They are basically like the `Fn` (function) key on many laptop keyboards, except you can have several of them. This allows you to do things like add a numpad mode to your keyboard, media hotkeys, hidden arrow keys on WASD, or anything you can dream up.
 
 ## Switches
 
