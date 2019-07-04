@@ -17,7 +17,7 @@ There are a few main reasons you might want to build your own keyboard: it's a l
 
 - Rabbit hole, pricing, lack of TKL or full size options
 
-Before we embark on this journey I do caution you that it is not without its perils. First of all, building custom keyboards and getting into niche hardware is an expensive hobby. It is also filled with FOMO (fear of missing out). Many things in this hobby are done as Group Buys (GB), where you pay to pre-order a product that may only ever get made once, if it doesn't get cancelled. Additionally, if you want to create a full size or tenkeyless keyboard, there are _very_ few custom options for those form factors.
+Before we embark on this journey I do caution you that it is not without its perils. First of all, building custom keyboards and getting into niche hardware is an expensive hobby. It is also filled with "fear of missing out" (FOMO). Many things in this hobby are done as Group Buys (GB), where you pay to pre-order a product that may only ever get made once, if it doesn't get cancelled. Additionally, if you want to create a full size or tenkeyless keyboard, there are _very_ few custom options for those form factors.
 
 ## Parts of a Keyboard
 
@@ -38,7 +38,15 @@ Plates are generally sheets of aluminum with holes that key switches slot into. 
 Most keyboards come stock with Cherry MX switches. If you are building your own, you can also use most Gateron or Kailh switches. These come in two varieties: PCB mount (also called 5-pin) and plate mount (also called 3-pin). If you are using a plate, you can generally use either. If you are not using a plate you _must_ use the PCB mount variety or else the switches will not align correctly.
 
 - Stabilizers
+
+Stabilizers are required for most keyboards. Keys are measured in "units", which are the width of alphabet keys. This is typically abbreviated as 1u, 1.5u, 2u, 6.25u, etc. Keys that are at least 2u wide require stabilizers (also called "stabs") to keep from tilting like a side-to-side. Most keyboards use "Cherry" stabilizers which mount directly to the PCB. Most keyboards have several 2u stabilizers and one 6.25u stabilizer for the spacebar.
+
+Unfortunately, most stabilizers are poorly made. They usually rattle like a jar full of coins when pressed. Fortunately, a small bit of lube and nippers can fix stabilizers to be quiet and smooth. See the [stabilizer mod video][stabmod] by Taeha Types for instructions on how to do this.
+
 - Lube
+
+This is technically optional, but I highly recommend buying lube at least for your stabilizers if you build your own keyboard. It will make a huge difference in smoothness and volume. If you have the patience for it, you can also lube each switch in your board, as demonstrated in this [switch lube video][switchlube] by Taeha Types.
+
 - Keycaps
 
 
@@ -99,3 +107,5 @@ That being said, solder-free builds can be really nice. They are typically made 
 - GB info
 
 [keebs101]: /blog/2018/07/28/mechanical-keyboards-101/
+[stabmod]: https://www.youtube.com/watch?v=cD5Zj-ZgMLA
+[switchlube]: https://youtu.be/qSgPKPoFo2k?t=109
