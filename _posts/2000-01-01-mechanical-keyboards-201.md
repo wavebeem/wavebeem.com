@@ -8,7 +8,7 @@ layout: post
 
 - Who is this article for
 
-This article is for people who have some familiarity with mechanical keyboards already. If not, you should read my first article, [Mechanical Keyboards 101][keebs101]. You might be considering building your own keyboard or trying out more niche hardware.
+This article is for people who have some familiarity with mechanical keyboards already. If not, you should read my first article, [Mechanical Keyboards 101](/blog/2018/07/28/mechanical-keyboards-101/). You might be considering building your own keyboard or trying out more niche hardware.
 
 - Why not just use a pre-built?
 - Nice cases, enthusiast switches, better build quality
@@ -17,7 +17,7 @@ There are a few main reasons you might want to build your own keyboard: it's a l
 
 - Rabbit hole, pricing, lack of TKL or full size options
 
-Before we embark on this journey I do caution you that it is not without its perils. First of all, building custom keyboards and getting into niche hardware is an expensive hobby. It is also filled with "fear of missing out" (FOMO). Many things in this hobby are done as Group Buys (GB), where you pay to pre-order a product that may only ever get made once, if it doesn't get cancelled. Additionally, if you want to create a full size or tenkeyless keyboard, there are _very_ few custom options for those form factors.
+Before we embark on this journey I do caution you that it is not without its perils. First of all, building custom keyboards and getting into niche hardware is an expensive hobby. It is also filled with "fear of missing out" (FOMO). Many things in this hobby are done as Group Buys (GB), where you pay to pre-order a product that may only ever get made once, if it doesn't get cancelled. Additionally, if you want to create a full size or ten-keyless keyboard, there are _very_ few custom options for those form factors.
 
 ## Jargon Dictionary
 
@@ -52,7 +52,7 @@ This is the base of your keyboard. Either the PCB or the plate screws in to this
 
 This is the part that the key switches and USB cable plug in to. Some PCBs are very barebones and require soldering your own diodes and microcontroller in order to work, while others only require soldering switches, and the most convenient ones don't require a single drop of solder.
 
-Technically this part can be replaced with handwiring, but you should look up how to do that yourself.
+Technically this part can be replaced with hand-wiring, but you should look up how to do that yourself.
 
 - Plate
 
@@ -66,26 +66,26 @@ Most keyboards come stock with Cherry MX switches. If you are building your own,
 
 Stabilizers are required for most keyboards. Keys are measured in "units", which are the width of alphabet keys. This is typically abbreviated as 1u, 1.5u, 2u, 6.25u, etc. Keys that are at least 2u wide require stabilizers (also called "stabs") to keep from tilting like a side-to-side. Most keyboards use "Cherry" stabilizers which mount directly to the PCB. Most keyboards have several 2u stabilizers and one 6.25u stabilizer for the spacebar.
 
-Unfortunately, most stabilizers are poorly made. They usually rattle like a jar full of coins when pressed. Fortunately, a small bit of lube and nippers can fix stabilizers to be quiet and smooth. See the [stabilizer mod video][stabmod] by Taeha Types for instructions on how to do this.
+Unfortunately, most stabilizers are poorly made. They usually rattle like a jar full of coins when pressed. Fortunately, a small bit of lube and nippers can fix stabilizers to be quiet and smooth. See the [stabilizer mod video](https://www.youtube.com/watch?v=cD5Zj-ZgMLA) by Taeha Types for instructions on how to do this.
 
 - Lube
 
-This is technically optional, but I highly recommend buying lube at least for your stabilizers if you build your own keyboard. It will make a huge difference in smoothness and volume. If you have the patience for it, you can also lube each switch in your board, as demonstrated in this [switch lube video][switchlube] by Taeha Types.
+This is technically optional, but I highly recommend buying lube at least for your stabilizers if you build your own keyboard. It will make a huge difference in smoothness and volume. If you have the patience for it, you can also lube each switch in your board, as demonstrated in this [switch lube video](https://youtu.be/qSgPKPoFo2k?t=109) by Taeha Types.
 
 - Keycaps
 
-Little pieces of plastic (generally ABS or PBT) that fit on top of the switches so they are comfortable and easy to push with your fingers. These are easy to remove with a little wire puller, and are the most fun part of customizing your keyboard. Generally these are built to be MX compatible. They come in a myriad of different profiles (shapes) depending on how you like it to feel when you type (Cherry, OEM, DCS, DSA, SA, etc). 
+Little pieces of plastic (generally ABS or PBT) that fit on top of the switches so they are comfortable and easy to push with your fingers. These are easy to remove with a little wire puller, and are the most fun part of customizing your keyboard. Generally these are built to be MX compatible. They come in a myriad of different profiles (shapes) depending on how you like it to feel when you type (Cherry, OEM, DCS, DSA, SA, etc).
 
 
 ## Kits & Builds
 
-Most cases come with alls screws necessary, and I assume you have access to a phillips (+) head screwdriver.
+Most cases come with alls screws necessary, and I assume you have access to a Phillips (+) head screwdriver.
 
 For lubing, you will need access to the following items:
 
 - A [thin paint brush](https://www.amazon.com/gp/product/B01HWCAGQQ) to apply the lube
-- A [key switch opener][opener] is technically optional, but will save you a lot of time and effort
-- Lube such as  [Krytox GPL 205][gpllube], or other [similar lubes][1uplube]
+- A [key switch opener](https://kbdfans.cn/collections/keyboard-part/products/gb-2-in-1-machined-aluminum-switch-opener) is technically optional, but will save you a lot of time and effort
+- Lube such as  [Krytox GPL 205](https://www.1upkeyboards.com/shop/misc/krytox-gpl-205/), or other [similar lubes](https://www.1upkeyboards.com/shop/parts-and-tools/lubricant/switch-lubricant-2ml/)
 
 For soldering, you will need access to the following items:
 
@@ -98,7 +98,7 @@ If you use a plate, you should get an [IC puller](https://www.amazon.com/a130321
 
 You should also buy a [keycap puller](https://www.amazon.com/WASD-Keyboards-Wire-Keycap-Puller/dp/B00AZCGF7K) to safely and easily remove keycaps.
 
-- Soldering vs Hotswap
+- Soldering vs Hot-swap
 
 The first decision you need to make when you're considering building your own keyboard is whether you want to solder or not. I was initially scared of soldering, but I promise you can learn it if you want to.
 
@@ -118,7 +118,7 @@ This is a great setup for getting started. It's $108, ships from the US, and the
 
   This is a top of the line case and PCB. The only things you need to buy for this build are switches and keycaps. The kit is $159, plus the cost of your switches and keycaps.
 
-  Please note that if you want to actually see the RGB underglow you will need to choose the acrylic case.
+  Please note that if you want to actually see the RGB under-glow you will need to choose the acrylic case.
 
   As for plate options, this is really a personal preference thing. Polycarbonate is transparent and would look really good with the acrylic case, whereas brass is really heavy and will provide a very solid feel for your keyboard.
 
@@ -157,10 +157,3 @@ This is a great setup for getting started. It's $108, ships from the US, and the
 - This is all extremely personal preference
 - IC
 - GB info
-
-[keebs101]: /blog/2018/07/28/mechanical-keyboards-101/
-[stabmod]: https://www.youtube.com/watch?v=cD5Zj-ZgMLA
-[switchlube]: https://youtu.be/qSgPKPoFo2k?t=109
-[1uplube]: https://www.1upkeyboards.com/shop/parts-and-tools/lubricant/switch-lubricant-2ml/
-[gpllube]: https://www.1upkeyboards.com/shop/misc/krytox-gpl-205/
-[opener]: https://kbdfans.cn/collections/keyboard-part/products/gb-2-in-1-machined-aluminum-switch-opener
