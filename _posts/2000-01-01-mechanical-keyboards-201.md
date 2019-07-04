@@ -74,8 +74,29 @@ This is technically optional, but I highly recommend buying lube at least for yo
 
 - Keycaps
 
+Little pieces of plastic (generally ABS or PBT) that fit on top of the switches so they are comfortable and easy to push with your fingers. These are easy to remove with a little wire puller, and are the most fun part of customizing your keyboard. Generally these are built to be MX compatible. They come in a myriad of different profiles (shapes) depending on how you like it to feel when you type (Cherry, OEM, DCS, DSA, SA, etc). 
+
 
 ## Kits & Builds
+
+Most cases come with alls screws necessary, and I assume you have access to a phillips (+) head screwdriver.
+
+For lubing, you will need access to the following items:
+
+- A [thin paint brush](https://www.amazon.com/gp/product/B01HWCAGQQ) to apply the lube
+- A [key switch opener][opener] is technically optional, but will save you a lot of time and effort
+- Lube such as  [Krytox GPL 205][gpllube], or other [similar lubes][1uplube]
+
+For soldering, you will need access to the following items:
+
+- A soldering iron ([budget kit](https://www.amazon.com/ANBES-Soldering-Iron-Kit-Electronics/dp/B06XZ31W3M) with some extra goodies or a [deluxe model](https://www.amazon.com/Hakko-FX888D-23BY-Digital-Soldering-Station/dp/B00ANZRT4M) without extras)
+- A damp sponge (DO NOT SHARE THIS WITH YOUR KITCHEN) or [brass sponge](https://www.amazon.com/Hakko-599B-02-Wire-type-soldering-cleaner/dp/B00FZPGDLA) for cleaning the soldering iron tip
+- A [solder sucker and a solder wick](https://www.amazon.com/Tabiger-Solder-Desoldering-Sucker-Remover/dp/B0777LMVTT) (or a [desoldering iron](https://www.amazon.com/American-HAKKO-Products-FR301-03-Desoldering/dp/B07BFVFMS9) if you have lots of money)
+- [Solder](https://www.amazon.com/gp/product/B00B1JKEHS), ideally 67/37 tin/lead split for easy melting
+
+If you use a plate, you should get an [IC puller](https://www.amazon.com/a13032100ux0040-Anti-Static-Motherboard-Circuit-Extractor/dp/B00CQI99K6) (also called a switch puller), to easily remove switches from the plate without breaking them.
+
+You should also buy a [keycap puller](https://www.amazon.com/WASD-Keyboards-Wire-Keycap-Puller/dp/B00AZCGF7K) to safely and easily remove keycaps.
 
 - Soldering vs Hotswap
 
@@ -88,8 +109,19 @@ That being said, solder-free builds can be really nice. They are typically made 
 - Simple solder-free plate-free build for easy maintenance and trial
   - <https://www.1upkeyboards.com/shop/controllers/1up-rgb-pcb-hse>
   - <https://www.1upkeyboards.com/shop/bases-and-cases/acrylic-60-base-frosted>
+  - <https://www.1upkeyboards.com/shop/parts-and-tools/parts/gmk-screw-in-stabilizers>
+
+This is a great setup for getting started. It's $108, ships from the US, and the only things left to buy are switches and keycaps. It's also incredibly easy to maintain since you can just pull the switches or stabilizers right out to work on them, if you decide to wait on lubing them until later.
+
 - More expensive hot swap
   - <https://kbdfans.cn/collections/diy-kit/products/kbdfans-dz60rgb-ansi-hot-swap-diy-kit>
+
+  This is a top of the line case and PCB. The only things you need to buy for this build are switches and keycaps. The kit is $159, plus the cost of your switches and keycaps.
+
+  Please note that if you want to actually see the RGB underglow you will need to choose the acrylic case.
+
+  As for plate options, this is really a personal preference thing. Polycarbonate is transparent and would look really good with the acrylic case, whereas brass is really heavy and will provide a very solid feel for your keyboard.
+
 - Cheaper 65%
   - <https://kbdfans.cn/collections/diy-kit/products/tada68-keyboard-diy-kit>
 - Straightforward 40% option with minimal soldering
@@ -129,3 +161,6 @@ That being said, solder-free builds can be really nice. They are typically made 
 [keebs101]: /blog/2018/07/28/mechanical-keyboards-101/
 [stabmod]: https://www.youtube.com/watch?v=cD5Zj-ZgMLA
 [switchlube]: https://youtu.be/qSgPKPoFo2k?t=109
+[1uplube]: https://www.1upkeyboards.com/shop/parts-and-tools/lubricant/switch-lubricant-2ml/
+[gpllube]: https://www.1upkeyboards.com/shop/misc/krytox-gpl-205/
+[opener]: https://kbdfans.cn/collections/keyboard-part/products/gb-2-in-1-machined-aluminum-switch-opener
