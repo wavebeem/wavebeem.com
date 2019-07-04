@@ -19,6 +19,29 @@ There are a few main reasons you might want to build your own keyboard: it's a l
 
 Before we embark on this journey I do caution you that it is not without its perils. First of all, building custom keyboards and getting into niche hardware is an expensive hobby. It is also filled with "fear of missing out" (FOMO). Many things in this hobby are done as Group Buys (GB), where you pay to pre-order a product that may only ever get made once, if it doesn't get cancelled. Additionally, if you want to create a full size or tenkeyless keyboard, there are _very_ few custom options for those form factors.
 
+## Jargon Dictionary
+
+Here is a list of mechanical keyboards jargon words and what they mean
+
+- Keeb
+  - Short for keyboard, keeb is a fun word for talking about keyboards. You may also see "MK" for mechanical keyboard. I think keeb is more fun though.
+- Stab
+  - Stabilizers are often called stabs. They are used to keep long keys from becoming misaligned while typing.
+- Lube
+  - Lubricant is usually just called lube, and it's applied to stabilizers and key switches in order to make them smoother and quieter. It's generally a liquid or thin paste which fills in the rough surface on the metal or plastic pieces that are touching each other.
+- MoQ (minimum order quantity)
+  - The smallest order size a factory will take. Running a factory is hard work, and calibrating everything just to make a single keycap set is expensive. This number allows the factories to make a profit.
+- GB (group buy)
+  - This is a selling method usually used for custom keycaps. Keycaps are generally made in large factories, but such factories have high MoQs, so it's too expensive for one person to buy enough keycap sets to cover the MoQ themselves. With a group buy, many people online pre-order the keycaps (several months in advance), and if the MoQ is reached, eventually get their keycaps in the mail.
+- IC (interest check)
+  - Usually a Google Form, this is a survey about a potential group buy, in order to gauge interest and receive feedback (e.g. I really wish this keycap set supported my Ergodox, that shade of blue is not pretty, etc)
+- QMK
+  - This is the most common custom firmware for keyboards. It is written in C and hosted on GitHub. It is designed to be extensible so that new keyboards can be easily added to the QMK project, allowing the PCB to communicate with a computer as a keyboard.
+- PCB (printed circuit board)
+  - This is the "chip" that powers the keyboard, which all the components plug into.
+- nippers
+  - These are basically specialized pliers designed for cutting thin soft plastics and metals. Please do not use scissors instead.
+
 ## Parts of a Keyboard
 
 - Case
@@ -28,6 +51,8 @@ This is the base of your keyboard. Either the PCB or the plate screws in to this
 - PCB
 
 This is the part that the key switches and USB cable plug in to. Some PCBs are very barebones and require soldering your own diodes and microcontroller in order to work, while others only require soldering switches, and the most convenient ones don't require a single drop of solder.
+
+Technically this part can be replaced with handwiring, but you should look up how to do that yourself.
 
 - Plate
 
@@ -58,9 +83,9 @@ The first decision you need to make when you're considering building your own ke
 
 You can search for soldering tutorials yourself, but at the end of the day it's using a hot stick to melt metal and glue two things together. Don't be afraid, just treat it with respect and be careful.
 
-That being said, solder-free builds can be really nice. They are typically made using boards that come with "hot swap sockets" presinstalled. These are basically a tight fitting hole that the plugs on the keyboard switches can fit snugly into, like a cable into a port. It's less durable than soldering, but way faster if you want to change things later.
+That being said, solder-free builds can be really nice. They are typically made using boards that come with "hot swap sockets" preinstalled. These are basically a tight fitting hole that the plugs on the keyboard switches can fit snugly into, like a cable into a port. It's less durable than soldering, but way faster if you want to change things later.
 
-- Simple solder-free plate-free build for easy maintenance an dtrial
+- Simple solder-free plate-free build for easy maintenance and trial
   - <https://www.1upkeyboards.com/shop/controllers/1up-rgb-pcb-hse>
   - <https://www.1upkeyboards.com/shop/bases-and-cases/acrylic-60-base-frosted>
 - More expensive hot swap
@@ -82,11 +107,6 @@ That being said, solder-free builds can be really nice. They are typically made 
 - Gateron
 - Kailh
 - Plate mount vs PCB mount
-
-## Lube and Stabilizer Mods
-
-- Please lube and clip your stabilizers unless you like listening to someone rattle a bag of nails every time you hit spacebar
-- Get a switch opener if you want to lube switches
 
 ## Niche Layouts
 
