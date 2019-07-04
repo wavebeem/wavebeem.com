@@ -19,6 +19,29 @@ There are a few main reasons you might want to build your own keyboard: it's a l
 
 Before we embark on this journey I do caution you that it is not without its perils. First of all, building custom keyboards and getting into niche hardware is an expensive hobby. It is also filled with FOMO (fear of missing out). Many things in this hobby are done as Group Buys (GB), where you pay to pre-order a product that may only ever get made once, if it doesn't get cancelled. Additionally, if you want to create a full size or tenkeyless keyboard, there are _very_ few custom options for those form factors.
 
+## Parts of a Keyboard
+
+- Case
+
+This is the base of your keyboard. Either the PCB or the plate screws in to this piece in order to hold everything together. It usually has rubber feet to give it grip to keep from sliding. Cases also add weight to keep your keyboard solid and in place.
+
+- PCB
+
+This is the part that the key switches and USB cable plug in to. Some PCBs are very barebones and require soldering your own diodes and microcontroller in order to work, while others only require soldering switches, and the most convenient ones don't require a single drop of solder.
+
+- Plate
+
+Plates are generally sheets of aluminum with holes that key switches slot into. They are optional depending on your case, but can provide additional rigidity and weight to your build. That being said, they also complicate a build and make keyboard maintenance harder (especially if the switches are soldered on).
+
+- Key switches
+
+Most keyboards come stock with Cherry MX switches. If you are building your own, you can also use most Gateron or Kailh switches. These come in two varieties: PCB mount (also called 5-pin) and plate mount (also called 3-pin). If you are using a plate, you can generally use either. If you are not using a plate you _must_ use the PCB mount variety or else the switches will not align correctly.
+
+- Stabilizers
+- Lube
+- Keycaps
+
+
 ## Kits & Builds
 
 - Soldering vs Hotswap
