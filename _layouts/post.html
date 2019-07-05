@@ -12,15 +12,17 @@ layout: bare
 
   <div class="helvetica f3 mv4">
     <a
-      class="ba bw1 br2 dark-pink db pa2 hover-bg-white-50 no-underline"
+      class="ba bw1 br2 dark-pink db pv2 ph3 hover-bg-white-40 no-underline"
       href="/blog"
     >
-      &larr; Read other posts
+      &lsaquo; Read other posts
     </a>
   </div>
 </main>
 
 <script type="module">
+  // I would prefer to generate links for my h2 and h3 elements at build time,
+  // but I can't figure out a good way to make Jekyll do that, sadly
   function slug(text) {
     return text
       .trim()

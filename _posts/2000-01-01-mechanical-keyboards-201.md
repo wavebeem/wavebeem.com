@@ -68,7 +68,7 @@ This little dictionary should help you understand some of the incomprehensible j
 
 --------------------------------------------------------------------------------
 
-**nippers**
+**Nippers**
 
 > These are basically specialized pliers designed for cutting thin soft plastics and metals. Please do not use scissors instead.
 
@@ -108,7 +108,7 @@ Little pieces of plastic (generally ABS or PBT) that fit on top of the switches 
 
 ## Equipment
 
-Most cases come with alls screws necessary, and I assume you have access to a Phillips (+) head screwdriver.
+Most cases come with all screws necessary, and I assume you have access to a Phillips (+) head screwdriver.
 
 For *lubing*, you will need access to the following items:
 
