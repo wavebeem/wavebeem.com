@@ -57,6 +57,8 @@ Plates are generally sheets of aluminum with holes that key switches slot into. 
 
 Most keyboards come stock with Cherry MX switches. If you are building your own, you can also use most Gateron or Kailh switches. These come in two varieties: PCB mount (also called 5-pin) and plate mount (also called 3-pin). If you are using a plate, you can generally use either. If you are not using a plate you _must_ use the PCB mount variety or else the switches will not align correctly.
 
+Everything related to keyboards comes down to personal preference, but that's never more pronounced than with key switches. The only real way to see what you like is to use them. If you can afford it, a [switch tester](https://kbdfans.cn/products/kbdfans-72-switches-tester-all-in-one) can help you narrow down your options, but it's still quite a bit different from actually typing on those switches in a real keyboard.
+
 ## Parts: stabilizers
 
 Stabilizers are required for most keyboards. Keys are measured in "units", which are the width of alphabet keys. This is typically abbreviated as 1u, 1.5u, 2u, 6.25u, etc. Keys that are at least 2u wide require stabilizers (also called "stabs") to keep from tilting like a side-to-side. Most keyboards use "Cherry" stabilizers which mount directly to the PCB. Most keyboards have several 2u stabilizers and one 6.25u stabilizer for the spacebar.
@@ -71,25 +73,24 @@ This is technically optional, but I highly recommend buying lube at least for yo
 
 Little pieces of plastic (generally ABS or PBT) that fit on top of the switches so they are comfortable and easy to push with your fingers. These are easy to remove with a little wire puller, and are the most fun part of customizing your keyboard. Generally these are built to be MX compatible. They come in a myriad of different profiles (shapes) depending on how you like it to feel when you type (Cherry, OEM, DCS, DSA, SA, etc).
 
-
 ## Equipment
 
 Most cases come with alls screws necessary, and I assume you have access to a Phillips (+) head screwdriver.
 
-For lubing, you will need access to the following items:
+For *lubing*, you will need access to the following items:
 
 - A [thin paint brush](https://www.amazon.com/gp/product/B01HWCAGQQ) to apply the lube
 - A [key switch opener](https://kbdfans.cn/collections/keyboard-part/products/gb-2-in-1-machined-aluminum-switch-opener) is technically optional, but will save you a lot of time and effort
 - Lube such as  [Krytox GPL 205](https://www.1upkeyboards.com/shop/misc/krytox-gpl-205/), or other [similar lubes](https://www.1upkeyboards.com/shop/parts-and-tools/lubricant/switch-lubricant-2ml/)
 
-For soldering, you will need access to the following items:
+For *soldering*, you will need access to the following items:
 
 - A soldering iron ([budget kit](https://www.amazon.com/ANBES-Soldering-Iron-Kit-Electronics/dp/B06XZ31W3M) with some extra goodies or a [deluxe model](https://www.amazon.com/Hakko-FX888D-23BY-Digital-Soldering-Station/dp/B00ANZRT4M) without extras)
-- A damp sponge (DO NOT SHARE THIS WITH YOUR KITCHEN) or [brass sponge](https://www.amazon.com/Hakko-599B-02-Wire-type-soldering-cleaner/dp/B00FZPGDLA) for cleaning the soldering iron tip
+- A damp sponge or [brass sponge](https://www.amazon.com/Hakko-599B-02-Wire-type-soldering-cleaner/dp/B00FZPGDLA) for cleaning the soldering iron tip (**do NOT use your kitchen sponge unless you want lead poisoning**)
 - A [solder sucker and a solder wick](https://www.amazon.com/Tabiger-Solder-Desoldering-Sucker-Remover/dp/B0777LMVTT) (or a [desoldering iron](https://www.amazon.com/American-HAKKO-Products-FR301-03-Desoldering/dp/B07BFVFMS9) if you have lots of money)
-- [Solder](https://www.amazon.com/gp/product/B00B1JKEHS), ideally 67/37 tin/lead split for easy melting
+- [Solder](https://www.amazon.com/gp/product/B00B1JKEHS), ideally 67/37 tin/lead split with rosin core for easy melting
 
-If you use a plate, you should get an [IC puller](https://www.amazon.com/a13032100ux0040-Anti-Static-Motherboard-Circuit-Extractor/dp/B00CQI99K6) (also called a switch puller), to easily remove switches from the plate without breaking them.
+If you use a *plate*, you should get an [IC puller](https://www.amazon.com/a13032100ux0040-Anti-Static-Motherboard-Circuit-Extractor/dp/B00CQI99K6) (also called a switch puller), to easily remove switches from the plate without breaking them.
 
 You should also buy a [keycap puller](https://www.amazon.com/WASD-Keyboards-Wire-Keycap-Puller/dp/B00AZCGF7K) to safely and easily remove keycaps.
 
@@ -103,55 +104,53 @@ That being said, solder-free builds can be really nice. They are typically made 
 
 ## Kits and builds
 
-- Solder-free hot-swap plate-free build for easy maintenance and trial
-  - [1upkeyboards RGB PCB hot-swap edition](https://www.1upkeyboards.com/shop/controllers/1up-rgb-pcb-hse)
-  - [Frosted acrylic 60% case](https://www.1upkeyboards.com/shop/bases-and-cases/acrylic-60-base-frosted)
-  - [GMK screw-in stabilizers](https://www.1upkeyboards.com/shop/parts-and-tools/parts/gmk-screw-in-stabilizers)
+**Solder-free hot-swap plate-free build for easy maintenance and trial:**
+
+- [1upkeyboards RGB PCB hot-swap edition](https://www.1upkeyboards.com/shop/controllers/1up-rgb-pcb-hse)
+- [Frosted acrylic 60% case](https://www.1upkeyboards.com/shop/bases-and-cases/acrylic-60-base-frosted)
+- [GMK screw-in stabilizers](https://www.1upkeyboards.com/shop/parts-and-tools/parts/gmk-screw-in-stabilizers)
 
 This is a great setup for getting started. It's $108, ships from the US, and the only things left to buy are switches and keycaps. It's also incredibly easy to maintain since you can just pull the switches or stabilizers right out to work on them, if you decide to wait on lubing them until later.
 
-- More expensive hot swap kit
-  - [DZ60RGB hot-swap DIY kit](https://kbdfans.cn/collections/diy-kit/products/kbdfans-dz60rgb-ansi-hot-swap-diy-kit)
+**More expensive hot swap kit:**
 
-  This is a top of the line case and PCB. The only things you need to buy for this build are switches and keycaps. The kit is $159, plus the cost of your switches and keycaps.
+- [DZ60RGB hot-swap DIY kit](https://kbdfans.cn/collections/diy-kit/products/kbdfans-dz60rgb-ansi-hot-swap-diy-kit)
 
-  Please note that if you want to actually see the RGB under-glow you will need to choose the acrylic case.
+This is a top of the line case and PCB. The only things you need to buy for this build are switches and keycaps. The kit is $159, plus the cost of your switches and keycaps.
 
-  As for plate options, this is really a personal preference thing. Polycarbonate is transparent and would look really good with the acrylic case, whereas brass is really heavy and will provide a very solid feel for your keyboard.
+Please note that if you want to actually see the RGB under-glow you will need to choose the acrylic case.
 
-- Cheaper 65%
-  - [Tada68 keyboard DIY kit](https://kbdfans.cn/collections/diy-kit/products/tada68-keyboard-diy-kit)
+As for plate options, this is really a personal preference thing. Polycarbonate is transparent and would look really good with the acrylic case, whereas brass is really heavy and will provide a very solid feel for your keyboard.
+
+**Cheaper 65%:**
+
+- [Tada68 keyboard DIY kit](https://kbdfans.cn/collections/diy-kit/products/tada68-keyboard-diy-kit)
 
 Still not sure you can live without dedicated arrow keys? Don't worry, this inexpensive DIY kit for the Tada68 is a great deal. If you have a bit more money, you can upgrade to the aluminum case option for a bit more weight and elegance.
 
-- Straightforward 40% option with minimal soldering
-  - [Zlant 40% keyboard kit](https://www.1upkeyboards.com/shop/keyboard-kits/diy-40-kits/zlant-40-keyboard-kit)
+**Minimal soldering 40% keyboard kit:**
+
+- [Zlant 40% keyboard kit](https://www.1upkeyboards.com/shop/keyboard-kits/diy-40-kits/zlant-40-keyboard-kit)
 
 This DIY kit has everything you need to make your first 40% keyboard, and at only 48 keys the build should go by quickly.
 
-- Good soldering tutorial macro pad
-  - [Sweet 16 macro pad](https://www.1upkeyboards.com/shop/keyboard-kits/macro-pads/sweet-16-macro-pad-black)
+**Good soldering tutorial macro pad:**
+
+- [Sweet 16 macro pad](https://www.1upkeyboards.com/shop/keyboard-kits/macro-pads/sweet-16-macro-pad-black)
 
 This relatively affordable macro pad is a low stress option for your first soldering project. Note that this macro pad requires you to solder your own microcontroller (Pro Micro) and diodes, a step that is often not required for other PCBs. This will make the build take a bit longer, but it's also great practice for building other niche keyboards that do not come with these components preinstalled on the PCB.
 
 ## QMK
 
-QMK is the firmware that powers most custom built keyboards. If you're feeling nerdy, you can clone the [QMK GitHub repo](https://config.qmk.fm) and compile your own keymap locally, though it's easier to get started using their [online programmer](https://config.qmk.fm). You will then need to install [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) in order to install the firmware on your keyboard. Please note that Windows users must install [some drivers](https://github.com/qmk/qmk_driver_installer/releases) first.
+QMK is the firmware that powers most custom built keyboards. If you're feeling nerdy, you can clone the [QMK GitHub repo](https://config.qmk.fm) and compile your own keymap locally, though it's easier to get started using their [online keyboard editor](https://config.qmk.fm). You will then need to install [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) in order to install the firmware on your keyboard. Please note that Windows users must install [some drivers](https://github.com/qmk/qmk_driver_installer/releases) first.
 
-This part can be a bit confusing, but the plus side is that QMK firmware is code that runs **on** the keyboard, so your keyboard will work exactly how you want when plugged in to *any* device.
+This part can be a bit confusing, but the plus side is that QMK firmware is code that runs *on* the keyboard, so your keyboard will work exactly how you want when plugged in to *any* device.
 
-The biggest feature of QMK is layers. They are basically like the `Fn` (function) key on many laptop keyboards, except you can have up to 15 of them. This allows you to do things like add a numpad mode to your keyboard, media hotkeys, hidden arrow keys on WASD, or anything you can dream up.
-
-## Switches
-
-- This is all extremely personal preference
-- Gateron
-- Kailh
-- Plate mount vs PCB mount
+The biggest feature of QMK is layers. They are basically like the `Fn` (function) key on many laptop keyboards, except you can have up to 15 of them. This allows you to do things like add a numpad mode to your keyboard, media hotkeys, hidden arrow keys on WASD, or anything you can dream up. You can also use them to toggle between modes sort of like caps lock or num lock.
 
 ## Niche Layouts
 
-- 60%
+60% layouts have the most options for keycaps, cases, and PCBs. They are a great starting point for building your keyboard. Note that most 60% keyboards do not have dedicated arrow keys, so you will need to program your keyboard to have arrow keys in a different way (many people use the Function key with WASD or IJKL).
 
 <figure>
   <img src="/img/keebs-201/ansi60.png" alt="">
@@ -167,7 +166,7 @@ The biggest feature of QMK is layers. They are basically like the `Fn` (function
   </figcaption>
 </figure>
 
-- 40%
+40% keyboards are relatively quick to build, and some don't even have stabilizers. However there are far fewer options. These keyboards lack number keys, so you have to hold down a function key in order to type those. This is my personal favorite kind, but be advised it will take a few weeks to get back up to good typing speed if you need to type a lot symbols or numbers.
 
 <figure>
   <img src="/img/keebs-201/jd40.png" alt="">
@@ -184,7 +183,7 @@ The biggest feature of QMK is layers. They are basically like the `Fn` (function
 </figure>
 
 
-- ortholinear
+Ortholinear keyboards make the rows of keys all line up to form a perfect grid, instead of the jagged edge you see on most keyboards. There's no research showing if this has any benefits, but I personally think it's more comfortable.
 
 <figure>
   <img src="/img/keebs-201/planck.png" alt="">
@@ -193,7 +192,7 @@ The biggest feature of QMK is layers. They are basically like the `Fn` (function
   </figcaption>
 </figure>
 
-- split
+Split keyboards are great for maintaining good posture and a healthy shoulder spread through your work day. They are harder to build, and there are few options, but many people never go back once trying them.
 
 <figure>
   <img src="/img/keebs-201/ergodox.png" alt="">
@@ -202,8 +201,37 @@ The biggest feature of QMK is layers. They are basically like the `Fn` (function
   </figcaption>
 </figure>
 
-## Keycap Group Buys
+<figure>
+  <img src="/img/keebs-201/letssplit.png" alt="">
+  <figcaption>
+    Let's Split split layout
+  </figcaption>
+</figure>
 
-- This is all extremely personal preference
-- IC
-- GB info
+## My favorite shops
+
+These are my favorite shops I've purchased from (shipping to the US). Please note that some of these sites primarily deal in group buys, and thus may not have much of interest to order right now depending on when you look.
+
+[Novelkeys](https://novelkeys.xyz/) is my overall favorite shop. They have an amazing selection of switches and desk mats, and run many group buys. They also work closely with Gateron to make new types of switches available (Novelkeys Creams, Gateron Silent Yellow, etc).
+
+[Signature Plastics](https://pimpmykeyboard.com/) is my number one stop for keycap sets. They have high quality DSA profile caps made from PBT in many colors, and produce sets to fit specialty keyboards like the Planck, Ergodox, and more. I recommend any of the DSA sets, especially the [dye sublimated sets](https://pimpmykeyboard.com/dsa-sublimated-keysets/).
+
+[1upkeyboards](https://www.1upkeyboards.com/) has a variety of items, including lube, as well as some nice budget options for DIY kits. Their skeleton kits are very affordable, and the 1up RGB PCB hot-swap edition is a fantastic easy to use PCB.
+
+[KBDfans](https://kbdfans.cn/) has an extremely large selection, though some of their listings are a bit confusing to me. The DZ60 PCB from them is one of the most flexible 60% PCBs on the market (though a bit confusing), and they're Tofu case is highly regarded for its weight and shape. Please note they ship from China, so shipping is a bit slower than other shops on this list.
+
+[TheKey.Company](https://thekey.company/) runs many excellent keycap group-buys, as well as unique CandyBar layout keyboard.
+
+[Cannon Keys](https://cannonkeys.com/) makes the affordable Ortho48 alternative to the Planck.
+
+[OLKB](https://olkb.com/) is the official seller of the Planck and Preonic ortholinear keyboards, but they are very slow to fill orders (over half a year for me).
+
+[KeyHive](https://keyhive.xyz/shop) has the parts you need to build the Corne 40% split keyboard.
+
+[Keebio](https://keeb.io/) is the home of the Iris and Levinson split keyboards, as well as many parts needed for more advanced builds (spacers, diodes, LEDs, microcontrollers, etc).
+
+## What now?
+
+I normally check out [r/MechanicalKeyboards](https://www.reddit.com/r/MechanicalKeyboards/) for updates and photos about what's new in the world of keebs.
+
+Depending on where you live, there might be a regional meetup. I highly suggest checking out this [meetup list](https://www.reddit.com/r/MechanicalKeyboards/wiki/meetups) to see if there's one near you.
