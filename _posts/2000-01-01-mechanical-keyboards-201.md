@@ -153,26 +153,54 @@ The biggest feature of QMK is layers. They are basically like the `Fn` (function
 
 - 60%
 
-<figure class="no-bg">
+<figure>
   <img src="/img/keebs-201/ansi60.png" alt="">
   <figcaption>
-    An ANSI (US) 60% layout
+    ANSI (US) 60% layout
   </figcaption>
 </figure>
 
-<figure class="no-bg">
+<figure>
   <img src="/img/keebs-201/iso60.png" alt="">
   <figcaption>
-    An ISO (European) 60% layout
+    ISO (European) 60% layout
   </figcaption>
 </figure>
 
 - 40%
-  - TODO: KLE pic of MiniVan or similar
+
+<figure>
+  <img src="/img/keebs-201/jd40.png" alt="">
+  <figcaption>
+    JD40 40% layout
+  </figcaption>
+</figure>
+
+<figure>
+  <img src="/img/keebs-201/zlant.png" alt="">
+  <figcaption>
+    Zlant 40% layout
+  </figcaption>
+</figure>
+
+
 - ortholinear
-  - TODO: KLE pic of Planck
+
+<figure>
+  <img src="/img/keebs-201/planck.png" alt="">
+  <figcaption>
+    Planck 40% ortholinear layout
+  </figcaption>
+</figure>
+
 - split
-  - TODO: KLE pic of Let's Split
+
+<figure>
+  <img src="/img/keebs-201/ergodox.png" alt="">
+  <figcaption>
+    Ergodox split layout
+  </figcaption>
+</figure>
 
 ## Keycap Group Buys
 
