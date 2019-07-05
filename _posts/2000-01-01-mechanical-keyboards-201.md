@@ -18,26 +18,59 @@ Before we embark on this journey I do caution you that it is not without its per
 
 ## Jargon dictionary
 
-Here is a list of mechanical keyboards jargon words and what they mean
+This little dictionary should help you understand some of the incomprehensible jargon thrown around by keyboard enthusiasts.
 
-- Keeb
-  - Short for keyboard, keeb is a fun word for talking about keyboards. You may also see "MK" for mechanical keyboard. I think keeb is more fun though.
-- Stab
-  - Stabilizers are often called stabs. They are used to keep long keys from becoming misaligned while typing.
-- Lube
-  - Lubricant is usually just called lube, and it's applied to stabilizers and key switches in order to make them smoother and quieter. It's generally a liquid or thin paste which fills in the rough surface on the metal or plastic pieces that are touching each other.
-- MoQ (minimum order quantity)
-  - The smallest order size a factory will take. Running a factory is hard work, and calibrating everything just to make a single keycap set is expensive. This number allows the factories to make a profit.
-- GB (group buy)
-  - This is a selling method usually used for custom keycaps. Keycaps are generally made in large factories, but such factories have high MoQs, so it's too expensive for one person to buy enough keycap sets to cover the MoQ themselves. With a group buy, many people online pre-order the keycaps (several months in advance), and if the MoQ is reached, eventually get their keycaps in the mail.
-- IC (interest check)
-  - Usually a Google Form, this is a survey about a potential group buy, in order to gauge interest and receive feedback (e.g. I really wish this keycap set supported my Ergodox, that shade of blue is not pretty, etc)
-- QMK (quantum mechanical keyboard)
-  - This is the most common custom firmware for keyboards. It is written in C and hosted on GitHub. It is designed to be extensible so that new keyboards can be easily added to the QMK project, allowing the PCB to communicate with a computer as a keyboard.
-- PCB (printed circuit board)
-  - This is the "chip" that powers the keyboard, which all the components plug into.
-- nippers
-  - These are basically specialized pliers designed for cutting thin soft plastics and metals. Please do not use scissors instead.
+**Keeb**
+
+> Short for keyboard, keeb is a fun word for talking about keyboards. You may also see "MK" for mechanical keyboard. I think keeb is more fun though.
+
+--------------------------------------------------------------------------------
+
+**Stab**
+
+> Stabilizers are often called stabs. They are used to keep long keys from becoming misaligned while typing.
+
+--------------------------------------------------------------------------------
+
+**Lube**
+
+> Lubricant is usually just called lube, and it's applied to stabilizers and key switches in order to make them smoother and quieter. It's generally a liquid or thin paste which fills in the rough surface on the metal or plastic pieces that are touching each other.
+
+--------------------------------------------------------------------------------
+
+**MoQ (minimum order quantity)**
+
+> The smallest order size a factory will take. Running a factory is hard work, and calibrating everything just to make a single keycap set is expensive. This number allows the factories to make a profit.
+
+--------------------------------------------------------------------------------
+
+**GB (group buy)**
+
+> This is a selling method usually used for custom keycaps. Keycaps are generally made in large factories, but such factories have high MoQs, so it's too expensive for one person to buy enough keycap sets to cover the MoQ themselves. With a group buy, many people online pre-order the keycaps (several months in advance), and if the MoQ is reached, eventually get their keycaps in the mail.
+
+--------------------------------------------------------------------------------
+
+**IC (interest check)**
+
+> Usually a Google Form, this is a survey about a potential group buy, in order to gauge interest and receive feedback (e.g. I really wish this keycap set supported my Ergodox, that shade of blue is not pretty, etc)
+
+--------------------------------------------------------------------------------
+
+**QMK (quantum mechanical keyboard)**
+
+> This is the most common custom firmware for keyboards. It is written in C and hosted on GitHub. It is designed to be extensible so that new keyboards can be easily added to the QMK project, allowing the PCB to communicate with a computer as a keyboard.
+
+--------------------------------------------------------------------------------
+
+**PCB (printed circuit board)**
+
+> This is the "chip" that powers the keyboard, which all the components plug into.
+
+--------------------------------------------------------------------------------
+
+**nippers**
+
+> These are basically specialized pliers designed for cutting thin soft plastics and metals. Please do not use scissors instead.
 
 ## Parts: case
 
@@ -112,6 +145,8 @@ That being said, solder-free builds can be really nice. They are typically made 
 
 This is a great setup for getting started. It's $108, ships from the US, and the only things left to buy are switches and keycaps. It's also incredibly easy to maintain since you can just pull the switches or stabilizers right out to work on them, if you decide to wait on lubing them until later.
 
+--------------------------------------------------------------------------------
+
 **More expensive hot swap kit:**
 
 - [DZ60RGB hot-swap DIY kit](https://kbdfans.cn/collections/diy-kit/products/kbdfans-dz60rgb-ansi-hot-swap-diy-kit)
@@ -122,17 +157,23 @@ Please note that if you want to actually see the RGB under-glow you will need to
 
 As for plate options, this is really a personal preference thing. Polycarbonate is transparent and would look really good with the acrylic case, whereas brass is really heavy and will provide a very solid feel for your keyboard.
 
+--------------------------------------------------------------------------------
+
 **Cheaper 65%:**
 
 - [Tada68 keyboard DIY kit](https://kbdfans.cn/collections/diy-kit/products/tada68-keyboard-diy-kit)
 
 Still not sure you can live without dedicated arrow keys? Don't worry, this inexpensive DIY kit for the Tada68 is a great deal. If you have a bit more money, you can upgrade to the aluminum case option for a bit more weight and elegance.
 
+--------------------------------------------------------------------------------
+
 **Minimal soldering 40% keyboard kit:**
 
 - [Zlant 40% keyboard kit](https://www.1upkeyboards.com/shop/keyboard-kits/diy-40-kits/zlant-40-keyboard-kit)
 
 This DIY kit has everything you need to make your first 40% keyboard, and at only 48 keys the build should go by quickly.
+
+--------------------------------------------------------------------------------
 
 **Good soldering tutorial macro pad:**
 
