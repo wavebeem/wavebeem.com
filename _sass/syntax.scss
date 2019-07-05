@@ -5,7 +5,7 @@
 // https://gist.github.com/scotu/1272660
 
 .highlight {
-  $bg: #111111;
+  $bg: #333;
   $fg: #eeeeee;
   $green: #9eebcf;
   $blue: #96ccff;
@@ -16,6 +16,7 @@
 
   pre {
     background: $bg;
+    border-radius: 0.25rem;
   }
 
   pre code {
