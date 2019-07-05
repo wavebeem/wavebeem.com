@@ -189,7 +189,7 @@ This part can be a bit confusing, but the plus side is that QMK firmware is code
 
 The biggest feature of QMK is layers. They are basically like the `Fn` (function) key on many laptop keyboards, except you can have up to 15 of them. This allows you to do things like add a numpad mode to your keyboard, media hotkeys, hidden arrow keys on WASD, or anything you can dream up. You can also use them to toggle between modes sort of like caps lock or num lock.
 
-## Niche Layouts
+## Niche layouts
 
 60% layouts have the most options for keycaps, cases, and PCBs. They are a great starting point for building your keyboard. Note that most 60% keyboards do not have dedicated arrow keys, so you will need to program your keyboard to have arrow keys in a different way (many people use the Function key with WASD or IJKL).
 
