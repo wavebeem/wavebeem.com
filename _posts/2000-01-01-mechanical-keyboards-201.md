@@ -74,11 +74,11 @@ This little dictionary should help you understand some of the incomprehensible j
 
 ## Parts: case
 
-This is the base of your keyboard. Either the PCB or the plate screws in to this piece in order to hold everything together. It usually has rubber feet to give it grip to keep from sliding. Cases also add weight to keep your keyboard solid and in place.
+This is the base of your keyboard. Either the PCB or the plate screws into this piece in order to hold everything together. It usually has rubber feet to give it grip to keep from sliding. Cases also add weight to keep your keyboard solid and in place.
 
 ## Parts: PCB
 
-This is the part that the key switches and USB cable plug in to. Some PCBs are very barebones and require soldering your own diodes and microcontroller in order to work, while others only require soldering switches, and the most convenient ones don't require a single drop of solder.
+This is the part that the key switches and USB cable plug into. Some PCBs are very barebones and require soldering your own diodes and microcontroller in order to work, while others only require soldering switches, and the most convenient ones don't require a single drop of solder.
 
 Technically this part can be replaced with hand-wiring, but you should look up how to do that yourself.
 
@@ -185,7 +185,7 @@ This relatively affordable macro pad is a low stress option for your first solde
 
 QMK is the firmware that powers most custom built keyboards. If you're feeling nerdy, you can clone the [QMK GitHub repo](https://config.qmk.fm) and compile your own keymap locally, though it's easier to get started using their [online keyboard editor](https://config.qmk.fm). You will then need to install [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) in order to install the firmware on your keyboard. Please note that Windows users must install [some drivers](https://github.com/qmk/qmk_driver_installer/releases) first.
 
-This part can be a bit confusing, but the plus side is that QMK firmware is code that runs *on* the keyboard, so your keyboard will work exactly how you want when plugged in to *any* device.
+This part can be a bit confusing, but the plus side is that QMK firmware is code that runs *on* the keyboard, so your keyboard will work exactly how you want when plugged into *any* device.
 
 The biggest feature of QMK is layers. They are basically like the `Fn` (function) key on many laptop keyboards, except you can have up to 15 of them. This allows you to do things like add a numpad mode to your keyboard, media hotkeys, hidden arrow keys on WASD, or anything you can dream up. You can also use them to toggle between modes sort of like caps lock or num lock.
 
