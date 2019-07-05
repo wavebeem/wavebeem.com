@@ -11,6 +11,7 @@ I bet you're reading this because you're curious what all the fuss is about mech
 ## Why
 
 <figure>
+  <!-- <img src="/img/keyboards/ducky.jpg" width="700" height="465" alt=""> -->
   <img src="/img/keyboards/ducky.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://www.flickr.com/photos/asianoni/21181683774">Ducky 9008G2 - Year Of The Tiger</a>
