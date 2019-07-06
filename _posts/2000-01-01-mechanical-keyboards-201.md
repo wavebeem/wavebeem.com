@@ -72,6 +72,30 @@ This little dictionary should help you understand some of the incomprehensible j
 
 > These are basically specialized pliers designed for cutting thin soft plastics and metals. Please do not use scissors instead.
 
+--------------------------------------------------------------------------------
+
+**OEM, DSA, SA, DCS, XDA, Cherry profile**
+
+> These are keycap profiles (shapes). See this [helpful comparison image](http://i.imgur.com/kFxqOm8.jpg) from [u/jacobolus](https://www.reddit.com/user/jacobolus).
+
+--------------------------------------------------------------------------------
+
+**ABS**
+
+ABS (acrylonitrile butadiene styrene) is the most common type of plastic used for cases and keycaps. It is versatile, but tends to become "shiny" (smooth and reflective) over time and with repeated typing. This leads to the perception of it as lower quality than PBT.
+
+--------------------------------------------------------------------------------
+
+**PBT**
+
+PBT (polybutylene terephthalate) is a type of plastic that is much more resistant to "shining". Many PBT keycaps are also made thicker than ABS keycaps, which gives a deeper sound when typing.
+
+--------------------------------------------------------------------------------
+
+**POM**
+
+POM (polyoxymethylene) is a very smooth plastic. It does not get used much for keyboards, but a few keycap sets are available using it, and the NovelKeys Cream switches.
+
 ## Parts: case
 
 This is the base of your keyboard. Either the PCB or the plate screws into this piece in order to hold everything together. It usually has rubber feet to give it grip to keep from sliding. Cases also add weight to keep your keyboard solid and in place.
@@ -143,7 +167,7 @@ That being said, solder-free builds can be really nice. They are typically made 
 - [Frosted acrylic 60% case](https://www.1upkeyboards.com/shop/bases-and-cases/acrylic-60-base-frosted)
 - [GMK screw-in stabilizers](https://www.1upkeyboards.com/shop/parts-and-tools/parts/gmk-screw-in-stabilizers)
 
-This is a great setup for getting started. It's $108, ships from the US, and the only things left to buy are switches and keycaps. It's also incredibly easy to maintain since you can just pull the switches or stabilizers right out to work on them, if you decide to wait on lubing them until later.
+This is a great setup for getting started. It's $108, ships from the US, and the only things left to buy are switches and keycaps. Because there's no plate or solder, you can remove the switches and stabilizers at any time. This is great if you don't want to lube your switches and stabilizers before your build, but you feel like doing it later.
 
 --------------------------------------------------------------------------------
 
