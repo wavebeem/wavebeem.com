@@ -96,6 +96,19 @@ PBT is a type of plastic that is much more resistant to "shining". Many PBT keyc
 
 POM is a very smooth plastic. It does not get used much for keyboards, but a few keycap sets are available using it, and the NovelKeys Cream switches.
 
+--------------------------------------------------------------------------------
+
+**dye-sub (dye-sublimated)**
+
+Dye-sublimation is a durable printing process used for making the legends (letters) on keycaps. Note that because this process uses dye, you can only make colors darker, not brighter. This means that you cannot print white text on a black plastic, for example. This method is usually used for PBT keycaps. Complex multicolor graphics can be printed using this technique.
+
+--------------------------------------------------------------------------------
+
+**double-shot**
+
+Double-shot injection modling is a technique that involves using two separate plastics (usually ABS) in order to make a keycap. This is the ideal method for two-colors designs on keycaps. It will never wear off, and you can combine any colors you'd like (such as white text on black plastic). This is generally not done for PBT plastic.
+
+
 ## Parts: case
 
 This is the base of your keyboard. Either the PCB or the plate screws into this piece in order to hold everything together. It usually has rubber feet to give it grip to keep from sliding. Cases also add weight to keep your keyboard solid and in place.
