@@ -14,7 +14,7 @@ There are a few main reasons you might want to build your own keyboard: it's a l
 
 ## Why you might not build your own
 
-Before we embark on this journey I do caution you that it is not without its perils. First of all, building custom keyboards and getting into niche hardware is an expensive hobby. It is also filled with FOMO (fear of missing out). Many things in this hobby are done as Group Buys (GB), where you pay to pre-order a product that may only ever get made once, if it doesn't get cancelled. Additionally, if you want to create a full size or ten-keyless keyboard, there are _very_ few custom options for those form factors.
+Before we embark on this journey I do caution you that it is not without its perils. First of all, building custom keyboards and getting into niche hardware is an expensive hobby. It is also filled with FOMO (fear of missing out). Many things in this hobby are done as Group Buys (GB), where you pay to pre-order a product that may only ever get made once, if it doesn't get canceled. Additionally, if you want to create a full size or ten-keyless keyboard, there are _very_ few custom options for those form factors.
 
 ## Jargon dictionary
 
@@ -120,7 +120,7 @@ Everything related to keyboards comes down to personal preference, but that's ne
 
 Stabilizers are required for most keyboards. Keys are measured in "units", which are the width of alphabet keys. This is typically abbreviated as 1u, 1.5u, 2u, 6.25u, etc. Keys that are at least 2u wide require stabilizers (also called "stabs") to keep from tilting like a side-to-side. Most keyboards use "Cherry" stabilizers which mount directly to the PCB. Most keyboards have several 2u stabilizers and one 6.25u stabilizer for the spacebar.
 
-Unfortunately, most stabilizers are poorly made. They usually rattle like a jar full of coins when pressed. Fortunately, a small bit of lube and nippers can fix stabilizers to be quiet and smooth. See the [stabilizer mod video](https://www.youtube.com/watch?v=cD5Zj-ZgMLA) by Taeha Types for instructions on how to do this.
+Most stabilizers are poorly made. They usually rattle like a jar full of coins when pressed. Fortunately, a small bit of lube and nippers can fix stabilizers to be quiet and smooth. See the [stabilizer mod video](https://www.youtube.com/watch?v=cD5Zj-ZgMLA) by Taeha Types for instructions on how to do this.
 
 ## Parts: lube
 
@@ -283,7 +283,7 @@ These are my favorite shops I've purchased from (shipping to the US). Please not
 
 [1upkeyboards](https://www.1upkeyboards.com/) has a variety of items, including lube, as well as some nice budget options for DIY kits. Their skeleton kits are very affordable, and the 1up RGB PCB hot-swap edition is a fantastic easy to use PCB.
 
-[KBDfans](https://kbdfans.cn/) has an extremely large selection, though some of their listings are a bit confusing to me. The DZ60 PCB from them is one of the most flexible 60% PCBs on the market (though a bit confusing), and they're Tofu case is highly regarded for its weight and shape. Please note they ship from China, so shipping is a bit slower than other shops on this list.
+[KBDfans](https://kbdfans.cn/) has an extremely large selection, though some of their listings are a bit confusing to me. The DZ60 PCB from them is one of the most flexible 60% PCBs on the market, and their Tofu case is highly regarded for its weight and shape. Please note they ship from China, so shipping is a bit slower than other shops on this list.
 
 [TheKey.Company](https://thekey.company/) runs many excellent keycap group-buys, as well as unique CandyBar layout keyboard.
 
