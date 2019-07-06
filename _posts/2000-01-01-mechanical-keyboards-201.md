@@ -80,21 +80,21 @@ This little dictionary should help you understand some of the incomprehensible j
 
 --------------------------------------------------------------------------------
 
-**ABS**
+**ABS (acrylonitrile butadiene styrene)**
 
-ABS (acrylonitrile butadiene styrene) is the most common type of plastic used for cases and keycaps. It is versatile, but tends to become "shiny" (smooth and reflective) over time and with repeated typing. This leads to the perception of it as lower quality than PBT.
-
---------------------------------------------------------------------------------
-
-**PBT**
-
-PBT (polybutylene terephthalate) is a type of plastic that is much more resistant to "shining". Many PBT keycaps are also made thicker than ABS keycaps, which gives a deeper sound when typing.
+ABS is the most common type of plastic used for cases and keycaps. It is versatile, but tends to become "shiny" (smooth and reflective) over time and with repeated typing. This leads to the perception of it as lower quality than PBT.
 
 --------------------------------------------------------------------------------
 
-**POM**
+**PBT (polybutylene terephthalate)**
 
-POM (polyoxymethylene) is a very smooth plastic. It does not get used much for keyboards, but a few keycap sets are available using it, and the NovelKeys Cream switches.
+PBT is a type of plastic that is much more resistant to "shining". Many PBT keycaps are also made thicker than ABS keycaps, which gives a deeper sound when typing.
+
+--------------------------------------------------------------------------------
+
+**POM (polyoxymethylene)**
+
+POM is a very smooth plastic. It does not get used much for keyboards, but a few keycap sets are available using it, and the NovelKeys Cream switches.
 
 ## Parts: case
 
@@ -187,7 +187,7 @@ As for plate options, this is really a personal preference thing. Polycarbonate 
 
 - [Tada68 keyboard DIY kit](https://kbdfans.cn/collections/diy-kit/products/tada68-keyboard-diy-kit)
 
-Still not sure you can live without dedicated arrow keys? Don't worry, this inexpensive DIY kit for the Tada68 is a great deal. If you have a bit more money, you can upgrade to the aluminum case option for a bit more weight and elegance.
+Still not sure you can live without dedicated arrow keys? Don't worry, the $89 DIY kit for the Tada68 is a great deal. If you have a bit more money, you can upgrade to the aluminum case option for a bit more weight and elegance.
 
 --------------------------------------------------------------------------------
 
@@ -195,7 +195,7 @@ Still not sure you can live without dedicated arrow keys? Don't worry, this inex
 
 - [Zlant 40% keyboard kit](https://www.1upkeyboards.com/shop/keyboard-kits/diy-40-kits/zlant-40-keyboard-kit)
 
-This DIY kit has everything you need to make your first 40% keyboard, and at only 48 keys the build should go by quickly.
+This $70 DIY kit has everything you need to make your first 40% keyboard, and at only 48 keys the build should go by quickly.
 
 --------------------------------------------------------------------------------
 
@@ -203,7 +203,7 @@ This DIY kit has everything you need to make your first 40% keyboard, and at onl
 
 - [Sweet 16 macro pad](https://www.1upkeyboards.com/shop/keyboard-kits/macro-pads/sweet-16-macro-pad-black)
 
-This relatively affordable macro pad is a low stress option for your first soldering project. Note that this macro pad requires you to solder your own microcontroller (Pro Micro) and diodes, a step that is often not required for other PCBs. This will make the build take a bit longer, but it's also great practice for building other niche keyboards that do not come with these components preinstalled on the PCB.
+This $19-29 macro pad kit is a low stress option for your first soldering project. Note that this macro pad requires you to solder your own microcontroller (Pro Micro) and diodes, a step that is often not required for other PCBs. This will make the build take a bit longer, but it's also great practice for building other niche keyboards that do not come with these components preinstalled on the PCB.
 
 ## QMK
 
