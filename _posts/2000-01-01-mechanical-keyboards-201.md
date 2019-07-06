@@ -128,7 +128,7 @@ This is technically optional, but I highly recommend buying lube at least for yo
 
 ## Parts: keycaps
 
-Little pieces of plastic (generally ABS or PBT) that fit on top of the switches so they are comfortable and easy to push with your fingers. These are easy to remove with a little wire puller, and are the most fun part of customizing your keyboard. Generally these are built to be MX compatible. They come in a myriad of different profiles (shapes) depending on how you like it to feel when you type (Cherry, OEM, DCS, DSA, SA, etc).
+Little pieces of plastic (generally ABS or PBT) that fit on top of the switches so they are comfortable to push with your fingers. They are removable using a keycap puller, and are the most fun part of customizing your keyboard. Generally these are built to be MX compatible. They come in a myriad of different profiles (shapes) depending on how you like it to feel when you type (Cherry, OEM, DCS, DSA, SA, etc).
 
 ## Equipment
 
@@ -145,7 +145,7 @@ For *soldering*, you will need access to the following items:
 - A soldering iron ([budget kit](https://www.amazon.com/ANBES-Soldering-Iron-Kit-Electronics/dp/B06XZ31W3M) with some extra goodies or a [deluxe model](https://www.amazon.com/Hakko-FX888D-23BY-Digital-Soldering-Station/dp/B00ANZRT4M) without extras)
 - A damp sponge or [brass sponge](https://www.amazon.com/Hakko-599B-02-Wire-type-soldering-cleaner/dp/B00FZPGDLA) for cleaning the soldering iron tip (**do NOT use your kitchen sponge unless you want lead poisoning**)
 - A [solder sucker and a solder wick](https://www.amazon.com/Tabiger-Solder-Desoldering-Sucker-Remover/dp/B0777LMVTT) (or a [desoldering iron](https://www.amazon.com/American-HAKKO-Products-FR301-03-Desoldering/dp/B07BFVFMS9) if you have lots of money)
-- [Solder](https://www.amazon.com/gp/product/B00B1JKEHS), ideally 67/37 tin/lead split with rosin core for easy melting
+- [Solder](https://www.amazon.com/gp/product/B00B1JKEHS), ideally 67/37 tin/lead split with rosin core for fast melting
 
 If you use a *plate*, you should get an [IC puller](https://www.amazon.com/a13032100ux0040-Anti-Static-Motherboard-Circuit-Extractor/dp/B00CQI99K6) (also called a switch puller), to easily remove switches from the plate without breaking them.
 
@@ -161,7 +161,7 @@ That being said, solder-free builds can be really nice. They are typically made 
 
 ## Kits and builds
 
-**Solder-free hot-swap plate-free build for easy maintenance and trial:**
+**Solder-free hot-swap plate-free build for quick maintenance and trial:**
 
 - [1upkeyboards RGB PCB hot-swap edition](https://www.1upkeyboards.com/shop/controllers/1up-rgb-pcb-hse)
 - [Frosted acrylic 60% case](https://www.1upkeyboards.com/shop/bases-and-cases/acrylic-60-base-frosted)
@@ -281,7 +281,7 @@ These are my favorite shops I've purchased from (shipping to the US). Please not
 
 [Signature Plastics](https://pimpmykeyboard.com/) is my number one stop for keycap sets. They have high quality DSA profile caps made from PBT in many colors, and produce sets to fit specialty keyboards like the Planck, Ergodox, and more. I recommend any of the DSA sets, especially the [dye sublimated sets](https://pimpmykeyboard.com/dsa-sublimated-keysets/).
 
-[1upkeyboards](https://www.1upkeyboards.com/) has a variety of items, including lube, as well as some nice budget options for DIY kits. Their skeleton kits are very affordable, and the 1up RGB PCB hot-swap edition is a fantastic easy to use PCB.
+[1upkeyboards](https://www.1upkeyboards.com/) has a variety of items, including lube, as well as some nice budget options for DIY kits. Their skeleton kits are very affordable, and the 1up RGB PCB hot-swap edition is a fantastic PCB.
 
 [KBDfans](https://kbdfans.cn/) has an extremely large selection, though some of their listings are a bit confusing to me. The DZ60 PCB from them is one of the most flexible 60% PCBs on the market, and their Tofu case is highly regarded for its weight and shape. Please note they ship from China, so shipping is a bit slower than other shops on this list.
 
