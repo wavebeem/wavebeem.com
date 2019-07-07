@@ -106,7 +106,7 @@ Dye-sublimation is a durable printing process used for making the legends (lette
 
 **double-shot**
 
-Double-shot injection modling is a technique that involves using two separate plastics (usually ABS) in order to make a keycap. This is the ideal method for two-colors designs on keycaps. It will never wear off, and you can combine any colors you'd like (such as white text on black plastic). This is generally not done for PBT plastic.
+Double-shot injection molding is a technique that involves using two separate plastics (usually ABS) in order to make a keycap. This is the ideal method for two-colors designs on keycaps. It will never wear off, and you can combine any colors you'd like (such as white text on black plastic). This is generally not done for PBT plastic.
 
 
 ## Parts: case
@@ -131,7 +131,7 @@ Everything related to keyboards comes down to personal preference, but that's ne
 
 ## Parts: stabilizers
 
-Stabilizers are required for most keyboards. Keys are measured in "units", which are the width of alphabet keys. This is typically abbreviated as 1u, 1.5u, 2u, 6.25u, etc. Keys that are at least 2u wide require stabilizers (also called "stabs") to keep from tilting like a side-to-side. Most keyboards use "Cherry" stabilizers which mount directly to the PCB. Most keyboards have several 2u stabilizers and one 6.25u stabilizer for the spacebar.
+Stabilizers are required for most keyboards. Keys are measured in "units", which are the width of alphabet keys. This is typically abbreviated as 1u, 1.5u, 2u, 6.25u, etc. Keys that are at least 2u wide require stabilizers (also called "stabs") to keep from tilting side-to-side. Most keyboards use "Cherry" stabilizers which mount directly to the PCB. Most keyboards have several 2u stabilizers and one 6.25u stabilizer for the spacebar.
 
 Most stabilizers are poorly made. They usually rattle like a jar full of coins when pressed. Fortunately, a small bit of lube and nippers can fix stabilizers to be quiet and smooth. See the [stabilizer mod video](https://www.youtube.com/watch?v=cD5Zj-ZgMLA) by Taeha Types for instructions on how to do this.
 
