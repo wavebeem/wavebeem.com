@@ -298,7 +298,7 @@ These are my favorite shops I've purchased from (shipping to the US). Please not
 
 [KBDfans](https://kbdfans.cn/) has an extremely large selection, though some of their listings are a bit confusing to me. The DZ60 PCB from them is one of the most flexible 60% PCBs on the market, and their Tofu case is highly regarded for its weight and shape. Please note they ship from China, so shipping is a bit slower than other shops on this list.
 
-[TheKey.Company](https://thekey.company/) runs many excellent keycap group-buys, as well as unique CandyBar layout keyboard.
+[TheKey.Company](https://thekey.company/) runs many excellent keycap group-buys, as well as offering the unique CandyBar layout keyboard.
 
 [Cannon Keys](https://cannonkeys.com/) makes the affordable Ortho48 alternative to the Planck.
 
