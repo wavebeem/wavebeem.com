@@ -1,21 +1,22 @@
-// Using colors from the Google color guide:
-// https://www.google.com/design/spec/style/color.html#color-color-palette
+// Using colors from Tachyons:
+// http://tachyons.io/docs/themes/skins/
 
 // Handy guide for Pygments cryptic CSS classes:
 // https://gist.github.com/scotu/1272660
 
 .highlight {
-  $bg: $nearBlack;
-  $fg: #eee;
+  $bg: #333;
+  $fg: #eeeeee;
   $green: #9eebcf;
   $blue: #96ccff;
-  $gray1: #ccc;
-  $gray2: #bbb;
-  $yellow: #ffde37;
-  $orange: #e4a46c;
+  $gray1: #cccccc;
+  $gray2: #aaaaaa;
+  $yellow: #ffd700;
+  $orange: #ffb700;
 
   pre {
     background: $bg;
+    border-radius: 0.25rem;
   }
 
   pre code {

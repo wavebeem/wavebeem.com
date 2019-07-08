@@ -1,17 +1,24 @@
-$nearBlack: #111;
 $linkColor: #d5008f;
 $fontMain: "Helvetica", "Arial", sans-serif;
 $fontPara: "Georgia", "Cambria", "Palatino", serif;
 $fontMonospace: "Menlo", "Consolas", monospace;
-$codeColor: #5e2ca5;
-$gap: 1rem;
+$codeColor: #00449e;
 $radius: 0;
-$smallGap: ($gap / 2);
 $contentWidth: 48rem;
-$smallSize: $contentWidth;
 
 .print {
   display: none;
+}
+
+.hover-bottomline:focus,
+.hover-bottomline:hover {
+  box-shadow: 0 0.125rem 0 0 currentColor;
+}
+
+.hover-outline:focus,
+.hover-outline:hover {
+  box-shadow: 0 0 0 0.125rem currentColor;
+  border-radius: 0.25rem;
 }
 
 @mixin pretty-link($color) {
@@ -35,4 +42,5 @@ $smallSize: $contentWidth;
 :focus {
   outline: none;
   box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+  border-radius: 0.25rem;
 }
