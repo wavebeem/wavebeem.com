@@ -1,5 +1,6 @@
 public
 .sass-cache
+resources
 .DS_Store
 .vscode/*
 !.vscode/spellright.dict

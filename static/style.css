@@ -1,19 +1,22 @@
 :root {
   --lhCopy: 1.5;
   --lhTitle: 1.25;
+
   --f1: 3rem;
   --f2: 2.25rem;
   --f3: 1.5rem;
   --f4: 1.25rem;
   --f5: 1rem;
   --f6: 0.875rem;
-  --linkColor: #d5008f;
+
   --fontMain: "Helvetica", "Arial", sans-serif;
   --fontPara: "Georgia", "Cambria", "Palatino", serif;
   --fontMonospace: "Menlo", "Consolas", monospace;
+
+  --linkColor: #d5008f;
   --codeColor: hsl(214, 100%, 31%);
   --codeColorBG: hsla(214, 100%, 31%, 0.05);
-  --radius: 0;
+
   --contentWidth: 48rem;
 }
 
@@ -107,7 +110,6 @@
 .Content pre {
   padding: 1rem;
   margin: 1rem 0;
-  border-radius: var(--radius);
   overflow-x: auto;
 }
 
