@@ -206,6 +206,7 @@
 
 .highlight pre {
   background: var(--bg);
+  color: var(--fg);
   border-radius: 0.25rem;
 }
 
