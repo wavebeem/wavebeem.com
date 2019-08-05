@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="Brian Mock">
+<meta name="description" content="How JS's 'this' and 'new' work, and how to avoid issues with them">
+<meta name="theme-color" content="#e8fdf5">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@wavebeem">
+<meta name="twitter:creator" content="@wavebeem">
+<meta name="og:title" content="JS Gotchas with This and New">
+<meta name="og:description" content="How JS's 'this' and 'new' work, and how to avoid issues with them">
+<meta name="og:image" content="https://mockbrian.com/brian.png">
+
+<title>JS Gotchas with This and New</title>
+
+<link rel="stylesheet" media="screen" href="/tachyons.min.css?t=1563254458666645000">
+<link rel="stylesheet" media="screen" href="/style.css?t=1563254458666645000">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  (function(host) {
+    var ids = {
+      "dev.mockbrian.com": "UA-52704502-2",
+      "mockbrian.com": "UA-52704502-1",
+    };
+    if (host in ids) {
+      ga("create", ids[host], "auto");
+      ga("send", "pageview");
+    }
+  }(window.location.host));
+</script>
+
+</head>
+<body class="flex flex-column min-vh-100 bg-washed-green lh-copy helvetica">
+
+<div class="flex-auto">
+
+
+
+
+
+<!-- Small nav -->
+<div class="dn-ns">
+  <nav class="f3 flex flex-column mb4 bb dark-pink bw1 b--black-10">
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit pv2 ph3 flex-auto hover-outline b" href="/">Brian Mock</a>
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit pv2 ph3 flex-auto hover-outline" href="/">Home</a>
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit pv2 ph3 flex-auto hover-outline" href="/blog">Blog</a>
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit pv2 ph3 flex-auto hover-outline" href="/resume">Resume</a>
+  </nav>
+</div>
+
+<!-- Big nav -->
+<div class="dn db-ns">
+  <nav class="f3 flex mb4 items-center bb dark-pink bw1 b--black-10">
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit b" href="/">Brian Mock</a>
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit" href="/">Home</a>
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit" href="/blog">Blog</a>
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit" href="/resume">Resume</a>
+  </nav>
+</div>
+
+
+<main class="ph4-ns ph3 center flex-auto lh-copy Content">
+  <h1 class="ma0 f1-ns f2 lh-title">
+    <a href="#">JS Gotchas with This and New</a>
+  </h1>
+  <p class="ma0 helvetica">December 23, 2015</p>
+
+  <h2>Note</h2>
+
+<p>This was originally <a href="https://medium.com/@wavebeem/javascript-gotchas-with-this-and-new-dfb65e387ef">posted on Medium.com</a> on December 23, 2015, but I&#39;m reposting it on my personal blog on January 5, 2017.</p>
+
+<h2>Introduction</h2>
+
+<p>Love it or hate it, you’ve probably used JavaScript at some point. JavaScript has two keywords to aid in writing <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">object-oriented</a> code: <code>this</code> and <code>new</code>. Despite the Java namesake for JavaScript, these keywords work completely differently in JavaScript, and are frequently misunderstood or used improperly on accident. This post explains the behavior of <code>this</code> and <code>new</code>, and explores common mistakes with using them, as well as how to write more resilient code without them.</p>
+
+<h2>Strict Mode Behavior of This and New</h2>
+
+<p>The current version of ECMAScript (the official standard name for JavaScript) is <a href="http://www.ecma-international.org/ecma-262/6.0/">ES2015</a>, but back with the release of <a href="https://es5.github.io/">ES5</a>, a feature was added called <em>strict mode</em>. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">Strict mode</a> is used by starting a file or function with the string literal <code>&quot;use strict&quot;</code> (including quotes). Strict mode changes the semantics of many areas of the language, so I will be covering how it affects <code>this</code> and <code>new</code> as well.</p>
+
+<p>I will start with an explanation of how <code>this</code> works in strict mode, since it’s easier to follow. You can think of <code>this</code> as an implicit parameter to <em>every</em> JavaScript function. You do not declare it in the parameter list and you can’t pass it like a normal argument.</p>
+
+<h2>This with Function Calls</h2>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"this ="</span><span class="p">,</span> <span class="k">this</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span> <span class="c1">// Prints "this = undefined"</span>
+</code></pre></div>
+<p>In the example above, <code>this</code> is implicitly a parameter of <code>add</code>, like it is with every function, and it’s implicitly passed to the function in the <code>console.log</code> line. When a function is invoked in the default manner like <code>foo(x)</code>, <code>this</code> is set to <code>undefined</code>.</p>
+
+<h2>This with Method Calls</h2>
+
+<p>There is another case where <code>this</code> is passed implicitly: <code>foo.bar()</code> and <code>foo[&quot;bar&quot;]()</code>. When the function itself is being referenced directly from an object, the parent object itself is passed as <code>this</code>, which would be <code>foo</code> in this case.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">janelle</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s2">"Janelle"</span><span class="p">,</span>
+  <span class="na">getName</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">janelle</span><span class="p">.</span><span class="nx">getName</span><span class="p">());</span>
+</code></pre></div>
+<p>This will log &quot;Janelle&quot; to the console, as we wanted. But let’s make a slight change and see how this works:</p>
+
+<h2>Gotcha: Forgetting This</h2>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">janelle</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">name</span><span class="p">:</span> <span class="s2">"Janelle"</span><span class="p">,</span>
+  <span class="na">getName</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">function</span> <span class="nx">greet</span><span class="p">(</span><span class="nx">getName</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">"Hello, "</span><span class="p">,</span> <span class="nx">getName</span><span class="p">());</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">getName1</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">return</span> <span class="s2">"Lukas"</span><span class="p">;</span> <span class="p">};</span>
+<span class="kd">var</span> <span class="nx">getName2</span> <span class="o">=</span> <span class="nx">janelle</span><span class="p">.</span><span class="nx">getName</span><span class="p">;</span>
+<span class="nx">greet</span><span class="p">(</span><span class="nx">getName1</span><span class="p">);</span> <span class="c1">// "Hello, Lukas"</span>
+<span class="nx">greet</span><span class="p">(</span><span class="nx">getName2</span><span class="p">);</span> <span class="c1">// Error, cannot get property "name" of undefined</span>
+</code></pre></div>
+<p>Ok, so what happened here? Notice that even though we get the function from <code>janelle.getName</code>, we invoke it using the plain style as <code>getName()</code>, so <code>undefined</code> is passed as the value of <code>this</code>. JavaScript has a built-in method for dealing with this—<code>bind</code>—used like <code>janelle.getName.bind(janelle)</code>. This is a bit wordy, and incredibly easy to forget, but it does give you a new function which will pass <code>janelle</code> as the value of <code>this</code>, even if the function is invoked in the plain style like <code>getName()</code> with no object.</p>
+
+<p>Functions which accept functions as parameters (known as <a href="https://en.wikipedia.org/wiki/Higher-order_function">higher-order functions</a>) are all over the place in JavaScript: <a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setTimeout">setTimeout</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Array.prototype.map</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">Array.prototype.forEach</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">Promise.prototype.then</a>, and many more. Any of these functions are potential places for errors when passing functions using <code>this</code> from an object as an argument.</p>
+
+<h2>An Infuriating Real Life Example</h2>
+
+<p>A practical example you may have run into before involves promises and <code>console.log</code>. Unfortunately, the <code>console</code> object is not governed by any standard, so any JavaScript implementation can omit it or change the behavior however they want. In the past, the methods on <code>console</code> did not use <code>this</code>, so they were resilient in the face of plain invocation. That means this code sample used to work just fine:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">"hello world"</span><span class="p">).</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">);</span>
+</code></pre></div>
+<p>Unfortunately now calling <code>console.log</code> with an incorrect <code>this</code> value causes an illegal invocation error. Couple this with promises swallowing all errors, and you have a line of code that will print nothing and report no errors. There are two common solutions to this problem:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">"hello world"</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">x</span><span class="p">);</span> <span class="p">});</span>
+
+<span class="c1">// or</span>
+
+<span class="nx">Promise</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s2">"hello world"</span><span class="p">)</span>
+  <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nx">console</span><span class="p">));</span>
+</code></pre></div>
+<p>Neither of those are particularly nice, and could be avoided by using a function that never used <code>this</code> in the first place.</p>
+
+<h2>Explicitly Passing This</h2>
+
+<p>There are also two explicit ways to pass <code>this</code> to a function: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call">.call</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">.apply</a>. They are invoked as methods from a function, as follows:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">console</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">console</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]);</span>
+</code></pre></div>
+<p>Both lines are equivalent. The first parameter in both is the value of <code>this</code> to send, and then <code>call</code> takes the arguments normally afterward, whereas <code>apply</code> takes an array of arguments as its second and final parameter.</p>
+
+<h2>Another Common Workaround</h2>
+
+<p>The method <code>call</code> is used in functions like <code>map</code> and <code>forEach</code> which have optional &quot;context&quot; parameters (the value of <code>this</code> to use in the callback).</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">selectors</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"p"</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">,</span> <span class="s2">"img"</span><span class="p">];</span>
+<span class="kd">var</span> <span class="nx">elems1</span> <span class="o">=</span> <span class="nx">selectors</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">,</span> <span class="nb">document</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">elems2</span> <span class="o">=</span> <span class="nx">selectors</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="nb">document</span><span class="p">));</span>
+</code></pre></div>
+<p>Both <code>elems1</code> and <code>elems2</code> contain the same values and don’t throw any errors because the value of <code>this</code> has been preserved correctly, by passing a value for <code>this</code> that the <code>map</code> method can use explicitly with the method <code>call</code>. But with <code>elems2</code> we can see that context parameters are unnecessary when we have the method <code>bind</code>.</p>
+
+<h2>Strict Mode Behavior: New</h2>
+
+<p>The keyword <code>new</code> does quite a few things in the expression <code>new Foo(x)</code>.</p>
+
+<ol>
+<li><p>Let <code>obj</code> be a new object with no properties.</p></li>
+<li><p>Set the prototype of <code>obj</code> to <code>Foo.prototype</code>.</p></li>
+<li><p>Let <code>res</code> be the result of <code>Foo.call(obj, x)</code>.</p></li>
+<li><p>If <code>res</code> is an object, return <code>res</code>. Else return <code>obj</code>.</p></li>
+</ol>
+
+<p>So first of all that’s quite a bit different than just calling <code>Foo(x).</code> This set of steps allows for code like:</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">Person</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nx">Person</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">speak</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="s2">"Hello, I am "</span> <span class="o">+</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">anika</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">(</span><span class="s2">"Anika"</span><span class="p">);</span>
+<span class="nx">anika</span><span class="p">.</span><span class="nx">speak</span><span class="p">();</span> <span class="c1">// "Hello, I am Anika"</span>
+</code></pre></div>
+<p>Notice how the function <code>Person</code> implicitly returns <code>undefined</code> (not an object) so that &quot;else&quot; branch of step 4 will be executed. Functions intended to be used only with <code>new</code> are called <em>constructor functions</em>.</p>
+
+<h2>Gotcha: Forgetting New</h2>
+
+<p>Most functions are called without using the keyword <code>new</code> in JavaScript, so it’s easy to forget. If you call a function made like the above <code>Person</code> without <code>new</code>, the value of <code>this</code> will be set to <code>undefined</code>, and <code>this.name</code> will throw an error.</p>
+
+<h2>Workaround: Not Using a Constructor Function</h2>
+
+<p>Luckily, it’s actually easier to just not use <code>new</code> or constructor functions at all.</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">function</span> <span class="nx">createPerson</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">function</span> <span class="nx">speak</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">"I am "</span> <span class="o">+</span> <span class="nx">name</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="p">{</span>
+    <span class="na">name</span><span class="p">:</span> <span class="nx">name</span><span class="p">,</span>
+    <span class="na">speak</span><span class="p">:</span> <span class="nx">speak</span>
+  <span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">var</span> <span class="nx">anika</span> <span class="o">=</span> <span class="nx">createPerson</span><span class="p">(</span><span class="s2">"Anika"</span><span class="p">);</span>
+<span class="nx">anika</span><span class="p">.</span><span class="nx">speak</span><span class="p">();</span> <span class="c1">// "Hello, I am Anika"</span>
+</code></pre></div>
+<p>Notice how we didn’t use <code>this</code> or <code>new</code>, so we avoid several kinds of errors for consumers of our person API.</p>
+
+<p>Alternatively, we can just avoid methods all together and make a simple module that operates on plain data (such as that returned from JSON APIs):</p>
+<div class="highlight"><pre><code class="language-js" data-lang="js"><span class="kd">var</span> <span class="nx">Person</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="na">create</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">{</span>
+      <span class="na">name</span><span class="p">:</span> <span class="nx">name</span>
+    <span class="p">};</span>
+  <span class="p">},</span>
+  <span class="na">speak</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">p</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="s2">"I am "</span> <span class="o">+</span> <span class="nx">p</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">anika</span> <span class="o">=</span> <span class="nx">Person</span><span class="p">.</span><span class="nx">create</span><span class="p">(</span><span class="s2">"Anika"</span><span class="p">);</span>
+<span class="nx">Person</span><span class="p">.</span><span class="nx">speak</span><span class="p">(</span><span class="nx">anika</span><span class="p">);</span> <span class="c1">// "Hello, I am Anika"</span>
+</code></pre></div>
+<h2>Non-strict Mode</h2>
+
+<p>When not in strict mode, <code>this</code> behaves a little differently. If you pass a non-object value as <code>this</code>, it is converted to an object. If the value is a number, string, or boolean, it’s converted to a wrapped object version. If it’s <code>null</code> or <code>undefined</code>, it’s converted to the global object (known as <code>window</code> or <code>global</code>). This makes constructor functions even more dangerous, as forgetting to use <code>new</code> can make them accidentally set properties on the global object (i.e. set global variables).</p>
+
+<p>Note that it doesn’t matter if <em>your code</em> uses strict mode, it matters if the function you’re calling was written using strict mode. And because it’s opt-in, most code doesn’t use it.</p>
+
+<h2>Other Considerations</h2>
+
+<p>My primary concerns with code are correctness and readability. There are performance benefits in most JavaScript engines to using particular patterns along with <code>this</code> and <code>new</code>, but that is simply not as important to me as avoiding all of its potential problems. If you are making a video game in JavaScript, this performance difference might matter, but it’s likely not your bottleneck in any other kind of application.</p>
+
+<p>And if you’re thinking about prototypal inheritance, it’s equally awkward whether you use <code>new</code> or not, but not featured in this article for brevity.</p>
+
+<p>Some say avoiding <code>this</code> and <code>new</code> is not idiomatic JavaScript. I think generally those kind of comments just mean &quot;I don’t like it&quot;, but in this case it’s just plain wrong. Consider <code>document.createElement(&quot;div&quot;)</code> or <code>$(&quot;div.foo&quot;)</code>, both plain functions that hide away any internal details about <code>new</code>.</p>
+
+<h2>Safer, Easier JavaScript</h2>
+
+<p>As you’ve seen, the behavior of <code>this</code> and <code>new</code> is nothing magical, but both both constructs are more error prone than they need to be. Luckily, JavaScript is a powerful enough language that we do not need either of those features to do object-oriented programming. Don’t let anyone shame you into thinking you’re doing JavaScript &quot;wrong&quot; or you’re not &quot;harnessing the power of prototypes&quot; if you want to write your code this way. Good luck, and have fun writing JavaScript with two dangerous tools out of your way.</p>
+
+
+  <div class="helvetica f3 mv4">
+    <a
+      class="ba bw1 br2 dark-pink db pv2 ph3 hover-bg-white-40 no-underline"
+      href="/blog"
+    >
+      &lsaquo; Read other posts
+    </a>
+  </div>
+</main>
+
+<script type="module">
+  // I would prefer to generate links for my h2 and h3 elements at build time,
+  // but I can't figure out a good way to make Jekyll do that, sadly
+  function slug(text) {
+    return text
+      .trim()
+      .toLowerCase()
+      .replace(/\'/gi, "")
+      .replace(/[^a-z0-9]/gi, "-")
+      .replace(/-{2,}/g, "-")
+      .replace(/^-+|-+$/gm, "")
+      .substring(0, 64);
+  }
+
+  for (const h of document.querySelectorAll("h2, h3")) {
+    h.id = h.id || slug(h.textContent);
+    h.innerHTML = "<a href='#" + h.id + "'>" + h.innerHTML + "</a>";
+  }
+</script>
+
+
+</div>
+
+<footer class="black-70 tc helvetica ph3 pv3 bt bw1 b--black-10 f4">
+  &copy; 2019 Brian Mock
+</footer>
+
+
+</body>
+</html>

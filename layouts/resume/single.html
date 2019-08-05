@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+{{ partial "head.html" . }}
+
+<style>
+@media print {
+  html {
+    font-family: helvetica, serif;
+    font-size: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .screen,
+  footer,
+  nav,
+  header {
+    display: none;
+  }
+
+  hr {
+    /* display: none; */
+    border: 0;
+    border-top: 2px solid #ddd;
+  }
+
+  h1,
+  h2 {
+    font-family: sans-serif;
+  }
+
+  li {
+    margin-top: 0.35em;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    margin-bottom: 0;
+    padding-bottom: 0.25em;
+    border-bottom: 2px solid #333;
+  }
+
+  ul {
+    padding-left: 1.5em;
+  }
+
+  footer {
+    font-size: 10px;
+    text-align: right;
+  }
+
+  a {
+    color: blue;
+  }
+
+  .contact-info {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    float: right;
+    background: white;
+    padding: 0;
+    padding-left: 3em;
+    padding-bottom: 3em;
+  }
+
+  .contact-info p {
+    padding: 0;
+    margin: 0;
+  }
+
+  .contact-info a {
+    text-decoration: none;
+  }
+}
+</style>
+</head>
+<body class="bg-washed-green near-black lh-copy helvetica">
+
+<div class="screen">
+  {% include nav.html %}
+</div>
+
+<main class="ph4-ns ph3 mw7 center flex-auto Content">
+
+<h1 class="ma0 f1-ns f2 lh-title screen">Resume</h1>
+
+<h2 class="screen">Contact Information</h2>
+<div class="contact-info">
+  <h1 class="name print">Brian Mock</h1>
+  <p>
+    <span class="name screen">Brian Mock<br/></span>
+    <a href="mailto:brian@mockbrian.com">brian@mockbrian.com</a><br>
+    <a href="https://mockbrian.com">mockbrian.com</a><br>
+    503-409-7863
+  </p>
+</div>
+
+{{ .Content }}
+</main>
+
+{{ partial "footer.html" . }}
+
+</body>
+</html>

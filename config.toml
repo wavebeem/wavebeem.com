@@ -1,0 +1,8 @@
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+
+[frontmatter]
+date  = [":filename", ":default"]
+
+[permalinks]
+blog = "/blog/:year/:month/:day/:slug"

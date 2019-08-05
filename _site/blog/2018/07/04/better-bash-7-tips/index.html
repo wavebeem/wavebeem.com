@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="author" content="Brian Mock">
+<meta name="description" content="You'll be writing better bash code after following these 7 tips">
+<meta name="theme-color" content="#e8fdf5">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@wavebeem">
+<meta name="twitter:creator" content="@wavebeem">
+<meta name="og:title" content="7 Tips for Better Bash">
+<meta name="og:description" content="You'll be writing better bash code after following these 7 tips">
+<meta name="og:image" content="https://mockbrian.com/brian.png">
+
+<title>7 Tips for Better Bash</title>
+
+<link rel="stylesheet" media="screen" href="/tachyons.min.css?t=1563254458666645000">
+<link rel="stylesheet" media="screen" href="/style.css?t=1563254458666645000">
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  (function(host) {
+    var ids = {
+      "dev.mockbrian.com": "UA-52704502-2",
+      "mockbrian.com": "UA-52704502-1",
+    };
+    if (host in ids) {
+      ga("create", ids[host], "auto");
+      ga("send", "pageview");
+    }
+  }(window.location.host));
+</script>
+
+</head>
+<body class="flex flex-column min-vh-100 bg-washed-green lh-copy helvetica">
+
+<div class="flex-auto">
+
+
+
+
+
+<!-- Small nav -->
+<div class="dn-ns">
+  <nav class="f3 flex flex-column mb4 bb dark-pink bw1 b--black-10">
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit pv2 ph3 flex-auto hover-outline b" href="/">Brian Mock</a>
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit pv2 ph3 flex-auto hover-outline" href="/">Home</a>
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit pv2 ph3 flex-auto hover-outline" href="/blog">Blog</a>
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit pv2 ph3 flex-auto hover-outline" href="/resume">Resume</a>
+  </nav>
+</div>
+
+<!-- Big nav -->
+<div class="dn db-ns">
+  <nav class="f3 flex mb4 items-center bb dark-pink bw1 b--black-10">
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit b" href="/">Brian Mock</a>
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit" href="/">Home</a>
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit" href="/blog">Blog</a>
+    <a class="pa3 hover-bg-white-40 hover-bottomline link color-inherit" href="/resume">Resume</a>
+  </nav>
+</div>
+
+
+<main class="ph4-ns ph3 center flex-auto lh-copy Content">
+  <h1 class="ma0 f1-ns f2 lh-title">
+    <a href="#">7 Tips for Better Bash</a>
+  </h1>
+  <p class="ma0 helvetica">July 4, 2018</p>
+
+  <h2>Who is this post for?</h2>
+
+<p>So, you&#39;re writing a bash script. You use bash in the terminal, but you&#39;re kinda
+fumbling your way through using bash to write more complicated programs. Well,
+keep reading. It can be hard to use bash effectively because it works so
+differently from most other programming languages, but it is not impossible to
+get better at it.</p>
+
+<p>This post assumes you have familiarity with using bash interactively (&quot;in the
+terminal&quot;) and want to get better at writing scripts (&quot;programs&quot;) to automate
+your work.</p>
+
+<p>If you&#39;re impatient, scroll to the bottom for a bash boilerplate with minimal
+explanation to get you started.</p>
+
+<h2>Shebang and bash vs sh</h2>
+
+<p>Make sure the first line of your file is this:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/usr/bin/env bash</span>
+</code></pre></div>
+<p>Now you have two choices:</p>
+
+<ol>
+<li> Name the file <code>my-file</code>, run <code>chmod +x my-file</code>, and then use <code>./my-file</code> to
+run your script</li>
+<li> Save your file as <code>my-file.sh</code> and run your script using <code>bash my-file.sh</code></li>
+</ol>
+
+<p>Do not write <code>#!/bin/bash</code> or <code>#!/bin/sh</code> in your files, and do not run you&#39;re
+scripts using <code>sh my-file</code>. The commands <code>bash</code> and <code>sh</code> effectively refer to
+separate programs on many Linux computers, so you can have problems there.
+Additionally, bash is not always installed in <code>/bin</code>. Remember that bash is a
+more powerful language than sh and has more features due to it being over a
+decade newer.</p>
+
+<h2>Double Quotes</h2>
+
+<p>Quick rule: 99% of the time when you use a <code>$variable</code>, you probably actually
+want <code>&quot;$variable&quot;</code>. The difference is that in most contexts when you write
+<code>$variable</code>, bash examines the contents and splits it up into multiple words.
+Words are kind of like parameters or arguments from other languages. For
+example:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">name</span><span class="o">=</span><span class="s2">"hello world"</span>
+
+<span class="c"># This makes two folders:</span>
+<span class="c"># - hello/</span>
+<span class="c"># - world/</span>
+mkdir <span class="nv">$name</span>
+
+<span class="c"># This makes one folder:</span>
+<span class="c"># - hello world/</span>
+mkdir <span class="s2">"</span><span class="nv">$name</span><span class="s2">"</span>
+</code></pre></div>
+<p>Note that if you use <code>$@</code> which is the special bash syntax for &quot;all the
+arguments&quot; you actually <em>do</em> want to keep it in quotes even though this seems
+backwards. Bash considers arrays different from strings in its behavior with
+double quotes.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">Main<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">printf</span> <span class="s2">"%s %.5f"</span> <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+<span class="o">}</span>
+
+Main <span class="s2">"I love"</span> 3.14159
+</code></pre></div>
+<p>This will correctly print <code>I love 3.14159</code> whereas if you used <code>$@</code> instead of
+<code>&quot;$@&quot;</code> then it would expand to <em>three</em> words and printf would fail by trying to
+print <code>love</code> as a floating point number.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">sentences</span><span class="o">=(</span>
+  <span class="s2">"bash can be kind of tough"</span>
+  <span class="s2">"but it's useful to know how to use it"</span>
+  <span class="s2">"so please keep reading"</span>
+<span class="o">)</span>
+
+<span class="k">for </span>sentence <span class="k">in</span> <span class="s2">"</span><span class="k">${</span><span class="nv">sentences</span><span class="p">[@]</span><span class="k">}</span><span class="s2">"</span>; <span class="k">do
+  </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$sentence</span><span class="s2">"</span>
+<span class="k">done</span>
+<span class="c"># echo "bash can be kind of tough"</span>
+<span class="c"># echo "but it's useful to know how to use it"</span>
+<span class="c"># echo "so please keep reading"</span>
+</code></pre></div>
+<p>Oddly enough this is the correct way to iterate over a bash array! If you forget
+the quotes then bash will split up each word from the sentence and iterate over
+that separately, giving you every word on a separate line:</p>
+<div class="highlight"><pre><code class="language-" data-lang="">bash
+can
+be
+kind
+of
+tough
+but
+it's
+useful
+to
+know
+how
+to
+use
+it
+so
+please
+keep
+reading
+</code></pre></div>
+<p>Finally, don&#39;t forget to also use quotes around command interpolation also:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir <span class="k">$(</span><span class="nb">echo</span> <span class="s2">"hello world"</span><span class="k">)</span>
+</code></pre></div>
+<p>This basically expands to the following after bash runs <code>$()</code> and splits the
+result on whitespace:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir hello world
+</code></pre></div>
+<p>Which makes two directories: one named &quot;hello&quot;, and the other named &quot;world&quot;.</p>
+
+<p>Don&#39;t forget to use double quotes whenever you use <code>$</code>. It looks weird, but it&#39;s
+actually ok to have <code>&quot;</code> inside of <code>&quot;</code> when you have <code>$()</code>! The correct version
+looks like this:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir <span class="s2">"</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">"hello world"</span><span class="k">)</span><span class="s2">"</span>
+<span class="c"># correctly makes one directory named "hello world"</span>
+</code></pre></div>
+<h2>Naming Conventions</h2>
+
+<p>My advice is to make functions in PascalCase like <code>F</code> or <code>MyFunction</code> or
+<code>CreateGzipBackup</code> because most commands that come from bash or are installed on
+your computer are all lowercase like <code>grep</code> or <code>ssh-agent</code>, and the capital
+letters help your functions stand out. I think it&#39;s ok to put dashes in your
+function names (like <code>Create-Gzip-Backup</code>) if you think it&#39;s easier to read them
+that way. But keep the Upper-Case-Letters so they look distinct.</p>
+
+<p>For variables, I like using snake_case like <code>$i</code> or <code>$directory</code> or
+<code>$file_length</code> because environment variables are typically written in
+SCREAMING_SNAKE_CASE like <code>$HOME</code> or <code>$SSH_AUTH_SOCK</code> with all capital letters,
+so it helps you know which variables are for your bash script and which ones are
+coming from the environment.</p>
+
+<h2>Use Local Variables</h2>
+
+<p>When you&#39;re inside a function, you should always make new variables using
+<code>local</code> like this:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">Greet<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">local </span><span class="nv">name</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+  <span class="nb">echo</span> <span class="s2">"Hello, </span><span class="nv">$name</span><span class="s2">"</span>
+<span class="o">}</span>
+
+Greet <span class="s2">"Blaise"</span>
+<span class="c"># =&gt; Hello, Blaise</span>
+</code></pre></div>
+<p>If you don&#39;t use <code>local</code> then <code>$name</code> will be available outside of <code>Greet</code> after
+you call it, which can mess things up if you end up using two variables with the
+same name.</p>
+
+<p>For more information, read up on dynamic variable scoping, which is fairly
+unique to bash.</p>
+
+<h2>set -e</h2>
+
+<p>This is the secret sauce. Without <code>set -e</code>, code quickly becomes littered with
+lines like this:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm run build:js <span class="o">&amp;&amp;</span>
+  cp build/bundle.js dist <span class="o">&amp;&amp;</span>
+  npm run build:css <span class="o">&amp;&amp;</span>
+  cp build/bundle.css dist <span class="o">||</span> <span class="nb">exit </span>1
+</code></pre></div>
+<p>or:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">npm run build:js <span class="o">||</span> <span class="nb">exit </span>1
+cp build/bundle.js dist <span class="o">||</span> <span class="nb">exit </span>1
+npm run build:css <span class="o">||</span> <span class="nb">exit </span>1
+cp build/bundle.css dist <span class="o">||</span> <span class="nb">exit </span>1
+</code></pre></div>
+<p>Most other languages would allow you to omit the error handling logic there and
+automatically crash the script when a <code>cp</code> or <code>mv</code> command fails. But bash is
+designed to be used interactively. Can you imagine if making a typo in your <code>cp</code>
+command closed your terminal? That would be sad.</p>
+
+<p>But you can opt-in to this behavior by putting <code>set -e</code> at the top of your
+script. The full details from the bash man page are:</p>
+
+<blockquote>
+<p>Exit immediately if a simple command (see SHELL GRAMMAR above) exits with a
+non-zero status. The shell does not exit if the command that fails is part of
+the command list immediately following a while or until keyword, part of the
+test in an if statement, part of a &amp;&amp; or || list, or if the command&#39;s return
+value is being inverted via !. A trap on ERR, if set, is executed before the
+shell exits.</p>
+</blockquote>
+
+<p>Which roughly means that any standalone command will crash your script if it
+exits with a nonzero code. So if your failing command is part of a pipeline or
+an <code>if</code> condition it&#39;s not a problem and will still work great.</p>
+
+<p>If you want to force a command to not crash your script you can append <code>|| true</code>
+to the command and then it will always succeed:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">mkdir /tmp <span class="o">||</span> <span class="nb">true</span>
+<span class="c"># Make directory /tmp or silently fail if</span>
+<span class="c"># permission denied or it exists already</span>
+</code></pre></div>
+<h2>set -u</h2>
+
+<p>In most programming languages, referencing a variable that has not been declared
+causes your program to crash. In bash, it gives you an empty string. This makes
+it hard to detect typos or other missing data.</p>
+
+<p>Luckily, <code>set -u</code> is an opt-in behavior to get error messages for using
+undeclared variables.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">set</span> -u
+<span class="nv">message</span><span class="o">=</span><span class="s2">"hello there"</span>
+<span class="nb">echo</span> <span class="s2">"</span><span class="nv">$mesaage</span><span class="s2">"</span>
+<span class="c"># bash: mesaage: unbound variable</span>
+</code></pre></div>
+<p>This is also helpful if you forget to pass arguments to a bash function:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">set</span> -u
+
+Greet<span class="o">()</span> <span class="o">{</span>
+  <span class="nb">local </span><span class="nv">greeting</span><span class="o">=</span><span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>
+  <span class="nb">local </span><span class="nv">name</span><span class="o">=</span><span class="s2">"</span><span class="nv">$2</span><span class="s2">"</span>
+  <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$greeting</span><span class="s2">, </span><span class="nv">$name</span><span class="s2">."</span>
+<span class="o">}</span>
+
+Greet <span class="s2">"Good morning"</span>
+<span class="c"># bash: $2: unbound variable</span>
+</code></pre></div>
+<p>Luckily if you need to supply a default value for a variable in bash there is a
+way to do it which will get around this error message:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">set</span> -u
+<span class="nb">echo</span> <span class="s2">"</span><span class="k">${</span><span class="nv">undefined_variable</span><span class="k">:-</span><span class="nv">my</span><span class="p"> fallback value</span><span class="k">}</span><span class="s2">"</span>
+<span class="c"># my fallback value</span>
+</code></pre></div>
+<p>You can put any string you want after the <code>:-</code> and inside <code>${}</code>, even another
+variable like this:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">set</span> -u
+<span class="nv">fallback</span><span class="o">=</span><span class="s2">"default value"</span>
+<span class="nv">value</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">my_var</span><span class="k">:-</span><span class="nv">$fallback</span><span class="k">}</span><span class="s2">"</span>
+<span class="nb">echo</span> <span class="s2">"</span><span class="nv">$value</span><span class="s2">"</span>
+</code></pre></div>
+<p>Or even multiple levels:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">set</span> -u
+<span class="nb">echo</span> <span class="s2">"</span><span class="k">${</span><span class="nv">a</span><span class="k">:-${</span><span class="nv">b</span><span class="k">:-</span><span class="nv">c</span><span class="k">}}</span><span class="s2">"</span>
+<span class="c"># echo "c"</span>
+</code></pre></div>
+<p>In a lot of cases it&#39;s actually ok to get an empty string back, which is totally
+possible here by putting <em>nothing</em> after the <code>:-</code>:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">set</span> -u
+<span class="nb">echo</span> <span class="s2">"</span><span class="k">${</span><span class="nv">value</span><span class="k">:-}</span><span class="s2">"</span>
+<span class="c"># echo ""</span>
+</code></pre></div>
+<p>Admittedly this syntax is pretty cryptic, but here&#39;s how I remember it: the
+<code>:-}</code> is a little friend with a mustache saying &quot;I hope you defined that
+variable, but if not, I&#39;m gonna give you an empty string!&quot;.</p>
+
+<h2>set -x</h2>
+
+<p><code>set -x</code> enables a debugging mode that prints out every command before bash runs
+it.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">set</span> -x
+<span class="nb">echo</span> <span class="s2">"hello world"</span>
+date
+<span class="c"># + echo 'hello world'</span>
+<span class="c"># hello world</span>
+<span class="c"># + date</span>
+<span class="c"># Wed Jun 27 22:30:10 PDT 2018</span>
+</code></pre></div>
+<p>If you want to debug your whole script you can just put it right at the top, but
+you can actually turn this <em>off</em> by using <code>set +x</code> (yeah, it seems backwards to
+me too).</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">FunctionOne
+<span class="nb">set</span> -x
+FunctionTwo
+<span class="nb">set</span> +x
+FunctionThree
+FunctionFour
+</code></pre></div>
+<p>And boom, you&#39;re now debugging just one function.</p>
+
+<h2>Conclusion</h2>
+
+<p>This might be a lot to take in. You can review this script which follows best
+practices:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/usr/bin/env bash</span>
+<span class="nb">set</span> -eu
+
+<span class="nv">environment</span><span class="o">=</span><span class="s2">"</span><span class="k">${</span><span class="nv">NODE_ENV</span><span class="k">:-</span><span class="nv">production</span><span class="k">}</span><span class="s2">"</span>
+
+<span class="nv">files</span><span class="o">=(</span>
+  dist/<span class="k">*</span>
+  index.html
+  <span class="s2">"legal document.pdf"</span>
+<span class="o">)</span>
+
+Clean<span class="o">()</span> <span class="o">{</span>
+  rm -rf dist
+  mkdir dist
+<span class="o">}</span>
+
+Build<span class="o">()</span> <span class="o">{</span>
+  webpack --env <span class="s2">"</span><span class="nv">$environment</span><span class="s2">"</span>
+  less main.less &gt; dist/style.css
+<span class="o">}</span>
+
+Deploy<span class="o">()</span> <span class="o">{</span>
+  aws s3 sync dist/ s3://my-bucket/assets/
+<span class="o">}</span>
+
+Clean
+Build
+Deploy
+</code></pre></div>
+<h2>Further reading</h2>
+
+<p>There is a lot to know with bash! So once you think you&#39;ve mastered these tips,
+you might want to check out the following links to learn more about programming
+in bash.</p>
+
+<p>The article <a href="http://redsymbol.net/articles/unofficial-bash-strict-mode/">Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)</a> is the inspiration for this blog post. I
+don&#39;t agree with it 100%, but it&#39;s still a fun read, and goes into some things
+not mentioned here.</p>
+
+<p>If you need to write an <code>if</code> statement in your script <a href="https://stackoverflow.com/a/3427931">you should use [[</a> because it offers many useful features over the classic <code>[</code> conditional expression.</p>
+
+<p>The <a href="https://gist.github.com/jonpryor/b44439f7f01ad2af73c0">dynamic variable scoping</a> in bash is different from almost every other language.</p>
+
+<p><a href="https://stackoverflow.com/a/16496491">getopts</a> is the standard way to accept command line arguments.</p>
+
+<p>Cleanup at the end of your script can be done via <a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_12_02.html">trap</a>.</p>
+
+<p>Some scripts benefit from assuming they <a href="https://stackoverflow.com/a/3355423">run in the directory where they live</a>, instead of your current working directory.</p>
+
+<p>It may seem like bash is entirely based around strings, but you can also have
+<a href="http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_10_02.html">arrays of strings</a>!</p>
+
+
+  <div class="helvetica f3 mv4">
+    <a
+      class="ba bw1 br2 dark-pink db pv2 ph3 hover-bg-white-40 no-underline"
+      href="/blog"
+    >
+      &lsaquo; Read other posts
+    </a>
+  </div>
+</main>
+
+<script type="module">
+  // I would prefer to generate links for my h2 and h3 elements at build time,
+  // but I can't figure out a good way to make Jekyll do that, sadly
+  function slug(text) {
+    return text
+      .trim()
+      .toLowerCase()
+      .replace(/\'/gi, "")
+      .replace(/[^a-z0-9]/gi, "-")
+      .replace(/-{2,}/g, "-")
+      .replace(/^-+|-+$/gm, "")
+      .substring(0, 64);
+  }
+
+  for (const h of document.querySelectorAll("h2, h3")) {
+    h.id = h.id || slug(h.textContent);
+    h.innerHTML = "<a href='#" + h.id + "'>" + h.innerHTML + "</a>";
+  }
+</script>
+
+
+</div>
+
+<footer class="black-70 tc helvetica ph3 pv3 bt bw1 b--black-10 f4">
+  &copy; 2019 Brian Mock
+</footer>
+
+
+</body>
+</html>
