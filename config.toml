@@ -1,5 +1,5 @@
 pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
+pygmentsUseClasses = true
 
 [frontmatter]
 date  = [":filename", ":default"]
