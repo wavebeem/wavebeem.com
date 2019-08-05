@@ -1,4 +1,4 @@
-baseURL = "https://mockbrian.com/"
+baseURL = "/"
 
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
