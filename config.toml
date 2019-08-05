@@ -1,3 +1,5 @@
+baseURL = "https://mockbrian.com/"
+
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 pygmentsUseClasses = true
