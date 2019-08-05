@@ -1,5 +1,6 @@
 ---
 title: "Resume • Brian Mock"
+type: "resume"
 ---
 
 ## Core Technical Skills
