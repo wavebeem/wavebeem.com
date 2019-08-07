@@ -6,29 +6,27 @@
   <body
     class="flex flex-column min-vh-100 near-black bg-washed-green lh-copy helvetica"
   >
-    <div class="flex-auto">
-      {{ partial "nav.html" . }}
-      <main class="mw7 center flex-auto">
-        <h1 class="mt0 ph4-ns ph3 f1-ns f2 lh-title">Posts</h1>
-        <ul class="pa0 ma0 list">
-          {{ range.Pages }}
-          <li class="bt bw1 b--black-10">
-            <a
-              class="db no-underline hover-bg-white-40 hover-outline dark-pink pv4 ph4-ns ph3"
-              href="{{ .Permalink }}"
-            >
-              <h2 class="f3 mv0">
-                {{ .Title }}
-              </h2>
-              <p class="mb0 nt1 f4 near-black">
-                {{ .Date.Format "January 02, 2006" }}
-              </p>
-            </a>
-          </li>
-          {{ end }}
-        </ul>
-      </main>
-    </div>
+    {{ partial "nav.html" . }}
+    <main class="mw7 center flex-auto w-100">
+      <h1 class="mt0 ph4-ns ph3 f1-ns f2 lh-title">Posts</h1>
+      <ul class="pa0 ma0 list">
+        {{ range .Pages }}
+        <li class="bt bw1 b--black-10">
+          <a
+            class="db no-underline hover-bg-white-40 hover-outline dark-pink pv4 ph4-ns ph3"
+            href="{{ .Permalink }}"
+          >
+            <h2 class="f3 mv0">
+              {{ .Title }}
+            </h2>
+            <p class="mb0 nt1 f4 near-black">
+              {{ .Date.Format "January 02, 2006" }}
+            </p>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </main>
     {{ .Content }}
     {{ partial "footer.html" . }}
   </body>
