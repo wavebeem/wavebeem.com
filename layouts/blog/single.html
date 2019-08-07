@@ -1,14 +1,17 @@
----
-layout: bare
----
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{ partial "head.html" . }}
+</head>
+<body class="flex flex-column min-vh-100 near-black bg-washed-green lh-copy helvetica">
+{{ partial "nav.html" . }}
 <main class="ph4-ns ph3 center flex-auto lh-copy Content">
   <h1 class="ma0 f1-ns f2 lh-title">
-    <a href="#">{{ page.title }}</a>
+    <a href="#">{{ .Title }}</a>
   </h1>
-  <p class="ma0 helvetica">{{ page.date | date: "%B %-d, %Y" }}</p>
+  <p class="ma0 helvetica">{{ .Date.Format "January 02, 2006" }}</p>
 
-  {{ content }}
+  {{ .Content }}
 
   <div class="helvetica f3 mv4">
     <a
@@ -39,3 +42,6 @@ layout: bare
     h.innerHTML = "<a href='#" + h.id + "'>" + h.innerHTML + "</a>";
   }
 </script>
+{{ partial "footer.html" . }}
+</body>
+</html>

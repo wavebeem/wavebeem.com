@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body
+    class="flex flex-column min-vh-100 near-black bg-washed-green lh-copy helvetica"
+  >
+    {{ partial "nav.html" . }}
+    {{ .Content }}
+    {{ partial "footer.html" . }}
+  </body>
+</html>

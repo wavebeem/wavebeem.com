@@ -1,0 +1,292 @@
+:root {
+  --lhCopy: 1.5;
+  --lhTitle: 1.25;
+
+  --f1: 3rem;
+  --f2: 2.25rem;
+  --f3: 1.5rem;
+  --f4: 1.25rem;
+  --f5: 1rem;
+  --f6: 0.875rem;
+
+  --fontMain: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --fontPara: "Georgia", "Cambria", "Palatino", serif;
+  --fontMonospace: "Menlo", "Consolas", monospace;
+
+  --linkColor: #d5008f;
+  --codeColor: hsl(214, 100%, 31%);
+  --codeColorBG: hsla(214, 100%, 31%, 0.05);
+
+  --contentWidth: 48rem;
+}
+
+.print {
+  display: none;
+}
+
+.hover-bottomline:focus,
+.hover-bottomline:hover {
+  box-shadow: 0 0.125rem 0 0 currentColor;
+}
+
+.hover-outline:focus,
+.hover-outline:hover {
+  box-shadow: 0 0 0 0.125rem currentColor;
+  border-radius: 0.25rem;
+}
+
+.pretty-link {
+  color: var(--linkColor);
+  text-decoration: underline;
+  transition: none;
+}
+
+.pretty-link:hover {
+  opacity: 0.6;
+}
+
+.link:focus,
+:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+  border-radius: 0.25rem;
+}
+
+.Content {
+  max-width: var(--contentWidth);
+  font-family: var(--fontPara);
+  font-size: var(--f4);
+}
+
+.Content figure {
+  background: #333;
+  color: #eee;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 1rem 0;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 0.25rem;
+}
+
+.Content figure img {
+  border-radius: 0.25rem;
+}
+
+.Content figcaption {
+  padding: 0;
+  padding-top: 0.5rem;
+  font-family: var(--fontMain);
+  font-size: var(--f5);
+}
+
+.Content figcaption a {
+  color: #fff;
+  text-decoration: underline;
+  transition: none;
+}
+
+.Content figcaption a:hover {
+  opacity: 0.6;
+}
+
+.Content blockquote {
+  margin-left: -1rem;
+  margin-right: 0;
+  padding-left: 1rem;
+  border-left: 0.125rem solid currentColor;
+  font-style: italic;
+}
+
+.Content pre,
+.Content code {
+  font-size: var(--f5);
+  font-family: var(--fontMonospace);
+}
+
+.Content pre {
+  padding: 1rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+}
+
+.Content p,
+.Content ul li {
+  line-height: var(--lhCopy);
+}
+
+.Content h1,
+.Content h2,
+.Content h3 {
+  font-family: var(--fontMain);
+  line-height: var(--lhTitle);
+}
+
+.Content h1 a,
+.Content h2 a,
+.Content h3 a {
+  padding: 0;
+  color: inherit;
+  text-decoration: inherit;
+  border: none;
+  background: transparent;
+}
+
+.Content h1 a:hover,
+.Content h2 a:hover,
+.Content h3 a:hover {
+  text-decoration: underline;
+}
+
+.Content hr {
+  border: 0;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.Content h2 {
+  font-size: var(--f2);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 30em) {
+  .Content h2 {
+    font-size: var(--f3);
+  }
+}
+
+.Content li a,
+.Content p a {
+  color: var(--linkColor);
+  text-decoration: underline;
+  transition: none;
+}
+
+.Content li a:hover,
+.Content p a:hover {
+  opacity: 0.6;
+}
+
+.Content ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.Content li + li {
+  margin-top: 0.25rem;
+}
+
+.Content li code,
+.Content p code {
+  display: inline-block;
+  padding: 0;
+  color: var(--codeColor);
+  background-color: var(--codeColorBG);
+}
+
+/* Using colors from Tachyons:
+ * http://tachyons.io/docs/themes/skins/
+ *
+ * Handy guide for Pygments cryptic CSS classes:
+ * https://gist.github.com/scotu/1272660
+ */
+
+.highlight {
+  --bg: #333;
+  --fg: #eeeeee;
+  --green: #9eebcf;
+  --blue: #96ccff;
+  --gray1: #cccccc;
+  --gray2: #aaaaaa;
+  --yellow: #ffd700;
+  --orange: #ffb700;
+}
+
+.highlight pre {
+  background: var(--bg);
+  color: var(--fg);
+  border-radius: 0.25rem;
+}
+
+.highlight pre code {
+  color: var(--fg);
+}
+
+/* .nt = Name tag */
+/* .kd = Function */
+/* .k = Keyword */
+/* .kr = Keyword */
+.highlight .nt,
+.highlight .kd,
+.highlight .k,
+.highlight .kr {
+  color: var(--green);
+}
+
+/* .nx = Normal */
+.highlight .nx {
+  color: var(--fg);
+}
+
+/* .na = Name attribute */
+/* .nb = Name builtin */
+/* .nn = Namespace */
+.highlight .na,
+.highlight .nb,
+.highlight .nn {
+  color: var(--fg);
+}
+
+/* .p = Punctuation */
+/* .o = Operator */
+/* .si = String interpolation */
+.highlight .p,
+.highlight .o,
+.highlight .si,
+.highlight .se {
+  color: var(--gray2);
+}
+
+/* .s = String */
+/* .s1 = String */
+/* .s2 = String */
+/* .sr = Regexp */
+/* .si = String escape */
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sr,
+.highlight .se {
+  color: var(--yellow);
+}
+
+/* .no = Named constant */
+/* .kc = Constant */
+/* .kt = Type constant */
+/* .py = Named property */
+.highlight .no,
+.highlight .kc,
+.highlight .mi,
+.highlight .kt,
+.highlight .py {
+  color: var(--gray1);
+}
+
+/* .mi = Number */
+.highlight .mi {
+  color: var(--orange);
+}
+
+/* .c = Comment */
+/* .c1 = Comment */
+/* .cm = Comment */
+.highlight .c,
+.highlight .c1,
+.highlight .cm {
+  color: var(--blue);
+}

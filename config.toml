@@ -1,0 +1,11 @@
+baseURL = "/"
+
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsUseClasses = true
+
+[frontmatter]
+date  = [":filename", ":default"]
+
+[permalinks]
+blog = "/blog/:year/:month/:day/:slug"

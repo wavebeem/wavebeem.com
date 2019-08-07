@@ -1,6 +1,7 @@
-_site
-.sass-cache
-.venv
 .DS_Store
+
 .vscode/*
 !.vscode/spellright.dict
+
+public
+resources
