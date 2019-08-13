@@ -306,6 +306,8 @@ These are my favorite shops I've purchased from (shipping to the US). Please not
 
 [KeyHive](https://keyhive.xyz/shop) has the parts you need to build the Corne 40% split keyboard.
 
+[Little Keyboards](https://www.littlekeyboards.com) has many excellent split keyboard cases and the PCBs to go with them.
+
 [Keebio](https://keeb.io/) is the home of the Iris and Levinson split keyboards, as well as many parts needed for more advanced builds (spacers, diodes, LEDs, microcontrollers, etc).
 
 ## What now?
@@ -313,3 +315,9 @@ These are my favorite shops I've purchased from (shipping to the US). Please not
 I normally check out [r/MechanicalKeyboards](https://www.reddit.com/r/MechanicalKeyboards/) for updates and photos about what's new in the world of keebs.
 
 Depending on where you live, there might be a regional meetup. I highly suggest checking out this [meetup list](https://www.reddit.com/r/MechanicalKeyboards/wiki/meetups) to see if there's one near you.
+
+## Updates
+
+**2019-08-12**
+
+- Added link to _Little Keyboards_.
