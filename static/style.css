@@ -53,6 +53,7 @@
 }
 
 .Content {
+  width: 100%;
   max-width: var(--contentWidth);
   font-family: var(--fontPara);
   font-size: var(--f4);
