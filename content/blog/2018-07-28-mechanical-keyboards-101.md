@@ -1,7 +1,6 @@
 ---
 title: "Mechanical Keyboards 101"
 description: "An introduction to the exciting world of mechanical keyboards"
-layout: post
 ---
 
 ## Introduction

@@ -1,7 +1,6 @@
 ---
 title: "7 Tips for Better Bash"
 description: "You'll be writing better bash code after following these 7 tips"
-layout: post
 ---
 
 ## Who is this post for?

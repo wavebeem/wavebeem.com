@@ -1,7 +1,6 @@
 ---
 title: "Mechanical Keyboards 201"
 description: "Thinking beyond pre-built gear"
-layout: post
 ---
 
 ## Who is this article for

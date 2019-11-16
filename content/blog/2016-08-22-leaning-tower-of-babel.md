@@ -1,7 +1,6 @@
 ---
 title: "The Leaning Tower of Babel"
 description: "An exploration of Babel's caveats"
-layout: post
 ---
 
 ## About Babel
