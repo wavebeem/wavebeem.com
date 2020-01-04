@@ -14,10 +14,17 @@
   --fontMonospace: "Menlo", "Consolas", monospace;
 
   --linkColor: #d5008f;
+  --navyColor: #001b44;
+  --washedGreenColor: #e8fdf5;
+  --lightGreen: #9eebcf;
   --codeColor: hsl(214, 100%, 31%);
   --codeColorBG: hsla(214, 100%, 31%, 0.05);
 
   --contentWidth: 48rem;
+
+  /* scrollbar-color: var(--navyColor) var(--washedGreenColor); */
+  scrollbar-color: var(--navyColor) var(--lightGreen);
+  overflow-y: scroll;
 }
 
 .print {
@@ -26,7 +33,7 @@
 
 .hover-bottomline:focus,
 .hover-bottomline:hover {
-  box-shadow: 0 0.125rem 0 0 currentColor;
+  box-shadow: inset 0 -0.125rem 0 0 currentColor;
 }
 
 .hover-outline:focus,
@@ -60,8 +67,8 @@
 }
 
 .Content figure {
-  background: #333;
-  color: #eee;
+  background: var(--navyColor);
+  color: var(--washedGreenColor);
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -75,6 +82,7 @@
 
 .Content figure img {
   border-radius: 0.25rem;
+  border: 1px solid hsla(0, 0%, 100%, 0.25);
 }
 
 .Content figcaption {
@@ -144,15 +152,13 @@
 
 .Content hr {
   border: 0;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .Content h2 {
   font-size: var(--f2);
-  padding-bottom: 0.5rem;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  margin-top: 4rem;
+  margin-bottom: 0rem;
 }
 
 @media (max-width: 30em) {
@@ -198,7 +204,7 @@
  */
 
 .highlight {
-  --bg: #333;
+  --bg: var(--navyColor);
   --fg: #eeeeee;
   --green: #9eebcf;
   --blue: #96ccff;
@@ -212,6 +218,7 @@
   background: var(--bg);
   color: var(--fg);
   border-radius: 0.25rem;
+  scrollbar-color: var(--fg) var(--bg);
 }
 
 .highlight pre code {
