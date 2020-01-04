@@ -22,8 +22,16 @@
 
   --contentWidth: 48rem;
 
-  /* scrollbar-color: var(--navyColor) var(--washedGreenColor); */
-  scrollbar-color: var(--navyColor) var(--lightGreen);
+  /* Don't make the scrollbar jump around as you navigate :\
+   * Also, Firefox supports easily themed scrollbars :O
+   */
+  scrollbar-color: var(--linkColor) #c7e1d7;
+
+  /* Using transparent colors to blend with the page background actually makes a
+   * lot of sense, but I'm not sure how it works on Windows right now
+   */
+  /* scrollbar-color: var(--linkColor) rgba(0, 0, 0, 0.1); */
+  /* scrollbar-color: currentColor transparent; */
   overflow-y: scroll;
 }
 
