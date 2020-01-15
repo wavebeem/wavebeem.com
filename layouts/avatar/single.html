@@ -6,8 +6,8 @@
   <body
     class="flex flex-column min-vh-100 washed-green bg-navy lh-copy helvetica"
   >
-    {{ .Content }}
     <main class="pa4 flex-auto lh-copy">
+      {{ .Content }}
       <div class="ImageGrid mw7 center">
         {{ range (readDir "static/img/avatars") }}
           {{ $url := printf "%s/%s" "/img/avatars" .Name }}
