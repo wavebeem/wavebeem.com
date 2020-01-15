@@ -1,5 +1,5 @@
 ---
-title: "Resume • Brian Mock"
+title: "Resume | Brian Mock"
 type: "resume"
 ---
 
@@ -20,7 +20,7 @@ Ruby, Python, Bash, Amazon S3, Cloudfront, Route 53, JIRA, Java
 
 ---
 
-**Aruba Networks**, _Senior JavaScript Developer_ (February 2018-January 2019)
+**Aruba Networks**, _Senior JavaScpnript Developer_ (February 2018-January 2019)
 
 - Migrated frontend to new technology stack (React SPA, component library)
 - Enhanced, debugged, and refactored internal component library
