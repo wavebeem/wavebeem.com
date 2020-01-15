@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" class="DarkScrollbar">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body
+    class="flex flex-column min-vh-100 washed-green bg-navy lh-copy helvetica"
+  >
+    {{ .Content }}
+    <main class="pa4 flex-auto lh-copy">
+      <div class="ImageGrid mw7 center">
+        {{ range (readDir "static/img/avatars") }}
+          {{ $url := printf "%s/%s" "/img/avatars" .Name }}
+          <figure class="ma0">
+            <img src="{{ $url }}" class="br3 bw2 bg-white-10 b--white-40 ba" />
+            <figcaption>
+              <a href="{{ $url }}" class="washed-green hover-white">
+                {{ .Name }}
+              </a>
+            </figcaption>
+          </figure>
+        {{ end }}
+      </div>
+    </main>
+  </body>
+</html>
