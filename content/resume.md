@@ -13,35 +13,35 @@ Ruby, Python, Bash, Amazon S3, Cloudfront, Route 53, JIRA, Java
 
 ## Work Experience
 
-**Aruba Networks**, _Frontend Team Manager_ (January 2019-_present_)
+**Aruba Networks**, _Frontend Team Manager_ (January 2019&ndash;_present_)
 
 - Managed team of three other developers, organizing their work streams
 - Contributed as lead developer on a WebGL map and routing editor application
 
 ---
 
-**Aruba Networks**, _Senior JavaScript Developer_ (February 2018-January 2019)
+**Aruba Networks**, _Senior JavaScript Developer_ (February 2018&ndash;January 2019)
 
 - Migrated frontend to new technology stack (React SPA, component library)
 - Enhanced, debugged, and refactored internal component library
 
 ---
 
-**AWS Elemental**, _Software Development Engineer II_ (May 2017–February 2018)
+**AWS Elemental**, _Software Development Engineer II_ (May 2017&ndash;February 2018)
 
 - Drove best practices as a contributor on a wayward TypeScript project
 - Migrated test suite to Mocha, advocated for Prettier (code formatter)
 
 ---
 
-**CrowdCompass**, _JavaScript Engineer_ (February 2016–May 2017)
+**CrowdCompass**, _JavaScript Engineer_ (February 2016&ndash;May 2017)
 
 - Maintained multiple web apps (Ember, Rails+jQuery)
 - Migrated CoffeeScript to ES6; developed ESLint code quality strategy
 
 ---
 
-**Janrain**, _JavaScript Engineer_ (September 2012–July 2015)
+**Janrain**, _JavaScript Engineer_ (September 2012&ndash;July 2015)
 
 - Maintained a legacy library in production on thousands of sites, with IE8 support
 - Documented hundreds of features through extensive code research
