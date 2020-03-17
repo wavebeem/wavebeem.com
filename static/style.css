@@ -25,12 +25,8 @@
   /* Don't make the scrollbar jump around as you navigate :\
    * Also, Firefox supports easily themed scrollbars :O
    */
-  scrollbar-color: hsl(156, 30%, 25%) hsl(156, 30%, 85%);
+  scrollbar-color: white var(--navyColor);
   overflow-y: scroll;
-}
-
-.DarkScrollbar {
-  scrollbar-color: var(--washedGreenColor) var(--navyColor);
 }
 
 .print {
