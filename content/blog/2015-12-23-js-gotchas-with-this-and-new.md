@@ -121,11 +121,11 @@ The keyword `new` does quite a few things in the expression `new Foo(x)`.
 
 1. Let `obj` be a new object with no properties.
 
-1. Set the prototype of `obj` to `Foo.prototype`.
+2. Set the prototype of `obj` to `Foo.prototype`.
 
-1. Let `res` be the result of `Foo.call(obj, x)`.
+3. Let `res` be the result of `Foo.call(obj, x)`.
 
-1. If `res` is an object, return `res`. Else return `obj`.
+4. If `res` is an object, return `res`. Else return `obj`.
 
 So first of all that’s quite a bit different than just calling `Foo(x).` This set of steps allows for code like:
 

@@ -30,6 +30,7 @@ Now you have two choices:
 
 1.  Name the file `my-file`, run `chmod +x my-file`, and then use `./my-file` to
     run your script
+
 2.  Save your file as `my-file.sh` and run your script using `bash my-file.sh`
 
 Do not write `#!/bin/bash` or `#!/bin/sh` in your files, and do not run you're
