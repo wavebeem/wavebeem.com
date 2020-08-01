@@ -64,10 +64,15 @@ nav {
   border-bottom: var(--bit-border-width) dotted var(--bit-color0);
   padding-bottom: 1rem;
   margin-bottom: 1rem;
+  display: grid;
+  grid-gap: 1rem;
 }
 
-nav > * + * {
-  margin-left: 1rem;
+@media (min-width: 400px) {
+  nav {
+    /* Is there a better way than hard coding 4 columns here? */
+    grid-template-columns: repeat(4, max-content);
+  }
 }
 
 footer {
