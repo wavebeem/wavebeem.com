@@ -1,6 +1,6 @@
 /**
  * @license
- * 1bit-ui v0.9.0
+ * 1bit-ui v0.10.0
  * Copyright 2020 Brian Mock
  * https://www.1bit-ui.com
  */
@@ -467,7 +467,7 @@
   fill: var(--bit-color0);
 }
 
-.bit-auto code,
+.bit-auto :not(pre) > code,
 .bit-auto kbd,
 .bit-auto samp,
 .bit-code {
@@ -481,7 +481,7 @@
 .bit-hr {
   box-sizing: border-box;
   border: 0;
-  border-top: var(--bit-border-width) solid var(--bit-color0);
+  border-top: var(--bit-border-width) dotted var(--bit-color0);
 }
 
 .bit-auto pre,

@@ -1,13 +1,13 @@
 :root {
   --font-sans: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   --font-serif: "Georgia", "Cambria", "Palatino", serif;
-  --font-mono: "Menlo", "Consolas", monospace;
+  --font-mono: "JetBrains Mono", "Fira Code", "Menlo", "Consolas", monospace;
   --content-width: 768px;
   /* EN4 palette https://lospec.com/palette-list/en4 */
-  --color-pal0: #20283d;
-  --color-pal1: #426e5d;
-  --color-pal2: #e5b083;
-  --color-pal3: #fbf7f3;
+  --color-pal0: hsl(223, 31%, 18%);
+  --color-pal1: hsl(157, 25%, 35%);
+  --color-pal2: hsl(28, 65%, 71%);
+  --color-pal3: hsl(30, 50%, 97%);
   overflow-y: scroll;
 }
 
@@ -15,11 +15,10 @@
   --bit-color0: var(--color-pal0);
   --bit-color1: var(--color-pal3);
   --color-link: var(--color-pal1);
-  --color-code: var(--color-pal0);
-}
-
-.bit-auto hr {
-  border-style: dotted;
+  --color-syntax-bg: var(--color-pal0);
+  /* Lighter version of pal2 */
+  --color-code-bg: hsl(28, 65%, 91%);
+  --color-code-fg: var(--color-pal0);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,7 +26,11 @@
     --bit-color0: var(--color-pal3);
     --bit-color1: var(--color-pal0);
     --color-link: var(--color-pal2);
-    --color-code: #273149;
+    /* Lighter version of pal0 */
+    --color-syntax-bg: hsl(222, 30%, 26%);
+    /* Even lighter version of pal0 */
+    --color-code-bg: hsl(222, 30%, 32%);
+    --color-code-fg: var(--color-pal3);
   }
 }
 
@@ -88,7 +91,7 @@ footer {
 }
 
 ul {
-  padding-left: 1rem;
+  padding-left: 1.25rem;
   list-style-type: square;
 }
 
@@ -100,9 +103,15 @@ code,
 pre {
   font-family: var(--font-mono);
   font-size: 1rem;
+  font-variant-ligatures: none;
 }
 
-.bit-auto pre code {
+.bit-auto code {
+  --bit-color0: var(--color-code-bg);
+  --bit-color1: var(--color-code-fg);
+}
+
+.bit-auto pre > code {
   background: transparent;
 }
 

@@ -1,29 +1,23 @@
-/* Using colors from Tachyons:
- * http://tachyons.io/docs/themes/skins/
- *
+/**
  * Handy guide for Pygments cryptic CSS classes:
  * https://gist.github.com/scotu/1272660
  */
 
  .highlight {
-  --bg: var(--color-code);
-  --fg: #eeeeee;
-  --green: #9eebcf;
-  --blue: #96ccff;
-  --gray1: #cccccc;
-  --gray2: #aaaaaa;
-  --yellow: #ffd700;
-  --orange: #ffb700;
+  --bg: var(--color-syntax-bg);
+  --fg: hsl(223, 31%, 93%);
+  --green: hsl(158, 70%, 70%);
+  --blue: hsl(223, 100%, 79%);
+  --gray1: hsl(223, 31%, 90%);
+  --gray2: hsl(223, 31%, 80%);
+  --yellow: hsl(51, 80%, 65%);
+  --orange: hsl(43, 80%, 65%);
 }
 
 .highlight pre {
   background: var(--bg);
   color: var(--fg);
   scrollbar-color: var(--fg) var(--bg);
-}
-
-.highlight pre code {
-  color: var(--fg);
 }
 
 /* .nt = Name tag */
@@ -35,6 +29,7 @@
 .highlight .k,
 .highlight .kr {
   color: var(--green);
+  font-weight: bold;
 }
 
 /* .nx = Normal */
