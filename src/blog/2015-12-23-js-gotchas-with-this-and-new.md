@@ -1,7 +1,9 @@
 ---
-title: "JS Gotchas with This and New"
+title: "JS Gotchas With This and New"
 description: "How JS's 'this' and 'new' work, and how to avoid issues with them"
 ---
+
+@[toc]
 
 ## Note
 
@@ -13,9 +15,9 @@ Love it or hate it, you’ve probably used JavaScript at some point. JavaScript 
 
 ## Strict Mode Behavior of This and New
 
-The current version of ECMAScript (the official standard name for JavaScript) is [ES2015](http://www.ecma-international.org/ecma-262/6.0/), but back with the release of [ES5](https://es5.github.io/), a feature was added called *strict mode*. [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) is used by starting a file or function with the string literal `"use strict"` (including quotes). Strict mode changes the semantics of many areas of the language, so I will be covering how it affects `this` and `new` as well.
+The current version of ECMAScript (the official standard name for JavaScript) is [ES2015](http://www.ecma-international.org/ecma-262/6.0/), but back with the release of [ES5](https://es5.github.io/), a feature was added called _strict mode_. [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) is used by starting a file or function with the string literal `"use strict"` (including quotes). Strict mode changes the semantics of many areas of the language, so I will be covering how it affects `this` and `new` as well.
 
-I will start with an explanation of how `this` works in strict mode, since it’s easier to follow. You can think of `this` as an implicit parameter to *every* JavaScript function. You do not declare it in the parameter list and you can’t pass it like a normal argument.
+I will start with an explanation of how `this` works in strict mode, since it’s easier to follow. You can think of `this` as an implicit parameter to _every_ JavaScript function. You do not declare it in the parameter list and you can’t pass it like a normal argument.
 
 ## This with Function Calls
 
@@ -37,9 +39,9 @@ There is another case where `this` is passed implicitly: `foo.bar()` and `foo["b
 ```js
 var janelle = {
   name: "Janelle",
-  getName: function() {
+  getName: function () {
     return this.name;
-  }
+  },
 };
 console.log(janelle.getName());
 ```
@@ -51,16 +53,18 @@ This will log "Janelle" to the console, as we wanted. But let’s make a slight 
 ```js
 var janelle = {
   name: "Janelle",
-  getName: function() {
+  getName: function () {
     return this.name;
-  }
+  },
 };
 
 function greet(getName) {
   console.log("Hello, ", getName());
 }
 
-var getName1 = function() { return "Lukas"; };
+var getName1 = function () {
+  return "Lukas";
+};
 var getName2 = janelle.getName;
 greet(getName1); // "Hello, Lukas"
 greet(getName2); // Error, cannot get property "name" of undefined
@@ -81,13 +85,13 @@ Promise.resolve("hello world").then(console.log);
 Unfortunately now calling `console.log` with an incorrect `this` value causes an illegal invocation error. Couple this with promises swallowing all errors, and you have a line of code that will print nothing and report no errors. There are two common solutions to this problem:
 
 ```js
-Promise.resolve("hello world")
-  .then(function(x) { console.log(x); });
+Promise.resolve("hello world").then(function (x) {
+  console.log(x);
+});
 
 // or
 
-Promise.resolve("hello world")
-  .then(console.log.bind(console));
+Promise.resolve("hello world").then(console.log.bind(console));
 ```
 
 Neither of those are particularly nice, and could be avoided by using a function that never used `this` in the first place.
@@ -134,15 +138,15 @@ function Person(name) {
   this.name = name;
 }
 
-Person.prototype.speak = function() {
+Person.prototype.speak = function () {
   return "Hello, I am " + this.name;
-}
+};
 
 var anika = new Person("Anika");
 anika.speak(); // "Hello, I am Anika"
 ```
 
-Notice how the function `Person` implicitly returns `undefined` (not an object) so that "else" branch of step 4 will be executed. Functions intended to be used only with `new` are called *constructor functions*.
+Notice how the function `Person` implicitly returns `undefined` (not an object) so that "else" branch of step 4 will be executed. Functions intended to be used only with `new` are called _constructor functions_.
 
 ## Gotcha: Forgetting New
 
@@ -159,7 +163,7 @@ function createPerson(name) {
   }
   return {
     name: name,
-    speak: speak
+    speak: speak,
   };
 }
 
@@ -173,14 +177,14 @@ Alternatively, we can just avoid methods all together and make a simple module t
 
 ```js
 var Person = {
-  create: function(name) {
+  create: function (name) {
     return {
-      name: name
+      name: name,
     };
   },
-  speak: function(p) {
+  speak: function (p) {
     return "I am " + p.name;
-  }
+  },
 };
 
 var anika = Person.create("Anika");
@@ -191,7 +195,7 @@ Person.speak(anika); // "Hello, I am Anika"
 
 When not in strict mode, `this` behaves a little differently. If you pass a non-object value as `this`, it is converted to an object. If the value is a number, string, or boolean, it’s converted to a wrapped object version. If it’s `null` or `undefined`, it’s converted to the global object (known as `window` or `global`). This makes constructor functions even more dangerous, as forgetting to use `new` can make them accidentally set properties on the global object (i.e. set global variables).
 
-Note that it doesn’t matter if *your code* uses strict mode, it matters if the function you’re calling was written using strict mode. And because it’s opt-in, most code doesn’t use it.
+Note that it doesn’t matter if _your code_ uses strict mode, it matters if the function you’re calling was written using strict mode. And because it’s opt-in, most code doesn’t use it.
 
 ## Other Considerations
 

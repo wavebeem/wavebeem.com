@@ -3,6 +3,8 @@ title: "The Leaning Tower of Babel"
 description: "An exploration of Babel's caveats"
 ---
 
+@[toc]
+
 ## About Babel
 
 [Babel][3] is the most popular [ES6][1] (aka ES2015) compiler right now. It takes code written in ES6 and turns it into code that runs in any ES5 JavaScript engine. ES5 is the overwhelming standard in JavaScript engines right now, but that is ever-changing, as evidenced by the [ES6 compatibility table][2].
@@ -11,7 +13,7 @@ Babel allows you to "Use next generation JavaScript, today", but of course there
 
 ## What is this post about?
 
-The purpose of this blog post is not to discuss the upfront costs (extra compilation step, extra dependencies, difficulty of configuration), but to discuss the *eventual* costs of using Babel. Like most abstractions, [Babel leaks][5]. What I mean specifically is that Babel in many cases cannot (or chooses not to) 100% correctly produce the semantics of ES6 in the resulting ES5 code.
+The purpose of this blog post is not to discuss the upfront costs (extra compilation step, extra dependencies, difficulty of configuration), but to discuss the _eventual_ costs of using Babel. Like most abstractions, [Babel leaks][5]. What I mean specifically is that Babel in many cases cannot (or chooses not to) 100% correctly produce the semantics of ES6 in the resulting ES5 code.
 
 ## Why so picky about semantics?
 
@@ -35,18 +37,18 @@ const Person = () => {
 Person.prototype = {
   setName(name) {
     this.name = name;
-  }
+  },
 };
 
 const amina = new Person();
-amina.setName('Amina');
+amina.setName("Amina");
 console.log(amina.name);
 ```
 
 Babel compromises and just emits a regular function here, so the code works without errors.
 
 ```javascript
-'use strict';
+"use strict";
 
 var Person = function Person() {
   console.log(undefined);
@@ -55,11 +57,11 @@ var Person = function Person() {
 Person.prototype = {
   setName: function setName(name) {
     this.name = name;
-  }
+  },
 };
 
 var amina = new Person();
-amina.setName('Amina');
+amina.setName("Amina");
 console.log(amina.name);
 ```
 
@@ -101,7 +103,7 @@ ES6 symbols are a fairly complicated feature that really can't be compiled easil
 The first polyfill route for symbols is to put all symbol keys as properties on `Object.prototype`, meaning that a seemingly harmless loop like this actually creates a massive memory leak.
 
 ```javascript
-for (var i = 0; i < 999999; i++) Symbol()
+for (var i = 0; i < 999999; i++) Symbol();
 ```
 
 This polyfill technique creates a [non-enumerable][12] property on `Object.prototype` every time you create a new symbol, which leads to incorrect ownership semantics, in addition to the memory leak.
@@ -111,22 +113,25 @@ var s1 = Symbol();
 var s2 = Symbol();
 s1 in Object.prototype; // true, but shouldn't be
 s2 in Object.prototype; // true, but shouldn't be
-s1 in {};               // true, but shouldn't be
-s2 in {};               // true, but shouldn't be
-Object.keys({a: 1});    // ["a"], which is correct
+s1 in {}; // true, but shouldn't be
+s2 in {}; // true, but shouldn't be
+Object.keys({ a: 1 }); // ["a"], which is correct
 ```
 
 ## Funny keys
 
 The other option is just to put the "symbol" keys into an object using a funny name that looks like gibberish. This clever hack is done by producing an object with a funny `toString` method, since objects are converted via `toString` automatically when used as keys to other objects. The implementation could look something like this:
 
-
 ```javascript
 var i = 0;
 function Symbol(tag) {
   tag = tag || "";
   var str = "#Symbol(" + tag + ")#" + i;
-  return {toString: function() { return str; }};
+  return {
+    toString: function () {
+      return str;
+    },
+  };
 }
 
 var s = Symbol("nice");
@@ -173,43 +178,48 @@ Now remember that this compiled output needs a whole separate runtime library be
 ```javascript
 "use strict";
 
-var asyncAdd = function() {
-  var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee() {
-    var x, y;
-    return regeneratorRuntime.wrap(function _callee$(
-      _context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            _context2.next = 2;
-            return getA();
+var asyncAdd = (function () {
+  var ref = _asyncToGenerator(
+    regeneratorRuntime.mark(function _callee() {
+      var x, y;
+      return regeneratorRuntime.wrap(
+        function _callee$(_context2) {
+          while (1) {
+            switch ((_context2.prev = _context2.next)) {
+              case 0:
+                _context2.next = 2;
+                return getA();
 
-          case 2:
-            x = _context2.sent;
-            _context2.next = 5;
-            return getB();
+              case 2:
+                x = _context2.sent;
+                _context2.next = 5;
+                return getB();
 
-          case 5:
-            y = _context2.sent;
-            return _context2.abrupt("return", x + y);
+              case 5:
+                y = _context2.sent;
+                return _context2.abrupt("return", x + y);
 
-          case 7:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, _callee, this);
-  }));
+              case 7:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        },
+        _callee,
+        this
+      );
+    })
+  );
 
   return function asyncAdd() {
     return ref.apply(this, arguments);
   };
-}();
+})();
 
 function _asyncToGenerator(fn) {
-  return function() {
+  return function () {
     var gen = fn.apply(this, arguments);
-    return new Promise(function(resolve, reject) {
+    return new Promise(function (resolve, reject) {
       function step(key, arg) {
         try {
           var info = gen[key](arg);
@@ -221,11 +231,14 @@ function _asyncToGenerator(fn) {
         if (info.done) {
           resolve(value);
         } else {
-          return Promise.resolve(value).then(function(value) {
-            return step("next", value);
-          }, function(err) {
-            return step("throw", err);
-          });
+          return Promise.resolve(value).then(
+            function (value) {
+              return step("next", value);
+            },
+            function (err) {
+              return step("throw", err);
+            }
+          );
         }
       }
       return step("next");
@@ -236,27 +249,31 @@ function _asyncToGenerator(fn) {
 var _marked = [nice].map(regeneratorRuntime.mark);
 
 function nice() {
-  return regeneratorRuntime.wrap(function nice$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          _context.next = 2;
-          return 1;
+  return regeneratorRuntime.wrap(
+    function nice$(_context) {
+      while (1) {
+        switch ((_context.prev = _context.next)) {
+          case 0:
+            _context.next = 2;
+            return 1;
 
-        case 2:
-          _context.next = 4;
-          return 2;
+          case 2:
+            _context.next = 4;
+            return 2;
 
-        case 4:
-          _context.next = 6;
-          return 3;
+          case 4:
+            _context.next = 6;
+            return 3;
 
-        case 6:
-        case "end":
-          return _context.stop();
+          case 6:
+          case "end":
+            return _context.stop();
+        }
       }
-    }
-  }, _marked[0], this);
+    },
+    _marked[0],
+    this
+  );
 }
 
 var _iteratorNormalCompletion = true;
@@ -294,7 +311,7 @@ try {
 ES6 default arguments are not scoped properly in Babel. This example should throw an exception when calling `f`:
 
 ```javascript
-function f(x=x) {
+function f(x = x) {
   return x;
 }
 
@@ -307,7 +324,8 @@ But instead Babel produces code that simply returns `undefined`.
 "use strict";
 
 function f() {
-  var x = arguments.length <= 0 || arguments[0] === undefined ? x : arguments[0];
+  var x =
+    arguments.length <= 0 || arguments[0] === undefined ? x : arguments[0];
 
   return x;
 }
@@ -317,27 +335,27 @@ console.log(f());
 
 ## ES6 modules
 
-Possibly one of the most anticipated features of ES6 is modules. Unfortunately, all that was really standardized with ES6 is the *syntax* of ES6 modules, and the semantics of module bindings. Any kind of interoperability with CommonJS was left unmentioned, and even the meaning of the module identifier was left [completely to another (unfinished) spec to decide][10].
+Possibly one of the most anticipated features of ES6 is modules. Unfortunately, all that was really standardized with ES6 is the _syntax_ of ES6 modules, and the semantics of module bindings. Any kind of interoperability with CommonJS was left unmentioned, and even the meaning of the module identifier was left [completely to another (unfinished) spec to decide][10].
 
-Because of all this, Babel has to make pragmatic decisions such that developers can use it *now*, and can continue to use the many CommonJS packaged JavaScript libraries available on [npm][11].
+Because of all this, Babel has to make pragmatic decisions such that developers can use it _now_, and can continue to use the many CommonJS packaged JavaScript libraries available on [npm][11].
 
 ```javascript
-import * as foo from 'bar';
-import foo from 'bar';
+import * as foo from "bar";
+import foo from "bar";
 ```
 
 Those two lines should have completely different semantics, but Babel makes them equivalent. This will probably break a lot of code that depends on Babel's specific compilation strategy for ES6 modules.
 
 ```javascript
-export {a, b, c};
-export default {a, b, c};
+export { a, b, c };
+export default { a, b, c };
 ```
 
 Confusingly, only the second export form is generating a JavaScript object, the first is merely performing multiple exports on the same line. Since Babel has to work with ES5 though, both forms generate objects at runtime, further confusing how ES6 modules actually work.
 
 ## Conclusion
 
-This is not to say that Babel, core-js, or regenerator are bad projects, or that you shouldn't use them. My point in writing this is that I don't see anyone talking about the issues with using these tools, and the issues with eventually *not* using these tools any more.
+This is not to say that Babel, core-js, or regenerator are bad projects, or that you shouldn't use them. My point in writing this is that I don't see anyone talking about the issues with using these tools, and the issues with eventually _not_ using these tools any more.
 
 I don't use them in my personal projects mostly due to the added complexity. But this is your call, or your team's call.
 

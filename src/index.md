@@ -1,10 +1,11 @@
 ---
 title: "Brian Mock"
+layout: "layout-base.njk"
 ---
 
 <h1>
   <img
-    src="/banner.gif"
+    src="/static/banner.gif"
     width="512"
     height="128"
     alt="Welcome, traveler!"

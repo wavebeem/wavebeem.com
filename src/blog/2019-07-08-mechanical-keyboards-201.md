@@ -3,6 +3,8 @@ title: "Mechanical Keyboards 201"
 description: "Thinking beyond pre-built gear"
 ---
 
+@[toc]
+
 ## Who is this article for
 
 This article is for people who have some familiarity with mechanical keyboards already. If not, you should read my first article, [Mechanical Keyboards 101](/blog/2018/07/28/mechanical-keyboards-101/). You might be considering building your own keyboard or trying out more niche hardware.
@@ -23,90 +25,89 @@ This little dictionary should help you understand some of the incomprehensible j
 
 > Short for keyboard, keeb is a fun word for talking about keyboards. You may also see "MK" for mechanical keyboard. I think keeb is more fun though.
 
---------------------------------------------------------------------------------
+---
 
 **Stab**
 
 > Stabilizers are often called stabs. They are used to keep long keys from becoming misaligned while typing.
 
---------------------------------------------------------------------------------
+---
 
 **Lube**
 
 > Lubricant is usually just called lube, and it's applied to stabilizers and key switches in order to make them smoother and quieter. It's generally a liquid or thin paste which fills in the rough surface on the metal or plastic pieces that are touching each other.
 
---------------------------------------------------------------------------------
+---
 
 **MoQ (minimum order quantity)**
 
 > The smallest order size a factory will take. Running a factory is hard work, and calibrating everything just to make a single keycap set is expensive. This number allows the factories to make a profit.
 
---------------------------------------------------------------------------------
+---
 
 **GB (group buy)**
 
 > This is a selling method usually used for custom keycaps. Keycaps are generally made in large factories, but such factories have high MoQs, so it's too expensive for one person to buy enough keycap sets to cover the MoQ themselves. With a group buy, many people online pre-order the keycaps (several months in advance), and if the MoQ is reached, eventually get their keycaps in the mail.
 
---------------------------------------------------------------------------------
+---
 
 **IC (interest check)**
 
 > Usually a Google Form, this is a survey about a potential group buy, in order to gauge interest and receive feedback (e.g. I really wish this keycap set supported my Ergodox, that shade of blue is not pretty, etc)
 
---------------------------------------------------------------------------------
+---
 
 **QMK (quantum mechanical keyboard)**
 
 > This is the most common custom firmware for keyboards. It is written in C and hosted on GitHub. It is designed to be extensible so that new keyboards can be easily added to the QMK project, allowing the PCB to communicate with a computer as a keyboard.
 
---------------------------------------------------------------------------------
+---
 
 **PCB (printed circuit board)**
 
 > This is the "chip" that powers the keyboard, which all the components plug into.
 
---------------------------------------------------------------------------------
+---
 
 **Nippers**
 
 > These are basically specialized pliers designed for cutting thin soft plastics and metals. Please do not use scissors instead.
 
---------------------------------------------------------------------------------
+---
 
 **OEM, DSA, SA, DCS, XDA, Cherry profile**
 
 > These are keycap profiles (shapes). See this [helpful comparison image](http://i.imgur.com/kFxqOm8.jpg) from [u/jacobolus](https://www.reddit.com/user/jacobolus).
 
---------------------------------------------------------------------------------
+---
 
 **ABS (acrylonitrile butadiene styrene)**
 
 > ABS is the most common type of plastic used for cases and keycaps. It is versatile, but tends to become "shiny" (smooth and reflective) over time and with repeated typing. This leads to the perception of it as lower quality than PBT.
 
---------------------------------------------------------------------------------
+---
 
 **PBT (polybutylene terephthalate)**
 
 > PBT is a type of plastic that is much more resistant to "shining". Many PBT keycaps are also made thicker than ABS keycaps, which gives a deeper sound when typing.
 
---------------------------------------------------------------------------------
+---
 
 **POM (polyoxymethylene)**
 
 > POM is a very smooth plastic. It does not get used much for keyboards, but a few keycap sets are available using it, and the NovelKeys Cream switches.
 
---------------------------------------------------------------------------------
+---
 
 **dye-sub (dye-sublimated)**
 
 > Dye-sublimation is a durable printing process used for making the legends (letters) on keycaps. Note that because this process uses dye, you can only make colors darker, not brighter. This means that you cannot print white text on a black plastic, for example. This method is usually used for PBT keycaps. Complex multicolor graphics can be printed using this technique.
 
---------------------------------------------------------------------------------
+---
 
 **double-shot**
 
 > Double-shot injection molding is a technique that involves using two separate plastics (usually ABS) in order to make a keycap. This is the ideal method for two-colors designs on keycaps. It will never wear off, and you can combine any colors you'd like (such as white text on black plastic). This is generally not done for PBT plastic.
-
 
 ## Parts: case
 
@@ -146,15 +147,15 @@ Little pieces of plastic (generally ABS or PBT) that fit on top of the switches 
 
 Most cases come with all screws necessary, and I assume you have access to a Phillips (+) head screwdriver.
 
-For *lubing*, you will need access to the following items:
+For _lubing_, you will need access to the following items:
 
 - A [thin paint brush](https://www.amazon.com/gp/product/B01HWCAGQQ) to apply the lube
 
 - A [key switch opener](https://kbdfans.cn/collections/keyboard-part/products/gb-2-in-1-machined-aluminum-switch-opener) is technically optional, but will save you a lot of time and effort
 
-- Lube such as  [Krytox GPL 205](https://www.1upkeyboards.com/shop/misc/krytox-gpl-205/), or other [similar lubes](https://www.1upkeyboards.com/shop/parts-and-tools/lubricant/switch-lubricant-2ml/)
+- Lube such as [Krytox GPL 205](https://www.1upkeyboards.com/shop/misc/krytox-gpl-205/), or other [similar lubes](https://www.1upkeyboards.com/shop/parts-and-tools/lubricant/switch-lubricant-2ml/)
 
-For *soldering*, you will need access to the following items:
+For _soldering_, you will need access to the following items:
 
 - A soldering iron ([budget kit](https://www.amazon.com/ANBES-Soldering-Iron-Kit-Electronics/dp/B06XZ31W3M) with some extra goodies or a [deluxe model](https://www.amazon.com/Hakko-FX888D-23BY-Digital-Soldering-Station/dp/B00ANZRT4M) without extras)
 
@@ -164,7 +165,7 @@ For *soldering*, you will need access to the following items:
 
 - [Solder](https://www.amazon.com/gp/product/B00B1JKEHS), ideally 67/37 tin/lead split with rosin core for fast melting
 
-If you use a *plate*, you should get an [IC puller](https://www.amazon.com/a13032100ux0040-Anti-Static-Motherboard-Circuit-Extractor/dp/B00CQI99K6) (also called a switch puller), to easily remove switches from the plate without breaking them.
+If you use a _plate_, you should get an [IC puller](https://www.amazon.com/a13032100ux0040-Anti-Static-Motherboard-Circuit-Extractor/dp/B00CQI99K6) (also called a switch puller), to easily remove switches from the plate without breaking them.
 
 You should also buy a [keycap puller](https://www.amazon.com/WASD-Keyboards-Wire-Keycap-Puller/dp/B00AZCGF7K) to safely and easily remove keycaps.
 
@@ -184,49 +185,49 @@ That being said, solder-free builds can be really nice. They are typically made 
 - [Frosted acrylic 60% case](https://www.1upkeyboards.com/shop/bases-and-cases/acrylic-60-base-frosted)
 - [GMK screw-in stabilizers](https://www.1upkeyboards.com/shop/parts-and-tools/parts/gmk-screw-in-stabilizers)
 
-This is a great setup for getting started. It's $108, ships from the US, and the only things left to buy are switches and keycaps. Because there's no plate or solder, you can remove the switches and stabilizers at any time. This is great if you don't want to lube your switches and stabilizers before your build, but you feel like doing it later.
+This is a great setup for getting started. It's \$108, ships from the US, and the only things left to buy are switches and keycaps. Because there's no plate or solder, you can remove the switches and stabilizers at any time. This is great if you don't want to lube your switches and stabilizers before your build, but you feel like doing it later.
 
---------------------------------------------------------------------------------
+---
 
 **More expensive hot swap kit:**
 
 - [DZ60RGB hot-swap DIY kit](https://kbdfans.cn/collections/diy-kit/products/kbdfans-dz60rgb-ansi-hot-swap-diy-kit)
 
-This is a top of the line case and PCB. The only things you need to buy for this build are switches and keycaps. The kit is $159, plus the cost of your switches and keycaps.
+This is a top of the line case and PCB. The only things you need to buy for this build are switches and keycaps. The kit is \$159, plus the cost of your switches and keycaps.
 
 Please note that if you want to actually see the RGB under-glow you will need to choose the acrylic case.
 
 As for plate options, this is really a personal preference thing. Polycarbonate is transparent and would look really good with the acrylic case, whereas brass is really heavy and will provide a very solid feel for your keyboard.
 
---------------------------------------------------------------------------------
+---
 
 **Cheaper 65%:**
 
 - [Tada68 keyboard DIY kit](https://kbdfans.cn/collections/diy-kit/products/tada68-keyboard-diy-kit)
 
-Still not sure you can live without dedicated arrow keys? Don't worry, the $89 DIY kit for the Tada68 is a great deal. If you have a bit more money, you can upgrade to the aluminum case option for a bit more weight and elegance.
+Still not sure you can live without dedicated arrow keys? Don't worry, the \$89 DIY kit for the Tada68 is a great deal. If you have a bit more money, you can upgrade to the aluminum case option for a bit more weight and elegance.
 
---------------------------------------------------------------------------------
+---
 
 **Minimal soldering 40% keyboard kit:**
 
 - [Zlant 40% keyboard kit](https://www.1upkeyboards.com/shop/keyboard-kits/diy-40-kits/zlant-40-keyboard-kit)
 
-This $70 DIY kit has everything you need to make your first 40% keyboard, and at only 48 keys the build should go by quickly.
+This \$70 DIY kit has everything you need to make your first 40% keyboard, and at only 48 keys the build should go by quickly.
 
---------------------------------------------------------------------------------
+---
 
 **Good soldering tutorial macro pad:**
 
 - [Sweet 16 macro pad](https://www.1upkeyboards.com/shop/keyboard-kits/macro-pads/sweet-16-macro-pad-black)
 
-This $19-29 macro pad kit is a low stress option for your first soldering project. Note that this macro pad requires you to solder your own microcontroller (Pro Micro) and diodes, a step that is often not required for other PCBs. This will make the build take a bit longer, but it's also great practice for building other niche keyboards that do not come with these components preinstalled on the PCB.
+This \$19-29 macro pad kit is a low stress option for your first soldering project. Note that this macro pad requires you to solder your own microcontroller (Pro Micro) and diodes, a step that is often not required for other PCBs. This will make the build take a bit longer, but it's also great practice for building other niche keyboards that do not come with these components preinstalled on the PCB.
 
 ## QMK
 
 QMK is the firmware that powers most custom built keyboards. If you're feeling nerdy, you can clone the [QMK GitHub repo](https://config.qmk.fm) and compile your own keymap locally, though it's easier to get started using their [online keyboard editor](https://config.qmk.fm). You will then need to install [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) in order to install the firmware on your keyboard. Please note that Windows users must install [some drivers](https://github.com/qmk/qmk_driver_installer/releases) first.
 
-This part can be a bit confusing, but the plus side is that QMK firmware is code that runs *on* the keyboard, so your keyboard will work exactly how you want when plugged into *any* device.
+This part can be a bit confusing, but the plus side is that QMK firmware is code that runs _on_ the keyboard, so your keyboard will work exactly how you want when plugged into _any_ device.
 
 The biggest feature of QMK is layers. They are basically like the `Fn` (function) key on many laptop keyboards, except you can have up to 15 of them. This allows you to do things like add a numpad mode to your keyboard, media hotkeys, hidden arrow keys on WASD, or anything you can dream up. You can also use them to toggle between modes sort of like caps lock or num lock.
 
@@ -235,14 +236,14 @@ The biggest feature of QMK is layers. They are basically like the `Fn` (function
 60% layouts have the most options for keycaps, cases, and PCBs. They are a great starting point for building your keyboard. Note that most 60% keyboards do not have dedicated arrow keys, so you will need to program your keyboard to have arrow keys in a different way (many people use the Function key with WASD or IJKL).
 
 <figure>
-  <img src="/img/keebs-201/ansi60.png" alt="">
+  <img src="/static/img/keebs-201/ansi60.png" alt="">
   <figcaption>
     ANSI (US) 60% layout
   </figcaption>
 </figure>
 
 <figure>
-  <img src="/img/keebs-201/iso60.png" alt="">
+  <img src="/static/img/keebs-201/iso60.png" alt="">
   <figcaption>
     ISO (European) 60% layout
   </figcaption>
@@ -251,24 +252,23 @@ The biggest feature of QMK is layers. They are basically like the `Fn` (function
 40% keyboards are relatively quick to build, and some don't even have stabilizers. However there are far fewer options. These keyboards lack number keys, so you have to hold down a function key in order to type those. This is my personal favorite kind, but be advised it will take a few weeks to get back up to good typing speed if you need to type a lot symbols or numbers.
 
 <figure>
-  <img src="/img/keebs-201/jd40.png" alt="">
+  <img src="/static/img/keebs-201/jd40.png" alt="">
   <figcaption>
     JD40 40% layout
   </figcaption>
 </figure>
 
 <figure>
-  <img src="/img/keebs-201/zlant.png" alt="">
+  <img src="/static/img/keebs-201/zlant.png" alt="">
   <figcaption>
     Zlant 40% layout
   </figcaption>
 </figure>
 
-
 Ortholinear keyboards make the rows of keys all line up to form a perfect grid, instead of the jagged edge you see on most keyboards. There's no research showing if this has any benefits, but I personally think it's more comfortable.
 
 <figure>
-  <img src="/img/keebs-201/planck.png" alt="">
+  <img src="/static/img/keebs-201/planck.png" alt="">
   <figcaption>
     Planck 40% ortholinear layout
   </figcaption>
@@ -277,14 +277,14 @@ Ortholinear keyboards make the rows of keys all line up to form a perfect grid, 
 Split keyboards are great for maintaining good posture and a healthy shoulder spread through your work day. They are harder to build, and there are few options, but many people never go back once trying them.
 
 <figure>
-  <img src="/img/keebs-201/ergodox.png" alt="">
+  <img src="/static/img/keebs-201/ergodox.png" alt="">
   <figcaption>
     Ergodox split layout
   </figcaption>
 </figure>
 
 <figure>
-  <img src="/img/keebs-201/letssplit.png" alt="">
+  <img src="/static/img/keebs-201/letssplit.png" alt="">
   <figcaption>
     Let's Split split layout
   </figcaption>

@@ -3,15 +3,17 @@ title: "Making a Language"
 description: "How to make a programming language from scratch in JS"
 ---
 
+@[toc]
+
 ## What's in a programming language?
 
 Programming language implementations vary wildly, but the steps are roughly as follows:
 
 - Parse source code text into abstract syntax tree (AST) such as JSON
-- *(Optional)* Static analysis of AST to report warnings and errors
+- _(Optional)_ Static analysis of AST to report warnings and errors
 - Depending on whether you want a compiler or an interpreter:
-    - Compile to executable, bytecode, JS, etc. **OR**
-    - Evaluate the AST to run the program
+  - Compile to executable, bytecode, JS, etc. **OR**
+  - Evaluate the AST to run the program
 
 **Note:** Regexps are not powerful enough to for the job here. Don't believe me? Check out the [Chomsky hierarchy][2] on Wikipedia, or this funny [StackOverflow answer][3] about parsing HTML.
 
@@ -58,7 +60,7 @@ console.log(factorial(4));
 Duckweed doesn't have the concept of a function declaration, just anonymous functions, so the Duckweed program is a little closer to this JavaScript program:
 
 ```javascript
-var factorial = function(n) {
+var factorial = function (n) {
   if (n === 0) {
     return 1;
   } else {
@@ -85,13 +87,13 @@ So that's what Duckweed looks like, and you can see it's capable of doing at lea
 Let's start off with the top level of Duckweed: `main.js`.
 
 ```javascript
-const fs = require('fs');
-const util = require('util');
-const parse = require('./parse').parse;
-const evaluate = require('./evaluate').evaluate;
-const globals = require('./globals').globals;
-const Scope = require('./scope');
-const U = require('./util');
+const fs = require("fs");
+const util = require("util");
+const parse = require("./parse").parse;
+const evaluate = require("./evaluate").evaluate;
+const globals = require("./globals").globals;
+const Scope = require("./scope");
+const U = require("./util");
 ```
 
 First up we have a lot of things to import. Not much to see here.
@@ -99,9 +101,9 @@ First up we have a lot of things to import. Not much to see here.
 ```javascript
 const args = process.argv.slice(2);
 const filename = args[0];
-const code = fs.readFileSync(filename, 'utf-8');
+const code = fs.readFileSync(filename, "utf-8");
 
-const opts = {colors: true, depth: null};
+const opts = { colors: true, depth: null };
 function show(x) {
   return console.log(util.inspect(x, opts));
 }
@@ -119,30 +121,25 @@ if (result.status) {
   const x = evaluate(globals, ast);
   console.log(U.showSexp(x));
 } else {
-  console.error('parse error!');
+  console.error("parse error!");
   console.error(result);
 }
 ```
 
 This is where the magic happens. It all really boils down to `parse` and `evaluate`, but we've got some extra code in here to show parse errors and inspect the code being evaluated.
 
-
 ## Parsing all those parentheses
 
-One of the reasons Lisp is a good choice is that the syntax is *very* simple to parse compared to most other languages.
+One of the reasons Lisp is a good choice is that the syntax is _very_ simple to parse compared to most other languages.
 
 ```javascript
-const P = require('parsimmon');
+const P = require("parsimmon");
 
-const Comment =
-  P.regex(/;[^\n]*/)
-    .skip(P.alt(P.string('\n'), P.eof))
-    .desc('a comment');
+const Comment = P.regex(/;[^\n]*/)
+  .skip(P.alt(P.string("\n"), P.eof))
+  .desc("a comment");
 
-const _ =
-  P.alt(P.whitespace, Comment)
-    .many()
-    .desc('whitespace');
+const _ = P.alt(P.whitespace, Comment).many().desc("whitespace");
 ```
 
 We start off by describing what comments look like (semicolon until the end of line), and what whitespace looks like.
@@ -150,98 +147,74 @@ We start off by describing what comments look like (semicolon until the end of l
 Everything in Lisp is an [S-expression][5] (sexp for short). In our very simple Lisp, this just means it's either a list or an "atom", which is the Lisp word for something very basic, like numbers and strings.
 
 ```javascript
-const SExp =
-  P.lazy(() => P.alt(AList, Atom));
+const SExp = P.lazy(() => P.alt(AList, Atom));
 ```
 
 A list is simply an open parenthesis followed by zero or more sexps and terminated by a closing parenthesis. We tag this information inside an object with `type: "List"` so that later we can easily inspect the things we parsed.
 
 ```javascript
-const AList =
-  P.string('(')
-    .then(_.then(SExp).skip(_).many())
-    .skip(P.string(')'))
-    .map(items => ({type: 'List', items}))
-    .desc('a list');
+const AList = P.string("(")
+  .then(_.then(SExp).skip(_).many())
+  .skip(P.string(")"))
+  .map((items) => ({ type: "List", items }))
+  .desc("a list");
 ```
 
 For the purpose of brevity, Duckweed strings do not have any escape characters (e.g. `"\n"`).
 
 ```javascript
-const AString =
-  P.string('"')
-    // TODO: Accept escaped characters
-    .then(P.regex(/[^"]*/))
-    .skip(P.string('"'))
-    // TODO: Convert escaped characters back
-    .map(value => ({type: 'String', value}))
-    .desc('a string');
+const AString = P.string('"')
+  // TODO: Accept escaped characters
+  .then(P.regex(/[^"]*/))
+  .skip(P.string('"'))
+  // TODO: Convert escaped characters back
+  .map((value) => ({ type: "String", value }))
+  .desc("a string");
 ```
 
 It's traditional in Lisp to just write `#t` for true and `#f` for false.
 
 ```javascript
-const True =
-  P.string('#t')
-    .result({type: 'True'})
-    .desc('#t');
+const True = P.string("#t").result({ type: "True" }).desc("#t");
 
-const False =
-  P.string('#f')
-    .result({type: 'False'})
-    .desc('#f');
+const False = P.string("#f").result({ type: "False" }).desc("#f");
 ```
 
 Numbers are numbers. We pass them through the JavaScript `Number` function to convert them from strings.
 
 ```javascript
-const ANumber =
-  P.regex(/-?[0-9]+/)
-    .map(x => Number(x))
-    .map(value => ({type: 'Number', value}))
-    .desc('a number');
+const ANumber = P.regex(/-?[0-9]+/)
+  .map((x) => Number(x))
+  .map((value) => ({ type: "Number", value }))
+  .desc("a number");
 ```
 
 Symbols are plain words in your code that usually represent variables, but can also represent keywords (such as `if`).
 
 ```javascript
-const ASymbol =
-  P.regex(/[a-zA-Z_+*=<>?\/-]+/)
-    .map(name => ({type: 'Symbol', name}))
-    .desc('a symbol');
+const ASymbol = P.regex(/[a-zA-Z_+*=<>?\/-]+/)
+  .map((name) => ({ type: "Symbol", name }))
+  .desc("a symbol");
 ```
 
 Any Lisp would be remiss without this shorthand for choosing not to evaluate a sexp. Basically you just prefix any code with `'` and Lisp treats it as data instead.
 
 ```javascript
-const Quote =
-  P.string('\'')
-    .skip(_)
-    .then(SExp)
-    .map(sexp => ({
-      type: 'List',
-      items: [
-        {type: 'Symbol', name: 'quote'},
-        sexp
-      ]
-    }));
+const Quote = P.string("'")
+  .skip(_)
+  .then(SExp)
+  .map((sexp) => ({
+    type: "List",
+    items: [{ type: "Symbol", name: "quote" }, sexp],
+  }));
 ```
 
 Like I said earlier, an atom is just any of the basic non-list data types. And a "file" is just a single sexp with optional whitespace around it. Most Lisps accept zero or more sexps at the top level of a file, but we're keeping it simple here.
 
 ```javascript
-const Atom =
-  P.alt(
-    Quote,
-    AString,
-    ANumber,
-    True,
-    False,
-    ASymbol
-  );
+const Atom = P.alt(Quote, AString, ANumber, True, False, ASymbol);
 
-const File =
-  _.then(SExp).skip(_);
+const File = _.then(SExp).skip(_);
 
 function parse(code) {
   return File.parse(code);
@@ -257,14 +230,14 @@ Variable scope is one of the most important things to model in a programming lan
 I used [algebraic data types][6] for my implementation. Basically there are two kinds of scope: empty and non-empty. We start off with an empty scope and every scope after that is non-empty. A non-empty scope just contains a JavaScript object mapping the variable names to their values.
 
 ```javascript
-const Empty = ['Scope.Empty'];
+const Empty = ["Scope.Empty"];
 ```
 
 This is an empty scope. We just have an array with a string tag so we know which kind it is. Then we use the `create` function to wrap a scope with another scope. This is how we create non-empty scopes.
 
 ```javascript
 function create(parent, items) {
-  return ['Scope.Nonempty', items, parent];
+  return ["Scope.Nonempty", items, parent];
 }
 ```
 
@@ -274,8 +247,8 @@ A simple scope chain could look like this:
 
 ```javascript
 const s1 = Scope.Empty;
-const s2 = Scope.create(s1, {a: 1, b: 2});
-const s3 = Scope.create(s2, {a: 3});
+const s2 = Scope.create(s1, { a: 1, b: 2 });
+const s3 = Scope.create(s2, { a: 3 });
 ```
 
 And thus from the scope `s3` we could see variables `a` and `b`, but `a` would have the value `3` from scope `s3`'s perspective since it is [shadowing][7] `s2`'s variable `a`.
@@ -284,11 +257,11 @@ Now that we have creation, we need a way to look up variables by their names. It
 
 ```javascript
 function lookup(scope, key) {
-  if (scope[0] === 'Scope.Empty') {
-    throw new Error('no such variable ' + key);
+  if (scope[0] === "Scope.Empty") {
+    throw new Error("no such variable " + key);
   }
-  if (scope[0] !== 'Scope.Nonempty') {
-    throw new Error('not a valid scope');
+  if (scope[0] !== "Scope.Nonempty") {
+    throw new Error("not a valid scope");
   }
 
   if (scope[1].hasOwnProperty(key)) {
@@ -314,10 +287,10 @@ For the purposes of Duckweed it's sufficient to just update the current scope wi
 
 ```javascript
 function assign(scope, key, value) {
-  if (scope[0] === 'Scope.Nonempty') {
+  if (scope[0] === "Scope.Nonempty") {
     scope[1][key] = value;
   } else {
-    throw new Error('not a valid scope to assign to');
+    throw new Error("not a valid scope to assign to");
   }
 }
 
@@ -334,7 +307,7 @@ Most evaluation is straightforward in Duckweed: data is just data. Numbers are j
 So here's the overview of the evaluation file, with the complicated bits taken out for now:
 
 ```javascript
-const Scope = require('./scope');
+const Scope = require("./scope");
 
 const special = {
   // ...
@@ -361,14 +334,14 @@ const table = {
   },
   Symbol(stack, scope, node) {
     return Scope.lookup(scope, node.name);
-  }
+  },
 };
 
 function EVAL(stack, scope, node) {
   if (table.hasOwnProperty(node.type)) {
     return table[node.type](stack, scope, node);
   }
-  throw new Error('cannot evaluate ' + JSON.stringify(node));
+  throw new Error("cannot evaluate " + JSON.stringify(node));
 }
 
 function evaluate(scope, node) {
@@ -426,7 +399,7 @@ There are three cases here, and we try to deal with them as early as possible:
 
 3. The symbol references a function created inside Duckweed.
 
-So for the first case we just dispatch to a table with the unevaluated list data. Note that *all* list evaluations pass through the current call stack and the current variable scope.
+So for the first case we just dispatch to a table with the unevaluated list data. Note that _all_ list evaluations pass through the current call stack and the current variable scope.
 
 ## Special eval
 
@@ -529,23 +502,23 @@ We have all the core operations at this point, but usually programming languages
 Just a few simple imports.
 
 ```javascript
-const Scope = require('./scope');
-const U = require('./util')
-const E = require('./evaluate');
+const Scope = require("./scope");
+const U = require("./util");
+const E = require("./evaluate");
 ```
 
 The basic boolean constants we expect to see in any language.
 
 ```javascript
-const TRUE = {type: 'True'};
-const FALSE = {type: 'False'};
+const TRUE = { type: "True" };
+const FALSE = { type: "False" };
 ```
 
 Numbers are pretty basic too.
 
 ```javascript
 function NUMBER(value) {
-  return {type: 'Number', value};
+  return { type: "Number", value };
 }
 ```
 
@@ -595,15 +568,15 @@ Now we make the actual top level scope the evaluator will user later.
 ```javascript
 const api = {
   print,
-  '+': add,
-  '-': subtract,
-  '*': multiply,
-  '<': lessThan,
-  eval: evaluate
+  "+": add,
+  "-": subtract,
+  "*": multiply,
+  "<": lessThan,
+  eval: evaluate,
 };
 
-Object.keys(api).forEach(k => {
-  api[k] = {type: 'JSFunction', f: api[k]}
+Object.keys(api).forEach((k) => {
+  api[k] = { type: "JSFunction", f: api[k] };
 });
 
 const globals = Scope.create(Scope.Empty, api);

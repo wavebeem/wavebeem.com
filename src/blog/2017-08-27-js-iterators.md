@@ -3,16 +3,18 @@ title: "JavaScript Iterators and More"
 description: "A comparison and overview of generators, iterators, and iterables in JS"
 ---
 
+@[toc]
+
 ## Why
 
-Many languages (Java, C#, Python, etc) have a concept of an object being *iterable*, that is, capable of giving you values from first to last in a particular order. This often comes in the form of a "for each" loop such as this in Python:
+Many languages (Java, C#, Python, etc) have a concept of an object being _iterable_, that is, capable of giving you values from first to last in a particular order. This often comes in the form of a "for each" loop such as this in Python:
 
 ```python
 for x in [0, 1, 2]:
     print(x)
 ```
 
-This *iterates* over the values in the array `[0, 1, 2]`. But it turns out not everything you might want to iterate over is best represented as an array. In Python you might want to iterate over a set `{0, 1, 2}`, a tuple `(0, 1, 2)`, or even a range `range(3)`.
+This _iterates_ over the values in the array `[0, 1, 2]`. But it turns out not everything you might want to iterate over is best represented as an array. In Python you might want to iterate over a set `{0, 1, 2}`, a tuple `(0, 1, 2)`, or even a range `range(3)`.
 
 ## JS interfaces
 
@@ -20,9 +22,9 @@ In JavaScript, iterables are objects which have a method `Symbol.iterator` which
 
 ```js
 var iterable = {
-  [Symbol.iterator]: function() {
+  [Symbol.iterator]: function () {
     // return ...
-  }
+  },
 };
 ```
 
@@ -32,7 +34,7 @@ Which can be written with method shorthand syntax as:
 var iterable = {
   [Symbol.iterator]() {
     // return ...
-  }
+  },
 };
 ```
 
@@ -51,8 +53,8 @@ var iterator = {
     return {
       done: false,
       value: 1,
-    }
-  }
+    };
+  },
 };
 ```
 
@@ -95,9 +97,9 @@ function range(start, end) {
             return { done: true };
           }
           return { done: false, value: this.i };
-        }
+        },
       };
-    }
+    },
   };
 }
 ```
@@ -164,16 +166,16 @@ This prints 1, 2, 3 two times instead of just once.
 
 If you know that your generator does not rely on external state that might change, you can make it restartable safely.
 
-JS normally wants *iterables* not *iterators* themselves, so if we wrap the iterable iterators returned from generators then we can iterate over them multiple times:
+JS normally wants _iterables_ not _iterators_ themselves, so if we wrap the iterable iterators returned from generators then we can iterate over them multiple times:
 
 ```js
 var oneTwoThreeAgainAndAgain = {
   // The `*` here is the `*` from `function*`
-  * [Symbol.iterator]() {
+  *[Symbol.iterator]() {
     yield 1;
     yield 2;
     yield 3;
-  }
+  },
 };
 ```
 
@@ -181,17 +183,17 @@ Note the `*` before the method. This is a strange shorthand for the following:
 
 ```js
 var oneTwoThreeAgainAndAgain = {
-  [Symbol.iterator]: function*() {
+  [Symbol.iterator]: function* () {
     yield 1;
     yield 2;
     yield 3;
-  }
+  },
 };
 ```
 
 The `function` is implied since it's inside an object literal, but we still have to put the `*` somewhere so JavaScript knows it's a generator. Weird, I know.
 
-Remember, generators return objects which are simultaneously *iterators* **and** *iterables*, which is why you can use them directly in a `for...of` loop or return them from a `Symbol.iterator` method.
+Remember, generators return objects which are simultaneously _iterators_ **and** _iterables_, which is why you can use them directly in a `for...of` loop or return them from a `Symbol.iterator` method.
 
 ```js
 for (var x of oneTwoThreeAgainAndAgain) {
@@ -204,7 +206,6 @@ for (var y of oneTwoThreeAgainAndAgain) {
 ```
 
 Tada! We got 1, 2, 3 **twice**, just like we wanted initially.
-
 
 ## Destructuring
 
@@ -239,13 +240,13 @@ Because iterators don't store their values permanently like arrays, they can eve
 
 ```js
 var evenNumbers = {
-  * [Symbol.iterator]() {
+  *[Symbol.iterator]() {
     var n = 0;
     while (true) {
       yield n;
       n += 2;
     }
-  }
+  },
 };
 ```
 
@@ -295,10 +296,10 @@ var count123 = {
 
       return() {
         this.i = 0;
-      }
-    }
-  }
-}
+      },
+    };
+  },
+};
 ```
 
 Yowza! We've been avoiding writing iterators by hand because it stinks. Luckily, good old `try...finally` can take its place inside a generator.
@@ -331,9 +332,9 @@ For robust code, write functions that return iterable objects using generators. 
 ```js
 function myFunction(/* ... */) {
   return {
-    * [Symbol.iterator]() {
+    *[Symbol.iterator]() {
       // yield ...
-    }
+    },
   };
 }
 ```

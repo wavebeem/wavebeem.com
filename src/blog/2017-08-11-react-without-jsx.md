@@ -3,6 +3,8 @@ title: "React Without JSX"
 description: "A quick overview on using React without JSX or any build tools"
 ---
 
+@[toc]
+
 ## Misconceptions about React
 
 The discourse around React would lead you to believe you need to get started with Babel, Webpack, source maps, and all kinds of complex tooling to use React, but you actually can drop React into any existing page pretty easily. It could be fully server-side rendered from Rails, a mix with jQuery in it, or even a front-end app written with another framework entirely.
@@ -56,9 +58,9 @@ Or you can use the old helper function `React.createClass`:
 
 ```js
 var App = React.createClass({
-  render: function() {
+  render: function () {
     // ...
-  }
+  },
 });
 ```
 
@@ -72,14 +74,20 @@ To keep things readable, here's a simplified example:
 var R = React.createElement;
 
 function TextScreen(props) {
-  return R("div", {},
+  return R(
+    "div",
+    {},
     "Here's some text to read!",
-    R("button", {
-      className: "btn btn-large",
-      onClick: function(event) {
-        props.goNext();
-      }
-    }, "Next")
+    R(
+      "button",
+      {
+        className: "btn btn-large",
+        onClick: function (event) {
+          props.goNext();
+        },
+      },
+      "Next"
+    )
   );
 }
 ```
@@ -97,7 +105,7 @@ function TextScreen({ goNext }) {
   }
   const className = "btn btn-large";
   const text = "Next";
-  const mainButton = R("button", {className, onClick}, text);
+  const mainButton = R("button", { className, onClick }, text);
   return R("div", {}, "Here's some text to read!", mainButton);
 }
 ```
@@ -110,7 +118,7 @@ The main problem with this is it doesn't look like HTML any more. But in my mind
 
 It may not be for you, and frankly the ship has kinda already sailed and JSX is super popular, but it's worth mentioning that code can look really good without it. Hope you enjoyed seeing simpler route React offers.
 
-**NOTE:** I'm well aware of the many reasons to use bundlers and build tooling, and frequently make use of them myself. I just figured it was worth mentioning that you don't *have* to use them.
+**NOTE:** I'm well aware of the many reasons to use bundlers and build tooling, and frequently make use of them myself. I just figured it was worth mentioning that you don't _have_ to use them.
 
 [1]: https://facebook.github.io/react/
 [2]: https://github.com/wavebeem/screenhive/tree/master/app/src

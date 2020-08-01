@@ -3,13 +3,15 @@ title: "Broken Promises"
 description: "How to use promises effectively"
 ---
 
+@[toc]
+
 ## About
 
 This post is about how to use promises effectively. In it, I'm going to use some ES6 syntax. ES6 is the latest version of JavaScript. When you see:
 
 ```js
 // Arrow function
-x => x + 1
+(x) => x + 1;
 ```
 
 That's basically the same as:
@@ -29,83 +31,83 @@ First of all, there's `p.then(ok)`. This is the "happy path" handler, and the on
 
 ```js
 var p = Promise.resolve(1)
-  .then(x => x + 1)
-  .then(x => x + 1)
-  .then(x => x + 1);
+  .then((x) => x + 1)
+  .then((x) => x + 1)
+  .then((x) => x + 1);
 
 // Prints 4
-p.then(x => console.log(x));
+p.then((x) => console.log(x));
 ```
 
 If one of those steps fail, then the final `console.log` there will never happen.
 
 ```js
 var p = Promise.resolve(1)
-  .then(x => x + 1)
-  .then(function() {
+  .then((x) => x + 1)
+  .then(function () {
     throw new Error("something goofed up here");
   })
-  .then(x => x + 1);
+  .then((x) => x + 1);
 
 // Nothing is ever printed
-p.then(x => console.log(x));
+p.then((x) => console.log(x));
 ```
 
-There's also `p.then(ok, fail)`. This calls `fail` if `p` is rejected, but does *not* call `fail` if the `ok` handler is rejected. Also, `p.catch(fail)` is a shortcut for `p.then(null, fail)`.
+There's also `p.then(ok, fail)`. This calls `fail` if `p` is rejected, but does _not_ call `fail` if the `ok` handler is rejected. Also, `p.catch(fail)` is a shortcut for `p.then(null, fail)`.
 
 ```js
 var p = Promise.resolve(1)
-  .then(x => x + 1)
-  .then(function() {
+  .then((x) => x + 1)
+  .then(function () {
     throw new Error("some error");
   })
-  .catch(function() {
+  .catch(function () {
     // Prints "There was an error"
     console.error("There was an error");
     return 1;
   })
-  .then(x => x + 1);
+  .then((x) => x + 1);
 
 // Prints 2
-p.then(x => console.log(x));
+p.then((x) => console.log(x));
 ```
 
 You should always either `throw` or `return` from the fail handlers for your promises, because JavaScript will implicitly `return undefined` at the end of a function for you, which you probably don't want in your promise value:
 
 ```js
 var p = Promise.resolve(1)
-  .then(function() {
+  .then(function () {
     throw new Error("oopsy");
   })
-  .catch(function(err) {
+  .catch(function (err) {
     // Prints "I found an error:", and the error
     console.error("I found an error:", err);
   });
 
 // Prints undefined
-p.then(x => console.log(x));
+p.then((x) => console.log(x));
 ```
 
 So if you just rethrow the error for errors you can't actually recover from, you'll be fine:
 
 ```js
 var p = Promise.resolve(1)
-  .then(function() {
+  .then(function () {
     throw new Error("oopsy");
   })
-  .catch(function(err) {
+  .catch(function (err) {
     // Prints "I found an error:", and the error
     console.error("I found an error:", err);
     throw err;
   });
 
 // Doesn't print anything
-p.then(x => console.log(x));
+p.then((x) => console.log(x));
 ```
 
 ## Value your promises
 
-The most important thing about promises, compared to callbacks, is that promises are *values*. That means you can assign them to a variable, return them from a function, or pass them to another function. If you don't do something with the value of your promise, you're losing information! You might not always need this information, but it's there, and don't forget it.
+The most important thing about promises, compared to callbacks, is that promises are _values_. That means you can assign them to a variable, return them from a function, or pass them to another function. If you don't do something with the value of your promise, you're losing information! You might not always need this information, but it's there, and don't forget it.
 
 So instead of something like this:
 
@@ -117,7 +119,7 @@ function onLoad() {
 }
 
 function init() {
-  request("/my-data").then(function(data) {
+  request("/my-data").then(function (data) {
     theData = data;
     onLoad();
   });
@@ -146,11 +148,9 @@ Often you'll see `.then` chains nested, forming this "pyramid" shape:
 
 ```js
 function chaseData(url) {
-  return request(url).then(res1 =>
-    request(res1.someUrl).then(res2 =>
-      request(res2.anotherUrl).then(res3 =>
-        res3.data
-      )
+  return request(url).then((res1) =>
+    request(res1.someUrl).then((res2) =>
+      request(res2.anotherUrl).then((res3) => res3.data)
     )
   );
 }
@@ -161,21 +161,17 @@ This often happens because the value from one promise is used to get another pro
 ```js
 function chaseData(url) {
   return request(url)
-    .then(res => request(res.someUrl))
-    .then(res => request(res.anotherUrl))
-    .then(res => res.data);
+    .then((res) => request(res.someUrl))
+    .then((res) => request(res.anotherUrl))
+    .then((res) => res.data);
 }
 ```
 
-Ta-da! Much simpler to understand now. But I'm sure some of you at home are thinking, "but what about cases where you need to keep *all* the data until the final step". Well, you're right, that still is a little tricky. Sometimes you'll see code like this:
+Ta-da! Much simpler to understand now. But I'm sure some of you at home are thinking, "but what about cases where you need to keep _all_ the data until the final step". Well, you're right, that still is a little tricky. Sometimes you'll see code like this:
 
 ```js
 function something(urlA, urlB) {
-  return request(urlA).then(a =>
-    request(urlB).then(b =>
-      [a, b]
-    )
-  );
+  return request(urlA).then((a) => request(urlB).then((b) => [a, b]));
 }
 ```
 
@@ -183,10 +179,7 @@ In this scenario, there's a handy promise function called `Promise.all`:
 
 ```js
 function something(urlA, urlB) {
-  return Promise.all([
-    request(urlA),
-    request(urlB)
-  ]);
+  return Promise.all([request(urlA), request(urlB)]);
 }
 ```
 
@@ -196,11 +189,11 @@ Of course, there's also the more complicated case where you need `a` in order to
 function userWithImage(userId) {
   var data = {};
   return request("/users/" + userId)
-    .then(function(user) {
+    .then(function (user) {
       data.user = user;
       return request(user.avatarImageUrl);
     })
-    .then(image => [data.user, image]);
+    .then((image) => [data.user, image]);
 }
 ```
 
@@ -212,7 +205,7 @@ If you're making a new function that returns a promise but you know you might en
 
 ```js
 function asyncThing(x) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     try {
       resolve(f(x));
     } catch (error) {
@@ -226,7 +219,7 @@ But the Promise constructor (and `.then` functions) are designed to automaticall
 
 ```js
 function asyncThing(x) {
-  return new Promise(function(resolve) {
+  return new Promise(function (resolve) {
     try {
       resolve(f(x));
     } catch (error) {
@@ -240,7 +233,7 @@ And then at this point there's no reason to even have the `try/catch` any more, 
 
 ```js
 function asyncThing(x) {
-  return new Promise(function(resolve) {
+  return new Promise(function (resolve) {
     resolve(f(x));
   });
 }

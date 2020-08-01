@@ -19,6 +19,10 @@
   },
   "homepage": "https://mockbrian.com",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "dateformat": "^3.0.3",
+    "markdown-it": "^11.0.0",
+    "markdown-it-toc-and-anchor": "^4.2.0"
   }
 }

@@ -3,6 +3,8 @@ title: "Compiler Code Generation"
 description: "How to make code generation for a compiler"
 ---
 
+@[toc]
+
 ## What is code generation?
 
 Compilers and interpreters are basically big pipelines, transforming one type of data to into another, and finally either generating code or running a program.
@@ -11,22 +13,21 @@ At a very high level, the steps are:
 
 - 📚 Read the source code
 - 🌲 Parse the code into an abstract syntax tree (AST)
-- ️️⚠️ *(optional)* Emit warnings based on the AST
-- 🔍 *(optional)* Typecheck the AST
+- ️️⚠️ _(optional)_ Emit warnings based on the AST
+- 🔍 _(optional)_ Typecheck the AST
 - 💻 Generate code or run the program
 
 Technically the AST step is optional (PHP only recently started using an AST), but basically every language implementation uses this step.
 
 Code generation is the final step in a compiler. The compiler generates code that produces the desired effect. Generated code might be JavaScript (compile-to-JS language), machine code (C compiler), JVM bytecode (Java compiler, Clojure compiler, etc).
 
-
 ## Code generation vs interpretation
 
 My [previous blog post][1] about making a programming language covers making an interpreter. Interpreters are easy to make because all you have to do is write a program that has the right behavior, whereas with a compiler, you have to generate code in another language that happens to have the same behavior as your source language.
 
-This means that the more different your input and output languages are, the harder it is to do the code generation. [CoffeeScript][2] is extremely similar to JavaScript, so it is able to produce a similar amount of JavaScript as CoffeeScript to achive its code generation. [PureScript][3] requires a *lot* more JavaScript code output to achieve the correct program, because it is a lot more different than JavaScript.
+This means that the more different your input and output languages are, the harder it is to do the code generation. [CoffeeScript][2] is extremely similar to JavaScript, so it is able to produce a similar amount of JavaScript as CoffeeScript to achive its code generation. [PureScript][3] requires a _lot_ more JavaScript code output to achieve the correct program, because it is a lot more different than JavaScript.
 
-Compiling to JavaScript is a bit of a unique case though, compared to compiling to machine code or some kind of bytecode. JavaScript is actually intended as a language for programmers to program in, unlike, say, JVM bytecode. So JavaScript environments expect you to debug and inspect JavaScript code. Nobody really cares if the JVM bytecode from a compiler looks *weird*, but if you generate really weird looking code from a language that compiles to JavaScript, it can bother people when they're debugging. [Source maps][4] can help with that problem, but it's only a partial debugging solution.
+Compiling to JavaScript is a bit of a unique case though, compared to compiling to machine code or some kind of bytecode. JavaScript is actually intended as a language for programmers to program in, unlike, say, JVM bytecode. So JavaScript environments expect you to debug and inspect JavaScript code. Nobody really cares if the JVM bytecode from a compiler looks _weird_, but if you generate really weird looking code from a language that compiles to JavaScript, it can bother people when they're debugging. [Source maps][4] can help with that problem, but it's only a partial debugging solution.
 
 ## An example pipeline from start to finish
 
@@ -47,27 +48,29 @@ print x + y ^ 3
 This is the output from the tokenization substep of parsing. Note that not all parsing techniques have a tokenization step.
 
 ```js
-[ // line 1
-  { type: 'Let', value: 'let' },
-  { type: 'Var', value: 'x' },
-  { type: 'Eq', value: '=' },
-  { type: 'Number', value: '1' },
-  { type: 'Newline', value: '\n' },
+[
+  // line 1
+  { type: "Let", value: "let" },
+  { type: "Var", value: "x" },
+  { type: "Eq", value: "=" },
+  { type: "Number", value: "1" },
+  { type: "Newline", value: "\n" },
 
   // line 2
-  { type: 'Let', value: 'let' },
-  { type: 'Var', value: 'y' },
-  { type: 'Eq', value: '=' },
-  { type: 'Number', value: '2' },
-  { type: 'Newline', value: '\n' },
+  { type: "Let", value: "let" },
+  { type: "Var", value: "y" },
+  { type: "Eq", value: "=" },
+  { type: "Number", value: "2" },
+  { type: "Newline", value: "\n" },
 
   // line 3
-  { type: 'Print', value: 'print' },
-  { type: 'Var', value: 'x' },
-  { type: 'Op', value: '+' },
-  { type: 'Var', value: 'y' },
-  { type: 'Op', value: '^' },
-  { type: 'Number', value: '3' } ]
+  { type: "Print", value: "print" },
+  { type: "Var", value: "x" },
+  { type: "Op", value: "+" },
+  { type: "Var", value: "y" },
+  { type: "Op", value: "^" },
+  { type: "Number", value: "3" },
+];
 ```
 
 ## Step 2: Parsing

@@ -1,0 +1,4 @@
+- Fix blog post permalinks
+- Fix syntax higlighting
+- Fix resume (print styles and personal info)
+- Shortcodes don't work inside layouts? (File a bug?)

@@ -1,5 +1,4 @@
 ---
 title: "Blog | Brian Mock"
-type: blog
-layout: list
+layout: "layout-blog.njk"
 ---

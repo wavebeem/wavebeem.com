@@ -1,0 +1,10 @@
+---
+layout: "layout-base.njk"
+tags: ["post"]
+---
+
+<h1>{{ title }}</h1>
+
+{{ page.date | dateHuman }}
+
+{{ content | safe }}

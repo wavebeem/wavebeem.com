@@ -3,6 +3,8 @@ title: "Mechanical Keyboards 101"
 description: "An introduction to the exciting world of mechanical keyboards"
 ---
 
+@[toc]
+
 ## Introduction
 
 I bet you're reading this because you're curious what all the fuss is about mechanical keyboards lately. Maybe your friend has one and you're kinda interested in getting your own, but don't know where to start. It's not just you, it is a little confusing to find the right keyboard for you. In fact, I'm still learning new things about keyboards all the time.
@@ -10,8 +12,8 @@ I bet you're reading this because you're curious what all the fuss is about mech
 ## Why
 
 <figure>
-  <!-- <img src="/img/keyboards/ducky.jpg" width="700" height="465" alt=""> -->
-  <img src="/img/keyboards/ducky.jpg" alt="">
+  <!-- <img src="/static/img/keyboards/ducky.jpg" width="700" height="465" alt=""> -->
+  <img src="/static/img/keyboards/ducky.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://www.flickr.com/photos/asianoni/21181683774">Ducky 9008G2 - Year Of The Tiger</a>
     by
@@ -25,22 +27,22 @@ Here are some reasons you might want to get a mechanical keyboard:
 
 - **They feel good to type on**
 
-    If you type a lot, comfort is probably important to you. I find mechanical keyboards fun and comfortable to type on. This is subjective, so you may want to try typing on one before you make a purchase.
+  If you type a lot, comfort is probably important to you. I find mechanical keyboards fun and comfortable to type on. This is subjective, so you may want to try typing on one before you make a purchase.
 
-    Keep in mind that people can usually adapt pretty well to different devices given enough time, so it might feel weird at first and become comfortable with use.
+  Keep in mind that people can usually adapt pretty well to different devices given enough time, so it might feel weird at first and become comfortable with use.
 
 - **They're easily customizable**
 
-    Mechanical keyboards tend to be pretty easily customizable compared to other keyboards. You can change out keycaps for a new look, or often even change aspects of your key layout. Which brings me to my next point...
+  Mechanical keyboards tend to be pretty easily customizable compared to other keyboards. You can change out keycaps for a new look, or often even change aspects of your key layout. Which brings me to my next point...
 
 - **They're pretty**
 
-    Many mechanical keyboards are beautiful out of the box, and the bevy of aftermarket keycaps can allow you to get a custom look that really suits you.
+  Many mechanical keyboards are beautiful out of the box, and the bevy of aftermarket keycaps can allow you to get a custom look that really suits you.
 
 ## Why not
 
 <figure>
-  <img src="/img/keyboards/whitefox.jpg" alt="">
+  <img src="/static/img/keyboards/whitefox.jpg" alt="">
   <figcaption>
     WhiteFox with Cherry keycaps and Filco palm rest
   </figcaption>
@@ -69,7 +71,7 @@ Here are some reasons why you might not want to get a mechanical keyboard:
 Keyboard form factors refer generally to how many keys a keyboard has. Full size refers to roughly 104 keys, and everything else is measured relative to that. Usually it's possible to type missing keys by doing key combinations on smaller keyboards.
 
 <figure>
-  <img src="/img/keyboards/model-m.jpg" alt="">
+  <img src="/static/img/keyboards/model-m.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://commons.wikimedia.org/wiki/File:IBM_Model_M.png">IBM Model M</a>
     by Raymangold22 is licensed under
@@ -82,7 +84,7 @@ Pictured above is the classic IBM Model M mechanical keyboard. Fortunately, mech
 ## Full size form factor
 
 <figure>
-  <img src="/img/keyboards/das-ultimate-4.jpg" alt="">
+  <img src="/static/img/keyboards/das-ultimate-4.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://www.flickr.com/photos/mccaughan/27571492442">Das Keyboard Ultimate 4</a>
     by
@@ -97,7 +99,7 @@ Full size keyboards are the classic size many people are used to seeing. The typ
 ## Tenkeyless form factor
 
 <figure>
-  <img src="/img/keyboards/tkl.jpg" alt="">
+  <img src="/static/img/keyboards/tkl.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://www.flickr.com/photos/pdc/28266574949">MT3 /dev/tty</a>
     by
@@ -112,7 +114,7 @@ Tenkeyless (TKL) keyboards typically have around 87 keys, including arrow keys b
 ## 75% form factor
 
 <figure>
-  <img src="/img/keyboards/race-3.jpg" alt="">
+  <img src="/static/img/keyboards/race-3.jpg" alt="">
   <figcaption>
     Vortex Race 3 with DSA keycaps and Filco palm rest
   </figcaption>
@@ -127,7 +129,7 @@ These keyboards are closest in size to a 13" laptop keyboard, freeing up plenty 
 ## 60% form factor
 
 <figure>
-  <img src="/img/keyboards/poker-3.jpg" alt="">
+  <img src="/static/img/keyboards/poker-3.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://www.flickr.com/photos/66451944@N03/42839323381">Pok3r keyboard with custom keycabs</a>
     by
@@ -148,7 +150,7 @@ I would recommend starting with either a TKL or 75% keyboard since they should b
 ## Keyboard extras
 
 <figure>
-  <img src="/img/keyboards/feet.jpg" alt="">
+  <img src="/static/img/keyboards/feet.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://www.flickr.com/photos/mawari/28692415581">Digstar StarTop USB mechanical gaming keyboard 22</a>
     by
@@ -161,7 +163,7 @@ I would recommend starting with either a TKL or 75% keyboard since they should b
 Additionally, you may want to consider keyboard angle. Having a very high angled keyboard strains your fingers more. Try miming a typing action with your fingers angled up compared with down and you'll see how much more exhausting it is. Many keyboards are naturally sloped and deploying keyboard feet only makes them even more sloped, furthering finger fatigue.
 
 <figure>
-  <img src="/img/keyboards/hhkb.jpg" alt="">
+  <img src="/static/img/keyboards/hhkb.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Happy_Hacking_Keyboard_Professional_2.jpg">Happy Hacking Keyboard Professional 2</a>
     by Aon fi is licensed under
@@ -172,7 +174,7 @@ Additionally, you may want to consider keyboard angle. Having a very high angled
 Most keyboards come with black plastic cases and a matte finish. You might also find some in white plastic, or even aluminum. You should pick whichever material you think will look nicest on your desk, but note that if the keys are mounted directly on metal with no plastic, you can have a slight metallic clang when fully pressing a key.
 
 <figure>
-  <img src="/img/keyboards/led.jpg" alt="">
+  <img src="/static/img/keyboards/led.jpg" alt="">
   <figcaption>
     <a target="_blank" href="https://www.flickr.com/photos/bagogames/33836220354">DigsRoccat Suora FX RGB Mechanical Keyboard Review</a>
     by
@@ -193,7 +195,7 @@ Also note that all Cherry keyswitches actuate before they reach the bottom of th
 ## Clicky keyswitches
 
 <figure>
-  <img src="/img/keyboards/mx-clicky.jpg" alt="">
+  <img src="/static/img/keyboards/mx-clicky.jpg" alt="">
   <figcaption>
     Cherry MX Blue and Cherry MX Green Switches
   </figcaption>
@@ -206,7 +208,7 @@ Cherry MX Blues are the most popular clicky switch. MX Blues require 50g of forc
 ## Tactile keyswitches
 
 <figure>
-  <img src="/img/keyboards/mx-tactile.jpg" alt="">
+  <img src="/static/img/keyboards/mx-tactile.jpg" alt="">
   <figcaption>
     Cherry MX Brown and Cherry MX Clear Switches
   </figcaption>
@@ -219,7 +221,7 @@ The most popular tactile key switch is the Cherry MX Brown, which requires 45g t
 ## Linear keyswitches
 
 <figure>
-  <img src="/img/keyboards/mx-linear.jpg" alt="">
+  <img src="/static/img/keyboards/mx-linear.jpg" alt="">
   <figcaption>
     Cherry MX Black and Cherry MX Red Switches
   </figcaption>
@@ -248,7 +250,7 @@ Images are worth a thousand words here, and you should check out this famous pic
 ## Medium profile keycaps
 
 <figure>
-  <img src="/img/keyboards/profile-cherry.jpg" alt="">
+  <img src="/static/img/keyboards/profile-cherry.jpg" alt="">
   <figcaption>
     WhiteFox with Cherry keycaps
   </figcaption>
@@ -263,7 +265,7 @@ There is also the very similarly shaped Cherry profile which is quite a lot less
 ## High profile keycaps
 
 <figure>
-  <img src="/img/keyboards/profile-mt3.jpg" alt="">
+  <img src="/static/img/keyboards/profile-mt3.jpg" alt="">
   <figcaption>
     Vortex Race 3 with MT3 keycaps
   </figcaption>
@@ -278,7 +280,7 @@ A new high profile set called [MT3][12] was developed by matt3o recently, which 
 ## Low profile keycaps
 
 <figure>
-  <img src="/img/keyboards/profile-dsa.jpg" alt="">
+  <img src="/static/img/keyboards/profile-dsa.jpg" alt="">
   <figcaption>
     Vortex Race 3 with DSA keycaps
   </figcaption>
@@ -296,7 +298,7 @@ You can't go wrong with the classic OEM profile, and many keyboards come with th
 
 ## Suggested starter equipment
 
-I recommend buying a TKL (tenkeyless) keyboard for your first mechanical keyboard. If you want a relatively inexpensive TKL board with Cherry MX Browns you can check out the [Cooler Master Tenkeyless][1] for about $70.
+I recommend buying a TKL (tenkeyless) keyboard for your first mechanical keyboard. If you want a relatively inexpensive TKL board with Cherry MX Browns you can check out the [Cooler Master Tenkeyless][1] for about \$70.
 
 I personally like the [WASD v2 keyboard][2]. It comes in multiple sizes, black or white cases, and you can customize the color on each key if you want. Also the media keys are fantastic on them. And one of the coolest things is their new [maker designs][3] which are community contributed keycap designs that are _really_ cool.
 
