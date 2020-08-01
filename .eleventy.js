@@ -1,5 +1,4 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const dateformat = require("dateformat");
 const markdownIt = require("markdown-it");
 const markdownItTocAndAnchor = require("markdown-it-toc-and-anchor").default;
 
@@ -19,14 +18,6 @@ module.exports = (config) => {
   );
   config.addPlugin(syntaxHighlight);
   config.addPassthroughCopy("src/static");
-  config.addShortcode("copyrightYear", () => year.toString());
-  config.addFilter("year", () => year.toString());
-  config.addFilter("dateSlash", (date) => {
-    return dateformat(new Date(date), "yyyy/mm/dd");
-  });
-  config.addFilter("dateHuman", (date) => {
-    return dateformat(new Date(date), "mmmm d, yyyy");
-  });
   return {
     dir: {
       input: "src",

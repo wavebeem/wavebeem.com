@@ -1,6 +1,6 @@
 ---
 title: "Brian Mock"
-layout: "layout-base.njk"
+layout: "layout-base"
 ---
 
 <h1>

@@ -55,7 +55,7 @@
       <a class="bit-link" href="/blog">Blog</a>
       <a class="bit-link" href="/resume">Resume</a>
     </nav>
-    <main>{{ content | safe }}</main>
-    <footer>&copy; {{ '' | year }} Brian Mock</footer>
+    <main>{{ content }}</main>
+    <footer>&copy; {{ "now" | date: "%Y" }} Brian Mock</footer>
   </body>
 </html>

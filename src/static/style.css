@@ -73,7 +73,6 @@ nav {
   display: flex;
   border-bottom: var(--bit-border-width) dotted var(--bit-color0);
   padding-bottom: 1rem;
-  margin-bottom: 1rem;
   display: grid;
   grid-gap: 1rem;
 }

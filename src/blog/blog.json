@@ -1,5 +1,7 @@
 {
-  "layout": "layout-post.njk",
-  "tags": ["post"],
-  "permalink": "blog/{{ page.date | dateSlash }/{{ title | slug }}/index.html"
+  "layout": "layout-post",
+  "tags": [
+    "post"
+  ],
+  "permalink": "blog/{{ page.date | date: '%Y/%m/%d' }}/{{ title | slug }}/index.html"
 }

@@ -1,6 +1,6 @@
 ---
 title: "Resume | Brian Mock"
-layout: "layout-resume.njk"
+layout: "layout-resume"
 ---
 
 ## Core Technical Skills
