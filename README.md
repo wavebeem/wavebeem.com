@@ -4,4 +4,4 @@
 
 It's [mockbrian.com](https://mockbrian.com), the website!
 
-Made with Hugo.
+Made with [Eleventy](https://www.11ty.dev/).

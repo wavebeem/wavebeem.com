@@ -1,0 +1,24 @@
+{
+  "name": "mockbrian.com",
+  "private": true,
+  "version": "1.0.0",
+  "description": "mockbrian.com",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wavebeem/mockbrian.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wavebeem/mockbrian.com/issues"
+  },
+  "homepage": "https://mockbrian.com",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}
