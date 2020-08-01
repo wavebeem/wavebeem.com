@@ -1,308 +1,157 @@
 :root {
-  --lhCopy: 1.5;
-  --lhTitle: 1.25;
-
-  --f1: 3rem;
-  --f2: 2.25rem;
-  --f3: 1.5rem;
-  --f4: 1.25rem;
-  --f5: 1rem;
-  --f6: 0.875rem;
-
-  --fontMain: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  --fontPara: "Georgia", "Cambria", "Palatino", serif;
-  --fontMonospace: "Menlo", "Consolas", monospace;
-
-  --linkColor: #d5008f;
-  --navyColor: #001b44;
-  --washedGreenColor: #e8fdf5;
-  --lightGreen: #9eebcf;
-  --codeColor: hsl(214, 100%, 31%);
-  --codeColorBG: hsla(214, 100%, 31%, 0.05);
-
-  --contentWidth: 48rem;
-
-  /* Don't make the scrollbar jump around as you navigate :\
-   * Also, Firefox supports easily themed scrollbars :O
-   */
-  scrollbar-color: white var(--navyColor);
+  --font-sans: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --font-serif: "Georgia", "Cambria", "Palatino", serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "Menlo", "Consolas", monospace;
+  --content-width: 768px;
+  /* EN4 palette https://lospec.com/palette-list/en4 */
+  --color-pal0: hsl(223, 31%, 18%);
+  --color-pal1: hsl(157, 25%, 35%);
+  --color-pal2: hsl(28, 65%, 71%);
+  --color-pal3: hsl(30, 50%, 97%);
   overflow-y: scroll;
 }
 
-.print {
-  display: none;
+.bit-auto {
+  --bit-color0: var(--color-pal0);
+  --bit-color1: var(--color-pal3);
+  --color-link: var(--color-pal1);
+  --color-syntax-bg: var(--color-pal0);
+  /* Lighter version of pal2 */
+  --color-code-bg: hsl(28, 65%, 91%);
+  --color-code-fg: var(--color-pal0);
 }
 
-.hover-bottomline:focus,
-.hover-bottomline:hover {
-  box-shadow: inset 0 -0.125rem 0 0 currentColor;
-}
-
-.hover-outline:focus,
-.hover-outline:hover {
-  box-shadow: 0 0 0 0.125rem currentColor;
-  border-radius: 0.25rem;
-}
-
-.pretty-link {
-  color: var(--linkColor);
-  text-decoration: underline;
-  transition: none;
-}
-
-.pretty-link:hover {
-  opacity: 0.6;
-}
-
-.link:focus,
-:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px white, 0 0 0 4px black;
-  border-radius: 0.25rem;
-}
-
-.ImageGrid {
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.Content {
-  width: 100%;
-  max-width: var(--contentWidth);
-  font-family: var(--fontPara);
-  font-size: var(--f4);
-}
-
-.Content figure {
-  background: var(--navyColor);
-  color: var(--washedGreenColor);
-  padding: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  margin: 1rem 0;
-  max-width: 100%;
-  width: 100%;
-  height: auto;
-  border-radius: 0.25rem;
-}
-
-.Content figure img {
-  border-radius: 0.25rem;
-  border: 1px solid hsla(0, 0%, 100%, 0.25);
-}
-
-.Content figcaption {
-  padding: 0;
-  padding-top: 0.5rem;
-  font-family: var(--fontMain);
-  font-size: var(--f5);
-}
-
-.Content figcaption a {
-  color: #fff;
-  text-decoration: underline;
-  transition: none;
-}
-
-.Content figcaption a:hover {
-  opacity: 0.6;
-}
-
-.Content blockquote {
-  margin-left: -1rem;
-  margin-right: 0;
-  padding-left: 1rem;
-  border-left: 0.125rem solid currentColor;
-  font-style: italic;
-}
-
-.Content pre,
-.Content code {
-  font-size: var(--f5);
-  font-family: var(--fontMonospace);
-}
-
-.Content pre {
-  padding: 1rem;
-  margin: 1rem 0;
-  overflow-x: auto;
-}
-
-.Content p,
-.Content ul li {
-  line-height: var(--lhCopy);
-}
-
-.Content h1,
-.Content h2,
-.Content h3 {
-  font-family: var(--fontMain);
-  line-height: var(--lhTitle);
-}
-
-.Content h1 a,
-.Content h2 a,
-.Content h3 a {
-  padding: 0;
-  color: inherit;
-  text-decoration: inherit;
-  border: none;
-  background: transparent;
-}
-
-.Content h1 a:hover,
-.Content h2 a:hover,
-.Content h3 a:hover {
-  text-decoration: underline;
-}
-
-.Content hr {
-  border: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.Content h2 {
-  font-size: var(--f2);
-  margin-top: 4rem;
-  margin-bottom: 0rem;
-}
-
-@media (max-width: 30em) {
-  .Content h2 {
-    font-size: var(--f3);
+@media (prefers-color-scheme: dark) {
+  .bit-auto {
+    --bit-color0: var(--color-pal3);
+    --bit-color1: var(--color-pal0);
+    --color-link: var(--color-pal2);
+    /* Lighter version of pal0 */
+    --color-syntax-bg: hsl(222, 30%, 26%);
+    /* Even lighter version of pal0 */
+    --color-code-bg: hsl(222, 30%, 32%);
+    --color-code-fg: var(--color-pal3);
   }
 }
 
-.Content li a,
-.Content p a {
-  color: var(--linkColor);
-  text-decoration: underline;
-  transition: none;
+* {
+  box-sizing: border-box;
 }
 
-.Content li a:hover,
-.Content p a:hover {
-  opacity: 0.6;
+body {
+  font-size: 1.25rem;
+  font-family: var(--font-serif);
+  line-height: 1.5;
+  padding: 1rem;
+  max-width: var(--content-width);
+  margin: 0 auto;
 }
 
-.Content ul {
+h1,
+h2,
+h3,
+footer,
+nav {
+  font-family: var(--font-sans);
+}
+
+.bit-auto h1 a,
+.bit-auto h2 a,
+.bit-auto h3 a {
+  text-decoration: none;
+}
+
+nav {
+  font-size: 1.25rem;
+  display: flex;
+  border-bottom: var(--bit-border-width) dotted var(--bit-color0);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 400px) {
+  nav {
+    /* Is there a better way than hard coding 4 columns here? */
+    grid-template-columns: repeat(4, max-content);
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: 1rem;
+  border-top: var(--bit-border-width) dotted var(--bit-color0);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.bit-auto a {
+  --bit-color0: var(--color-link);
+}
+
+ul {
+  padding-left: 1.25rem;
+  list-style-type: square;
+}
+
+ol {
   padding-left: 1.5rem;
-  list-style-type: disc;
 }
 
-.Content li + li {
-  margin-top: 0.25rem;
+code,
+pre {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-variant-ligatures: none;
 }
 
-.Content li code,
-.Content p code {
-  display: inline-block;
-  padding: 0;
-  color: var(--codeColor);
-  background-color: var(--codeColorBG);
+.bit-auto code {
+  --bit-color0: var(--color-code-bg);
+  --bit-color1: var(--color-code-fg);
 }
 
-/* Using colors from Tachyons:
- * http://tachyons.io/docs/themes/skins/
- *
- * Handy guide for Pygments cryptic CSS classes:
- * https://gist.github.com/scotu/1272660
- */
-
-.highlight {
-  --bg: var(--navyColor);
-  --fg: #eeeeee;
-  --green: #9eebcf;
-  --blue: #96ccff;
-  --gray1: #cccccc;
-  --gray2: #aaaaaa;
-  --yellow: #ffd700;
-  --orange: #ffb700;
+.bit-auto pre > code {
+  background: transparent;
 }
 
-.highlight pre {
-  background: var(--bg);
-  color: var(--fg);
-  border-radius: 0.25rem;
-  scrollbar-color: var(--fg) var(--bg);
+blockquote {
+  margin-left: 0;
+  padding-left: 2rem;
+  font-style: italic;
 }
 
-.highlight pre code {
-  color: var(--fg);
+figure {
+  margin: 1rem 0;
 }
 
-/* .nt = Name tag */
-/* .kd = Function */
-/* .k = Keyword */
-/* .kr = Keyword */
-.highlight .nt,
-.highlight .kd,
-.highlight .k,
-.highlight .kr {
-  color: var(--green);
+figure img {
+  width: 100%;
 }
 
-/* .nx = Normal */
-.highlight .nx {
-  color: var(--fg);
+figure figcaption {
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 1rem;
 }
 
-/* .na = Name attribute */
-/* .nb = Name builtin */
-/* .nn = Namespace */
-.highlight .na,
-.highlight .nb,
-.highlight .nn {
-  color: var(--fg);
+.responsive-img {
+  max-width: 100%;
+  height: auto;
 }
 
-/* .p = Punctuation */
-/* .o = Operator */
-/* .si = String interpolation */
-.highlight .p,
-.highlight .o,
-.highlight .si,
-.highlight .se {
-  color: var(--gray2);
+.font-sans {
+  font-family: var(--font-sans);
 }
 
-/* .s = String */
-/* .s1 = String */
-/* .s2 = String */
-/* .sr = Regexp */
-/* .si = String escape */
-.highlight .s,
-.highlight .s1,
-.highlight .s2,
-.highlight .sr,
-.highlight .se {
-  color: var(--yellow);
+.font-serif {
+  font-family: var(--font-serif);
 }
 
-/* .no = Named constant */
-/* .kc = Constant */
-/* .kt = Type constant */
-/* .py = Named property */
-.highlight .no,
-.highlight .kc,
-.highlight .mi,
-.highlight .kt,
-.highlight .py {
-  color: var(--gray1);
+.font-mono {
+  font-family: var(--font-mono);
 }
 
-/* .mi = Number */
-.highlight .mi {
-  color: var(--orange);
-}
-
-/* .c = Comment */
-/* .c1 = Comment */
-/* .cm = Comment */
-.highlight .c,
-.highlight .c1,
-.highlight .cm {
-  color: var(--blue);
+.print-only {
+  display: none;
 }

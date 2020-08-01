@@ -421,7 +421,9 @@ List(stack, scope, node) {
 There are three cases here, and we try to deal with them as early as possible:
 
 1. The symbol is a special form, not a function call (such as `if`).
+
 2. The symbol references a native JavaScript function.
+
 3. The symbol references a function created inside Duckweed.
 
 So for the first case we just dispatch to a table with the unevaluated list data. Note that *all* list evaluations pass through the current call stack and the current variable scope.

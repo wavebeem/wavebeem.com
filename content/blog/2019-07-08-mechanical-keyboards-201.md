@@ -81,31 +81,31 @@ This little dictionary should help you understand some of the incomprehensible j
 
 **ABS (acrylonitrile butadiene styrene)**
 
-ABS is the most common type of plastic used for cases and keycaps. It is versatile, but tends to become "shiny" (smooth and reflective) over time and with repeated typing. This leads to the perception of it as lower quality than PBT.
+> ABS is the most common type of plastic used for cases and keycaps. It is versatile, but tends to become "shiny" (smooth and reflective) over time and with repeated typing. This leads to the perception of it as lower quality than PBT.
 
 --------------------------------------------------------------------------------
 
 **PBT (polybutylene terephthalate)**
 
-PBT is a type of plastic that is much more resistant to "shining". Many PBT keycaps are also made thicker than ABS keycaps, which gives a deeper sound when typing.
+> PBT is a type of plastic that is much more resistant to "shining". Many PBT keycaps are also made thicker than ABS keycaps, which gives a deeper sound when typing.
 
 --------------------------------------------------------------------------------
 
 **POM (polyoxymethylene)**
 
-POM is a very smooth plastic. It does not get used much for keyboards, but a few keycap sets are available using it, and the NovelKeys Cream switches.
+> POM is a very smooth plastic. It does not get used much for keyboards, but a few keycap sets are available using it, and the NovelKeys Cream switches.
 
 --------------------------------------------------------------------------------
 
 **dye-sub (dye-sublimated)**
 
-Dye-sublimation is a durable printing process used for making the legends (letters) on keycaps. Note that because this process uses dye, you can only make colors darker, not brighter. This means that you cannot print white text on a black plastic, for example. This method is usually used for PBT keycaps. Complex multicolor graphics can be printed using this technique.
+> Dye-sublimation is a durable printing process used for making the legends (letters) on keycaps. Note that because this process uses dye, you can only make colors darker, not brighter. This means that you cannot print white text on a black plastic, for example. This method is usually used for PBT keycaps. Complex multicolor graphics can be printed using this technique.
 
 --------------------------------------------------------------------------------
 
 **double-shot**
 
-Double-shot injection molding is a technique that involves using two separate plastics (usually ABS) in order to make a keycap. This is the ideal method for two-colors designs on keycaps. It will never wear off, and you can combine any colors you'd like (such as white text on black plastic). This is generally not done for PBT plastic.
+> Double-shot injection molding is a technique that involves using two separate plastics (usually ABS) in order to make a keycap. This is the ideal method for two-colors designs on keycaps. It will never wear off, and you can combine any colors you'd like (such as white text on black plastic). This is generally not done for PBT plastic.
 
 
 ## Parts: case
@@ -149,14 +149,19 @@ Most cases come with all screws necessary, and I assume you have access to a Phi
 For *lubing*, you will need access to the following items:
 
 - A [thin paint brush](https://www.amazon.com/gp/product/B01HWCAGQQ) to apply the lube
+
 - A [key switch opener](https://kbdfans.cn/collections/keyboard-part/products/gb-2-in-1-machined-aluminum-switch-opener) is technically optional, but will save you a lot of time and effort
+
 - Lube such as  [Krytox GPL 205](https://www.1upkeyboards.com/shop/misc/krytox-gpl-205/), or other [similar lubes](https://www.1upkeyboards.com/shop/parts-and-tools/lubricant/switch-lubricant-2ml/)
 
 For *soldering*, you will need access to the following items:
 
 - A soldering iron ([budget kit](https://www.amazon.com/ANBES-Soldering-Iron-Kit-Electronics/dp/B06XZ31W3M) with some extra goodies or a [deluxe model](https://www.amazon.com/Hakko-FX888D-23BY-Digital-Soldering-Station/dp/B00ANZRT4M) without extras)
+
 - A damp sponge or [brass sponge](https://www.amazon.com/Hakko-599B-02-Wire-type-soldering-cleaner/dp/B00FZPGDLA) for cleaning the soldering iron tip (**do NOT use your kitchen sponge unless you want lead poisoning**)
+
 - A [solder sucker and a solder wick](https://www.amazon.com/Tabiger-Solder-Desoldering-Sucker-Remover/dp/B0777LMVTT) (or a [desoldering iron](https://www.amazon.com/American-HAKKO-Products-FR301-03-Desoldering/dp/B07BFVFMS9) if you have lots of money)
+
 - [Solder](https://www.amazon.com/gp/product/B00B1JKEHS), ideally 67/37 tin/lead split with rosin core for fast melting
 
 If you use a *plate*, you should get an [IC puller](https://www.amazon.com/a13032100ux0040-Anti-Static-Motherboard-Circuit-Extractor/dp/B00CQI99K6) (also called a switch puller), to easily remove switches from the plate without breaking them.
