@@ -1,7 +1,5 @@
 {
   "layout": "layout-post",
-  "tags": [
-    "post"
-  ],
-  "permalink": "blog/{{ page.date | date: '%Y/%m/%d' }}/{{ title | slug }}/index.html"
+  "tags": ["post"],
+  "permalink": "blog/{{ page.date | formatDate: 'yyyy/mm/dd' }}/{{ title | slug }}/index.html"
 }
