@@ -294,7 +294,7 @@ Split keyboards are great for maintaining good posture and a healthy shoulder sp
 
 These are my favorite shops I've purchased from (shipping to the US). Please note that some of these sites primarily deal in group buys, and thus may not have much of interest to order right now depending on when you look.
 
-[Novelkeys](https://novelkeys.xyz/) is my overall favorite shop. They have an amazing selection of switches and desk mats, and run many group buys. They also work closely with Gateron to make new types of switches available (Novelkeys Creams, Gateron Silent Yellow, etc).
+[NovelKeys](https://novelkeys.xyz/) is my overall favorite shop. They have an amazing selection of switches and desk mats, and run many group buys. They also work closely with Gateron to make new types of switches available (NovelKeys Creams, Gateron Silent Yellow, etc).
 
 [Signature Plastics](https://pimpmykeyboard.com/) is my number one stop for keycap sets. They have high quality DSA profile caps made from PBT in many colors, and produce sets to fit specialty keyboards like the Planck, Ergodox, and more. I recommend any of the DSA sets, especially the [dye sublimated sets](https://pimpmykeyboard.com/dsa-sublimated-keysets/).
 
