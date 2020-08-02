@@ -1,1 +1,2 @@
-- Shortcodes don't work inside layouts? (File a bug?)
+- Add CSP
+- Switch to Nunjucks?
