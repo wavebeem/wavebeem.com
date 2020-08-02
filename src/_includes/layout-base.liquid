@@ -11,7 +11,11 @@
 
     <link rel="icon" sizes="16x16" href="/static/favicon-16.png" />
     <link rel="icon" sizes="32x32" href="/static/favicon-32.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon-180.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/favicon-180.png"
+    />
     <link rel="manifest" href="/static/manifest.json" />
 
     <meta name="twitter:card" content="summary" />
@@ -26,6 +30,7 @@
     <link rel="stylesheet" media="screen" href="/static/1bit-ui.css" />
     <link rel="stylesheet" media="screen" href="/static/style.css" />
     <link rel="stylesheet" media="screen" href="/static/syntax.css" />
+    <link rel="stylesheet" media="print" href="/static/print.css" />
 
     <script
       async
@@ -49,13 +54,15 @@
     </script>
   </head>
   <body>
-    <nav>
+    <nav class="screen-only">
       <b>Brian Mock</b>
       <a class="bit-link" href="/">Home</a>
       <a class="bit-link" href="/blog">Blog</a>
       <a class="bit-link" href="/resume">Resume</a>
     </nav>
     <main>{{ content }}</main>
-    <footer>&copy; {{ "now" | date: "%Y" }} Brian Mock</footer>
+    <footer class="screen-only">
+      &copy; {{ "now" | date: "%Y" }} Brian Mock
+    </footer>
   </body>
 </html>

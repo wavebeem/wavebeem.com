@@ -1,96 +1,79 @@
-/**
- * Handy guide for Pygments cryptic CSS classes:
- * https://gist.github.com/scotu/1272660
- */
+/* Based on EN4 palette https://lospec.com/palette-list/en4 */
 
- .highlight {
-  --bg: var(--color-syntax-bg);
-  --fg: hsl(223, 31%, 93%);
-  --green: hsl(158, 70%, 70%);
-  --blue: hsl(223, 100%, 79%);
-  --gray1: hsl(223, 31%, 90%);
-  --gray2: hsl(223, 31%, 80%);
-  --yellow: hsl(51, 80%, 65%);
-  --orange: hsl(43, 80%, 65%);
+.bit-auto pre {
+  --comment: hsl(30, 90%, 85%);
+  --punctuation: hsl(223, 60%, 80%);
+  --string: hsl(30, 80%, 70%);
+  --property: hsl(30, 80%, 70%);
+  --operator: hsl(30, 80%, 70%);
+  --function: hsl(30, 95%, 80%);
+  --keyword: hsl(157, 80%, 80%);
+
+  --bit-color0: var(--color-syntax-bg);
+  --bit-color1: var(--color-pal3);
 }
 
-.highlight pre {
-  background: var(--bg);
-  color: var(--fg);
-  scrollbar-color: var(--fg) var(--bg);
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--comment);
 }
 
-/* .nt = Name tag */
-/* .kd = Function */
-/* .k = Keyword */
-/* .kr = Keyword */
-.highlight .nt,
-.highlight .kd,
-.highlight .k,
-.highlight .kr {
-  color: var(--green);
+.token.punctuation {
+  color: var(--punctuation);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: var(--operator);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: var(--function);
+}
+
+.token.keyword {
+  color: var(--keyword);
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.boolean,
+.token.number,
+.token.regex,
+.token.important {
+  color: var(--property);
+}
+
+.token.important,
+.token.bold {
   font-weight: bold;
 }
 
-/* .nx = Normal */
-.highlight .nx {
-  color: var(--fg);
+.token.italic {
+  font-style: italic;
 }
 
-/* .na = Name attribute */
-/* .nb = Name builtin */
-/* .nn = Namespace */
-.highlight .na,
-.highlight .nb,
-.highlight .nn {
-  color: var(--fg);
-}
-
-/* .p = Punctuation */
-/* .o = Operator */
-/* .si = String interpolation */
-.highlight .p,
-.highlight .o,
-.highlight .si,
-.highlight .se {
-  color: var(--gray2);
-}
-
-/* .s = String */
-/* .s1 = String */
-/* .s2 = String */
-/* .sr = Regexp */
-/* .si = String escape */
-.highlight .s,
-.highlight .s1,
-.highlight .s2,
-.highlight .sr,
-.highlight .se {
-  color: var(--yellow);
-}
-
-/* .no = Named constant */
-/* .kc = Constant */
-/* .kt = Type constant */
-/* .py = Named property */
-.highlight .no,
-.highlight .kc,
-.highlight .mi,
-.highlight .kt,
-.highlight .py {
-  color: var(--gray1);
-}
-
-/* .mi = Number */
-.highlight .mi {
-  color: var(--orange);
-}
-
-/* .c = Comment */
-/* .c1 = Comment */
-/* .cm = Comment */
-.highlight .c,
-.highlight .c1,
-.highlight .cm {
-  color: var(--blue);
+.token.entity {
+  cursor: help;
 }
