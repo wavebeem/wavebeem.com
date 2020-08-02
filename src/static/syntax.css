@@ -1,0 +1,79 @@
+/* Based on EN4 palette https://lospec.com/palette-list/en4 */
+
+.bit-auto pre {
+  --comment: hsl(30, 90%, 85%);
+  --punctuation: hsl(223, 60%, 80%);
+  --string: hsl(30, 80%, 70%);
+  --property: hsl(30, 80%, 70%);
+  --operator: hsl(30, 80%, 70%);
+  --function: hsl(30, 95%, 80%);
+  --keyword: hsl(157, 80%, 80%);
+
+  --bit-color0: var(--color-syntax-bg);
+  --bit-color1: var(--color-pal3);
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--comment);
+}
+
+.token.punctuation {
+  color: var(--punctuation);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: var(--operator);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: var(--function);
+}
+
+.token.keyword {
+  color: var(--keyword);
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.boolean,
+.token.number,
+.token.regex,
+.token.important {
+  color: var(--property);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}

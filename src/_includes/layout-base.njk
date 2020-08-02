@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="bit-auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="content-security-policy"
+      content="
+        default-src
+          'self';
+
+        img-src
+          'self'
+          https://www.google-analytics.com;
+
+        script-src
+          'self'
+          https://www.googletagmanager.com
+          https://www.google-analytics.com;
+      "
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Brian Mock" />
+    <meta name="description" content="{{ description }}" />
+    <link rel="icon" sizes="16x16" href="/static/favicon-16.png" />
+    <link rel="icon" sizes="32x32" href="/static/favicon-32.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/favicon-180.png"
+    />
+    <link rel="manifest" href="/static/manifest.json" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@wavebeem" />
+    <meta name="twitter:creator" content="@wavebeem" />
+    <meta name="og:title" content="{{ title }}" />
+    <meta name="og:description" content="{{ description }}" />
+    <meta name="og:image" content="https://mockbrian.com/brian-bg.png" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" media="screen" href="/static/1bit-ui.css" />
+    <link rel="stylesheet" media="screen" href="/static/style.css" />
+    <link rel="stylesheet" media="screen" href="/static/syntax.css" />
+    <link rel="stylesheet" media="print" href="/static/print.css" />
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-52704502-1"
+    ></script>
+    <script type="module" src="/static/ga.js"></script>
+  </head>
+  <body>
+    <nav class="screen-only">
+      <b>Brian Mock</b>
+      <a class="bit-link" href="/">Home</a>
+      <a class="bit-link" href="/blog">Blog</a>
+      <a class="bit-link" href="/resume">Resume</a>
+    </nav>
+    <main>{{ content | safe }}</main>
+    <footer class="screen-only">
+      &copy; {{ "now" | formatDate("yyyy") }} Brian Mock
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "layout": "layout-post",
+  "tags": ["post"],
+  "permalink": "blog/{{ page.date | formatDate: 'yyyy/mm/dd' }}/{{ title | slug }}/index.html"
+}

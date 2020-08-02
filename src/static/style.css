@@ -1,0 +1,163 @@
+:root {
+  --font-sans: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --font-serif: "Georgia", "Cambria", "Palatino", serif;
+  --font-mono: "JetBrains Mono", "Fira Code", "Menlo", "Consolas", monospace;
+  --content-width: 768px;
+  /* EN4 palette https://lospec.com/palette-list/en4 */
+  --color-pal0: hsl(223, 31%, 18%);
+  --color-pal1: hsl(157, 25%, 35%);
+  --color-pal2: hsl(28, 65%, 71%);
+  --color-pal3: hsl(30, 50%, 97%);
+  overflow-y: scroll;
+}
+
+.bit-auto {
+  --bit-color0: var(--color-pal0);
+  --bit-color1: var(--color-pal3);
+  --color-link: var(--color-pal1);
+  --color-syntax-bg: var(--color-pal0);
+  /* Lighter version of pal2 */
+  --color-code-bg: hsl(28, 65%, 91%);
+  --color-code-fg: var(--color-pal0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .bit-auto {
+    --bit-color0: var(--color-pal3);
+    --bit-color1: var(--color-pal0);
+    --color-link: var(--color-pal2);
+    /* Lighter version of pal0 */
+    --color-syntax-bg: hsl(222, 30%, 26%);
+    /* Even lighter version of pal0 */
+    --color-code-bg: hsl(222, 30%, 32%);
+    --color-code-fg: var(--color-pal3);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.25rem;
+  font-family: var(--font-serif);
+  line-height: 1.5;
+  padding: 1rem;
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 1 auto;
+}
+
+h1,
+h2,
+h3,
+footer,
+nav {
+  font-family: var(--font-sans);
+}
+
+.bit-auto h1 a,
+.bit-auto h2 a,
+.bit-auto h3 a {
+  text-decoration: none;
+}
+
+nav {
+  font-size: 1.25rem;
+  display: flex;
+  border-bottom: var(--bit-border-width) dotted var(--bit-color0);
+  padding-bottom: 1rem;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 400px) {
+  nav {
+    /* Is there a better way than hard coding 4 columns here? */
+    grid-template-columns: repeat(4, max-content);
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: 1rem;
+  border-top: var(--bit-border-width) dotted var(--bit-color0);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+.bit-auto a {
+  --bit-color0: var(--color-link);
+}
+
+ul {
+  padding-left: 1.25rem;
+  list-style-type: square;
+}
+
+ol {
+  padding-left: 1.5rem;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-variant-ligatures: none;
+}
+
+.bit-auto code {
+  --bit-color0: var(--color-code-bg);
+  --bit-color1: var(--color-code-fg);
+}
+
+.bit-auto pre > code {
+  background: transparent;
+}
+
+blockquote {
+  margin-left: 0;
+  padding-left: 2rem;
+  font-style: italic;
+}
+
+figure {
+  margin: 1rem 0;
+}
+
+figure img {
+  width: 100%;
+}
+
+figure figcaption {
+  font-family: var(--font-sans);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.print-only {
+  display: none;
+}

@@ -3,5 +3,5 @@
 .vscode/*
 !.vscode/spellright.dict
 
-public
-resources
+_site
+node_modules
