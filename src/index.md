@@ -3,13 +3,47 @@ title: "Brian Mock"
 layout: "layout-base"
 ---
 
-<h1 class="welcome-header">
-  <img
-    src="/static/banner.gif"
-    width="512"
-    height="128"
-    alt="Welcome, traveler!"
-  />
+<h1 class="welcome-header flex">
+  <div class="flex flex-column">
+    <div class="pixel pixel-alpha"></div>
+    <div class="pixel pixel-alpha"></div>
+    <div class="pixel pixel-color0 flex-auto"></div>
+    <div class="pixel pixel-alpha"></div>
+    <div class="pixel pixel-alpha"></div>
+  </div>
+  <div class="flex flex-column">
+    <div class="pixel pixel-alpha"></div>
+    <div class="pixel pixel-color0"></div>
+    <div class="pixel pixel-color1 flex-auto"></div>
+    <div class="pixel pixel-color0"></div>
+    <div class="pixel pixel-alpha"></div>
+  </div>
+  <div class="welcome-content flex flex-column flex-auto items-center">
+    <div class="pixel pixel-color0 pixel-100"></div>
+    <div class="pixel pixel-color1 pixel-100"></div>
+    <img
+      src="/static/banner.gif"
+      width="512"
+      height="128"
+      alt="Welcome, traveler!"
+    />
+    <div class="pixel pixel-color1 pixel-100"></div>
+    <div class="pixel pixel-color0 pixel-100"></div>
+  </div>
+  <div class="flex flex-column">
+    <div class="pixel pixel-alpha"></div>
+    <div class="pixel pixel-color0"></div>
+    <div class="pixel pixel-color1 flex-auto"></div>
+    <div class="pixel pixel-color0"></div>
+    <div class="pixel pixel-alpha"></div>
+  </div>
+  <div class="flex flex-column">
+    <div class="pixel pixel-alpha"></div>
+    <div class="pixel pixel-alpha"></div>
+    <div class="pixel pixel-color0 flex-auto"></div>
+    <div class="pixel pixel-alpha"></div>
+    <div class="pixel pixel-alpha"></div>
+  </div>
 </h1>
 
 I'm Brian Mock (he/him). I live in Portland, Oregon, where I make software,
