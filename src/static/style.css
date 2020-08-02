@@ -186,6 +186,7 @@ figure figcaption {
 
 .welcome-content {
   background: var(--color-pal3);
+  color: var(--color-pal0);
 }
 
 .flex-auto {
