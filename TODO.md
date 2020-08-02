@@ -1,2 +1,1 @@
-- Add CSP
 - Switch to Nunjucks?

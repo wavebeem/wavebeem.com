@@ -1,9 +1,7 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const markdownItTocAndAnchor = require("markdown-it-toc-and-anchor").default;
-
-const date = new Date();
-const year = date.getFullYear();
+const dateformat = require("dateformat");
 
 module.exports = (config) => {
   config.setLibrary(
@@ -18,6 +16,12 @@ module.exports = (config) => {
   );
   config.addPlugin(syntaxHighlight);
   config.addPassthroughCopy("src/static");
+  config.addFilter("formatDate", (value, format) => {
+    if (value === "now") {
+      value = new Date();
+    }
+    return dateformat(value, format);
+  });
   return {
     dir: {
       input: "src",

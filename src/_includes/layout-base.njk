@@ -53,9 +53,9 @@
       <a class="bit-link" href="/blog">Blog</a>
       <a class="bit-link" href="/resume">Resume</a>
     </nav>
-    <main>{{ content }}</main>
+    <main>{{ content | safe }}</main>
     <footer class="screen-only">
-      &copy; {{ "now" | date: "%Y" }} Brian Mock
+      &copy; {{ "now" | formatDate("yyyy") }} Brian Mock
     </footer>
   </body>
 </html>
