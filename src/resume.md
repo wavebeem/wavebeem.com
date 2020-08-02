@@ -15,7 +15,7 @@ Ruby, Python, Bash, Amazon S3, Cloudfront, Route 53, JIRA, Java
 
 **Aruba Networks**, _Senior JavaScript Developer_ (February 2018--_present_)
 
-- Lead development on a WebGL map and routing graph  application over a year in the making
+- Lead development on a WebGL map and routing graph application over a year in the making
 
 - Migrated frontend to new technology stack (React SPA, component library)
 
@@ -49,9 +49,7 @@ Ruby, Python, Bash, Amazon S3, Cloudfront, Route 53, JIRA, Java
 
 **NOAA**, _Undergraduate Research Intern_ (Summer 2011)
 
-
 - Created weather simulation data visualizer JavaScript app using Google Maps
-
 
 ## Projects
 
