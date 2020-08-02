@@ -62,6 +62,10 @@ nav {
   font-family: var(--font-sans);
 }
 
+.bit-auto .markdownIt-Anchor {
+  text-decoration: none;
+}
+
 nav {
   font-size: 1.25rem;
   display: flex;
