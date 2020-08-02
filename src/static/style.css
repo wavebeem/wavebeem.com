@@ -141,21 +141,33 @@ figure figcaption {
   font-size: 1rem;
 }
 
-.responsive-img {
-  max-width: 100%;
-  height: auto;
+.welcome-header {
+  --pixel: 2px;
+  --img-width: 256px;
+  --img-height: 64px;
+  margin: calc(2rem + var(--pixel)) var(--pixel);
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: center;
+  background: var(--color-pal3);
+  border: var(--pixel) solid var(--bit-color1);
+  box-shadow: 0 var(--pixel) 0 0 var(--bit-color0),
+    0 calc(-1 * var(--pixel)) 0 0 var(--bit-color0),
+    var(--pixel) 0 0 var(--bit-color0),
+    calc(-1 * var(--pixel)) 0 0 var(--bit-color0);
 }
 
-.font-sans {
-  font-family: var(--font-sans);
+.welcome-header img {
+  width: var(--img-width);
+  height: var(--img-height);
 }
 
-.font-serif {
-  font-family: var(--font-serif);
-}
-
-.font-mono {
-  font-family: var(--font-mono);
+@media (min-width: 600px) {
+  .welcome-header {
+    --pixel: 4px;
+    --img-width: 512px;
+    --img-height: 128px;
+  }
 }
 
 .print-only {

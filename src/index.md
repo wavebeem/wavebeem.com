@@ -3,13 +3,12 @@ title: "Brian Mock"
 layout: "layout-base"
 ---
 
-<h1>
+<h1 class="welcome-header">
   <img
     src="/static/banner.gif"
     width="512"
     height="128"
     alt="Welcome, traveler!"
-    class="responsive-img"
   />
 </h1>
 
