@@ -28,7 +28,5 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#e8fdf5",
-  "background_color": "#e8fdf5",
   "display": "browser"
 }
