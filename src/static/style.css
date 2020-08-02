@@ -39,6 +39,12 @@
 }
 
 body {
+  /**
+   * Setting font size on body rather than html so that 1rem can refer to the
+   * user's specified font size anywhere in my CSS, rather than 1.25 times that
+   * value; but this way most things get bumped up a little bigger, for a
+   * slightly comfier to read site (since this is a blog, after all)
+   */
   font-size: 1.25rem;
   font-family: var(--font-serif);
   line-height: 1.5;
@@ -57,8 +63,8 @@ main {
 h1,
 h2,
 h3,
-footer,
-nav {
+nav,
+footer {
   font-family: var(--font-sans);
 }
 
@@ -113,10 +119,6 @@ pre {
 .bit-auto code {
   --bit-color0: var(--color-code-bg);
   --bit-color1: var(--color-code-fg);
-}
-
-.bit-auto pre > code {
-  background: transparent;
 }
 
 blockquote {
