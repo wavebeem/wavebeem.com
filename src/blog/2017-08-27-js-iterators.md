@@ -355,4 +355,4 @@ That being said, iterators are really cool. Even though they're a bit confusing,
 [2]: https://lodash.com/
 [3]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 [4]: https://github.com/tj/co
-[5]: /blog/2016/08/22/leaning-tower-of-babel/
+[5]: /blog/2016/08/22/the-leaning-tower-of-babel/
