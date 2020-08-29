@@ -1,10 +1,14 @@
-http://mockbrian.com/* https://www.wavebeem.com/:splat
-https://mockbrian.com/* https://www.wavebeem.com/:splat
+# mockbrian.com
+http://mockbrian.com/* https://www.wavebeem.com/:splat 302!
+https://mockbrian.com/* https://www.wavebeem.com/:splat 302!
 
-http://www.mockbrian.com/* https://www.wavebeem.com/:splat
-https://www.mockbrian.com/* https://www.wavebeem.com/:splat
+# www.mockbrian.com
+http://www.mockbrian.com/* https://www.wavebeem.com/:splat 302!
+https://www.mockbrian.com/* https://www.wavebeem.com/:splat 302!
 
-http://blog.mockbrian.com/* https://www.wavebeem.com/blog/:splat
-https://blog.mockbrian.com/* https://www.wavebeem.com/blog/:splat
+# blog.mockbrian.com
+http://blog.mockbrian.com/* https://www.wavebeem.com/blog/:splat 302!
+https://blog.mockbrian.com/* https://www.wavebeem.com/blog/:splat 302!
 
-/heartgame /static/heartgame
+# PICO-8 game
+/heartgame /static/heartgame 302!
