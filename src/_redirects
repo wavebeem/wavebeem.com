@@ -6,3 +6,5 @@ https://www.mockbrian.com/* https://www.wavebeem.com/:splat 302!
 
 http://blog.mockbrian.com/* https://www.wavebeem.com/blog/:splat 302!
 https://blog.mockbrian.com/* https://www.wavebeem.com/blog/:splat 302!
+
+/heartgame /static/heartgame

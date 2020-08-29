@@ -15,6 +15,7 @@ module.exports = (config) => {
     })
   );
   config.addPlugin(syntaxHighlight);
+  config.addPassthroughCopy("src/_redirects");
   config.addPassthroughCopy("src/static");
   config.addFilter("formatDate", (value, format) => {
     if (value === "now") {
