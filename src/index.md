@@ -21,5 +21,5 @@ with my cat or running.
 
 Check out the rest of my projects on [GitHub](https://github.com/wavebeem).
 
-Email me at [brian@mockbrian.com](mailto:brian@mockbrian.com) or tweet me at
+Email me at [brian@wavebeem.com](mailto:brian@wavebeem.com) or tweet me at
 [@wavebeem](https://twitter.com/wavebeem).
