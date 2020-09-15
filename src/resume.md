@@ -61,7 +61,7 @@ Ruby, Python, bash, Travis CI, S3, Cloudfront, Jira, Java
 
 - Created [jsx-info](https://github.com/wavebeem/jsx-info), a static code analysis tool for React (2019)
 
-- Maintains [Parsimmon](https://github.com/jneen/parsimmon/), a JavaScript parser combinator library with 100% test coverage (2016--present)
+- Maintains [Parsimmon](https://github.com/jneen/parsimmon/), a popular JavaScript parser combinator library with 100% test coverage (2016--present)
 
 - Created [bread-n-butter](https://bnb-wavebeem.netlify.app/), a spiritual successor to Parsimmon, ES2015 and TypeScript (2020--present)
 
