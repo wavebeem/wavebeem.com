@@ -3,13 +3,13 @@ title: "Resume | Brian Mock"
 layout: "layout-resume"
 ---
 
-## Core Technical Skills
+## Technical Skills
 
-JavaScript, TypeScript, HTML, CSS, git
+JavaScript, TypeScript, HTML, CSS, git, GitHub
 
-React, webpack, emotion, lodash, Mocha, Tachyons, ESLint
+React, webpack, Jest, Storybook, Cypress, emotion, tachyons, lodash
 
-Ruby, Python, bash, Travis CI, S3, Cloudfront, Jira, Java
+Ruby, Python, bash, Travis CI, parsers, Amazon S3, Cloudfront, Jira, Java
 
 ## Work Experience
 
@@ -17,11 +17,13 @@ Ruby, Python, bash, Travis CI, S3, Cloudfront, Jira, Java
 
 - Completed a frontend rewrite from Backbone to React
 
-- Developed automatic CI+CD pipeline to increase development speed and ease
+- Developed a CI+CD pipeline to increase deployment speed and reliability
 
 - Lead development on a WebGL map and routing graph application
 
 - Designed and created a real-time asset visualization SDK for the web
+
+- Extended and refactored an in-house React component library
 
 ---
 
@@ -29,15 +31,11 @@ Ruby, Python, bash, Travis CI, S3, Cloudfront, Jira, Java
 
 - Led a wayward team to best practices on their first TypeScript project
 
-- Created an adapter for the internal testing library to Mocha, added automatic code formatting
-
 ---
 
 **CrowdCompass**, _JavaScript Developer_ (February 2016--May 2017)
 
 - Maintained multiple web apps using Ember and Ruby on Rails + jQuery
-
-<!-- - Migrated CoffeeScript to ES6; developed ESLint code quality strategy -->
 
 ---
 
@@ -65,15 +63,15 @@ Ruby, Python, bash, Travis CI, S3, Cloudfront, Jira, Java
 
 - Created [bread-n-butter](https://bnb-wavebeem.netlify.app/), a spiritual successor to Parsimmon, ES2015 and TypeScript (2020--present)
 
-- Created [Squiggle](http://www.squiggle-lang.org/), a compile-to-JS programming language (2015--2016)
+- Created [Squiggle](https://www.squiggle-lang.org/), a compile-to-JS programming language (2015--2016)
 
 - Created [Screenhive](https://github.com/wavebeem/screenhive), an Electron app for organizing Steam screenshots (2016)
 
-- Co-developed [Algebra Card Clutter](https://www.usatoday.com/story/tech/2013/01/21/algebra-apps-help-kids/1852187/), an educational iPad math game ([2012](http://ipadapptivities.blogspot.com/2012/08/algebra-card-clutter.html))
+- Co-developed [Algebra Card Clutter](https://www.usatoday.com/story/tech/2013/01/21/algebra-apps-help-kids/1852187/), an educational iPad math game ([2012](https://ipadapptivities.blogspot.com/2012/08/algebra-card-clutter.html))
 
-- Created [LatteScript](https://lattescript.netlify.com), an educational programming language (2011--2012)
+- Created [LatteScript](https://lattescript.netlify.app), an educational programming language (2011--2012)
 
-- Created a new tab bar style for [iTerm](http://iterm2.com/) ([2014](https://github.com/gnachman/iTerm2/pull/185))
+- Created a new tab bar style for [iTerm](https://iterm2.com/) ([2014](https://github.com/gnachman/iTerm2/pull/185))
 
 <!-- https://apps.apple.com/us/app/algebra-card-clutter/id549330499 -->
 
