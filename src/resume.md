@@ -21,7 +21,7 @@ Ruby, Python, bash, Travis CI, parsers, Amazon S3, Cloudfront, Jira, Java
 
 - Lead development on a WebGL map and routing graph application
 
-- Designed and created a real-time asset visualization SDK for the web
+- Designed and created a real-time asset visualization [SDK for the web](https://github.com/arubanetworks/meridian-web-sdk/)
 
 - Extended and refactored an in-house React component library
 
