@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "description": "wavebeem.com",
   "scripts": {
+    "upgrade:1bit-ui": "curl -sSL https://unpkg.com/1bit-ui > src/static/1bit-ui.css",
     "start": "eleventy --serve",
     "build": "eleventy"
   },
