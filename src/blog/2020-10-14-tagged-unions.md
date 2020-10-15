@@ -278,7 +278,7 @@ class App {
     this.undoStack = [];
   }
 
-  setState(state) {
+  update(state) {
     this.undoStack.push(this.state);
     this.state = state;
   }
