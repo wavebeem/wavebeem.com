@@ -169,7 +169,40 @@ switch (this.state.mode) {
 
 Now you can add as many states as you want, but the order doesn't matter. How reassuring! With tagged unions, we replace the entire state all at once, so it's impossible to leave behind unwanted values.
 
-## Gotchas
+## Going Deeper
+
+Small examples are all well and good for learning, but how does this work on large apps? At my current job, I refactored a large portion of our most complicated screen (8,000+ lines of code) to use tagged unions to store most of the state. The rest of the team agreed the code was easier to reason about, and we now have lots of errors TypeScript can catch automatically for us.
+
+That application has 30 (!) different modes within its tagged union. In order to help make sense of these, we arranged them hierarchically, similar to URLs.
+
+```ts
+// Code simplified for clarity
+export type MapMode =
+  | MapPlacemarkEditMode
+  | MapPlacemarkBrowseMode
+  | MapBeaconsBrowseMode;
+
+export type MapPlacemarkEditMode =
+  | { mode: "placemark/edit/area"; areaPlacemark: AreaPlacemark }
+  | { mode: "placemark/edit/label"; labelPlacemark: LabelPlacemark }
+  | { mode: "placemark/edit/regular"; placemark: Placemark };
+
+export type MapPlacemarkBrowseMode = {
+  mode: "placemark/browse";
+  placemarks: Placemark[];
+};
+
+export type MapBeaconsBrowseMode = {
+  mode: "beacons/browse;
+  beacons: Beacon[];
+}
+```
+
+This way you can narrow down your modes to be more specific. For example, a form component that lets you edit a placemark can take in `mode: MapPlacemarkEditMode` so that it's only possible to render the form when in those 3 modes. This also means that the form code can be simplified since it only needs to check 3 different modes internally.
+
+I'll admit that it was a little tricky hooking these modes up to URLs within the browser. We wrote some code so that when you updated the mode, we automatically set the route using React Router to the URL that matches your current state closest. Of course, URLs can't preserve all the same state as these JavaScript objects, but people expect to lose unsaved changes when they refresh the browser anyway.
+
+## React Gotchas
 
 If you are using React, be careful with `this.setState`, the state management method for class components. React's `this.setState` merges its parameter into the current state, so it is not suitable for use with tagged unions, which need to be able to add/remove properties. If you have to use `this.setState`, you can nest your tagged union state within an object like this:
 
@@ -229,20 +262,38 @@ class MyComponent extends React.Component {
 }
 ```
 
-## Appendix: Strict Object Helper
+## Catching Errors
 
 When using tagged unions, you might enjoy this helper function if you're using JavaScript instead of TypeScript. Strict objects throw errors when you try to access properties that don't exist, something that happens a lot more frequently when you're using tagged unions.
 
 If you're using TypeScript, you can omit this, since TypeScript will catch your type errors at compile time.
 
 ```js
+/**
+ * Returns an immutable object that throws a TypeError
+ * when you try to get a property that doesn't exist,
+ * or when you try to add, update, or delete a property.
+ */
 function strictObject(object) {
   return new Proxy(object, {
     get(target, prop) {
-      if (prop in target) {
+      // JSON.stringify and various JS methods will try to
+      // access properties that may or may not exist on your
+      // object, and we don't want to crash, so we have to
+      // allow symbols and "toJSON" through, even if
+      // they're not defined.
+      if (prop in target || prop === "toJSON" || typeof prop === "symbol") {
         return target[prop];
       }
-      throw new TypeError(`strictObject: can't access property "${prop}"`);
+      throw new TypeError(`strictObject: can't get property "${prop}"`);
+    },
+
+    set(target, prop) {
+      throw new TypeError(`strictObject: can't set property "${prop}"`);
+    },
+
+    deleteProperty(target, prop) {
+      throw new TypeError(`strictObject: can't delete property "${prop}"`);
     },
   });
 }
@@ -267,6 +318,72 @@ this.state.isSaving;
 
 You'll have to remember to use use `strictObject` every time you assign to `this.state`, but it can really save you from some headaches if you remember to use it. Nobody likes getting `undefined` when they expect a real value.
 
+For TypeScript, you should make a tagged union type instead, which can catch your type errors at compile time, before your code is even run:
+
+```ts
+type State =
+  | { mode: "loading" }
+  | { mode: "error"; message: string }
+  | { mode: "success"; flavors: string[] };
+
+let state: State = { mode: "loading" };
+// TypeScript error: You have to check `.mode` before
+// using any other property from `State`, since `.mode`
+// is the only property present in all 3 cases.
+state.flavors;
+
+if (state.mode === "loading") {
+  console.log("Loading...");
+} else if (state.mode === "error") {
+  // Because we checked the value of `.mode`, TypeScript
+  // figured out which of the 3 State objects we are using,
+  // so it's OK to use `.message` inside this code block.
+  console.error(state.message);
+} else {
+  // We are in the "success" case now since it's the only
+  // option left of the 3 cases we put into the State type
+  console.log(state.flavors.join(", "));
+}
+```
+
+You can even take it one step further in TypeScript with something called exhaustiveness checking. This means that if you add another case to your `State` type, TypeScript will emit a type error until you fix your code to support that newly added case. This means that you can automatically find most of the code you need to update when adding new modes.
+
+```ts
+function assertNever(value: never): never {
+  throw new Error(`assertNever: ${value}`);
+}
+
+type State =
+  | { mode: "apple pie" }
+  | { mode: "banana split" }
+  | { mode: "cherry turnover" };
+
+let state: State = "apple pie";
+
+switch (state.mode) {
+  case "apple pie":
+    console.log(1);
+    break;
+  case "banana split":
+    console.log(2);
+    break;
+  case "cherry turnover":
+    console.log(3);
+    break;
+  default:
+    assertNever(state);
+}
+```
+
+Now if you update the `State` type with a 4th mode `dark chocolate`, you'll get a TypeScript error on your `assertNever` call, saying:
+
+```md
+Argument of type `{ mode: "dark chocolate"; }` is not
+assignable to parameter of type 'never'.
+```
+
+The error message looks a bit weird, but you'll get used to it. You can go to all the places in your code that produce errors like this and fix them. You might actually have a fully functioning app that responds to your new state afterward.
+
 ## Bonus: Undo Support
 
 Have you ever been asked to add "undo" to your application? It can be daunting to figure out where to even start. If you store your state in a tagged union, you have a huge advantage.
@@ -290,3 +407,26 @@ class App {
 ```
 
 I will leave the implementation of `redo` as an exercise for the reader.
+
+Here's the TypeScript version of `App`:
+
+```ts
+type AppState =
+  | { mode: "loading" }
+  | { mode: "error"; message: string }
+  | { mode: "success"; flavors: string[] };
+
+class App {
+  state: AppState = { mode: "loading" };
+  undoStack: AppState[] = [];
+
+  update(state: AppState) {
+    this.undoStack.push(this.state);
+    this.state = state;
+  }
+
+  undo() {
+    this.state = this.undoStack.pop();
+  }
+}
+```
