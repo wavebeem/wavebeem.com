@@ -7,11 +7,9 @@ description: "Tagged Unions in JavaScript and TypeScript"
 
 ## Why Should I Care?
 
-State management. If you've done frontend development, you've probably dealt with it in the past. Have you ever juggled four different mutually exclusive boolean properties on an object? What about trying to figure out if your application is loading, in an error state, or everything is peachy keen?
+Redux. MobX. XState. Vuex. RxJS. State management is hard, and developers are always looking for a tool to help them. Tagged unions are a programming pattern that you can use with immutable state libraries, or even by itself. Tagged unions make it simple to visualize all the states your application can be in, and make it difficult to access the wrong data at the wrong time.
 
-What sounds easy at first can spiral out of control as your application grows, and refactoring can be very tricky. Tagged unions are no silver bullet, but they're a powerful tool to have in your toolbelt.
-
-Note: Tagged unions are also called "algebraic data types" or "enums" in different programming languages. I'm going to use the term "tagged unions" because I think it's the easier to understand.
+Note: Tagged unions are also called "algebraic data types" or "enums" in different programming languages. I'm going to use the term "tagged unions" because I think it's easier to understand.
 
 ## What Are They?
 
@@ -37,9 +35,9 @@ setState({
 });
 ```
 
-The key here is that the state is all stored in a single variable which is an object. This is required so we can completely change the properties in an object.
+The key here is that the state is all stored in a single variable which is an object. This is required so we can completely change the properties in an object. The old React `this.setState` method on class components is not suitable for tagged unions, since it merges the new state into the old state, instead of replacing it.
 
-The basic requirement of a tagged union in JavaScript is an object with a property called `type` or `kind` or something along those lines.
+The basic requirement of a tagged union in JavaScript is an object with a property called `type`, `kind`, `mode`, or something like that.
 
 ```js
 this.state = {
@@ -57,7 +55,7 @@ this.state = {
 };
 ```
 
-A common approach to state management is one object for every possible state, and `null` when a value shouldn't be there:
+Contrast this with large objects featuring many `null` values.
 
 ```js
 // Loading
@@ -79,7 +77,7 @@ this.state = {
 };
 ```
 
-With this state management style, checking your state looks like this:
+With the classic style (large object, many `null` values), your rendering code might look like this.
 
 ```js
 if (this.state.error) {
@@ -91,7 +89,7 @@ if (this.state.error) {
 }
 ```
 
-Now let's say that your product manager asks you to implement a "saving" message while your application is saving. At this point, you'd probably add a boolean:
+Let's say that your product manager asks you to show a spinner while your application is saving. You might be tempted to add a boolean property to the state object.
 
 ```js
 this.state = {
@@ -101,7 +99,7 @@ this.state = {
 };
 ```
 
-Now we can update the rendering code like this:
+Then we could update the rendering code like this.
 
 ```js
 if (this.state.error) {
