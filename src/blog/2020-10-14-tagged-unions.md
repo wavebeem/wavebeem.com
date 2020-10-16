@@ -82,9 +82,9 @@ this.state = {
 With this state management style, checking your state looks like this:
 
 ```js
-if (this.error) {
+if (this.state.error) {
   console.log(this.state.error);
-} else if (!this.flavors) {
+} else if (!this.state.flavors) {
   console.log("Loading...");
 } else {
   console.log("Ice cream flavors:", this.state.flavors.join(", "));
@@ -104,11 +104,11 @@ this.state = {
 Now we can update the rendering code like this:
 
 ```js
-if (this.error) {
+if (this.state.error) {
   console.log(this.state.error);
 } else if (this.state.isSaving) {
   console.log("Saving...");
-} else if (!this.flavors) {
+} else if (!this.state.flavors) {
   console.log("Loading...");
 } else {
   console.log("Ice cream flavors:", this.state.flavors.join(", "));
@@ -134,7 +134,7 @@ If you run the rendering code again, it will output the "Not found" error! So no
 ```js
 if (this.state.isSaving) {
   console.log("Saving...");
-} else if (this.flavors) {
+} else if (this.state.flavors) {
   console.log("Ice cream flavors:", this.state.flavors.join(", "));
 } else if (this.error) {
   console.log(this.state.error);
@@ -200,7 +200,7 @@ export type MapBeaconsBrowseMode = {
 
 This way you can narrow down your modes to be more specific. For example, a form component that lets you edit a placemark can take in `mode: MapPlacemarkEditMode` so that it's only possible to render the form when in those 3 modes. This also means that the form code can be simplified since it only needs to check 3 different modes internally.
 
-I'll admit that it was a little tricky hooking these modes up to URLs within the browser. We wrote some code so that when you updated the mode, we automatically set the route using React Router to the URL that matches your current state closest. Of course, URLs can't preserve all the same state as these JavaScript objects, but people expect to lose unsaved changes when they refresh the browser anyway.
+I'll admit that it was a little tricky hooking these modes up to URLs within the browser. We wrote some code so that when you updated the mode, we automatically set the route using React Router to the URL that most closely matches your current state. Of course, URLs can't preserve all the same state as these JavaScript objects, but people expect to lose unsaved changes when they refresh the browser anyway.
 
 ## React Gotchas
 
@@ -222,7 +222,8 @@ class MyComponent extends React.Component {
 
   async load() {
     try {
-      const data = await fetch("/api/data").then((resp) => resp.json());
+      const resp = await fetch("/api/data");
+      const data = await resp.json();
       this.setState({
         union: {
           mode: "success",
@@ -316,7 +317,7 @@ this.state.flavors;
 this.state.isSaving;
 ```
 
-You'll have to remember to use use `strictObject` every time you assign to `this.state`, but it can really save you from some headaches if you remember to use it. Nobody likes getting `undefined` when they expect a real value.
+You'll have to remember to use `strictObject` every time you assign to `this.state`, but it can really save you from some headaches if you remember to use it. Nobody likes getting `undefined` when they expect a real value.
 
 For TypeScript, you should make a tagged union type instead, which can catch your type errors at compile time, before your code is even run:
 
@@ -371,7 +372,9 @@ switch (state.mode) {
     console.log(3);
     break;
   default:
+    // Note: You pass `state` not `state.mode` to it
     assertNever(state);
+    break;
 }
 ```
 
