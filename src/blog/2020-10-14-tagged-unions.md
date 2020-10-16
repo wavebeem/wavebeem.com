@@ -127,7 +127,7 @@ this.state = {
 this.state.isSaving = true;
 ```
 
-If you run the rendering code again, it will output the "Not found" error! So now the handler code for "saving" needs to know about the state used for "error". And this problem will only get worse as you add more states your application can be in. Worse yet, your app's rendering code is going to depend deeply on the order you check values in. What if we checked `this.flavors` first?
+If you run the rendering code again, it will output the "Not found" error! So now the handler code for "saving" needs to know about the state used for "error". And this problem will only get worse as you add more states your application can be in. Worse yet, your app's rendering code is going to depend deeply on the order you check values in. What if we checked `this.state.flavors` first?
 
 ```js
 if (this.state.isSaving) {
