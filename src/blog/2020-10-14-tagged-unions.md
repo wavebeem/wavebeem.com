@@ -13,7 +13,7 @@ What sounds easy at first can spiral out of control as your application grows, a
 
 Note: Tagged unions are also called "algebraic data types" or "enums" in different programming languages. I'm going to use the term "tagged unions" because I think it's the easier to understand.
 
-## What are They?
+## What Are They?
 
 For the purpose of this post, I will write state updates as follows:
 
@@ -193,9 +193,9 @@ export type MapPlacemarkBrowseMode = {
 };
 
 export type MapBeaconsBrowseMode = {
-  mode: "beacons/browse;
+  mode: "beacons/browse";
   beacons: Beacon[];
-}
+};
 ```
 
 This way you can narrow down your modes to be more specific. For example, a form component that lets you edit a placemark can take in `mode: MapPlacemarkEditMode` so that it's only possible to render the form when in those 3 modes. This also means that the form code can be simplified since it only needs to check 3 different modes internally.
