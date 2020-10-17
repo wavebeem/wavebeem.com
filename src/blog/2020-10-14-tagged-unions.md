@@ -7,7 +7,7 @@ description: "Tagged Unions in JavaScript and TypeScript"
 
 ## Why Should I Care?
 
-Redux. MobX. XState. Vuex. RxJS. State management is hard, and developers are always looking for a tool to help them. Tagged unions are a programming pattern that you can use with immutable state libraries, or even by itself. Tagged unions make it simple to visualize all the states your application can be in, and make it difficult to access the wrong data at the wrong time.
+Redux. MobX. XState. Vuex. RxJS. State management is hard, and developers are always looking for a tool to help them. Tagged unions are a programming pattern that you can use with immutable state libraries, or even on their own. Tagged unions make it simple to visualize all the states your application can be in, and prevent you from accessing the wrong data at the wrong time.
 
 Note: Tagged unions are also called "algebraic data types" or "enums" in different programming languages. I'm going to use the term "tagged unions" because I think it's easier to understand.
 
@@ -345,7 +345,7 @@ if (state.mode === "loading") {
 }
 ```
 
-You can even take it one step further in TypeScript with something called exhaustiveness checking. This means that if you add another case to your `State` type, TypeScript will emit a type error until you fix your code to support that newly added case. This means that you can automatically find most of the code you need to update when adding new modes.
+You can even take it one step further in TypeScript with something called exhaustiveness checking. If you add another case to your `State` type, TypeScript will emit a type error until you fix your code to support that newly added case. This means that you can automatically find most of the code you need to update when adding new modes.
 
 ```ts
 function assertNever(value: never): never {
