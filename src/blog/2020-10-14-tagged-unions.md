@@ -5,177 +5,216 @@ description: "Tagged Unions in JavaScript and TypeScript"
 
 @[toc]
 
-## TODO: Make it More About React UIs
-
-TODO
-
-- Talk about how you can use this with other languages and frameworks
-- Show a concrete example of 4+ booleans and other implicit "modes"
-- Show the alternative to that example
-- Show how TypeScript can make it stronger
-- Show how you can make it strong in plain JS
-
-## Why Should I Care?
+## Why Tagged Unions?
 
 Redux. MobX. XState. Vuex. RxJS. State management is hard, and developers are always looking for a tool to help them. Tagged unions are a programming pattern that you can use with immutable state libraries, or even on their own. Tagged unions make it simple to visualize all the states your application can be in, and prevent you from accessing the wrong data at the wrong time.
 
-Note: Tagged unions are also called "algebraic data types" or "enums" in different programming languages.
+Note: Tagged unions are also called "algebraic data types", "variants", or "enums" in different programming languages.
 
-## What Are They?
+## Pizza Delivery App: Round 1
 
-For the purpose of this post, I will write state updates as follows:
+For the purposes of this blog post, I'm going to use a small React UI as an example. Tagged unions work well with many libraries (and without any libraries), and even with many other programming langauges. Check the [tagged unions without React appendix](#appendix-tagged-unions-without-react) for more information.
 
-```js
-this.state = {
-  apple: "pie",
-  banana: "pudding",
-  cherry: "turnover",
-};
-```
-
-You can imagine this in many different ways. For example, with a React application, it might look like this:
+Let's look at an example React app for online pizza delivery.
 
 ```js
-const [state, setState] = React.useState({});
+// function PizzaDelivery()
 
-setState({
-  apple: "pie",
-  banana: "pudding",
-  cherry: "turnover",
+const [state, setState] = React.useState({
+  error: null,
+  orderReceived: false,
+  outForDelivery: false,
+  size: "small",
+  style: "regular",
+  toppings: [],
 });
 ```
 
-The key here is that the state is all stored in a single variable which is an object. This is required so we can completely change the properties in an object. The old React `this.setState` method on class components is not suitable for tagged unions, since it merges the new state into the old state, instead of replacing it.
-
-The basic requirement of a tagged union in JavaScript is an object with a property like `type`, `kind`, or `mode` (the "tag" in "tagged union") to indicate which state you're in.
+You've probably worked with state like this before: there's a couple boolean properties controlling what mode you're in, there's a property that might be null, and there's state (size, style, toppings) that's not always relevant (I'll take a large error screen with pepperoni).
 
 ```js
-this.state = {
-  type: "loading",
-};
-
-this.state = {
-  type: "error",
-  message: "Not found",
-};
-
-this.state = {
-  type: "success",
-  flavors: ["Chocolate", "Vanilla", "Strawberry"],
-};
-```
-
-Contrast this with large objects featuring many `null` values.
-
-```js
-// Loading
-this.state = {
-  error: null,
-  flavors: null,
-};
-
-// Error
-this.state = {
-  error: "Not found",
-  flavors: null,
-};
-
-// Success
-this.state = {
-  error: null,
-  flavors: ["Chocolate", "Vanilla", "Strawberry"],
-};
-```
-
-With the classic style (large object, many `null` values), your rendering code might look like this.
-
-```js
-if (this.state.error) {
-  console.log(this.state.error);
-} else if (!this.state.flavors) {
-  console.log("Loading...");
-} else {
-  console.log("Ice cream flavors:", this.state.flavors.join(", "));
+if (state.error) {
+  return <ErrorScreen>{error.message}</ErrorScreen>;
 }
 ```
 
-Let's say that your product manager asks you to show a spinner while your application is saving. You might be tempted to add a boolean property to the state object.
+First up, we check if `state.error` is not null. If so, we show the error screen. Even though you probably won't see this much, it has to be the first `if` statement. After all, if there's an error, it's definitely the most important thing to show.
 
 ```js
-this.state = {
-  isSaving: true,
-  error: null,
-  flavors: null,
-};
-```
-
-Then we could update the rendering code like this.
-
-```js
-if (this.state.error) {
-  console.log(this.state.error);
-} else if (this.state.isSaving) {
-  console.log("Saving...");
-} else if (!this.state.flavors) {
-  console.log("Loading...");
-} else {
-  console.log("Ice cream flavors:", this.state.flavors.join(", "));
+if (state.outForDelivery) {
+  return (
+    <OrderOutForDeliveryScreen
+      onError={(error) => {
+        setState((state) => ({ ...state, error: error }));
+      }}
+    >
+      Your order is on its way!
+    </OrderOutForDeliveryScreen>
+  );
 }
 ```
 
-This might seem all well and good, but what happens if you were in an error state, but then you want to switch to saving? It might seem like enough to just update `isSaving`:
+Next up, we have to check `outForDelivery` **before** `orderReceived`. After all, your order is still technically received while your pizza is out for delivery, so that screen should take priority.
 
 ```js
-// Start out here...
-this.state = {
-  isSaving: false,
-  error: "Not found",
-  flavors: null,
-};
-
-// Later...
-this.state.isSaving = true;
-```
-
-If you run the rendering code again, it will output the "Not found" error! So now the handler code for "saving" needs to know about the state used for "error". And this problem will only get worse as you add more states your application can be in. Worse yet, your app's rendering code is going to depend deeply on the order you check values in. What if we checked `this.state.flavors` first?
-
-```js
-if (this.state.isSaving) {
-  console.log("Saving...");
-} else if (this.state.flavors) {
-  console.log("Ice cream flavors:", this.state.flavors.join(", "));
-} else if (this.error) {
-  console.log(this.state.error);
-} else {
-  console.log("Loading...");
+if (state.orderReceived) {
+  return (
+    <OrderReceivedScreen
+      onOutForDelivery={() => {
+        setState((state) => ({ ...state, outForDelivery: true }));
+      }}
+      onError={(error) => {
+        setState((state) => ({ ...state, error: error }));
+      }}
+    >
+      Your order has been received
+    </OrderReceivedScreen>
+  );
 }
 ```
 
-If you checked your state in this order, it would be very easy to accidentally not show an error message! It shouldn't be this hard to tell what your application should be doing.
-
-Imagine if your rendering code looked like this instead:
+If your order has been received, we should show a screen letting you know that, rather than staying on the order form.
 
 ```js
-switch (this.state.mode) {
-  case "saving":
-    console.log("Saving...");
-    break;
-  case "success":
-    console.log("Ice cream flavors:", this.state.flavors.join(", "));
-    break;
-  case "error":
-    console.log(this.state.error);
-    break;
-  case "loading":
-    console.log("Loading...");
-    break;
-  default:
-    console.error("unknown mode", this.state.mode);
-    break;
+return (
+  <PizzaOrderForm
+    onCheckout={async () => {
+      try {
+        await fetch("/pizza/checkout", state);
+        setState((state) => ({ ...state, orderReceived: true }));
+      } catch (error) {
+        setState((state) => ({ ...state, error: error }));
+      }
+    }}
+  >
+    <PizzaSizeSelect
+      value={state.size}
+      onChange={(size) => {
+        setState((state) => ({ ...state, size: size }));
+      }}
+    />
+    <PizzaStyleSelect
+      value={state.style}
+      onChange={(style) => {
+        setState((state) => ({ ...state, style: style }));
+      }}
+    />
+    <PizzaToppingsChooser
+      value={state.toppings}
+      onChange={(toppings) => {
+        setState((state) => ({ ...state, toppings: toppings }));
+      }}
+    />
+  </PizzaOrderForm>
+);
+
+// end function PizzaDelivery()
+```
+
+Finally, we have a bunch of form logic for updating the pizza information before we place our order.
+
+The order of these `if` statements is critical to this component working correctly. `error`, `orderReceived`, and `outForDelivery` are all trying to tell us which screen to show, but we have to resort to a hierarchy when they conflict with each other.
+
+With tagged unions, we pick **one** property (the "tag") to be in charge of which screen to show, and we only keep track of the properties related to the current screen.
+
+## Pizza Delivery App: Round 2
+
+The key difference here is this `mode` property with 4 different string possibilities.
+
+```js
+// function PizzaDelivery()
+
+const [state, setState] = React.useState({
+  mode: "ordering", // "ordering" | "received" | "delivery" | "error"
+  size: "small",
+  style: "regular",
+  toppings: [],
+});
+```
+
+This `mode` is in charge of what screen to show. We've listed which values are allowed, and there's nothing to second guess. It's not possible to have a confusing state like "order received" _AND_ "out for delivery" _AND_ "error" in this system. If you wanted to keep track of a complicated state like that, you would make a new mode like `delivery-error` (we can assume order is received if the order is out for delivery, so it doesn't need to be `received-delivery-error`).
+
+```js
+if (state.mode === "ordering") {
+  return (
+    <PizzaOrderForm
+      onCheckout={async () => {
+        try {
+          await fetch("/pizza/checkout", state);
+          setState({ mode: "received" });
+        } catch (error) {
+          setState({ mode: "error", error: error });
+        }
+      }}
+    >
+      <PizzaSizeSelect
+        value={state.size}
+        onChange={(size) => {
+          setState((state) => ({ ...state, size: size }));
+        }}
+      />
+      <PizzaStyleSelect
+        value={state.style}
+        onChange={(style) => {
+          setState((state) => ({ ...state, style: style }));
+        }}
+      />
+      <PizzaToppingsChooser
+        value={state.toppings}
+        onChange={(toppings) => {
+          setState((state) => ({ ...state, toppings: toppings }));
+        }}
+      />
+    </PizzaOrderForm>
+  );
 }
 ```
 
-Now you can add as many states as you want, but the order doesn't matter. How reassuring! With tagged unions, we replace the entire state all at once, so it's impossible to leave behind unwanted values.
+Now that we have a single source of truth on the current mode, we can write the `if` statements in any order. I'm choosing to put `ordering` first since it's the first step in the user workflow.
+
+```js
+if (state.mode === "received") {
+  return (
+    <OrderReceivedScreen
+      onOutForDelivery={() => {
+        setState({ mode: "delivery" });
+      }}
+      onError={(error) => {
+        setState({ mode: "error", error: error });
+      }}
+    >
+      Your order has been placed
+    </OrderReceivedScreen>
+  );
+}
+```
+
+For the next `if` statement, we can use the 2nd step in the workflow. You can see that this time around, we did not have to use the "updater function" style of `setState`. When transitioning from one mode to another, you'll usually want a full new object from scratch, since most modes don't share properties with each other.
+
+```js
+if (state.mode === "delivery") {
+  return (
+    <OrderOutForDeliveryScreen
+      onError={(error) => {
+        setState({ mode: "error", error: error });
+      }}
+    >
+      Your order is on its way!
+    </OrderOutForDeliveryScreen>
+  );
+}
+```
+
+Again we use the next step of the workflow, and we use a full new object from scratch with `setState`, since we are transitioning modes.
+
+```js
+if (state.mode === "error") {
+  // Check error first since it's higher priority than the other states
+  return <ErrorScreen>{state.error.message}</ErrorScreen>;
+}
+```
+
+Last but not least, we check for the error state. Notice how we can grab `state.error` just like before, but this time we've checked `state.mode` first to make sure it _makes sense_ to do that. With tagged union code, you should always check `state.mode` before attempting to use properties that only exist on certain modes.
 
 ## Going Deeper
 
@@ -210,7 +249,16 @@ This way you can narrow down your modes to be more specific. For example, a form
 
 I'll admit that it was a little tricky hooking these modes up to URLs within the browser. We wrote some code so that when you updated the mode, we automatically set the route using React Router to the URL that most closely matches your current state. Of course, URLs can't preserve all the same state as these JavaScript objects, but people expect to lose unsaved changes when they refresh the browser anyway.
 
-## React Gotchas
+## TODO: Conclusion and Further Reading
+
+TODO
+
+- [#appendix-react-class-component-gotchas][]
+- [#appendix-catching-errors-with-js][]
+- [#appendix-typescript-and-undo-support][]
+- [#appendix-tagged-unions-without-react][]
+
+## Appendix: React Class Component Gotchas
 
 If you are using React, be careful with `this.setState`, the state management method for class components. React's `this.setState` merges its parameter into the current state, so it is not suitable for use with tagged unions, which need to be able to add/remove properties. If you have to use `this.setState`, you can nest your tagged union state within an object like this:
 
@@ -271,7 +319,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-## Catching Errors
+## Appendix: Catching Errors with JS
 
 When using tagged unions, you might enjoy this helper function if you're using JavaScript instead of TypeScript. Strict objects throw errors when you try to access properties that don't exist, something that happens a lot more frequently when you're using tagged unions.
 
@@ -395,31 +443,11 @@ assignable to parameter of type 'never'.
 
 The error message looks a bit weird, but you'll get used to it. You can go to all the places in your code that produce errors like this and fix them. You might actually have a fully functioning app that responds to your new state afterward.
 
-## Bonus: Undo Support
+## Appendix: TypeScript and Undo Support
 
 Have you ever been asked to add "undo" to your application? It can be daunting to figure out where to even start. If you store your state in a tagged union, you have a huge advantage.
 
-```js
-class App {
-  constructor() {
-    this.state = { mode: "loading" };
-    this.undoStack = [];
-  }
-
-  update(state) {
-    this.undoStack.push(this.state);
-    this.state = state;
-  }
-
-  undo() {
-    this.state = this.undoStack.pop();
-  }
-}
-```
-
 I will leave the implementation of `redo` as an exercise for the reader.
-
-Here's the TypeScript version of `App`:
 
 ```ts
 type AppState =
@@ -442,6 +470,8 @@ class App {
 }
 ```
 
-## TODO: Conclusion
+Note: The `|` symbol means "this type OR that type" in TypeScript. This is the "union" part of "tagged unions". TypeScript will ensure that you check the `mode` before you access other parts of your state, so you only ever access the right state at the right time.
+
+## Appendix: Tagged Unions Without React
 
 TODO
