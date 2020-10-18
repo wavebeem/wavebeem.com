@@ -249,15 +249,21 @@ This way you can narrow down your modes to be more specific. For example, a form
 
 I'll admit that it was a little tricky hooking these modes up to URLs within the browser. We wrote some code so that when you updated the mode, we automatically set the route using React Router to the URL that most closely matches your current state. Of course, URLs can't preserve all the same state as these JavaScript objects, but people expect to lose unsaved changes when they refresh the browser anyway.
 
-## TODO: Conclusion and Further Reading
+## TODO: Conclusion
 
 TODO
 
-- [Appendix: React Class Component Gotchas](#appendix-react-class-component-gotchas)
-- [Appendix: Catching Errors with JS](#appendix-catching-errors-with-js)
-- [Appendix: TypeScript and Undo Support](#appendix-typescript-and-undo-support)
-- [Appendix: Tagged Unions in Vue](#appendix-tagged-unions-in-vue)
-- [Appendix: Tagged Unions for Data Modeling](#appendix-tagged-unions-for-data-modeling)
+## Further Reading
+
+Want to use tagged unions, but still using React class components? You should know about the [React class component gotchas](#appendix-react-class-component-gotchas) first.
+
+Not interested in TypeScript? You can [fortify your tagged unions](#appendix-catching-errors-with-js) using this one little helper functions (developers love it!)
+
+Love TypeScript? Check out how to [add Undo support and type safety with TypeScript](#appendix-typescript-and-undo-support).
+
+Love to use Vue instead? Check out [tagged unions in Vue](#appendix-tagged-unions-in-vue).
+
+[Tagged unions are great for data modeling](#appendix-tagged-unions-for-data-modeling) too, not just state management.
 
 ## Appendix: React Class Component Gotchas
 
