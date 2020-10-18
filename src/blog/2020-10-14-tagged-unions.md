@@ -5,11 +5,21 @@ description: "Tagged Unions in JavaScript and TypeScript"
 
 @[toc]
 
+## TODO: Make it More About React UIs
+
+TODO
+
+- Talk about how you can use this with other languages and frameworks
+- Show a concrete example of 4+ booleans and other implicit "modes"
+- Show the alternative to that example
+- Show how TypeScript can make it stronger
+- Show how you can make it strong in plain JS
+
 ## Why Should I Care?
 
 Redux. MobX. XState. Vuex. RxJS. State management is hard, and developers are always looking for a tool to help them. Tagged unions are a programming pattern that you can use with immutable state libraries, or even on their own. Tagged unions make it simple to visualize all the states your application can be in, and prevent you from accessing the wrong data at the wrong time.
 
-Note: Tagged unions are also called "algebraic data types" or "enums" in different programming languages. I'm going to use the term "tagged unions" because I think it's easier to understand.
+Note: Tagged unions are also called "algebraic data types" or "enums" in different programming languages.
 
 ## What Are They?
 
@@ -37,7 +47,7 @@ setState({
 
 The key here is that the state is all stored in a single variable which is an object. This is required so we can completely change the properties in an object. The old React `this.setState` method on class components is not suitable for tagged unions, since it merges the new state into the old state, instead of replacing it.
 
-The basic requirement of a tagged union in JavaScript is an object with a property called `type`, `kind`, `mode`, or something like that.
+The basic requirement of a tagged union in JavaScript is an object with a property like `type`, `kind`, or `mode` (the "tag" in "tagged union") to indicate which state you're in.
 
 ```js
 this.state = {
@@ -431,3 +441,7 @@ class App {
   }
 }
 ```
+
+## TODO: Conclusion
+
+TODO
