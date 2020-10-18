@@ -7,13 +7,13 @@ description: "Tagged Unions in JavaScript and TypeScript"
 
 ## Why Tagged Unions?
 
-Redux. MobX. XState. Vuex. RxJS. State management is hard, and developers are always looking for a tool to help them. Tagged unions are a programming pattern that you can use with immutable state libraries, or even on their own. Tagged unions make it simple to visualize all the states your application can be in, and prevent you from accessing the wrong data at the wrong time.
+Redux. MobX. XState. Vuex. RxJS. State management is hard, and developers are always looking for a tool to help them. Tagged unions are a programming pattern that you can use with immutable state libraries, or even on their own. Tagged unions make it possible to visualize all the states your application can be in, and prevent you from accessing the wrong data at the wrong time.
 
 Note: Tagged unions are also called "algebraic data types", "variants", or "enums" in different programming languages.
 
 ## Pizza Delivery App: Round 1
 
-For the purposes of this blog post, I'm going to use a small React UI as an example. Tagged unions work well with many libraries (and without any libraries), and even with many other programming langauges. Check the [tagged unions without React appendix](#appendix-tagged-unions-without-react) for more information.
+For the purposes of this blog post, I'm going to use a small React UI as an example. Tagged unions work well with many libraries (and without any libraries), and even with many other programming langauges. Check the [tagged unions in Vue](#appendix-tagged-unions-in-vue) and [tagged unions for data modeling](#appendix-tagged-unions-for-data-modeling).
 
 Let's look at an example React app for online pizza delivery.
 
@@ -253,10 +253,11 @@ I'll admit that it was a little tricky hooking these modes up to URLs within the
 
 TODO
 
-- [#appendix-react-class-component-gotchas][]
-- [#appendix-catching-errors-with-js][]
-- [#appendix-typescript-and-undo-support][]
-- [#appendix-tagged-unions-without-react][]
+- [Appendix: React Class Component Gotchas](#appendix-react-class-component-gotchas)
+- [Appendix: Catching Errors with JS](#appendix-catching-errors-with-js)
+- [Appendix: TypeScript and Undo Support](#appendix-typescript-and-undo-support)
+- [Appendix: Tagged Unions in Vue](#appendix-tagged-unions-in-vue)
+- [Appendix: Tagged Unions for Data Modeling](#appendix-tagged-unions-for-data-modeling)
 
 ## Appendix: React Class Component Gotchas
 
@@ -470,8 +471,111 @@ class App {
 }
 ```
 
-Note: The `|` symbol means "this type OR that type" in TypeScript. This is the "union" part of "tagged unions". TypeScript will ensure that you check the `mode` before you access other parts of your state, so you only ever access the right state at the right time.
+Note: The `|` symbol means "this type OR that type" in TypeScript. Normally it's
+written like `type T = A | B;`, but when you have lots of types over multiple
+lines, you can "line up the pipes" on the left to look nice. This is the "union"
+part of "tagged unions". TypeScript will ensure that you check the `mode` before
+you access other parts of your state, so you only ever access the right state at
+the right time.
 
-## Appendix: Tagged Unions Without React
+## Appendix: Tagged Unions in Vue
 
-TODO
+Vue is well suited to use tagged unions. Just remember to assign the entire state object every time, rather than modifying its properties.
+
+```js
+const html = String.raw;
+const app = new Vue({
+  el: "#app",
+
+  data() {
+    return {
+      state: {
+        mode: "a",
+      },
+    };
+  },
+
+  methods: {
+    goA() {
+      this.state = { mode: "a" };
+    },
+
+    goB() {
+      this.state = { mode: "b" };
+    },
+  },
+
+  template: html`
+    <div>
+      <button v-if="state.mode === 'b'" @click="goA">Go to A</button>
+      <button v-else-if="state.mode === 'a'" @click="goB">Go to B</button>
+      <p v-else>This shouldn't render</p>
+      <pre v-text="JSON.stringify(state, null, 2)"></pre>
+    </div>
+  `,
+});
+```
+
+## Appendix: Tagged Unions for Data Modeling
+
+Tagged unions don't have to be used for state management. You could use them for data modeling as well. Consider these two ways to model mathematical shapes.
+
+```js
+class Rectangle {
+  constructor(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  area() {
+    return this.width * this.height;
+  }
+}
+
+class Circle {
+  constructor(radius) {
+    this.radius = radius;
+  }
+
+  area() {
+    return Math.PI * Math.pow(this.radius, 2);
+  }
+}
+
+new Circle(10).area();
+// => 314.1592653589793
+
+new Rectangle(3, 4).area();
+// => 12
+```
+
+The class approach is nice because people expect it, and you can write `.area()` for both rectangles and circles. But what if you're getting a shape back from a server as JSON? You have to worry about serializing and deserializing these objects as plain JSON objects.
+
+Using plain JSON objects as tagged unions means that anyone can write a function that operates on any plain JSON object.
+
+```js
+function rectangle(width, height) {
+  return { type: "rectangle", width, height };
+}
+
+function circle(radius) {
+  return { type: "circle", radius };
+}
+
+function area(shape) {
+  switch (shape.type) {
+    case "rectangle":
+      return shape.width * shape.height;
+    case "circle":
+      return Math.PI * Math.pow(shape.radius, 2);
+    default:
+      throw new Error(`unknown shape "${shape.type}"`);
+  }
+}
+
+area(circle(10));
+// => 314.1592653589793
+
+area(rectangle(3, 4));
+// => 12
+```
