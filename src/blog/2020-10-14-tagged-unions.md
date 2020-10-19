@@ -263,7 +263,7 @@ _Love TypeScript?_ [Add type safety with TypeScript](#appendix-catching-errors-i
 
 _Not interested in TypeScript?_ [Fortify your tagged unions](#appendix-catching-errors-in-javascript) using this one little helper functions (developers love it!)
 
-_Need to add "Undo" to your app?_ [Add "Undo" in one line of code](#appendix-typescript-and-undo-support).
+_Need to add "Undo" to your app?_ [Add "Undo" in one line of code](#appendix-undo-support).
 
 _Do you use Vue?_ Check out [tagged unions in Vue](#appendix-tagged-unions-in-vue).
 
