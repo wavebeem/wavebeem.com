@@ -135,11 +135,11 @@ Stabilizers are required for most keyboards. Keys are measured in "units", which
 
 Most stabilizers are poorly made. They usually rattle like a jar full of coins when pressed. Fortunately, a small bit of lube and nippers can fix stabilizers to be quiet and smooth. See the [stabilizer mod video](https://www.youtube.com/watch?v=cD5Zj-ZgMLA) by Taeha Types for instructions on how to do this.
 
-## Parts: lube
+## Parts: Lube
 
 This is technically optional, but I highly recommend buying lube at least for your stabilizers if you build your own keyboard. It will make a huge difference in smoothness and volume. If you have the patience for it, you can also lube each switch in your board, as demonstrated in this [switch lube video](https://youtu.be/qSgPKPoFo2k?t=109) by Taeha Types.
 
-## Parts: keycaps
+## Parts: Keycaps
 
 Little pieces of plastic (generally ABS or PBT) that fit on top of the switches so they are comfortable to push with your fingers. They are removable using a keycap puller, and are the most fun part of customizing your keyboard. Generally these are built to be MX compatible. They come in a myriad of different profiles (shapes) depending on how you like it to feel when you type (Cherry, OEM, DCS, DSA, SA, etc).
 
