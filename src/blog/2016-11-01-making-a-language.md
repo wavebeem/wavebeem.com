@@ -1,5 +1,5 @@
 ---
-title: "Making a Language"
+title: "Making a language"
 description: "How to make a programming language from scratch in JS"
 ---
 

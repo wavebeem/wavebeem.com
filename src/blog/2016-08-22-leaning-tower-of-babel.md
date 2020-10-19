@@ -1,5 +1,5 @@
 ---
-title: "The Leaning Tower of Babel"
+title: "The leaning tower of Babel"
 description: "An exploration of Babel's caveats"
 ---
 

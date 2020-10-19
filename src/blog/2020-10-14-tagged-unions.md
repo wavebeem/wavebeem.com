@@ -1,17 +1,17 @@
 ---
-title: "Tagged Unions in JavaScript"
+title: "Tagged unions in JavaScript"
 description: "A disciplined approach to state management and domain modeling"
 ---
 
 @[toc]
 
-## Why Tagged Unions?
+## Why tagged unions?
 
 Redux. MobX. XState. Vuex. RxJS. State management is hard, and developers are always looking for a tool to help them. Tagged unions are a programming pattern that you can use with immutable state libraries, or even on their own. Tagged unions make it possible to visualize all the states your application can be in, and prevent you from accessing the wrong data at the wrong time.
 
 Note: Tagged unions are also called "algebraic data types", "variants", "sum types", "discriminated unions", or "enums" in different programming languages.
 
-## Pizza Delivery App: Round 1
+## Pizza delivery app: round 1
 
 For the purposes of this blog post, I'm going to use a small React UI as an example. Tagged unions work well with many libraries (and without any libraries), and even with many other programming langauges.
 
@@ -117,7 +117,7 @@ The order of these `if` statements is critical to this component working correct
 
 With tagged unions, we pick **one** property (the "tag") to be in charge of which screen to show, and we only keep track of the properties related to the current screen.
 
-## Pizza Delivery App: Round 2
+## Pizza delivery app: round 2
 
 The key difference here is this `mode` property with 4 different string possibilities.
 
@@ -216,7 +216,7 @@ if (state.mode === "error") {
 
 Last but not least, we check for the error state. Notice how we can grab `state.error` just like before, but this time we've checked `state.mode` first to make sure it _makes sense_ to do that. With tagged union code, you should always check `state.mode` before attempting to use properties that only exist on certain modes.
 
-## Going Deeper
+## Going deeper
 
 Small examples are all well and good for learning, but how does this work on large apps? At my current job, I refactored a large portion of our most complicated screen (8,000+ lines of TypeScript) to use tagged unions to store most of the state. The rest of the team agreed the code was easier to reason about, and we now have lots of errors TypeScript can catch automatically for us.
 
@@ -253,7 +253,7 @@ I'll admit that it was a little tricky hooking these modes up to URLs within the
 
 Tagged unions can be used to model all your possible application states. They can be used in pure JavaScript without any libraries. They are even stronger in TypeScript where mistakes can be caught before running your program. And most importantly, they can reduce the confusion about what state your application is in.
 
-## Further Reading
+## Further reading
 
 I have included several appendixes containing more things to learn about.
 
@@ -271,7 +271,7 @@ _Want to use tagged unions for more than just application state?_ [Tagged unions
 
 If you're still itching to learn more, try searching for **algebraic data types** (the more popular term compared with "tagged union"), and **sum types**. Many of these results use Haskell or other functional programming languages for their code examples.
 
-## Appendix: React Class Component Gotchas
+## Appendix: React class component gotchas
 
 If you are using React, be careful with `this.setState`, the state management method for class components. React's `this.setState` merges its parameter into the current state, so it is not suitable for use with tagged unions, which need to be able to add/remove properties. If you have to use `this.setState`, you can nest your tagged union state within an object like this:
 
@@ -332,7 +332,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-## Appendix: Catching Errors in TypeScript
+## Appendix: Catching errors in TypeScript
 
 For TypeScript, you should make a tagged union type instead, which can catch your type errors at compile time, before your code is even run:
 
@@ -403,7 +403,7 @@ assignable to parameter of type 'never'.
 
 The error message looks a bit weird, but you'll get used to it. You can go to all the places in your code that produce errors like this and fix them. You might actually have a fully functioning app that responds to your new state afterward.
 
-## Appendix: Catching Errors in JavaScript
+## Appendix: Catching errors in JavaScript
 
 When using tagged unions, you might enjoy this helper function if you're using JavaScript instead of TypeScript. Strict objects throw errors when you try to access properties that don't exist, something that happens a lot more frequently when you're using tagged unions.
 
@@ -459,7 +459,7 @@ this.state.isSaving;
 
 You'll have to remember to use `strictObject` every time you assign to `this.state`, but it can really save you from some headaches if you remember to use it. Nobody likes getting `undefined` when they expect a real value.
 
-## Appendix: Undo Support
+## Appendix: Undo support
 
 Have you ever been asked to add "undo" to your application? It can be daunting to figure out where to even start. If you store your state in a tagged union, you have a huge advantage.
 
@@ -490,7 +490,7 @@ part of "tagged unions". TypeScript will ensure that you check the `mode` before
 you access other parts of your state, so you only ever access the right state at
 the right time.
 
-## Appendix: Tagged Unions in Vue
+## Appendix: Tagged unions in Vue
 
 Vue is well suited to use tagged unions. Just remember to assign the entire state object every time, rather than modifying its properties.
 
@@ -528,7 +528,7 @@ const app = new Vue({
 });
 ```
 
-## Appendix: Tagged Unions for Data Modeling
+## Appendix: Tagged unions for data modeling
 
 Tagged unions don't have to be used for state management. You could use them for data modeling as well. Consider these two ways to model mathematical shapes.
 

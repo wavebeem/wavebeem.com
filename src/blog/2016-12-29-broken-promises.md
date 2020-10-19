@@ -1,5 +1,5 @@
 ---
-title: "Broken Promises"
+title: "Broken promises"
 description: "How to use promises effectively"
 ---
 

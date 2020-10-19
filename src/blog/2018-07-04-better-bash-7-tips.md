@@ -1,5 +1,5 @@
 ---
-title: "7 Tips for Better Bash"
+title: "7 tips for better bash"
 description: "You'll be writing better bash code after following these 7 tips"
 ---
 
@@ -42,7 +42,7 @@ Additionally, bash is not always installed in `/bin`. Remember that bash is a
 more powerful language than sh and has more features due to it being over a
 decade newer.
 
-## Double Quotes
+## Double quotes
 
 Quick rule: 99% of the time when you use a `$variable`, you probably actually
 want `"$variable"`. The difference is that in most contexts when you write
@@ -145,7 +145,7 @@ mkdir "$(echo "hello world")"
 # correctly makes one directory named "hello world"
 ```
 
-## Naming Conventions
+## Naming conventions
 
 My advice is to make functions in PascalCase like `F` or `MyFunction` or
 `CreateGzipBackup` because most commands that come from bash or are installed on
@@ -160,7 +160,7 @@ SCREAMING_SNAKE_CASE like `$HOME` or `$SSH_AUTH_SOCK` with all capital letters,
 so it helps you know which variables are for your bash script and which ones are
 coming from the environment.
 
-## Use Local Variables
+## Use local variables
 
 When you're inside a function, you should always make new variables using
 `local` like this:

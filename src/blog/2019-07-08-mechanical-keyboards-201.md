@@ -1,5 +1,5 @@
 ---
-title: "Mechanical Keyboards 201"
+title: "Mechanical keyboards 201"
 description: "Thinking beyond pre-built gear"
 ---
 
@@ -109,7 +109,7 @@ This little dictionary should help you understand some of the incomprehensible j
 
 > Double-shot injection molding is a technique that involves using two separate plastics (usually ABS) in order to make a keycap. This is the ideal method for two-colors designs on keycaps. It will never wear off, and you can combine any colors you'd like (such as white text on black plastic). This is generally not done for PBT plastic.
 
-## Parts: case
+## Parts: Case
 
 This is the base of your keyboard. Either the PCB or the plate screws into this piece in order to hold everything together. It usually has rubber feet to give it grip to keep from sliding. Cases also add weight to keep your keyboard solid and in place.
 
@@ -119,17 +119,17 @@ This is the part that the key switches and USB cable plug into. Some PCBs are ve
 
 Technically this part can be replaced with hand-wiring, but you should look up how to do that yourself.
 
-## Parts: plate
+## Parts: Plate
 
 Plates are generally sheets of aluminum with holes that key switches slot into. They are optional depending on your case, but can provide additional rigidity and weight to your build. That being said, they also complicate a build and make keyboard maintenance harder (especially if the switches are soldered on).
 
-## Parts: key switches
+## Parts: Key switches
 
 Most keyboards come stock with Cherry MX switches. If you are building your own, you can also use most Gateron or Kailh switches. These come in two varieties: PCB mount (also called 5-pin) and plate mount (also called 3-pin). If you are using a plate, you can generally use either. If you are not using a plate you _must_ use the PCB mount variety or else the switches will not align correctly.
 
 Everything related to keyboards comes down to personal preference, but that's never more pronounced than with key switches. The only real way to see what you like is to use them. If you can afford it, a [switch tester](https://kbdfans.cn/products/kbdfans-72-switches-tester-all-in-one) can help you narrow down your options, but it's still quite a bit different from actually typing on those switches in a real keyboard.
 
-## Parts: stabilizers
+## Parts: Stabilizers
 
 Stabilizers are required for most keyboards. Keys are measured in "units", which are the width of alphabet keys. This is typically abbreviated as 1u, 1.5u, 2u, 6.25u, etc. Keys that are at least 2u wide require stabilizers (also called "stabs") to keep from tilting side-to-side. Most keyboards use "Cherry" stabilizers which mount directly to the PCB. Most keyboards have several 2u stabilizers and one 6.25u stabilizer for the spacebar.
 

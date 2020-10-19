@@ -3,7 +3,7 @@ title: "Resume | Brian Mock"
 layout: "layout-resume"
 ---
 
-## Technical Skills
+## Technical skills
 
 JavaScript, TypeScript, HTML, CSS, git, GitHub
 
@@ -11,7 +11,7 @@ React, webpack, Jest, Storybook, Cypress, emotion, tachyons, lodash
 
 Ruby, Python, bash, Travis CI, parsers, Amazon S3, Cloudfront, Jira, Java
 
-## Work Experience
+## Work experience
 
 **Aruba Networks**, _Senior JavaScript Developer_ (February 2018--_present_)
 
