@@ -203,6 +203,15 @@ figure figcaption {
   color: var(--color-pal0);
 }
 
+.post-date {
+  margin-top: -1.5rem;
+}
+
+.date {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+}
+
 .flex-auto {
   flex: 1 1 auto;
 }

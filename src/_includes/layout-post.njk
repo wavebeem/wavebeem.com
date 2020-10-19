@@ -5,6 +5,6 @@ tags: ["post"]
 
 <h1>{{ title }}</h1>
 
-<p>{{ page.date | formatDate('mmmm d, yyyy') }}</p>
+<p class="post-date date">{{ page.date | formatDate('yyyy-mm-dd') }}</p>
 
 {{ content |  safe }}

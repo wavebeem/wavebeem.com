@@ -1,6 +1,6 @@
 ---
-title: "Tagged Unions"
-description: "Tagged Unions in JavaScript and TypeScript"
+title: "Tagged Unions in JavaScript"
+description: "A disciplined approach to state management and domain modeling"
 ---
 
 @[toc]
@@ -13,7 +13,7 @@ Note: Tagged unions are also called "algebraic data types", "variants", "sum typ
 
 ## Pizza Delivery App: Round 1
 
-For the purposes of this blog post, I'm going to use a small React UI as an example. Tagged unions work well with many libraries (and without any libraries), and even with many other programming langauges. Check the [tagged unions in Vue](#appendix-tagged-unions-in-vue) and [tagged unions for data modeling](#appendix-tagged-unions-for-data-modeling).
+For the purposes of this blog post, I'm going to use a small React UI as an example. Tagged unions work well with many libraries (and without any libraries), and even with many other programming langauges.
 
 Let's look at an example React app for online pizza delivery.
 
@@ -259,9 +259,11 @@ I have included several appendixes containing more things to learn about.
 
 _Want to use tagged unions, but still using React class components?_ Learn about the [React class component gotchas](#appendix-react-class-component-gotchas) first.
 
-_Not interested in TypeScript?_ [Fortify your tagged unions](#appendix-catching-errors-with-js) using this one little helper functions (developers love it!)
+_Love TypeScript?_ [Add type safety with TypeScript](#appendix-catching-errors-in-typescript).
 
-_Love TypeScript?_ [Add Undo support and type safety with TypeScript](#appendix-typescript-and-undo-support).
+_Not interested in TypeScript?_ [Fortify your tagged unions](#appendix-catching-errors-in-javascript) using this one little helper functions (developers love it!)
+
+_Need to add "Undo" to your app?_ [Add "Undo" in one line of code](#appendix-typescript-and-undo-support).
 
 _Do you use Vue?_ Check out [tagged unions in Vue](#appendix-tagged-unions-in-vue).
 
@@ -330,61 +332,7 @@ class MyComponent extends React.Component {
 }
 ```
 
-## Appendix: Catching Errors with JS
-
-When using tagged unions, you might enjoy this helper function if you're using JavaScript instead of TypeScript. Strict objects throw errors when you try to access properties that don't exist, something that happens a lot more frequently when you're using tagged unions.
-
-If you're using TypeScript, you can omit this, since TypeScript will catch your type errors at compile time.
-
-```js
-/**
- * Returns an immutable object that throws a TypeError
- * when you try to get a property that doesn't exist,
- * or when you try to add, update, or delete a property.
- */
-function strictObject(object) {
-  return new Proxy(object, {
-    get(target, prop) {
-      // JSON.stringify and various JS methods will try to
-      // access properties that may or may not exist on your
-      // object, and we don't want to crash, so we have to
-      // allow symbols and "toJSON" through, even if
-      // they're not defined.
-      if (prop in target || prop === "toJSON" || typeof prop === "symbol") {
-        return target[prop];
-      }
-      throw new TypeError(`strictObject: can't get property "${prop}"`);
-    },
-
-    set(target, prop) {
-      throw new TypeError(`strictObject: can't set property "${prop}"`);
-    },
-
-    deleteProperty(target, prop) {
-      throw new TypeError(`strictObject: can't delete property "${prop}"`);
-    },
-  });
-}
-
-this.state = strictObject({
-  mode: "error",
-  message: "Not found",
-});
-
-// => "error"
-this.state.mode;
-
-// => "Not found"
-this.state.message;
-
-// => TypeError: strictObject: can't access property "flavors"
-this.state.flavors;
-
-// => TypeError: strictObject: can't access property "isSaving"
-this.state.isSaving;
-```
-
-You'll have to remember to use `strictObject` every time you assign to `this.state`, but it can really save you from some headaches if you remember to use it. Nobody likes getting `undefined` when they expect a real value.
+## Appendix: Catching Errors in TypeScript
 
 For TypeScript, you should make a tagged union type instead, which can catch your type errors at compile time, before your code is even run:
 
@@ -395,10 +343,11 @@ type State =
   | { mode: "success"; flavors: string[] };
 
 let state: State = { mode: "loading" };
+
+state.flavors;
 // TypeScript error: You have to check `.mode` before
 // using any other property from `State`, since `.mode`
 // is the only property present in all 3 cases.
-state.flavors;
 
 if (state.mode === "loading") {
   console.log("Loading...");
@@ -454,23 +403,76 @@ assignable to parameter of type 'never'.
 
 The error message looks a bit weird, but you'll get used to it. You can go to all the places in your code that produce errors like this and fix them. You might actually have a fully functioning app that responds to your new state afterward.
 
-## Appendix: TypeScript and Undo Support
+## Appendix: Catching Errors in JavaScript
+
+When using tagged unions, you might enjoy this helper function if you're using JavaScript instead of TypeScript. Strict objects throw errors when you try to access properties that don't exist, something that happens a lot more frequently when you're using tagged unions.
+
+If you're using TypeScript, you can omit this, since TypeScript will catch your type errors at compile time.
+
+```js
+/**
+ * Returns an immutable object that throws a TypeError
+ * when you try to get a property that doesn't exist,
+ * or when you try to add, update, or delete a property.
+ */
+function strictObject(object) {
+  return new Proxy(object, {
+    get(target, prop) {
+      // JSON.stringify and various JS methods will try to
+      // access properties that may or may not exist on your
+      // object, and we don't want to crash, so we have to
+      // allow symbols and "toJSON" through, even if
+      // they're not defined.
+      if (prop in target || prop === "toJSON" || typeof prop === "symbol") {
+        return target[prop];
+      }
+      throw new TypeError(`strictObject: can't get property "${prop}"`);
+    },
+
+    set(target, prop) {
+      throw new TypeError(`strictObject: can't set property "${prop}"`);
+    },
+
+    deleteProperty(target, prop) {
+      throw new TypeError(`strictObject: can't delete property "${prop}"`);
+    },
+  });
+}
+
+this.state = strictObject({
+  mode: "purchase-complete",
+  orderNumber: "JS-1312-420",
+});
+
+this.state.mode;
+// => "purchase-complete"
+
+this.state.orderNumber;
+// => "JS-1312-420"
+
+this.state.flavors;
+// => TypeError: strictObject: can't access property "flavors"
+
+this.state.isSaving;
+// => TypeError: strictObject: can't access property "isSaving"
+```
+
+You'll have to remember to use `strictObject` every time you assign to `this.state`, but it can really save you from some headaches if you remember to use it. Nobody likes getting `undefined` when they expect a real value.
+
+## Appendix: Undo Support
 
 Have you ever been asked to add "undo" to your application? It can be daunting to figure out where to even start. If you store your state in a tagged union, you have a huge advantage.
 
 I will leave the implementation of `redo` as an exercise for the reader.
 
 ```ts
-type AppState =
-  | { mode: "loading" }
-  | { mode: "error"; message: string }
-  | { mode: "success"; flavors: string[] };
-
 class App {
-  state: AppState = { mode: "loading" };
-  undoStack: AppState[] = [];
+  constructor() {
+    this.state = { mode: "loading" };
+    this.undoStack = [];
+  }
 
-  update(state: AppState) {
+  update(state) {
     this.undoStack.push(this.state);
     this.state = state;
   }
