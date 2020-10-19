@@ -9,7 +9,7 @@ description: "Tagged Unions in JavaScript and TypeScript"
 
 Redux. MobX. XState. Vuex. RxJS. State management is hard, and developers are always looking for a tool to help them. Tagged unions are a programming pattern that you can use with immutable state libraries, or even on their own. Tagged unions make it possible to visualize all the states your application can be in, and prevent you from accessing the wrong data at the wrong time.
 
-Note: Tagged unions are also called "algebraic data types", "variants", or "enums" in different programming languages.
+Note: Tagged unions are also called "algebraic data types", "variants", "sum types", "discriminated unions", or "enums" in different programming languages.
 
 ## Pizza Delivery App: Round 1
 
@@ -218,7 +218,7 @@ Last but not least, we check for the error state. Notice how we can grab `state.
 
 ## Going Deeper
 
-Small examples are all well and good for learning, but how does this work on large apps? At my current job, I refactored a large portion of our most complicated screen (8,000+ lines of code) to use tagged unions to store most of the state. The rest of the team agreed the code was easier to reason about, and we now have lots of errors TypeScript can catch automatically for us.
+Small examples are all well and good for learning, but how does this work on large apps? At my current job, I refactored a large portion of our most complicated screen (8,000+ lines of TypeScript) to use tagged unions to store most of the state. The rest of the team agreed the code was easier to reason about, and we now have lots of errors TypeScript can catch automatically for us.
 
 That application has 30 (!) different modes within its tagged union. In order to help make sense of these, we arranged them hierarchically, similar to URLs.
 
@@ -249,21 +249,25 @@ This way you can narrow down your modes to be more specific. For example, a form
 
 I'll admit that it was a little tricky hooking these modes up to URLs within the browser. We wrote some code so that when you updated the mode, we automatically set the route using React Router to the URL that most closely matches your current state. Of course, URLs can't preserve all the same state as these JavaScript objects, but people expect to lose unsaved changes when they refresh the browser anyway.
 
-## TODO: Conclusion
+## Conclusion
 
-TODO
+Tagged unions can be used to model all your possible application states. They can be used in pure JavaScript without any libraries. They are even stronger in TypeScript where mistakes can be caught before running your program. And most importantly, they can reduce the confusion about what state your application is in.
 
 ## Further Reading
 
-Want to use tagged unions, but still using React class components? You should know about the [React class component gotchas](#appendix-react-class-component-gotchas) first.
+I have included several appendixes containing more things to learn about.
 
-Not interested in TypeScript? You can [fortify your tagged unions](#appendix-catching-errors-with-js) using this one little helper functions (developers love it!)
+_Want to use tagged unions, but still using React class components?_ Learn about the [React class component gotchas](#appendix-react-class-component-gotchas) first.
 
-Love TypeScript? Check out how to [add Undo support and type safety with TypeScript](#appendix-typescript-and-undo-support).
+_Not interested in TypeScript?_ [Fortify your tagged unions](#appendix-catching-errors-with-js) using this one little helper functions (developers love it!)
 
-Love to use Vue instead? Check out [tagged unions in Vue](#appendix-tagged-unions-in-vue).
+_Love TypeScript?_ [Add Undo support and type safety with TypeScript](#appendix-typescript-and-undo-support).
 
-[Tagged unions are great for data modeling](#appendix-tagged-unions-for-data-modeling) too, not just state management.
+_Do you use Vue?_ Check out [tagged unions in Vue](#appendix-tagged-unions-in-vue).
+
+_Want to use tagged unions for more than just application state?_ [Tagged unions are great for data modeling](#appendix-tagged-unions-for-data-modeling).
+
+If you're still itching to learn more, try searching for **algebraic data types** (the more popular term compared with "tagged union"), and **sum types**. Many of these results use Haskell or other functional programming languages for their code examples.
 
 ## Appendix: React Class Component Gotchas
 
