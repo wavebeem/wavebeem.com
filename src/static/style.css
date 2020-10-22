@@ -72,6 +72,14 @@ footer {
   text-decoration: none;
 }
 
+/* @[toc] gets embedded inside a <p> which is invalid, so the HTML parser
+ * creates an empty <p> tag on the page, which is weird. Even though it doesn't
+ * ruin the layout right now, I'd still rather just hide it entirely.
+ */
+p:empty {
+  display: none;
+}
+
 nav {
   font-size: 1.25rem;
   display: flex;
@@ -193,6 +201,15 @@ figure figcaption {
 .welcome-content {
   background: var(--color-pal3);
   color: var(--color-pal0);
+}
+
+.post-date {
+  margin-top: -1.5rem;
+}
+
+.date {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
 }
 
 .flex-auto {

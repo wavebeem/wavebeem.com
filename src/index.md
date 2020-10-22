@@ -3,9 +3,9 @@ title: "Brian Mock"
 layout: "layout-welcome"
 ---
 
-I'm Brian Mock (he/him). I live in Portland, Oregon, where I make software,
+I'm Brian Mock (he/him). I live in Portland, OR, USA, where I make software,
 keyboards, and pixel art. When I'm not at my computer, you can find me playing
-with my cat or running.
+with my cat.
 
 - I organize Portland's monthly mechanical keyboard meetup,
   [PDXKBC](https://pdxkbc.com).

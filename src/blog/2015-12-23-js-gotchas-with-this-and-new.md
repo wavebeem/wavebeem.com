@@ -1,5 +1,5 @@
 ---
-title: "JS Gotchas With This and New"
+title: "JS gotchas with this and new"
 description: "How JS's 'this' and 'new' work, and how to avoid issues with them"
 ---
 
@@ -13,13 +13,13 @@ This was originally [posted on Medium.com](https://medium.com/@wavebeem/javascri
 
 Love it or hate it, you’ve probably used JavaScript at some point. JavaScript has two keywords to aid in writing [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming) code: `this` and `new`. Despite the Java namesake for JavaScript, these keywords work completely differently in JavaScript, and are frequently misunderstood or used improperly on accident. This post explains the behavior of `this` and `new`, and explores common mistakes with using them, as well as how to write more resilient code without them.
 
-## Strict Mode Behavior of This and New
+## Strict mode behavior of this and new
 
 The current version of ECMAScript (the official standard name for JavaScript) is [ES2015](http://www.ecma-international.org/ecma-262/6.0/), but back with the release of [ES5](https://es5.github.io/), a feature was added called _strict mode_. [Strict mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) is used by starting a file or function with the string literal `"use strict"` (including quotes). Strict mode changes the semantics of many areas of the language, so I will be covering how it affects `this` and `new` as well.
 
 I will start with an explanation of how `this` works in strict mode, since it’s easier to follow. You can think of `this` as an implicit parameter to _every_ JavaScript function. You do not declare it in the parameter list and you can’t pass it like a normal argument.
 
-## This with Function Calls
+## This with function calls
 
 ```js
 function add(x, y) {
@@ -32,7 +32,7 @@ add(3, 4); // Prints "this = undefined"
 
 In the example above, `this` is implicitly a parameter of `add`, like it is with every function, and it’s implicitly passed to the function in the `console.log` line. When a function is invoked in the default manner like `foo(x)`, `this` is set to `undefined`.
 
-## This with Method Calls
+## This with method calls
 
 There is another case where `this` is passed implicitly: `foo.bar()` and `foo["bar"]()`. When the function itself is being referenced directly from an object, the parent object itself is passed as `this`, which would be `foo` in this case.
 
@@ -48,7 +48,7 @@ console.log(janelle.getName());
 
 This will log "Janelle" to the console, as we wanted. But let’s make a slight change and see how this works:
 
-## Gotcha: Forgetting This
+## Gotcha: Forgetting this
 
 ```js
 var janelle = {
@@ -74,7 +74,7 @@ Ok, so what happened here? Notice that even though we get the function from `jan
 
 Functions which accept functions as parameters (known as [higher-order functions](https://en.wikipedia.org/wiki/Higher-order_function)) are all over the place in JavaScript: [setTimeout](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setTimeout), [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [Array.prototype.forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [Promise.prototype.then](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then), and many more. Any of these functions are potential places for errors when passing functions using `this` from an object as an argument.
 
-## An Infuriating Real Life Example
+## An infuriating real life example
 
 A practical example you may have run into before involves promises and `console.log`. Unfortunately, the `console` object is not governed by any standard, so any JavaScript implementation can omit it or change the behavior however they want. In the past, the methods on `console` did not use `this`, so they were resilient in the face of plain invocation. That means this code sample used to work just fine:
 
@@ -96,7 +96,7 @@ Promise.resolve("hello world").then(console.log.bind(console));
 
 Neither of those are particularly nice, and could be avoided by using a function that never used `this` in the first place.
 
-## Explicitly Passing This
+## Explicitly passing this
 
 There are also two explicit ways to pass `this` to a function: [.call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) and [.apply](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply). They are invoked as methods from a function, as follows:
 
@@ -107,7 +107,7 @@ console.log.apply(console, [1, 2, 3, 4]);
 
 Both lines are equivalent. The first parameter in both is the value of `this` to send, and then `call` takes the arguments normally afterward, whereas `apply` takes an array of arguments as its second and final parameter.
 
-## Another Common Workaround
+## Another common workaround
 
 The method `call` is used in functions like `map` and `forEach` which have optional "context" parameters (the value of `this` to use in the callback).
 
@@ -119,7 +119,7 @@ var elems2 = selectors.map(document.querySelector.bind(document));
 
 Both `elems1` and `elems2` contain the same values and don’t throw any errors because the value of `this` has been preserved correctly, by passing a value for `this` that the `map` method can use explicitly with the method `call`. But with `elems2` we can see that context parameters are unnecessary when we have the method `bind`.
 
-## Strict Mode Behavior: New
+## Strict mode behavior: New
 
 The keyword `new` does quite a few things in the expression `new Foo(x)`.
 
@@ -148,11 +148,11 @@ anika.speak(); // "Hello, I am Anika"
 
 Notice how the function `Person` implicitly returns `undefined` (not an object) so that "else" branch of step 4 will be executed. Functions intended to be used only with `new` are called _constructor functions_.
 
-## Gotcha: Forgetting New
+## Gotcha: Forgetting new
 
 Most functions are called without using the keyword `new` in JavaScript, so it’s easy to forget. If you call a function made like the above `Person` without `new`, the value of `this` will be set to `undefined`, and `this.name` will throw an error.
 
-## Workaround: Not Using a Constructor Function
+## Workaround: Not using a constructor function
 
 Luckily, it’s actually easier to just not use `new` or constructor functions at all.
 
@@ -191,13 +191,13 @@ var anika = Person.create("Anika");
 Person.speak(anika); // "Hello, I am Anika"
 ```
 
-## Non-strict Mode
+## Non-strict mode
 
 When not in strict mode, `this` behaves a little differently. If you pass a non-object value as `this`, it is converted to an object. If the value is a number, string, or boolean, it’s converted to a wrapped object version. If it’s `null` or `undefined`, it’s converted to the global object (known as `window` or `global`). This makes constructor functions even more dangerous, as forgetting to use `new` can make them accidentally set properties on the global object (i.e. set global variables).
 
 Note that it doesn’t matter if _your code_ uses strict mode, it matters if the function you’re calling was written using strict mode. And because it’s opt-in, most code doesn’t use it.
 
-## Other Considerations
+## Other considerations
 
 My primary concerns with code are correctness and readability. There are performance benefits in most JavaScript engines to using particular patterns along with `this` and `new`, but that is simply not as important to me as avoiding all of its potential problems. If you are making a video game in JavaScript, this performance difference might matter, but it’s likely not your bottleneck in any other kind of application.
 
@@ -205,6 +205,6 @@ And if you’re thinking about prototypal inheritance, it’s equally awkward wh
 
 Some say avoiding `this` and `new` is not idiomatic JavaScript. I think generally those kind of comments just mean "I don’t like it", but in this case it’s just plain wrong. Consider `document.createElement("div")` or `$("div.foo")`, both plain functions that hide away any internal details about `new`.
 
-## Safer, Easier JavaScript
+## Safer, easier JavaScript
 
 As you’ve seen, the behavior of `this` and `new` is nothing magical, but both both constructs are more error prone than they need to be. Luckily, JavaScript is a powerful enough language that we do not need either of those features to do object-oriented programming. Don’t let anyone shame you into thinking you’re doing JavaScript "wrong" or you’re not "harnessing the power of prototypes" if you want to write your code this way. Good luck, and have fun writing JavaScript with two dangerous tools out of your way.
