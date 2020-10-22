@@ -4,4 +4,5 @@
 !.vscode/spellright.dict
 
 _site
+dist
 node_modules

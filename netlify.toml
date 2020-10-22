@@ -1,4 +1,4 @@
 [build]
-publish = "_site"
+publish = "dist"
 command = "npm run build"
 
