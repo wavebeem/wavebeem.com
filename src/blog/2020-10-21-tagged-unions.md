@@ -11,7 +11,19 @@ Redux. MobX. XState. Vuex. RxJS. State management is hard, and developers are al
 
 Note: Tagged unions are also called "algebraic data types", "variants", "sum types", "discriminated unions", or "enums" in different programming languages.
 
-## Pizza delivery app: round 1
+## What to expect
+
+This post covers the following topics in order:
+
+- "Classic" state management (large objects with every property at once, but lots of `null` values)
+
+- Tagged union state management (objects with a string "tag", and only relevant properties are present)
+
+- Excerpts from a real life example with around 8,000 lines of code
+
+- Several appendixes to read based on your own curiosity
+
+## Pizza app: classic style
 
 For the purposes of this blog post, I'm going to use a small React UI as an example. Tagged unions work well with many libraries (and without any libraries), and even with many other programming langauges.
 
@@ -30,7 +42,7 @@ const [state, setState] = React.useState({
 });
 ```
 
-You've probably worked with state like this before: there's a couple boolean properties controlling what mode you're in, there's a property that might be null, and there's state (size, style, toppings) that's not always relevant (I'll take a large error screen with pepperoni).
+You've probably worked with state like this before: there's a couple boolean properties controlling what mode you're in, there's a property that might be null, and there's state (size, style, toppings) that's not always relevant (I'll take a large pepperoni with errors).
 
 ```js
 if (state.error) {
@@ -117,7 +129,7 @@ The order of these `if` statements is critical to this component working correct
 
 With tagged unions, we pick **one** property (the "tag") to be in charge of which screen to show, and we only keep track of the properties related to the current screen.
 
-## Pizza delivery app: round 2
+## Pizza app: tagged unions
 
 The key difference here is this `mode` property with 4 different string possibilities.
 
@@ -216,7 +228,7 @@ if (state.mode === "error") {
 
 Last but not least, we check for the error state. Notice how we can grab `state.error` just like before, but this time we've checked `state.mode` first to make sure it _makes sense_ to do that. With tagged union code, you should always check `state.mode` before attempting to use properties that only exist on certain modes.
 
-## Going deeper
+## A real life example
 
 Small examples are all well and good for learning, but how does this work on large apps? At my current job, I refactored a large portion of our most complicated screen (8,000+ lines of TypeScript) to use tagged unions to store most of the state. The rest of the team agreed the code was easier to reason about, and we now have lots of errors TypeScript can catch automatically for us.
 
