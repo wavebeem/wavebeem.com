@@ -232,7 +232,7 @@ Last but not least, we check for the error state. Notice how we can grab `state.
 
 Small examples are all well and good for learning, but how does this work on large apps? At my current job, I refactored a large portion of our most complicated screen (8,000+ lines of TypeScript) to use tagged unions to store most of the state. The rest of the team agreed the code was easier to reason about, and we now have lots of errors TypeScript can catch automatically for us.
 
-That application has 30 (!) different modes within its tagged union. In order to help make sense of these, we arranged them hierarchically, similar to URLs.
+That application has 30 (!) different modes within its tagged union. To help make sense of these, we arranged them hierarchically, similar to URLs.
 
 ```ts
 // Code simplified for clarity
