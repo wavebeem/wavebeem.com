@@ -18,7 +18,7 @@ description: "How to make delicious crispy tofu at home"
 
 Drain the tofu. Ideally you'd have a tool for this, but a pan and a towel can work in a pinch.
 
-Preheat oven to 450 ℉ (230 ℃).
+Preheat the oven to 450 ℉ (230 ℃).
 
 Cut tofu into thick slices. One block of tofu should make about 6 or 8 crispy tofu strips.
 
@@ -28,11 +28,9 @@ Bake on a sheet pan for about 30 minutes.
 
 Remove from the oven and let cool.
 
-Put a small amount of mayonnaise in a bowl. Toss the tofu strips to coat. A thin coating works best. Pour a generous amount of nutritional yeast on the tofu. Shake to combine. Let sit for a minute or two. Eat.
+Toss the tofu strips to coat in a small amount of mayonnaise. A thin coating works best. Pour a generous amount of nutritional yeast on the tofu. Toss to combine. Let sit briefly. Eat.
 
 ## Notes
-
-Eat them straight up like chicken strips, or cut them before eating.
 
 Store leftovers in the refrigerator. They reheat well in an oven or toaster oven. In fact, the mayonnaise and nutritional yeast coating becomes more cohesive with time. Sometimes these are better the next day.
 
