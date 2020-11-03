@@ -18,7 +18,7 @@ description: "How to make delicious crispy tofu at home"
 
 Drain the tofu. Ideally you'd have a tool for this, but a pan and a towel can work in a pinch.
 
-Preheat oven to 450 ℉.
+Preheat oven to 450 ℉ (230 ℃).
 
 Cut tofu into thick slices. One block of tofu should make about 6 or 8 crispy tofu strips.
 
