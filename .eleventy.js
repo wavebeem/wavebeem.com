@@ -1,3 +1,4 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const markdownItTocAndAnchor = require("markdown-it-toc-and-anchor").default;
@@ -14,6 +15,7 @@ module.exports = (config) => {
       tocFirstLevel: 2,
     })
   );
+  config.addPlugin(pluginRss);
   config.addPlugin(syntaxHighlight);
   config.addPassthroughCopy("src/_redirects");
   config.addPassthroughCopy("src/static");
