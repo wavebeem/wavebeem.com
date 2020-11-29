@@ -1,5 +1,5 @@
 ---
-title: "Adventures in De-Googling"
+title: "Adventures in de-Googling"
 description: "Trying to remove Google from my life"
 ---
 
