@@ -81,6 +81,8 @@ There is the huge plus of owning all my own data, but now I'm left with the fear
 
 I am leaning towards using my new **Synology NAS** for storage, and possibly cloud backup in the future. But I am very disappointed with the quality of the Android apps so far.
 
+Edit: I am switching back to **Google Drive** because I can save money since I'm already using Google Photos.
+
 ## Google Photos
 
 One of the big reasons I chose a Synology NAS for file storage is their Moments app. Moments looks very much like a clone of Google Photos, which is a great thing. I love Google Photos dearly. Even as they continue to degrade the UI, as Google always does, it's still a speedy and fantastic product.
@@ -106,6 +108,8 @@ I was unhappy with having hundreds of gigabytes of data locked behind Google Pho
 I honestly don't know **what** I'm even going to do here. I'm writing this blog post half out of exasperation. Ideally, I will iron out my issues with Moments on my Synology NAS and keep using that, but we'll see.
 
 The temptation to go back to using Google Photos is strong at this point.
+
+**Edit:** I have gone back to Google Photos. It is really good.
 
 ## Thoughts
 
