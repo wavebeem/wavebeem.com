@@ -81,7 +81,7 @@ There is the huge plus of owning all my own data, but now I'm left with the fear
 
 I am leaning towards using my new **Synology NAS** for storage, and possibly cloud backup in the future. But I am very disappointed with the quality of the Android apps so far.
 
-Edit: I am switching back to **Google Drive** because I can save money since I'm already using Google Photos.
+Edit: I am switching back to **Dropbox** because it works well, it is the primary product of a major company, and I already have a year subscription pre-paid.
 
 ## Google Photos
 
