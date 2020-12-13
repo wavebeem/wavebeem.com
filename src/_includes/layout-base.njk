@@ -6,16 +6,19 @@
       http-equiv="content-security-policy"
       content="
         default-src
-          'self';
+          'self'
+          https://plausible.io;
 
         img-src
           'self'
-          https://www.google-analytics.com;
+          https://www.google-analytics.com
+          https://plausible.io;
 
         script-src
           'self'
           https://www.googletagmanager.com
-          https://www.google-analytics.com;
+          https://www.google-analytics.com
+          https://plausible.io;
       "
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -32,8 +35,14 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@wavebeem" />
     <meta name="twitter:creator" content="@wavebeem" />
-    <meta name="twitter:image" content="https://www.wavebeem.com/static/brian-bg.png" />
-    <meta name="og:image" content="https://www.wavebeem.com/static/brian-bg.png" />
+    <meta
+      name="twitter:image"
+      content="https://www.wavebeem.com/static/brian-bg.png"
+    />
+    <meta
+      name="og:image"
+      content="https://www.wavebeem.com/static/brian-bg.png"
+    />
     <meta name="og:title" content="{{ title }}" />
     <meta name="og:description" content="{{ description }}" />
     <title>{{ title }}</title>
@@ -44,6 +53,12 @@
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=UA-52704502-1"
+    ></script>
+    <script
+      async
+      defer
+      data-domain="wavebeem.com"
+      src="https://plausible.io/js/plausible.js"
     ></script>
     <script type="module" src="/static/ga.js"></script>
   </head>
