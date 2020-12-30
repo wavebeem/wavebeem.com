@@ -5,19 +5,10 @@
     <meta
       http-equiv="content-security-policy"
       content="
-        default-src
-          'self'
-          https://plausible.io;
-
-        img-src
-          'self'
-          https://www.google-analytics.com;
-
-        script-src
-          'self'
-          https://www.googletagmanager.com
-          https://www.google-analytics.com
-          https://plausible.io;
+        default-src 'self' https://plausible.io;
+        img-src 'self' https://plausible.io;
+        script-src 'self' https://plausible.io;
+        style-src 'self';
       "
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -51,15 +42,10 @@
     <link rel="stylesheet" media="print" href="/static/print.css" />
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-52704502-1"
-    ></script>
-    <script
-      async
       defer
       data-domain="wavebeem.com"
       src="https://plausible.io/js/plausible.js"
     ></script>
-    <script type="module" src="/static/ga.js"></script>
   </head>
   <body>
     <nav class="screen-only">
