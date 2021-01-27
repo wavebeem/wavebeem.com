@@ -1,11 +1,10 @@
 #!/usr/bin/env bash
-set -eux
+set -eu
 
-convert "static/favicon-16.png" -scale "32x32" "static/favicon-32.png"
-
-for size in 180 192 512; do
+cd src/static
+for size in 32 180 192 512; do
   convert \
-    "static/img/avatars/brian-bluer-800.png" \
+    "favicon-16.png" \
     -scale "${size}x${size}" \
-    "static/favicon-${size}.png"
+    "favicon-${size}.png"
 done
