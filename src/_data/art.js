@@ -4,7 +4,6 @@ const fs = require("fs");
 function getArt() {
   return fs
     .readdirSync(path.resolve(__dirname, "../static/img/art"))
-    .reverse()
     .map((filename) => {
       const url = `/static/img/art/${filename}`;
       let name = filename;

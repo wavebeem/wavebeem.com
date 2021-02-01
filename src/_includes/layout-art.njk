@@ -8,7 +8,7 @@ tags: ["art"]
 {{ content | safe }}
 
 <div class="art-container">
-  {% for img in art %}
+  {% for img in art | reverse %}
   <figure>
     <img src="{{ img.url }}" alt="{{ img.name }}" loading="lazy" />
     <figcaption>
