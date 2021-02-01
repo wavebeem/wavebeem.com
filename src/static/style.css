@@ -91,8 +91,8 @@ nav {
 
 @media (min-width: 400px) {
   nav {
-    /* Is there a better way than hard coding 4 columns here? */
-    grid-template-columns: repeat(4, max-content);
+    /* Is there a better way than hard coding 5 columns here? */
+    grid-template-columns: repeat(5, max-content);
   }
 }
 
