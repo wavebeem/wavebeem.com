@@ -7,9 +7,11 @@ tags: ["art"]
 
 {{ content | safe }}
 
-{% for img in art %}
-  <figure>
-    <img src="{{ img.url }}" alt="{{ img.name }}" loading="lazy">
-    <figcaption>{{ img.name }}</figcaption>
-  </figure>
-{% endfor %}
+<div class="art-container">
+  {% for img in art %}
+    <figure>
+      <img src="{{ img.url }}" alt="{{ img.name }}" loading="lazy">
+      <figcaption><a href="{{ img.url }}">{{ img.name }}</a></figcaption>
+    </figure>
+  {% endfor %}
+</div>

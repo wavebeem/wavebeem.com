@@ -140,13 +140,18 @@ figure {
 }
 
 figure img {
-  max-width: 100%;
+  width: 100%;
 }
 
 figure figcaption {
   font-family: var(--font-sans);
   font-weight: bold;
   font-size: 1rem;
+}
+
+.art-container {
+  display: grid;
+  grid-gap: 1rem;
 }
 
 .welcome-header {
@@ -173,6 +178,10 @@ figure figcaption {
     --pixel-size: 4px;
     --img-width: 512px;
     --img-height: 128px;
+  }
+
+  .art-container {
+    grid-template-columns: repeat(2, auto);
   }
 }
 

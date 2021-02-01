@@ -6,10 +6,12 @@ function getArt() {
     .readdirSync(path.resolve(__dirname, "../static/img/art"))
     .reverse()
     .map((filename) => {
+      const url = `/static/img/art/${filename}`;
       let name = filename;
       name = path.basename(name, ".png");
       name = path.basename(name, ".gif");
-      const url = `/static/img/art/${filename}`;
+      name = name.replace(/-/g, " ");
+      name = name.replace(/^(\d\d\d\d) (\d\d) (\d\d) (.*)$/, "$4 ($1-$2-$3)");
       return { url, name };
     });
 }
