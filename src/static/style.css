@@ -91,8 +91,8 @@ nav {
 
 @media (min-width: 400px) {
   nav {
-    /* Is there a better way than hard coding 4 columns here? */
-    grid-template-columns: repeat(4, max-content);
+    /* Is there a better way than hard coding 5 columns here? */
+    grid-template-columns: repeat(5, max-content);
   }
 }
 
@@ -149,6 +149,11 @@ figure figcaption {
   font-size: 1rem;
 }
 
+.art-container {
+  display: grid;
+  grid-gap: 1rem;
+}
+
 .welcome-header {
   --pixel-size: 2px;
   --img-width: 256px;
@@ -174,6 +179,14 @@ figure figcaption {
     --img-width: 512px;
     --img-height: 128px;
   }
+
+  .art-container {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+.favicon {
+  margin-right: 0.5rem;
 }
 
 .pixel {
