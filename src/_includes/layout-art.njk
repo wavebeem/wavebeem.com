@@ -4,11 +4,12 @@ tags: ["art"]
 ---
 
 <h1>Art</h1>
-<ul>
-  {% for x in art %}
-    {{ x }}
-    {% x %}
-  {% endfor %}
-</ul>
 
 {{ content | safe }}
+
+{% for img in art %}
+  <figure>
+    <img src="{{ img.url }}" alt="{{ img.name }}" loading="lazy">
+    <figcaption>{{ img.name }}</figcaption>
+  </figure>
+{% endfor %}
