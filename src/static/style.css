@@ -244,15 +244,3 @@ figure figcaption {
 .print-only {
   display: none;
 }
-
-.tc {
-  text-align: center;
-}
-
-.ml-05 {
-  margin-left: 0.5rem;
-}
-
-.mr-05 {
-  margin-right: 0.5rem;
-}
