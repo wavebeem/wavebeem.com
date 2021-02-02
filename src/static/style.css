@@ -1,6 +1,6 @@
 :root {
-  --font-sans: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-  --font-serif: "Georgia", "Cambria", "Palatino", serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Avenir Next",
+    "Helvetica Neue", Roboto, Noto, "Segoe UI", Ubuntu, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", "Menlo", "Consolas", monospace;
   --content-width: 768px;
   /* EN4 palette https://lospec.com/palette-list/en4 */
@@ -46,7 +46,7 @@ body {
    * slightly comfier to read site (since this is a blog, after all)
    */
   font-size: 1.25rem;
-  font-family: var(--font-serif);
+  font-family: var(--font-sans);
   line-height: 1.5;
   padding: 1rem;
   max-width: var(--content-width);
@@ -157,8 +157,8 @@ figure figcaption {
 
 .welcome-header {
   --pixel-size: 2px;
-  --img-width: 256px;
-  --img-height: 64px;
+  --img-width: calc(2 * 128px);
+  --img-height: calc(2 * 56px);
   color: var(--color-pal0);
   margin: 2rem 0;
   font-size: 1.25rem;
@@ -177,8 +177,8 @@ figure figcaption {
 @media (min-width: 600px) {
   .welcome-header {
     --pixel-size: 4px;
-    --img-width: 512px;
-    --img-height: 128px;
+    --img-width: calc(4 * 128px);
+    --img-height: calc(4 * 56px);
   }
 
   .art-container {
