@@ -1,13 +1,17 @@
-/* Based on EN4 palette https://lospec.com/palette-list/en4 */
-
 .bit-auto pre {
-  --comment: hsl(30, 90%, 85%);
-  --punctuation: hsl(223, 60%, 80%);
-  --string: hsl(30, 80%, 70%);
-  --property: hsl(30, 80%, 70%);
-  --operator: hsl(30, 80%, 70%);
-  --function: hsl(30, 95%, 80%);
-  --keyword: hsl(157, 80%, 80%);
+  --c0: hsl(270, 80%, 90%);
+  --c1: hsl(190, 20%, 70%);
+  --c2: hsl(30, 80%, 70%);
+  --c3: hsl(190, 95%, 80%);
+  --c4: hsl(100, 70%, 70%);
+
+  --comment: var(--c0);
+  --punctuation: var(--c1);
+  --string: var(--c2);
+  --property: var(--c2);
+  --operator: var(--c2);
+  --function: var(--c3);
+  --keyword: var(--c4);
 
   --bit-color0: var(--color-syntax-bg);
   --bit-color1: var(--color-pal3);
