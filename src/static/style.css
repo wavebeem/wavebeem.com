@@ -149,6 +149,7 @@ figure figcaption {
 .art-container {
   display: grid;
   grid-gap: 1rem;
+  align-items: flex-end;
 }
 
 .welcome-header {
