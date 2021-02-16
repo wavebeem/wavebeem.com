@@ -85,13 +85,6 @@ nav {
   grid-gap: 1rem;
 }
 
-@media (min-width: 400px) {
-  nav {
-    /* Is there a better way than hard coding 5 columns here? */
-    grid-template-columns: repeat(5, max-content);
-  }
-}
-
 footer {
   text-align: center;
   font-size: 1rem;
@@ -150,6 +143,7 @@ figure figcaption {
   display: grid;
   grid-gap: 1rem;
   align-items: flex-end;
+  justify-content: center;
 }
 
 .welcome-header {
@@ -169,18 +163,6 @@ figure figcaption {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media (min-width: 600px) {
-  .welcome-header {
-    --pixel-size: 4px;
-    --img-width: calc(4 * 128px);
-    --img-height: calc(4 * 56px);
-  }
-
-  .art-container {
-    grid-template-columns: repeat(2, auto);
-  }
 }
 
 .favicon {
@@ -241,4 +223,23 @@ figure figcaption {
 
 .print-only {
   display: none;
+}
+
+@media (min-width: 600px) {
+  .welcome-header {
+    --pixel-size: 4px;
+    --img-width: calc(4 * 128px);
+    --img-height: calc(4 * 56px);
+  }
+
+  nav {
+    /* Is there a better way than hard coding 5 columns here? */
+    grid-template-columns: repeat(5, max-content);
+  }
+}
+
+@media (min-width: 800px) {
+  .art-container {
+    grid-template-columns: repeat(2, 320px);
+  }
 }
