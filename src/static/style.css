@@ -147,53 +147,34 @@ figure figcaption {
 }
 
 .welcome-header {
-  --pixel-size: 2px;
-  --img-width: calc(2 * 128px);
-  --img-height: calc(2 * 56px);
+  --img-scale: 2;
   color: var(--color-pal0);
   margin: 2rem 0;
   font-size: 1.25rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .welcome-header img {
-  width: var(--img-width);
-  height: var(--img-height);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+.teeny-sanguini {
+  width: calc(var(--img-scale) * 40px);
+  height: calc(var(--img-scale) * 42px);
+}
+
+.howdy {
+  width: calc(var(--img-scale) * 52px);
+  height: calc(var(--img-scale) * 22px);
+  margin: 0 8px;
+}
+
 .favicon {
   margin-right: 0.5rem;
-}
-
-.pixel {
-  width: var(--pixel-size);
-  height: var(--pixel-size);
-  background: var(--pixel-color);
-}
-
-.pixel-color0 {
-  --pixel-color: var(--bit-color0);
-}
-
-.pixel-color1 {
-  --pixel-color: var(--bit-color1);
-}
-
-.pixel-alpha {
-  --pixel-color: transparent;
-}
-
-.pixel-100 {
-  width: 100%;
-}
-
-.welcome-content {
-  background: var(--color-pal3);
-  color: var(--color-pal0);
 }
 
 .post-date {
@@ -225,11 +206,15 @@ figure figcaption {
   display: none;
 }
 
+@media (min-width: 450px) {
+  .welcome-header {
+    --img-scale: 3;
+  }
+}
+
 @media (min-width: 600px) {
   .welcome-header {
-    --pixel-size: 4px;
-    --img-width: calc(4 * 128px);
-    --img-height: calc(4 * 56px);
+    --img-scale: 4;
   }
 
   nav {
