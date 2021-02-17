@@ -56,14 +56,6 @@ main {
   flex: 1 1 auto;
 }
 
-h1,
-h2,
-h3,
-nav,
-footer {
-  font-family: var(--font-sans);
-}
-
 .bit-auto .markdownIt-Anchor {
   text-decoration: none;
 }
@@ -81,8 +73,12 @@ nav {
   display: flex;
   border-bottom: var(--bit-border-width) dotted var(--bit-color0);
   padding-bottom: 1rem;
-  display: grid;
-  grid-gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+nav a {
+  margin-top: 0.5rem;
 }
 
 footer {
@@ -148,17 +144,9 @@ figure figcaption {
 
 .welcome-header {
   --img-scale: 2;
-  color: var(--color-pal0);
   margin: 2rem 0;
-  font-size: 1.25rem;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-}
-
-.welcome-header img {
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -169,7 +157,7 @@ figure figcaption {
 
 .howdy {
   width: calc(var(--img-scale) * 52px);
-  height: calc(var(--img-scale) * 22px);
+  height: calc(var(--img-scale) * 24px);
   margin: 0 8px;
 }
 
@@ -186,22 +174,6 @@ figure figcaption {
   font-size: 1.1rem;
 }
 
-.flex-auto {
-  flex: 1 1 auto;
-}
-
-.flex {
-  display: flex;
-}
-
-.flex-column {
-  flex-direction: column;
-}
-
-.items-center {
-  align-items: center;
-}
-
 .print-only {
   display: none;
 }
@@ -210,16 +182,19 @@ figure figcaption {
   .welcome-header {
     --img-scale: 3;
   }
+  nav {
+    flex-direction: row;
+  }
+
+  nav a {
+    margin: 0;
+    margin-left: 1rem;
+  }
 }
 
 @media (min-width: 600px) {
   .welcome-header {
     --img-scale: 4;
-  }
-
-  nav {
-    /* Is there a better way than hard coding 5 columns here? */
-    grid-template-columns: repeat(5, max-content);
   }
 }
 
