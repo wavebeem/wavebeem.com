@@ -1,5 +1,5 @@
 ---
-title: "Brian Mock"
+title: "wavebeem"
 layout: "layout-welcome"
 ---
 

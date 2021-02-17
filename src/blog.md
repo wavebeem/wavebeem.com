@@ -1,4 +1,4 @@
 ---
-title: "Blog | Brian Mock"
+title: "Blog - wavebeem"
 layout: "layout-blog"
 ---

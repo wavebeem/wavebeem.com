@@ -1,4 +1,4 @@
 ---
-title: "Art | Brian Mock"
+title: "Art - wavebeem"
 layout: "layout-art"
 ---

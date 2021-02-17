@@ -1,5 +1,5 @@
 ---
-title: "Resume | Brian Mock"
+title: "Resume - wavebeem"
 layout: "layout-resume"
 ---
 
