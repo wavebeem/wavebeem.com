@@ -122,11 +122,13 @@ blockquote {
 
 figure {
   margin: 1rem 0;
+  color: var(--color-code-fg);
 }
 
 figure img {
   width: 100%;
   height: auto;
+  border: calc(3 * var(--bit-border-width)) double var(--bit-color0);
 }
 
 figure figcaption {
@@ -138,8 +140,13 @@ figure figcaption {
 .art-container {
   display: grid;
   grid-gap: 1rem;
-  align-items: flex-end;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.art-container img {
+  width: calc(100% - 3 * 2 * var(--bit-border-width));
+  box-sizing: content-box;
+  background-clip: content-box;
 }
 
 .welcome-header {
@@ -182,6 +189,7 @@ figure figcaption {
   .welcome-header {
     --img-scale: 3;
   }
+
   nav {
     flex-direction: row;
   }
@@ -200,6 +208,6 @@ figure figcaption {
 
 @media (min-width: 800px) {
   .art-container {
-    grid-template-columns: repeat(2, 320px);
+    grid-template-columns: repeat(2, calc(50% - 1rem));
   }
 }
