@@ -137,6 +137,7 @@ figure figcaption {
 }
 
 .art-container {
+  --border-width: calc(3 * var(--bit-border-width));
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 1fr;
@@ -144,7 +145,7 @@ figure figcaption {
 }
 
 .art-container__frame {
-  border: calc(3 * var(--bit-border-width)) double var(--bit-color0);
+  border: var(--border-width) double var(--bit-color0);
   display: flex;
 }
 
@@ -207,6 +208,6 @@ figure figcaption {
 
 @media (min-width: 800px) {
   .art-container {
-    grid-template-columns: repeat(2, calc(50% - 1rem));
+    grid-template-columns: repeat(2, calc(320px + 2 * var(--border-width)));
   }
 }
