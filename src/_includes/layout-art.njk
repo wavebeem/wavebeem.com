@@ -10,14 +10,16 @@ tags: ["art"]
 <div class="art-container">
   {% for img in art | reverse %}
   <figure>
-    <img
-      src="{{ img.url }}"
-      alt=""
-      width="{{ img.width }}"
-      height="{{ img.height }}"
-      style="background-color: {{ img.color }};"
-      loading="lazy"
-    />
+    <div class="art-container__frame">
+      <img
+        src="{{ img.url }}"
+        alt=""
+        width="{{ img.width }}"
+        height="{{ img.height }}"
+        style="background-color: {{ img.color }};"
+        loading="lazy"
+      />
+    </div>
     <figcaption>
       <a href="{{ img.url }}">{{ img.name }}</a>
     </figcaption>

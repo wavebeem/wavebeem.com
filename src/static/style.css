@@ -128,7 +128,6 @@ figure {
 figure img {
   width: 100%;
   height: auto;
-  border: calc(3 * var(--bit-border-width)) double var(--bit-color0);
 }
 
 figure figcaption {
@@ -140,13 +139,13 @@ figure figcaption {
 .art-container {
   display: grid;
   grid-gap: 1rem;
+  grid-template-columns: 1fr;
   justify-content: space-between;
 }
 
-.art-container img {
-  width: calc(100% - 3 * 2 * var(--bit-border-width));
-  box-sizing: content-box;
-  background-clip: content-box;
+.art-container__frame {
+  border: calc(3 * var(--bit-border-width)) double var(--bit-color0);
+  display: flex;
 }
 
 .welcome-header {
