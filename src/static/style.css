@@ -131,7 +131,6 @@ figure img {
 }
 
 figure figcaption {
-  font-family: var(--font-sans);
   font-weight: bold;
   font-size: 1rem;
 }
@@ -174,11 +173,6 @@ figure figcaption {
 
 .post-date {
   margin-top: -1.5rem;
-}
-
-.date {
-  font-family: var(--font-sans);
-  font-size: 1.1rem;
 }
 
 .print-only {

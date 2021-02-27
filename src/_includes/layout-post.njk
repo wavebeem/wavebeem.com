@@ -5,6 +5,11 @@ tags: ["post"]
 
 <h1>{{ title }}</h1>
 
-<p class="post-date date">{{ page.date | formatDate('yyyy-mm-dd') }}</p>
+<p class="post-date date">
+  <time
+    datetime="{{ page.date | formatDate('yyyy-mm-dd') }}"
+    >{{ page.date | formatDate('yyyy-mm-dd') }}</time
+  >
+</p>
 
-{{ content |  safe }}
+{{ content | safe }}
