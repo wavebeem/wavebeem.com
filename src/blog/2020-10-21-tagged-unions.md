@@ -422,11 +422,6 @@ When using tagged unions, you might enjoy this helper function if you're using J
 If you're using TypeScript, you can omit this, since TypeScript will catch your type errors at compile time.
 
 ```js
-/**
- * Returns an immutable object that throws a TypeError
- * when you try to get a property that doesn't exist,
- * or when you try to add, update, or delete a property.
- */
 function strictObject(object) {
   return new Proxy(object, {
     get(target, prop) {
@@ -435,8 +430,12 @@ function strictObject(object) {
       // object, and we don't want to crash, so we have to
       // allow symbols and "toJSON" through, even if
       // they're not defined.
-      if (prop in target || prop === "toJSON" || typeof prop === "symbol") {
-        return target[prop];
+      if (
+        Reflect.has(target, prop) ||
+        prop === "toJSON" ||
+        typeof prop === "symbol"
+      ) {
+        return Reflect.get(target, prop);
       }
       throw new TypeError(`strictObject: can't get property "${prop}"`);
     },
@@ -494,13 +493,6 @@ class App {
   }
 }
 ```
-
-Note: The `|` symbol means "this type OR that type" in TypeScript. Normally it's
-written like `type T = A | B;`, but when you have lots of types over multiple
-lines, you can "line up the pipes" on the left to look nice. This is the "union"
-part of "tagged unions". TypeScript will ensure that you check the `mode` before
-you access other parts of your state, so you only ever access the right state at
-the right time.
 
 ## Appendix: Tagged unions in Vue
 
