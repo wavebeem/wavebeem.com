@@ -162,8 +162,8 @@ figure figcaption {
 }
 
 .howdy {
-  width: calc(var(--img-scale) * 52px);
-  height: calc(var(--img-scale) * 24px);
+  width: calc(var(--img-scale) * 54px);
+  height: calc(var(--img-scale) * 26px);
   margin: 0 8px;
 }
 
