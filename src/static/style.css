@@ -156,6 +156,10 @@ figure figcaption {
   align-items: center;
 }
 
+.flip-h {
+  transform: scaleX(-1);
+}
+
 .teeny-sanguini {
   width: calc(var(--img-scale) * 40px);
   height: calc(var(--img-scale) * 42px);
