@@ -4,9 +4,9 @@
   --font-mono: "JetBrains Mono", "Fira Code", "Menlo", "Consolas", monospace;
   --content-width: 768px;
   --color-pal0: hsl(190, 20%, 20%);
-  --color-pal1: hsl(100, 90%, 26%);
+  --color-pal1: hsl(100, 95%, 24%);
   --color-pal2: hsl(100, 60%, 70%);
-  --color-pal3: hsl(190, 10%, 95%);
+  --color-pal3: hsl(190, 20%, 90%);
   overflow-y: scroll;
 }
 
@@ -15,7 +15,7 @@
   --bit-color1: var(--color-pal3);
   --color-link: var(--color-pal1);
   --color-syntax-bg: var(--color-pal0);
-  --color-code-bg: hsl(190, 10%, 88%);
+  --color-code-bg: hsl(190, 20%, 83%);
   --color-code-fg: var(--color-pal0);
 }
 
