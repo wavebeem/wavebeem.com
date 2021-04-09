@@ -13,7 +13,7 @@ Ruby, Python, bash, Travis CI, parsers, Amazon S3, Cloudfront, Jira, Java
 
 ## Work experience
 
-**Aruba Networks**, _Senior JavaScript Developer_ (February 2018--_present_)
+**Aruba Networks**, _Senior JavaScript Developer_ (February 2018--April 2021)
 
 - Completed a frontend rewrite from Backbone to React
 
