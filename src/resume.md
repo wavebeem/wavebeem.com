@@ -5,13 +5,18 @@ layout: "layout-resume"
 
 ## Technical skills
 
-JavaScript, TypeScript, HTML, CSS, git, GitHub
+JavaScript, TypeScript, HTML, CSS, Git, GitHub
 
-React, webpack, Jest, Storybook, Cypress, emotion, tachyons, lodash
+React, Webpack, Jest, Storybook, Cypress, Emotion, Tachyons, Lodash
 
-Ruby, Python, bash, Travis CI, parsers, Amazon S3, Cloudfront, Jira, Java
+Ruby, Python, Bash, Travis CI, parsers, static file hosting, Jira, Java
 
 ## Work experience
+
+**Zapier**, _Frontend Engineer III_ (April 2021--_Present_)
+
+
+---
 
 **Aruba Networks**, _Senior JavaScript Developer_ (February 2018--April 2021)
 
@@ -22,8 +27,6 @@ Ruby, Python, bash, Travis CI, parsers, Amazon S3, Cloudfront, Jira, Java
 - Lead development on a WebGL map and routing graph application
 
 - Designed and created a real-time asset visualization [SDK for the web](https://github.com/arubanetworks/meridian-web-sdk/)
-
-- Extended and refactored an in-house React component library
 
 ---
 
@@ -49,7 +52,7 @@ Ruby, Python, bash, Travis CI, parsers, Amazon S3, Cloudfront, Jira, Java
 
 **NOAA**, _Undergraduate Research Intern_ (Summer 2011)
 
-- Created a JavaScript weather simulation data visualizer using Google Maps
+<!-- - Created a JavaScript weather simulation data visualizer using Google Maps -->
 
 ## Projects
 
@@ -65,13 +68,13 @@ Ruby, Python, bash, Travis CI, parsers, Amazon S3, Cloudfront, Jira, Java
 
 - Created [Squiggle](https://www.squiggle-lang.org/), a compile-to-JS programming language (2015--2016)
 
-- Created [Screenhive](https://github.com/wavebeem/screenhive), an Electron app for organizing Steam screenshots (2016)
+<!-- - Created [Screenhive](https://github.com/wavebeem/screenhive), an Electron app for organizing Steam screenshots (2016) -->
 
 - Co-developed [Algebra Card Clutter](https://www.usatoday.com/story/tech/2013/01/21/algebra-apps-help-kids/1852187/), an educational iPad math game ([2012](https://ipadapptivities.blogspot.com/2012/08/algebra-card-clutter.html))
 
 - Created [LatteScript](https://lattescript.netlify.app), an educational programming language (2011--2012)
 
-- Created a new tab bar style for [iTerm](https://iterm2.com/) ([2014](https://github.com/gnachman/iTerm2/pull/185))
+<!-- - Created a new tab bar style for [iTerm](https://iterm2.com/) ([2014](https://github.com/gnachman/iTerm2/pull/185)) -->
 
 <!-- https://apps.apple.com/us/app/algebra-card-clutter/id549330499 -->
 
