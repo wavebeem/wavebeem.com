@@ -1,4 +1,5 @@
 :root {
+  --bit-border-radius: 2px;
   --font-sans: -apple-system, BlinkMacSystemFont, "Avenir Next",
     "Helvetica Neue", Roboto, Noto, "Segoe UI", Ubuntu, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", "Menlo", "Consolas", monospace;
@@ -95,7 +96,7 @@ footer {
 
 ul {
   padding-left: 1.25rem;
-  list-style-type: square;
+  /* list-style-type: square; */
 }
 
 ol {
@@ -128,6 +129,7 @@ figure {
 figure img {
   width: 100%;
   height: auto;
+  border-radius: var(--bit-border-radius);
 }
 
 figure figcaption {
@@ -149,11 +151,23 @@ figure figcaption {
   display: flex;
 }
 
+.art-container__frame > img {
+  border-radius: 0;
+}
+
 .welcome-header {
   --img-scale: 2;
   margin: 2rem 0;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
   align-items: center;
 }
 
@@ -174,6 +188,9 @@ figure figcaption {
 
 .favicon {
   margin-right: 0.5rem;
+  border-radius: 9999px;
+  vertical-align: middle;
+  background: #23674e;
 }
 
 .post-date {
@@ -200,6 +217,7 @@ figure figcaption {
 
   nav {
     flex-direction: row;
+    align-items: center;
   }
 
   nav a {
