@@ -20,8 +20,9 @@ tags: ["art"]
         loading="lazy"
       />
     </div>
-    <figcaption>
+    <figcaption class="text-center">
       <a href="{{ img.url }}">{{ img.name }}</a>
+      <span>({{ img.date }})</span>
     </figcaption>
   </figure>
   {% endfor %}

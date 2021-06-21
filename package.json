@@ -20,7 +20,7 @@
   },
   "homepage": "https://wavebeem.com",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-rss": "^1.0.9",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "dateformat": "^3.0.3",

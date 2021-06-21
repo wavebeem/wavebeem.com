@@ -145,6 +145,7 @@ figure figcaption {
 
 .art-container__frame {
   border: var(--border-width) double var(--bit-color0);
+  border-radius: var(--bit-border-radius);
   display: flex;
 }
 
@@ -183,6 +184,15 @@ figure figcaption {
   display: none;
 }
 
+.grid-2 {
+  display: grid;
+  gap: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
 @media (min-width: 450px) {
   .welcome-header {
     --img-scale: 3;
@@ -205,6 +215,10 @@ figure figcaption {
 }
 
 @media (min-width: 800px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .art-container {
     grid-template-columns: repeat(2, calc(320px + 2 * var(--border-width)));
   }
