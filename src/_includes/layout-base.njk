@@ -36,7 +36,7 @@
     ></script>
   </head>
   <body>
-    <nav class="screen-only">
+    <header class="screen-only">
       <b class="flex align-center">
         <img
           alt=""
@@ -47,11 +47,13 @@
         />
         wavebeem
       </b>
-      <a class="bit-link" href="/">Home</a>
-      <a class="bit-link" href="/blog">Blog</a>
-      <a class="bit-link" href="/art">Art</a>
-      <a class="bit-link" href="/resume">Resume</a>
-    </nav>
+      <nav>
+        <a class="bit-link" href="/">Home</a>
+        <a class="bit-link" href="/blog">Blog</a>
+        <a class="bit-link" href="/art">Art</a>
+        <a class="bit-link" href="/resume">Resume</a>
+      </nav>
+    </header>
     <main>{{ content | safe }}</main>
     <footer class="screen-only">
       &copy; {{ "now" | formatDate("yyyy") }} Brian Mock
