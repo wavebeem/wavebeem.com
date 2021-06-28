@@ -8,6 +8,7 @@
   --color-pal1: hsl(100, 90%, 26%);
   --color-pal2: hsl(100, 60%, 70%);
   --color-pal3: hsl(190, 10%, 95%);
+  --img-scale: 2;
   overflow-y: scroll;
 }
 
@@ -169,35 +170,27 @@ figure figcaption {
   border-radius: 0;
 }
 
-.welcome-header {
-  --img-scale: 2;
-  margin: 2rem 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .flex {
   display: flex;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.clearfix {
+  clear: both;
 }
 
 .align-center {
   align-items: center;
 }
 
-.flip-h {
-  transform: scaleX(-1);
-}
-
 .teeny-sanguini {
   width: calc(var(--img-scale) * 40px);
   height: calc(var(--img-scale) * 42px);
-}
-
-.howdy {
-  width: calc(var(--img-scale) * 54px);
-  height: calc(var(--img-scale) * 26px);
-  margin: 0 8px;
+  float: right;
+  margin-top: 1rem;
 }
 
 .favicon {
@@ -224,17 +217,7 @@ figure figcaption {
   text-align: center;
 }
 
-@media (min-width: 450px) {
-  .welcome-header {
-    --img-scale: 3;
-  }
-}
-
 @media (min-width: 600px) {
-  .welcome-header {
-    --img-scale: 4;
-  }
-
   header {
     flex-direction: row;
   }
