@@ -1,34 +1,49 @@
 :root {
-  --bit-border-radius: 2px;
+  --bit-border-radius: 0;
   --font-sans: -apple-system, BlinkMacSystemFont, "Avenir Next",
     "Helvetica Neue", Roboto, Noto, "Segoe UI", Ubuntu, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", "Menlo", "Consolas", monospace;
   --content-width: 768px;
-  --color-pal0: hsl(190, 20%, 20%);
-  --color-pal1: hsl(100, 90%, 26%);
-  --color-pal2: hsl(100, 60%, 70%);
-  --color-pal3: hsl(190, 10%, 95%);
-  --img-scale: 2;
   overflow-y: scroll;
 }
 
 .bit-auto {
-  --bit-color0: var(--color-pal0);
-  --bit-color1: var(--color-pal3);
-  --color-link: var(--color-pal1);
-  --color-syntax-bg: var(--color-pal0);
-  --color-code-bg: hsl(190, 10%, 88%);
-  --color-code-fg: var(--color-pal0);
+  --bit-color0: hsl(200, 20%, 20%);
+  --bit-color1: hsl(200, 10%, 95%);
+  --color-link: hsl(150, 100%, 22%);
+  --color-header-bg: hsl(150, 100%, 22%);
+  --color-header-fg: hsl(200, 10%, 95%);
+  --color-footer-bg: hsl(200, 10%, 90%);
+  --color-footer-fg: hsl(200, 20%, 30%);
+  --color-scrollbar-bg: hsl(200, 10%, 90%);
+  --color-scrollbar-fg: hsl(200, 20%, 30%);
+  --color-syntax-bg: hsl(200, 20%, 15%);
+  --color-syntax-fg: hsl(200, 10%, 95%);
+  --color-code-bg: hsl(200, 10%, 86%);
+  --color-code-fg: hsl(200, 20%, 15%);
+  scrollbar-color: var(--color-scrollbar-fg) var(--color-scrollbar-bg);
 }
 
 @media (prefers-color-scheme: dark) {
   .bit-auto {
-    --bit-color0: var(--color-pal3);
-    --bit-color1: var(--color-pal0);
-    --color-link: var(--color-pal2);
-    --color-syntax-bg: hsl(190, 20%, 16%);
-    --color-code-bg: hsl(190, 20%, 16%);
-    --color-code-fg: var(--color-pal3);
+    --bit-color0: hsl(200, 10%, 80%);
+    --bit-color1: hsl(200, 20%, 15%);
+    --color-link: hsl(150, 60%, 60%);
+    --color-header-bg: hsl(150, 100%, 22%);
+    --color-header-fg: hsl(200, 10%, 95%);
+    --color-footer-bg: hsl(200, 20%, 10%);
+    --color-footer-fg: hsl(200, 10%, 70%);
+    --color-scrollbar-bg: hsl(200, 20%, 10%);
+    --color-scrollbar-fg: hsl(200, 10%, 70%);
+    --color-syntax-bg: hsl(200, 20%, 10%);
+    --color-syntax-fg: hsl(200, 10%, 95%);
+    --color-code-bg: hsl(200, 20%, 10%);
+    --color-code-fg: hsl(200, 10%, 95%);
+  }
+
+  .teeny-sanguini {
+    filter: drop-shadow(0 0 2px hsla(0, 0%, 100%, 0.4))
+      drop-shadow(0 2px 8px hsla(0, 0%, 0%, 0.4));
   }
 }
 
@@ -46,16 +61,18 @@ body {
   font-size: 1.25rem;
   font-family: var(--font-sans);
   line-height: 1.5;
-  padding: 1rem;
-  max-width: var(--content-width);
   margin: 0 auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 main {
   flex: 1 1 auto;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: var(--content-width);
+  width: 100%;
 }
 
 .bit-auto .markdownIt-Anchor {
@@ -70,11 +87,22 @@ p:empty {
   display: none;
 }
 
+hr {
+  opacity: 0.25;
+}
+
 header {
+  --bit-color0: var(--color-header-fg);
+  --bit-color1: var(--color-header-bg);
+  background: var(--bit-color1);
+  color: var(--bit-color0);
   font-size: 1.25rem;
-  display: flex;
-  border-bottom: var(--bit-border-width) dotted var(--bit-color0);
-  padding-bottom: 1rem;
+  padding: 1rem;
+}
+
+header > * {
+  margin: 0 auto;
+  max-width: var(--content-width);
   display: flex;
   flex-direction: column;
 }
@@ -84,6 +112,24 @@ nav {
   display: flex;
 }
 
+.logo span {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  margin-right: 0.5rem;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.bit-auto nav a {
+  --bit-color0: var(--color-header-fg);
+  --bit-color1: var(--color-header-bg);
+  text-decoration: none;
+}
+
 nav a + a {
   margin-left: 1rem;
 }
@@ -91,9 +137,10 @@ nav a + a {
 footer {
   text-align: center;
   font-size: 1rem;
-  border-top: var(--bit-border-width) dotted var(--bit-color0);
-  padding-top: 1rem;
-  margin-top: 1rem;
+  background: var(--color-footer-bg);
+  color: var(--color-footer-fg);
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 .bit-auto a {
@@ -102,7 +149,7 @@ footer {
 
 ul {
   padding-left: 1.25rem;
-  /* list-style-type: square; */
+  list-style-type: square;
 }
 
 ol {
@@ -186,18 +233,20 @@ figure figcaption {
   align-items: center;
 }
 
+.markdownIt-TOC li {
+  margin: 0.5rem 0;
+}
+
+.markdownIt-TOC a {
+  text-decoration: none;
+}
+
 .teeny-sanguini {
+  --img-scale: 2;
   width: calc(var(--img-scale) * 40px);
   height: calc(var(--img-scale) * 42px);
   float: right;
   margin-top: 1rem;
-}
-
-.favicon {
-  margin-right: 0.5rem;
-  border-radius: 9999px;
-  vertical-align: middle;
-  background: #23674e;
 }
 
 .post-date {
@@ -218,7 +267,7 @@ figure figcaption {
 }
 
 @media (min-width: 600px) {
-  header {
+  header > * {
     flex-direction: row;
   }
 

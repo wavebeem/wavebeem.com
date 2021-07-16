@@ -15,4 +15,9 @@ for size in 48 96 180 192 512; do
     -scale "${size}x${size}" \
     -strip \
     "brian-${size}.png"
+  convert \
+    "brian-alpha-24.png" \
+    -scale "${size}x${size}" \
+    -strip \
+    "brian-alpha-${size}.png"
 done
