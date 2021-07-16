@@ -10,9 +10,11 @@
 .bit-auto {
   --bit-color0: hsl(200, 20%, 20%);
   --bit-color1: hsl(200, 10%, 95%);
-  --color-link: hsl(100, 100%, 26%);
+  --color-link: hsl(140, 100%, 26%);
+  --color-header-bg: hsl(140, 80%, 26%);
+  --color-header-fg: hsl(200, 10%, 95%);
   --color-syntax-bg: hsl(200, 20%, 15%);
-  --color-syntax-fg: hsl(190, 10%, 95%);
+  --color-syntax-fg: hsl(200, 10%, 95%);
   --color-code-bg: hsl(200, 10%, 86%);
   --color-code-fg: hsl(200, 20%, 15%);
 }
@@ -21,7 +23,9 @@
   .bit-auto {
     --bit-color0: hsl(200, 10%, 80%);
     --bit-color1: hsl(200, 20%, 15%);
-    --color-link: hsl(100, 60%, 60%);
+    --color-link: hsl(140, 60%, 60%);
+    --color-header-bg: hsl(140, 80%, 26%);
+    --color-header-fg: hsl(200, 10%, 95%);
     --color-syntax-bg: hsl(200, 20%, 10%);
     --color-syntax-fg: hsl(200, 10%, 95%);
     --color-code-bg: hsl(200, 20%, 10%);
@@ -43,16 +47,19 @@ body {
   font-size: 1.25rem;
   font-family: var(--font-sans);
   line-height: 1.5;
-  padding: 1rem;
-  max-width: var(--content-width);
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
 }
 
 main {
   flex: 1 1 auto;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: var(--content-width);
+}
+
+h1 {
+  margin-top: 1rem;
 }
 
 .bit-auto .markdownIt-Anchor {
@@ -68,10 +75,17 @@ p:empty {
 }
 
 header {
+  --bit-color0: var(--color-header-fg);
+  --bit-color1: var(--color-header-bg);
+  background: var(--bit-color1);
+  color: var(--bit-color0);
   font-size: 1.25rem;
-  display: flex;
-  border-bottom: var(--bit-border-width) dotted var(--bit-color0);
-  padding-bottom: 1rem;
+  padding: 1rem;
+}
+
+header > * {
+  margin: 0 auto;
+  max-width: var(--content-width);
   display: flex;
   flex-direction: column;
 }
@@ -81,15 +95,35 @@ nav {
   display: flex;
 }
 
+.logo span {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  margin-right: 0.5rem;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.bit-auto nav a {
+  --bit-color0: var(--color-header-fg);
+  --bit-color1: var(--color-header-bg);
+  text-decoration: none;
+  /* font-weight: bold; */
+  padding: 0 0.5rem;
+}
+
 nav a + a {
-  margin-left: 1rem;
+  margin-left: 0.5rem;
 }
 
 footer {
   text-align: center;
   font-size: 1rem;
   border-top: var(--bit-border-width) dotted var(--bit-color0);
-  padding-top: 1rem;
+  padding: 1rem;
   margin-top: 1rem;
 }
 
@@ -191,13 +225,6 @@ figure figcaption {
   margin-top: 1rem;
 }
 
-.favicon {
-  margin-right: 0.5rem;
-  border-radius: 9999px;
-  vertical-align: middle;
-  background: #23674e;
-}
-
 .post-date {
   margin-top: -1.5rem;
 }
@@ -216,7 +243,7 @@ figure figcaption {
 }
 
 @media (min-width: 600px) {
-  header {
+  header > * {
     flex-direction: row;
   }
 

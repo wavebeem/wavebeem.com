@@ -37,22 +37,23 @@
   </head>
   <body>
     <header class="screen-only">
-      <b class="flex align-center">
-        <img
-          alt=""
-          src="/static/brian-96.png"
-          width="48"
-          height="48"
-          class="favicon"
-        />
-        wavebeem
-      </b>
-      <nav>
-        <a class="bit-link" href="/">Home</a>
-        <a class="bit-link" href="/blog">Blog</a>
-        <a class="bit-link" href="/art">Art</a>
-        <a class="bit-link" href="/resume">Resume</a>
-      </nav>
+      <div>
+        <div class="flex align-center logo">
+          <img
+            alt=""
+            src="/static/brian-alpha-96.png"
+            width="48"
+            height="48"
+          />
+          <span>wavebeem</span>
+        </div>
+        <nav>
+          <a class="bit-link" href="/">Home</a>
+          <a class="bit-link" href="/blog">Blog</a>
+          <a class="bit-link" href="/art">Art</a>
+          <a class="bit-link" href="/resume">Resume</a>
+        </nav>
+      </div>
     </header>
     <main>{{ content | safe }}</main>
     <footer class="screen-only">
