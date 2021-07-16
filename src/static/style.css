@@ -13,10 +13,15 @@
   --color-link: hsl(150, 100%, 22%);
   --color-header-bg: hsl(150, 100%, 22%);
   --color-header-fg: hsl(200, 10%, 95%);
+  --color-footer-bg: hsl(200, 10%, 90%);
+  --color-footer-fg: hsl(200, 20%, 30%);
+  --color-scrollbar-bg: hsl(200, 10%, 98%);
+  --color-scrollbar-fg: hsl(200, 20%, 30%);
   --color-syntax-bg: hsl(200, 20%, 15%);
   --color-syntax-fg: hsl(200, 10%, 95%);
   --color-code-bg: hsl(200, 10%, 86%);
   --color-code-fg: hsl(200, 20%, 15%);
+  scrollbar-color: var(--color-scrollbar-fg) var(--color-scrollbar-bg);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +31,10 @@
     --color-link: hsl(150, 60%, 60%);
     --color-header-bg: hsl(150, 100%, 22%);
     --color-header-fg: hsl(200, 10%, 95%);
+    --color-footer-bg: hsl(200, 20%, 10%);
+    --color-footer-fg: hsl(200, 10%, 70%);
+    --color-scrollbar-bg: hsl(200, 20%, 25%);
+    --color-scrollbar-fg: hsl(200, 10%, 70%);
     --color-syntax-bg: hsl(200, 20%, 10%);
     --color-syntax-fg: hsl(200, 10%, 95%);
     --color-code-bg: hsl(200, 20%, 10%);
@@ -49,12 +58,16 @@ body {
   line-height: 1.5;
   margin: 0 auto;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
   flex: 1 1 auto;
   margin: 0 auto;
+  padding: 0 1rem;
   max-width: var(--content-width);
+  width: 100%;
 }
 
 .bit-auto .markdownIt-Anchor {
@@ -106,17 +119,17 @@ nav {
   --bit-color0: var(--color-header-fg);
   --bit-color1: var(--color-header-bg);
   text-decoration: none;
-  padding: 0 0.5rem;
 }
 
 nav a + a {
-  margin-left: 0.5rem;
+  margin-left: 1rem;
 }
 
 footer {
   text-align: center;
   font-size: 1rem;
-  border-top: var(--bit-border-width) dotted var(--bit-color0);
+  background: var(--color-footer-bg);
+  color: var(--color-footer-fg);
   padding: 1rem;
   margin-top: 2rem;
 }
@@ -209,6 +222,14 @@ figure figcaption {
 
 .align-center {
   align-items: center;
+}
+
+.markdownIt-TOC li {
+  margin: 0.5rem 0;
+}
+
+.markdownIt-TOC a {
+  text-decoration: none;
 }
 
 .teeny-sanguini {
