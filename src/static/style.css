@@ -4,31 +4,28 @@
     "Helvetica Neue", Roboto, Noto, "Segoe UI", Ubuntu, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", "Menlo", "Consolas", monospace;
   --content-width: 768px;
-  --color-pal0: hsl(190, 20%, 20%);
-  --color-pal1: hsl(100, 90%, 26%);
-  --color-pal2: hsl(100, 60%, 70%);
-  --color-pal3: hsl(190, 10%, 95%);
-  --img-scale: 2;
   overflow-y: scroll;
 }
 
 .bit-auto {
-  --bit-color0: var(--color-pal0);
-  --bit-color1: var(--color-pal3);
-  --color-link: var(--color-pal1);
-  --color-syntax-bg: var(--color-pal0);
-  --color-code-bg: hsl(190, 10%, 88%);
-  --color-code-fg: var(--color-pal0);
+  --bit-color0: hsl(200, 20%, 20%);
+  --bit-color1: hsl(200, 10%, 95%);
+  --color-link: hsl(100, 100%, 26%);
+  --color-syntax-bg: hsl(200, 20%, 15%);
+  --color-syntax-fg: hsl(190, 10%, 95%);
+  --color-code-bg: hsl(200, 10%, 86%);
+  --color-code-fg: hsl(200, 20%, 15%);
 }
 
 @media (prefers-color-scheme: dark) {
   .bit-auto {
-    --bit-color0: var(--color-pal3);
-    --bit-color1: var(--color-pal0);
-    --color-link: var(--color-pal2);
-    --color-syntax-bg: hsl(190, 20%, 16%);
-    --color-code-bg: hsl(190, 20%, 16%);
-    --color-code-fg: var(--color-pal3);
+    --bit-color0: hsl(200, 10%, 80%);
+    --bit-color1: hsl(200, 20%, 15%);
+    --color-link: hsl(100, 60%, 60%);
+    --color-syntax-bg: hsl(200, 20%, 10%);
+    --color-syntax-fg: hsl(200, 10%, 95%);
+    --color-code-bg: hsl(200, 20%, 10%);
+    --color-code-fg: hsl(200, 10%, 95%);
   }
 }
 
@@ -187,6 +184,7 @@ figure figcaption {
 }
 
 .teeny-sanguini {
+  --img-scale: 2;
   width: calc(var(--img-scale) * 40px);
   height: calc(var(--img-scale) * 42px);
   float: right;

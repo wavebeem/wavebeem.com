@@ -14,7 +14,7 @@
   --keyword: var(--c4);
 
   --bit-color0: var(--color-syntax-bg);
-  --bit-color1: var(--color-pal3);
+  --bit-color1: var(--color-syntax-fg);
 }
 
 .token.comment,
