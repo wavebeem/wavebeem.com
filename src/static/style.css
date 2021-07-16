@@ -1,5 +1,5 @@
 :root {
-  --bit-border-radius: 2px;
+  --bit-border-radius: 0;
   --font-sans: -apple-system, BlinkMacSystemFont, "Avenir Next",
     "Helvetica Neue", Roboto, Noto, "Segoe UI", Ubuntu, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", "Menlo", "Consolas", monospace;
