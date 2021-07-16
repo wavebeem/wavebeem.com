@@ -10,8 +10,8 @@
 .bit-auto {
   --bit-color0: hsl(200, 20%, 20%);
   --bit-color1: hsl(200, 10%, 95%);
-  --color-link: hsl(140, 100%, 26%);
-  --color-header-bg: hsl(140, 80%, 26%);
+  --color-link: hsl(150, 100%, 22%);
+  --color-header-bg: hsl(150, 100%, 22%);
   --color-header-fg: hsl(200, 10%, 95%);
   --color-syntax-bg: hsl(200, 20%, 15%);
   --color-syntax-fg: hsl(200, 10%, 95%);
@@ -23,8 +23,8 @@
   .bit-auto {
     --bit-color0: hsl(200, 10%, 80%);
     --bit-color1: hsl(200, 20%, 15%);
-    --color-link: hsl(140, 60%, 60%);
-    --color-header-bg: hsl(140, 80%, 26%);
+    --color-link: hsl(150, 60%, 60%);
+    --color-header-bg: hsl(150, 100%, 22%);
     --color-header-fg: hsl(200, 10%, 95%);
     --color-syntax-bg: hsl(200, 20%, 10%);
     --color-syntax-fg: hsl(200, 10%, 95%);
@@ -53,13 +53,8 @@ body {
 
 main {
   flex: 1 1 auto;
-  padding: 1rem;
   margin: 0 auto;
   max-width: var(--content-width);
-}
-
-h1 {
-  margin-top: 1rem;
 }
 
 .bit-auto .markdownIt-Anchor {
@@ -123,7 +118,7 @@ footer {
   font-size: 1rem;
   border-top: var(--bit-border-width) dotted var(--bit-color0);
   padding: 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 
 .bit-auto a {
