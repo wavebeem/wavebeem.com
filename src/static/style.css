@@ -15,7 +15,7 @@
   --color-header-fg: hsl(200, 10%, 95%);
   --color-footer-bg: hsl(200, 10%, 90%);
   --color-footer-fg: hsl(200, 20%, 30%);
-  --color-scrollbar-bg: hsl(200, 10%, 98%);
+  --color-scrollbar-bg: hsl(200, 10%, 90%);
   --color-scrollbar-fg: hsl(200, 20%, 30%);
   --color-syntax-bg: hsl(200, 20%, 15%);
   --color-syntax-fg: hsl(200, 10%, 95%);
@@ -33,12 +33,17 @@
     --color-header-fg: hsl(200, 10%, 95%);
     --color-footer-bg: hsl(200, 20%, 10%);
     --color-footer-fg: hsl(200, 10%, 70%);
-    --color-scrollbar-bg: hsl(200, 20%, 25%);
+    --color-scrollbar-bg: hsl(200, 20%, 10%);
     --color-scrollbar-fg: hsl(200, 10%, 70%);
     --color-syntax-bg: hsl(200, 20%, 10%);
     --color-syntax-fg: hsl(200, 10%, 95%);
     --color-code-bg: hsl(200, 20%, 10%);
     --color-code-fg: hsl(200, 10%, 95%);
+  }
+
+  .teeny-sanguini {
+    filter: drop-shadow(0 0 2px hsla(0, 0%, 100%, 0.4))
+      drop-shadow(0 2px 8px hsla(0, 0%, 0%, 0.4));
   }
 }
 
@@ -80,6 +85,10 @@ main {
  */
 p:empty {
   display: none;
+}
+
+hr {
+  opacity: 0.25;
 }
 
 header {
