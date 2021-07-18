@@ -6,7 +6,7 @@ tags: ["blog"]
 <h1>Posts</h1>
 {% for post in collections.post | reverse %}
 <h2 class="mb0">
-  <a href="{{ post.url }}" class="no-underline">{{
+  <a class="bit-link no-underline" href="{{ post.url }}">{{
     post.data.title
   }}</a>
 </h2>

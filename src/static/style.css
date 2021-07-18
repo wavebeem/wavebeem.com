@@ -7,6 +7,7 @@
   overflow-y: scroll;
 }
 
+.bit-root,
 .bit-auto {
   --bit-color0: hsl(200, 20%, 20%);
   --bit-color1: hsl(200, 10%, 95%);
@@ -25,6 +26,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
+  .bit-root,
   .bit-auto {
     --bit-color0: hsl(200, 10%, 80%);
     --bit-color1: hsl(200, 20%, 15%);
@@ -124,7 +126,7 @@ nav {
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
 }
 
-.bit-auto nav a {
+nav .bit-link {
   --bit-color0: var(--color-header-fg);
   --bit-color1: var(--color-header-bg);
   text-decoration: none;
@@ -143,7 +145,7 @@ footer {
   margin-top: 2rem;
 }
 
-.bit-auto a {
+a {
   --bit-color0: var(--color-link);
 }
 
@@ -172,7 +174,7 @@ pre {
   font-variant-ligatures: none;
 }
 
-.bit-auto code {
+code {
   --bit-color0: var(--color-code-bg);
   --bit-color1: var(--color-code-fg);
 }
@@ -233,7 +235,7 @@ figure figcaption {
   align-items: center;
 }
 
-.bit-auto .no-underline {
+.no-underline {
   text-decoration: none;
 }
 
@@ -272,6 +274,10 @@ figure figcaption {
 
 .text-center {
   text-align: center;
+}
+
+.weight-normal {
+  font-weight: normal;
 }
 
 @media (min-width: 600px) {
