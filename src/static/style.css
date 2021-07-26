@@ -98,7 +98,6 @@ header {
   --bit-color1: var(--color-header-bg);
   background: var(--bit-color1);
   color: var(--bit-color0);
-  font-size: 1.25rem;
   padding: 1rem;
 }
 
@@ -311,5 +310,19 @@ figure figcaption {
 
   .art-container {
     grid-template-columns: repeat(2, calc(320px + 2 * var(--border-width)));
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 }
