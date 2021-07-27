@@ -11,8 +11,8 @@
 .bit-auto {
   --bit-color0: hsl(200, 20%, 20%);
   --bit-color1: hsl(200, 10%, 95%);
-  --color-link: hsl(150, 100%, 22%);
-  --color-header-bg: hsl(150, 100%, 22%);
+  --color-link: hsl(150, 100%, 25%);
+  --color-header-bg: hsl(150, 100%, 25%);
   --color-header-fg: hsl(200, 10%, 95%);
   --color-footer-bg: hsl(200, 10%, 90%);
   --color-footer-fg: hsl(200, 20%, 30%);
@@ -31,7 +31,7 @@
     --bit-color0: hsl(200, 10%, 80%);
     --bit-color1: hsl(200, 20%, 15%);
     --color-link: hsl(150, 60%, 60%);
-    --color-header-bg: hsl(150, 100%, 22%);
+    --color-header-bg: hsl(150, 100%, 25%);
     --color-header-fg: hsl(200, 10%, 95%);
     --color-footer-bg: hsl(200, 20%, 10%);
     --color-footer-fg: hsl(200, 10%, 70%);
@@ -44,8 +44,8 @@
   }
 
   .teeny-sanguini {
-    filter: drop-shadow(0 0 2px hsla(0, 0%, 100%, 0.4))
-      drop-shadow(0 2px 8px hsla(0, 0%, 0%, 0.4));
+    filter: drop-shadow(0 0 2px hsla(0, 0%, 100%, 0.5))
+      drop-shadow(0 2px 8px hsla(0, 0%, 0%, 0.5));
   }
 }
 
