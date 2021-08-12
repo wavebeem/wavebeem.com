@@ -11,6 +11,7 @@
 .bit-auto {
   --bit-color0: hsl(200, 20%, 20%);
   --bit-color1: hsl(200, 10%, 95%);
+  --color-divider: hsla(200, 20%, 20%, 20%);
   --color-link: hsl(150, 100%, 25%);
   --color-header-bg: hsl(150, 100%, 25%);
   --color-header-fg: hsl(200, 10%, 95%);
@@ -30,6 +31,7 @@
   .bit-auto {
     --bit-color0: hsl(200, 10%, 80%);
     --bit-color1: hsl(200, 20%, 15%);
+    --color-divider: hsla(200, 20%, 15%, 20%);
     --color-link: hsl(150, 60%, 60%);
     --color-header-bg: hsl(150, 100%, 25%);
     --color-header-fg: hsl(200, 10%, 95%);
@@ -90,7 +92,7 @@ p:empty {
 }
 
 hr {
-  opacity: 0.25;
+  --bit-color0: var(--color-divider);
 }
 
 header {
@@ -106,6 +108,11 @@ header > * {
   max-width: var(--content-width);
   display: flex;
   flex-direction: column;
+}
+
+h2 {
+  border-top: var(--bit-border-width) dotted var(--color-divider);
+  padding-top: 1rem;
 }
 
 nav {
