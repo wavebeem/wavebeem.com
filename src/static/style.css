@@ -110,7 +110,8 @@ header > * {
   flex-direction: column;
 }
 
-h2 {
+h2,
+h3 {
   border-top: var(--bit-border-width) dotted var(--color-divider);
   padding-top: 1rem;
 }
@@ -159,6 +160,10 @@ ul {
   padding-left: 1.25rem;
   list-style-type: square;
 }
+
+/* .page-resume ul {
+  padding-left: 4rem;
+} */
 
 ol {
   padding-left: 1.5rem;

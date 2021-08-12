@@ -13,13 +13,15 @@ Ruby, Python, Bash, Travis CI, parsers, static file hosting, Jira, Java
 
 ## Work experience
 
-**Zapier**, _Frontend Engineer III_ (April 2021--_Present_)
+### Zapier
+
+Frontend Engineer III (April 2021--_Present_)
 
 - Created a multi-framework dynamic [documentation app](https://zapier.com/partner/embed/app-directory/create)
 
----
+### Aruba Networks
 
-**Aruba Networks**, _Senior JavaScript Developer_ (February 2018--April 2021)
+Senior JavaScript Developer (February 2018--April 2021)
 
 - Completed a frontend rewrite from Backbone to React
 
@@ -29,29 +31,29 @@ Ruby, Python, Bash, Travis CI, parsers, static file hosting, Jira, Java
 
 - Designed and created a real-time asset visualization [SDK for the web](https://github.com/arubanetworks/meridian-web-sdk/)
 
----
+### AWS Elemental
 
-**AWS Elemental**, _Software Development Engineer II_ (May 2017--February 2018)
+Software Development Engineer II (May 2017--February 2018)
 
 - Led a wayward team to best practices on their first TypeScript project
 
----
+### CrowdCompass
 
-**CrowdCompass**, _JavaScript Developer_ (February 2016--May 2017)
+JavaScript Developer (February 2016--May 2017)
 
 - Maintained multiple web apps using Ember and Ruby on Rails + jQuery
 
----
+### Janrain
 
-**Janrain**, _JavaScript Developer_ (September 2012--July 2015)
+JavaScript Developer (September 2012--July 2015)
 
 - Maintained a legacy library in production on thousands of sites, with IE 8 support
 
 - Documented hundreds of features through extensive code research
 
----
+### NOAA
 
-**NOAA**, _Undergraduate Research Intern_ (Summer 2011)
+Undergraduate Research Intern (Summer 2011)
 
 <!-- - Created a JavaScript weather simulation data visualizer using Google Maps -->
 
@@ -61,7 +63,7 @@ Ruby, Python, Bash, Travis CI, parsers, static file hosting, Jira, Java
 
 - Created [1bit-ui](https://www.1bit-ui.com/), a minimal retro inspired CSS library (2019--present)
 
-- Created [jsx-info](https://github.com/wavebeem/jsx-info), a static code analysis tool for React (2019)
+- Created [JSX Info](https://marketplace.visualstudio.com/items?itemName=wavebeem.vscode-jsx-info), a static code analysis tool for React (2019)
 
 - Maintains [Parsimmon](https://github.com/jneen/parsimmon/), a popular JavaScript parser combinator library with 100% test coverage (2016--present)
 
@@ -71,7 +73,7 @@ Ruby, Python, Bash, Travis CI, parsers, static file hosting, Jira, Java
 
 <!-- - Created [Screenhive](https://github.com/wavebeem/screenhive), an Electron app for organizing Steam screenshots (2016) -->
 
-- Co-developed [Algebra Card Clutter](https://www.usatoday.com/story/tech/2013/01/21/algebra-apps-help-kids/1852187/), an educational iPad math game ([2012](https://ipadapptivities.blogspot.com/2012/08/algebra-card-clutter.html))
+<!-- - Co-developed [Algebra Card Clutter](https://www.usatoday.com/story/tech/2013/01/21/algebra-apps-help-kids/1852187/), an educational iPad math game ([2012](https://ipadapptivities.blogspot.com/2012/08/algebra-card-clutter.html)) -->
 
 - Created [LatteScript](https://lattescript.netlify.app), an educational programming language (2011--2012)
 
