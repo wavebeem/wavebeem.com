@@ -15,6 +15,7 @@ Ruby, Python, Bash, Travis CI, parsers, static file hosting, Jira, Java
 
 **Zapier**, _Frontend Engineer III_ (April 2021--_Present_)
 
+- Created a multi-framework dynamic [documentation app](https://zapier.com/partner/embed/app-directory/create)
 
 ---
 
