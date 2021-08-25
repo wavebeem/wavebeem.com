@@ -31,7 +31,7 @@
   .bit-auto {
     --bit-color0: hsl(200, 10%, 80%);
     --bit-color1: hsl(200, 20%, 15%);
-    --color-divider: hsla(200, 20%, 15%, 20%);
+    --color-divider: hsla(200, 10%, 80%, 20%);
     --color-link: hsl(150, 60%, 60%);
     --color-header-bg: hsl(150, 100%, 25%);
     --color-header-fg: hsl(200, 10%, 95%);
