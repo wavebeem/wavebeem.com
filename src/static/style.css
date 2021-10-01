@@ -193,7 +193,7 @@ code {
 blockquote {
   margin-left: 0;
   padding-left: 2rem;
-  font-style: italic;
+  border-left: var(--bit-border-width) solid;
 }
 
 figure {
