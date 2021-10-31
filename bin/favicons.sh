@@ -5,7 +5,7 @@ Resize() {
   local src="$1"
   local size="$2"
   local dest="$3"
-  convert "$src" -scale "$size" -strip "$dest"
+  magick convert "$src" -scale "$size" -strip "$dest"
 }
 
 cd src/static
