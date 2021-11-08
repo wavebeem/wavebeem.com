@@ -1,33 +1,53 @@
 :root {
-  --bit-border-radius: 2px;
+  --bit-border-radius: 0;
   --font-sans: -apple-system, BlinkMacSystemFont, "Avenir Next",
     "Helvetica Neue", Roboto, Noto, "Segoe UI", Ubuntu, sans-serif;
   --font-mono: "JetBrains Mono", "Fira Code", "Menlo", "Consolas", monospace;
   --content-width: 768px;
-  --color-pal0: hsl(190, 20%, 20%);
-  --color-pal1: hsl(100, 90%, 26%);
-  --color-pal2: hsl(100, 60%, 70%);
-  --color-pal3: hsl(190, 10%, 95%);
   overflow-y: scroll;
 }
 
+.bit-root,
 .bit-auto {
-  --bit-color0: var(--color-pal0);
-  --bit-color1: var(--color-pal3);
-  --color-link: var(--color-pal1);
-  --color-syntax-bg: var(--color-pal0);
-  --color-code-bg: hsl(190, 10%, 88%);
-  --color-code-fg: var(--color-pal0);
+  --bit-color0: hsl(200, 20%, 20%);
+  --bit-color1: hsl(200, 10%, 95%);
+  --color-divider: hsla(200, 20%, 20%, 20%);
+  --color-link: hsl(150, 100%, 25%);
+  --color-header-bg: hsl(150, 100%, 25%);
+  --color-header-fg: hsl(200, 10%, 95%);
+  --color-footer-bg: hsl(200, 10%, 90%);
+  --color-footer-fg: hsl(200, 20%, 30%);
+  --color-scrollbar-bg: hsl(200, 10%, 90%);
+  --color-scrollbar-fg: hsl(200, 20%, 30%);
+  --color-syntax-bg: hsl(200, 20%, 15%);
+  --color-syntax-fg: hsl(200, 10%, 95%);
+  --color-code-bg: hsl(200, 10%, 86%);
+  --color-code-fg: hsl(200, 20%, 15%);
+  scrollbar-color: var(--color-scrollbar-fg) var(--color-scrollbar-bg);
 }
 
 @media (prefers-color-scheme: dark) {
+  .bit-root,
   .bit-auto {
-    --bit-color0: var(--color-pal3);
-    --bit-color1: var(--color-pal0);
-    --color-link: var(--color-pal2);
-    --color-syntax-bg: hsl(190, 20%, 16%);
-    --color-code-bg: hsl(190, 20%, 16%);
-    --color-code-fg: var(--color-pal3);
+    --bit-color0: hsl(200, 10%, 80%);
+    --bit-color1: hsl(200, 20%, 15%);
+    --color-divider: hsla(200, 10%, 80%, 20%);
+    --color-link: hsl(150, 60%, 60%);
+    --color-header-bg: hsl(150, 100%, 25%);
+    --color-header-fg: hsl(200, 10%, 95%);
+    --color-footer-bg: hsl(200, 20%, 10%);
+    --color-footer-fg: hsl(200, 10%, 70%);
+    --color-scrollbar-bg: hsl(200, 20%, 10%);
+    --color-scrollbar-fg: hsl(200, 10%, 70%);
+    --color-syntax-bg: hsl(200, 20%, 10%);
+    --color-syntax-fg: hsl(200, 10%, 95%);
+    --color-code-bg: hsl(200, 20%, 10%);
+    --color-code-fg: hsl(200, 10%, 95%);
+  }
+
+  .teeny-sanguini {
+    filter: drop-shadow(0 0 2px hsla(0, 0%, 100%, 0.5))
+      drop-shadow(0 2px 8px hsla(0, 0%, 0%, 0.5));
   }
 }
 
@@ -45,16 +65,18 @@ body {
   font-size: 1.25rem;
   font-family: var(--font-sans);
   line-height: 1.5;
-  padding: 1rem;
-  max-width: var(--content-width);
   margin: 0 auto;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 main {
   flex: 1 1 auto;
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: var(--content-width);
+  width: 100%;
 }
 
 .bit-auto .markdownIt-Anchor {
@@ -69,18 +91,52 @@ p:empty {
   display: none;
 }
 
+hr {
+  --bit-color0: var(--color-divider);
+}
+
 header {
-  font-size: 1.25rem;
-  display: flex;
-  border-bottom: var(--bit-border-width) dotted var(--bit-color0);
-  padding-bottom: 1rem;
+  --bit-color0: var(--color-header-fg);
+  --bit-color1: var(--color-header-bg);
+  background: var(--bit-color1);
+  color: var(--bit-color0);
+  padding: 1rem;
+}
+
+header > * {
+  margin: 0 auto;
+  max-width: var(--content-width);
   display: flex;
   flex-direction: column;
+}
+
+h2,
+h3 {
+  border-top: var(--bit-border-width) dotted var(--color-divider);
+  padding-top: 1rem;
 }
 
 nav {
   margin-top: 1rem;
   display: flex;
+}
+
+.logo span {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  margin-right: 0.5rem;
+  border-radius: 9999px;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+nav .bit-link {
+  --bit-color0: var(--color-header-fg);
+  --bit-color1: var(--color-header-bg);
+  text-decoration: none;
 }
 
 nav a + a {
@@ -90,19 +146,24 @@ nav a + a {
 footer {
   text-align: center;
   font-size: 1rem;
-  border-top: var(--bit-border-width) dotted var(--bit-color0);
-  padding-top: 1rem;
-  margin-top: 1rem;
+  background: var(--color-footer-bg);
+  color: var(--color-footer-fg);
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
-.bit-auto a {
+a {
   --bit-color0: var(--color-link);
 }
 
 ul {
   padding-left: 1.25rem;
-  /* list-style-type: square; */
+  list-style-type: square;
 }
+
+/* .page-resume ul {
+  padding-left: 4rem;
+} */
 
 ol {
   padding-left: 1.5rem;
@@ -124,7 +185,7 @@ pre {
   font-variant-ligatures: none;
 }
 
-.bit-auto code {
+code {
   --bit-color0: var(--color-code-bg);
   --bit-color1: var(--color-code-fg);
 }
@@ -132,7 +193,7 @@ pre {
 blockquote {
   margin-left: 0;
   padding-left: 2rem;
-  font-style: italic;
+  border-left: var(--bit-border-width) solid;
 }
 
 figure {
@@ -169,42 +230,44 @@ figure figcaption {
   border-radius: 0;
 }
 
-.welcome-header {
-  --img-scale: 2;
-  margin: 2rem 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
 .flex {
   display: flex;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.clearfix {
+  clear: both;
 }
 
 .align-center {
   align-items: center;
 }
 
-.flip-h {
-  transform: scaleX(-1);
+.no-underline {
+  text-decoration: none;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.markdownIt-TOC li {
+  margin: 0.5rem 0;
+}
+
+.markdownIt-TOC a {
+  text-decoration: none;
 }
 
 .teeny-sanguini {
+  --img-scale: 2;
   width: calc(var(--img-scale) * 40px);
   height: calc(var(--img-scale) * 42px);
-}
-
-.howdy {
-  width: calc(var(--img-scale) * 54px);
-  height: calc(var(--img-scale) * 26px);
-  margin: 0 8px;
-}
-
-.favicon {
-  margin-right: 0.5rem;
-  border-radius: 9999px;
-  vertical-align: middle;
-  background: #23674e;
+  float: right;
+  margin-top: 1rem;
 }
 
 .post-date {
@@ -224,18 +287,12 @@ figure figcaption {
   text-align: center;
 }
 
-@media (min-width: 450px) {
-  .welcome-header {
-    --img-scale: 3;
-  }
+.weight-normal {
+  font-weight: normal;
 }
 
 @media (min-width: 600px) {
-  .welcome-header {
-    --img-scale: 4;
-  }
-
-  header {
+  header > * {
     flex-direction: row;
   }
 
@@ -253,10 +310,6 @@ figure figcaption {
     row-gap: 0.5rem;
   }
 
-  dt {
-    text-align: right;
-  }
-
   dt + dd {
     margin: 0;
   }
@@ -269,5 +322,19 @@ figure figcaption {
 
   .art-container {
     grid-template-columns: repeat(2, calc(320px + 2 * var(--border-width)));
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 }

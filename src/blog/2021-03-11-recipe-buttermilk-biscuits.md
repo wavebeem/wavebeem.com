@@ -6,7 +6,7 @@ description: "How to make fluffy biscuits at home"
 ## Ingredients
 
 - 4 ounces (1 stick) unsalted butter (refrigerated)
-- 1 ½ cups (226 grams)
+- 1 ½ cups (226 grams) flour
 - 2 teaspoons baking powder
 - 1 teaspoon salt
 - ¾ cup whole milk or buttermilk

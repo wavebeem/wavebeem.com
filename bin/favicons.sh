@@ -1,18 +1,17 @@
 #!/usr/bin/env bash
 set -eu
 
+Resize() {
+  local src="$1"
+  local size="$2"
+  local dest="$3"
+  magick convert "$src" -scale "$size" -strip "$dest"
+}
+
 cd src/static
-for size in 32; do
-  convert \
-    "favicon-16.png" \
-    -scale "${size}x${size}" \
-    -strip \
-    "favicon-${size}.png"
-done
-for size in 48 96 180 192 512; do
-  convert \
-    "brian-24.png" \
-    -scale "${size}x${size}" \
-    -strip \
-    "brian-${size}.png"
+
+Resize "favicon-16.png" 32 "favicon-32.png"
+
+for size in 48 72 96 180 192 512; do
+  Resize "brian-24.png" $size "brian-${size}.png"
 done

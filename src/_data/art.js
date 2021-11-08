@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const getImageColors = require("get-image-colors");
 const getImageSize = require("image-size");
+const { AssetCache } = require("@11ty/eleventy-cache-assets");
 
 const root = path.resolve(__dirname, "../static/img/art");
 
@@ -25,6 +26,15 @@ async function readInfo(filename) {
   return obj;
 }
 
-// If this ever gets too slow, check out asset caching
-// https://www.11ty.dev/docs/plugins/cache/
-module.exports = getArt;
+// Delete `.cache` dir when adding new image files locally
+async function getArtCached() {
+  const asset = new AssetCache("wavebeem_art");
+  if (asset.isCacheValid("1d")) {
+    return await asset.getCachedValue();
+  }
+  const art = await getArt();
+  await asset.save(art, "json");
+  return art;
+}
+
+module.exports = getArtCached;
