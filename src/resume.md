@@ -1,5 +1,5 @@
 ---
-title: "Resume - wavebeem"
+title: "Resume | wavebeem"
 layout: "layout-resume"
 ---
 

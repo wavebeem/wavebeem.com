@@ -1,4 +1,4 @@
 ---
-title: "Art - wavebeem"
+title: "Art | wavebeem"
 layout: "layout-art"
 ---
