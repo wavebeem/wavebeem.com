@@ -19,6 +19,8 @@ Frontend Engineer III (April 2021--_Present_)
 
 - Created a multi-framework dynamic [documentation app](https://zapier.com/partner/embed/app-directory/create)
 
+- Created a new component in a [web components library](https://zapier.com/partner/embed/zap-manager/create)
+
 ### Aruba Networks
 
 Senior JavaScript Developer (February 2018--April 2021)
