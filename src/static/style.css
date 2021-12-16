@@ -9,45 +9,49 @@
 
 .bit-root,
 .bit-auto {
-  --bit-color0: hsl(200, 20%, 20%);
-  --bit-color1: hsl(200, 10%, 95%);
-  --color-divider: hsla(200, 20%, 20%, 20%);
-  --color-link: hsl(150, 100%, 25%);
-  --color-header-bg: hsl(150, 100%, 25%);
-  --color-header-fg: hsl(200, 10%, 95%);
-  --color-footer-bg: hsl(200, 10%, 90%);
-  --color-footer-fg: hsl(200, 20%, 30%);
-  --color-scrollbar-bg: hsl(200, 10%, 90%);
-  --color-scrollbar-fg: hsl(200, 20%, 30%);
-  --color-syntax-bg: hsl(200, 20%, 15%);
-  --color-syntax-fg: hsl(200, 10%, 95%);
-  --color-code-bg: hsl(200, 10%, 86%);
-  --color-code-fg: hsl(200, 20%, 15%);
+  --hue-main: 200;
+  --hue-accent: 150;
+  --bit-color0: hsl(var(--hue-main), 20%, 20%);
+  --bit-color1: hsl(var(--hue-main), 10%, 95%);
+  --color-divider: hsla(var(--hue-main), 20%, 20%, 20%);
+  --color-link: hsl(var(--hue-accent), 100%, 25%);
+  --color-header-bg: hsl(var(--hue-accent), 100%, 25%);
+  --color-header-fg: hsl(var(--hue-main), 10%, 95%);
+  --color-footer-bg: hsl(var(--hue-main), 10%, 90%);
+  --color-footer-fg: hsl(var(--hue-main), 20%, 30%);
+  --color-scrollbar-bg: hsl(var(--hue-main), 10%, 90%);
+  --color-scrollbar-fg: hsl(var(--hue-main), 20%, 30%);
+  --color-syntax-bg: hsl(var(--hue-main), 20%, 15%);
+  --color-syntax-fg: hsl(var(--hue-main), 10%, 95%);
+  --color-code-bg: hsl(var(--hue-main), 10%, 86%);
+  --color-code-fg: hsl(var(--hue-main), 20%, 15%);
   scrollbar-color: var(--color-scrollbar-fg) var(--color-scrollbar-bg);
 }
 
 @media (prefers-color-scheme: dark) {
   .bit-root,
   .bit-auto {
-    --bit-color0: hsl(200, 10%, 80%);
-    --bit-color1: hsl(200, 20%, 15%);
-    --color-divider: hsla(200, 10%, 80%, 20%);
-    --color-link: hsl(150, 60%, 60%);
-    --color-header-bg: hsl(150, 100%, 25%);
-    --color-header-fg: hsl(200, 10%, 95%);
-    --color-footer-bg: hsl(200, 20%, 10%);
-    --color-footer-fg: hsl(200, 10%, 70%);
-    --color-scrollbar-bg: hsl(200, 20%, 10%);
-    --color-scrollbar-fg: hsl(200, 10%, 70%);
-    --color-syntax-bg: hsl(200, 20%, 10%);
-    --color-syntax-fg: hsl(200, 10%, 95%);
-    --color-code-bg: hsl(200, 20%, 10%);
-    --color-code-fg: hsl(200, 10%, 95%);
+    --bit-color0: hsl(var(--hue-main), 10%, 80%);
+    --bit-color1: hsl(var(--hue-main), 20%, 15%);
+    --color-divider: hsla(var(--hue-main), 10%, 80%, 20%);
+    --color-link: hsl(var(--hue-accent), 60%, 60%);
+    --color-header-bg: hsl(var(--hue-accent), 100%, 25%);
+    --color-header-fg: hsl(var(--hue-main), 10%, 95%);
+    --color-footer-bg: hsl(var(--hue-main), 20%, 10%);
+    --color-footer-fg: hsl(var(--hue-main), 10%, 70%);
+    --color-scrollbar-bg: hsl(var(--hue-main), 20%, 10%);
+    --color-scrollbar-fg: hsl(var(--hue-main), 10%, 70%);
+    --color-syntax-bg: hsl(var(--hue-main), 20%, 10%);
+    --color-syntax-fg: hsl(var(--hue-main), 10%, 95%);
+    --color-code-bg: hsl(var(--hue-main), 20%, 10%);
+    --color-code-fg: hsl(var(--hue-main), 10%, 95%);
   }
 
   .teeny-sanguini {
-    filter: drop-shadow(0 0 2px hsla(0, 0%, 100%, 0.5))
-      drop-shadow(0 2px 8px hsla(0, 0%, 0%, 0.5));
+    filter: drop-shadow(0 2px 0 hsl(var(--hue-main), 20%, 35%))
+      drop-shadow(0 -2px 0 hsl(var(--hue-main), 20%, 35%))
+      drop-shadow(2px 0 hsl(var(--hue-main), 20%, 35%))
+      drop-shadow(-2px 0 hsl(var(--hue-main), 20%, 35%));
   }
 }
 
