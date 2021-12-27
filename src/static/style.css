@@ -133,8 +133,8 @@ nav {
 .logo img {
   margin-right: 0.5rem;
   border-radius: 9999px;
-  background: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1);
+  background: white;
+  box-shadow: 0 0 0 1px white;
 }
 
 nav .bit-link {
