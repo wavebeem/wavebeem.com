@@ -125,16 +125,18 @@ nav {
   display: flex;
 }
 
-.logo span {
+.logo {
+  display: flex;
+  gap: 0.5rem;
   margin-right: 0.5rem;
   font-weight: bold;
 }
 
 .logo img {
-  margin-right: 0.5rem;
+  --bg: hsl(0 0% 0% / 40%);
   border-radius: 9999px;
-  background: white;
-  box-shadow: 0 0 0 1px white;
+  background: var(--bg);
+  box-shadow: 0 0 0 1px var(--bg);
 }
 
 nav .bit-link {
@@ -267,9 +269,6 @@ figure figcaption {
 }
 
 .teeny-sanguini {
-  --img-scale: 2;
-  width: calc(var(--img-scale) * 40px);
-  height: calc(var(--img-scale) * 42px);
   float: right;
   margin-top: 1rem;
 }
