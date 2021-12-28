@@ -1,6 +1,6 @@
 const path = require("path");
 const fs = require("fs");
-const getImageColors = require("get-image-colors");
+const { getAverageColor } = require("fast-average-color-node");
 const getImageSize = require("image-size");
 const { AssetCache } = require("@11ty/eleventy-cache-assets");
 
@@ -16,12 +16,13 @@ async function readInfo(filename) {
     .basename(filename)
     .replace(/\.(png|gif)$/, "")
     .replace(/-/g, " ")
-    .replace(/^(\d\d\d\d) (\d\d) (\d\d) (.*)$/, "$4 ($1-$2-$3)");
+    .replace(/^(\d{4}) (\d{2}) (\d{2}) (.*)$/, "$4 ($1-$2-$3)");
   const [, name, date] = cleanName.match(/^(.*?) \((.*)\)$/);
   const file = path.join(root, filename);
   const { width, height } = getImageSize(file);
-  const colors = await getImageColors(file);
-  const color = colors[0].hex();
+  const { hex: color } = await getAverageColor(file, {
+    algorithm: "dominant",
+  });
   const obj = { url, name, date, width, height, color };
   return obj;
 }

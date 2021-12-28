@@ -218,6 +218,9 @@ figure figcaption {
 
 .art-container__frame > img {
   border-radius: 0;
+  /* https://caniuse.com/css-crisp-edges */
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
 
 .flex {
