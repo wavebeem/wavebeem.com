@@ -46,13 +46,6 @@
     --color-code-bg: hsl(var(--hue-main), 20%, 10%);
     --color-code-fg: hsl(var(--hue-main), 10%, 95%);
   }
-
-  .teeny-sanguini {
-    filter: drop-shadow(0 2px 0 hsl(var(--hue-main), 20%, 35%))
-      drop-shadow(0 -2px 0 hsl(var(--hue-main), 20%, 35%))
-      drop-shadow(2px 0 hsl(var(--hue-main), 20%, 35%))
-      drop-shadow(-2px 0 hsl(var(--hue-main), 20%, 35%));
-  }
 }
 
 * {
@@ -123,30 +116,18 @@ h3 {
 nav {
   margin-top: 1rem;
   display: flex;
+  gap: 1rem;
 }
 
 .logo {
-  display: flex;
-  gap: 0.5rem;
   margin-right: 0.5rem;
   font-weight: bold;
-}
-
-.logo img {
-  --bg: hsl(0 0% 0% / 40%);
-  border-radius: 9999px;
-  background: var(--bg);
-  box-shadow: 0 0 0 1px var(--bg);
 }
 
 nav .bit-link {
   --bit-color0: var(--color-header-fg);
   --bit-color1: var(--color-header-bg);
   text-decoration: none;
-}
-
-nav a + a {
-  margin-left: 1rem;
 }
 
 footer {
@@ -268,9 +249,14 @@ figure figcaption {
   text-decoration: none;
 }
 
-.teeny-sanguini {
+.avatar {
   float: right;
-  margin-top: 1rem;
+  margin: 1rem;
+  margin-right: 0;
+  border-radius: 9999px;
+  padding: var(--bit-border-width);
+  background-clip: padding-box;
+  border: var(--bit-border-width) solid var(--bit-color0);
 }
 
 .post-date {
@@ -302,8 +288,7 @@ figure figcaption {
   nav {
     flex-direction: row;
     align-items: center;
-    margin: 0;
-    margin-left: 1rem;
+    margin: 0 1rem;
   }
 
   dl {
@@ -319,6 +304,10 @@ figure figcaption {
 }
 
 @media (min-width: 800px) {
+  header > * {
+    padding: 0 1rem;
+  }
+
   .grid-2 {
     grid-template-columns: 1fr 1fr;
   }
