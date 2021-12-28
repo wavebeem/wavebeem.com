@@ -1,6 +1,6 @@
 /**
  * @license
- * 1bit-ui v0.14.0
+ * 1bit-ui v0.17.0
  * Copyright 2021 Brian Mock
  * https://www.1bit-ui.com
  */
@@ -19,12 +19,17 @@
   --bit-table-padding-vertical: 0.5rem;
   --bit-card-padding-horizontal: 1rem;
   --bit-card-padding-vertical: 1rem;
+  --bit-fieldset-padding-horizontal: 0.5rem;
+  --bit-fieldset-padding-vertical: 0.5rem;
+  --bit-legend-padding-horizontal: 0.5rem;
+  --bit-legend-padding-vertical: 0rem;
   --bit-pre-padding-horizontal: 1rem;
   --bit-pre-padding-vertical: 1rem;
   --bit-code-padding-horizontal: 0.2em;
   --bit-code-padding-vertical: 0.1em;
   --bit-radiocheckbox-size: 1.5em;
   --bit-border-width: 2px;
+  --bit-underline-thickness: 2px;
   --bit-border-radius: 0px;
   --bit-select-handle-width: 1em;
   background: var(--bit-color1);
@@ -52,7 +57,7 @@
 }
 
 .bit-auto label {
-  display: flex;
+  display: block;
 }
 
 .bit-auto label > input[type="radio"] + *,
@@ -332,7 +337,7 @@
   color: var(--bit-color0);
   text-decoration: underline;
   border-radius: var(--bit-border-radius);
-  text-decoration-thickness: var(--bit-border-width);
+  text-decoration-thickness: var(--bit-underline-thickness);
 }
 
 .bit-auto a:hover,
@@ -351,8 +356,8 @@
   color: var(--bit-color1);
   text-decoration: none;
   outline: none;
-  outline: var(--bit-border-width) solid var(--bit-color0);
-  outline-offset: var(--bit-border-width);
+  outline: calc(3 * var(--bit-border-width)) double var(--bit-color0);
+  outline-offset: 0;
 }
 
 /* Input / Text Area */
@@ -443,6 +448,24 @@
 .bit-input::selection {
   background: var(--bit-color0);
   color: var(--bit-color1);
+}
+
+/* Fieldset and legend */
+
+.bit-auto fieldset,
+.bit-fieldset {
+  border: var(--bit-border-width) solid var(--bit-color0);
+  padding: var(--bit-fieldset-padding-vertical)
+    var(--bit-fieldset-padding-horizontal);
+  margin: 0;
+}
+
+.bit-auto legend,
+.bit-legend {
+  border: var(--bit-border-width) solid var(--bit-color0);
+  padding: var(--bit-legend-padding-vertical)
+    var(--bit-legend-padding-horizontal);
+  margin: 0;
 }
 
 /* Firefox nonsense */
