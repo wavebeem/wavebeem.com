@@ -256,6 +256,7 @@ figure figcaption {
 }
 
 .avatar {
+  display: flex;
   float: right;
   margin: 1rem;
   margin-right: 0;
@@ -263,6 +264,10 @@ figure figcaption {
   padding: var(--bit-border-width);
   background-clip: padding-box;
   border: var(--bit-border-width) solid var(--bit-color0);
+}
+
+.avatar img {
+  border-radius: 9999px;
 }
 
 .post-date {
