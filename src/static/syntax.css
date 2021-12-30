@@ -17,6 +17,10 @@
   --bit-color1: var(--color-syntax-fg);
 }
 
+.token.script {
+  color: var(--color-syntax-fg);
+}
+
 .token.comment,
 .token.prolog,
 .token.doctype,

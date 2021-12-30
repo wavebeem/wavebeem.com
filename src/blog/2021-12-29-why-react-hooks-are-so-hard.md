@@ -51,13 +51,13 @@ function App() {
       <button
         type="button"
         onClick={() => {
-          //////////////////////////////////////////////////////////////////////
+          //---------------------------------------------------------
           setTimeout(() => {
             console.log("async:", num);
           });
           setNum(num + 1);
           console.log("immediate:", num);
-          //////////////////////////////////////////////////////////////////////
+          //---------------------------------------------------------
         }}
       >
         Increment
@@ -90,12 +90,14 @@ function App() {
       <button
         type="button"
         onClick={() => {
+          //---------------------------------------------------------
           setTimeout(() => {
             console.log("async:", numRef.current);
           });
           numRef.current = numRef.current + 1;
           console.log("immediate:", numRef.current);
           update();
+          //---------------------------------------------------------
         }}
       >
         Increment
@@ -111,7 +113,144 @@ But what if you want the old value? Well, that's what variables are for! Just ad
 
 ## TODO: useEffect with addEventListener
 
+```jsx
+function App() {
+  const [num, setNum] = useState(0);
+
+  //---------------------------------------------------------
+  useEffect(() => {
+    function handler(event) {
+      console.log("page click:", num);
+    }
+    addEventListener("click", handler);
+    return () => {
+      removeEventListener("click", handler);
+    };
+  }, []);
+  //---------------------------------------------------------
+
+  return (
+    <div>
+      <p>num = {String(num)}</p>
+      <button
+        type="button"
+        onClick={() => {
+          setNum(num + 1);
+        }}
+      >
+        Increment
+      </button>
+    </div>
+  );
+}
+```
+
+Every time you click anywhere on the page, the console will log `page click: 0`. The [effect hooks documentation](https://reactjs.org/docs/hooks-effect.html#tip-optimizing-performance-by-skipping-effects) details making `useEffect` run more often to fix this issue. This works with APIs where it's possible to add/remove callbacks repeatedly, but the next section on `setTimeout` will show a shortcoming with this approach:
+
+TODO: Also hard to specify exhaustive deps correct to satisfy ESLint.
+
+```jsx
+function App() {
+  const [num, setNum] = useState(0);
+
+  useEffect(() => {
+    function handler(event) {
+      console.log("page click:", num);
+    }
+    addEventListener("click", handler);
+    return () => {
+      removeEventListener("click", handler);
+    };
+    //---------------------------------------------------------
+  }, [num]);
+  //---------------------------------------------------------
+
+  return (
+    <div>
+      <p>num = {String(num)}</p>
+      <button
+        type="button"
+        onClick={() => {
+          setNum(num + 1);
+        }}
+      >
+        Increment
+      </button>
+    </div>
+  );
+}
+```
+
+Adding the depencies `[num]` almost gives the correct behavior! But the value is still "out of date" since the click handler updates the value. So now the `page click:` message will be 1 behind the actual `num` value, instead of just 0. Let's move on to `setTimeout` now.
+
 ## TODO: useEffect with setTimeout
+
+What if your effect is asynchronous? Using the dependencies array approach will now cause your effect to be effectively debounced. Consider this example, where if you click the button more often than once every 500 milliseconds, the effect will _never fire_.
+
+```jsx
+function App() {
+  const [num, setNum] = useState(0);
+
+  useEffect(() => {
+    function handler(event) {
+      console.log("page click:", num);
+    }
+    //---------------------------------------------------------
+    const n = setTimeout(handler, 500);
+    return () => {
+      clearTimeout(n);
+    };
+    //---------------------------------------------------------
+  }, [num]);
+
+  return (
+    <div>
+      <p>num = {String(num)}</p>
+      <button
+        type="button"
+        onClick={() => {
+          setNum(num + 1);
+        }}
+      >
+        Increment
+      </button>
+    </div>
+  );
+}
+```
+
+You can fix this with `useRef` though! Then you don't have to specify the depdencies.
+
+```jsx
+function App() {
+  const [num, setNum] = useState(0);
+
+  //---------------------------------------------------------
+  const numRef = useRef(num);
+  useEffect(() => {
+    numRef.current = num;
+    function handler(event) {
+      console.log("page click:", numRef.current);
+    }
+    setTimeout(handler, 500);
+  }, [num]);
+  //---------------------------------------------------------
+
+  return (
+    <div>
+      <p>num = {String(num)}</p>
+      <button
+        type="button"
+        onClick={() => {
+          setNum(num + 1);
+        }}
+      >
+        Increment
+      </button>
+    </div>
+  );
+}
+```
 
 ## TODO: useEffect with fetch
 
