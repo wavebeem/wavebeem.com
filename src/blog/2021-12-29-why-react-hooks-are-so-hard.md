@@ -311,3 +311,9 @@ Using `useMagicState` you can treat the returned object like a regular object, e
 This strategy is called [reactivity in Vue.js](https://v3.vuejs.org/guide/reactivity.html#what-is-reactivity). Their version is a more advanced than what I implemented for React, but the core is the same.
 
 The Vue.js reactivity API came out much later than React hooks, so I think they may have learned something from the React community when designing it. I really like Vue.js, but know that there are many reasons to React, and wanted to share their approach.
+
+## Why does it work this way?
+
+I would really like to know why React hooks work this way. I assume it's because there's something "cleaner" about not wrapping your data in an extra object, but that's only true for components with a very small amount of state. Even a medium-sized component benefits from grouping fields together in a single object. Having 30+ calls to `useState` is very tedious!
+
+I'd wager that in most cases, the Vue.js approach used in `useMagic` is equally good, or easier to use correctly than `useState`. I'm sure the React core team has their reasons, but I haven't found a compelling reason to use `useState` instead of something friendlier like `useMagic`, besides "it's built-in to React".
