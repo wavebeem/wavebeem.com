@@ -192,7 +192,7 @@ function App() {
   const [num, setNum] = useState(0);
 
   useEffect(() => {
-    function handler(event) {
+    function handler() {
       console.log("page click:", num);
     }
     //---------------------------------------------------------
@@ -252,15 +252,62 @@ function App() {
 }
 ```
 
-## TODO: useEffect with fetch
-
 ## TODO: useMagicState
 
 ```jsx
+//---------------------------------------------------------
 function App() {
-  const { state, useUpdate } = useMagic({
-    name: "Brian",
-    email: "brian@wavebeem.com",
-  });
+  const state = useMagicState({ num: 0 });
+
+  useEffect(() => {
+    function handler() {
+      console.log("page click:", state.num);
+    }
+    setTimeout(handler, 500);
+  }, [state.num]);
+
+  return (
+    <div>
+      <p>num = {String(state.num)}</p>
+      <button
+        type="button"
+        onClick={() => {
+          state.num++;
+        }}
+      >
+        Increment
+      </button>
+    </div>
+  );
+}
+//---------------------------------------------------------
+
+function useMagicState(state) {
+  const update = useUpdate();
+  const ref = useRef(
+    new Proxy(state, {
+      set(target, property, value, receiver) {
+        const oldValue = Reflect.get(target, property, receiver);
+        if (!Object.is(value, oldValue)) {
+          const ok = Reflect.set(target, property, value, receiver);
+          // Automatically re-render after updating object values
+          update();
+          return ok;
+        }
+      },
+    })
+  );
+  return ref.current;
+}
+
+function useUpdate() {
+  const [, update] = useReducer((state) => state + 1, 0);
+  return update;
 }
 ```
+
+Using `useMagicState` you can treat the returned object like a regular object, except the assigning any of its properties will trigger a re-render. Because the object reference is static, `state.property` will always refer to the latest value of `property`. If you need to keep the old value, use `const { property } = state` to save the old value.
+
+This strategy is called [reactivity in Vue.js](https://v3.vuejs.org/guide/reactivity.html#what-is-reactivity). Their version is a more advanced than what I implemented for React, but the core is the same.
+
+The Vue.js reactivity API came out much later than React hooks, so I think they may have learned something from the React community when designing it. I really like Vue.js, but know that there are many reasons to React, and wanted to share their approach.
