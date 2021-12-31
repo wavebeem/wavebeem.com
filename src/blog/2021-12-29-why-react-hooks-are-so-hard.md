@@ -1,6 +1,6 @@
 ---
-title: "Why React hooks are so hard"
-description: "A deep dive into what makes React hooks so hard in practice"
+title: "Why I don't like useState"
+description: "Why useState is so hard to use correctly, and what we can do about it"
 ---
 
 @[toc]
@@ -38,7 +38,7 @@ function App() {
 }
 ```
 
-It's easy to forget that this `App` component is not called just once. It's called _every time the component needs to re-render_. But it's just a function, not an object. So how does it maintain state? Well, it doesn't. React does. React _remembers_ this component "instance" and stores its state internally. Every time the component re-renders, React sends the correct state back when you call `useState`.
+It's easy to forget that this `App` component is not called just once. It's called _every time the component needs to re-render_. But it's just a function, not an object. So how does this function maintain state? It doesn't; React does. React _remembers_ this component "instance" and stores its state internally. Every time the component re-renders, React sends the correct state back when you call `useState`.
 
 Honestly, it's pretty weird. And it only gets weirder as your app grows in complexity. Let's add some async code:
 
@@ -71,13 +71,13 @@ Both the "immediate" and the "async" value are always 1 behind the value display
 
 `num` is a `const` variable, meaning it can never be reassigned. But the value gets "updated"! Because every time `App` is called again, React returns a new value from `useState`. But the `onClick` handler was created by a previous call to `App`, so its closure is attached to an older `num` variable.
 
-In my experience, people find this difficult to conceptualize. In fact, I've endured a few interview questions about this topic. But even if you know it's going to behave this way, why would you _want_ it to? I'm sure the React core team has their reasons, and I've seen allusions to it in various Twitter discussion, but I haven't found a good explanation.
+In my experience, people find this difficult to conceptualize. I'm sure the React core team has their reasons, and I've seen allusions to it in various Twitter discussion, but I haven't found a good explanation.
 
 Most other state management in JS is done via objects and property mutation. And React even has to give you that as an option: that's what `useRef` is. But `useRef` does _not_ trigger a re-render, so it can't be used for general state management without assistance. Consider this component that works as intended.
 
 ```jsx
 function useUpdate() {
-  const [, update] = useReducer((state) => state + 1, 0);
+  const [, update] = useReducer((state) => !state, false);
   return update;
 }
 
@@ -182,6 +182,8 @@ function App() {
 ```
 
 Adding the depencies `[num]` almost gives the correct behavior! But the value is still "out of date" since the click handler updates the value. So now the `page click:` message will be 1 behind the actual `num` value, instead of just 0. Let's move on to `setTimeout` now.
+
+If you have lots of dependencies for the callback, you can `useRef` with an object containing each dependency, which is a lot easier than making countless refs.
 
 ## TODO: useEffect with setTimeout
 
@@ -301,7 +303,7 @@ function useMagicState(state) {
 }
 
 function useUpdate() {
-  const [, update] = useReducer((state) => state + 1, 0);
+  const [, update] = useReducer((state) => !state, false);
   return update;
 }
 ```
@@ -317,3 +319,7 @@ The Vue.js reactivity API came out much later than React hooks, so I think they 
 I would really like to know why React hooks work this way. I assume it's because there's something "cleaner" about not wrapping your data in an extra object, but that's only true for components with a very small amount of state. Even a medium-sized component benefits from grouping fields together in a single object. Having 30+ calls to `useState` is very tedious!
 
 I'd wager that in most cases, the Vue.js approach used in `useMagic` is equally good, or easier to use correctly than `useState`. I'm sure the React core team has their reasons, but I haven't found a compelling reason to use `useState` instead of something friendlier like `useMagic`, besides "it's built-in to React".
+
+## Conclusion
+
+Many blog posts document the difficulty of working with closures in React hooks, but I haven't seen any that mention how we can _fix this_, besides just "programming better". Abstractions are made to help us. If our abstractions aren't working, we should make new ones. And I think it's time we stopped using `useState`.
