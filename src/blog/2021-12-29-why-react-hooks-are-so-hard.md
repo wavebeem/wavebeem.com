@@ -1,7 +1,6 @@
 ---
 title: "Why I don't like useState"
 description: "Why useState is so hard to use correctly, and what we can do about it"
-templateEngineOverride: njk,md
 ---
 
 @[toc]
