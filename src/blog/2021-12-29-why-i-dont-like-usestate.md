@@ -178,7 +178,7 @@ function useMagicState(state) {
 }
 ```
 
-Using `useMagicState` you can treat the returned object like a regular object, except the assigning any of its properties will trigger a re-render. Because `state` proxies to a single object, `state.property` will always refer to the latest value of `property`. If you need to keep the old value, use `const { property } = state` to save the old value, or `const oldState = { ... state }` to make a whole shallow copy. Variable closure still happens, but the proxy always points to the latest values.
+Using `useMagicState` you can treat the returned object like a regular object, except the assigning any of its properties will trigger a re-render. Because `state` proxies to a single object, `state.property` will always refer to the latest value of `property`. If you need to keep old values, use `const oldState = { ...state }` to make a shallow copy. Variable closure still happens, but the proxy always points to the latest values.
 
 This API is called [reactivity in Vue.js](https://v3.vuejs.org/guide/reactivity.html#what-is-reactivity). It was inspired by hooks, and it may be time for React to take inspiration from Vue.
 
