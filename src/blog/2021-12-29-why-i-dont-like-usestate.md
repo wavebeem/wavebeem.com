@@ -144,34 +144,41 @@ function App() {
 }
 //---------------------------------------------------------
 
-function useMagicState(state) {
-  const update = useUpdate();
-  const ref = useRef(
-    new Proxy(state, {
-      set(target, property, value, receiver) {
-        const oldValue = Reflect.get(target, property, receiver);
-        if (!Object.is(value, oldValue)) {
-          const ok = Reflect.set(target, property, value, receiver);
-          // Automatically re-render after updating object values
-          if (ok) {
-            update();
-          }
-          return ok;
-        }
-        return true;
-      },
-    })
-  );
-  return ref.current;
+function createProxy(object, update) {
+  return new Proxy(object, {
+    set(target, property, value, receiver) {
+      const oldValue = Reflect.get(target, property, receiver);
+      if (!Object.is(value, oldValue)) {
+        const ok = Reflect.set(target, property, value, receiver);
+        // Automatically re-render after updating object values
+        update();
+        return ok;
+      }
+    },
+  });
 }
 
-function useUpdate() {
-  const [, update] = useReducer((state) => !state, false);
-  return update;
+function useMagicState(state) {
+  // Fake state used to trigger renders
+  const [bit, update] = useReducer((state) => !state, false);
+
+  // Store a copy of the state in a ref
+  const stateRef = useRef({ ...state });
+
+  // Create new proxies to the stateRef's data on update
+  // so that memoized components still work correctly
+  const [proxy, setProxy] = useState(() =>
+    createProxy(stateRef.current, update)
+  );
+  useEffect(() => {
+    setProxy(createProxy(stateRef.current, update));
+  }, [bit]);
+
+  return proxy;
 }
 ```
 
-Using `useMagicState` you can treat the returned object like a regular object, except the assigning any of its properties will trigger a re-render. Because `state` refers to a single object, `state.property` will always refer to the latest value of `property`. If you need to keep the old value, use `const { property } = state` to save the old value. Variable closure still happens, but the value is always the same, so there's no confusion.
+Using `useMagicState` you can treat the returned object like a regular object, except the assigning any of its properties will trigger a re-render. Because `state` proxies to a single object, `state.property` will always refer to the latest value of `property`. If you need to keep the old value, use `const { property } = state` to save the old value, or `const oldState = { ... state }` to make a whole shallow copy. Variable closure still happens, but the proxy always points to the latest values.
 
 This API is called [reactivity in Vue.js](https://v3.vuejs.org/guide/reactivity.html#what-is-reactivity). It was inspired by hooks, and it may be time for React to take inspiration from Vue.
 
