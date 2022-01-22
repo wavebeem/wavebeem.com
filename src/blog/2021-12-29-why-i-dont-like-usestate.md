@@ -7,7 +7,7 @@ description: "Why useState is so hard to use correctly, and what we can do about
 
 ## Prologue
 
-I've been using React hooks since their public release roughly 3 years ago. I was incredibly excited for them. I still think hooks are great, but `useState` in particular is hard to get right.
+I've been using React hooks since their public release roughly 3 years ago, and I was incredibly excited for them. I still think hooks are great, but `useState` in particular is hard to use correctly.
 
 I will cover the issues I see repeatedly, why they're so confusing, and some possible remedies.
 
@@ -15,7 +15,7 @@ NOTE: This post assumes familiarity with [React](https://reactjs.org/docs/gettin
 
 ## How state works
 
-Consider this basic React component with state, which increments a number on button click:
+Consider this React component which increments a number on button click:
 
 ```jsx
 function App() {
@@ -36,9 +36,9 @@ function App() {
 }
 ```
 
-It's easy to forget that this `App` component is not called just once. It's called _every time the component needs to re-render_. How does a function maintain state? It doesn't; React does. React _remembers_ this component "instance" and stores its state internally. Every time the component re-renders, React sends the correct state back when you call `useState`.
+It's easy to forget that this `App` function is not called just once, but _every time the component needs to re-render_. Functions don't store state between multiple calls, so React actually stores this state. React _remembers_ this component "instance" and stores its state internally. Every time the component re-renders, React sends the correct state back when you call `useState`.
 
-That's weird, and it only gets weirder as your app grows in complexity. Let's add some async code:
+It's a bit weird, and it only gets weirder as your app grows in complexity. Let's add some async code:
 
 ```jsx
 function App() {
