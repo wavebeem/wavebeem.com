@@ -36,6 +36,8 @@ function App() {
 }
 ```
 
+<codepen-react></codepen-react>
+
 It's easy to forget that this `App` function is not called just once, but _every time the component needs to re-render_. Functions don't store state between multiple calls, so React actually stores this state. React _remembers_ this component "instance" and stores its state internally. Every time the component re-renders, React sends the correct state back when you call `useState`.
 
 It's a bit weird, and it only gets weirder as your app grows in complexity. Let's add some async code:
