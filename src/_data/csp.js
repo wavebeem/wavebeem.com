@@ -18,5 +18,5 @@ const csp = {
 };
 
 module.exports = Object.entries(csp)
-  .map(([k, v]) => `${k}: ${v.join(" ")};`)
+  .map(([k, v]) => `${k} ${v.join(" ")};`)
   .join(" ");
