@@ -190,6 +190,8 @@ I would love to hear _why_ the React core team created `useState` with this pitf
 
 I swear I've seen some discussion of this on Twitter, but my search for written answers has failed me.
 
+My theory is that because React looks at object identity to determine when to re-render memoized components, and when to re-run hooks, a `useRef`-style solution isn't good enough. Given that `Proxy` is required for other hooks to not misbehave, maybe they weren't interested in requiring `Proxy` to use `useState`, since `Proxy` can't be polyfilled for Internet Explorer. Perhaps they just thought this approach wasn't worth the complication. Maybe they didn't consider it? I don't know.
+
 ## Conclusion
 
 Many blog posts document the difficulty of working with closures in React hooks, but I haven't seen any that mention how we can make new hooks to deal with the issue. Don't forget that you can always make new hooks to help you solve problems.
