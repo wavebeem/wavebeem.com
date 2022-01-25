@@ -71,7 +71,9 @@ Both the "immediate" and the "async" value are always 1 behind the value display
 
 `num` is a `const` variable, meaning it can never be reassigned. But the value gets "updated"! Every time `App` is called, React returns a new value from `useState`. The `onClick` handler was created by a previous call to `App`, so its closure is attached to an older `num` variable.
 
-The problem is circumvented by using objects and mutation. `useRef` allows you to do this, but with one caveat: React won't re-render when you update a ref. There is a workaround, though:
+## A workaround with useRef
+
+The problem is circumvented by using objects and mutation. `useRef` allows you to do this, but there are some caveats.
 
 ```jsx
 function useUpdate() {
@@ -114,9 +116,11 @@ numRef.current++;
 console.log(oldNum, "-->", numRef.current);
 ```
 
-## useMagicState
+Hooks like `useEffect` rely on object equality (`===`), so you might have issues with effects not running since new objects are not created.
 
-It's easy to forget `useUpdate()`, so let's imagine a new hook called `useMagicState`:
+## An alternative: useMagicState
+
+Let's imagine a new hook called `useMagicState`:
 
 ```jsx
 //---------------------------------------------------------
