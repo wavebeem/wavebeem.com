@@ -3,7 +3,6 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
 const markdownItTocAndAnchor = require("markdown-it-toc-and-anchor").default;
 const dateformat = require("dateformat");
-const uslug = require("uslug");
 const util = require("util");
 
 module.exports = function (config) {
@@ -25,7 +24,6 @@ module.exports = function (config) {
     }
     return dateformat(value, format);
   });
-  config.addFilter("uslug", uslug);
   config.addFilter("inspect", function (value) {
     return util.inspect(value, {});
   });
