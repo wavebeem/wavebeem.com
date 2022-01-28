@@ -1,7 +1,10 @@
 :root {
   --bit-border-radius: 0;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Avenir Next",
-    "Helvetica Neue", Roboto, Noto, "Segoe UI", Ubuntu, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* --font-sans: -apple-system, BlinkMacSystemFont, "Avenir Next",
+    "Helvetica Neue", Roboto, Noto, "Segoe UI", Ubuntu, sans-serif; */
   --font-mono: "JetBrains Mono", "Fira Code", "Menlo", "Consolas", monospace;
   --content-width: 768px;
   overflow-y: scroll;
