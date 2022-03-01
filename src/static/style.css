@@ -19,6 +19,8 @@
   --color-link: hsl(var(--hue-accent), 100%, 25%);
   --color-header-bg: hsl(var(--hue-accent), 100%, 25%);
   --color-header-fg: hsl(var(--hue-main), 10%, 95%);
+  --color-header-logo-bg: hsl(var(--hue-accent), 100%, 20%);
+  --color-header-logo-fg: hsl(var(--hue-main), 10%, 95%);
   --color-footer-bg: hsl(var(--hue-main), 10%, 90%);
   --color-footer-fg: hsl(var(--hue-main), 20%, 30%);
   --color-scrollbar-bg: hsl(var(--hue-main), 10%, 90%);
@@ -123,12 +125,19 @@ nav {
 }
 
 .logo {
+  --skew: -15deg;
+  --bit-color1: var(--color-header-logo-bg);
+  --bit-color0: var(--color-header-logo-fg);
   margin-right: 1rem;
-  font-weight: bold;
   padding: 0 0.5rem;
-  background: var(--color-header-fg);
-  color: var(--color-header-bg);
+  text-decoration: none;
   width: max-content;
+  letter-spacing: 0.05em;
+  transform: skewX(var(--skew));
+}
+
+.logo > * {
+  transform: skewX(calc(-1 * var(--skew)));
 }
 
 nav .bit-link {
