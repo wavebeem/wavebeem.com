@@ -119,11 +119,15 @@ nav {
   margin-top: 1rem;
   display: flex;
   gap: 1rem;
+  font-weight: bold;
 }
 
 .logo {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   font-weight: bold;
+  padding: 0 0.5rem;
+  background: var(--color-header-fg);
+  color: var(--color-header-bg);
 }
 
 nav .bit-link {
@@ -296,6 +300,7 @@ figure figcaption {
 @media (min-width: 600px) {
   header > * {
     flex-direction: row;
+    align-items: center;
   }
 
   nav {
@@ -306,6 +311,11 @@ figure figcaption {
 }
 
 @media (min-width: 800px) {
+  .avatar img {
+    width: 180px;
+    height: 180px;
+  }
+
   header > * {
     padding: 0 1rem;
   }
@@ -319,7 +329,7 @@ figure figcaption {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   body {
     font-size: 1.1rem;
   }
