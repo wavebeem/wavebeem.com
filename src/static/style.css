@@ -128,6 +128,7 @@ nav {
   padding: 0 0.5rem;
   background: var(--color-header-fg);
   color: var(--color-header-bg);
+  width: max-content;
 }
 
 nav .bit-link {
