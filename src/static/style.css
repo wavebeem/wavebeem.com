@@ -122,8 +122,9 @@ nav {
 }
 
 .logo {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   font-weight: bold;
+  letter-spacing: 0.05em;
 }
 
 nav .bit-link {
@@ -296,6 +297,7 @@ figure figcaption {
 @media (min-width: 600px) {
   header > * {
     flex-direction: row;
+    align-items: center;
   }
 
   nav {
