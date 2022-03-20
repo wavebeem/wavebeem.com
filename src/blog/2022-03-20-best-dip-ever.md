@@ -3,7 +3,7 @@ title: "Recipe - Best dip ever"
 description: "My favorite dip to make at home"
 ---
 
-This is my favorite simple dip/spread to make at home. I can't eat onions, garlic, beans, mustard, or among other things, so I don't have many options for pre-made dips
+This is my favorite simple dip/spread to make at home. Most premade dips are not suitable for me due to my [IBS](https://en.wikipedia.org/wiki/Irritable_bowel_syndrome). This dip doesn't contain onions, garlic, beans, or [_Brassica_](https://en.wikipedia.org/wiki/Brassica) plants.
 
 ## Ingredients
 
