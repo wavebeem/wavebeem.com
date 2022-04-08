@@ -5,11 +5,7 @@ layout: "layout-resume"
 
 ## Technical skills
 
-JavaScript, TypeScript, HTML, CSS, Git, GitHub
-
-React, Webpack, Jest, Storybook, Cypress, Emotion, Tachyons, Lodash
-
-Ruby, Python, Bash, Travis CI, parsers, static file hosting, Jira, Java
+JavaScript, TypeScript, HTML, CSS, React, Next.js, Stencil, Netlify, Vercel, web components, Python, Ruby, Bash, parsers
 
 ## Work experience
 
@@ -17,7 +13,11 @@ Ruby, Python, Bash, Travis CI, parsers, static file hosting, Jira, Java
 
 Frontend Engineer III (April 2021--_Present_)
 
-- Created a multi-framework dynamic [documentation app](https://zapier.com/partner/embed/app-directory/create)
+- Wrote an internal blog post roughly every 2 weeks for knowledge sharing
+
+- Contributed to internal design system (code & accessibility improvements)
+
+- Created a multi-framework dynamic [configuration and code generation app](https://zapier.com/partner/embed/app-directory/create)
 
 - Created a new component in a [web components library](https://zapier.com/partner/embed/zap-manager/create)
 
@@ -37,21 +37,21 @@ Senior JavaScript Developer (February 2018--April 2021)
 
 Software Development Engineer II (May 2017--February 2018)
 
-- Led a wayward team to best practices on their first TypeScript project
+<!-- - Led a wayward team to best practices on their first TypeScript project -->
 
 ### CrowdCompass
 
 JavaScript Developer (February 2016--May 2017)
 
-- Maintained multiple web apps using Ember and Ruby on Rails + jQuery
+<!-- - Maintained multiple web apps using Ember and Ruby on Rails + jQuery -->
 
 ### Janrain
 
 JavaScript Developer (September 2012--July 2015)
 
-- Maintained a legacy library in production on thousands of sites, with IE 8 support
+<!-- - Maintained a barely documented JS framework in production on thousands of sites, with IE 8 support -->
 
-- Documented hundreds of features through extensive code research
+<!-- - Documented hundreds of features through extensive code research -->
 
 ### NOAA
 
@@ -77,7 +77,7 @@ Undergraduate Research Intern (Summer 2011)
 
 <!-- - Co-developed [Algebra Card Clutter](https://www.usatoday.com/story/tech/2013/01/21/algebra-apps-help-kids/1852187/), an educational iPad math game ([2012](https://ipadapptivities.blogspot.com/2012/08/algebra-card-clutter.html)) -->
 
-- Created [LatteScript](https://lattescript.netlify.app), an educational programming language (2011--2012)
+<!-- - Created [LatteScript](https://lattescript.netlify.app), an educational programming language (2011--2012) -->
 
 <!-- - Created a new tab bar style for [iTerm](https://iterm2.com/) ([2014](https://github.com/gnachman/iTerm2/pull/185)) -->
 
