@@ -13,21 +13,21 @@
       "type": "image/png"
     },
     {
-      "src": "/static/brian-180.png",
+      "src": "/static/photo-180.jpg",
       "sizes": "180x180",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "any maskable"
     },
     {
-      "src": "/static/brian-192.png",
+      "src": "/static/photo-192.jpg",
       "sizes": "192x192",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "any maskable"
     },
     {
-      "src": "/static/brian-512.png",
+      "src": "/static/photo-512.jpg",
       "sizes": "512x512",
-      "type": "image/png",
+      "type": "image/jpeg",
       "purpose": "any maskable"
     }
   ],
