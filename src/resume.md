@@ -61,15 +61,15 @@ Undergraduate Research Intern (Summer 2011)
 
 ## Projects
 
-- Created [pkmn.help](https://www.pkmn.help), a website to help Pokémon players ([2013--present](https://github.com/wavebeem/pkmn-type-calc))
+- Created [pkmn.help](https://www.pkmn.help), a website to help Pokémon players ([2013--present](https://github.com/wavebeem/pkmn/help))
 
-- Created [1bit-ui](https://www.1bit-ui.com/), a minimal retro inspired CSS library (2019--present)
+- Created [1bit-ui](https://1bit-ui.wavebeem.com/), a minimal retro inspired CSS library (2019--present)
 
 - Created [JSX Info](https://marketplace.visualstudio.com/items?itemName=wavebeem.vscode-jsx-info), a static code analysis tool for React (2019)
 
 - Maintains [Parsimmon](https://github.com/jneen/parsimmon/), a popular JavaScript parser combinator library with 100% test coverage (2016--present)
 
-- Created [bread-n-butter](https://bnb-wavebeem.netlify.app/), a spiritual successor to Parsimmon, ES2015 and TypeScript (2020--present)
+- Created [bread-n-butter](https://bread-n-butter.wavebeem.com/), a spiritual successor to Parsimmon, ES2015 and TypeScript (2020--present)
 
 - Created [Squiggle](https://www.squiggle-lang.org/), a compile-to-JS programming language (2015--2016)
 
@@ -77,7 +77,7 @@ Undergraduate Research Intern (Summer 2011)
 
 <!-- - Co-developed [Algebra Card Clutter](https://www.usatoday.com/story/tech/2013/01/21/algebra-apps-help-kids/1852187/), an educational iPad math game ([2012](https://ipadapptivities.blogspot.com/2012/08/algebra-card-clutter.html)) -->
 
-<!-- - Created [LatteScript](https://lattescript.netlify.app), an educational programming language (2011--2012) -->
+<!-- - Created [LatteScript](https://lattescript.wavebeem.com), an educational programming language (2011--2012) -->
 
 <!-- - Created a new tab bar style for [iTerm](https://iterm2.com/) ([2014](https://github.com/gnachman/iTerm2/pull/185)) -->
 
