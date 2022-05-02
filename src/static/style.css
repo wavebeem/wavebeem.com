@@ -1,5 +1,4 @@
 :root {
-  --bit-border-radius: 0;
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -11,6 +10,7 @@
 
 .bit-root,
 .bit-auto {
+  --bit-border-radius: 3px;
   --hue-main: 200;
   --hue-accent: 150;
   --bit-color0: hsl(var(--hue-main), 20%, 20%);
@@ -124,8 +124,23 @@ nav {
   font-weight: bold;
 }
 
+.m0 {
+  margin: 0;
+}
+
+.card-heading {
+  border: none;
+  border-bottom: var(--bit-border-width) dotted var(--color-divider);
+  padding: 0;
+  padding-bottom: 0.5rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
 .logo {
   --skew: -15deg;
+  /* --skew: 0deg; */
   --bit-color1: var(--color-header-logo-bg);
   --bit-color0: var(--color-header-logo-fg);
   margin-right: 1rem;
@@ -144,6 +159,7 @@ nav .bit-link {
   --bit-color0: var(--color-header-fg);
   --bit-color1: var(--color-header-bg);
   text-decoration: none;
+  padding: 0 0.5rem;
 }
 
 footer {
@@ -161,7 +177,7 @@ a {
 
 ul {
   padding-left: 1.25rem;
-  list-style-type: square;
+  list-style-type: disc;
 }
 
 ol {
@@ -230,13 +246,11 @@ figure figcaption {
   padding: var(--bit-border-width);
   border-radius: var(--bit-border-radius);
   display: flex;
+  margin-bottom: 0.5rem;
 }
 
 .art-container__frame > img {
-  border-radius: 0;
-  /* https://caniuse.com/css-crisp-edges */
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
+  border-radius: calc(var(--bit-border-radius) - 1px);
 }
 
 .flex {
