@@ -1,16 +1,21 @@
 const html = String.raw;
 
+function preloadImage(src) {
+  document.createElement("img").src = src;
+}
+
 class HTMLSecretNekoElement extends HTMLElement {
   _nekoX = 64;
   _nekoY = 64;
-  _nekoSpeed = 5;
+  _nekoSpeed = 1;
+  _nekoSize = 48;
+  _closeEnough = 1;
   _nekoState = "sleep";
   _mouseX = 0;
   _mouseY = 0;
   _idleSince = performance.now();
-  _tickInterval = undefined;
-  _tickRate = (5 / 60) * 1000;
-  _sleepTimeout = 2000;
+  _lastTime = performance.now();
+  _sleepTimeout = 4000;
 
   constructor() {
     super();
@@ -18,28 +23,34 @@ class HTMLSecretNekoElement extends HTMLElement {
     this.shadowRoot.innerHTML = html`
       <style>
         .neko {
+          pointer-events: none;
           position: fixed;
           top: 0;
           left: 0;
           transform: translate(var(--neko-x), var(--neko-y));
           z-index: 999;
-          background: black;
-          outline: 2px solid gold;
+          image-rendering: pixelated;
         }
       </style>
-      <img alt="" width="16" height="16" class="neko" />
+      <img
+        alt=""
+        width="${this._nekoSize}"
+        height="${this._nekoSize}"
+        class="neko"
+      />
     `;
+    preloadImage("/static/img/neko/neko-sit.gif");
+    preloadImage("/static/img/neko/neko-sleep.gif");
+    preloadImage("/static/img/neko/neko-run.gif");
   }
 
   connectedCallback() {
     addEventListener("mousemove", this._onMouseMove);
-    this._tickInterval = setInterval(this._tick, this._tickRate);
     this._render();
   }
 
   disconnectedCallback() {
     removeEventListener("mousemove", this._onMouseMove);
-    clearInterval(this._tickInterval);
   }
 
   get _idleTime() {
@@ -50,23 +61,27 @@ class HTMLSecretNekoElement extends HTMLElement {
     return this.shadowRoot.querySelector(".neko");
   }
 
-  _render = () => {
+  _render(t) {
+    const dt = t - this._lastTime;
+    this._tick(dt);
     const { style } = this._neko;
-    style.setProperty("--neko-x", this._nekoX + "px");
-    style.setProperty("--neko-y", this._nekoY + "px");
-    const src = `/static/neko-${this._nekoState}.png`;
-    this._neko.alt = this._nekoState;
+    const x = Math.floor(this._nekoX - this._nekoSize / 2);
+    const y = Math.floor(this._nekoY - this._nekoSize / 2);
+    style.setProperty("--neko-x", `${x}px`);
+    style.setProperty("--neko-y", `${y}px`);
+    const src = `/static/img/neko/neko-${this._nekoState}.gif`;
     const url1 = new URL(this._neko.src, location.href);
     const url2 = new URL(src, location.href);
     if (url1.pathname !== url2.pathname) {
-      // this._neko.src = src;
+      this._neko.src = src;
     }
     if (this.isConnected) {
-      requestAnimationFrame(this._render);
+      this._lastTime = performance.now();
+      requestAnimationFrame((dt) => this._render(dt));
     }
-  };
+  }
 
-  _tick = () => {
+  _tick(dt) {
     // Ignore if sleeping
     if (this._nekoState === "sleep") {
       return;
@@ -80,20 +95,21 @@ class HTMLSecretNekoElement extends HTMLElement {
     }
     const dx = this._mouseX - this._nekoX;
     const dy = this._mouseY - this._nekoY;
+    const direction = Math.atan2(dy, dx);
+    const distance = Math.sqrt(dx ** 2 + dy ** 2);
+    const travel = Math.min(distance, this._nekoSpeed * (dt / 16));
+    const travelX = travel * Math.cos(direction);
+    const travelY = travel * Math.sin(direction);
     // Close enough to sit by the cursor
-    if (Math.abs(dx) < this._nekoSpeed && Math.abs(dy) < this._nekoSpeed) {
+    if (distance <= this._nekoSize * this._closeEnough) {
       this._idleSince = performance.now();
       this._nekoState = "sit";
       return;
     }
     // Run toward the cursor
-    const direction = Math.atan2(dy, dx);
-    const distance = Math.min(Math.sqrt(dx ** 2 + dy ** 2), this._nekoSpeed);
-    const travelX = distance * Math.cos(direction);
-    const travelY = distance * Math.sin(direction);
     this._nekoX += travelX;
     this._nekoY += travelY;
-  };
+  }
 
   _onMouseMove = (event) => {
     this._nekoState = "run";

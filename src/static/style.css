@@ -234,6 +234,18 @@ figure figcaption {
   font-size: 1rem;
 }
 
+.secret-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.secret-link:hover {
+  box-shadow: none;
+  outline: none;
+  background: inherit;
+  color: inherit;
+}
+
 .art-container {
   display: grid;
   grid-gap: 1rem;
