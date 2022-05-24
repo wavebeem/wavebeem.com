@@ -73,7 +73,7 @@ body {
 }
 
 main {
-  flex: 1 1 auto;
+  flex: auto;
   margin: 0 auto;
   padding: 0 1rem;
   max-width: var(--content-width);
@@ -139,8 +139,6 @@ nav {
 }
 
 .logo {
-  --skew: -15deg;
-  /* --skew: 0deg; */
   --bit-color1: var(--color-header-logo-bg);
   --bit-color0: var(--color-header-logo-fg);
   margin-right: 1rem;
@@ -151,15 +149,11 @@ nav {
   transform: skewX(var(--skew));
 }
 
-.logo > * {
-  transform: skewX(calc(-1 * var(--skew)));
-}
-
 nav .bit-link {
   --bit-color0: var(--color-header-fg);
   --bit-color1: var(--color-header-bg);
   text-decoration: none;
-  padding: 0 0.5rem;
+  padding: 0 0.25rem;
 }
 
 footer {
@@ -270,7 +264,7 @@ figure figcaption {
 }
 
 .flex-auto {
-  flex: 1 1 auto;
+  flex: auto;
 }
 
 .clearfix {
