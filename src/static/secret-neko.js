@@ -4,7 +4,7 @@ function preloadImage(src) {
   document.createElement("img").src = src;
 }
 
-class HTMLSecretNekoElement extends HTMLElement {
+export class HTMLSecretNekoElement extends HTMLElement {
   _nekoX = 64;
   _nekoY = 64;
   _nekoSpeed = 1;
@@ -14,7 +14,6 @@ class HTMLSecretNekoElement extends HTMLElement {
   _mouseX = 0;
   _mouseY = 0;
   _idleSince = performance.now();
-  _lastTime = performance.now();
   _sleepTimeout = 4000;
 
   constructor() {
@@ -46,7 +45,7 @@ class HTMLSecretNekoElement extends HTMLElement {
 
   connectedCallback() {
     addEventListener("mousemove", this._onMouseMove);
-    this._render();
+    this._render(0);
   }
 
   disconnectedCallback() {
@@ -57,31 +56,33 @@ class HTMLSecretNekoElement extends HTMLElement {
     return performance.now() - this._idleSince;
   }
 
-  get _neko() {
+  get _nekoElement() {
     return this.shadowRoot.querySelector(".neko");
   }
 
-  _render(t) {
-    const dt = t - this._lastTime;
+  _render(dt) {
     this._tick(dt);
-    const { style } = this._neko;
+    const { style } = this._nekoElement;
     const x = Math.floor(this._nekoX - this._nekoSize / 2);
     const y = Math.floor(this._nekoY - this._nekoSize / 2);
     style.setProperty("--neko-x", `${x}px`);
     style.setProperty("--neko-y", `${y}px`);
     const src = `/static/img/neko/neko-${this._nekoState}.gif`;
-    const url1 = new URL(this._neko.src, location.href);
+    const url1 = new URL(this._nekoElement.src, location.href);
     const url2 = new URL(src, location.href);
     if (url1.pathname !== url2.pathname) {
-      this._neko.src = src;
+      this._nekoElement.src = src;
     }
     if (this.isConnected) {
-      this._lastTime = performance.now();
-      requestAnimationFrame((dt) => this._render(dt));
+      const t1 = performance.now();
+      requestAnimationFrame((t2) => this._render(t2 - t1));
     }
   }
 
   _tick(dt) {
+    if (dt === 0) {
+      return;
+    }
     // Ignore if sleeping
     if (this._nekoState === "sleep") {
       return;
@@ -119,5 +120,3 @@ class HTMLSecretNekoElement extends HTMLElement {
 }
 
 customElements.define("secret-neko", HTMLSecretNekoElement);
-
-export {};

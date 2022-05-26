@@ -2,6 +2,6 @@
 
 # wavebeem.com
 
-It's [wavebeem.com](https://wavebeem.com), the website!
+It's [wavebeem.com](https://www.wavebeem.com), the website!
 
 Made with [Eleventy](https://www.11ty.dev/).
