@@ -1,3 +1,5 @@
+/* --- Fonts --- */
+
 /* Fonts from Google Fonts using google-webfonts-helper
  * https://google-webfonts-helper.herokuapp.com/fonts/nunito?subsets=latin
  */
@@ -28,6 +30,8 @@
   font-display: swap;
   src: url("/static/fonts/nunito-v24-latin-italic.woff2") format("woff2");
 }
+
+/* --- Other CSS --- */
 
 :root {
   --font-sans: "Nunito", ui-sans-serif, system-ui, -apple-system,
@@ -358,6 +362,98 @@ figure figcaption {
 .weight-normal {
   font-weight: normal;
 }
+
+/* --- Syntax highlighting --- */
+
+.bit-auto pre {
+  --c0: hsl(270, 80%, 90%);
+  --c1: hsl(190, 20%, 70%);
+  --c2: hsl(30, 80%, 70%);
+  --c3: hsl(190, 95%, 80%);
+  --c4: hsl(100, 70%, 70%);
+
+  --comment: var(--c0);
+  --punctuation: var(--c1);
+  --string: var(--c2);
+  --property: var(--c2);
+  --operator: var(--c2);
+  --function: var(--c3);
+  --keyword: var(--c4);
+
+  --bit-color0: var(--color-syntax-bg);
+  --bit-color1: var(--color-syntax-fg);
+}
+
+.token.script {
+  color: var(--color-syntax-fg);
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--comment);
+}
+
+.token.punctuation {
+  color: var(--punctuation);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: var(--operator);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: var(--function);
+}
+
+.token.keyword {
+  color: var(--keyword);
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.boolean,
+.token.number,
+.token.regex,
+.token.important {
+  color: var(--property);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+/* --- Media queries --- */
 
 @media (min-width: 600px) {
   header > * {
