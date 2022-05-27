@@ -4,12 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="content-security-policy" content="{{ csp | safe }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="preload"
+      as="font"
+      href="/static/fonts/nunito-v24-latin-700.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="/static/fonts/nunito-v24-latin-regular.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="/static/fonts/nunito-v24-latin-italic.woff2"
+    />
     <meta name="author" content="Brian Mock" />
     <meta name="description" content="{{ description }}" />
     <link rel="icon" sizes="16x16" href="/static/favicon-16.png" />
     <link rel="icon" sizes="32x32" href="/static/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/static/photo-180.jpg" />
-    <link rel="manifest" href="/static/manifest.json" />
     <link
       rel="alternate"
       type="application/rss+xml"
