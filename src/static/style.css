@@ -284,6 +284,8 @@ figure figcaption {
 }
 
 .art-container__frame {
+  --padding: var(--bit-border-width);
+  --inner-radius: calc(var(--bit-border-radius) - 2 * var(--padding));
   border: var(--bit-border-width) solid var(--bit-color0);
   padding: var(--bit-border-width);
   border-radius: var(--bit-border-radius);
@@ -292,7 +294,7 @@ figure figcaption {
 }
 
 .art-container__frame > img {
-  border-radius: calc(var(--bit-border-radius) - 1px);
+  border-radius: var(--inner-radius);
 }
 
 .flex {
