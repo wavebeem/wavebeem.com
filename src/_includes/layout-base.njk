@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="content-security-policy" content="{{ csp | safe }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content="{{ eleventy.generator }}" />
     <link
       rel="preload"
       as="font"
@@ -44,15 +45,15 @@
     <meta name="og:title" content="{{ title }}" />
     <meta name="og:description" content="{{ description }}" />
     <title>{{ title }}</title>
-    <link rel="stylesheet" media="screen" href="/static/1bit-ui.css" />
-    <link rel="stylesheet" media="screen" href="/static/style.css" />
-    <link rel="stylesheet" media="print" href="/static/print.css" />
     <script
       async
       defer
       data-domain="wavebeem.com"
       src="https://plausible.io/js/plausible.js"
     ></script>
+    <link rel="stylesheet" media="screen" href="/static/1bit-ui.css" />
+    <link rel="stylesheet" media="screen" href="/static/style.css" />
+    <link rel="stylesheet" media="print" href="/static/print.css" />
   </head>
   <body>
     <header class="screen-only">
