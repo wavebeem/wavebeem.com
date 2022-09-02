@@ -51,7 +51,6 @@
   --hue-accent: 150;
   --bit-color0: hsl(var(--hue-main), 20%, 20%);
   --bit-color1: hsl(var(--hue-main), 10%, 95%);
-  --color-divider: hsla(var(--hue-main), 20%, 20%, 20%);
   --color-link: hsl(var(--hue-accent), 100%, 25%);
   --color-header-bg: hsl(var(--hue-accent), 100%, 25%);
   --color-header-fg: hsl(var(--hue-main), 10%, 95%);
@@ -73,7 +72,6 @@
   .bit-auto {
     --bit-color0: hsl(var(--hue-main), 10%, 80%);
     --bit-color1: hsl(var(--hue-main), 20%, 15%);
-    --color-divider: hsla(var(--hue-main), 10%, 80%, 20%);
     --color-link: hsl(var(--hue-accent), 60%, 60%);
     --color-header-bg: hsl(var(--hue-accent), 100%, 25%);
     --color-header-fg: hsl(var(--hue-main), 10%, 95%);
@@ -128,10 +126,6 @@ p:empty {
   display: none;
 }
 
-hr {
-  --bit-color0: var(--color-divider);
-}
-
 header {
   --bit-color0: var(--color-header-fg);
   --bit-color1: var(--color-header-bg);
@@ -149,8 +143,25 @@ header > * {
 
 h2,
 h3 {
-  border-top: var(--bit-border-width) dotted var(--color-divider);
-  padding-top: 1rem;
+  margin: 0;
+  margin-top: 3rem;
+}
+
+h2 .markdownIt-Anchor::before {
+  content: "# ";
+  color: var(--color-link);
+}
+
+h3 .markdownIt-Anchor::before {
+  content: "## ";
+  color: var(--color-link);
+}
+
+h2 .markdownIt-Anchor:not(:hover):not(:focus),
+h3 .markdownIt-Anchor:not(:hover):not(:focus),
+h2 .markdownIt-Anchor:focus::before,
+h3 .markdownIt-Anchor:focus::before {
+  color: inherit;
 }
 
 nav {
@@ -169,6 +180,11 @@ details > summary {
   cursor: pointer;
 }
 
+details > summary:hover > * {
+  text-decoration: underline;
+  text-decoration-thickness: var(--bit-underline-thickness);
+}
+
 details[open] > summary {
   margin-bottom: 1rem;
 }
@@ -179,9 +195,7 @@ details[open] > summary {
 
 .card-heading {
   border: none;
-  border-bottom: var(--bit-border-width) dotted var(--color-divider);
   padding: 0;
-  padding-bottom: 0.5rem;
   margin: 0;
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
@@ -227,13 +241,13 @@ ol {
   padding-left: 1.5rem;
 }
 
-.contact-info > .bit-box {
+.box-grid > .bit-box {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
 }
 
-.contact-info > .bit-box > b {
+.box-grid > .bit-box > b {
   flex: auto;
 }
 
@@ -336,15 +350,6 @@ figure figcaption {
   text-decoration: none;
 }
 
-.bit-table.about-me tr {
-  border-color: var(--color-divider);
-  border-color: var(--color-divider);
-}
-
-.bit-table.about-me tr:first-of-type {
-  border-top: 0;
-}
-
 .avatar {
   display: flex;
   float: right;
@@ -371,6 +376,11 @@ figure figcaption {
 .grid-2 {
   display: grid;
   gap: 1rem;
+}
+
+.spacer1 {
+  width: 1rem;
+  height: 1rem;
 }
 
 .text-center {
