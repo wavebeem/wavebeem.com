@@ -11,6 +11,7 @@ module.exports = function (config) {
     linkify: true,
     typographer: true,
   }).use(markdownItTocAndAnchor, {
+    wrapHeadingTextInAnchor: true,
     tocFirstLevel: 2,
   });
   config.setLibrary("md", markdown);
