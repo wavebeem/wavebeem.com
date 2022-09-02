@@ -365,6 +365,12 @@ figure figcaption {
   border-radius: 9999px;
 }
 
+.post-list {
+  list-style-type: "★ ";
+  list-style-position: inside;
+  padding-left: 0;
+}
+
 .post-date {
   margin-top: -1.5rem;
 }
