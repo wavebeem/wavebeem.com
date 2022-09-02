@@ -244,11 +244,8 @@ ol {
 .box-grid > .bit-box {
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
   padding: 1rem;
-}
-
-.box-grid > .bit-box > b {
-  flex: auto;
 }
 
 code,
@@ -365,10 +362,13 @@ figure figcaption {
   border-radius: 9999px;
 }
 
-.post-list {
-  list-style-type: "★ ";
+.post-columns {
   list-style-position: inside;
-  padding-left: 0;
+  padding: 0;
+}
+
+.post-columns > li {
+  padding-bottom: 1rem;
 }
 
 .post-date {
@@ -514,6 +514,10 @@ figure figcaption {
 
   .grid-2 {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .post-columns {
+    column-count: 2;
   }
 
   .art-container {

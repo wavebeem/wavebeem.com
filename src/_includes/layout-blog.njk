@@ -5,7 +5,7 @@ tags: ["blog"]
 
 <h1>Posts</h1>
 
-<ul class="grid-2 post-list">
+<ol class="post-columns" reversed>
   {% for post in collections.post | reverse %}
   <li>
     <a class="bit-link no-underline" href="{{ post.url }}"
@@ -15,6 +15,6 @@ tags: ["blog"]
     >
   </li>
   {% endfor %}
-</ul>
+</ol>
 
 {{ content | safe }}
