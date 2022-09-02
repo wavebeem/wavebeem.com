@@ -362,15 +362,6 @@ figure figcaption {
   border-radius: 9999px;
 }
 
-.post-columns {
-  list-style-position: inside;
-  padding: 0;
-}
-
-.post-columns > li {
-  padding-bottom: 1rem;
-}
-
 .post-date {
   margin-top: -1.5rem;
 }
@@ -514,10 +505,6 @@ figure figcaption {
 
   .grid-2 {
     grid-template-columns: 1fr 1fr;
-  }
-
-  .post-columns {
-    column-count: 2;
   }
 
   .art-container {
