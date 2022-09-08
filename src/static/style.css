@@ -282,16 +282,9 @@ figure figcaption {
   font-size: 1rem;
 }
 
-.secret-link {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-.secret-link:hover {
-  box-shadow: none;
-  outline: none;
-  background: inherit;
-  color: inherit;
+.pixelated {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
 
 .art-container {
@@ -364,6 +357,7 @@ figure figcaption {
 
 .post-date {
   margin-top: -1.5rem;
+  margin-bottom: 3rem;
 }
 
 .print-only {
