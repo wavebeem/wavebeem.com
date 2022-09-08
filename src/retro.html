@@ -1,0 +1,48 @@
+---
+title: "wavebeem"
+description: "Brian Mock's personal website"
+layout: "layout-retro"
+---
+
+<h1>retro page</h1>
+
+<p>
+  this page was created as a fun little geocities-esque 1990s internet
+  throwback.
+</p>
+
+<p>
+  ok, i really just wanted a place to put my lovingly crafted site button, but
+  couldn't figure out how to fit it into my main page layout.
+</p>
+
+<h2>site buttons</h2>
+
+<div class="button-grid">
+  <img
+    src="/static/site-button.gif"
+    title="wavebeem"
+    alt="wavebeem"
+    width="88"
+    height="31"
+    class="site-button"
+  />
+  {% for img in siteButtons %}
+  <img
+    src="{{ img.url }}"
+    title="{{ img.name }}"
+    alt="{{ img.name }}"
+    width="88"
+    height="31"
+    class="site-button"
+  />
+  {% endfor %}
+</div>
+
+<h2>credit</h2>
+
+<p>
+  all other site buttons are from
+  <a href="https://88by31.neocities.org/" class="bit-link">88by31</a> on
+  neocities. credit for each button can be found there.
+</p>
