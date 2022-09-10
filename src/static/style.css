@@ -164,6 +164,12 @@ h3 .markdownIt-Anchor:focus::before {
   color: inherit;
 }
 
+details > summary:focus {
+  outline: var(--bit-border-width) solid var(--bit-color0);
+  outline-offset: var(--bit-border-width);
+  border-radius: var(--bit-border-width);
+}
+
 nav {
   margin-top: 1rem;
   display: flex;
