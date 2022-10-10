@@ -6,12 +6,15 @@ html {
   padding: 0 10px;
 }
 
-.markdownIt-Anchor,
 .screen-only,
 footer,
 nav,
 header {
   display: none;
+}
+
+:any-link {
+  text-decoration: none;
 }
 
 li {
@@ -24,9 +27,23 @@ h1 {
   margin: 0;
 }
 
+.markdownIt-Anchor {
+  color: inherit;
+}
+
 .contact-info {
+  display: flex;
+  flex-direction: column;
   font-size: 1.25rem;
   float: right;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  background: white;
+  padding: 1rem;
+  border: 6px double;
+  border-radius: 6px;
+  box-shadow: 0 0 0 4px white;
+  margin: 0 0 1rem 1rem;
 }
 
 .contact-info p {
@@ -38,23 +55,24 @@ h1 {
   text-decoration: none;
 }
 
+h2,
+h3 {
+  padding-top: 1rem;
+  border-top: 2px dotted;
+}
+
 h2 {
   font-size: 1.2rem;
   margin: 0;
-  border-left: 6px solid;
-  padding-left: 1rem;
 }
 
 h3 {
   font-size: 1.1rem;
   margin: 1rem 0;
-  border-left: 6px double;
-  padding-left: 1rem;
 }
 
 ul {
-  padding-left: 2em;
-  list-style-type: square;
+  padding-left: 1rem;
 }
 
 a {
