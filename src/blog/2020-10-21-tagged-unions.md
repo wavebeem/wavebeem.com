@@ -1,6 +1,6 @@
 ---
 title: "Tagged unions in JavaScript"
-description: "A disciplined approach to state management and domain modeling"
+description: "A disciplined approach to state management and domain modeling for JavaScript and TypeScript. Also known as algebraic data types / discriminated unions."
 ---
 
 @[toc]

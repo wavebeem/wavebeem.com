@@ -5,16 +5,25 @@ tags: ["blog"]
 
 <h1>Posts</h1>
 
-<ol class="grid-2" reversed>
+<div class="post-list">
   {% for post in collections.post | reverse %}
-  <li>
-    <a class="bit-link no-underline" href="{{ post.url }}"
-      ><b>
+  <section class="post-list--post bit-card">
+    <h2>
+      <a class="bit-link no-underline" href="{{ post.url }}">
         {{ post.data.title }}
-      </b></a
+      </a>
+    </h2>
+
+    <p>
+      {{ post.data.description }}
+    </p>
+
+    <time
+      datetime="{{ page.date | formatDate('yyyy-mm-dd') }}"
+      >{{ post.date | formatDate('yyyy mmmm d') }}</time
     >
-  </li>
+  </section>
   {% endfor %}
-</ol>
+</div>
 
 {{ content | safe }}

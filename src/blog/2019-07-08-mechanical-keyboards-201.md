@@ -1,6 +1,6 @@
 ---
 title: "Mechanical keyboards 201"
-description: "Thinking beyond pre-built gear"
+description: "Thinking beyond pre-built gear, this guide will help prepare you to build your own keyboard."
 ---
 
 @[toc]

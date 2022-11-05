@@ -1,6 +1,6 @@
 ---
 title: "Compiler code generation"
-description: "How to make code generation for a compiler"
+description: "How to make code generation for a compiler."
 ---
 
 @[toc]

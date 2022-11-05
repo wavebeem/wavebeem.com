@@ -1,6 +1,6 @@
 ---
 title: "Broken promises"
-description: "How to use promises effectively"
+description: "How to use promises effectively (written before async/await existed)"
 ---
 
 @[toc]

@@ -1,6 +1,6 @@
 ---
 title: "The leaning tower of Babel"
-description: "An exploration of Babel's caveats"
+description: "An exploration of Babel's caveats."
 ---
 
 @[toc]

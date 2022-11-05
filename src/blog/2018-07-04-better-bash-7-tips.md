@@ -1,6 +1,6 @@
 ---
 title: "7 tips for better bash"
-description: "You'll be writing better bash code after following these 7 tips"
+description: "You'll be writing better bash code after following these 7 tips."
 ---
 
 @[toc]

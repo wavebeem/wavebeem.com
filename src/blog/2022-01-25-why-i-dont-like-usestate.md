@@ -1,6 +1,6 @@
 ---
 title: "Why I don't like useState"
-description: "Why useState is so hard to use correctly, and what we can do about it"
+description: "Why useState is so hard to use correctly, and what we can do about it."
 ---
 
 @[toc]
@@ -35,8 +35,6 @@ function App() {
   );
 }
 ```
-
-<codepen-react></codepen-react>
 
 It's easy to forget that this `App` function is not called just once, but _every time the component needs to re-render_. Functions don't store state between multiple calls, so React actually stores this state. React _remembers_ this component "instance" and stores its state internally. Every time the component re-renders, React sends the correct state back when you call `useState`.
 
@@ -199,3 +197,7 @@ My theory is that because React looks at object identity to determine when to re
 ## Conclusion
 
 Many blog posts document the difficulty of working with closures in React hooks, but I haven't seen any that mention how we can make new hooks to deal with the issue. Don't forget that you can always make new hooks to help you solve problems.
+
+## Addendum
+
+[Preact signals](https://preactjs.com/guide/v10/signals/) look like an even better solution to the problem. I like Preact anyway for a lot of reasons.

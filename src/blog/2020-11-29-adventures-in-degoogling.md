@@ -1,6 +1,6 @@
 ---
 title: "Adventures in de-Googling"
-description: "Trying to remove Google from my life"
+description: "My successes and failures in trying to de-emphasize Google's presence in my life."
 ---
 
 ## Why
