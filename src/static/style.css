@@ -183,6 +183,10 @@ details[open] > summary {
   margin-bottom: 1rem;
 }
 
+.bizarro {
+  filter: hue-rotate(180deg);
+}
+
 .width-max-content {
   width: max-content;
 }
@@ -207,7 +211,6 @@ details[open] > summary {
   text-decoration: none;
   width: max-content;
   letter-spacing: 0.05em;
-  transform: skewX(var(--skew));
 }
 
 .post-list {
@@ -228,7 +231,6 @@ details[open] > summary {
 
 .post-list--post > time {
   flex: auto;
-  /* align-self: end; */
   font-size: 1rem;
   font-weight: bold;
 }
@@ -362,15 +364,23 @@ figure figcaption {
 }
 
 .avatar {
+  --radius: 9999px;
   display: flex;
   float: right;
   margin: 2rem;
   margin-top: 2rem;
   margin-right: 0;
+  border-radius: var(--radius);
+  transition: 500ms transform;
 }
 
 .avatar img {
-  border-radius: calc(var(--bit-border-radius) - var(--bit-border-width));
+  border-radius: calc(var(--radius) - var(--bit-border-width));
+  background: hsl(var(--hue-accent), 30%, 80%);
+}
+
+.bizarro .avatar {
+  transform: rotateY(0.5turn);
 }
 
 .post-date {
@@ -535,5 +545,11 @@ figure figcaption {
 
   h2 {
     font-size: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  * {
+    transition: none !important;
   }
 }
