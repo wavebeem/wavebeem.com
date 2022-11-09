@@ -4,17 +4,17 @@ description: "Brian Mock's personal website"
 layout: "layout-base"
 ---
 
-<div class="avatar bit-box">
-  <img alt="" src="/static/photo-360.png" width="120" height="120" />
-</div>
+<script type="module" src="/static/bizarro.js"></script>
 
-<script type="module">
-  for (const avatar of document.querySelectorAll(".avatar")) {
-    avatar.addEventListener("click", function () {
-      document.documentElement.classList.toggle("bizarro");
-    });
-  }
-</script>
+<div class="avatar bit-box">
+  <img
+    alt=""
+    src="/static/photo-360.png"
+    width="120"
+    height="120"
+    data-bizarro-button
+  />
+</div>
 
 <h1>Hello!</h1>
 
