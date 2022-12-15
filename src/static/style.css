@@ -44,45 +44,58 @@
   overflow-y: scroll;
 }
 
+/*
+
+https://color-combos.wavebeem.com/?fg=hsl%28160+75%25+20%25%29%0Ahsl%28200+50%25+35%25%29%0Ahsl%2870+50%25+30%25%29%0Ahsl%28310+50%25+45%25%29&bg=hsl%28160+30%25+94%25%29&group_by=background
+
+*/
+
 .bit-root,
 .bit-auto {
+  --hue-bg: 160;
+  --hue-blue: 200;
+  --hue-green: 70;
+  --hue-pink: 310;
+  --color-fg: hsl(var(--hue-bg) 75% 20%);
+  --color-bg: hsl(var(--hue-bg) 30% 94%);
+  --color-link: hsl(var(--hue-pink) 95% 35%);
+  --color-border: hsl(var(--hue-bg) 30% 65%);
+  --color-header-bg: hsl(var(--hue-bg) 30% 88%);
+  --color-header-fg: var(--color-fg);
+  --color-header-logo-bg: hsl(var(--hue-bg) 30% 80%);
+  --color-header-logo-fg: hsl(var(--hue-bg) 75% 20%);
+  --color-footer-bg: hsl(var(--hue-bg) 30% 88%);
+  --color-footer-fg: var(--color-fg);
+  --color-scrollbar-bg: hsl(var(--hue-bg) 30% 88%);
+  --color-scrollbar-fg: var(--color-fg);
+  --color-syntax-bg: hsl(var(--hue-blue) 20% 15%);
+  --color-syntax-fg: hsl(var(--hue-blue) 10% 95%);
+  --color-code-bg: hsl(var(--hue-green) 30% 86%);
+  --color-code-fg: hsl(var(--hue-green) 30% 15%);
+  --bit-color0: var(--color-fg);
+  --bit-color1: var(--color-bg);
   --bit-border-radius: 3px;
-  --hue-main: 200;
-  --hue-accent: 150;
-  --bit-color0: hsl(var(--hue-main), 20%, 20%);
-  --bit-color1: hsl(var(--hue-main), 10%, 95%);
-  --color-link: hsl(var(--hue-accent), 100%, 25%);
-  --color-header-bg: hsl(var(--hue-accent), 100%, 25%);
-  --color-header-fg: hsl(var(--hue-main), 10%, 95%);
-  --color-header-logo-bg: hsl(var(--hue-accent), 100%, 20%);
-  --color-header-logo-fg: hsl(var(--hue-main), 10%, 95%);
-  --color-footer-bg: hsl(var(--hue-main), 10%, 90%);
-  --color-footer-fg: hsl(var(--hue-main), 20%, 30%);
-  --color-scrollbar-bg: hsl(var(--hue-main), 10%, 90%);
-  --color-scrollbar-fg: hsl(var(--hue-main), 20%, 30%);
-  --color-syntax-bg: hsl(var(--hue-main), 20%, 15%);
-  --color-syntax-fg: hsl(var(--hue-main), 10%, 95%);
-  --color-code-bg: hsl(var(--hue-main), 10%, 86%);
-  --color-code-fg: hsl(var(--hue-main), 20%, 15%);
+  --bit-border-width: 1px;
+  --bit-underline-thickness: 1px;
   scrollbar-color: var(--color-scrollbar-fg) var(--color-scrollbar-bg);
 }
 
 @media (prefers-color-scheme: dark) {
   .bit-root,
   .bit-auto {
-    --bit-color0: hsl(var(--hue-main), 10%, 80%);
-    --bit-color1: hsl(var(--hue-main), 20%, 15%);
-    --color-link: hsl(var(--hue-accent), 60%, 60%);
-    --color-header-bg: hsl(var(--hue-accent), 100%, 25%);
-    --color-header-fg: hsl(var(--hue-main), 10%, 95%);
-    --color-footer-bg: hsl(var(--hue-main), 20%, 10%);
-    --color-footer-fg: hsl(var(--hue-main), 10%, 70%);
-    --color-scrollbar-bg: hsl(var(--hue-main), 20%, 10%);
-    --color-scrollbar-fg: hsl(var(--hue-main), 10%, 70%);
-    --color-syntax-bg: hsl(var(--hue-main), 20%, 10%);
-    --color-syntax-fg: hsl(var(--hue-main), 10%, 95%);
-    --color-code-bg: hsl(var(--hue-main), 20%, 10%);
-    --color-code-fg: hsl(var(--hue-main), 10%, 95%);
+    --bit-color0: hsl(var(--hue-bg), 10%, 80%);
+    --bit-color1: hsl(var(--hue-bg), 20%, 15%);
+    --color-link: hsl(var(--hue-green), 60%, 60%);
+    --color-header-bg: hsl(var(--hue-green), 100%, 25%);
+    --color-header-fg: hsl(var(--hue-bg), 10%, 95%);
+    --color-footer-bg: hsl(var(--hue-bg), 20%, 10%);
+    --color-footer-fg: hsl(var(--hue-bg), 10%, 70%);
+    --color-scrollbar-bg: hsl(var(--hue-bg), 20%, 10%);
+    --color-scrollbar-fg: hsl(var(--hue-bg), 10%, 70%);
+    --color-syntax-bg: hsl(var(--hue-bg), 20%, 10%);
+    --color-syntax-fg: hsl(var(--hue-bg), 10%, 95%);
+    --color-code-bg: hsl(var(--hue-bg), 20%, 10%);
+    --color-code-fg: hsl(var(--hue-bg), 10%, 95%);
   }
 }
 
@@ -129,6 +142,7 @@ p:empty {
 header {
   --bit-color0: var(--color-header-fg);
   --bit-color1: var(--color-header-bg);
+  border-bottom: var(--bit-border-width) solid var(--color-border);
   background: var(--bit-color1);
   color: var(--bit-color0);
   padding: 1rem;
@@ -204,8 +218,8 @@ details[open] > summary {
 }
 
 .logo {
-  --bit-color1: var(--color-header-logo-bg);
   --bit-color0: var(--color-header-logo-fg);
+  --bit-color1: var(--color-header-logo-bg);
   margin-right: 1rem;
   padding: 0 0.5rem;
   text-decoration: none;
@@ -216,7 +230,7 @@ details[open] > summary {
 .post-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .post-list--post {
@@ -245,6 +259,7 @@ nav .bit-link {
 footer {
   text-align: center;
   font-size: 1rem;
+  border-top: var(--bit-border-width) solid var(--color-border);
   background: var(--color-footer-bg);
   color: var(--color-footer-fg);
   padding: 1rem;
@@ -317,17 +332,14 @@ figure figcaption {
   justify-content: space-between;
 }
 
-.art-container__frame {
+.art-container--frame {
   --padding: var(--bit-border-width);
   --inner-radius: calc(var(--bit-border-radius) - var(--padding));
-  border: var(--bit-border-width) solid var(--bit-color0);
-  padding: var(--bit-border-width);
-  border-radius: var(--bit-border-radius);
   display: flex;
   margin-bottom: 0.5rem;
 }
 
-.art-container__frame > img {
+.art-container--frame > img {
   border-radius: var(--inner-radius);
 }
 
@@ -376,7 +388,7 @@ figure figcaption {
 
 .avatar img {
   border-radius: calc(var(--radius) - var(--bit-border-width));
-  background: hsl(var(--hue-accent), 30%, 80%);
+  background: hsl(var(--hue-green) 30% 90%);
 }
 
 .bizarro .avatar {
