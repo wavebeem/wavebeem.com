@@ -74,9 +74,11 @@ https://color-combos.wavebeem.com/?fg=hsl%28160+75%25+20%25%29%0Ahsl%28200+50%25
   --color-code-fg: hsl(var(--hue-green) 30% 15%);
   --bit-color0: var(--color-fg);
   --bit-color1: var(--color-bg);
-  --bit-border-radius: 3px;
+  --bit-border-radius: 6px;
   --bit-border-width: 1px;
   --bit-underline-thickness: 1px;
+  --bit-box-padding-vertical: 1px;
+  --bit-box-padding-horizontal: 1px;
   scrollbar-color: var(--color-scrollbar-fg) var(--color-scrollbar-bg);
 }
 
@@ -254,6 +256,16 @@ nav .bit-link {
   --bit-color1: var(--color-header-bg);
   text-decoration: none;
   padding: 0 0.25rem;
+}
+
+.bit-card,
+.bit-box {
+  border: var(--bit-border-width) solid var(--color-border);
+}
+
+.bit-card {
+  box-shadow: 0 1px 0 0 var(--color-border);
+  box-shadow: none;
 }
 
 footer {
