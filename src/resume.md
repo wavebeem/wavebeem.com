@@ -35,21 +35,21 @@ Senior JavaScript Developer (February 2018--April 2021)
 
 ## Work history
 
-- AWS Elemental :: Software Development Engineer II (May 2017--February 2018)
+- AWS Elemental --- Software Development Engineer II (May 2017--February 2018)
 
 <!-- - Led a wayward team to best practices on their first TypeScript project -->
 
-- CrowdCompass :: JavaScript Developer (February 2016--May 2017)
+- CrowdCompass --- JavaScript Developer (February 2016--May 2017)
 
 <!-- - Maintained multiple web apps using Ember and Ruby on Rails + jQuery -->
 
-- Janrain :: JavaScript Developer (September 2012--July 2015)
+- Janrain --- JavaScript Developer (September 2012--July 2015)
 
 <!-- - Maintained a barely documented JS framework in production on thousands of sites, with IE 8 support -->
 
 <!-- - Documented hundreds of features through extensive code research -->
 
-- NOAA :: Undergraduate Research Intern (Summer 2011)
+- NOAA --- Undergraduate Research Intern (Summer 2011)
 
 <!-- - Created a JavaScript weather simulation data visualizer using Google Maps -->
 
