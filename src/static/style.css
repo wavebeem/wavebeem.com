@@ -86,12 +86,12 @@ https://color-combos.wavebeem.com/?fg=hsl%28160+75%25+20%25%29%0Ahsl%28200+50%25
 @media (prefers-color-scheme: dark) {
   .bit-root,
   .bit-auto {
-    --bit-color0: hsl(var(--hue-main) 10% 80%);
-    --bit-color1: hsl(var(--hue-main) 20% 15%);
-    --color-link: hsl(var(--hue-pink) 70% 70%);
+    --color-fg: hsl(var(--hue-main) 60% 80%);
+    --color-bg: hsl(var(--hue-main) 20% 15%);
+    --color-link: hsl(var(--hue-pink) 100% 80%);
     --color-border: hsl(var(--hue-main) 30% 25%);
     --color-header-bg: hsl(var(--hue-main) 20% 12%);
-    --color-header-fg: hsl(var(--hue-main) 10% 80%);
+    --color-header-fg: var(--color-fg);
     --color-header-logo-bg: hsl(var(--hue-main) 30% 15%);
     --color-header-logo-fg: hsl(var(--hue-main) 10% 95%);
     --color-footer-bg: var(--color-header-bg);
@@ -104,6 +104,8 @@ https://color-combos.wavebeem.com/?fg=hsl%28160+75%25+20%25%29%0Ahsl%28200+50%25
     --color-code-bg: var(--color-header-bg);
     --color-code-fg: var(--color-header-fg);
     --color-avatar-bg: var(--color-header-bg);
+    --bit-color0: var(--color-fg);
+    --bit-color1: var(--color-bg);
   }
 }
 
@@ -443,17 +445,16 @@ figure figcaption {
 /* --- Syntax highlighting --- */
 
 .bit-auto pre {
-  --c0: hsl(270, 80%, 90%);
-  --c1: hsl(190, 20%, 70%);
-  --c2: hsl(30, 80%, 70%);
-  --c3: hsl(190, 95%, 80%);
-  --c4: hsl(100, 70%, 70%);
+  --c1: hsl(var(--hue-main) 40% 70%);
+  --c2: hsl(var(--hue-pink) 90% 80%);
+  --c3: hsl(var(--hue-green) 90% 70%);
+  --c4: hsl(var(--hue-blue) 100% 70%);
 
-  --comment: var(--c0);
+  --comment: var(--c1);
   --punctuation: var(--c1);
   --string: var(--c2);
-  --property: var(--c2);
-  --operator: var(--c2);
+  --property: var(--c3);
+  --operator: var(--color-syntax-fg);
   --function: var(--c3);
   --keyword: var(--c4);
 
