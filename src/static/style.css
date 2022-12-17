@@ -73,6 +73,20 @@ https://color-combos.wavebeem.com/?fg=hsl%28160+75%25+20%25%29%0Ahsl%28200+50%25
   --color-code-bg: var(--color-header-bg);
   --color-code-fg: var(--color-header-fg);
   --color-avatar-bg: var(--color-header-bg);
+  /* Retro 3D blocks design (4-segment) */
+  --color-avatar-bg: fixed
+    repeating-conic-gradient(
+      from -45deg,
+      hsl(var(--hue-main) 30% 95%),
+      hsl(var(--hue-main) 30% 95%) 25%,
+      hsl(var(--hue-main) 30% 85%) 25%,
+      hsl(var(--hue-main) 30% 85%) 50%,
+      hsl(var(--hue-main) 30% 80%) 50%,
+      hsl(var(--hue-main) 30% 80%) 75%,
+      hsl(var(--hue-main) 30% 90%) 75%,
+      hsl(var(--hue-main) 30% 90%)
+    )
+    center / 1rem 1rem;
   --bit-color0: var(--color-fg);
   --bit-color1: var(--color-bg);
   --bit-border-radius: 6px;
@@ -98,12 +112,10 @@ https://color-combos.wavebeem.com/?fg=hsl%28160+75%25+20%25%29%0Ahsl%28200+50%25
     --color-footer-fg: var(--color-header-fg);
     --color-scrollbar-bg: var(--color-header-bg);
     --color-scrollbar-fg: var(--color-header-fg);
-    --color-avatar-bg: var(--color-header-bg);
     --color-syntax-bg: hsl(var(--hue-blue) 20% 10%);
     --color-syntax-fg: hsl(var(--hue-blue) 10% 95%);
     --color-code-bg: var(--color-header-bg);
     --color-code-fg: var(--color-header-fg);
-    --color-avatar-bg: var(--color-header-bg);
     --bit-color0: var(--color-fg);
     --bit-color1: var(--color-bg);
   }
