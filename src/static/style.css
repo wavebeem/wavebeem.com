@@ -44,12 +44,6 @@
   overflow-y: scroll;
 }
 
-/*
-
-https://color-combos.wavebeem.com/?fg=hsl%28160+75%25+20%25%29%0Ahsl%28200+50%25+35%25%29%0Ahsl%2870+50%25+30%25%29%0Ahsl%28310+50%25+45%25%29&bg=hsl%28160+30%25+94%25%29&group_by=background
-
-*/
-
 .bit-root,
 .bit-auto {
   --hue-main: 160;
@@ -59,42 +53,29 @@ https://color-combos.wavebeem.com/?fg=hsl%28160+75%25+20%25%29%0Ahsl%28200+50%25
   --color-fg: hsl(var(--hue-main) 75% 20%);
   --color-bg: hsl(var(--hue-main) 30% 94%);
   --color-link: hsl(var(--hue-pink) 95% 35%);
-  --color-border: hsl(var(--hue-main) 30% 65%);
-  --color-header-bg: hsl(var(--hue-main) 30% 88%);
-  --color-header-fg: var(--color-fg);
-  --color-header-logo-bg: hsl(var(--hue-main) 30% 80%);
-  --color-header-logo-fg: hsl(var(--hue-main) 75% 20%);
-  --color-footer-bg: var(--color-header-bg);
-  --color-footer-fg: var(--color-header-fg);
-  --color-scrollbar-bg: var(--color-header-bg);
-  --color-scrollbar-fg: var(--color-header-fg);
+  --color-border: hsl(var(--hue-main) 30% 75%);
   --color-syntax-bg: hsl(var(--hue-blue) 20% 15%);
   --color-syntax-fg: hsl(var(--hue-blue) 10% 95%);
-  --color-code-bg: var(--color-header-bg);
-  --color-code-fg: var(--color-header-fg);
-  --color-avatar-bg: var(--color-header-bg);
+  --color-code-bg: hsl(var(--hue-main) 30% 88%);
+  --color-code-fg: var(--color-fg);
   /* Retro 3D blocks design (4-segment) */
-  --color-avatar-bg: fixed
-    repeating-conic-gradient(
+  --color-avatar-bg: repeating-conic-gradient(
       from -45deg,
       hsl(var(--hue-main) 30% 95%),
       hsl(var(--hue-main) 30% 95%) 25%,
       hsl(var(--hue-main) 30% 85%) 25%,
       hsl(var(--hue-main) 30% 85%) 50%,
-      hsl(var(--hue-main) 30% 80%) 50%,
-      hsl(var(--hue-main) 30% 80%) 75%,
+      hsl(var(--hue-main) 30% 83%) 50%,
+      hsl(var(--hue-main) 30% 83%) 75%,
       hsl(var(--hue-main) 30% 90%) 75%,
       hsl(var(--hue-main) 30% 90%)
     )
     center / 1rem 1rem;
-  --bit-color0: var(--color-fg);
-  --bit-color1: var(--color-bg);
-  --bit-border-radius: 6px;
-  --bit-border-width: 1px;
-  --bit-underline-thickness: 1px;
-  --bit-box-padding-vertical: 1px;
-  --bit-box-padding-horizontal: 1px;
-  scrollbar-color: var(--color-scrollbar-fg) var(--color-scrollbar-bg);
+  --bit-color-fg: var(--color-fg);
+  --bit-color-bg: var(--color-bg);
+  --bit-color-shadow: var(--color-border);
+  --bit-color-accent: var(--color-link);
+  --bit-border-radius: 2px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -104,20 +85,14 @@ https://color-combos.wavebeem.com/?fg=hsl%28160+75%25+20%25%29%0Ahsl%28200+50%25
     --color-bg: hsl(var(--hue-main) 20% 15%);
     --color-link: hsl(var(--hue-pink) 100% 80%);
     --color-border: hsl(var(--hue-main) 30% 25%);
-    --color-header-bg: hsl(var(--hue-main) 20% 12%);
-    --color-header-fg: var(--color-fg);
-    --color-header-logo-bg: hsl(var(--hue-main) 30% 15%);
-    --color-header-logo-fg: var(--color-fg);
-    --color-footer-bg: var(--color-header-bg);
-    --color-footer-fg: var(--color-header-fg);
-    --color-scrollbar-bg: var(--color-header-bg);
-    --color-scrollbar-fg: var(--color-header-fg);
     --color-syntax-bg: hsl(var(--hue-blue) 20% 10%);
     --color-syntax-fg: hsl(var(--hue-blue) 10% 95%);
-    --color-code-bg: var(--color-header-bg);
-    --color-code-fg: var(--color-header-fg);
-    --bit-color0: var(--color-fg);
-    --bit-color1: var(--color-bg);
+    --color-code-bg: hsl(var(--hue-main) 20% 12%);
+    --color-code-fg: var(--color-fg);
+    --bit-color-fg: var(--color-fg);
+    --bit-color-bg: var(--color-bg);
+    --bit-color-shadow: var(--color-border);
+    --bit-color-accent: var(--color-link);
   }
 }
 
@@ -150,7 +125,7 @@ main {
 }
 
 .bit-auto .markdownIt-Anchor {
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 /* @[toc] gets embedded inside a <p> which is invalid, so the HTML parser
@@ -162,11 +137,7 @@ p:empty {
 }
 
 header {
-  --bit-color0: var(--color-header-fg);
-  --bit-color1: var(--color-header-bg);
-  border-bottom: var(--bit-border-width) solid var(--color-border);
-  background: var(--bit-color1);
-  color: var(--bit-color0);
+  border-bottom: 1px solid var(--bit-color-shadow);
   padding: 1rem;
 }
 
@@ -203,7 +174,7 @@ h3 .markdownIt-Anchor:focus::before {
 nav {
   margin-top: 1rem;
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   font-weight: bold;
 }
 
@@ -240,12 +211,8 @@ details[open] > summary {
 }
 
 .logo {
-  --bit-color0: var(--color-header-logo-fg);
-  --bit-color1: var(--color-header-logo-bg);
   margin-right: 1rem;
-  padding: 0 0.5rem;
-  text-decoration: none;
-  width: max-content;
+  text-decoration-line: none;
   letter-spacing: 0.05em;
 }
 
@@ -272,34 +239,17 @@ details[open] > summary {
 }
 
 nav .bit-link {
-  --bit-color0: var(--color-header-fg);
-  --bit-color1: var(--color-header-bg);
-  text-decoration: none;
-  padding: 0 0.25rem;
-}
-
-.bit-card,
-.bit-box {
-  border: var(--bit-border-width) solid var(--color-border);
-}
-
-.bit-card {
-  box-shadow: 0 1px 0 0 var(--color-border);
-  box-shadow: none;
+  text-decoration-line: none;
 }
 
 footer {
   text-align: center;
   font-size: 1rem;
-  border-top: var(--bit-border-width) solid var(--color-border);
+  border-top: 1px solid var(--bit-color-shadow);
   background: var(--color-footer-bg);
   color: var(--color-footer-fg);
   padding: 1rem;
   margin-top: 2rem;
-}
-
-a {
-  --bit-color0: var(--color-link);
 }
 
 ul {
@@ -311,11 +261,10 @@ ol {
   padding-left: 1.5rem;
 }
 
-.box-grid > .bit-box {
+.box-grid > * {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1rem;
 }
 
 code,
@@ -326,14 +275,14 @@ pre {
 }
 
 code {
-  --bit-color0: var(--color-code-bg);
-  --bit-color1: var(--color-code-fg);
+  --bit-color-fg: var(--color-code-bg);
+  --bit-color-bg: var(--color-code-fg);
 }
 
 blockquote {
   margin-left: 0;
   padding-left: 2rem;
-  border-left: var(--bit-border-width) solid;
+  border-left: 1px solid;
 }
 
 figure {
@@ -365,18 +314,33 @@ figure figcaption {
 }
 
 .art-container--frame {
-  --padding: var(--bit-border-width);
+  --padding: 1px;
   --inner-radius: calc(var(--bit-border-radius) - var(--padding));
   display: flex;
+  flex-direction: column;
+  gap: 1rem;
   margin-bottom: 0.5rem;
 }
 
-.art-container--frame > img {
+.art-container--frame .bit-box {
+  --bit-color-shadow: var(--color-fg);
+}
+
+.art-container--frame img {
   border-radius: var(--inner-radius);
+}
+
+.art-container--frame figcaption {
+  display: flex;
+  flex-direction: column;
 }
 
 .flex {
   display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .flex-auto {
@@ -392,7 +356,7 @@ figure figcaption {
 }
 
 .no-underline {
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 .mb0 {
@@ -404,7 +368,7 @@ figure figcaption {
 }
 
 .markdownIt-TOC a {
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 .avatar {
@@ -419,7 +383,7 @@ figure figcaption {
 }
 
 .avatar img {
-  border-radius: calc(var(--radius) - var(--bit-border-width));
+  border-radius: calc(var(--radius) - 1px);
   background: var(--color-avatar-bg);
 }
 
@@ -454,6 +418,16 @@ figure figcaption {
   font-weight: normal;
 }
 
+.gap1 {
+  gap: 0.25rem;
+}
+.gap2 {
+  gap: 0.5rem;
+}
+.gap3 {
+  gap: 1rem;
+}
+
 /* --- Syntax highlighting --- */
 
 .bit-auto pre {
@@ -470,8 +444,8 @@ figure figcaption {
   --function: var(--c3);
   --keyword: var(--c4);
 
-  --bit-color0: var(--color-syntax-bg);
-  --bit-color1: var(--color-syntax-fg);
+  --bit-color-fg: var(--color-syntax-bg);
+  --bit-color-bg: var(--color-syntax-fg);
 }
 
 .token.script {
@@ -573,7 +547,7 @@ figure figcaption {
   }
 
   .art-container {
-    grid-template-columns: repeat(2, calc(320px + 4 * var(--bit-border-width)));
+    grid-template-columns: repeat(2, calc(320px + 4 * 1px));
   }
 }
 
