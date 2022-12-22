@@ -44,12 +44,6 @@
   overflow-y: scroll;
 }
 
-/*
-
-https://color-combos.wavebeem.com/?fg=hsl%28160+75%25+20%25%29%0Ahsl%28200+50%25+35%25%29%0Ahsl%2870+50%25+30%25%29%0Ahsl%28310+50%25+45%25%29&bg=hsl%28160+30%25+94%25%29&group_by=background
-
-*/
-
 .bit-root,
 .bit-auto {
   --hue-main: 160;
@@ -180,7 +174,7 @@ h3 .markdownIt-Anchor:focus::before {
 nav {
   margin-top: 1rem;
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   font-weight: bold;
 }
 
@@ -246,7 +240,6 @@ details[open] > summary {
 
 nav .bit-link {
   text-decoration-line: none;
-  padding: 0 0.25rem;
 }
 
 footer {
