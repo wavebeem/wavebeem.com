@@ -428,7 +428,7 @@ figure figcaption {
 
 .bit-auto pre {
   --c1: hsl(var(--hue-main) 5% 62%);
-  --c2: hsl(var(--hue-pink) 90% 80%);
+  --c2: hsl(var(--hue-pink) 80% 80%);
   --c3: hsl(var(--hue-orange) 80% 75%);
   --c4: hsl(var(--hue-yellow) 60% 60%);
 
