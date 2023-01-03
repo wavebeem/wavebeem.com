@@ -54,6 +54,7 @@
   --color-bg: hsl(var(--hue-main) 40% 94%);
   --color-link: hsl(var(--hue-pink) 95% 35%);
   --color-border: hsl(var(--hue-main) 40% 60%);
+  --color-syntax-bg: hsl(var(--hue-main) 35% 15%);
   --color-code-bg: hsl(var(--hue-main) 40% 86%);
   --color-code-fg: var(--color-fg);
   /* Retro 3D blocks design (4-segment) */
@@ -83,6 +84,7 @@
     --color-bg: hsl(var(--hue-main) 35% 15%);
     --color-link: hsl(var(--hue-pink) 80% 80%);
     --color-border: hsl(var(--hue-main) 40% 25%);
+    --color-syntax-bg: hsl(var(--hue-main) 50% 10%);
     --color-code-bg: hsl(var(--hue-main) 50% 10%);
     --color-code-fg: var(--color-fg);
     --bit-color-fg: var(--color-fg);
@@ -441,16 +443,10 @@ figure figcaption {
   --keyword: var(--c4);
 
   --bit-color-fg: hsl(var(--hue-main) 60% 80%);
-  --bit-color-bg: hsl(var(--hue-main) 35% 12%);
+  --bit-color-bg: var(--color-syntax-bg);
 
   background: var(--bit-color-bg);
   color: var(--bit-color-fg);
-}
-
-@media (prefers-color-scheme: dark) {
-  .bit-auto pre {
-    box-shadow: inset 0 0 0 1px var(--color-border);
-  }
 }
 
 .token {
