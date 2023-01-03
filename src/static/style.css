@@ -54,7 +54,7 @@
   --color-bg: hsl(var(--hue-main) 40% 94%);
   --color-link: hsl(var(--hue-pink) 95% 35%);
   --color-border: hsl(var(--hue-main) 40% 60%);
-  --color-code-bg: hsl(var(--hue-main) 40% 90%);
+  --color-code-bg: hsl(var(--hue-main) 40% 86%);
   --color-code-fg: var(--color-fg);
   /* Retro 3D blocks design (4-segment) */
   --color-avatar-bg: repeating-conic-gradient(
@@ -497,6 +497,7 @@ figure figcaption {
   font-weight: normal;
 }
 
+.token.operator,
 .token.tag {
   color: var(--keyword);
 }
