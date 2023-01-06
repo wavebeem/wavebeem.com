@@ -13,13 +13,13 @@ Frontend Engineer III (April 2021--_Present_)
 
 - Upgraded existing iframe login flow to automatically use popups for increased security
 
+- Created a multi-framework dynamic [configuration and code generation app](https://zapier.com/partner/solutions/plug-and-play)
+
+- Lead development of a [web components library](https://zapier.com/partner/embed/zap-manager/create)
+
 - Wrote an internal blog post roughly every 2 weeks for knowledge sharing
 
 - Contributed to internal design system (code & accessibility improvements)
-
-- Created a multi-framework dynamic [configuration and code generation app](https://zapier.com/partner/embed/app-directory/create)
-
-- Created a new component in a [web components library](https://zapier.com/partner/embed/zap-manager/create)
 
 ## Aruba Networks
 
@@ -55,17 +55,19 @@ Senior JavaScript Developer (February 2018--April 2021)
 
 ## Projects
 
-- Created [pkmn.help](https://www.pkmn.help), a website to help Pokémon players ([2013--present](https://github.com/wavebeem/pkmn/help))
+- [pkmn.help](https://www.pkmn.help): a progressive web app used by millions of Pokémon players (2013--present) ([GitHub](https://github.com/wavebeem/pkmn/help))
 
-- Created [1bit-ui](https://1bit-ui.wavebeem.com/), a minimal retro inspired CSS library (2019--present)
+- [2bit-ui](https://2bit-ui.wavebeem.com/): a pure CSS design system based on the Game Boy Color (2022--present)
 
-- Created [JSX Info](https://marketplace.visualstudio.com/items?itemName=wavebeem.vscode-jsx-info), a static code analysis tool for React (2019)
+- [1bit-ui](https://1bit-ui.wavebeem.com/): a minimal retro inspired CSS library (2019--2022)
 
-- Maintains [Parsimmon](https://github.com/jneen/parsimmon/), a popular JavaScript parser combinator library with 100% test coverage (2016--present)
+- [JSX Info](https://marketplace.visualstudio.com/items?itemName=wavebeem.vscode-jsx-info): a static code analysis tool for React (2019)
 
-- Created [bread-n-butter](https://bread-n-butter.wavebeem.com/), a spiritual successor to Parsimmon, ES2015 and TypeScript (2020--present)
+- [Parsimmon](https://github.com/jneen/parsimmon/): a popular JavaScript parser combinator library with 100% test coverage (2016--present)
 
-- Created [Squiggle](https://www.squiggle-lang.org/), a compile-to-JS programming language (2015--2016)
+- [bread-n-butter](https://bread-n-butter.wavebeem.com/): a spiritual successor to Parsimmon using ES2015 and TypeScript (2020--present)
+
+- [Squiggle](https://squiggle.wavebeem.com/): a compile-to-JS programming language (2015--2016)
 
 <!-- - Created [Screenhive](https://github.com/wavebeem/screenhive), an Electron app for organizing Steam screenshots (2016) -->
 
