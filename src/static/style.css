@@ -57,24 +57,12 @@
   --color-syntax-bg: hsl(var(--hue-main) 35% 15%);
   --color-code-bg: hsl(var(--hue-main) 40% 86%);
   --color-code-fg: var(--color-fg);
-  /* Retro 3D blocks design (4-segment) */
-  --color-avatar-bg: repeating-conic-gradient(
-      from -45deg,
-      hsl(var(--hue-main) 30% 95%),
-      hsl(var(--hue-main) 30% 95%) 25%,
-      hsl(var(--hue-main) 30% 85%) 25%,
-      hsl(var(--hue-main) 30% 85%) 50%,
-      hsl(var(--hue-main) 30% 83%) 50%,
-      hsl(var(--hue-main) 30% 83%) 75%,
-      hsl(var(--hue-main) 30% 90%) 75%,
-      hsl(var(--hue-main) 30% 90%)
-    )
-    center / 1rem 1rem;
+  --color-avatar-bg: hsl(var(--hue-main) 40% 86%);
   --bit-color-fg: var(--color-fg);
   --bit-color-bg: var(--color-bg);
   --bit-color-shadow: var(--color-border);
   --bit-color-accent: var(--color-link);
-  --bit-border-radius: 2px;
+  --bit-border-radius: 6px;
 }
 
 @media (prefers-color-scheme: dark) {
