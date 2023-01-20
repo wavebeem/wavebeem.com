@@ -62,7 +62,7 @@
   --bit-color-bg: var(--color-bg);
   --bit-color-shadow: var(--color-border);
   --bit-color-accent: var(--color-link);
-  --bit-border-radius: 6px;
+  --bit-border-radius: 3px;
 }
 
 @media (prefers-color-scheme: dark) {
