@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -eu
 
-:resize() {
-  local src="$1"
-  local size="$2"
-  local dest="$3"
+:resize() (
+  src="$1"
+  size="$2"
+  dest="$3"
   magick "$src" -scale "$size" -strip "$dest"
-}
+)
 
 cd src/static
 
