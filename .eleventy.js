@@ -19,9 +19,10 @@ module.exports = function (config) {
   config.addPlugin(syntaxHighlight);
   config.addPassthroughCopy("src/_redirects");
   config.addPassthroughCopy("src/static");
+  const now = new Date();
   config.addFilter("formatDate", function (value, format) {
     if (value === "now") {
-      value = new Date();
+      value = now;
     }
     return dateformat(value, format);
   });
