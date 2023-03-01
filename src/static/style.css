@@ -50,14 +50,14 @@
   --hue-pink: 310;
   --hue-yellow: 60;
   --hue-orange: 30;
-  --color-fg: hsl(var(--hue-main) 100% 21%);
-  --color-bg: hsl(var(--hue-main) 40% 94%);
+  --color-fg: hsl(var(--hue-main) 100% 15%);
+  --color-bg: hsl(var(--hue-main) 40% 86%);
   --color-link: hsl(var(--hue-pink) 95% 35%);
   --color-border: hsl(var(--hue-main) 40% 60%);
   --color-syntax-bg: hsl(var(--hue-main) 35% 15%);
-  --color-code-bg: hsl(var(--hue-main) 40% 86%);
+  --color-code-bg: hsl(var(--hue-main) 40% 80%);
   --color-code-fg: var(--color-fg);
-  --color-avatar-bg: hsl(var(--hue-main) 40% 86%);
+  --color-avatar-bg: hsl(var(--hue-main) 40% 80%);
   --bit-color-fg: var(--color-fg);
   --bit-color-bg: var(--color-bg);
   --bit-color-shadow: var(--color-border);
