@@ -27,6 +27,15 @@ h1 {
   margin: 0;
 }
 
+.page-resume #key-technical-skills + ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style-position: inside;
+  padding: 0;
+}
+
+
 .markdownIt-Anchor {
   color: inherit;
 }

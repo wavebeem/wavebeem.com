@@ -3,13 +3,30 @@ title: "Resume | wavebeem"
 layout: "layout-resume"
 ---
 
-## Technical skills
+## Key technical skills
 
-JavaScript, TypeScript, HTML, CSS, React, Next.js, Stencil, Netlify, Vercel, web components, Python, Ruby, Bash, parsers
+- JavaScript
+- TypeScript
+- HTML
+- CSS
+- React
+- Next.js
+- Stencil
+- Netlify
+- Vercel
+- CI/CD
+- web components
+- Python
+- Bash
+- parsers
 
 ## Zapier
 
-Frontend Engineer III (April 2021--_Present_)
+Senior Frontend Engineer IV (May 2023--_Present_)
+
+Frontend Engineer III (April 2021--May 2023)
+
+- Coordinated and implemented analytics attribution upgrades for 3rd party sign up flows for multiple product teams
 
 - Upgraded existing iframe login flow to automatically use popups for increased security
 
@@ -17,7 +34,7 @@ Frontend Engineer III (April 2021--_Present_)
 
 - Lead development of a [web components library](https://zapier.com/partner/embed/zap-manager/create)
 
-- Wrote an internal blog post roughly every 2 weeks for knowledge sharing
+- Wrote many internal blog posts and officially mentored coworkers
 
 - Contributed to internal design system (code & accessibility improvements)
 
@@ -59,11 +76,7 @@ Senior JavaScript Developer (February 2018--April 2021)
 
 - [2bit-ui](https://2bit-ui.wavebeem.com/): a pure CSS design system based on the Game Boy Color (2022--present)
 
-- [1bit-ui](https://1bit-ui.wavebeem.com/): a minimal retro inspired CSS library (2019--2022)
-
 - [JSX Info](https://marketplace.visualstudio.com/items?itemName=wavebeem.vscode-jsx-info): a static code analysis tool for React (2019)
-
-- [Parsimmon](https://github.com/jneen/parsimmon/): a popular JavaScript parser combinator library with 100% test coverage (2016--present)
 
 - [bread-n-butter](https://bread-n-butter.wavebeem.com/): a spiritual successor to Parsimmon using ES2015 and TypeScript (2020--present)
 
