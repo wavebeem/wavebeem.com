@@ -6,6 +6,10 @@ html {
   padding: 0 10px;
 }
 
+main > div {
+  margin: 1rem 0;
+}
+
 .screen-only,
 footer,
 nav,

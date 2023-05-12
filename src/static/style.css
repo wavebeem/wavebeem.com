@@ -40,7 +40,7 @@
     "Noto Color Emoji";
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
-  --content-width: 768px;
+  --content-width: 800px;
   overflow-y: scroll;
 }
 
@@ -154,10 +154,10 @@ header > * {
   flex-direction: column;
 }
 
+h1,
 h2,
 h3 {
-  margin: 0;
-  margin-top: 3rem;
+  margin: 2rem 0 1rem 0;
 }
 
 h2 .markdownIt-Anchor::before {
@@ -258,6 +258,10 @@ footer {
   margin-top: 2rem;
 }
 
+p {
+  margin: 1rem 0;
+}
+
 ul {
   padding-left: 1.25rem;
   list-style-type: disc;
@@ -314,7 +318,7 @@ figure figcaption {
 
 .art-container {
   display: grid;
-  grid-gap: 1rem;
+  gap: 1rem;
   grid-template-columns: 1fr;
   justify-content: space-between;
 }
@@ -325,6 +329,7 @@ figure figcaption {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin: 0;
   margin-bottom: 0.5rem;
 }
 
@@ -369,12 +374,12 @@ figure figcaption {
   margin-bottom: 0;
 }
 
-.markdownIt-TOC li {
-  margin: 0.5rem 0;
-}
-
 .markdownIt-TOC a {
   text-decoration-line: none;
+}
+
+:any-link:hover {
+  text-decoration-line: underline;
 }
 
 .avatar {
@@ -398,8 +403,8 @@ figure figcaption {
 }
 
 .post-date {
-  margin-top: -1.5rem;
-  margin-bottom: 3rem;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
 }
 
 .print-only {
@@ -409,11 +414,6 @@ figure figcaption {
 .grid-2 {
   display: grid;
   gap: 1rem;
-}
-
-.spacer1 {
-  width: 1rem;
-  height: 1rem;
 }
 
 .text-center {
@@ -457,10 +457,6 @@ figure figcaption {
   color: var(--bit-color-fg);
 }
 
-.token {
-  font-weight: normal;
-}
-
 .token.script {
   color: hsl(var(--hue-main) 60% 80%);
 }
@@ -480,7 +476,7 @@ figure figcaption {
 .token.selector,
 .token.string,
 .token.char,
-.token.builtin,
+/* .token.builtin, */
 .token.inserted {
   color: var(--string);
 }
@@ -498,7 +494,6 @@ figure figcaption {
 .token.function,
 .token.class-name {
   color: var(--function);
-  font-weight: normal;
 }
 
 .token.operator,
@@ -508,11 +503,10 @@ figure figcaption {
 
 .token.keyword {
   color: var(--keyword);
-  font-weight: bold;
 }
 
 .token.attr-name,
-.token.property,
+/* .token.property, */
 .token.constant,
 .token.symbol,
 .token.deleted,
@@ -566,7 +560,8 @@ figure figcaption {
   }
 
   .art-container {
-    grid-template-columns: repeat(2, calc(320px + 4 * 1px));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: space-between;
   }
 }
 
