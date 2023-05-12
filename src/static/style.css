@@ -434,6 +434,17 @@ figure figcaption {
   gap: 1rem;
 }
 
+/* --- Page specific styles --- */
+
+[data-page="resume"] .bit-table {
+  --bit-table-padding-vertical: 0.5rem;
+  --bit-table-padding-horizontal: 0.5rem;
+}
+
+[data-page="resume"] .bit-table a:not(:hover) {
+  text-decoration-line: none;
+}
+
 /* --- Syntax highlighting --- */
 
 .bit-auto pre {
