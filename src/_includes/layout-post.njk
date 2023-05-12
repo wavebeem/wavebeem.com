@@ -3,15 +3,17 @@ layout: "layout-base"
 tags: ["post"]
 ---
 
-<h1>{{ title }}</h1>
+<main>
+  <h1>{{ title }}</h1>
 
-<p class="post-date date">
-  <time
-    datetime="{{ page.date | formatDate('yyyy-mm-dd') }}"
-    >{{ page.date | formatDate('yyyy mmmm d') }}</time
-  >
-</p>
+  <p class="post-date date">
+    <time
+      datetime="{{ page.date | formatDate('yyyy-mm-dd') }}"
+      >{{ page.date | formatDate('yyyy mmmm d') }}</time
+    >
+  </p>
 
-<div class="bit-auto">
-  {{ content | safe }}
-</div>
+  <div class="bit-auto">
+    {{ content | safe }}
+  </div>
+</main>

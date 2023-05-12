@@ -6,15 +6,15 @@ html {
   padding: 0 10px;
 }
 
+main > div {
+  margin: 1rem 0;
+}
+
 .screen-only,
 footer,
 nav,
 header {
   display: none;
-}
-
-:any-link {
-  text-decoration: none;
 }
 
 li {
@@ -27,32 +27,8 @@ h1 {
   margin: 0;
 }
 
-.page-resume #key-technical-skills + ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  list-style-position: inside;
-  padding: 0;
-}
-
-
 .markdownIt-Anchor {
   color: inherit;
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  font-size: 1.25rem;
-  float: right;
-  padding-left: 2rem;
-  padding-bottom: 2rem;
-  background: white;
-  padding: 1rem;
-  border: 6px double;
-  border-radius: 6px;
-  box-shadow: 0 0 0 4px white;
-  margin: 0 0 1rem 1rem;
 }
 
 .contact-info p {
@@ -84,6 +60,32 @@ ul {
   padding-left: 1rem;
 }
 
-a {
+table {
+  margin: 0.5rem 0;
+  border-collapse: collapse;
+}
+
+tbody > tr {
+  border-top: 1px dotted;
+}
+
+tbody > tr > td,
+tbody > tr > th {
+  padding: 0.25rem 0;
+}
+
+tbody > tr > th {
+  padding-right: 1rem;
+}
+
+tbody > tr > th {
+  text-align: left;
+}
+
+:any-link {
   color: blue;
+}
+
+.weight-normal {
+  font-weight: normal;
 }
