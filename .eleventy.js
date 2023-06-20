@@ -36,7 +36,6 @@ module.exports = function (config) {
     return markdown.render(content);
   });
   return {
-    // markdownTemplateEngine: "njk",
     dir: {
       input: "src",
       output: "_site",

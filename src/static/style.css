@@ -75,10 +75,10 @@
 @media (prefers-color-scheme: dark) {
   .bit-root,
   .bit-auto {
-    --color-nav-bg: hsl(var(--hue-main) 50% 20%);
+    --color-nav-bg: hsl(var(--hue-main) 50% 10%);
     --color-nav-fg: hsl(var(--hue-main) 40% 94%);
     --color-nav-accent: hsl(var(--hue-main) 40% 94%);
-    --color-nav-shadow: hsl(var(--hue-main) 40% 30%);
+    --color-nav-shadow: hsl(var(--hue-main) 40% 25%);
 
     --color-fg: hsl(var(--hue-main) 60% 80%);
     --color-bg: hsl(var(--hue-main) 35% 15%);
@@ -376,6 +376,7 @@ figure figcaption {
 
 .markdownIt-TOC a {
   text-decoration-line: none;
+  line-height: 2;
 }
 
 :any-link:hover {
