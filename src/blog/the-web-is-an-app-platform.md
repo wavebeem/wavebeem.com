@@ -9,7 +9,7 @@ description: |
 
 ## What's an app anyway?
 
-Let's start with how I'm defining app: a graphical program designed to by humans. It should be capable of performing computation and/or data storage. I don't care whether the computation and storage happens locally or on a server; most apps these days do both anyway.
+Let's start with how I'm defining app: a graphical program designed to be used by humans. It should be capable of performing computation and/or data storage. I don't care whether the computation and storage happens locally or on a server; most apps these days do both anyway.
 
 In contrast, a document is something that is primarily consumed: reading text and/or viewing images. It generally is not capable of performing meaningful computation or data storage for the user.
 
@@ -21,7 +21,7 @@ Out of a total of 33 years, 82% (27 years) of the web's life has been as an app 
 
 The initial version of the web only supported the GET request, which is meant to be side-effect free. You could've abused URL structure to make an app with side effects, but it would've been going against the grain.
 
-This changed in late 1995 with HTML 2.0: That specification added the `<form>` tag, the form encoding format (e.g. `?k1=v1&k2=v2`), and the POST method for HTTP. The method POST is expliclitly allowed to perform side-effects (though it doesn't have to).
+This changed in late 1995 with HTML 2.0: That specification added the `<form>` tag, the form encoding format (e.g. `?k1=v1&k2=v2`), and the POST method for HTTP. The method POST is explicitly allowed to perform side-effects (though it doesn't have to).
 
 This gave the web everything necessary to replace paper forms. Forget JS, we had the foundation of an app web in 1995. Though the standardization of JS via ECMAScript happened less than two years later, furthering the web's abilities as an app platform.
 
