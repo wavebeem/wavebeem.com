@@ -111,58 +111,127 @@ I can say from personal experience that defining yourself in terms of your oppos
 
 I could rant about things I hate about the web for ages, but for better and for worse, this place has stuck around because it did a lot of things right, and is fairly resilient.
 
-I can't tell you what to do or how to think, but I can choose who I engage with. And remember that your words matter. Just recently I was reading about how someone who had a habit of saying "Computers were a mistake" was asked to stop at work because it was scaring new employees. This level of negativity and edginess seems like a defense mechanism to me. It's so much scarier to be vulnerable and sincere than it is jaded and bitter. I fucking know it is, and it's a conscious decision to try spending more of my time not indulging that part of myself.
+I can't tell you what to do or how to think, but I can choose who I engage with. And remember that your words matter. Just recently I was reading about how someone who had a habit of saying "computers were a mistake" was asked to stop at work because it was scaring new employees. This level of negativity and edginess seems like a defense mechanism to me. It's so much scarier to be vulnerable and sincere than it is jaded and bitter. I fucking know it is, and it's a conscious decision to try spending more of my time not indulging that part of myself.
 
 Computers were not a mistake. The web was not a mistake. JS was not a mistake. It's reductionist to act this way. Social media has really done a number on our ability to speak at length and with any nuance on subjects. Please resist the urge to speak so negatively and forcefully especially about things that are of relatively little consequence. If not for others, do it for yourself. You deserve to be happy.
 
-## The End
+## Thanks for reading
 
-Sorry that got a little heavy at the end. To summarize, I think that since HTML 2.0 the web has clearly been an app platform. That's most of the web's life, so I think it's safe to call the web an app platform, even given its roots as a document platform.
+Sorry that got a little heavy at the end. To summarize, I think that since HTML 2.0 the web has clearly been an app platform. That's most of the web's life, so I think it's safe to call the web an app platform, even given its roots as a document platform. Finally, I caution against dwelling on negativity too long, because it affects you and those around you.
 
 ## Appendix: Web timeline
 
 This section covers a timeline of the web and key technologies related to it. I want to be transparent about myself: I am approximately the same age as the web. I was born in 1990, started programming in 2004, and started working as a software developer in 2012. I researched this section to the best of my ability, but please let me know if I've misunderstood or misrepresented something here.
 
-### 1990 &ndash; WorldWideWeb
+<dl>
+  <dt>
+
+1990 &ndash; WorldWideWeb
+
+  </dt>
+  <dd>
 
 The first web browser was created: [WorldWideWeb](https://www.mozilla.org/en-US/firefox/browsers/browser-history/). It was created in 1990 by Tim Berners-Lee while he was working for CERN.
 
-### 1991 - The first website is released
+  </dd>
+  <dt>
+
+1991 &ndash; The first website is released
+
+  </dt>
+  <dd>
 
 The first website was [released in 1991](https://www.npr.org/2021/08/06/1025554426/a-look-back-at-the-very-first-website-ever-launched-30-years-later). It was a page about the web itself: ["World Wide Web"](http://info.cern.ch/hypertext/WWW/TheProject.html).
 
-### 1994 &ndash; Netscape Navigator
+  </dd>
+  <dt>
+
+1994 &ndash; Netscape Navigator
+
+  </dt>
+  <dd>
 
 [Netscape Navigator](https://www.mozilla.org/en-US/firefox/browsers/browser-history/) was released in 1994. It was the first widely popular web browser.
 
-### 1995 &ndash; HTML 2.0
+  </dd>
+  <dt>
+
+1995 &ndash; HTML 2.0
+
+  </dt>
+  <dd>
 
 The HTML 2.0 specification was published as [RFC 1866](https://datatracker.ietf.org/doc/html/rfc1866) in November 1995. It included the initial version of HTML forms: text inputs (regular, password, and multi-line), checkboxes, radio buttons, dropdowns, submit buttons, reset buttons, hidden fields, and the reset button. This includes both GET and POST form submission types, explicitly allowing for side-effects from an HTML form.
 
-### 1995 &ndash; Java applets
+  </dd>
+  <dt>
+
+1995 &ndash; Java applets
+
+  </dt>
+  <dd>
 
 [Java applets](https://en.wikipedia.org/wiki/Java_applet) were released in 1995, along with the first version of Java.
 
-### 1997 &ndash; ECMAScript
+  </dd>
+  <dt>
+
+1997 &ndash; ECMAScript
+
+  </dt>
+  <dd>
 
 [ECMAScript](https://en.wikipedia.org/wiki/JavaScript#The_rise_of_JScript) was published in June 1997. Microsoft had already reverse engineered Netscape Navigator's JavaScript language, but this marked the beginning of JS as an open standard for the web.
 
-### 1998 &ndash; DOM Level 1
+  </dd>
+  <dt>
+
+1998 &ndash; DOM Level 1
+
+  </dt>
+  <dd>
 
 The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) specification was published in October 1998. This included basic APIs like [document.createElement](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement) that allowed creating, updating, and deleting nodes in the DOM.
 
-### 2006 &ndash; XMLHttpRequest
+  </dd>
+  <dt>
+
+2006 &ndash; XMLHttpRequest
+
+  </dt>
+  <dd>
 
 The [XMLHttpRequest](https://www.w3.org/TR/2006/WD-XMLHttpRequest-20060405/) specification was published in 2006. This class allows the web page to make network requests via JS and read their values. This allowed web apps to bypass the need for full page loads when making network requests, marking the beginning of the single page app (SPA). Before this, [JSONP](https://en.wikipedia.org/wiki/JSONP) was used, but it was not a good security practice.
 
-### 2009 &ndash; ECMAScript 5
+  </dd>
+  <dt>
+
+2009 &ndash; ECMAScript 5
+
+  </dt>
+  <dd>
 
 [ECMAScript 5](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/) was published in 2009. JS became a lot more powerful with this release.
 
-### 2012 &ndash; NW.js (aka node-webkit)
+  </dd>
+  <dt>
+
+2012 &ndash; NW.js (aka node-webkit)
+
+  </dt>
+  <dd>
 
 [Version 0.2.0 of NW.js](https://github.com/nwjs/nw.js/releases/tag/v0.2.0) was released in 2012. This framework later inspired [Electron](<https://en.wikipedia.org/wiki/Electron_(software_framework)>) and helped start the trend of shipping web apps as native apps for Windows, macOS, and Linux.
 
-### 2015 &ndash; ECMAScript 2015 (aka ES6)
+  </dd>
+  <dt>
+
+2015 &ndash; ECMAScript 2015 (aka ES6)
+
+  </dt>
+  <dd>
 
 [ECMAScript 2015](https://262.ecma-international.org/6.0/) was published in 2015. This marked the shift towards publishing yearly ECMAScript revisions and a shift towards continuously updated (evergreen) web browsers.
+
+  </dd>
+</dl>

@@ -123,7 +123,30 @@ main {
   width: 100%;
 }
 
-.bit-auto .markdownIt-Anchor {
+.post dt {
+  font-weight: bold;
+}
+
+.post dd {
+  border-left: 1px solid var(--bit-color-shadow);
+  margin-left: 0;
+  padding-left: 2rem;
+}
+
+.post dt p,
+.post dd p {
+  margin: 0;
+}
+
+.post dt {
+  margin-bottom: 0.5rem;
+}
+
+.post dd + dt {
+  margin-top: 2rem;
+}
+
+.post .markdownIt-Anchor {
   text-decoration-line: none;
 }
 
@@ -290,9 +313,10 @@ code {
 }
 
 blockquote {
+  border-left: 1px solid var(--bit-color-shadow);
   margin-left: 0;
   padding-left: 2rem;
-  border-left: 1px solid;
+  font-style: italic;
 }
 
 figure {
