@@ -15,19 +15,19 @@ In contrast, a document is something that is primarily consumed: reading text an
 
 I want to be clear that categorization is fraught. For every rule there exists some strange exception (e.g. PDFs can run JS). These are guidelines not rules. I have no patience for ["is a hot dog a sandwich?"](https://cuberule.com/) and similar questions.
 
-## 27 years as an app platform
+## Why do I say the web is an app platform?
 
-Out of a total of 33 years, 82% of the web's life has been as an app platform by my definition.
+Out of a total of 33 years, 82% (27 years) of the web's life has been as an app platform by my definition.
 
-The initial version of the web only supported the GET request, which is meant to be side-effect free. You could've abused URL structure to make an application with side effects, but it would've been going against the grain.
+The initial version of the web only supported the GET request, which is meant to be side-effect free. You could've abused URL structure to make an app with side effects, but it would've been going against the grain.
 
 This changed in late 1995 with HTML 2.0: That specification added the `<form>` tag, the form encoding format (e.g. `?k1=v1&k2=v2`), and the POST method for HTTP. The method POST is expliclitly allowed to perform side-effects (though it doesn't have to).
 
-This gave the web everything necessary to replace paper forms. Forget JS, we had the foundation of an application web in 1995. Though the standardization of JS via ECMAScript happened less than two years later, furthering the web's abilities as an app platform.
+This gave the web everything necessary to replace paper forms. Forget JS, we had the foundation of an app web in 1995. Though the standardization of JS via ECMAScript happened less than two years later, furthering the web's abilities as an app platform.
 
-If you wanted to count starting with the release of `XMLHttpRequest` (2006) then it would be 17 years (52%) of the web's life that we've had the ability to make networked applications inside the browser.
+If you wanted to count starting with the release of `XMLHttpRequest` (2006) then it would be 17 years (52%) of the web's life that we've had the ability to make networked apps inside the browser.
 
-## 33 years as a document platform
+## Why do people say the web is a document platform?
 
 They have a point in that it _started_ as a document platform, even if it's been more than that for over 27 years. I think some people take the view that the web _would be better off_ if it was still a document platform, and they say "the web is a document platform" as an affirmation or a wish about their desired state of the world.
 
@@ -45,7 +45,7 @@ If you're not steeped in the world of web development, a lot of the tooling migh
 
 You can literally drag and drop a `.zip` file web content into [Netlify](https://www.netlify.com/) to get started hosting your site. You can use the web-based HTML editor on [Neocities](https://neocities.org/). Both of these are totally free even for sites that get thousands of visitors monthly, and support table-stakes features like HTTPS and HTTP/2 for security and speed.
 
-I too miss the days when we would load a small handful of libraries globally on our web page, aware of just how much we were adding to our application size by virtue of nothing being abstracted. But [dependency hell was a real thing](https://api.jquery.com/jQuery.noConflict/) back then too for different reasons.
+I too miss the days when we would load a small handful of libraries globally on our web page, aware of just how much we were adding to our app size by virtue of nothing being abstracted. But [dependency hell was a real thing](https://api.jquery.com/jQuery.noConflict/) back then too for different reasons.
 
 The web has your back. The size of the ecosystem means that you can generally find a tool that does what you want when making your website.
 
@@ -61,9 +61,11 @@ A list of some of my favorite parts about web development:
 
 - Generally a fast feedback loop
 
-- Comparatively simple to make an application that works on every operating system
+- Comparatively simple to make an app that works on every operating system
 
-- App distribution is based on domain ownership (relatively cheap & easy), not a single entity gatekeeping applications (i.e. App Store on iOS, Google Play on Android)
+- App distribution is based on domain ownership (relatively cheap & easy), not a single gatekeeping entity (i.e. App Store on iOS, Google Play on Android)
+
+- Impressive commitment to backwards compatibility: The [first website](http://info.cern.ch/hypertext/WWW/TheProject.html) from 1991 still works in modern browsers
 
 ## Nostalgia for Flash and Java
 
@@ -73,21 +75,61 @@ Java on the other hand I never really remember using. Though the idea is similar
 
 ## Let's talk about Electron
 
+[Electron](<https://en.wikipedia.org/wiki/Electron_(software_framework)>) is the popular app development framework for embedding your website inside Chromium (the open source project behind Google Chrome). It's become a huge discussion topic because many apps, especially ones that work on more than one operating system, are being created using it these days. People often lament that Electron-based apps don't feel native and use too many system resources. These are valid concerns, but I'd like to mention some of positives:
+
+- Relatively simple to make an app for Windows, macOS, and Linux with a single code base
+
+- Easy to keep up to date with the pure web version of your product, due to code sharing
+
+- Powerful theming via CSS allows deep UI customization
+
+- You can hire web developers to work on your product
+
+Making a native app for any operating system is considerably more challenging than making a web app. In the past I worked for a company that maintained a single product built as a web app, an Android app, and an iOS app. These were three fully separate code bases which required hiring three different types of software developers with little career overlap in skills. It's clear to see this solution is already going to cost three times as many developers, and that's only if you're developing the app for three platforms. Throw in a native Windows app too and you're up to four. I won't even count macOS or Linux here. Plus there's the organizational overhead of keeping many different apps consistent. I understand that part of the point of native apps is to be more consistent with the host OS than internally to the app's branding, but this can be really confusing if you use the same app on multiple platforms. Besides, users will expect most features to work on every OS, and now you have to reimplement every feature.
+
+Some people will say "make a shared library" as a response to this. That might help, though sharing code across many operating systems is harder than you might think. But the real problem is it ignores that while you can share core logic, maybe, there's mountains of UI work to be done. UI work is consistently underestimated and underappreciated. It's expensive, time consuming, and incredible challenging to maintain more than one version of an app.
+
+Imagine a world where instead of being a cross platform Electron app, [VS Code](https://code.visualstudio.com/) had been made using a native Windows UI library. Would it have ever become popular in the way that it has? Sure, lots of developers use Windows, but macOS and Linux are quite common too. As someone who uses more than one operating system, I treasure that VS Code is nearly identical across all of them. I constantly lament that there are few good cross platform apps, and it feels like most of the best ones are web based.
+
+Cross platform UI toolkits can help, but they have their own limitations. [Qt](https://www.qt.io/) is quite popular and has even adopted many features of the web: [declarative UI](https://doc.qt.io/qt-6/qtquick-usecase-visual.html) and [CSS](https://doc.qt.io/qt-5/stylesheet.html). Cross platform UI toolkits are often disliked for their lack of native "feel", but they do tend to be more efficient than Electron apps.
+
+I don't think every app should use Electron, but I'm also not surprised that so many are. It's a good technical and economic choice. Software developers and business people at companies are not asking their users what technologies to use to build their apps, and they never will.
+
 ## Hatred as a personality trait rots you from the inside
 
-## Misc
+As [Bjarne Stroustrop](https://www.stroustrup.com/quotes.html), creator of C++, once said:
 
-The attitude of "fuck computers" and "web development is awful" and similar statements are brain poison: they hurt you just by thinking about them
+> There are only two kinds of languages: the ones people complain about and the ones nobody uses.
 
-Remember image maps? Combine image maps with a little bit of server-side state and it's pretty easy to make a game that doesn't require any real-time reaction
+I feel like this quote is highly relevant to the web: lots of people complaining about it, but also a lot of people using it. It's certainly relevant to HTML, CSS, and JS: The underlying languages of the web.
+
+I want to be clear that I understand being disappointed about the web, especially the massive shift towards destroying our privacy, plastering everything in invasive ads, centralizing all our communication in the hands of a few giant companies, the overuse of JS for simple sites, the trend towards websites consuming absurd amounts of bandwidth, etc. I've been a web developer for over a decade and I've used the web for most of my life. I remember the pre-Web 2.0 days. But there's a point where the negative energy emitting from some people online feels radioactive and self-destructive.
+
+If your social media bio opens with "JS was a mistake" or "React sucks", I just have to ask: Why? Imagine meeting someone in real life and opening with that. Or imagine hanging around that person and they incessantly talk about what they _hate_ about the web.
+
+I can say from personal experience that defining yourself in terms of your opposition to something else isn't good for you. It's so much easier to tear something down than to create something. It's so much easier to mock people than it is to help them. It's so much easier to hate than to love.
+
+I could rant about things I hate about the web for ages, but for better and for worse, this place has stuck around because it did a lot of things right, and is fairly resilient.
+
+I can't tell you what to do or how to think, but I can choose who I engage with. And remember that your words matter. Just recently I was reading about how someone who had a habit of saying "Computers were a mistake" was asked to stop at work because it was scaring new employees. This level of negativity and edginess seems like a defense mechanism to me. It's so much scarier to be vulnerable and sincere than it is jaded and bitter. I fucking know it is, and it's a conscious decision to try spending more of my time not indulging that part of myself.
+
+Computers were not a mistake. The web was not a mistake. JS was not a mistake. It's reductionist to act this way. Social media has really done a number on our ability to speak at length and with any nuance on subjects. Please resist the urge to speak so negatively and forcefully especially about things that are of relatively little consequence. If not for others, do it for yourself. You deserve to be happy.
+
+## The End
+
+Sorry that got a little heavy at the end. To summarize, I think that since HTML 2.0 the web has clearly been an app platform. That's most of the web's life, so I think it's safe to call the web an app platform, even given its roots as a document platform.
 
 ## Appendix: Web timeline
 
-This section covers a timeline of the web and key technologies related to it.
+This section covers a timeline of the web and key technologies related to it. I want to be transparent about myself: I am approximately the same age as the web. I was born in 1990, started programming in 2004, and started working as a software developer in 2012. I researched this section to the best of my ability, but please let me know if I've misunderstood or misrepresented something here.
 
 ### 1990 &ndash; WorldWideWeb
 
 The first web browser was created: [WorldWideWeb](https://www.mozilla.org/en-US/firefox/browsers/browser-history/). It was created in 1990 by Tim Berners-Lee while he was working for CERN.
+
+### 1991 - The first website is released
+
+The first website was [released in 1991](https://www.npr.org/2021/08/06/1025554426/a-look-back-at-the-very-first-website-ever-launched-30-years-later). It was a page about the web itself: ["World Wide Web"](http://info.cern.ch/hypertext/WWW/TheProject.html).
 
 ### 1994 &ndash; Netscape Navigator
 
@@ -111,7 +153,7 @@ The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) specification was publ
 
 ### 2006 &ndash; XMLHttpRequest
 
-The [XMLHttpRequest](https://www.w3.org/TR/2006/WD-XMLHttpRequest-20060405/) specification was published in 2006. This class allows the web page to make network requests via JS and read their values. This allowed web applications to bypass the need for full page loads when making network requests, marking the beginning of the single page application (SPA). Before this, [JSONP](https://en.wikipedia.org/wiki/JSONP) was used, but it was not a good security practice.
+The [XMLHttpRequest](https://www.w3.org/TR/2006/WD-XMLHttpRequest-20060405/) specification was published in 2006. This class allows the web page to make network requests via JS and read their values. This allowed web apps to bypass the need for full page loads when making network requests, marking the beginning of the single page app (SPA). Before this, [JSONP](https://en.wikipedia.org/wiki/JSONP) was used, but it was not a good security practice.
 
 ### 2009 &ndash; ECMAScript 5
 
@@ -119,7 +161,7 @@ The [XMLHttpRequest](https://www.w3.org/TR/2006/WD-XMLHttpRequest-20060405/) spe
 
 ### 2012 &ndash; NW.js (aka node-webkit)
 
-[Version 0.2.0 of NW.js](https://github.com/nwjs/nw.js/releases/tag/v0.2.0) was released in 2012. This framework later inspired [Electron](<https://en.wikipedia.org/wiki/Electron_(software_framework)>) and helped start the trend of shipping web applications as native applications for Windows, macOS, and Linux.
+[Version 0.2.0 of NW.js](https://github.com/nwjs/nw.js/releases/tag/v0.2.0) was released in 2012. This framework later inspired [Electron](<https://en.wikipedia.org/wiki/Electron_(software_framework)>) and helped start the trend of shipping web apps as native apps for Windows, macOS, and Linux.
 
 ### 2015 &ndash; ECMAScript 2015 (aka ES6)
 
