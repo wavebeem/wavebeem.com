@@ -170,6 +170,7 @@ header.bit-root {
   --bit-color-shadow: var(--color-nav-shadow);
 }
 
+footer > *,
 header > * {
   margin: 0 auto;
   max-width: var(--content-width);
@@ -272,7 +273,6 @@ nav .bit-link {
 }
 
 footer {
-  text-align: center;
   font-size: 1rem;
   border-top: 1px solid var(--bit-color-shadow);
   background: var(--color-footer-bg);
@@ -569,7 +569,8 @@ figure figcaption {
 /* --- Media queries --- */
 
 @media (min-width: 600px) {
-  header > * {
+  header > *,
+  footer > * {
     flex-direction: row;
     align-items: center;
   }
@@ -587,7 +588,8 @@ figure figcaption {
     height: 160px;
   }
 
-  header > * {
+  header > *,
+  footer > * {
     padding: 0 1rem;
   }
 
