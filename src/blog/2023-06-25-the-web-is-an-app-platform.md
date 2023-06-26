@@ -7,7 +7,7 @@ description: |
 
 @[toc]
 
-## What's an app anyway?
+## Defining the word app
 
 Apps usually have these properties:
 
@@ -19,54 +19,54 @@ In contrast, documents are for consumption. An application can include documents
 
 It may seem odd that you need a web browser app to use a web app, but you can think of this more like an OS or VM.
 
-## Why do I say the web is an app platform?
+## Reasons the web is an app platform
 
-Out of a total of 33 years, 82% (27 years) of the web's life has been as an app platform by my definition.
+Out of a total of 33 years, over 80% (27 years) of the web's life has been as an app platform by my definition.
 
 The initial version of the web only supported the GET request.
 
-HTML 2.0 released in late 1995\. The spec added the `<form>` tag, the form encoding format (e.g. `?k1=v1&k2=v2`), and the POST method for HTTP. POST requests may perform side-effects, enabling the creation of web apps.
+HTML 2.0 released in late 1995, adding the `<form>` tag, the form encoding format (e.g. `?k1=v1&k2=v2`), and the POST method for HTTP. POST requests may perform side-effects, enabling the creation of web apps.
 
 This gave the web everything necessary to replace paper forms. The ECMAScript open standard for JS released only two years later.
 
-The XMLHttpRequest standard released in 2006\. This API marked the beginning of modern JS-heavy web apps. At 17 years, this API has been around for 52% of the web's life.
+The _XMLHttpRequest_ standard released in 2006, marking the beginning of client-side web apps. At 17 years, this API has been around for over 50% of the web's life.
 
-## Why do people say the web is a document platform?
+## The web started as a document platform
 
-They have a point in that it _started_ as a document platform, even if it's been more than that for over 27 years. Some say the web _would be better off_ if it was still a document platform.
+The web started as a document platform, and some say it was better off that way.
 
-They lament a time when the web was simpler and less corporate. When more netizens had their own web pages. When a social circle was a web ring, not a corporate-owned message board.
+They lament a time when the web was simpler and less corporate. When more people had their own web pages. When a social circle was a web ring or forum, not a subsection of a dying social media company.
 
-I refuse to let my nostalgia for the early web cloud my thoughts on the matter.
+I have my share of nostalgia for that era, but even phpBB forums were web apps by my definition.
 
-## The web can be both
+## There's more than one way to make a website
 
-Web development can be as simple or as complex as you want. I've been a professional web developer since 2012\. I saw the creation of many modern web development tools. I maintain side projects that are a [git repository full of plain HTML](https://2bit-ui.wavebeem.com/ "https://2bit-ui.wavebeem.com/"), CSS, and JS files. I also maintain projects that use [advanced build systems like Vite](https://www.pkmn.help/defense/?mode=solo&types=normal&ability=none&format=simple "https://www.pkmn.help/defense/?mode=solo&types=normal&ability=none&format=simple"). You should choose the right tool for each problem.
+Web development can be as simple or as complex as you want. I've been a web developer since 2012, and I've seen the creation of many modern web development tools. I maintain side projects that are a [git repository full of plain HTML/CSS/JS](https://2bit-ui.wavebeem.com/ "https://2bit-ui.wavebeem.com/") files. I also maintain projects that use [advanced build systems like Vite](https://www.pkmn.help/defense/?mode=solo&types=normal&ability=none&format=simple "https://www.pkmn.help/defense/?mode=solo&types=normal&ability=none&format=simple"). I choose tools based on the problem I'm solving.
 
-Modern web development stacks might seem useless or counterproductive to some. Sometimes even I agree. [npm](https://www.npmjs.com/ "https://www.npmjs.com/") and [Browserify](https://en.wikipedia.org/wiki/Browserify "https://en.wikipedia.org/wiki/Browserify") started a massive shift in web development. Modern websites stand on a staggering tower of 3rd party code. But powerful UIs are now created at unprecedented speed.
+Modern web development stacks might seem useless or counterproductive to some. Sometimes we go overboard with tooling, but it serves a purpose. [npm](https://www.npmjs.com/ "https://www.npmjs.com/") and [Browserify](https://en.wikipedia.org/wiki/Browserify "https://en.wikipedia.org/wiki/Browserify") made integrating millions of packages easy. Modern websites rely on lots of third party code, enabling more ambitious projects. TypeScript made coding safer and IDEs smarter. Once you get used to these tools, their absence can feel frustrating.
 
 You can drag-and-drop a `.zip` file into [Netlify](https://www.netlify.com/ "https://www.netlify.com/") to start hosting your site. You can use the web-based HTML editor on [Neocities](https://neocities.org/ "https://neocities.org/"). These hosting platforms can serve high-traffic pages for free. And they support modern protocols like HTTPS and HTTP/2.
 
-Module bundlers have enabled JS bloat by hiding complexity. It was a lot harder to ship too much JS before when you had to include every library by hand. But [dependency hell was a thing](https://api.jquery.com/jQuery.noConflict/) before bundlers even.
+Module bundlers have enabled JS bloat by hiding complexity. We used to include every library by hand, but [dependency hell existed](https://api.jquery.com/jQuery.noConflict/) before bundlers.
 
-## Why the web is great as an app platform
+## Web apps have many strengths
 
 - CSS is powerful
-  - Flexbox
-  - Grid
-  - Custom properties
+  - Flexbox, grid, custom properties
 - JS has a massive library ecosystem
 - npm is easy-to-use
 - Has a fast feedback loop
   - Vite can often achieve sub-second hot reloads!
 - Works on every operating system
-- Owning a secure site is easy thanks to services like Netlify and Vercel
+- Owning a secure site is easy thanks to services like Netlify, Vercel, and Neocities
 - Impressive commitment to backwards compatibility
   - The [first website](http://info.cern.ch/hypertext/WWW/TheProject.html "http://info.cern.ch/hypertext/WWW/TheProject.html") from 1991 still works in modern browsers
 
-## Thanks for reading
+## We needed an app platform
 
-The release of HTML 2.0 in 1995 enabled web apps to exist. HTML forms and HTTP POST requests allowing side effects were all we needed to build apps. Everything since then has been a refinement.
+The release of HTML 2.0 in 1995 enabled web apps to exist. HTML forms and HTTP POST requests were all we needed to build apps. Everything since then has been a refinement.
+
+It's unsurprising the web became an app platform. We needed a standardized way of doing apps across many devices. Where Java failed, the web flourished. If not the web, some other platform would've taken its place.
 
 ## Appendix: Web timeline
 
@@ -103,7 +103,7 @@ The HTML 2.0 specification was published as [RFC 1866](https://datatracker.ietf.
 
 **1995 – Java applets**
 
-[Java applets](https://en.wikipedia.org/wiki/Java_applet "https://en.wikipedia.org/wiki/Java_applet") were released in 1995, along with the first version of Java.
+Sun Microsystems released [Java](https://en.wikipedia.org/wiki/Java_applet "https://en.wikipedia.org/wiki/Java_applet") in 1995, along with Java applets for the web.
 
 **1997 – ECMAScript**
 
@@ -111,7 +111,7 @@ The HTML 2.0 specification was published as [RFC 1866](https://datatracker.ietf.
 
 **1998 – DOM Level 1**
 
-The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/ "https://www.w3.org/TR/REC-DOM-Level-1/") specification was published in October 1998\. This included basic APIs to manipulate the DOM, such as [document.createElement.](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement "https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement")
+The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/ "https://www.w3.org/TR/REC-DOM-Level-1/") specification was published in October 1998\. This included basic APIs to manipulate the DOM, such as [document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement "https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement").
 
 **2006 – XMLHttpRequest**
 
