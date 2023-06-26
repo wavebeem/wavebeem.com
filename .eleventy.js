@@ -24,7 +24,8 @@ module.exports = function (config) {
     if (value === "now") {
       value = now;
     }
-    return dateformat(value, format);
+    const isUTC = true;
+    return dateformat(value, format, isUTC);
   });
   config.addFilter("inspect", function (value) {
     return util.inspect(value, {});
@@ -36,7 +37,6 @@ module.exports = function (config) {
     return markdown.render(content);
   });
   return {
-    // markdownTemplateEngine: "njk",
     dir: {
       input: "src",
       output: "_site",

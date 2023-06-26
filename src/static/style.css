@@ -75,10 +75,10 @@
 @media (prefers-color-scheme: dark) {
   .bit-root,
   .bit-auto {
-    --color-nav-bg: hsl(var(--hue-main) 50% 20%);
+    --color-nav-bg: hsl(var(--hue-main) 50% 10%);
     --color-nav-fg: hsl(var(--hue-main) 40% 94%);
     --color-nav-accent: hsl(var(--hue-main) 40% 94%);
-    --color-nav-shadow: hsl(var(--hue-main) 40% 30%);
+    --color-nav-shadow: hsl(var(--hue-main) 40% 25%);
 
     --color-fg: hsl(var(--hue-main) 60% 80%);
     --color-bg: hsl(var(--hue-main) 35% 15%);
@@ -123,7 +123,30 @@ main {
   width: 100%;
 }
 
-.bit-auto .markdownIt-Anchor {
+.post dt {
+  font-weight: bold;
+}
+
+.post dd {
+  border-left: 1px solid var(--bit-color-shadow);
+  margin-left: 0;
+  padding-left: 2rem;
+}
+
+.post dt p,
+.post dd p {
+  margin: 0;
+}
+
+.post dt {
+  margin-bottom: 0.5rem;
+}
+
+.post dd + dt {
+  margin-top: 2rem;
+}
+
+.post .markdownIt-Anchor {
   text-decoration-line: none;
 }
 
@@ -147,6 +170,7 @@ header.bit-root {
   --bit-color-shadow: var(--color-nav-shadow);
 }
 
+footer > *,
 header > * {
   margin: 0 auto;
   max-width: var(--content-width);
@@ -249,7 +273,6 @@ nav .bit-link {
 }
 
 footer {
-  text-align: center;
   font-size: 1rem;
   border-top: 1px solid var(--bit-color-shadow);
   background: var(--color-footer-bg);
@@ -290,9 +313,10 @@ code {
 }
 
 blockquote {
+  border-left: 1px solid var(--bit-color-shadow);
   margin-left: 0;
   padding-left: 2rem;
-  border-left: 1px solid;
+  font-style: italic;
 }
 
 figure {
@@ -376,6 +400,7 @@ figure figcaption {
 
 .markdownIt-TOC a {
   text-decoration-line: none;
+  line-height: 2;
 }
 
 :any-link:hover {
@@ -544,7 +569,8 @@ figure figcaption {
 /* --- Media queries --- */
 
 @media (min-width: 600px) {
-  header > * {
+  header > *,
+  footer > * {
     flex-direction: row;
     align-items: center;
   }
@@ -562,7 +588,8 @@ figure figcaption {
     height: 160px;
   }
 
-  header > * {
+  header > *,
+  footer > * {
     padding: 0 1rem;
   }
 
