@@ -15,7 +15,7 @@ People don't understand JS and complaining is easier than learning.  I've been 
 
 ## Electron was inevitable
 
-[Electron](<https://en.wikipedia.org/wiki/Electron_(software_framework)> "https://en.wikipedia.org/wiki/Electron_(software_framework)") is basically Google Chrome without the address bar. It's become a popular app development framework for many reasons. Electron-based apps don't look like native apps, and they use more system memory. These are valid concerns, but I'd like to mention some of positives:
+[Electron](<https://en.wikipedia.org/wiki/Electron_(software_framework)>) is basically Google Chrome without the address bar. It's become a popular app development framework for many reasons. Electron-based apps don't look like native apps, and they use more system memory. These are valid concerns, but I'd like to mention some of positives:
 
 - You can create an app Windows, macOS, Linux, and web with a single code base
 
@@ -33,7 +33,7 @@ The web has endured for good reason. It does a lot of things well, or at least w
 
 ## Hatred as a personality trait rots you from the inside
 
-As [Bjarne Stroustrop](https://www.stroustrup.com/quotes.html "https://www.stroustrup.com/quotes.html"), creator of C++, once said:
+As [Bjarne Stroustrop](https://www.stroustrup.com/quotes.html), creator of C++, once said:
 
 > There are only two kinds of languages: the ones people complain about and the ones nobody uses.
 
