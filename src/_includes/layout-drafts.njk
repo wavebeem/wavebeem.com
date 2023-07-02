@@ -1,0 +1,30 @@
+---
+layout: "layout-base"
+---
+
+<main>
+  <h1>Drafts</h1>
+
+  <div class="post-list">
+    {% for draft in collections.draft | reverse %}
+    <section class="post-list--post bit-card">
+      <h2>
+        <a class="bit-link no-underline" href="{{ draft.url }}">
+          {{ draft.data.title }}
+        </a>
+      </h2>
+
+      <p>
+        {{ draft.data.description }}
+      </p>
+
+      <time
+        datetime="{{ draft.date | formatDate('yyyy-mm-dd') }}"
+        >{{ draft.date | formatDate('yyyy mmmm d') }}</time
+      >
+    </section>
+    {% endfor %}
+  </div>
+
+  {{ content | safe }}
+</main>
