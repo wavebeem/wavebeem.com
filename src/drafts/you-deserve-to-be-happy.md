@@ -51,6 +51,6 @@ I can't tell you what to do or how to think, but I can choose who I engage with.
 
 I know that "positive vibes only" is a toxic mentality to avoid accountability. I'm not saying you're not allowed to be upset or disappointed. Everyone has these feelings and it's good to talk about them. But please exercise some nuance. Breathe a little. Go for a walk. Then consider if your discussion is going to help you process things.
 
-## JS was not a mistake
+## You deserve to be happy
 
 Computers were not a mistake. The web was not a mistake. JS was not a mistake. It's reductionist to act this way. Social media has  tarnished our ability to speak at length and with nuance on subjects. Please resist the urge to spew hatred with complete confidence. If not for others, do it for yourself. You deserve to be happy.
