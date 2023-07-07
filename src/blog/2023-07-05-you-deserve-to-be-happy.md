@@ -11,7 +11,9 @@ description: |
 
 People love telling you how much they hate JS or even the entire web. I gasped reading this post: _"People who use [TypeScript/React/etc] should be beheaded, or at least hanged"_. I'm sure it's meant as a hyperbolic, but what on Earth gets people so twisted about JS and its ecosystem? I saw another user with _"burning hatred for javascript"_ in their bio, and much more. _"Web development is a fucking nightmare"_, no, it's your attitude that's a nightmare.
 
-People don't understand JS and complaining is easier than learning.  I've been a web developer for over a decade and I know more warts than ever about JS. It's so much easier to tear something down rather than to build it up. Programmers love to believe they could make a new, better system to replace a legacy one. They're almost always wrong. Even if you can build a better system, the existing one has a massive head start. And then you actually have to replace the old system. You can't replace the web at this point. Not without losing an absurd amount of value.
+People don't understand JS and complaining is easier than learning. I've been a web developer for over a decade and I know more warts than ever about JS. It's so much easier to tear something down rather than to build it up. Programmers love to believe they could make a new, better system to replace a legacy one. They're almost always wrong. Even if you can build a better system, the existing one has a massive head start. And then you actually have to replace the old system. You can't replace the web at this point. Not without losing an absurd amount of value.
+
+※ **Update:** This sounds far more aggressive than I meant it to. My point was that there is usually context that explains most "bad" design decisions. That doesn't make them not bad, and I'm not saying JS is perfect. I would change many things about JS if I could, but I value backwards compatibility of the web. _(2023-07-07)_
 
 ## Electron was inevitable
 
