@@ -46,22 +46,15 @@
       href="https://www.wavebeem.com/feed.xml"
       title="Subscribe to wavebeem.com"
     />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@wavebeem" />
-    <meta name="twitter:creator" content="@wavebeem" />
-    <meta
-      name="twitter:image"
-      content="https://www.wavebeem.com/static/photo-512.png?t={{ dateNow }}"
-    />
     <meta
       name="og:image"
       content="https://www.wavebeem.com/static/photo-512.png?t={{ dateNow }}"
     />
     <meta name="og:image:width" content="512" />
     <meta name="og:image:height" content="512" />
-    <meta name="og:title" content="{{ title }}" />
+    <meta name="og:title" content="{{ title | formatTitle }}" />
     <meta name="og:description" content="{{ description }}" />
-    <title>{{ title }}</title>
+    <title>{{ title | formatTitle }}</title>
     <script
       async
       defer
@@ -75,7 +68,9 @@
   <body>
     <header class="bit-root screen-only">
       <div>
-        <a href="/" class="flex align-center logo bit-link">sage's page</a>
+        <a href="/" class="flex align-center logo bit-link"
+          >wavebeem</a
+        >
         <nav>
           <a class="bit-link" href="/">Home</a>
           <a class="bit-link" href="/blog/">Blog</a>

@@ -1,4 +1,4 @@
 ---
-title: "Drafts | wavebeem"
+title: "Drafts"
 layout: "layout-drafts"
 ---
