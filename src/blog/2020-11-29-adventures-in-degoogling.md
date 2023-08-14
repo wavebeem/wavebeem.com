@@ -77,7 +77,7 @@ Since then I've also tried [Sync.com](https://sync.com/) which I can't recommend
 
 I am still trying to figure out what I want to do here. I ended up buying a [Synology NAS](https://www.synology.com/en-us/products/DS220+) with 4 TB of storage. It works great over SMB so far from my Windows PC. I haven't really tested it much from my MacBook Pro computers so far. Sadly, the Android apps seem kinda mediocre so far.
 
-There is the huge plus of owning all my own data, but now I'm left with the fear that even though I'm using RAID 1 mirroring, I could lose all my personal data at once if something bad happened to my NAS. So now I'm contemplating long term cloud storage backup via [Backblaze B2](https://www.backblaze.com/b2/cloud-storage.html). The pricing is great since they optimize for long term storage, not frequent access.
+There is the huge plus of owning all my own data, but now I'm left with the fear that even though I'm using RAID 1 mirroring, I could lose all my personal data at once if something bad happened to my NAS. So now I'm contemplating long term cloud storage backup via [Backblaze B2](https://www.backblaze.com/cloud-storage). The pricing is great since they optimize for long term storage, not frequent access.
 
 I am leaning towards using my new **Synology NAS** for storage, and possibly cloud backup in the future. But I am very disappointed with the quality of the Android apps so far.
 
