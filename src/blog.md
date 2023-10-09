@@ -1,4 +1,4 @@
 ---
-title: "Blog | wavebeem"
+title: "Blog"
 layout: "layout-blog"
 ---

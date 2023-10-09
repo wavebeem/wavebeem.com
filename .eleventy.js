@@ -27,6 +27,12 @@ module.exports = function (config) {
     const isUTC = true;
     return dateformat(value, format, isUTC);
   });
+  config.addFilter("formatTitle", function (value) {
+    if (!value) {
+      return "wavebeem";
+    }
+    return `${value} | wavebeem`;
+  });
   config.addFilter("inspect", function (value) {
     return util.inspect(value, {});
   });
