@@ -4,40 +4,13 @@
  * https://google-webfonts-helper.herokuapp.com/fonts/nunito?subsets=latin
  */
 
-/* nunito-regular - latin */
-@font-face {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/static/fonts/nunito-v24-latin-regular.woff2") format("woff2");
-}
-
-/* nunito-700 - latin */
-@font-face {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("/static/fonts/nunito-v24-latin-700.woff2") format("woff2");
-}
-
-/* nunito-italic - latin */
-@font-face {
-  font-family: "Nunito";
-  font-style: italic;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/static/fonts/nunito-v24-latin-italic.woff2") format("woff2");
-}
-
 /* --- Other CSS --- */
 
 :root {
-  --font-sans: "Nunito", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    "Noto Color Emoji";
+  --font-body: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
+    sans-serif;
+  --font-heading: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
+    "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
   --font-mono: ui-monospace, "JetBrains Mono", "Cascadia Code", SFMono-Regular,
     Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --content-width: 800px;
@@ -46,22 +19,22 @@
 
 .bit-root,
 .bit-auto {
-  --hue-main: 160;
-  --hue-pink: 310;
+  --hue-main: 250;
+  --hue-alt: 80;
   --hue-yellow: 60;
   --hue-orange: 30;
 
-  --color-nav-bg: hsl(var(--hue-main) 100% 18%);
-  --color-nav-fg: hsl(var(--hue-main) 40% 94%);
-  --color-nav-accent: hsl(var(--hue-main) 40% 94%);
-  --color-nav-shadow: hsl(var(--hue-main) 100% 15%);
+  --color-nav-bg: hsl(var(--hue-alt) 100% 40%);
+  --color-nav-fg: hsl(var(--hue-alt) 100% 10%);
+  --color-nav-accent: hsl(var(--hue-alt) 100% 10%);
+  --color-nav-shadow: hsl(var(--hue-main) 100% 10%);
 
-  --color-fg: hsl(var(--hue-main) 100% 18%);
-  --color-bg: hsl(var(--hue-main) 40% 94%);
-  --color-link: hsl(var(--hue-pink) 95% 35%);
-  --color-border: hsl(var(--hue-main) 40% 60%);
-  --color-syntax-bg: hsl(var(--hue-main) 35% 15%);
-  --color-code-bg: hsl(var(--hue-main) 40% 86%);
+  --color-fg: hsl(var(--hue-main) 70% 85%);
+  --color-bg: hsl(var(--hue-main) 35% 15%);
+  --color-link: hsl(var(--hue-alt) 100% 60%);
+  --color-border: hsl(var(--hue-main) 35% 30%);
+  --color-syntax-bg: hsl(var(--hue-main) 50% 10%);
+  --color-code-bg: hsl(var(--hue-main) 50% 10%);
   --color-code-fg: var(--color-fg);
   --color-avatar-bg: hsl(var(--hue-main) 40% 86%);
 
@@ -69,30 +42,7 @@
   --bit-color-bg: var(--color-bg);
   --bit-color-shadow: var(--color-border);
   --bit-color-accent: var(--color-link);
-  --bit-border-radius: 3px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .bit-root,
-  .bit-auto {
-    --color-nav-bg: hsl(var(--hue-main) 50% 10%);
-    --color-nav-fg: hsl(var(--hue-main) 40% 94%);
-    --color-nav-accent: hsl(var(--hue-main) 40% 94%);
-    --color-nav-shadow: hsl(var(--hue-main) 40% 25%);
-
-    --color-fg: hsl(var(--hue-main) 60% 80%);
-    --color-bg: hsl(var(--hue-main) 35% 15%);
-    --color-link: hsl(var(--hue-pink) 80% 80%);
-    --color-border: hsl(var(--hue-main) 40% 25%);
-    --color-syntax-bg: hsl(var(--hue-main) 50% 10%);
-    --color-code-bg: hsl(var(--hue-main) 50% 10%);
-    --color-code-fg: var(--color-fg);
-
-    --bit-color-fg: var(--color-fg);
-    --bit-color-bg: var(--color-bg);
-    --bit-color-shadow: var(--color-border);
-    --bit-color-accent: var(--color-link);
-  }
+  --bit-border-radius: 0px;
 }
 
 * {
@@ -107,7 +57,7 @@ body {
    * slightly comfier to read site (since this is a blog, after all)
    */
   font-size: 1.25rem;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   line-height: 1.5;
   margin: 0 auto;
   min-height: 100vh;
@@ -182,6 +132,7 @@ h1,
 h2,
 h3 {
   margin: 2rem 0 1rem 0;
+  font-family: var(--font-heading);
 }
 
 h2 .markdownIt-Anchor::before {
@@ -474,7 +425,7 @@ figure figcaption {
 
 .bit-auto pre {
   --c1: hsl(var(--hue-main) 5% 62%);
-  --c2: hsl(var(--hue-pink) 80% 80%);
+  --c2: hsl(var(--hue-alt) 80% 80%);
   --c3: hsl(var(--hue-orange) 80% 75%);
   --c4: hsl(var(--hue-yellow) 60% 60%);
 
