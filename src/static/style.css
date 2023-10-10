@@ -1,16 +1,43 @@
 /* --- Fonts --- */
 
 /* Fonts from Google Fonts using google-webfonts-helper
- * https://google-webfonts-helper.herokuapp.com/fonts/nunito?subsets=latin
+ * https://gwfh.mranftl.com/fonts/nunito-sans?subsets=latin
  */
+
+/* nunito-sans-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/static/fonts/nunito-sans-v15-latin-regular.woff2") format("woff2");
+}
+
+/* nunito-sans-italic - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Nunito Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/static/fonts/nunito-sans-v15-latin-italic.woff2") format("woff2");
+}
+
+/* nunito-sans-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/static/fonts/nunito-sans-v15-latin-700.woff2") format("woff2");
+}
 
 /* --- Other CSS --- */
 
 :root {
-  --font-body: Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro,
-    sans-serif;
-  --font-heading: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
-    "Nimbus Sans Narrow", sans-serif-condensed, sans-serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+  --font-heading: var(--font-body);
+  /* --font-heading: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
+    "Nimbus Sans Narrow", sans-serif-condensed, sans-serif; */
   --font-mono: ui-monospace, "JetBrains Mono", "Cascadia Code", SFMono-Regular,
     Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --content-width: 800px;
@@ -21,27 +48,24 @@
 .bit-auto {
   --hue-main: 250;
   --hue-alt: 80;
-  --hue-yellow: 60;
-  --hue-orange: 30;
+  --hue-syntax-keyword: 160;
+  --hue-syntax-other: 40;
 
-  --color-nav-bg: hsl(var(--hue-alt) 100% 40%);
-  --color-nav-fg: hsl(var(--hue-alt) 100% 10%);
-  --color-nav-accent: hsl(var(--hue-alt) 100% 10%);
-  --color-nav-shadow: hsl(var(--hue-main) 100% 10%);
-
-  --color-fg: hsl(var(--hue-main) 70% 85%);
+  --color-heading: hsl(var(--hue-main) 100% 90%);
+  --color-fg: hsl(var(--hue-main) 85% 85%);
   --color-bg: hsl(var(--hue-main) 35% 15%);
-  --color-link: hsl(var(--hue-alt) 100% 60%);
+  --color-link: hsl(var(--hue-alt) 80% 60%);
   --color-border: hsl(var(--hue-main) 35% 30%);
   --color-syntax-bg: hsl(var(--hue-main) 50% 10%);
   --color-code-bg: hsl(var(--hue-main) 50% 10%);
   --color-code-fg: var(--color-fg);
-  --color-avatar-bg: hsl(var(--hue-main) 40% 86%);
 
   --bit-color-fg: var(--color-fg);
   --bit-color-bg: var(--color-bg);
   --bit-color-shadow: var(--color-border);
   --bit-color-accent: var(--color-link);
+
+  --color-avatar-bg: hsl(var(--hue-main) 35% 15%);
   --bit-border-radius: 0px;
 }
 
@@ -113,13 +137,6 @@ header {
   padding: 1rem;
 }
 
-header.bit-root {
-  --bit-color-bg: var(--color-nav-bg);
-  --bit-color-fg: var(--color-nav-fg);
-  --bit-color-accent: var(--color-nav-accent);
-  --bit-color-shadow: var(--color-nav-shadow);
-}
-
 footer > *,
 header > * {
   margin: 0 auto;
@@ -133,6 +150,7 @@ h2,
 h3 {
   margin: 2rem 0 1rem 0;
   font-family: var(--font-heading);
+  color: var(--color-heading);
 }
 
 h2 .markdownIt-Anchor::before {
@@ -172,7 +190,7 @@ details[open] > summary {
 }
 
 .bizarro {
-  filter: hue-rotate(150deg);
+  filter: hue-rotate(260deg);
 }
 
 .width-max-content {
@@ -192,6 +210,7 @@ details[open] > summary {
 }
 
 .logo {
+  color: var(--color-heading);
   margin-right: 1rem;
   text-decoration-line: none;
   letter-spacing: 0.05em;
@@ -238,7 +257,7 @@ p {
 
 ul {
   padding-left: 1.25rem;
-  list-style-type: disc;
+  list-style-type: square;
 }
 
 ol {
@@ -360,6 +379,9 @@ figure figcaption {
 
 .avatar {
   --radius: 9999px;
+  padding: 0.5rem;
+  border: 1px solid var(--bit-color-shadow);
+  border-bottom-width: 2px;
   display: flex;
   float: right;
   margin: 2rem;
@@ -426,8 +448,8 @@ figure figcaption {
 .bit-auto pre {
   --c1: hsl(var(--hue-main) 5% 62%);
   --c2: hsl(var(--hue-alt) 80% 80%);
-  --c3: hsl(var(--hue-orange) 80% 75%);
-  --c4: hsl(var(--hue-yellow) 60% 60%);
+  --c3: hsl(var(--hue-syntax-other) 80% 75%);
+  --c4: hsl(var(--hue-syntax-keyword) 60% 60%);
 
   --comment: var(--c1);
   --punctuation: var(--c1);
