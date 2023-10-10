@@ -1,94 +1,80 @@
 /* --- Fonts --- */
 
 /* Fonts from Google Fonts using google-webfonts-helper
- * https://google-webfonts-helper.herokuapp.com/fonts/nunito?subsets=latin
+ * https://gwfh.mranftl.com/fonts/nunito-sans?subsets=latin
  */
 
-/* nunito-regular - latin */
+/* nunito-sans-regular - latin */
 @font-face {
-  font-family: "Nunito";
+  font-display: swap;
+  font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: url("/static/fonts/nunito-v24-latin-regular.woff2") format("woff2");
+  src: url("/static/fonts/nunito-sans-v15-latin-regular.woff2") format("woff2");
 }
 
-/* nunito-700 - latin */
+/* nunito-sans-italic - latin */
 @font-face {
-  font-family: "Nunito";
-  font-style: normal;
-  font-weight: 700;
   font-display: swap;
-  src: url("/static/fonts/nunito-v24-latin-700.woff2") format("woff2");
-}
-
-/* nunito-italic - latin */
-@font-face {
-  font-family: "Nunito";
+  font-family: "Nunito Sans";
   font-style: italic;
   font-weight: 400;
+  src: url("/static/fonts/nunito-sans-v15-latin-italic.woff2") format("woff2");
+}
+
+/* nunito-sans-700 - latin */
+@font-face {
   font-display: swap;
-  src: url("/static/fonts/nunito-v24-latin-italic.woff2") format("woff2");
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/static/fonts/nunito-sans-v15-latin-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Ultra Hi-Gloss";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/static/fonts/UltraHi-GlossFinal-UltraBoldItalic.otf")
+    format("opentype");
 }
 
 /* --- Other CSS --- */
 
 :root {
-  --font-sans: "Nunito", system-ui, sans-serif, emoji;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+  --font-logo: "Ultra Hi-Gloss", var(--font-body);
+  --font-mono: ui-monospace, "JetBrains Mono", "Cascadia Code", SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --content-width: 800px;
   overflow-y: scroll;
+  scrollbar-color: var(--color-heading) var(--color-code-bg);
 }
 
 .bit-root,
 .bit-auto {
-  --hue-main: 160;
-  --hue-pink: 310;
-  --hue-yellow: 60;
-  --hue-orange: 30;
+  --hue-main: 250;
+  --hue-alt: 80;
+  --hue-syntax-keyword: 160;
+  --hue-syntax-other: 40;
 
-  --color-nav-bg: hsl(var(--hue-main) 100% 18%);
-  --color-nav-fg: hsl(var(--hue-main) 40% 94%);
-  --color-nav-accent: hsl(var(--hue-main) 40% 94%);
-  --color-nav-shadow: hsl(var(--hue-main) 100% 15%);
-
-  --color-fg: hsl(var(--hue-main) 100% 18%);
-  --color-bg: hsl(var(--hue-main) 40% 94%);
-  --color-link: hsl(var(--hue-pink) 95% 35%);
-  --color-border: hsl(var(--hue-main) 40% 60%);
-  --color-syntax-bg: hsl(var(--hue-main) 35% 15%);
-  --color-code-bg: hsl(var(--hue-main) 40% 86%);
+  --color-heading: hsl(var(--hue-main) 100% 95%);
+  --color-fg: hsl(var(--hue-main) 85% 85%);
+  --color-bg: hsl(var(--hue-main) 40% 15%);
+  --color-link: hsl(var(--hue-alt) 90% 50%);
+  --color-border: hsl(var(--hue-main) 40% 30%);
+  --color-syntax-bg: hsl(var(--hue-main) 40% 10%);
+  --color-code-bg: var(--color-syntax-bg);
   --color-code-fg: var(--color-fg);
-  --color-avatar-bg: hsl(var(--hue-main) 40% 86%);
 
   --bit-color-fg: var(--color-fg);
   --bit-color-bg: var(--color-bg);
   --bit-color-shadow: var(--color-border);
   --bit-color-accent: var(--color-link);
-  --bit-border-radius: 3px;
-}
 
-@media (prefers-color-scheme: dark) {
-  .bit-root,
-  .bit-auto {
-    --color-nav-bg: hsl(var(--hue-main) 50% 10%);
-    --color-nav-fg: hsl(var(--hue-main) 40% 94%);
-    --color-nav-accent: hsl(var(--hue-main) 40% 94%);
-    --color-nav-shadow: hsl(var(--hue-main) 40% 25%);
-
-    --color-fg: hsl(var(--hue-main) 60% 80%);
-    --color-bg: hsl(var(--hue-main) 35% 15%);
-    --color-link: hsl(var(--hue-pink) 80% 80%);
-    --color-border: hsl(var(--hue-main) 40% 25%);
-    --color-syntax-bg: hsl(var(--hue-main) 50% 10%);
-    --color-code-bg: hsl(var(--hue-main) 50% 10%);
-    --color-code-fg: var(--color-fg);
-
-    --bit-color-fg: var(--color-fg);
-    --bit-color-bg: var(--color-bg);
-    --bit-color-shadow: var(--color-border);
-    --bit-color-accent: var(--color-link);
-  }
+  --color-avatar-bg: var(--color-code-bg);
+  --bit-border-radius: 0px;
 }
 
 * {
@@ -103,7 +89,7 @@ body {
    * slightly comfier to read site (since this is a blog, after all)
    */
   font-size: 1.25rem;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   line-height: 1.5;
   margin: 0 auto;
   min-height: 100vh;
@@ -117,6 +103,10 @@ main {
   padding: 0 1rem;
   max-width: var(--content-width);
   width: 100%;
+}
+
+.font-ultra-hi-gloss {
+  font-family: var(--font-logo);
 }
 
 .post dt {
@@ -159,13 +149,6 @@ header {
   padding: 1rem;
 }
 
-header.bit-root {
-  --bit-color-bg: var(--color-nav-bg);
-  --bit-color-fg: var(--color-nav-fg);
-  --bit-color-accent: var(--color-nav-accent);
-  --bit-color-shadow: var(--color-nav-shadow);
-}
-
 footer > *,
 header > * {
   margin: 0 auto;
@@ -178,6 +161,14 @@ h1,
 h2,
 h3 {
   margin: 2rem 0 1rem 0;
+  color: var(--color-heading);
+}
+
+b,
+i,
+em,
+strong {
+  color: var(--color-heading);
 }
 
 h2 .markdownIt-Anchor::before {
@@ -217,7 +208,7 @@ details[open] > summary {
 }
 
 .bizarro {
-  filter: hue-rotate(150deg);
+  filter: hue-rotate(260deg);
 }
 
 .width-max-content {
@@ -237,9 +228,10 @@ details[open] > summary {
 }
 
 .logo {
+  font-family: var(--font-logo);
+  color: var(--color-heading);
   margin-right: 1rem;
   text-decoration-line: none;
-  letter-spacing: 0.05em;
 }
 
 .post-list {
@@ -283,7 +275,7 @@ p {
 
 ul {
   padding-left: 1.25rem;
-  list-style-type: disc;
+  list-style-type: square;
 }
 
 ol {
@@ -405,6 +397,8 @@ figure figcaption {
 
 .avatar {
   --radius: 9999px;
+  --padding: 0.5rem;
+  padding: var(--padding);
   display: flex;
   float: right;
   margin: 2rem;
@@ -415,7 +409,7 @@ figure figcaption {
 }
 
 .avatar img {
-  border-radius: calc(var(--radius) - 1px);
+  border-radius: calc(var(--radius) - var(--padding));
   background: var(--color-avatar-bg);
 }
 
@@ -469,10 +463,10 @@ figure figcaption {
 /* --- Syntax highlighting --- */
 
 .bit-auto pre {
-  --c1: hsl(var(--hue-main) 5% 62%);
-  --c2: hsl(var(--hue-pink) 80% 80%);
-  --c3: hsl(var(--hue-orange) 80% 75%);
-  --c4: hsl(var(--hue-yellow) 60% 60%);
+  --c1: hsl(var(--hue-main) 10% 55%);
+  --c2: hsl(var(--hue-alt) 80% 60%);
+  --c3: hsl(var(--hue-syntax-other) 80% 70%);
+  --c4: hsl(var(--hue-syntax-keyword) 80% 70%);
 
   --comment: var(--c1);
   --punctuation: var(--c1);
