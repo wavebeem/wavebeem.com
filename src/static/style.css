@@ -31,17 +31,25 @@
   src: url("/static/fonts/nunito-sans-v15-latin-700.woff2") format("woff2");
 }
 
+@font-face {
+  font-display: swap;
+  font-family: "Ultra Hi-Gloss";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/static/fonts/UltraHi-GlossFinal-UltraBoldItalic.otf")
+    format("opentype");
+}
+
 /* --- Other CSS --- */
 
 :root {
   --font-body: "Nunito Sans", system-ui, sans-serif;
-  --font-heading: var(--font-body);
-  /* --font-heading: Bahnschrift, "DIN Alternate", "Franklin Gothic Medium",
-    "Nimbus Sans Narrow", sans-serif-condensed, sans-serif; */
+  --font-logo: "Ultra Hi-Gloss", var(--font-body);
   --font-mono: ui-monospace, "JetBrains Mono", "Cascadia Code", SFMono-Regular,
     Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --content-width: 800px;
   overflow-y: scroll;
+  scrollbar-color: var(--color-heading) var(--color-code-bg);
 }
 
 .bit-root,
@@ -51,13 +59,13 @@
   --hue-syntax-keyword: 160;
   --hue-syntax-other: 40;
 
-  --color-heading: hsl(var(--hue-main) 100% 90%);
+  --color-heading: hsl(var(--hue-main) 100% 95%);
   --color-fg: hsl(var(--hue-main) 85% 85%);
-  --color-bg: hsl(var(--hue-main) 35% 15%);
-  --color-link: hsl(var(--hue-alt) 80% 60%);
-  --color-border: hsl(var(--hue-main) 35% 30%);
-  --color-syntax-bg: hsl(var(--hue-main) 50% 10%);
-  --color-code-bg: hsl(var(--hue-main) 50% 10%);
+  --color-bg: hsl(var(--hue-main) 40% 15%);
+  --color-link: hsl(var(--hue-alt) 90% 50%);
+  --color-border: hsl(var(--hue-main) 40% 30%);
+  --color-syntax-bg: hsl(var(--hue-main) 40% 10%);
+  --color-code-bg: var(--color-syntax-bg);
   --color-code-fg: var(--color-fg);
 
   --bit-color-fg: var(--color-fg);
@@ -65,7 +73,7 @@
   --bit-color-shadow: var(--color-border);
   --bit-color-accent: var(--color-link);
 
-  --color-avatar-bg: hsl(var(--hue-main) 35% 15%);
+  --color-avatar-bg: var(--color-code-bg);
   --bit-border-radius: 0px;
 }
 
@@ -95,6 +103,10 @@ main {
   padding: 0 1rem;
   max-width: var(--content-width);
   width: 100%;
+}
+
+.font-ultra-hi-gloss {
+  font-family: var(--font-logo);
 }
 
 .post dt {
@@ -149,7 +161,13 @@ h1,
 h2,
 h3 {
   margin: 2rem 0 1rem 0;
-  font-family: var(--font-heading);
+  color: var(--color-heading);
+}
+
+b,
+i,
+em,
+strong {
   color: var(--color-heading);
 }
 
@@ -210,10 +228,10 @@ details[open] > summary {
 }
 
 .logo {
+  font-family: var(--font-logo);
   color: var(--color-heading);
   margin-right: 1rem;
   text-decoration-line: none;
-  letter-spacing: 0.05em;
 }
 
 .post-list {
@@ -379,9 +397,8 @@ figure figcaption {
 
 .avatar {
   --radius: 9999px;
-  padding: 0.5rem;
-  border: 1px solid var(--bit-color-shadow);
-  border-bottom-width: 2px;
+  --padding: 0.5rem;
+  padding: var(--padding);
   display: flex;
   float: right;
   margin: 2rem;
@@ -392,7 +409,7 @@ figure figcaption {
 }
 
 .avatar img {
-  border-radius: calc(var(--radius) - 1px);
+  border-radius: calc(var(--radius) - var(--padding));
   background: var(--color-avatar-bg);
 }
 
@@ -446,10 +463,10 @@ figure figcaption {
 /* --- Syntax highlighting --- */
 
 .bit-auto pre {
-  --c1: hsl(var(--hue-main) 5% 62%);
-  --c2: hsl(var(--hue-alt) 80% 80%);
-  --c3: hsl(var(--hue-syntax-other) 80% 75%);
-  --c4: hsl(var(--hue-syntax-keyword) 60% 60%);
+  --c1: hsl(var(--hue-main) 10% 55%);
+  --c2: hsl(var(--hue-alt) 80% 60%);
+  --c3: hsl(var(--hue-syntax-other) 80% 70%);
+  --c4: hsl(var(--hue-syntax-keyword) 80% 70%);
 
   --comment: var(--c1);
   --punctuation: var(--c1);
