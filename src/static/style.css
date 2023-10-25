@@ -34,10 +34,10 @@
 @font-face {
   font-display: swap;
   font-family: "Ultra Hi-Gloss";
-  font-style: italic;
-  font-weight: 700;
-  src: url("/static/fonts/UltraHi-GlossFinal-UltraBoldItalic.otf")
-    format("opentype");
+  font-style: normal;
+  font-weight: 400;
+  src: url("/static/fonts/UltraHi-GlossFinal-UltraBoldItalic.woff2")
+    format("woff2");
 }
 
 /* --- Other CSS --- */
@@ -67,6 +67,7 @@
   --color-syntax-bg: hsl(var(--hue-main) 40% 10%);
   --color-code-bg: var(--color-syntax-bg);
   --color-code-fg: var(--color-fg);
+  --color-header-shadow: hsl(var(--hue-main) 40% 15% / 50%);
 
   --bit-color-fg: var(--color-fg);
   --bit-color-bg: var(--color-bg);
@@ -146,14 +147,15 @@ p:empty {
 
 header {
   border-bottom: 1px solid var(--bit-color-shadow);
-  padding: 1rem;
 }
 
 footer > *,
 header > * {
+  padding: 1rem;
   margin: 0 auto;
   max-width: var(--content-width);
   display: flex;
+  gap: 1rem;
   flex-direction: column;
 }
 
@@ -189,7 +191,6 @@ h3 .markdownIt-Anchor:focus::before {
 }
 
 nav {
-  margin-top: 1rem;
   display: flex;
   gap: 1.25rem;
   font-weight: bold;
@@ -230,8 +231,10 @@ details[open] > summary {
 .logo {
   font-family: var(--font-logo);
   color: var(--color-heading);
-  margin-right: 1rem;
   text-decoration-line: none;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1;
 }
 
 .post-list {
@@ -265,7 +268,6 @@ footer {
   border-top: 1px solid var(--bit-color-shadow);
   background: var(--color-footer-bg);
   color: var(--color-footer-fg);
-  padding: 1rem;
   margin-top: 2rem;
 }
 
@@ -460,6 +462,27 @@ figure figcaption {
   text-decoration-line: none;
 }
 
+[data-page="resume"] h1 small,
+[data-page="resume"] h2 small,
+[data-page="resume"] h3 small {
+  color: var(--color-fg);
+  font-weight: normal;
+}
+
+[data-page="resume"] .bit-card ul:last-of-type {
+  margin-bottom: 0;
+}
+
+[data-page="resume"] ul li + li {
+  margin-top: 1rem;
+}
+
+[data-page="resume"] .resume-links {
+  max-width: max-content;
+  margin-top: 1rem;
+  text-align: center;
+}
+
 /* --- Syntax highlighting --- */
 
 .bit-auto pre {
@@ -578,11 +601,6 @@ figure figcaption {
     height: 160px;
   }
 
-  header > *,
-  footer > * {
-    padding: 0 1rem;
-  }
-
   .grid-2 {
     grid-template-columns: 1fr 1fr;
   }
@@ -590,6 +608,13 @@ figure figcaption {
   .art-container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: space-between;
+  }
+
+  header {
+    top: 0;
+    position: sticky;
+    background: var(--color-bg);
+    box-shadow: 0 6px 0 var(--color-header-shadow);
   }
 }
 
