@@ -106,6 +106,12 @@ main {
   width: 100%;
 }
 
+summary {
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 .font-ultra-hi-gloss {
   font-family: var(--font-logo);
 }
@@ -613,6 +619,7 @@ figure figcaption {
   header {
     top: 0;
     position: sticky;
+    z-index: 100;
     background: var(--color-bg);
     box-shadow: 0 6px 0 var(--color-header-shadow);
   }

@@ -67,16 +67,26 @@
       data-domain="wavebeem.com"
       src="https://plausible.io/js/plausible.js"
     ></script>
-    <link rel="stylesheet" media="screen" href="/static/2bit-ui.css?v=3" />
-    <link rel="stylesheet" media="screen" href="/static/style.css?v=3" />
-    <link rel="stylesheet" media="print" href="/static/print.css?v=3" />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="/static/2bit-ui.css?t={{ dateNow }}"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="/static/style.css?t={{ dateNow }}"
+    />
+    <link
+      rel="stylesheet"
+      media="print"
+      href="/static/print.css?t={{ dateNow }}"
+    />
   </head>
   <body>
     <header class="screen-only">
       <div>
-        <a href="/" class="flex align-center logo bit-link"
-          >wavebeem</a
-        >
+        <a href="/" class="flex align-center logo bit-link">wavebeem</a>
         <nav>
           <a class="bit-link" href="/">Home</a>
           <a class="bit-link" href="/blog/">Blog</a>
