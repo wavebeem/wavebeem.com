@@ -34,17 +34,17 @@
     <link
       rel="icon"
       sizes="16x16"
-      href="/static/favicon-16.png?t={{ dateNow }}"
+      href="/static/favicon-16.png?v={{ faviconVersion }}"
     />
     <link
       rel="icon"
       sizes="32x32"
-      href="/static/favicon-32.png?t={{ dateNow }}"
+      href="/static/favicon-32.png?v={{ faviconVersion }}"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/static/photo-180.png?t={{ dateNow }}"
+      href="/static/photo-180.png?v={{ faviconVersion }}"
     />
     <link
       rel="alternate"
@@ -54,7 +54,9 @@
     />
     <meta
       name="og:image"
-      content="https://www.wavebeem.com/static/photo-512.png?t={{ dateNow }}"
+      content="https://www.wavebeem.com/static/photo-512.png?v={{
+        faviconVersion
+      }}"
     />
     <meta name="og:image:width" content="512" />
     <meta name="og:image:height" content="512" />
@@ -67,6 +69,7 @@
       data-domain="wavebeem.com"
       src="https://plausible.io/js/plausible.js"
     ></script>
+    <script type="module" src="/static/sticky-header.js"></script>
     <link
       rel="stylesheet"
       media="screen"
@@ -84,7 +87,7 @@
     />
   </head>
   <body>
-    <header class="screen-only">
+    <header class="screen-only" data-sticky="true">
       <div>
         <a href="/" class="flex align-center logo bit-link">wavebeem</a>
         <nav>
