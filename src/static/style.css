@@ -156,16 +156,9 @@ p:empty {
 
 header {
   border-bottom: 1px solid var(--bit-color-shadow);
-  top: -100%;
-  position: sticky;
   z-index: 100;
   background: var(--color-header-bg);
   box-shadow: 0 6px 0 var(--color-header-shadow);
-  transition: top 500ms;
-}
-
-header[data-sticky="true"] {
-  top: 0;
 }
 
 footer > *,
@@ -631,6 +624,7 @@ figure figcaption {
 
   header {
     top: 0;
+    position: sticky;
   }
 }
 
