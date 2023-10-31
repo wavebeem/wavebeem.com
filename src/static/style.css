@@ -49,7 +49,7 @@
     Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --content-width: 800px;
   overflow-y: scroll;
-  scrollbar-color: var(--color-heading) var(--color-code-bg);
+  scrollbar-color: var(--color-scrollbar-fg) var(--color-scrollbar-bg);
 }
 
 .bit-root,
@@ -61,13 +61,16 @@
 
   --color-heading: hsl(var(--hue-main) 100% 95%);
   --color-fg: hsl(var(--hue-main) 85% 85%);
-  --color-bg: hsl(var(--hue-main) 40% 15%);
+  --color-bg: hsl(var(--hue-main) 40% 20%);
   --color-link: hsl(var(--hue-alt) 90% 50%);
-  --color-border: hsl(var(--hue-main) 40% 30%);
-  --color-syntax-bg: hsl(var(--hue-main) 40% 10%);
+  --color-border: hsl(var(--hue-main) 40% 35%);
+  --color-syntax-bg: hsl(var(--hue-main) 40% 15%);
   --color-code-bg: var(--color-syntax-bg);
   --color-code-fg: var(--color-fg);
-  --color-header-shadow: hsl(var(--hue-main) 40% 15% / 50%);
+  --color-header-bg: hsl(var(--hue-main) 40% 15%);
+  --color-header-shadow: hsl(var(--hue-main) 40% 20% / 50%);
+  --color-scrollbar-fg: var(--color-heading);
+  --color-scrollbar-bg: hsl(var(--hue-main) 40% 10%);
 
   --bit-color-fg: var(--color-fg);
   --bit-color-bg: var(--color-bg);
@@ -153,6 +156,9 @@ p:empty {
 
 header {
   border-bottom: 1px solid var(--bit-color-shadow);
+  z-index: 100;
+  background: var(--color-header-bg);
+  box-shadow: 0 6px 0 var(--color-header-shadow);
 }
 
 footer > *,
@@ -499,11 +505,11 @@ figure figcaption {
 
   --comment: var(--c1);
   --punctuation: var(--c1);
-  --string: var(--c2);
-  --property: var(--c3);
+  --string: var(--c3);
+  --property: var(--c4);
   --operator: hsl(var(--hue-main) 60% 80%);
-  --function: var(--c3);
-  --keyword: var(--c4);
+  --function: var(--c4);
+  --keyword: var(--c2);
 
   --bit-color-fg: hsl(var(--hue-main) 60% 80%);
   --bit-color-bg: var(--color-syntax-bg);
@@ -619,9 +625,6 @@ figure figcaption {
   header {
     top: 0;
     position: sticky;
-    z-index: 100;
-    background: var(--color-bg);
-    box-shadow: 0 6px 0 var(--color-header-shadow);
   }
 }
 
