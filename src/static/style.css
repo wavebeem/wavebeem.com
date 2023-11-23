@@ -621,7 +621,9 @@ figure figcaption {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: space-between;
   }
+}
 
+@media (min-height: 720px) {
   header {
     top: 0;
     position: sticky;
