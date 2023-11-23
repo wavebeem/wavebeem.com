@@ -55,9 +55,9 @@
 .bit-root,
 .bit-auto {
   --hue-main: 250;
-  --hue-alt: 80;
-  --hue-syntax-keyword: 160;
-  --hue-syntax-other: 40;
+  --hue-alt: 85;
+  --hue-syntax-keyword: 180;
+  --hue-syntax-other: 30;
 
   --color-heading: hsl(var(--hue-main) 100% 95%);
   --color-fg: hsl(var(--hue-main) 85% 85%);
@@ -498,20 +498,21 @@ figure figcaption {
 /* --- Syntax highlighting --- */
 
 .bit-auto pre {
-  --c1: hsl(var(--hue-main) 10% 55%);
+  --c1a: hsl(var(--hue-main) 15% 60%);
+  --c1b: hsl(var(--hue-main) 85% 75%);
   --c2: hsl(var(--hue-alt) 80% 60%);
   --c3: hsl(var(--hue-syntax-other) 80% 70%);
   --c4: hsl(var(--hue-syntax-keyword) 80% 70%);
 
-  --comment: var(--c1);
-  --punctuation: var(--c1);
+  --comment: var(--c1a);
+  --punctuation: var(--c1b);
   --string: var(--c3);
   --property: var(--c4);
   --operator: hsl(var(--hue-main) 60% 80%);
   --function: var(--c4);
   --keyword: var(--c2);
 
-  --bit-color-fg: hsl(var(--hue-main) 60% 80%);
+  --bit-color-fg: hsl(var(--hue-main) 85% 85%);
   --bit-color-bg: var(--color-syntax-bg);
 
   background: var(--bit-color-bg);
