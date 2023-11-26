@@ -142,6 +142,7 @@ summary {
   margin-top: 2rem;
 }
 
+h1 .bit-link,
 .post .markdownIt-Anchor {
   text-decoration-line: none;
 }
@@ -195,6 +196,7 @@ h3 .markdownIt-Anchor::before {
   color: var(--color-link);
 }
 
+h1 .bit-link,
 h2 .markdownIt-Anchor:not(:hover):not(:focus),
 h3 .markdownIt-Anchor:not(:hover):not(:focus),
 h2 .markdownIt-Anchor:focus::before,
