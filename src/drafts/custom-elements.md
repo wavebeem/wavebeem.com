@@ -7,7 +7,7 @@ description: |
 
 ## Introduction
 
-[Web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) have been [supported](https://caniuse.com/custom-elementsv1) in every major browser since 2018. Recently I rewrote my [Color Combos](https://color-combos.wavebeem.com/?fg=hsl%28180+100%25+50%25%29%0Aoklch%2880%25+80%25+300%29%0A%23cc0%0Awhite&bg=%23222%0A%23111&group_by=background) website from vanilla JS to web components.
+[Web components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) have been [supported](https://caniuse.com/custom-elementsv1) in every major browser since 2018. Recently I rewrote my [Color Combos](https://color-combos.wavebeem.com/?fg=hsl%28180+100%25+50%25%29%0Aoklch%2880%25+80%25+300%29%0A%23cc0%0Awhite&bg=%23222%0A%23111&group_by=background) website from vanilla JS to web components. This post covers a couple custom elements I wrote, and my thoughts on the API.
 
 ## Why no shadow DOM?
 
