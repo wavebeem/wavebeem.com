@@ -517,6 +517,7 @@ figure figcaption {
 
   background: var(--bit-color-bg);
   color: var(--bit-color-fg);
+  scrollbar-color: var(--color-scrollbar-fg) var(--color-scrollbar-bg);
 }
 
 .token.script {
@@ -570,6 +571,7 @@ figure figcaption {
   color: var(--keyword);
 }
 
+.language-css .token.property,
 .token.attr-name,
 /* .token.property, */
 .token.constant,
