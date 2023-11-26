@@ -100,7 +100,7 @@ item.dataset.background = bg;
 this.append(item);
 ```
 
-I decided to use the [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) API to read `data-*` attributes rather than using `getAttribute`, mostly because I like the syntax, but also out of a slight fear about <q>what if the DOM spec adds a new property with the name of one of my properties?<q>. Can you tell I don't like inheritance? Here's the JS implementation:
+I decided to use the [dataset](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/dataset) API to read `data-*` attributes rather than using `getAttribute`, mostly because I like the syntax, but also out of a slight fear about <q>what if the DOM spec adds a new property with the name of one of my properties?</q>. Can you tell I don't like inheritance? Here's the JS implementation:
 
 ```js
 import { split, getCombinations } from "../util.js";
