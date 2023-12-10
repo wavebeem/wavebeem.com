@@ -514,7 +514,7 @@ figure figcaption {
   --function: var(--c4);
   --keyword: var(--c2);
 
-  --bit-color-fg: hsl(var(--hue-main) 85% 85%);
+  --bit-color-fg: hsl(var(--hue-main) 100% 90%);
   --bit-color-bg: var(--color-syntax-bg);
 
   background: var(--bit-color-bg);
@@ -553,8 +553,7 @@ figure figcaption {
 .token.entity,
 .token.url,
 .language-css .token.string,
-.style .token.string,
-.token.variable {
+.style .token.string {
   color: var(--operator);
 }
 
@@ -576,6 +575,7 @@ figure figcaption {
 .language-css .token.property,
 .token.attr-name,
 /* .token.property, */
+.token.variable,
 .token.constant,
 .token.symbol,
 .token.deleted,
