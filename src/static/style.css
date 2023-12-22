@@ -50,6 +50,9 @@
   --content-width: 800px;
   overflow-y: scroll;
   scrollbar-color: var(--color-scrollbar-fg) var(--color-scrollbar-bg);
+  color-scheme: dark;
+  /* Approximation used for offsetting headings when clicked */
+  --header-height: 100px;
 }
 
 .bit-root,
@@ -83,6 +86,10 @@
 
 * {
   box-sizing: border-box;
+}
+
+:where(h1, h2, h3, h4, h5, h6):target {
+  scroll-margin-top: calc(var(--header-height) + 1rem);
 }
 
 body {
@@ -187,12 +194,12 @@ strong {
 }
 
 h2 .markdownIt-Anchor::before {
-  content: "# ";
+  content: "✧ ";
   color: var(--color-link);
 }
 
 h3 .markdownIt-Anchor::before {
-  content: "## ";
+  content: "✧✧ ";
   color: var(--color-link);
 }
 
@@ -599,6 +606,10 @@ figure figcaption {
 /* --- Media queries --- */
 
 @media (min-width: 600px) {
+  :root {
+    --header-height: 62px;
+  }
+
   header > *,
   footer > * {
     flex-direction: row;
