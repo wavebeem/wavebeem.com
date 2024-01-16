@@ -139,3 +139,72 @@ const p = new Proxy(v, {
 console.log(p.value);
 p.logValue();
 ```
+
+## What about WeakMap?
+
+[WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) can be used to simulate private data, but the behavior will be even worse. Rather than throwing errors about not having access to private data, the underlying map will simply return `undefined` with no explanation.
+
+```js
+const $value = new WeakMap();
+class CoolValue_WeakMap {
+  constructor(value) {
+    $value.set(this, value);
+  }
+
+  get value() {
+    return $value.get(this);
+  }
+
+  logValue() {
+    console.log($value.get(this));
+  }
+}
+
+const v = new CoolValue_WeakMap("hello");
+console.log(v.value);
+//=> "hello"
+
+const p = new Proxy(v, {});
+console.log(p.value);
+// TypeError: can't access private field or method:
+// object is not the right class
+p.logValue();
+// TypeError: can't access private field or method:
+// object is not the right class
+```
+
+## What about hidden Symbol keys?
+
+Using secret `Symbol` values as the keys for "private" values seems to work really well. It's a bit annoying compared to private properties, and it can circumvented if you try really hard, but these properties are invisible to most JS methods.
+
+```js
+const $value = Symbol("CoolValue.value");
+
+class CoolValue_Symbol {
+  constructor(value) {
+    this[$value] = value;
+  }
+
+  get value() {
+    return this[$value];
+  }
+
+  logValue() {
+    console.log(this[$value]);
+  }
+}
+
+const v = new CoolValue_Symbol("hello");
+console.log(v.value);
+//=> "hello"
+
+const p = new Proxy(v, {});
+console.log(p.value);
+//=> "hello"
+p.logValue();
+//=> "hello"
+```
+
+## Inspired by Lea Verou
+
+I was originally inspired by Lea Verou's post [JS private class fields considered harmful](https://lea.verou.me/blog/2023/04/private-fields-considered-harmful/).
