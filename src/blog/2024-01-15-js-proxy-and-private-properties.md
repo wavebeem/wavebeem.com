@@ -41,7 +41,7 @@ You can implement many powerful patterns with `Proxy`, such as objects that thro
 
 Private properties have been [supported in all browsers](https://caniuse.com/mdn-javascript_classes_private_class_fields) since 2021.
 
-Private properties are object properties that can only be accessed from methods defined inside the `class` declaration of an object's constructor. These are usually combined with [setters and gettesr](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) to define custom behavior when reading/writing object properties.
+Private properties are object properties that can only be accessed from methods defined inside the `class` declaration of an object's constructor. These are usually combined with [setters and getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) to define custom behavior when reading/writing object properties.
 
 ```js
 class Thing {
@@ -218,7 +218,7 @@ I wanted to find if there was a workaround for the problem she described. I'm no
 
 ## Combinations of features can be surprising
 
-It's never a pleasant feeling when two features of a language don't combine well like `Proxy` and private properties. I can't help but feel that private properties should've just been syntax sugar over a `Symbol` made behind the scenes anyway. Maybe I'm just a minimalist, but I feel like buildling on top of existing features is good. But I also remember programming in JS before ES5 came out, and frankly it was still a pretty good language even back then (hot take).
+It's never a pleasant feeling when two features of a language don't combine well like `Proxy` and private properties. I can't help but feel that private properties should've just been syntax sugar over a `Symbol` made behind the scenes anyway. Maybe I'm just a minimalist, but I feel like building on top of existing features is good. But I also remember programming in JS before ES5 came out, and frankly it was still a pretty good language even back then (hot take).
 
 Yes, you can use `Object.getOwnPropertySymbols` to enumerate the symbols for an object, but this is nearly impossible to do on accident. If I had the time and energy, maybe I could browse the GitHub discussions for why the private property proposal went with true privacy instead of just being great syntax sugar over nearly-private fields using `Sybmol` keys.
 
