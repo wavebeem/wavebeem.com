@@ -41,7 +41,7 @@ You can implement many powerful patterns with `Proxy`, such as objects that thro
 
 Private properties have been [supported in all browsers](https://caniuse.com/mdn-javascript_classes_private_class_fields) since 2021.
 
-Private properties are properties object properties that can only be accessed from methods defined inside the `class` declaration of an object's constructor. These are usually combined with [setters and gettesr](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) to define custom behavior when reading/writing object properties.
+Private properties are object properties that can only be accessed from methods defined inside the `class` declaration of an object's constructor. These are usually combined with [setters and gettesr](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) to define custom behavior when reading/writing object properties.
 
 ```js
 class Thing {
