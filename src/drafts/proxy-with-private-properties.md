@@ -1,0 +1,141 @@
+---
+title: |
+  How to use Proxy with private properties
+description: |
+  The default Proxy implementation doesn't work well with private properties, but we can fix this!
+---
+
+@[toc]
+
+## What is Proxy?
+
+The JS [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) class allows you to add functions that hook into internal JS features such as the reading and writing object properties.
+
+Proxy has been [supported in all browsers](https://caniuse.com/proxy) since 2016.
+
+```js
+const object = { x: 4, y: 10 };
+
+const proxy = new Proxy(object, {
+  get(target, property, thisValue) {
+    if (property === "x") {
+      return -target.x;
+    }
+    // The `Reflect` class contains the default
+    // implementations of the `Proxy` hooks,
+    // for your convenience
+    return Reflect.get(target, property, thisValue);
+  },
+});
+
+console.log(object.y); //=> 10
+console.log(object.x); //=> 4
+
+console.log(proxy.y); //=> 10
+console.log(proxy.x); //=> -4
+```
+
+You can implement many powerful patterns with `Proxy`, such as objects that throw errors when you try to access missing keys, or listen for modifications to the properties of an object without using [setters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters).
+
+## What are private properties?
+
+Private properties have been [supported in all browsers](https://caniuse.com/mdn-javascript_classes_private_class_fields) since 2021.
+
+Private properties are properties object properties that can only be accessed from methods defined inside the `class` declaration of an object's constructor. These are usually combined with [setters and gettesr](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects#defining_getters_and_setters) to define custom behavior when reading/writing object properties.
+
+```js
+class Thing {
+  #x;
+
+  constructor(value) {
+    this.#x = value;
+  }
+
+  set x(value) {
+    console.log("SET x", value);
+    this.#x = value;
+  }
+
+  get x() {
+    console.log("GET x");
+    return this.#x;
+  }
+}
+
+const thing = new Thing("secret");
+thing.x;
+//=> "GET x"
+console.log(thing.x);
+//=> "GET x"
+//=> "secret"
+console.log(thing.#x);
+// SyntaxError: can't access private property
+// outside of class definition
+
+thing.x = "new_secret";
+//=> "SET x new_secret"
+console.log(thing.x);
+//=> "GET x"
+//=> "new_secret"
+```
+
+## What happens when you combine them?
+
+You might expect that if you make a `Proxy` but don't add any hook function, that the new proxy would behave more or less identicaly to the original object.
+
+This is mostly true, but unfortunately methods that reference private properties will crash by default.
+
+```js
+class CoolValue {
+  #value;
+
+  constructor(value) {
+    this.#value = value;
+  }
+
+  get value() {
+    return this.#value;
+  }
+
+  logValue() {
+    console.log(this.#value);
+  }
+}
+
+const v = new CoolValue("hello");
+console.log(v.value);
+//=> "hello"
+
+const p = new Proxy(v, {});
+console.log(p.value);
+// TypeError: can't access private field or method:
+// object is not the right class
+p.logValue();
+// TypeError: can't access private field or method:
+// object is not the right class
+```
+
+We can fix this problem by defining a different `get` hook for the `Proxy`.
+
+```js
+const p = new Proxy(v, {
+  get(target, prop, thisValue) {
+    // Ignore `thisValue`, which is the proxy itself.
+    // `target` is the original object known here as `v`.
+    // This could also be written as `target[prop]`.
+    const value = Reflect.get(target, prop, target);
+    // If the value is a function, we need to bind the function
+    // to use the correct `this` value of `target`,
+    // the underlying object. Otherwise `this` will be
+    // set to `thisValue`, which is the proxy.
+    // The proxy doesn't have access to the
+    // private properties of the class.
+    if (typeof value === "function") {
+      return value.bind(target);
+    }
+    return value;
+  },
+});
+console.log(p.value);
+p.logValue();
+```
