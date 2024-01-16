@@ -166,11 +166,9 @@ console.log(v.value);
 
 const p = new Proxy(v, {});
 console.log(p.value);
-// TypeError: can't access private field or method:
-// object is not the right class
+//=> undefined
 p.logValue();
-// TypeError: can't access private field or method:
-// object is not the right class
+//=> undefined
 ```
 
 ## What about Symbol keys?
