@@ -71,7 +71,7 @@
   --color-code-bg: var(--color-syntax-bg);
   --color-code-fg: var(--color-fg);
   --color-header-bg: hsl(var(--hue-main) 40% 15%);
-  --color-header-shadow: hsl(var(--hue-main) 40% 20% / 50%);
+  --color-header-shadow: hsl(var(--hue-main) 40% 15% / 30%);
   --color-scrollbar-fg: var(--color-heading);
   --color-scrollbar-bg: hsl(var(--hue-main) 40% 10%);
 
@@ -88,6 +88,7 @@
   box-sizing: border-box;
 }
 
+/* Offset headings by header height for #fragment links */
 :where(h1, h2, h3, h4, h5, h6):target {
   scroll-margin-top: calc(var(--header-height) + 1rem);
 }
@@ -166,7 +167,6 @@ header {
   border-bottom: 1px solid var(--bit-color-shadow);
   z-index: 100;
   background: var(--color-header-bg);
-  box-shadow: 0 6px 0 var(--color-header-shadow);
 }
 
 footer > *,
@@ -507,6 +507,13 @@ figure figcaption {
 /* --- Syntax highlighting --- */
 
 .bit-auto pre {
+  /* Extend into the gutter for better text alignment */
+  margin: 1rem -1rem;
+
+  border: 1px solid var(--bit-color-shadow);
+  border-left-width: 0;
+  border-right-width: 0;
+
   --c1a: hsl(var(--hue-main) 15% 60%);
   --c1b: hsl(var(--hue-main) 85% 75%);
   --c2: hsl(var(--hue-alt) 80% 60%);
@@ -624,6 +631,13 @@ figure figcaption {
 }
 
 @media (min-width: 800px) {
+  /* Avoid slamming code blocks into the padding of the page */
+  .bit-auto pre {
+    border-width: 1px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   .avatar img {
     width: 160px;
     height: 160px;
@@ -639,10 +653,20 @@ figure figcaption {
   }
 }
 
+@media (min-width: 900px) {
+  /* Align code block text with body text */
+  .bit-auto pre {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
 @media (min-height: 720px) {
   header {
     top: 0;
     position: sticky;
+    /* Add a shadow to the sticky header for depth */
+    box-shadow: 0 4px 0 var(--color-header-shadow);
   }
 }
 
