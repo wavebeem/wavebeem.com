@@ -7,7 +7,7 @@ description: |
 
 <script
   type="module"
-  src="/static/elements/wavebeem-toy-flashlight.js"
+  src="/static/elements/wavebeem-toy-flashlight.js?t={{ dateNow }}"
 ></script>
 
 ## Making toys for the web
