@@ -1,0 +1,98 @@
+const html = String.raw;
+const css = String.raw;
+
+class WavebeemToyFlashlight extends HTMLElement {
+  #abortController = new AbortController();
+
+  static css = css`
+    .flashlight {
+      --x: 400px;
+      --y: 400px;
+      z-index: var(--z-index, 100);
+      top: 0;
+      left: 0;
+      width: 30vmin;
+      height: 30vmin;
+      filter: blur(8px);
+      box-shadow: 0 0 0 200vmax hsl(0 0% 0% / 95%);
+      background: radial-gradient(
+        hsl(0 0% 90% / 30%),
+        hsl(0 0% 90% / 10%) 30% 40%
+      );
+      position: fixed;
+      border-radius: 9999px;
+      translate: -50% -50%;
+      transform: translate(var(--x), var(--y));
+      transform-origin: -50% -50%;
+      cursor: none;
+      pointer-events: none;
+      mix-blend-mode: hard-light;
+    }
+  `;
+
+  constructor() {
+    super();
+    this.attachShadow({ mode: "open" });
+  }
+
+  connectedCallback() {
+    this.shadowRoot.innerHTML = html`
+      <style>
+        ${this.constructor.css}
+      </style>
+      <div class="flashlight" id="flashlight"></div>
+      <slot></slot>
+    `;
+    const { signal } = this.#abortController;
+    this.#abortController = new AbortController();
+    // Listen for pointer movement on the whole page, not just this element
+    addEventListener(
+      "pointermove",
+      (event) => {
+        this.#onPointerMove(event);
+      },
+      { signal }
+    );
+    // Clicks inside this element toggle the flashlight
+    this.shadowRoot.addEventListener(
+      "click",
+      (event) => {
+        this.#onClick(event);
+      },
+      { signal }
+    );
+  }
+
+  #flashlight() {
+    return this.#$("#flashlight");
+  }
+
+  #setPosition(x, y) {
+    const flashlight = this.#flashlight();
+    flashlight.style.setProperty("--x", `${x}px`);
+    flashlight.style.setProperty("--y", `${y}px`);
+  }
+
+  #onPointerMove(event) {
+    this.#setPosition(event.clientX, event.clientY);
+  }
+
+  #onClick(event) {
+    const flashlight = this.#flashlight();
+    flashlight.hidden = !flashlight.hidden;
+  }
+
+  disconnectedCallback() {
+    this.#abortController.abort();
+  }
+
+  #$(selector) {
+    const element = this.shadowRoot.querySelector(selector);
+    if (!element) {
+      throw new Error(`no such element: ${selector}`);
+    }
+    return element;
+  }
+}
+
+customElements.define("wavebeem-toy-flashlight", WavebeemToyFlashlight);
