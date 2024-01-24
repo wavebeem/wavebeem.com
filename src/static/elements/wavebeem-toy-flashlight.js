@@ -77,7 +77,13 @@ class WavebeemToyFlashlight extends HTMLElement {
 
   #onClick(event) {
     const flashlight = this.#flashlight();
-    flashlight.hidden = !flashlight.hidden;
+    if (flashlight.hidden) {
+      flashlight.hidden = false;
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      flashlight.hidden = true;
+      document.documentElement.style.overflow = "";
+    }
   }
 
   disconnectedCallback() {
