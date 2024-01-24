@@ -18,8 +18,8 @@ class WavebeemToyFlashlight extends HTMLElement {
           z-index: var(--z-index, 100);
           top: 0;
           left: 0;
-          width: 30vmin;
-          height: 30vmin;
+          width: 30vmax;
+          height: 30vmax;
           filter: blur(8px);
           box-shadow: 0 0 0 200vmax hsl(0 0% 0% / 95%);
           background: radial-gradient(
@@ -79,10 +79,8 @@ class WavebeemToyFlashlight extends HTMLElement {
     const flashlight = this.#flashlight();
     if (flashlight.hidden) {
       flashlight.hidden = false;
-      document.documentElement.style.overflow = "hidden";
     } else {
       flashlight.hidden = true;
-      document.documentElement.style.overflow = "";
     }
   }
 
