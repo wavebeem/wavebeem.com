@@ -20,8 +20,6 @@ class WavebeemToyFlashlight extends HTMLElement {
           --x: 0px;
           --y: 0px;
           --z-index: 100;
-          --skew-x: 0deg;
-          --skew-y: 0deg;
           z-index: var(--z-index);
           top: 0;
           left: 0;
@@ -36,9 +34,7 @@ class WavebeemToyFlashlight extends HTMLElement {
           position: fixed;
           border-radius: 9999px;
           translate: -50% -50%;
-          transform: translate(var(--x), var(--y))
-            skew(var(--skew-x), var(--skew-y));
-          transform-origin: -50% -50%;
+          transform: translate(var(--x), var(--y));
           cursor: none;
           pointer-events: none;
           mix-blend-mode: hard-light;
@@ -74,18 +70,11 @@ class WavebeemToyFlashlight extends HTMLElement {
   }
 
   #onPointerMove(event) {
-    const root = document.documentElement;
-    const width = root.clientWidth;
-    const height = root.clientHeight;
     const x = event.clientX;
     const y = event.clientY;
-    const skewX = ((x - width / 2) / width) * 0.025;
-    const skewY = ((y - height / 2) / height) * 0.025;
     const flashlight = this.#flashlight();
     flashlight.style.setProperty("--x", `${x}px`);
     flashlight.style.setProperty("--y", `${y}px`);
-    flashlight.style.setProperty("--skew-x", `${skewX}turn`);
-    flashlight.style.setProperty("--skew-y", `${skewY}turn`);
   }
 
   #onClick(event) {
@@ -115,3 +104,7 @@ class WavebeemToyFlashlight extends HTMLElement {
 }
 
 customElements.define("wavebeem-toy-flashlight", WavebeemToyFlashlight);
+
+function lerp(a, b, t) {
+  return (1 - t) * a + t * b;
+}
