@@ -1,8 +1,8 @@
 ---
 title: |
-  Flashlight toy
+  Flashlight: Making toys for the web
 description: |
-  This is a toy flashlight in JS
+  I made a toy flashlight for the web. It simulates darkening the web page and following the cursor. It looks somewhat convincingly like a flashlight. Enjoy!
 ---
 
 <script
@@ -10,15 +10,17 @@ description: |
   src="/static/elements/wavebeem-toy-flashlight.js?t={{ dateNow }}"
 ></script>
 
-## Making toys for the web
+## Introducing: Flashlight
 
 I recently created [netpet](https://netpet.wavebeem.com/), a Tamagotchi-like virtual pet. I realized that one of my favorite things to do is making a small web application that doesn't have any real value besides a small amount of entertainment.
 
 Today I made a flashlight you can toggle on this page.
 
 <wavebeem-toy-flashlight>
-  <button class="bit-button">Toggle flashlight mode</button>
+  <button class="bit-button"><i>Toggle flashlight mode</i></button>
 </wavebeem-toy-flashlight>
+
+[View source](/static/elements/wavebeem-toy-flashlight.js)
 
 ## Why I wanted to learn programming
 

@@ -12,16 +12,21 @@ class WavebeemToyFlashlight extends HTMLElement {
   connectedCallback() {
     this.shadowRoot.innerHTML = html`
       <style>
+        :host {
+          display: block;
+        }
+
         .flashlight {
-          --x: 400px;
-          --y: 400px;
-          z-index: var(--z-index, 100);
+          --x: 0px;
+          --y: 0px;
+          --z-index: 100;
+          z-index: var(--z-index);
           top: 0;
           left: 0;
           width: 30vmax;
           height: 30vmax;
           filter: blur(8px);
-          box-shadow: 0 0 0 200vmax hsl(0 0% 0% / 95%);
+          box-shadow: 0 0 0 200vmax hsl(0 0% 0% / 85%);
           background: radial-gradient(
             hsl(0 0% 90% / 30%),
             hsl(0 0% 90% / 10%) 30% 40%
@@ -65,22 +70,22 @@ class WavebeemToyFlashlight extends HTMLElement {
     return this.#$("#flashlight");
   }
 
-  #setPosition(x, y) {
-    const flashlight = this.#flashlight();
-    flashlight.style.setProperty("--x", `${x}px`);
-    flashlight.style.setProperty("--y", `${y}px`);
-  }
-
   #onPointerMove(event) {
-    this.#setPosition(event.clientX, event.clientY);
+    const flashlight = this.#flashlight();
+    flashlight.style.setProperty("--x", `${event.clientX}px`);
+    flashlight.style.setProperty("--y", `${event.clientY}px`);
   }
 
   #onClick(event) {
     const flashlight = this.#flashlight();
     if (flashlight.hidden) {
       flashlight.hidden = false;
+      // Disable touch scrolling in Chrome since it causes us to lose the
+      // `pointermove` event entirely...
+      document.documentElement.style.touchAction = "none";
     } else {
       flashlight.hidden = true;
+      document.documentElement.style.touchAction = "";
     }
   }
 
