@@ -9,7 +9,11 @@ layout: "layout-base"
   <div class="avatar bit-card">
     <img
       alt=""
-      src="/static/photo-360.png"
+      srcset="
+        /static/photo-180.jpg?v={{ photoVersion }} 1x,
+        /static/photo-360.jpg?v={{ photoVersion }} 2x
+      "
+      src="/static/photo-360.jpg"
       width="120"
       height="120"
       data-bizarro-button
@@ -88,6 +92,16 @@ layout: "layout-base"
     </summary>
     <div class="grid-2">
       <section class="bit-card">
+        <h3 class="card-heading">netpet</h3>
+        <p class="m0">
+          I created
+          <a class="bit-link" href="https://netpet.wavebeem.com/">netpet</a>, a
+          Tamagotchi-like virtual pet using 100% web platform technologies and
+          no build tools
+        </p>
+      </section>
+
+      <section class="bit-card">
         <h3 class="card-heading">Kaomoji Picker</h3>
         <p class="m0">
           I created a
@@ -120,11 +134,20 @@ layout: "layout-base"
       </section>
 
       <section class="bit-card">
+        <h3 class="card-heading">the jpeg zone</h3>
+        <p class="m0">
+          I created
+          <a class="bit-link" href="https://jpeg.wavebeem.com/">the jpeg zone</a
+          >, a website for making <q>deep fried</q> memes using extreme JPEG
+          compression.
+        </p>
+      </section>
+
+      <section class="bit-card">
         <h3 class="card-heading">codehost</h3>
         <p class="m0">
           I created
-          <a class="bit-link" href="https://codehost.wavebeem.com/"
-            >codehost</a
+          <a class="bit-link" href="https://codehost.wavebeem.com/">codehost</a
           >, a code syntax highlighting tool for writing blog posts with code
           samples on <a class="bit-link" href="https://cohost.org">cohost</a>.
         </p>

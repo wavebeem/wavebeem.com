@@ -31,6 +31,7 @@
     />
     <meta name="author" content="wavebeem" />
     <meta name="description" content="{{ description }}" />
+    <meta name="theme-color" content="hsl(250 40% 15%)" />
     <link
       rel="icon"
       sizes="16x16"
@@ -44,17 +45,17 @@
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/static/photo-180.png?v={{ faviconVersion }}"
+      href="/static/photo-180.jpg?v={{ photoVersion }}"
     />
     <link
       rel="alternate"
-      type="application/rss+xml"
+      type="application/atom+xml"
       href="https://www.wavebeem.com/feed.xml"
       title="Subscribe to wavebeem.com"
     />
     <meta
       name="og:image"
-      content="https://www.wavebeem.com/static/photo-512.png?v={{
+      content="https://www.wavebeem.com/static/photo-512.jpg?v={{
         photoVersion
       }}"
     />
@@ -88,7 +89,9 @@
   <body>
     <header class="screen-only">
       <div>
-        <a href="/" class="flex align-center logo bit-link">wavebeem</a>
+        <a href="/" class="flex align-center logo bit-link"
+          >wavebeem<span aria-hidden="true">&nbsp;*-</span>
+        </a>
         <nav>
           <a class="bit-link" href="/">Home</a>
           <a class="bit-link" href="/blog/">Blog</a>
