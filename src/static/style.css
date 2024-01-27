@@ -507,12 +507,7 @@ figure figcaption {
 /* --- Syntax highlighting --- */
 
 .bit-auto pre {
-  /* Extend into the gutter for better text alignment */
-  margin: 1rem -1rem;
-
   border: 1px solid var(--bit-color-shadow);
-  border-left-width: 0;
-  border-right-width: 0;
 
   --c1a: hsl(var(--hue-main) 15% 60%);
   --c1b: hsl(var(--hue-main) 85% 75%);
@@ -631,13 +626,6 @@ figure figcaption {
 }
 
 @media (min-width: 800px) {
-  /* Avoid slamming code blocks into the padding of the page */
-  .bit-auto pre {
-    border-width: 1px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
   .avatar img {
     width: 160px;
     height: 160px;
@@ -650,14 +638,6 @@ figure figcaption {
   .art-container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-content: space-between;
-  }
-}
-
-@media (min-width: 900px) {
-  /* Align code block text with body text */
-  .bit-auto pre {
-    margin-left: -1rem;
-    margin-right: -1rem;
   }
 }
 
