@@ -297,12 +297,16 @@ p {
 }
 
 ul {
-  padding-left: 1.25rem;
-  list-style-type: square;
+  padding-left: 1em;
+  list-style-type: disc;
 }
 
 ol {
-  padding-left: 1.5rem;
+  padding-left: 1em;
+}
+
+:where(ul, ol, details) ::marker {
+  color: var(--color-fg-bright);
 }
 
 .box-grid > * {
