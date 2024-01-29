@@ -22,12 +22,8 @@ This operator is designed to "pierce the shadow DOM". This means that it splits 
 ```js
 function find(root, selector) {
   const [first, ...rest] = selector.split(">>>");
-  return find_(root.querySelector(first), rest);
-}
-
-function find_(root, selectorList) {
-  let element = root;
-  for (const selector of selectorList) {
+  let element = root.querySelector(first);
+  for (const selector of rest) {
     element = element.shadowRoot.querySelector(selector);
   }
   return element;
