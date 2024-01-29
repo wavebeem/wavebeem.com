@@ -62,26 +62,26 @@
   --hue-syntax-keyword: 180;
   --hue-syntax-other: 30;
 
-  --color-heading: hsl(var(--hue-main) 100% 95%);
+  --color-fg-bright: hsl(var(--hue-main) 100% 95%);
   --color-fg: hsl(var(--hue-main) 85% 85%);
   --color-bg: hsl(var(--hue-main) 40% 20%);
   --color-link: hsl(var(--hue-alt) 90% 50%);
   --color-border: hsl(var(--hue-main) 40% 35%);
+  --color-syntax-fg: hsl(var(--hue-main) 100% 90%);
   --color-syntax-bg: hsl(var(--hue-main) 40% 15%);
-  --color-code-bg: var(--color-syntax-bg);
-  --color-code-fg: var(--color-fg);
+  --color-code-bg: hsl(var(--hue-main) 40% 15%);
+  --color-code-fg: hsl(var(--hue-main) 100% 95%);
   --color-header-bg: hsl(var(--hue-main) 40% 15%);
   --color-header-shadow: hsl(var(--hue-main) 40% 15% / 30%);
-  --color-scrollbar-fg: var(--color-heading);
+  --color-scrollbar-fg: var(--color-fg-bright);
   --color-scrollbar-bg: hsl(var(--hue-main) 40% 10%);
+  --color-avatar-bg: var(--color-code-bg);
 
   --bit-color-fg: var(--color-fg);
   --bit-color-bg: var(--color-bg);
   --bit-color-shadow: var(--color-border);
   --bit-color-accent: var(--color-link);
-
-  --color-avatar-bg: var(--color-code-bg);
-  --bit-border-radius: 0px;
+  --bit-border-radius: 6px;
 }
 
 * {
@@ -183,14 +183,14 @@ h1,
 h2,
 h3 {
   margin: 2rem 0 1rem 0;
-  color: var(--color-heading);
+  color: var(--color-fg-bright);
 }
 
 b,
 i,
 em,
 strong {
-  color: var(--color-heading);
+  color: var(--color-fg-bright);
 }
 
 h2 .markdownIt-Anchor::before {
@@ -251,7 +251,7 @@ details[open] > summary {
 
 .logo {
   font-family: var(--font-logo);
-  color: var(--color-heading);
+  color: var(--color-fg-bright);
   text-decoration-line: none;
   font-size: 1.5rem;
   letter-spacing: 1px;
@@ -332,7 +332,7 @@ blockquote {
 
 figure {
   margin: 1rem 0;
-  color: var(--color-code-fg);
+  color: var(--color-fg-bright);
 }
 
 figure img {
@@ -359,8 +359,6 @@ figure figcaption {
 }
 
 .art-container--frame {
-  --padding: 1px;
-  --inner-radius: calc(var(--bit-border-radius) - var(--padding));
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -373,7 +371,7 @@ figure figcaption {
 }
 
 .art-container--frame img {
-  border-radius: var(--inner-radius);
+  border-radius: 0;
 }
 
 .art-container--frame figcaption {
@@ -523,7 +521,7 @@ figure figcaption {
   --function: var(--c4);
   --keyword: var(--c2);
 
-  --bit-color-fg: hsl(var(--hue-main) 100% 90%);
+  --bit-color-fg: var(--color-syntax-fg);
   --bit-color-bg: var(--color-syntax-bg);
 
   background: var(--bit-color-bg);
