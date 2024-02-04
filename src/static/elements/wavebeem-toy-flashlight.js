@@ -104,7 +104,3 @@ class WavebeemToyFlashlight extends HTMLElement {
 }
 
 customElements.define("wavebeem-toy-flashlight", WavebeemToyFlashlight);
-
-function lerp(a, b, t) {
-  return (1 - t) * a + t * b;
-}

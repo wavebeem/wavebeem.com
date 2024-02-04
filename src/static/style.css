@@ -193,6 +193,15 @@ strong {
   color: var(--color-fg-bright);
 }
 
+:not(pre) > code {
+  color: var(--color-fg-bright);
+}
+
+.bit-primary::marker,
+.bit-primary :is(b, i, em, strong, ::marker) {
+  color: inherit;
+}
+
 h2 .markdownIt-Anchor::before {
   content: "✧ ";
   color: var(--color-link);
@@ -320,11 +329,6 @@ pre {
   font-family: var(--font-mono);
   font-size: 1rem;
   font-variant-ligatures: none;
-}
-
-code {
-  --bit-color-fg: var(--color-code-bg);
-  --bit-color-bg: var(--color-code-fg);
 }
 
 blockquote {

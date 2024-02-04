@@ -17,7 +17,7 @@ I recently created [netpet](https://netpet.wavebeem.com/), a Tamagotchi-like vir
 Today I made a flashlight you can toggle on this page.
 
 <wavebeem-toy-flashlight>
-  <button class="bit-button"><i>Toggle flashlight mode</i></button>
+  <button class="bit-button bit-primary">Toggle flashlight mode</button>
 </wavebeem-toy-flashlight>
 
 [View source](/static/elements/wavebeem-toy-flashlight.js)
