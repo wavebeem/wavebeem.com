@@ -72,7 +72,6 @@
   --color-code-bg: hsl(var(--hue-main) 40% 15%);
   --color-code-fg: hsl(var(--hue-main) 100% 95%);
   --color-header-bg: hsl(var(--hue-main) 40% 15%);
-  --color-header-shadow: hsl(var(--hue-main) 40% 15% / 30%);
   --color-scrollbar-fg: var(--color-fg-bright);
   --color-scrollbar-bg: hsl(var(--hue-main) 40% 10%);
   --color-avatar-bg: var(--color-code-bg);
@@ -651,8 +650,6 @@ figure figcaption {
   header {
     top: 0;
     position: sticky;
-    /* Add a shadow to the sticky header for depth */
-    box-shadow: 0 4px 0 var(--color-header-shadow);
   }
 }
 
