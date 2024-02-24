@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bit-root bit-scrollbar">
+<html lang="en" class="candy-root candy-scrollbar">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="content-security-policy" content="{{ csp | safe }}" />
@@ -73,7 +73,7 @@
     <link
       rel="stylesheet"
       media="screen"
-      href="/static/2bit-ui.css?t={{ dateNow }}"
+      href="/static/candy.css?t={{ dateNow }}"
     />
     <link
       rel="stylesheet"
@@ -87,21 +87,21 @@
     />
   </head>
   <body>
-    <header class="screen-only">
+    <header class="screen-only candy-texture-striped">
       <div>
-        <a href="/" class="flex align-center logo bit-link"
+        <a href="/" class="flex align-center logo candy-link"
           >wavebeem<span aria-hidden="true">&nbsp;*-</span>
         </a>
         <nav>
-          <a class="bit-link" href="/">Home</a>
-          <a class="bit-link" href="/blog/">Blog</a>
-          <a class="bit-link" href="/art/">Art</a>
-          <a class="bit-link" href="/resume/">Resume</a>
+          <a class="candy-link" href="/">Home</a>
+          <a class="candy-link" href="/blog/">Blog</a>
+          <a class="candy-link" href="/art/">Art</a>
+          <a class="candy-link" href="/resume/">Resume</a>
         </nav>
       </div>
     </header>
     {{ content | safe }}
-    <footer class="screen-only">
+    <footer class="screen-only candy-texture-concave">
       <div>
         <span>
           &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i>wavebeem</i>)

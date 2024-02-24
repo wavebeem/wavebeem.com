@@ -41,12 +41,12 @@
   --content-width: 768px;
   --hue-main: 200;
   --hue-accent: 150;
-  --bit-color0: hsl(var(--hue-main), 10%, 80%);
-  --bit-color1: hsl(var(--hue-main), 20%, 15%);
+  --candy-color0: hsl(var(--hue-main), 10%, 80%);
+  --candy-color1: hsl(var(--hue-main), 20%, 15%);
   --color-bg-alt: hsl(var(--hue-main), 20%, 10%);
   --color-link: hsl(var(--hue-accent), 60%, 60%);
 
-  scrollbar-color: var(--bit-color0) var(--color-bg-alt);
+  scrollbar-color: var(--candy-color0) var(--color-bg-alt);
 }
 
 * {
@@ -107,11 +107,11 @@ nav {
 h1,
 h2 {
   margin-bottom: 0;
-  border-bottom: var(--bit-border-width) dotted;
+  border-bottom: var(--candy-border-width) dotted;
 }
 
 :any-link {
-  --bit-color0: var(--color-link);
+  --candy-color0: var(--color-link);
 }
 
 .button-grid {

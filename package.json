@@ -5,6 +5,7 @@
   "description": "wavebeem.com",
   "scripts": {
     "upgrade:2bit-ui": "curl -sSL https://2bit-ui.wavebeem.com/2bit-ui.css > src/static/2bit-ui.css",
+    "upgrade:candy": "curl -sSL https://candy.wavebeem.com/candy.css > src/static/candy.css",
     "start": "eleventy --serve --quiet",
     "upgrade": "npm-check -u",
     "build": "eleventy"

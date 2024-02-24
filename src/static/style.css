@@ -49,38 +49,41 @@
     Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --content-width: 800px;
   overflow-y: scroll;
-  scrollbar-color: var(--color-scrollbar-fg) var(--color-scrollbar-bg);
   color-scheme: dark;
   /* Approximation used for offsetting headings when clicked */
   --header-height: 100px;
 }
 
-.bit-root,
-.bit-auto {
+/* .candy-root,
+.candy-auto {
   --hue-main: 250;
   --hue-alt: 85;
   --hue-syntax-keyword: 180;
   --hue-syntax-other: 30;
+} */
 
-  --color-fg-bright: hsl(var(--hue-main) 100% 95%);
-  --color-fg: hsl(var(--hue-main) 85% 85%);
-  --color-bg: hsl(var(--hue-main) 40% 20%);
-  --color-link: hsl(var(--hue-alt) 90% 50%);
-  --color-border: hsl(var(--hue-main) 40% 35%);
-  --color-syntax-fg: hsl(var(--hue-main) 100% 90%);
-  --color-syntax-bg: hsl(var(--hue-main) 40% 15%);
-  --color-code-bg: hsl(var(--hue-main) 40% 15%);
-  --color-code-fg: hsl(var(--hue-main) 100% 95%);
-  --color-header-bg: hsl(var(--hue-main) 40% 15%);
-  --color-scrollbar-fg: var(--color-fg-bright);
-  --color-scrollbar-bg: hsl(var(--hue-main) 40% 10%);
-  --color-avatar-bg: var(--color-code-bg);
+.candy-auto,
+.candy-root {
+  --candy-color-background1: hsl(160 50% 18%);
+  --candy-color-background2: hsl(160 50% 16%);
+  --candy-color-background3: hsl(160 50% 13%);
+  --candy-color-background4: hsl(160 50% 10%);
+  --candy-color-text1: hsl(160 50% 90%);
+  --candy-color-text2: hsl(160 50% 70%);
+  --candy-color-border1: hsl(160 50% 40%);
+  --candy-color-border2: hsl(160 50% 26%);
+  --candy-color-border3: hsl(160 50% 22%);
+  --candy-color-accent1: hsl(85 90% 50%);
+  --candy-color-accent2: hsl(85 90% 90%);
+  --candy-color-shadow1: hsl(160 50% 5% / 50%);
+}
 
-  --bit-color-fg: var(--color-fg);
-  --bit-color-bg: var(--color-bg);
-  --bit-color-shadow: var(--color-border);
-  --bit-color-accent: var(--color-link);
-  --bit-border-radius: 6px;
+.candy-primary:where(:not(:disabled)) {
+  --candy-color-background2: hsl(85 0% 90%);
+  --candy-color-background3: hsl(85 0% 82%);
+  --candy-color-shadow1: hsl(200 50% 5% / 70%);
+  --candy-color-text1: hsl(85 0% 10%);
+  --candy-color-border1: hsl(85 50% 100%);
 }
 
 * {
@@ -131,7 +134,7 @@ summary {
 }
 
 .post dd {
-  border-left: 1px solid var(--bit-color-shadow);
+  border-left: 1px solid var(--candy-color-shadow);
   margin-left: 0;
   padding-left: 2rem;
 }
@@ -149,7 +152,7 @@ summary {
   margin-top: 2rem;
 }
 
-h1 .bit-link,
+h1 .candy-link,
 .post .markdownIt-Anchor {
   text-decoration-line: none;
 }
@@ -163,9 +166,8 @@ p:empty {
 }
 
 header {
-  border-bottom: 1px solid var(--bit-color-shadow);
-  z-index: 100;
-  background: var(--color-header-bg);
+  border-bottom: 1px solid var(--candy-color-border2);
+  isolation: isolate;
 }
 
 footer > *,
@@ -182,36 +184,36 @@ h1,
 h2,
 h3 {
   margin: 2rem 0 1rem 0;
-  color: var(--color-fg-bright);
+  color: var(--candy-color-text1);
 }
 
 b,
 i,
 em,
 strong {
-  color: var(--color-fg-bright);
+  color: var(--candy-color-text1);
 }
 
 :not(pre) > code {
-  color: var(--color-fg-bright);
+  color: var(--candy-color-text1);
 }
 
-.bit-primary::marker,
-.bit-primary :is(b, i, em, strong, ::marker) {
+.candy-primary::marker,
+.candy-primary :is(b, i, em, strong, ::marker) {
   color: inherit;
 }
 
 h2 .markdownIt-Anchor::before {
   content: "✧ ";
-  color: var(--color-link);
+  color: var(--candy-color-accent1);
 }
 
 h3 .markdownIt-Anchor::before {
   content: "✧✧ ";
-  color: var(--color-link);
+  color: var(--candy-color-accent1);
 }
 
-h1 .bit-link,
+h1 .candy-link,
 h2 .markdownIt-Anchor:not(:hover):not(:focus),
 h3 .markdownIt-Anchor:not(:hover):not(:focus),
 h2 .markdownIt-Anchor:focus::before,
@@ -238,7 +240,7 @@ details[open] > summary {
 }
 
 .bizarro {
-  filter: hue-rotate(260deg);
+  filter: hue-rotate(100deg);
 }
 
 .width-max-content {
@@ -259,7 +261,7 @@ details[open] > summary {
 
 .logo {
   font-family: var(--font-logo);
-  color: var(--color-fg-bright);
+  color: var(--candy-color-text1);
   text-decoration-line: none;
   font-size: 1.5rem;
   letter-spacing: 1px;
@@ -288,15 +290,13 @@ details[open] > summary {
   font-weight: bold;
 }
 
-nav .bit-link {
+nav .candy-link {
   text-decoration-line: none;
 }
 
 footer {
   font-size: 1rem;
-  border-top: 1px solid var(--bit-color-shadow);
-  background: var(--color-footer-bg);
-  color: var(--color-footer-fg);
+  border-top: 1px solid var(--candy-color-border2);
   margin-top: 2rem;
 }
 
@@ -314,7 +314,7 @@ ol {
 }
 
 :where(ul, ol, details) ::marker {
-  color: var(--color-fg-bright);
+  color: var(--candy-color-text1);
 }
 
 .box-grid > * {
@@ -331,7 +331,7 @@ pre {
 }
 
 blockquote {
-  border-left: 1px solid var(--bit-color-shadow);
+  border-left: 1px solid var(--candy-color-shadow);
   margin-left: 0;
   padding-left: 2rem;
   font-style: italic;
@@ -339,13 +339,12 @@ blockquote {
 
 figure {
   margin: 1rem 0;
-  color: var(--color-fg-bright);
+  color: var(--candy-color-text1);
 }
 
 figure img {
   width: 100%;
   height: auto;
-  border-radius: var(--bit-border-radius);
 }
 
 figure figcaption {
@@ -373,8 +372,10 @@ figure figcaption {
   margin-bottom: 0.5rem;
 }
 
-.art-container--frame .bit-box {
-  --bit-color-shadow: var(--color-fg);
+.art-container--frame > .candy-box {
+  border-radius: 2px;
+  padding: 1px;
+  background: black;
 }
 
 .art-container--frame img {
@@ -438,7 +439,7 @@ figure figcaption {
 
 .avatar img {
   border-radius: calc(var(--radius) - var(--padding));
-  background: var(--color-avatar-bg);
+  background: var(--candy-color-background2);
 }
 
 .bizarro .avatar {
@@ -479,23 +480,23 @@ figure figcaption {
 
 /* --- Page specific styles --- */
 
-[data-page="resume"] .bit-table {
-  --bit-table-padding-vertical: 0.5rem;
-  --bit-table-padding-horizontal: 0.5rem;
+[data-page="resume"] .candy-table {
+  --candy-table-padding-vertical: 0.5rem;
+  --candy-table-padding-horizontal: 0.5rem;
 }
 
-[data-page="resume"] .bit-table a:not(:hover) {
+[data-page="resume"] .candy-table a:not(:hover) {
   text-decoration-line: none;
 }
 
 [data-page="resume"] h1 small,
 [data-page="resume"] h2 small,
 [data-page="resume"] h3 small {
-  color: var(--color-fg);
+  color: var(--candy-color-text2);
   font-weight: normal;
 }
 
-[data-page="resume"] .bit-card ul:last-of-type {
+[data-page="resume"] .candy-card ul:last-of-type {
   margin-bottom: 0;
 }
 
@@ -511,33 +512,29 @@ figure figcaption {
 
 /* --- Syntax highlighting --- */
 
-.bit-auto pre {
-  border: 1px solid var(--bit-color-shadow);
+.candy-auto pre {
+  border: 1px solid var(--candy-color-border2);
 
-  --c1a: hsl(var(--hue-main) 15% 60%);
-  --c1b: hsl(var(--hue-main) 85% 75%);
-  --c2: hsl(var(--hue-alt) 80% 60%);
-  --c3: hsl(var(--hue-syntax-other) 80% 70%);
-  --c4: hsl(var(--hue-syntax-keyword) 80% 70%);
+  --c1a: hsl(160 20% 50%);
+  --c1b: hsl(160 50% 50%);
+  --c2: hsl(85 80% 60%);
+  --c3: hsl(330 90% 80%);
+  --c4: hsl(20 90% 80%);
 
   --comment: var(--c1a);
   --punctuation: var(--c1b);
   --string: var(--c3);
   --property: var(--c4);
-  --operator: hsl(var(--hue-main) 60% 80%);
+  --operator: hsl(160 60% 80%);
   --function: var(--c4);
   --keyword: var(--c2);
 
-  --bit-color-fg: var(--color-syntax-fg);
-  --bit-color-bg: var(--color-syntax-bg);
-
-  background: var(--bit-color-bg);
-  color: var(--bit-color-fg);
-  scrollbar-color: var(--color-scrollbar-fg) var(--color-scrollbar-bg);
+  background: hsl(160 50% 8%);
+  color: var(--candy-color-text1);
 }
 
 .token.script {
-  color: hsl(var(--hue-main) 60% 80%);
+  color: hsl(160 60% 80%);
 }
 
 .token.comment,
@@ -650,6 +647,8 @@ figure figcaption {
   header {
     top: 0;
     position: sticky;
+    box-shadow: 0 1px 0 0 var(--candy-color-shadow1),
+      0 4px 16px 0 var(--candy-color-shadow1);
   }
 }
 

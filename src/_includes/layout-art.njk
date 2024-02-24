@@ -10,8 +10,8 @@ tags: ["art"]
 
   <div class="art-container">
     {% for img in art | reverse %}
-    <figure class="art-container--frame bit-card">
-      <div class="bit-box flex">
+    <figure class="art-container--frame candy-card">
+      <div class="candy-box flex">
         <img
           src="{{ img.url }}"
           alt=""
@@ -22,7 +22,7 @@ tags: ["art"]
         />
       </div>
       <figcaption class="text-center">
-        <a class="bit-link" href="{{ img.url }}">{{ img.name }}</a>
+        <a class="candy-link" href="{{ img.url }}">{{ img.name }}</a>
         <time
           class="weight-normal"
           datetime="{{ img.date | formatDate('yyyy-mm-dd') }}"

@@ -1,0 +1,727 @@
+.candy-auto,
+.candy-root {
+  /* Colors */
+  --candy-color-background1: hsl(80 35% 99%);
+  --candy-color-background2: hsl(80 35% 98%);
+  --candy-color-background3: hsl(80 35% 93%);
+  --candy-color-background4: hsl(80 35% 90%);
+  --candy-color-text1: hsl(80 35% 5%);
+  --candy-color-text2: hsl(80 35% 20%);
+  --candy-color-border1: hsl(80 35% 40%);
+  --candy-color-border2: hsl(80 35% 60%);
+  --candy-color-border3: hsl(80 35% 75%);
+  --candy-color-accent1: hsl(260 100% 40%);
+  --candy-color-accent2: hsl(260 100% 20%);
+  --candy-color-shadow1: hsl(80 35% 50% / 30%);
+
+  --candy-shadow-outset: 0 2px 2px 0 var(--candy-color-shadow1);
+  --candy-shadow-inset: inset 0 2px 2px 0 var(--candy-color-shadow1);
+
+  /* Radio buttons & checkboxes */
+  --candy-radiocheckbox-size: 1.5em;
+  --candy-radiocheckbox-margin-horizontal: 4px;
+  --candy-radiocheckbox-margin-vertical: 4px;
+  --candy-radiocheckbox-radius: 2px;
+
+  /* Buttons */
+  --candy-button-padding-vertical: 0.5rem;
+  --candy-button-padding-horizontal: 1rem;
+  --candy-button-radius: 4px;
+
+  /* Selects */
+  --candy-select-padding-vertical: 0.5rem;
+  --candy-select-padding-horizontal: 1rem;
+  --candy-select-radius: 4px;
+
+  /* Inputs */
+  --candy-input-padding-vertical: 0.5rem;
+  --candy-input-padding-horizontal: 0.5rem;
+  --candy-input-radius: 2px;
+
+  /* Tables */
+  --candy-table-padding-vertical: 0.5rem;
+  --candy-table-padding-horizontal: 1rem;
+
+  /* Cards */
+  --candy-code-padding-vertical: 1rem;
+  --candy-code-padding-horizontal: 1rem;
+  --candy-code-radius: 6px;
+
+  /* Cards */
+  --candy-card-padding-vertical: 1rem;
+  --candy-card-padding-horizontal: 1rem;
+  --candy-card-radius: 6px;
+
+  /* Wells */
+  --candy-well-padding-vertical: 1rem;
+  --candy-well-padding-horizontal: 1rem;
+  --candy-well-radius: 6px;
+
+  /* Fieldsets */
+  --candy-fieldset-padding-horizontal: 0.5rem;
+  --candy-fieldset-padding-vertical: 0.5rem;
+  --candy-fieldset-radius: 6px;
+
+  /* Legends */
+  --candy-legend-padding-horizontal: 0.5rem;
+  --candy-legend-padding-vertical: 0rem;
+
+  /* Textures */
+  --candy-texture-striped-size: 8px;
+
+  /* Links */
+  --candy-link-radius: 2px;
+  --candy-link-underline: 1px;
+
+  background: var(--candy-color-background4);
+  color: var(--candy-color-text2);
+}
+
+/* Checkbox / Radio Button Field Container */
+
+.candy-field {
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+}
+
+.candy-field > .candy-radio + *,
+.candy-field > .candy-checkbox + * {
+  user-select: none;
+}
+
+.candy-field > .candy-radio:disabled + *,
+.candy-field > .candy-checkbox:disabled + * {
+  color: var(--candy-color-border1);
+}
+
+.candy-auto :where(label) {
+  display: block;
+}
+
+.candy-auto
+  :where(
+    label > input[type="radio"] + *,
+    label > input[type="checkbox"] + *,
+    input[type="radio"] + label,
+    input[type="checkbox"] + label
+  ) {
+  padding: 2px;
+  display: inline-block;
+  align-self: start;
+}
+
+.candy-auto
+  :where(label > input[type="radio"] + *, label > input[type="checkbox"] + *) {
+  padding-left: 4px;
+}
+
+/* Checkbox / Radio Button */
+
+.candy-auto :where(input[type="checkbox"]),
+.candy-checkbox {
+  border-radius: var(--candy-radiocheckbox-radius);
+}
+
+.candy-auto :where(input[type="radio"]),
+.candy-radio {
+  border-radius: 9999px;
+}
+
+.candy-auto :where(input[type="checkbox"], input[type="radio"]),
+.candy-checkbox,
+.candy-radio {
+  --_candy-color-filled-background: var(--candy-color-accent1);
+  --_candy-color-filled-fill: var(--candy-color-background1);
+  --_candy-color-filled-border: var(--candy-color-accent2);
+  align-self: start;
+  vertical-align: top;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+  font: inherit;
+  width: var(--candy-radiocheckbox-size);
+  height: var(--candy-radiocheckbox-size);
+  margin: var(--candy-radiocheckbox-margin-vertical)
+    var(--candy-radiocheckbox-margin-horizontal);
+  background: var(--candy-color-background1);
+  background-clip: padding-box;
+  padding: 2px;
+  color: var(--candy-color-border1);
+  border: 1px solid var(--candy-color-border1);
+  box-shadow: inset 0 2px 2px var(--candy-color-shadow1);
+}
+
+.candy-auto :where(input[type="checkbox"], input[type="radio"]):focus-visible,
+.candy-checkbox:focus-visible,
+.candy-radio:focus-visible {
+  box-shadow: none;
+  outline: 3px solid var(--candy-color-accent1);
+  outline-offset: -2px;
+}
+
+.candy-auto :where(input[type="checkbox"], input[type="radio"]):disabled,
+.candy-checkbox:disabled,
+.candy-radio:disabled {
+  background: transparent;
+  color: var(--candy-color-border3);
+  border-color: var(--candy-color-border3);
+  box-shadow: none;
+}
+
+.candy-auto :where(input[type="checkbox"], input[type="radio"]):checked,
+.candy-checkbox:checked,
+.candy-radio:checked {
+  background: var(--candy-color-accent1);
+  box-shadow: inset 0 0 0 6px var(--_candy-color-filled-background);
+}
+
+.candy-auto :where(input[type="radio"]):checked,
+.candy-radio:checked {
+  --_candy-radio-blur: 0.25px;
+  box-shadow: none;
+  background-clip: border-box;
+  background-color: var(--_candy-color-filled-background);
+  border-color: var(--_candy-color-filled-border);
+  background-image: radial-gradient(
+    var(--_candy-color-filled-fill),
+    var(--_candy-color-filled-fill) calc(25% - var(--_candy-radio-blur)),
+    var(--_candy-color-filled-background) calc(25% + var(--_candy-radio-blur)),
+    var(--_candy-color-filled-background)
+  );
+}
+
+.candy-auto :where(input[type="checkbox"]):checked,
+.candy-checkbox:checked {
+  --_candy-checkbox-blur: 0.5px;
+  --_candy-checkbox-size: 0.125em;
+  --_candy-checkbox-start: calc(50% - 0.5 * var(--_candy-checkbox-size));
+  --_candy-checkbox-end: calc(
+    var(--_candy-checkbox-start) + var(--_candy-checkbox-size)
+  );
+  border-color: var(--_candy-color-filled-border);
+  background-color: var(--_candy-color-filled-background);
+  background-image: linear-gradient(
+      45deg,
+      transparent,
+      transparent
+        calc(var(--_candy-checkbox-start) - var(--_candy-checkbox-blur)),
+      var(--_candy-color-filled-fill) var(--_candy-checkbox-start),
+      var(--_candy-color-filled-fill) var(--_candy-checkbox-end),
+      transparent calc(var(--_candy-checkbox-end) + var(--_candy-checkbox-blur)),
+      transparent
+    ),
+    linear-gradient(
+      -45deg,
+      transparent,
+      transparent
+        calc(var(--_candy-checkbox-start) - var(--_candy-checkbox-blur)),
+      var(--_candy-color-filled-fill) var(--_candy-checkbox-start),
+      var(--_candy-color-filled-fill) var(--_candy-checkbox-end),
+      transparent calc(var(--_candy-checkbox-end) + var(--_candy-checkbox-blur)),
+      transparent
+    );
+  box-shadow: inset 0 0 0 6px var(--_candy-color-filled-background);
+}
+
+.candy-auto
+  :where(input[type="checkbox"], input[type="radio"]):checked:focus-visible,
+.candy-checkbox:checked:focus-visible,
+.candy-radio:checked:focus-visible {
+  box-shadow:
+    inset 0 0 0 2px var(--candy-color-background1),
+    inset 0 0 0 6px var(--candy-color-accent1);
+  outline: 3px solid var(--candy-color-accent1);
+  outline-offset: -2px;
+}
+
+.candy-auto
+  :where(input[type="checkbox"], input[type="radio"]):checked:disabled,
+.candy-checkbox:checked:disabled,
+.candy-radio:checked:disabled {
+  --_candy-color-filled-background: var(--candy-color-background4);
+  --_candy-color-filled-fill: var(--candy-color-border2);
+  --_candy-color-filled-border: var(--candy-color-border3);
+}
+
+/* Table */
+
+.candy-auto :where(table),
+.candy-table {
+  box-sizing: border-box;
+  background: var(--candy-color-background1);
+  color: var(--candy-color-text2);
+  border-collapse: collapse;
+}
+
+.candy-auto :where(table th),
+.candy-table th {
+  padding: var(--candy-table-padding-vertical)
+    var(--candy-table-padding-horizontal);
+  text-align: left;
+}
+
+.candy-auto :where(table tbody tr):not(:last-of-type),
+.candy-table tbody tr:not(:last-of-type) {
+  border-bottom: 1px solid var(--candy-color-border3);
+}
+
+.candy-auto table td,
+.candy-table td {
+  background: var(--candy-color-background1);
+  color: var(--candy-color-text2);
+  padding: var(--candy-table-padding-vertical)
+    var(--candy-table-padding-horizontal);
+}
+
+.candy-auto table tfoot :is(th, td),
+.candy-table tfoot :is(th, td),
+.candy-auto table thead :is(th, td),
+.candy-table thead :is(th, td) {
+  background: linear-gradient(
+    to bottom,
+    var(--candy-color-background2),
+    var(--candy-color-background3)
+  );
+  color: var(--candy-color-text2);
+  padding: var(--candy-table-padding-vertical)
+    var(--candy-table-padding-horizontal);
+}
+
+.candy-auto table thead,
+.candy-table thead {
+  border-top: 0;
+  border-bottom: 1px solid var(--candy-color-border2);
+}
+
+.candy-auto table tfoot,
+.candy-table tfoot {
+  border-top: 1px solid var(--candy-color-border2);
+  border-bottom: 0;
+}
+
+/* Button */
+
+.candy-auto
+  :where(
+    button,
+    input[type="button"],
+    input[type="submit"],
+    input[type="color"]
+  ),
+.candy-button {
+  box-sizing: border-box;
+  background: linear-gradient(
+    to bottom,
+    var(--candy-color-background2) 0 50%,
+    var(--candy-color-background3) 50%
+  );
+  box-shadow: 0 2px 2px var(--candy-color-shadow1);
+  color: var(--candy-color-text2);
+  padding: var(--candy-button-padding-vertical)
+    var(--candy-button-padding-horizontal);
+  font: inherit;
+  border: 1px solid var(--candy-color-border1);
+  border-radius: var(--candy-button-radius);
+}
+
+.candy-auto
+  :where(
+    button,
+    input[type="button"],
+    input[type="submit"],
+    input[type="color"]
+  ):focus-visible,
+.candy-button:focus-visible {
+  outline: 3px solid var(--candy-color-accent1);
+  outline-offset: -2px;
+  box-shadow: inset 0 0 0 2px var(--candy-color-background1);
+}
+
+.candy-auto
+  :where(
+    button,
+    input[type="button"],
+    input[type="submit"],
+    input[type="color"]
+  ):disabled,
+.candy-button:disabled {
+  background: transparent;
+  transform: none;
+  box-shadow: none;
+  color: var(--candy-color-border1);
+  border-color: var(--candy-color-border3);
+}
+
+.candy-primary {
+  font-weight: bold;
+}
+
+.candy-primary:where(:not(:disabled)) {
+  --candy-color-background2: hsl(330 100% 40%);
+  --candy-color-background3: hsl(330 100% 35%);
+  --candy-color-shadow1: hsl(80 50% 50% / 30%);
+  --candy-color-text2: hsl(330 100% 95%);
+  --candy-color-border1: hsl(330 50% 30%);
+}
+
+/* Select */
+
+.candy-auto :where(select),
+.candy-select {
+  --_candy-select-blur: 0.5px;
+  --_candy-select-handle-angle: 45deg;
+  /* 5.5px assuming 1rem = 16px */
+  --_candy-select-handle-size: 0.34375rem;
+  --_candy-select-handle-width: var(--_candy-select-handle-size);
+  --_candy-select-handle-height: var(--_candy-select-handle-size);
+  --_candy-select-handle-fg: var(--candy-color-text2);
+  --_candy-select-arrow: linear-gradient(
+        calc(-1 * var(--_candy-select-handle-angle)),
+        transparent 50%,
+        var(--_candy-select-handle-fg) calc(50% + var(--_candy-select-blur))
+      )
+      calc(100% - var(--candy-select-padding-horizontal)) 50% /
+      var(--_candy-select-handle-width) var(--_candy-select-handle-height)
+      no-repeat,
+    linear-gradient(
+        var(--_candy-select-handle-angle),
+        transparent 50%,
+        var(--_candy-select-handle-fg) calc(50% + var(--_candy-select-blur))
+      )
+      calc(
+        100% - var(--_candy-select-handle-width) -
+          var(--candy-select-padding-horizontal)
+      )
+      50% / var(--_candy-select-handle-width) var(--_candy-select-handle-height)
+      no-repeat;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+  color: var(--candy-color-text2);
+  background-color: var(--candy-color-background2);
+  background:
+    var(--_candy-select-arrow),
+    linear-gradient(
+        to bottom,
+        var(--candy-color-background2) 0 50%,
+        var(--candy-color-background3) 50%
+      )
+      0 0 / 100% 100% repeat var(--candy-color-background3);
+  box-shadow: 0 2px 2px var(--candy-color-shadow1);
+  padding: var(--candy-select-padding-vertical)
+    var(--candy-select-padding-horizontal);
+  padding-right: calc(
+    2 * var(--candy-select-padding-horizontal) + 2 *
+      var(--_candy-select-handle-width)
+  );
+  font: inherit;
+  border: 1px solid var(--candy-color-border1);
+  border-radius: var(--candy-select-radius);
+}
+
+.candy-auto :where(select):focus-visible,
+.candy-select:focus-visible {
+  outline: 3px solid var(--candy-color-accent1);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.candy-auto :where(select):-moz-focusring,
+.candy-select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 var(--candy-color-text2);
+}
+
+.candy-auto :where(select):disabled,
+.candy-select:disabled {
+  background: var(--_candy-select-arrow);
+  --_candy-select-handle-fg: var(--candy-color-border1);
+  --_candy-select-handle-bg: var(--candy-color-background4);
+  color: var(--candy-color-border1);
+  border-color: var(--candy-color-border3);
+  border-style: solid;
+  box-shadow: none;
+}
+
+/* Text styles */
+
+.candy-bright {
+  color: var(--candy-color-text1);
+}
+
+/* Link */
+
+.candy-auto :where(a),
+.candy-link {
+  color: var(--candy-color-accent1);
+  border-radius: var(--candy-link-radius);
+  text-decoration-thickness: var(--candy-link-underline);
+}
+
+.candy-auto :where(a):focus-visible,
+.candy-link:focus-visible {
+  text-decoration-line: none;
+  outline: 2px solid var(--candy-color-accent1);
+  outline-offset: 2px;
+}
+
+/* Input / Text Area */
+
+.candy-auto
+  :where(
+    input:not([type]),
+    input[type="tel"],
+    input[type="url"],
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    input[type="number"],
+    input[type="password"],
+    textarea
+  ),
+.candy-input {
+  box-sizing: border-box;
+  background: var(--candy-color-background1);
+  color: var(--candy-color-text2);
+  font: inherit;
+  padding: var(--candy-input-padding-vertical)
+    var(--candy-input-padding-horizontal);
+  border: 1px solid var(--candy-color-border1);
+  box-shadow: inset 0 2px 2px var(--candy-color-shadow1);
+  border-radius: var(--candy-input-radius);
+}
+
+.candy-auto
+  :where(
+    input:not([type]),
+    input[type="tel"],
+    input[type="url"],
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    input[type="number"],
+    input[type="password"],
+    textarea
+  ):focus-visible,
+.candy-input:focus-visible {
+  outline: 3px solid var(--candy-color-accent1);
+  outline-offset: -2px;
+  box-shadow: none;
+}
+
+.candy-auto
+  :where(
+    input:not([type]),
+    input[type="tel"],
+    input[type="url"],
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    input[type="number"],
+    input[type="password"],
+    textarea
+  ):disabled,
+.candy-input:disabled {
+  background: transparent;
+  box-shadow: none;
+  color: var(--candy-color-border1);
+  border-color: var(--candy-color-border3);
+}
+
+.candy-auto
+  :where(
+    input:not([type]),
+    input[type="tel"],
+    input[type="url"],
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    input[type="number"],
+    input[type="password"],
+    textarea
+  )::placeholder,
+.candy-input::placeholder {
+  opacity: unset;
+  color: var(--candy-color-border1);
+}
+
+.candy-auto
+  :where(
+    input:not([type]),
+    input[type="tel"],
+    input[type="url"],
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    input[type="number"],
+    input[type="password"],
+    textarea
+  )::selection,
+.candy-input::selection {
+  background: var(--candy-color-text2);
+  color: var(--candy-color-background1);
+}
+
+/* Fieldset and legend */
+
+.candy-auto :where(fieldset),
+.candy-fieldset {
+  border: 1px solid var(--candy-color-border2);
+  padding: var(--candy-fieldset-padding-vertical)
+    var(--candy-fieldset-padding-horizontal);
+  margin: 0;
+  border-radius: var(--candy-fieldset-radius);
+}
+
+.candy-auto :where(legend),
+.candy-legend {
+  border: 0;
+  padding-top: var(--candy-legend-padding-vertical);
+  padding-right: var(--candy-legend-padding-horizontal);
+  padding-bottom: var(--candy-legend-padding-vertical);
+  padding-left: 0;
+  margin: 0;
+  margin-left: calc(-1 * var(--candy-fieldset-padding-vertical) - 1px);
+}
+
+/* Firefox nonsense */
+
+.candy-auto ::-moz-focus-inner,
+.candy-checkbox::-moz-focus-inner,
+.candy-radio::-moz-focus-inner,
+.candy-select::-moz-focus-inner,
+.candy-button::-moz-focus-inner,
+.candy-input::-moz-focus-inner {
+  border: 0;
+}
+
+/* Miscellaneous */
+
+/* Add a click effect to interactable elements */
+:is(
+    .candy-auto
+      :where(
+        button,
+        input[type="button"],
+        input[type="submit"],
+        input[type="color"],
+        input[type="checkbox"],
+        input[type="radio"],
+        select
+      ),
+    .candy-button,
+    .candy-radio,
+    .candy-checkbox,
+    .candy-select
+  ):is(:active):where(:not(:disabled)) {
+  filter: brightness(0.9);
+}
+
+.candy-card {
+  box-sizing: border-box;
+  background: var(--candy-color-background3);
+  color: var(--candy-color-text2);
+  border: 1px solid var(--candy-color-border2);
+  padding: var(--candy-card-padding-vertical)
+    var(--candy-card-padding-horizontal);
+  box-shadow: 0 2px 2px 0 var(--candy-color-shadow1);
+  border-radius: var(--candy-card-radius);
+}
+
+.candy-well {
+  box-sizing: border-box;
+  background: var(--candy-color-background4);
+  color: var(--candy-color-text2);
+  border: 1px solid var(--candy-color-border2);
+  padding: var(--candy-card-padding-vertical)
+    var(--candy-card-padding-horizontal);
+  box-shadow: inset 0 2px 2px 0 var(--candy-color-shadow1);
+  border-radius: var(--candy-card-radius);
+}
+
+.candy-box {
+  box-sizing: border-box;
+  border: 1px solid var(--candy-color-border2);
+}
+
+.candy-auto,
+.candy-scrollbar {
+  scrollbar-color: var(--candy-color-text2) var(--candy-color-background4);
+}
+
+.candy-svg {
+  fill: currentcolor;
+}
+
+.candy-auto :where(hr),
+.candy-divider {
+  box-sizing: border-box;
+  border: 0;
+  border-top: 1px solid var(--candy-color-border2);
+}
+
+.candy-auto :where(pre),
+.candy-code {
+  box-sizing: border-box;
+  background: var(--candy-color-background1);
+  color: var(--candy-color-text2);
+  border: 1px solid var(--candy-color-border2);
+  overflow-x: auto;
+  padding: var(--candy-code-padding-vertical)
+    var(--candy-code-padding-horizontal);
+  border-radius: var(--candy-code-radius);
+}
+
+/* Textures */
+
+.candy-texture-striped {
+  background: repeating-linear-gradient(
+      -45deg,
+      transparent 0 calc(2 * var(--candy-texture-striped-size)),
+      var(--candy-color-background2) calc(2 * var(--candy-texture-striped-size))
+        calc(4 * var(--candy-texture-striped-size))
+    )
+    var(--candy-color-background3);
+}
+
+.candy-texture-convex {
+  background: linear-gradient(
+      to bottom,
+      var(--candy-color-background2),
+      var(--candy-color-background3)
+    )
+    var(--candy-color-background2);
+}
+
+.candy-texture-concave {
+  background: linear-gradient(
+      to bottom,
+      var(--candy-color-background3),
+      var(--candy-color-background2)
+    )
+    var(--candy-color-background3);
+}
+
+.candy-texture-glossy {
+  background: linear-gradient(
+      to bottom,
+      var(--candy-color-background2) 0 50%,
+      var(--candy-color-background3) 50% 100%
+    )
+    var(--candy-color-background2);
+}
+
+.candy-texture-paper {
+  background: var(--candy-color-background1);
+}
+
+.candy-texture-smooth {
+  background: var(--candy-color-background3);
+}
+
+.candy-texture-default {
+  background: var(--candy-color-background4);
+}

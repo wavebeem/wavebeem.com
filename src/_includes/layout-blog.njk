@@ -8,15 +8,15 @@ tags:
   <h1>Blog</h1>
 
   <p>
-    Subscribe via my <a class="bit-link" href="/feed.xml">RSS feed</a> to stay
+    Subscribe via my <a class="candy-link" href="/feed.xml">RSS feed</a> to stay
     updated.
   </p>
 
   <div class="post-list">
     {% for post in collections.post | reverse %}
-    <section class="post-list--post bit-card">
+    <section class="post-list--post candy-card">
       <h2>
-        <a class="bit-link no-underline" href="{{ post.url }}">
+        <a class="candy-link no-underline" href="{{ post.url }}">
           {{ post.data.title }}
         </a>
       </h2>

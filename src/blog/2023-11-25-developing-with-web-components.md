@@ -32,7 +32,7 @@ We'll start with the `<cc-textarea-resizer>` element I wrote.
   <textarea
     rows="4"
     spellcheck="false"
-    class="bit-input w-100 resize-none code"
+    class="candy-input w-100 resize-none code"
     type="text"
     name="fg"
   ></textarea>
