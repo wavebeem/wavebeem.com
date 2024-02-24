@@ -51,7 +51,7 @@
   overflow-y: scroll;
   color-scheme: dark;
   /* Approximation used for offsetting headings when clicked */
-  --header-height: 100px;
+  --header-height: 115px;
 }
 
 /* .candy-root,
@@ -168,16 +168,24 @@ p:empty {
 header {
   border-bottom: 1px solid var(--candy-color-border2);
   isolation: isolate;
+  display: flex;
+  flex-direction: column;
 }
 
 footer > *,
-header > * {
+.header-content > div {
   padding: 1rem;
   margin: 0 auto;
   max-width: var(--content-width);
   display: flex;
   gap: 1rem;
   flex-direction: column;
+  flex: auto;
+}
+
+.header-decoration {
+  height: 1rem;
+  border-bottom: 1px solid var(--candy-color-border2);
 }
 
 h1,
@@ -611,10 +619,10 @@ figure figcaption {
 
 @media (min-width: 600px) {
   :root {
-    --header-height: 62px;
+    --header-height: 75px;
   }
 
-  header > *,
+  .header-content > div,
   footer > * {
     flex-direction: row;
     align-items: center;
