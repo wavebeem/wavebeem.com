@@ -43,8 +43,8 @@ class WavebeemToyFlashlight extends HTMLElement {
       <div class="flashlight" id="flashlight" hidden></div>
       <slot></slot>
     `;
-    const { signal } = this.#abortController;
     this.#abortController = new AbortController();
+    const { signal } = this.#abortController;
     // Listen for pointer movement on the whole page, not just this element
     for (const eventName of ["pointerdown", "pointerup", "pointermove"]) {
       addEventListener(
