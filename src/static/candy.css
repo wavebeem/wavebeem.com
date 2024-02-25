@@ -165,7 +165,7 @@
 .candy-auto :where(input[type="checkbox"], input[type="radio"]):disabled,
 .candy-checkbox:disabled,
 .candy-radio:disabled {
-  background: transparent;
+  background: var(--candy-color-background4);
   color: var(--candy-color-border3);
   border-color: var(--candy-color-border3);
   box-shadow: none;
@@ -348,7 +348,7 @@
     input[type="color"]
   ):disabled,
 .candy-button:disabled {
-  background: transparent;
+  background: var(--candy-color-background4);
   transform: none;
   box-shadow: none;
   color: var(--candy-color-border1);
@@ -525,7 +525,7 @@
     textarea
   ):disabled,
 .candy-input:disabled {
-  background: transparent;
+  background: var(--candy-color-background4);
   box-shadow: none;
   color: var(--candy-color-border1);
   border-color: var(--candy-color-border3);
@@ -633,13 +633,13 @@
 
 .candy-well {
   box-sizing: border-box;
-  background: var(--candy-color-background4);
+  background: var(--candy-color-background3);
   color: var(--candy-color-text2);
   border: 1px solid var(--candy-color-border2);
   padding: var(--candy-card-padding-vertical)
     var(--candy-card-padding-horizontal);
   box-shadow: inset 0 2px 2px 0 var(--candy-color-shadow1);
-  border-radius: var(--candy-card-radius);
+  border-radius: var(--candy-well-radius);
 }
 
 .candy-box {
@@ -649,7 +649,7 @@
 
 .candy-auto,
 .candy-scrollbar {
-  scrollbar-color: var(--candy-color-text2) var(--candy-color-background1);
+  scrollbar-color: var(--candy-color-text2) var(--candy-color-background3);
 }
 
 .candy-svg {
