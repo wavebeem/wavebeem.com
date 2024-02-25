@@ -319,7 +319,7 @@
     var(--candy-color-background3) 50%
   );
   box-shadow: 0 2px 2px var(--candy-color-shadow1);
-  color: var(--candy-color-text2);
+  color: var(--candy-color-text1);
   padding: var(--candy-button-padding-vertical)
     var(--candy-button-padding-horizontal);
   font: inherit;
@@ -363,7 +363,7 @@
   --candy-color-background2: hsl(330 100% 40%);
   --candy-color-background3: hsl(330 100% 35%);
   --candy-color-shadow1: hsl(80 50% 50% / 30%);
-  --candy-color-text2: hsl(330 100% 95%);
+  --candy-color-text1: hsl(330 100% 95%);
   --candy-color-border1: hsl(330 50% 30%);
 }
 
@@ -377,7 +377,7 @@
   --_candy-select-handle-size: 0.34375rem;
   --_candy-select-handle-width: var(--_candy-select-handle-size);
   --_candy-select-handle-height: var(--_candy-select-handle-size);
-  --_candy-select-handle-fg: var(--candy-color-text2);
+  --_candy-select-handle-fg: var(--candy-color-text1);
   --_candy-select-arrow: linear-gradient(
         calc(-1 * var(--_candy-select-handle-angle)),
         transparent 50%,
@@ -400,7 +400,7 @@
   box-sizing: border-box;
   -webkit-appearance: none;
   appearance: none;
-  color: var(--candy-color-text2);
+  color: var(--candy-color-text1);
   background-color: var(--candy-color-background2);
   background:
     var(--_candy-select-arrow),
@@ -649,7 +649,7 @@
 
 .candy-auto,
 .candy-scrollbar {
-  scrollbar-color: var(--candy-color-text2) var(--candy-color-background4);
+  scrollbar-color: var(--candy-color-text2) var(--candy-color-background1);
 }
 
 .candy-svg {

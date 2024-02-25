@@ -54,14 +54,6 @@
   --header-height: 115px;
 }
 
-/* .candy-root,
-.candy-auto {
-  --hue-main: 250;
-  --hue-alt: 85;
-  --hue-syntax-keyword: 180;
-  --hue-syntax-other: 30;
-} */
-
 .candy-auto,
 .candy-root {
   --candy-color-background1: hsl(160 50% 18%);
@@ -79,11 +71,11 @@
 }
 
 .candy-primary:where(:not(:disabled)) {
-  --candy-color-background2: hsl(85 0% 90%);
-  --candy-color-background3: hsl(85 0% 82%);
+  --candy-color-background2: hsl(85 0% 80%);
+  --candy-color-background3: hsl(85 0% 72%);
   --candy-color-shadow1: hsl(200 50% 5% / 70%);
   --candy-color-text1: hsl(85 0% 10%);
-  --candy-color-border1: hsl(85 50% 100%);
+  --candy-color-border1: hsl(85 50% 90%);
 }
 
 .hero {
