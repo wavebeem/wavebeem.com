@@ -6,231 +6,222 @@ layout: "layout-base"
 <main>
   <script type="module" src="/static/bizarro.js"></script>
 
-  <div class="avatar candy-card">
-    <img
-      alt=""
-      srcset="
-        /static/photo-180.jpg?v={{ photoVersion }} 1x,
-        /static/photo-360.jpg?v={{ photoVersion }} 2x
-      "
-      src="/static/photo-360.jpg"
-      width="120"
-      height="120"
-      data-bizarro-button
-    />
-  </div>
-
-  <h1>Hello!</h1>
-
-  <p>
-    I'm
-    <a class="candy-link" href="/my-names/">Sage Fennel</a> (<i>they/them</i>),
-    aka <code>wavebeem</code>.
-  </p>
-
-  <p>
-    I love video games, web development, makeup, pixel art, progressive metal,
-    cats, and the color green.
-  </p>
-
-  <p>
-    I live in
-    <a class="candy-link" href="https://en.wikipedia.org/wiki/Portland,_Oregon"
-      >Portland</a
-    >, where I enjoy gray skies, green leaves, and gentle rain.
-  </p>
-
-  <div class="clearfix"></div>
-
-  <h2>Projects</h2>
-
-  <div class="grid-2">
-    <section class="candy-card">
-      <h3 class="card-heading">Pokémon Type Calculator</h3>
-      <p class="m0">
-        I created
-        <a class="candy-link" href="https://www.pkmn.help">pkmn.help</a>, a
-        Pokémon PWA (progressive web app) with thousands of monthly users
+  <section class="hero candy-texture-concave">
+    <div class="content">
+      <div class="avatar candy-card">
+        <img
+          alt=""
+          srcset="
+              /static/photo-180.jpg?v={{ photoVersion }} 1x,
+              /static/photo-360.jpg?v={{ photoVersion }} 2x
+            "
+          src="/static/photo-360.jpg"
+          width="120"
+          height="120"
+          data-bizarro-button
+        />
+      </div>
+      <h1>Hello!</h1>
+      <p>
+        I'm
+        <a class="candy-link" href="/my-names/">Sage Fennel</a>
+        (<i>they/them</i>), aka <code>wavebeem</code>.
       </p>
-    </section>
-
-    <section class="candy-card">
-      <h3 class="card-heading">2bit-ui</h3>
-      <p class="m0">
-        I created
-        <a class="candy-link" href="https://2bit-ui.wavebeem.com">2bit-ui</a>, a
-        pure-CSS design system inspired by the Game Boy Color
+      <p>
+        I love video games, web development, makeup, pixel art, progressive
+        metal, cats, and the color green.
       </p>
-    </section>
-
-    <section class="candy-card">
-      <h3 class="card-heading">Color Combos</h3>
-      <p class="m0">
-        I created
-        <a class="candy-link" href="https://color-combos.wavebeem.com"
-          >Color Combos</a
-        >, a site to check contrast levels for color combinations
-      </p>
-    </section>
-
-    <section class="candy-card">
-      <h3 class="card-heading">Toxic</h3>
-      <p class="m0">
-        I created
+      <p>
+        I live in
         <a
           class="candy-link"
-          href="https://vscodethemes.com/e/wavebeem.toxic-vscode/miasma?language=javascript"
-          >Toxic</a
-        >, a theme for Visual Studio Code based on the dark mode of my website.
+          href="https://en.wikipedia.org/wiki/Portland,_Oregon"
+          >Portland</a
+        >, where I enjoy gray skies, green leaves, and gentle rain.
       </p>
-    </section>
-  </div>
+      <div class="clearfix"></div>
+    </div>
+  </section>
 
-  <details>
-    <summary class="candy-button width-max-content">
-      <b>More projects&hellip;</b>
-    </summary>
+  <div class="content">
+    <h2>Projects</h2>
     <div class="grid-2">
       <section class="candy-card">
-        <h3 class="card-heading">netpet</h3>
+        <h3 class="card-heading">Pokémon Type Calculator</h3>
         <p class="m0">
           I created
-          <a class="candy-link" href="https://netpet.wavebeem.com/">netpet</a>, a
-          Tamagotchi-like virtual pet using 100% web platform technologies and
-          no build tools
+          <a class="candy-link" href="https://www.pkmn.help">pkmn.help</a>, a
+          Pokémon PWA (progressive web app) with thousands of monthly users
         </p>
       </section>
-
       <section class="candy-card">
-        <h3 class="card-heading">Kaomoji Picker</h3>
-        <p class="m0">
-          I created a
-          <a class="candy-link" href="https://kaomoji.wavebeem.com">kaomoji</a>
-          picker site to quickly copy kaomoji to your clipboard
-          <span aria-hidden="true">ლ(╹◡╹ლ)</span>
-        </p>
-      </section>
-
-      <section class="candy-card">
-        <h3 class="card-heading">bread-n-butter</h3>
+        <h3 class="card-heading">2bit-ui</h3>
         <p class="m0">
           I created
-          <a class="candy-link" href="https://bread-n-butter.wavebeem.com/"
-            >bread-n-butter</a
-          >, a TypeScript parser combinators library, intended as a successor to
-          parsimmon.
+          <a class="candy-link" href="https://2bit-ui.wavebeem.com">2bit-ui</a>,
+          a pure-CSS design system inspired by the Game Boy Color
         </p>
       </section>
-
       <section class="candy-card">
-        <h3 class="card-heading">Pixel Folders</h3>
+        <h3 class="card-heading">Color Combos</h3>
         <p class="m0">
           I created
-          <a class="candy-link" href="https://pixel-folders.wavebeem.com/"
-            >pixel folders</a
-          >, collection of pixel art icons for Windows and macOS, that can be
-          used as custom folder icons.
+          <a class="candy-link" href="https://color-combos.wavebeem.com"
+            >Color Combos</a
+          >, a site to check contrast levels for color combinations
         </p>
       </section>
-
       <section class="candy-card">
-        <h3 class="card-heading">the jpeg zone</h3>
+        <h3 class="card-heading">Toxic</h3>
         <p class="m0">
           I created
-          <a class="candy-link" href="https://jpeg.wavebeem.com/">the jpeg zone</a
-          >, a website for making <q>deep fried</q> memes using extreme JPEG
-          compression.
-        </p>
-      </section>
-
-      <section class="candy-card">
-        <h3 class="card-heading">codehost</h3>
-        <p class="m0">
-          I created
-          <a class="candy-link" href="https://codehost.wavebeem.com/">codehost</a
-          >, a code syntax highlighting tool for writing blog posts with code
-          samples on <a class="candy-link" href="https://cohost.org">cohost</a>.
-        </p>
-      </section>
-
-      <section class="candy-card">
-        <h3 class="card-heading">show-colors</h3>
-        <p class="m0">
-          I created
-          <a class="candy-link" href="https://www.npmjs.com/package/show-colors"
-            >show-colors</a
-          >, an npm command to show the color scheme in your terminal.
-        </p>
-      </section>
-
-      <section class="candy-card">
-        <h3 class="card-heading">img-cat</h3>
-        <p class="m0">
-          I created
-          <a class="candy-link" href="https://www.npmjs.com/package/img-cat"
-            >img-cat</a
-          >, an npm command to show images in your terminal.
+          <a
+            class="candy-link"
+            href="https://vscodethemes.com/e/wavebeem.toxic-vscode/miasma?language=javascript"
+            >Toxic</a
+          >, a theme for Visual Studio Code based on the dark mode of my
+          website.
         </p>
       </section>
     </div>
-  </details>
-
-  <h2>Around the web</h2>
-
-  <div class="grid-2 box-grid">
-    <div class="candy-card">
-      <b>Email</b>
-      <a href="mailto:sage@wavebeem.com" class="candy-link no-underline"
-        >sage@wavebeem.com</a
-      >
+    <details>
+      <summary class="candy-button width-max-content">
+        <b>More projects&hellip;</b>
+      </summary>
+      <div class="grid-2">
+        <section class="candy-card">
+          <h3 class="card-heading">netpet</h3>
+          <p class="m0">
+            I created
+            <a class="candy-link" href="https://netpet.wavebeem.com/">netpet</a
+            >, a Tamagotchi-like virtual pet using 100% web platform
+            technologies and no build tools
+          </p>
+        </section>
+        <section class="candy-card">
+          <h3 class="card-heading">Kaomoji Picker</h3>
+          <p class="m0">
+            I created a
+            <a class="candy-link" href="https://kaomoji.wavebeem.com"
+              >kaomoji</a
+            >
+            picker site to quickly copy kaomoji to your clipboard
+            <span aria-hidden="true">ლ(╹◡╹ლ)</span>
+          </p>
+        </section>
+        <section class="candy-card">
+          <h3 class="card-heading">bread-n-butter</h3>
+          <p class="m0">
+            I created
+            <a class="candy-link" href="https://bread-n-butter.wavebeem.com/"
+              >bread-n-butter</a
+            >, a TypeScript parser combinators library, intended as a successor
+            to parsimmon.
+          </p>
+        </section>
+        <section class="candy-card">
+          <h3 class="card-heading">Pixel Folders</h3>
+          <p class="m0">
+            I created
+            <a class="candy-link" href="https://pixel-folders.wavebeem.com/"
+              >pixel folders</a
+            >, collection of pixel art icons for Windows and macOS, that can be
+            used as custom folder icons.
+          </p>
+        </section>
+        <section class="candy-card">
+          <h3 class="card-heading">the jpeg zone</h3>
+          <p class="m0">
+            I created
+            <a class="candy-link" href="https://jpeg.wavebeem.com/"
+              >the jpeg zone</a
+            >, a website for making <q>deep fried</q> memes using extreme JPEG
+            compression.
+          </p>
+        </section>
+        <section class="candy-card">
+          <h3 class="card-heading">codehost</h3>
+          <p class="m0">
+            I created
+            <a class="candy-link" href="https://codehost.wavebeem.com/"
+              >codehost</a
+            >, a code syntax highlighting tool for writing blog posts with code
+            samples on
+            <a class="candy-link" href="https://cohost.org">cohost</a>.
+          </p>
+        </section>
+        <section class="candy-card">
+          <h3 class="card-heading">show-colors</h3>
+          <p class="m0">
+            I created
+            <a
+              class="candy-link"
+              href="https://www.npmjs.com/package/show-colors"
+              >show-colors</a
+            >, an npm command to show the color scheme in your terminal.
+          </p>
+        </section>
+        <section class="candy-card">
+          <h3 class="card-heading">img-cat</h3>
+          <p class="m0">
+            I created
+            <a class="candy-link" href="https://www.npmjs.com/package/img-cat"
+              >img-cat</a
+            >, an npm command to show images in your terminal.
+          </p>
+        </section>
+      </div>
+    </details>
+    <h2>Around the web</h2>
+    <div class="grid-2 box-grid">
+      <div class="candy-card">
+        <b>Email</b>
+        <a href="mailto:sage@wavebeem.com" class="candy-link no-underline"
+          >sage@wavebeem.com</a
+        >
+      </div>
+      <div class="candy-card">
+        <b>Discord</b>
+        <a
+          href="https://discordapp.com/users/85098165748908032"
+          class="candy-link no-underline"
+          >@wavebeem</a
+        >
+      </div>
+      <div class="candy-card">
+        <b>cohost</b>
+        <a href="https://cohost.org/wavebeem" class="candy-link no-underline"
+          >@wavebeem</a
+        >
+      </div>
+      <div class="candy-card">
+        <b>GitHub</b>
+        <a href="https://github.com/wavebeem/" class="candy-link no-underline"
+          >@wavebeem</a
+        >
+      </div>
+      <div class="candy-card">
+        <b>Destiny 2</b>
+        <a
+          href="https://www.bungie.net/7/en/User/Profile/254/16405315"
+          class="candy-link no-underline"
+          >wavebeem<wbr />#8130</a
+        >
+      </div>
+      <div class="candy-card">
+        <b>Backloggd</b>
+        <a
+          href="https://www.backloggd.com/u/wavebeem/"
+          class="candy-link no-underline"
+          >@wavebeem</a
+        >
+      </div>
     </div>
-
-    <div class="candy-card">
-      <b>Discord</b>
-      <a
-        href="https://discordapp.com/users/85098165748908032"
-        class="candy-link no-underline"
-        >@wavebeem</a
-      >
-    </div>
-
-    <div class="candy-card">
-      <b>cohost</b>
-      <a href="https://cohost.org/wavebeem" class="candy-link no-underline"
-        >@wavebeem</a
-      >
-    </div>
-
-    <div class="candy-card">
-      <b>GitHub</b>
-      <a href="https://github.com/wavebeem/" class="candy-link no-underline"
-        >@wavebeem</a
-      >
-    </div>
-
-    <div class="candy-card">
-      <b>Destiny 2</b>
-      <a
-        href="https://www.bungie.net/7/en/User/Profile/254/16405315"
-        class="candy-link no-underline"
-        >wavebeem<wbr />#8130</a
-      >
-    </div>
-
-    <div class="candy-card">
-      <b>Backloggd</b>
-      <a
-        href="https://www.backloggd.com/u/wavebeem/"
-        class="candy-link no-underline"
-        >@wavebeem</a
-      >
-    </div>
+    <h2>About this site</h2>
+    <p>
+      Read more
+      <a class="candy-link" href="/about">about this site</a> and how it was
+      built.
+    </p>
   </div>
-
-  <h2>About this site</h2>
-
-  <p>
-    Read more
-    <a class="candy-link" href="/about">about this site</a> and how it was built.
-  </p>
 </main>

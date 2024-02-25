@@ -86,6 +86,13 @@
   --candy-color-border1: hsl(85 50% 100%);
 }
 
+.hero {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--candy-color-border2);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -111,10 +118,10 @@ body {
   flex-direction: column;
 }
 
-main {
+.content {
   flex: auto;
-  margin: 0 auto;
   padding: 0 1rem;
+  margin: 0 auto;
   max-width: var(--content-width);
   width: 100%;
 }
@@ -186,6 +193,10 @@ footer > *,
 .header-decoration {
   height: 1rem;
   border-bottom: 1px solid var(--candy-color-border2);
+}
+
+h1 {
+  font-size: 2.5rem;
 }
 
 h1,
