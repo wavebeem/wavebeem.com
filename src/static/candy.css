@@ -42,7 +42,7 @@
   --candy-table-padding-vertical: 0.5rem;
   --candy-table-padding-horizontal: 1rem;
 
-  /* Cards */
+  /* Code */
   --candy-code-padding-vertical: 1rem;
   --candy-code-padding-horizontal: 1rem;
   --candy-code-radius: 6px;
@@ -660,7 +660,7 @@
 .candy-divider {
   box-sizing: border-box;
   border: 0;
-  border-top: 1px solid var(--candy-color-border2);
+  border-top: 1px solid var(--candy-color-border3);
 }
 
 .candy-auto :where(pre),
