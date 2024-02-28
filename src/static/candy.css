@@ -706,11 +706,13 @@
 /* Textures */
 
 .candy-texture-striped {
+  --_s: var(--candy-texture-striped-size);
   background: repeating-linear-gradient(
       -45deg,
-      transparent 0 calc(2 * var(--candy-texture-striped-size)),
-      var(--candy-color-background2) calc(2 * var(--candy-texture-striped-size))
-        calc(4 * var(--candy-texture-striped-size))
+      var(--candy-color-background3) 0 calc(0.5 * var(--_s)),
+      var(--candy-color-background2) calc(0.5 * var(--_s) + 0.5px)
+        calc(1.5 * var(--_s) - 0.5px),
+      var(--candy-color-background3) calc(1.5 * var(--_s)) calc(2 * var(--_s))
     )
     var(--candy-color-background3);
 }
@@ -719,7 +721,7 @@
   background: linear-gradient(
       to bottom,
       var(--candy-color-background2),
-      var(--candy-color-background3)
+      var(--candy-color-background3) 50%
     )
     var(--candy-color-background2);
 }
@@ -728,7 +730,7 @@
   background: linear-gradient(
       to bottom,
       var(--candy-color-background3),
-      var(--candy-color-background2)
+      var(--candy-color-background2) 75%
     )
     var(--candy-color-background3);
 }
