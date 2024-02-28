@@ -6,7 +6,7 @@ layout: "layout-base"
 <main>
   <script type="module" src="/static/bizarro.js"></script>
 
-  <section class="hero candy-texture-concave">
+  <section class="hero candy-texture-smooth">
     <div class="content">
       <div class="avatar candy-card">
         <img
@@ -21,11 +21,12 @@ layout: "layout-base"
           data-bizarro-button
         />
       </div>
-      <h1>Hello!</h1>
+      <h1 class="candy-bright">Hello!</h1>
       <p>
         I'm
         <a class="candy-link" href="/my-names/">Sage Fennel</a>
-        (<i>they/them</i>), aka <code>wavebeem</code>.
+        (<i class="candy-bright">they/them</i>), aka
+        <code class="candy-bright">wavebeem</code>.
       </p>
       <p>
         I love video games, web development, makeup, pixel art, progressive
@@ -44,10 +45,10 @@ layout: "layout-base"
   </section>
 
   <div class="content">
-    <h2>Projects</h2>
+    <h2 class="candy-bright">Projects</h2>
     <div class="grid-2">
       <section class="candy-card">
-        <h3 class="card-heading">Pokémon Type Calculator</h3>
+        <h3 class="card-heading candy-bright">Pokémon Type Calculator</h3>
         <p class="m0">
           I created
           <a class="candy-link" href="https://www.pkmn.help">pkmn.help</a>, a
@@ -55,15 +56,15 @@ layout: "layout-base"
         </p>
       </section>
       <section class="candy-card">
-        <h3 class="card-heading">2bit-ui</h3>
+        <h3 class="card-heading candy-bright">2bit-ui</h3>
         <p class="m0">
           I created
-          <a class="candy-link" href="https://2bit-ui.wavebeem.com">2bit-ui</a>, a
-          pure-CSS design system inspired by the Game Boy Color
+          <a class="candy-link" href="https://2bit-ui.wavebeem.com">2bit-ui</a>,
+          a pure-CSS design system inspired by the Game Boy Color
         </p>
       </section>
       <section class="candy-card">
-        <h3 class="card-heading">Color Combos</h3>
+        <h3 class="card-heading candy-bright">Color Combos</h3>
         <p class="m0">
           I created
           <a class="candy-link" href="https://color-combos.wavebeem.com"
@@ -72,52 +73,55 @@ layout: "layout-base"
         </p>
       </section>
       <section class="candy-card">
-        <h3 class="card-heading">Toxic</h3>
+        <h3 class="card-heading candy-bright">Toxic</h3>
         <p class="m0">
           I created
           <a
             class="candy-link"
             href="https://vscodethemes.com/e/wavebeem.toxic-vscode/miasma?language=javascript"
             >Toxic</a
-          >, a theme for Visual Studio Code based on the dark mode of my website.
+          >, a theme for Visual Studio Code based on the dark mode of my
+          website.
         </p>
       </section>
     </div>
     <details>
-      <summary class="candy-button width-max-content">
+      <summary class="candy-button width-max-content candy-primary">
         <b>More projects&hellip;</b>
       </summary>
       <div class="grid-2">
         <section class="candy-card">
-          <h3 class="card-heading">netpet</h3>
+          <h3 class="card-heading candy-bright">netpet</h3>
           <p class="m0">
             I created
-            <a class="candy-link" href="https://netpet.wavebeem.com/">netpet</a>,
-            a Tamagotchi-like virtual pet using 100% web platform technologies and
-            no build tools
+            <a class="candy-link" href="https://netpet.wavebeem.com/">netpet</a
+            >, a Tamagotchi-like virtual pet using 100% web platform
+            technologies and no build tools
           </p>
         </section>
         <section class="candy-card">
-          <h3 class="card-heading">Kaomoji Picker</h3>
+          <h3 class="card-heading candy-bright">Kaomoji Picker</h3>
           <p class="m0">
             I created a
-            <a class="candy-link" href="https://kaomoji.wavebeem.com">kaomoji</a>
+            <a class="candy-link" href="https://kaomoji.wavebeem.com"
+              >kaomoji</a
+            >
             picker site to quickly copy kaomoji to your clipboard
             <span aria-hidden="true">ლ(╹◡╹ლ)</span>
           </p>
         </section>
         <section class="candy-card">
-          <h3 class="card-heading">bread-n-butter</h3>
+          <h3 class="card-heading candy-bright">bread-n-butter</h3>
           <p class="m0">
             I created
             <a class="candy-link" href="https://bread-n-butter.wavebeem.com/"
               >bread-n-butter</a
-            >, a TypeScript parser combinators library, intended as a successor to
-            parsimmon.
+            >, a TypeScript parser combinators library, intended as a successor
+            to parsimmon.
           </p>
         </section>
         <section class="candy-card">
-          <h3 class="card-heading">Pixel Folders</h3>
+          <h3 class="card-heading candy-bright">Pixel Folders</h3>
           <p class="m0">
             I created
             <a class="candy-link" href="https://pixel-folders.wavebeem.com/"
@@ -127,7 +131,7 @@ layout: "layout-base"
           </p>
         </section>
         <section class="candy-card">
-          <h3 class="card-heading">the jpeg zone</h3>
+          <h3 class="card-heading candy-bright">the jpeg zone</h3>
           <p class="m0">
             I created
             <a class="candy-link" href="https://jpeg.wavebeem.com/"
@@ -137,26 +141,29 @@ layout: "layout-base"
           </p>
         </section>
         <section class="candy-card">
-          <h3 class="card-heading">codehost</h3>
+          <h3 class="card-heading candy-bright">codehost</h3>
           <p class="m0">
             I created
             <a class="candy-link" href="https://codehost.wavebeem.com/"
               >codehost</a
             >, a code syntax highlighting tool for writing blog posts with code
-            samples on <a class="candy-link" href="https://cohost.org">cohost</a>.
+            samples on
+            <a class="candy-link" href="https://cohost.org">cohost</a>.
           </p>
         </section>
         <section class="candy-card">
-          <h3 class="card-heading">show-colors</h3>
+          <h3 class="card-heading candy-bright">show-colors</h3>
           <p class="m0">
             I created
-            <a class="candy-link" href="https://www.npmjs.com/package/show-colors"
+            <a
+              class="candy-link"
+              href="https://www.npmjs.com/package/show-colors"
               >show-colors</a
             >, an npm command to show the color scheme in your terminal.
           </p>
         </section>
         <section class="candy-card">
-          <h3 class="card-heading">img-cat</h3>
+          <h3 class="card-heading candy-bright">img-cat</h3>
           <p class="m0">
             I created
             <a class="candy-link" href="https://www.npmjs.com/package/img-cat"
@@ -166,7 +173,7 @@ layout: "layout-base"
         </section>
       </div>
     </details>
-    <h2>Around the web</h2>
+    <h2 class="candy-bright">Around the web</h2>
     <div class="grid-2 box-grid">
       <div class="candy-card">
         <b>Email</b>
@@ -211,7 +218,7 @@ layout: "layout-base"
         >
       </div>
     </div>
-    <h2>About this site</h2>
+    <h2 class="candy-bright">About this site</h2>
     <p>
       Read more
       <a class="candy-link" href="/about">about this site</a> and how it was

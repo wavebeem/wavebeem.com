@@ -3,19 +3,21 @@
   /* Colors */
   --candy-color-background1: hsl(80 35% 99%);
   --candy-color-background2: hsl(80 35% 98%);
-  --candy-color-background3: hsl(80 35% 93%);
+  --candy-color-background3: hsl(80 35% 92%);
   --candy-color-background4: hsl(80 35% 90%);
   --candy-color-text1: hsl(80 35% 5%);
   --candy-color-text2: hsl(80 35% 20%);
-  --candy-color-border1: hsl(80 35% 40%);
-  --candy-color-border2: hsl(80 35% 60%);
+  --candy-color-border1: hsl(80 35% 35%);
+  --candy-color-border2: hsl(80 35% 50%);
   --candy-color-border3: hsl(80 35% 75%);
-  --candy-color-accent1: hsl(260 100% 40%);
-  --candy-color-accent2: hsl(260 100% 20%);
-  --candy-color-shadow1: hsl(80 35% 50% / 30%);
+  --candy-color-accent-background1: hsl(260 60% 50%);
+  --candy-color-accent-background2: hsl(260 60% 40%);
+  --candy-color-accent-border1: hsl(260 60% 20%);
+  --candy-color-accent-text1: hsl(260 60% 95%);
+  --candy-color-shadow1: hsl(80 100% 20% / 20%);
 
-  --candy-shadow-outset: 0 2px 2px 0 var(--candy-color-shadow1);
-  --candy-shadow-inset: inset 0 2px 2px 0 var(--candy-color-shadow1);
+  --candy-shadow-outset: 0 2px 4px var(--candy-color-shadow1);
+  --candy-shadow-inset: inset 0 2px 4px var(--candy-color-shadow1);
 
   /* Radio buttons & checkboxes */
   --candy-radiocheckbox-size: 1.5em;
@@ -133,9 +135,9 @@
 .candy-auto :where(input[type="checkbox"], input[type="radio"]),
 .candy-checkbox,
 .candy-radio {
-  --_candy-color-filled-background: var(--candy-color-accent1);
-  --_candy-color-filled-fill: var(--candy-color-background1);
-  --_candy-color-filled-border: var(--candy-color-accent2);
+  --_candy-color-filled-background: var(--candy-color-accent-background1);
+  --_candy-color-filled-fill: var(--candy-color-accent-text1);
+  --_candy-color-filled-border: var(--candy-color-accent-border1);
   align-self: start;
   vertical-align: top;
   box-sizing: border-box;
@@ -158,8 +160,8 @@
 .candy-checkbox:focus-visible,
 .candy-radio:focus-visible {
   box-shadow: none;
-  outline: 3px solid var(--candy-color-accent1);
-  outline-offset: -2px;
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
 }
 
 .candy-auto :where(input[type="checkbox"], input[type="radio"]):disabled,
@@ -174,7 +176,7 @@
 .candy-auto :where(input[type="checkbox"], input[type="radio"]):checked,
 .candy-checkbox:checked,
 .candy-radio:checked {
-  background: var(--candy-color-accent1);
+  background: var(--candy-color-accent-background1);
   box-shadow: inset 0 0 0 6px var(--_candy-color-filled-background);
 }
 
@@ -231,10 +233,10 @@
 .candy-checkbox:checked:focus-visible,
 .candy-radio:checked:focus-visible {
   box-shadow:
-    inset 0 0 0 2px var(--candy-color-background1),
-    inset 0 0 0 6px var(--candy-color-accent1);
-  outline: 3px solid var(--candy-color-accent1);
-  outline-offset: -2px;
+    inset 0 0 0 2px var(--candy-color-accent-text1),
+    inset 0 0 0 6px var(--candy-color-accent-background1);
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
 }
 
 .candy-auto
@@ -312,18 +314,22 @@
     input[type="color"]
   ),
 .candy-button {
+  --_candy-button-text: var(--candy-color-text1);
+  --_candy-button-background1: var(--candy-color-background2);
+  --_candy-button-background2: var(--candy-color-background3);
+  --_candy-button-border: var(--candy-color-border1);
   box-sizing: border-box;
   background: linear-gradient(
     to bottom,
-    var(--candy-color-background2) 0 50%,
-    var(--candy-color-background3) 50%
+    var(--_candy-button-background1) 0 50%,
+    var(--_candy-button-background2) 50%
   );
-  box-shadow: 0 2px 2px var(--candy-color-shadow1);
-  color: var(--candy-color-text1);
+  box-shadow: var(--candy-shadow-outset);
+  color: var(--_candy-button-text);
   padding: var(--candy-button-padding-vertical)
     var(--candy-button-padding-horizontal);
   font: inherit;
-  border: 1px solid var(--candy-color-border1);
+  border: 1px solid var(--_candy-button-border);
   border-radius: var(--candy-button-radius);
 }
 
@@ -335,9 +341,11 @@
     input[type="color"]
   ):focus-visible,
 .candy-button:focus-visible {
-  outline: 3px solid var(--candy-color-accent1);
-  outline-offset: -2px;
-  box-shadow: inset 0 0 0 2px var(--candy-color-background1);
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
+  box-shadow:
+    inset 0 0 0 1px var(--candy-color-background1),
+    0 0 0 3px var(--candy-color-background1);
 }
 
 .candy-auto
@@ -355,16 +363,24 @@
   border-color: var(--candy-color-border3);
 }
 
-.candy-primary {
+.candy-button.candy-primary {
   font-weight: bold;
 }
 
-.candy-primary:where(:not(:disabled)) {
-  --candy-color-background2: hsl(330 100% 40%);
-  --candy-color-background3: hsl(330 100% 35%);
-  --candy-color-shadow1: hsl(80 50% 50% / 30%);
-  --candy-color-text1: hsl(330 100% 95%);
-  --candy-color-border1: hsl(330 50% 30%);
+.candy-button.candy-primary:where(:not(:disabled)) {
+  --_candy-button-text: var(--candy-color-accent-text1);
+  --_candy-button-background1: var(--candy-color-accent-background1);
+  --_candy-button-background2: var(--candy-color-accent-background2);
+  --_candy-button-border: var(--candy-color-accent-border1);
+}
+
+.candy-button.candy-primary:focus-visible {
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
+  box-shadow: inset 0 0 0 2px var(--candy-color-accent-text1);
+  box-shadow:
+    inset 0 0 0 2px var(--candy-color-background1),
+    0 0 0 3px var(--candy-color-background1);
 }
 
 /* Select */
@@ -373,8 +389,8 @@
 .candy-select {
   --_candy-select-blur: 0.5px;
   --_candy-select-handle-angle: 45deg;
-  /* 5.5px assuming 1rem = 16px */
-  --_candy-select-handle-size: 0.34375rem;
+  /* 6px assuming 1rem = 16px */
+  --_candy-select-handle-size: 0.375rem;
   --_candy-select-handle-width: var(--_candy-select-handle-size);
   --_candy-select-handle-height: var(--_candy-select-handle-size);
   --_candy-select-handle-fg: var(--candy-color-text1);
@@ -383,7 +399,7 @@
         transparent 50%,
         var(--_candy-select-handle-fg) calc(50% + var(--_candy-select-blur))
       )
-      calc(100% - var(--candy-select-padding-horizontal)) 50% /
+      calc(100% - var(--candy-select-padding-horizontal) - 0.5px) 50% /
       var(--_candy-select-handle-width) var(--_candy-select-handle-height)
       no-repeat,
     linear-gradient(
@@ -410,7 +426,7 @@
         var(--candy-color-background3) 50%
       )
       0 0 / 100% 100% repeat var(--candy-color-background3);
-  box-shadow: 0 2px 2px var(--candy-color-shadow1);
+  box-shadow: var(--candy-shadow-outset);
   padding: var(--candy-select-padding-vertical)
     var(--candy-select-padding-horizontal);
   padding-right: calc(
@@ -424,9 +440,11 @@
 
 .candy-auto :where(select):focus-visible,
 .candy-select:focus-visible {
-  outline: 3px solid var(--candy-color-accent1);
-  outline-offset: -2px;
-  box-shadow: none;
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
+  box-shadow:
+    inset 0 0 0 1px var(--candy-color-background1),
+    0 0 0 3px var(--candy-color-background1);
 }
 
 .candy-auto :where(select):-moz-focusring,
@@ -456,7 +474,7 @@
 
 .candy-auto :where(a),
 .candy-link {
-  color: var(--candy-color-accent1);
+  color: var(--candy-color-accent-background1);
   border-radius: var(--candy-link-radius);
   text-decoration-thickness: var(--candy-link-underline);
 }
@@ -464,8 +482,9 @@
 .candy-auto :where(a):focus-visible,
 .candy-link:focus-visible {
   text-decoration-line: none;
-  outline: 2px solid var(--candy-color-accent1);
+  outline: 2px solid var(--candy-color-accent-background1);
   outline-offset: 2px;
+  box-shadow: 0 0 0 1px var(--candy-color-background1);
 }
 
 /* Input / Text Area */
@@ -485,12 +504,12 @@
 .candy-input {
   box-sizing: border-box;
   background: var(--candy-color-background1);
-  color: var(--candy-color-text2);
+  color: var(--candy-color-text1);
   font: inherit;
   padding: var(--candy-input-padding-vertical)
     var(--candy-input-padding-horizontal);
   border: 1px solid var(--candy-color-border1);
-  box-shadow: inset 0 2px 2px var(--candy-color-shadow1);
+  box-shadow: var(--candy-shadow-inset);
   border-radius: var(--candy-input-radius);
 }
 
@@ -507,9 +526,11 @@
     textarea
   ):focus-visible,
 .candy-input:focus-visible {
-  outline: 3px solid var(--candy-color-accent1);
-  outline-offset: -2px;
-  box-shadow: none;
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
+  box-shadow:
+    inset 0 0 0 1px var(--candy-color-background1),
+    0 0 0 3px var(--candy-color-background1);
 }
 
 .candy-auto
@@ -627,7 +648,7 @@
   border: 1px solid var(--candy-color-border2);
   padding: var(--candy-card-padding-vertical)
     var(--candy-card-padding-horizontal);
-  box-shadow: 0 2px 2px 0 var(--candy-color-shadow1);
+  box-shadow: var(--candy-shadow-outset);
   border-radius: var(--candy-card-radius);
 }
 
@@ -638,7 +659,7 @@
   border: 1px solid var(--candy-color-border2);
   padding: var(--candy-card-padding-vertical)
     var(--candy-card-padding-horizontal);
-  box-shadow: inset 0 2px 2px 0 var(--candy-color-shadow1);
+  box-shadow: var(--candy-shadow-inset);
   border-radius: var(--candy-well-radius);
 }
 
@@ -673,6 +694,13 @@
   padding: var(--candy-code-padding-vertical)
     var(--candy-code-padding-horizontal);
   border-radius: var(--candy-code-radius);
+}
+
+.candy-auto :where([tabindex]):focus-visible,
+.candy-focus:focus-visible {
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
+  box-shadow: 0 0 0 3px var(--candy-color-background1);
 }
 
 /* Textures */

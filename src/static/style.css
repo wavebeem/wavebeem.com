@@ -56,26 +56,20 @@
 
 .candy-auto,
 .candy-root {
-  --candy-color-background1: hsl(160 50% 18%);
-  --candy-color-background2: hsl(160 50% 16%);
-  --candy-color-background3: hsl(160 50% 13%);
-  --candy-color-background4: hsl(160 50% 10%);
-  --candy-color-text1: hsl(160 50% 90%);
-  --candy-color-text2: hsl(160 50% 70%);
-  --candy-color-border1: hsl(160 50% 40%);
+  --candy-color-accent-background1: hsl(85 80% 50%);
+  --candy-color-accent-background2: hsl(85 80% 45%);
+  --candy-color-accent-border1: hsl(85 80% 80%);
+  --candy-color-accent-text1: hsl(85 80% 5%);
+  --candy-color-background1: hsl(160 50% 10%);
+  --candy-color-background2: hsl(160 50% 20%);
+  --candy-color-background3: hsl(160 50% 17%);
+  --candy-color-background4: hsl(160 50% 14%);
+  --candy-color-border1: hsl(160 50% 45%);
   --candy-color-border2: hsl(160 50% 26%);
   --candy-color-border3: hsl(160 50% 22%);
-  --candy-color-accent1: hsl(85 90% 50%);
-  --candy-color-accent2: hsl(85 90% 90%);
   --candy-color-shadow1: hsl(160 50% 5% / 50%);
-}
-
-.candy-primary:where(:not(:disabled)) {
-  --candy-color-background2: hsl(85 0% 80%);
-  --candy-color-background3: hsl(85 0% 72%);
-  --candy-color-shadow1: hsl(200 50% 5% / 70%);
-  --candy-color-text1: hsl(85 0% 10%);
-  --candy-color-border1: hsl(85 50% 90%);
+  --candy-color-text1: hsl(160 50% 90%);
+  --candy-color-text2: hsl(160 50% 70%);
 }
 
 .hero {
@@ -195,17 +189,9 @@ h1,
 h2,
 h3 {
   margin: 2rem 0 1rem 0;
-  color: var(--candy-color-text1);
 }
 
-b,
-i,
-em,
-strong {
-  color: var(--candy-color-text1);
-}
-
-:not(pre) > code {
+.candy-auto :where(h1, h2, h3, b, i, em, strong, :not(pre) > code) {
   color: var(--candy-color-text1);
 }
 
@@ -524,7 +510,7 @@ figure figcaption {
 /* --- Syntax highlighting --- */
 
 .candy-auto pre {
-  border: 1px solid var(--candy-color-border2);
+  border: 1px solid var(--candy-color-border3);
 
   --c1a: hsl(160 20% 50%);
   --c1b: hsl(160 50% 50%);
@@ -540,7 +526,7 @@ figure figcaption {
   --function: var(--c4);
   --keyword: var(--c2);
 
-  background: hsl(160 50% 8%);
+  background: var(--candy-color-background1);
   color: var(--candy-color-text1);
 }
 

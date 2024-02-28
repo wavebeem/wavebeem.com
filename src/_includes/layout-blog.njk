@@ -5,7 +5,7 @@ tags:
 ---
 
 <main class="content">
-  <h1>Blog</h1>
+  <h1 class="candy-bright">Blog</h1>
 
   <p>
     Subscribe via my <a class="candy-link" href="/feed.xml">RSS feed</a> to stay
@@ -15,7 +15,7 @@ tags:
   <div class="post-list">
     {% for post in collections.post | reverse %}
     <section class="post-list--post candy-card">
-      <h2>
+      <h2 class="candy-bright">
         <a class="candy-link no-underline" href="{{ post.url }}">
           {{ post.data.title }}
         </a>
