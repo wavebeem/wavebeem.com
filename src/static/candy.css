@@ -20,10 +20,11 @@
   --candy-shadow-inset: inset 0 2px 4px var(--candy-color-shadow1);
 
   /* Radio buttons & checkboxes */
-  --candy-radiocheckbox-size: 1.5em;
-  --candy-radiocheckbox-margin-horizontal: 4px;
-  --candy-radiocheckbox-margin-vertical: 4px;
-  --candy-radiocheckbox-radius: 2px;
+  --candy-choice-item-radius: 2px;
+  --candy-choice-item-size: 1.5em;
+  --candy-choice-gap: 0.5rem;
+  --candy-choice-padding-vertical: 0.5rem;
+  --candy-choice-padding-horizontal: 0.5rem;
 
   /* Buttons */
   --candy-button-padding-vertical: 0.5rem;
@@ -81,25 +82,23 @@
 
 /* Checkbox / Radio Button Field Container */
 
-.candy-field {
+.candy-choice {
+  border-radius: var(--candy-choice-item-radius);
   box-sizing: border-box;
   display: grid;
-  grid-gap: 2px;
+  grid-gap: var(--candy-choice-gap);
   grid-template-columns: min-content 1fr;
   align-items: center;
-}
-
-.candy-field > .candy-radio + *,
-.candy-field > .candy-checkbox + * {
+  padding: var(--candy-choice-padding-vertical)
+    var(--candy-choice-padding-horizontal);
   user-select: none;
 }
 
-.candy-field > .candy-radio:disabled + *,
-.candy-field > .candy-checkbox:disabled + * {
+.candy-choice > :where(:is(.candy-radio, .candy-checkbox):disabled + *) {
   color: var(--candy-color-border1);
 }
 
-.candy-auto :where(label) {
+.candy-choice > :where(:is(.candy-radio, .candy-checkbox) + label) {
   display: block;
 }
 
@@ -124,7 +123,7 @@
 
 .candy-auto :where(input[type="checkbox"]),
 .candy-checkbox {
-  border-radius: var(--candy-radiocheckbox-radius);
+  border-radius: var(--candy-choice-item-radius);
 }
 
 .candy-auto :where(input[type="radio"]),
@@ -144,10 +143,9 @@
   -webkit-appearance: none;
   appearance: none;
   font: inherit;
-  width: var(--candy-radiocheckbox-size);
-  height: var(--candy-radiocheckbox-size);
-  margin: var(--candy-radiocheckbox-margin-vertical)
-    var(--candy-radiocheckbox-margin-horizontal);
+  width: var(--candy-choice-item-size);
+  height: var(--candy-choice-item-size);
+  margin: 0;
   background: var(--candy-color-background1);
   background-clip: padding-box;
   padding: 2px;
@@ -706,13 +704,16 @@
 /* Textures */
 
 .candy-texture-striped {
-  --_s: var(--candy-texture-striped-size);
   background: repeating-linear-gradient(
       -45deg,
-      var(--candy-color-background3) 0 calc(0.5 * var(--_s)),
-      var(--candy-color-background2) calc(0.5 * var(--_s) + 0.5px)
-        calc(1.5 * var(--_s) - 0.5px),
-      var(--candy-color-background3) calc(1.5 * var(--_s)) calc(2 * var(--_s))
+      var(--candy-color-background3) 0
+        calc(0.5 * var(--candy-texture-striped-size)),
+      var(--candy-color-background2)
+        calc(0.5 * var(--candy-texture-striped-size) + 0.5px)
+        calc(1.5 * var(--candy-texture-striped-size) - 0.5px),
+      var(--candy-color-background3)
+        calc(1.5 * var(--candy-texture-striped-size))
+        calc(2 * var(--candy-texture-striped-size))
     )
     var(--candy-color-background3);
 }
