@@ -2,14 +2,14 @@
 layout: "layout-base"
 ---
 
-<main>
-  <h1>Drafts</h1>
+<main class="content">
+  <h1 class="candy-bright">Drafts</h1>
 
   <div class="post-list">
     {% for draft in collections.draft | reverse %}
-    <section class="post-list--post bit-card">
-      <h2>
-        <a class="bit-link no-underline" href="{{ draft.url }}">
+    <section class="post-list--post candy-card">
+      <h2 class="candy-bright">
+        <a class="candy-link no-underline" href="{{ draft.url }}">
           {{ draft.data.title }}
         </a>
       </h2>

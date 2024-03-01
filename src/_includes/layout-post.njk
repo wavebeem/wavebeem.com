@@ -4,9 +4,9 @@ tags:
   - "post"
 ---
 
-<main>
-  <h1>
-    <a class="bit-link" href="">{{ title }}</a>
+<main class="content">
+  <h1 class="candy-bright">
+    <a class="candy-link" href="">{{ title }}</a>
   </h1>
 
   <p class="post-date date">
@@ -16,7 +16,11 @@ tags:
     >
   </p>
 
-  <div class="bit-auto post">
+  <blockquote>
+    {{ description }}
+  </blockquote>
+
+  <div class="candy-prose post">
     {{ content | safe }}
   </div>
 </main>

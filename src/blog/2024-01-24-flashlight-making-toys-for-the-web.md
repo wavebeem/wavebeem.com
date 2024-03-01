@@ -17,7 +17,7 @@ I recently created [netpet](https://netpet.wavebeem.com/), a Tamagotchi-like vir
 Today I made a flashlight you can toggle on this page.
 
 <wavebeem-toy-flashlight>
-  <button class="bit-button bit-primary">Toggle flashlight mode</button>
+  <button class="candy-button candy-primary">Toggle flashlight mode</button>
 </wavebeem-toy-flashlight>
 
 [View source](/static/elements/wavebeem-toy-flashlight.js)
@@ -34,7 +34,7 @@ Nowadays I don't really do that kind of stuff as much. I don't think the web pla
 
 ## Embracing the platform
 
-I feel like I've become out of touch with the web platform. I've spent the last six years working with [React](https://react.dev/), and I've grown increasingly frustrated with it. React has started to show its age, with other frameworks flawlessly supporting [custom elements](https://custom-elements-everywhere.com/), out of the box styling abstractions, routing, faster runtimes, and smaller file sizes. And don't even get me started on [hooks and useState](blog/2022/01/25/why-i-don-t-like-usestate/).
+I feel like I've become out of touch with the web platform. I've spent the last six years working with [React](https://react.dev/), and I've grown increasingly frustrated with it. React has started to show its age, with other frameworks flawlessly supporting [custom elements](https://custom-elements-everywhere.com/), out of the box styling abstractions, routing, faster runtimes, and smaller file sizes. And don't even get me started on [hooks and useState](/blog/2022/01/25/why-i-don-t-like-usestate/).
 
 I've made a goal for myself to learn more about the web platform. The pace of improvement to core web APIs and features is incredible. The level of code you can ship with zero libraries and compilers is better than it's ever been. And despite the haters, custom elements are pretty good.
 
