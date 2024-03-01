@@ -1,6 +1,8 @@
 ---
-title: "Recipe - Buttermilk biscuits"
-description: "Detailed insturctions on how to make fluffy biscuits at home."
+title: |
+  Recipe - Buttermilk biscuits
+description: |
+  Detailed instructions on how to make fluffy biscuits at home.
 ---
 
 ## Ingredients

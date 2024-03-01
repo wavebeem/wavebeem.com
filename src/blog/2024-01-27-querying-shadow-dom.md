@@ -2,7 +2,7 @@
 title: |
   Querying shadow DOM
 description: |
-  Examples how to query shadow DOM, and when you actually don't want to.
+  Examples of how to query shadow DOM, and when you actually don't want to.
 ---
 
 ## Inspiration

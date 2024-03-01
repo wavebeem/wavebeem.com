@@ -317,9 +317,9 @@ pre {
 }
 
 blockquote {
-  border-left: 1px solid var(--candy-color-shadow);
+  border-left: 1px solid var(--candy-color-border3);
   margin-left: 0;
-  padding-left: 2rem;
+  padding-left: 1rem;
   font-style: italic;
 }
 
@@ -331,6 +331,7 @@ figure {
 figure img {
   width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 
 figure figcaption {
