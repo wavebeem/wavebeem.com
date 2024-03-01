@@ -1,4 +1,10 @@
-.candy-auto,
+/**
+ * @license MIT
+ * candy.css v0.6.0
+ * Copyright 2024 Sage Fennel
+ * https://candy.wavebeem.com
+ */
+
 .candy-root {
   /* Colors */
   --candy-color-background1: hsl(80 35% 99%);
@@ -21,7 +27,7 @@
 
   /* Radio buttons & checkboxes */
   --candy-choice-item-radius: 2px;
-  --candy-choice-item-size: 1.5em;
+  --candy-choice-item-size: 1.5rem;
   --candy-choice-gap: 0.5rem;
   --candy-choice-padding-vertical: 0.5rem;
   --candy-choice-padding-horizontal: 0.5rem;
@@ -37,6 +43,7 @@
   --candy-select-radius: 4px;
 
   /* Inputs */
+  --candy-field-gap: 0.25rem;
   --candy-input-padding-vertical: 0.5rem;
   --candy-input-padding-horizontal: 0.5rem;
   --candy-input-radius: 2px;
@@ -69,6 +76,10 @@
   --candy-legend-padding-horizontal: 0.5rem;
   --candy-legend-padding-vertical: 0rem;
 
+  /* Dividers */
+  --candy-divider-margin-horizontal: 0rem;
+  --candy-divider-margin-vertical: 0.5rem;
+
   /* Textures */
   --candy-texture-striped-size: 8px;
 
@@ -94,7 +105,10 @@
   user-select: none;
 }
 
-.candy-choice > :where(:is(.candy-radio, .candy-checkbox):disabled + *) {
+.candy-choice
+  > :where(
+    :is(.candy-radio, .candy-checkbox):is(:disabled, [aria-disabled="true"]) + *
+  ) {
   color: var(--candy-color-border1);
 }
 
@@ -102,36 +116,16 @@
   display: block;
 }
 
-.candy-auto
-  :where(
-    label > input[type="radio"] + *,
-    label > input[type="checkbox"] + *,
-    input[type="radio"] + label,
-    input[type="checkbox"] + label
-  ) {
-  padding: 2px;
-  display: inline-block;
-  align-self: start;
-}
-
-.candy-auto
-  :where(label > input[type="radio"] + *, label > input[type="checkbox"] + *) {
-  padding-left: 4px;
-}
-
 /* Checkbox / Radio Button */
 
-.candy-auto :where(input[type="checkbox"]),
 .candy-checkbox {
   border-radius: var(--candy-choice-item-radius);
 }
 
-.candy-auto :where(input[type="radio"]),
 .candy-radio {
   border-radius: 9999px;
 }
 
-.candy-auto :where(input[type="checkbox"], input[type="radio"]),
 .candy-checkbox,
 .candy-radio {
   --_candy-color-filled-background: var(--candy-color-accent-background1);
@@ -154,31 +148,26 @@
   box-shadow: inset 0 2px 2px var(--candy-color-shadow1);
 }
 
-.candy-auto :where(input[type="checkbox"], input[type="radio"]):focus-visible,
-.candy-checkbox:focus-visible,
-.candy-radio:focus-visible {
-  box-shadow: none;
-  outline: 3px solid var(--candy-color-accent-background1);
-  outline-offset: -1px;
-}
-
-.candy-auto :where(input[type="checkbox"], input[type="radio"]):disabled,
-.candy-checkbox:disabled,
-.candy-radio:disabled {
+:is(.candy-checkbox, .candy-radio):is(:disabled, [aria-disabled="true"]) {
   background: var(--candy-color-background4);
   color: var(--candy-color-border3);
   border-color: var(--candy-color-border3);
   box-shadow: none;
 }
 
-.candy-auto :where(input[type="checkbox"], input[type="radio"]):checked,
-.candy-checkbox:checked,
-.candy-radio:checked {
+:is(.candy-checkbox, .candy-radio):focus-visible {
+  box-shadow:
+    inset 0 0 0 1px var(--candy-color-background1),
+    0 0 0 3px var(--candy-color-background1);
+  outline-offset: -1px;
+  outline: 3px solid var(--candy-color-accent-background1);
+}
+
+:is(.candy-checkbox, .candy-radio):checked {
   background: var(--candy-color-accent-background1);
   box-shadow: inset 0 0 0 6px var(--_candy-color-filled-background);
 }
 
-.candy-auto :where(input[type="radio"]):checked,
 .candy-radio:checked {
   --_candy-radio-blur: 0.25px;
   box-shadow: none;
@@ -193,10 +182,9 @@
   );
 }
 
-.candy-auto :where(input[type="checkbox"]):checked,
 .candy-checkbox:checked {
   --_candy-checkbox-blur: 0.5px;
-  --_candy-checkbox-size: 0.125em;
+  --_candy-checkbox-size: 0.125rem;
   --_candy-checkbox-start: calc(50% - 0.5 * var(--_candy-checkbox-size));
   --_candy-checkbox-end: calc(
     var(--_candy-checkbox-start) + var(--_candy-checkbox-size)
@@ -226,10 +214,7 @@
   box-shadow: inset 0 0 0 6px var(--_candy-color-filled-background);
 }
 
-.candy-auto
-  :where(input[type="checkbox"], input[type="radio"]):checked:focus-visible,
-.candy-checkbox:checked:focus-visible,
-.candy-radio:checked:focus-visible {
+:is(.candy-checkbox, .candy-radio):checked:focus-visible {
   box-shadow:
     inset 0 0 0 2px var(--candy-color-accent-text1),
     inset 0 0 0 6px var(--candy-color-accent-background1);
@@ -237,18 +222,27 @@
   outline-offset: -1px;
 }
 
-.candy-auto
-  :where(input[type="checkbox"], input[type="radio"]):checked:disabled,
-.candy-checkbox:checked:disabled,
-.candy-radio:checked:disabled {
+:is(.candy-checkbox, .candy-radio):checked:is(
+    :disabled,
+    [aria-disabled="true"]
+  ) {
   --_candy-color-filled-background: var(--candy-color-background4);
   --_candy-color-filled-fill: var(--candy-color-border2);
   --_candy-color-filled-border: var(--candy-color-border3);
 }
 
+:is(.candy-checkbox, .candy-radio):checked:is(
+    :disabled,
+    [aria-disabled="true"]
+  ):focus-visible {
+  box-shadow:
+    inset 0 0 0 1px var(--candy-color-background1),
+    inset 0 0 0 6px var(--candy-color-background4),
+    0 0 0 3px var(--candy-color-background1);
+}
+
 /* Table */
 
-.candy-auto :where(table),
 .candy-table {
   box-sizing: border-box;
   background: var(--candy-color-background1);
@@ -256,30 +250,24 @@
   border-collapse: collapse;
 }
 
-.candy-auto :where(table th),
-.candy-table th {
+.candy-table :where(th) {
   padding: var(--candy-table-padding-vertical)
     var(--candy-table-padding-horizontal);
   text-align: left;
 }
 
-.candy-auto :where(table tbody tr):not(:last-of-type),
-.candy-table tbody tr:not(:last-of-type) {
+.candy-table :where(tbody tr:not(:last-of-type)) {
   border-bottom: 1px solid var(--candy-color-border3);
 }
 
-.candy-auto table td,
-.candy-table td {
+.candy-table :where(td) {
   background: var(--candy-color-background1);
   color: var(--candy-color-text2);
   padding: var(--candy-table-padding-vertical)
     var(--candy-table-padding-horizontal);
 }
 
-.candy-auto table tfoot :is(th, td),
-.candy-table tfoot :is(th, td),
-.candy-auto table thead :is(th, td),
-.candy-table thead :is(th, td) {
+.candy-table :where(tfoot, thead) :where(th, td) {
   background: linear-gradient(
     to bottom,
     var(--candy-color-background2),
@@ -290,27 +278,18 @@
     var(--candy-table-padding-horizontal);
 }
 
-.candy-auto table thead,
-.candy-table thead {
+.candy-table :where(thead) {
   border-top: 0;
   border-bottom: 1px solid var(--candy-color-border2);
 }
 
-.candy-auto table tfoot,
-.candy-table tfoot {
+.candy-table :where(tfoot) {
   border-top: 1px solid var(--candy-color-border2);
   border-bottom: 0;
 }
 
 /* Button */
 
-.candy-auto
-  :where(
-    button,
-    input[type="button"],
-    input[type="submit"],
-    input[type="color"]
-  ),
 .candy-button {
   --_candy-button-text: var(--candy-color-text1);
   --_candy-button-background1: var(--candy-color-background2);
@@ -331,13 +310,14 @@
   border-radius: var(--candy-button-radius);
 }
 
-.candy-auto
-  :where(
-    button,
-    input[type="button"],
-    input[type="submit"],
-    input[type="color"]
-  ):focus-visible,
+.candy-button:is(:disabled, [aria-disabled="true"]) {
+  background: var(--candy-color-background4);
+  transform: none;
+  box-shadow: none;
+  color: var(--candy-color-border1);
+  border-color: var(--candy-color-border3);
+}
+
 .candy-button:focus-visible {
   outline: 3px solid var(--candy-color-accent-background1);
   outline-offset: -1px;
@@ -346,26 +326,11 @@
     0 0 0 3px var(--candy-color-background1);
 }
 
-.candy-auto
-  :where(
-    button,
-    input[type="button"],
-    input[type="submit"],
-    input[type="color"]
-  ):disabled,
-.candy-button:disabled {
-  background: var(--candy-color-background4);
-  transform: none;
-  box-shadow: none;
-  color: var(--candy-color-border1);
-  border-color: var(--candy-color-border3);
-}
-
 .candy-button.candy-primary {
   font-weight: bold;
 }
 
-.candy-button.candy-primary:where(:not(:disabled)) {
+.candy-button.candy-primary:where(:not(:disabled, [aria-disabled="true"])) {
   --_candy-button-text: var(--candy-color-accent-text1);
   --_candy-button-background1: var(--candy-color-accent-background1);
   --_candy-button-background2: var(--candy-color-accent-background2);
@@ -383,12 +348,10 @@
 
 /* Select */
 
-.candy-auto :where(select),
 .candy-select {
   --_candy-select-blur: 0.5px;
   --_candy-select-handle-angle: 45deg;
-  /* 6px assuming 1rem = 16px */
-  --_candy-select-handle-size: 0.375rem;
+  --_candy-select-handle-size: 6px;
   --_candy-select-handle-width: var(--_candy-select-handle-size);
   --_candy-select-handle-height: var(--_candy-select-handle-size);
   --_candy-select-handle-fg: var(--candy-color-text1);
@@ -436,23 +399,12 @@
   border-radius: var(--candy-select-radius);
 }
 
-.candy-auto :where(select):focus-visible,
-.candy-select:focus-visible {
-  outline: 3px solid var(--candy-color-accent-background1);
-  outline-offset: -1px;
-  box-shadow:
-    inset 0 0 0 1px var(--candy-color-background1),
-    0 0 0 3px var(--candy-color-background1);
-}
-
-.candy-auto :where(select):-moz-focusring,
 .candy-select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 var(--candy-color-text2);
 }
 
-.candy-auto :where(select):disabled,
-.candy-select:disabled {
+.candy-select:is(:disabled, [aria-disabled="true"]) {
   background: var(--_candy-select-arrow);
   --_candy-select-handle-fg: var(--candy-color-border1);
   --_candy-select-handle-bg: var(--candy-color-background4);
@@ -462,43 +414,48 @@
   box-shadow: none;
 }
 
+.candy-select:focus-visible {
+  outline: 3px solid var(--candy-color-accent-background1);
+  outline-offset: -1px;
+  box-shadow:
+    inset 0 0 0 1px var(--candy-color-background1),
+    0 0 0 3px var(--candy-color-background1);
+}
+
 /* Text styles */
 
+.candy-prose :where(h1, h2, h3, h4, h5, h6, b, i, em, strong, :not(pre) > code),
 .candy-bright {
   color: var(--candy-color-text1);
 }
 
 /* Link */
 
-.candy-auto :where(a),
+.candy-prose :where(a),
 .candy-link {
   color: var(--candy-color-accent-background1);
   border-radius: var(--candy-link-radius);
   text-decoration-thickness: var(--candy-link-underline);
 }
 
-.candy-auto :where(a):focus-visible,
+.candy-prose :where(a):focus-visible,
 .candy-link:focus-visible {
   text-decoration-line: none;
   outline: 2px solid var(--candy-color-accent-background1);
-  outline-offset: 2px;
-  box-shadow: 0 0 0 1px var(--candy-color-background1);
+  outline-offset: 1px;
+  box-shadow:
+    0 0 0 1px var(--candy-color-background1),
+    0 0 0 4px var(--candy-color-background1);
 }
 
 /* Input / Text Area */
 
-.candy-auto
-  :where(
-    input:not([type]),
-    input[type="tel"],
-    input[type="url"],
-    input[type="text"],
-    input[type="email"],
-    input[type="search"],
-    input[type="number"],
-    input[type="password"],
-    textarea
-  ),
+.candy-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--candy-field-gap);
+}
+
 .candy-input {
   box-sizing: border-box;
   background: var(--candy-color-background1);
@@ -511,18 +468,13 @@
   border-radius: var(--candy-input-radius);
 }
 
-.candy-auto
-  :where(
-    input:not([type]),
-    input[type="tel"],
-    input[type="url"],
-    input[type="text"],
-    input[type="email"],
-    input[type="search"],
-    input[type="number"],
-    input[type="password"],
-    textarea
-  ):focus-visible,
+.candy-input:is(:disabled, [aria-disabled="true"]) {
+  background: var(--candy-color-background4);
+  box-shadow: none;
+  color: var(--candy-color-border1);
+  border-color: var(--candy-color-border3);
+}
+
 .candy-input:focus-visible {
   outline: 3px solid var(--candy-color-accent-background1);
   outline-offset: -1px;
@@ -531,54 +483,11 @@
     0 0 0 3px var(--candy-color-background1);
 }
 
-.candy-auto
-  :where(
-    input:not([type]),
-    input[type="tel"],
-    input[type="url"],
-    input[type="text"],
-    input[type="email"],
-    input[type="search"],
-    input[type="number"],
-    input[type="password"],
-    textarea
-  ):disabled,
-.candy-input:disabled {
-  background: var(--candy-color-background4);
-  box-shadow: none;
-  color: var(--candy-color-border1);
-  border-color: var(--candy-color-border3);
-}
-
-.candy-auto
-  :where(
-    input:not([type]),
-    input[type="tel"],
-    input[type="url"],
-    input[type="text"],
-    input[type="email"],
-    input[type="search"],
-    input[type="number"],
-    input[type="password"],
-    textarea
-  )::placeholder,
 .candy-input::placeholder {
   opacity: unset;
   color: var(--candy-color-border1);
 }
 
-.candy-auto
-  :where(
-    input:not([type]),
-    input[type="tel"],
-    input[type="url"],
-    input[type="text"],
-    input[type="email"],
-    input[type="search"],
-    input[type="number"],
-    input[type="password"],
-    textarea
-  )::selection,
 .candy-input::selection {
   background: var(--candy-color-text2);
   color: var(--candy-color-background1);
@@ -586,7 +495,6 @@
 
 /* Fieldset and legend */
 
-.candy-auto :where(fieldset),
 .candy-fieldset {
   border: 1px solid var(--candy-color-border2);
   padding: var(--candy-fieldset-padding-vertical)
@@ -595,7 +503,6 @@
   border-radius: var(--candy-fieldset-radius);
 }
 
-.candy-auto :where(legend),
 .candy-legend {
   border: 0;
   padding-top: var(--candy-legend-padding-vertical);
@@ -608,7 +515,6 @@
 
 /* Firefox nonsense */
 
-.candy-auto ::-moz-focus-inner,
 .candy-checkbox::-moz-focus-inner,
 .candy-radio::-moz-focus-inner,
 .candy-select::-moz-focus-inner,
@@ -620,22 +526,9 @@
 /* Miscellaneous */
 
 /* Add a click effect to interactable elements */
-:is(
-    .candy-auto
-      :where(
-        button,
-        input[type="button"],
-        input[type="submit"],
-        input[type="color"],
-        input[type="checkbox"],
-        input[type="radio"],
-        select
-      ),
-    .candy-button,
-    .candy-radio,
-    .candy-checkbox,
-    .candy-select
-  ):is(:active):where(:not(:disabled)) {
+:is(.candy-button, .candy-radio, .candy-checkbox, .candy-select):active:where(
+    :not(:disabled, [aria-disabled="true"])
+  ) {
   filter: brightness(0.9);
 }
 
@@ -655,8 +548,8 @@
   background: var(--candy-color-background3);
   color: var(--candy-color-text2);
   border: 1px solid var(--candy-color-border2);
-  padding: var(--candy-card-padding-vertical)
-    var(--candy-card-padding-horizontal);
+  padding: var(--candy-well-padding-vertical)
+    var(--candy-well-padding-horizontal);
   box-shadow: var(--candy-shadow-inset);
   border-radius: var(--candy-well-radius);
 }
@@ -666,7 +559,6 @@
   border: 1px solid var(--candy-color-border2);
 }
 
-.candy-auto,
 .candy-scrollbar {
   scrollbar-color: var(--candy-color-text2) var(--candy-color-background3);
 }
@@ -675,14 +567,16 @@
   fill: currentcolor;
 }
 
-.candy-auto :where(hr),
+.candy-prose :where(hr),
 .candy-divider {
   box-sizing: border-box;
   border: 0;
   border-top: 1px solid var(--candy-color-border3);
+  margin: var(--candy-divider-margin-vertical)
+    var(--candy-divider-margin-horizontal);
 }
 
-.candy-auto :where(pre),
+.candy-prose :where(pre),
 .candy-code {
   box-sizing: border-box;
   background: var(--candy-color-background1);
@@ -694,11 +588,12 @@
   border-radius: var(--candy-code-radius);
 }
 
-.candy-auto :where([tabindex]):focus-visible,
 .candy-focus:focus-visible {
   outline: 3px solid var(--candy-color-accent-background1);
   outline-offset: -1px;
-  box-shadow: 0 0 0 3px var(--candy-color-background1);
+  box-shadow:
+    inset 0 0 0 1px var(--candy-color-background1),
+    0 0 0 3px var(--candy-color-background1);
 }
 
 /* Textures */
