@@ -177,10 +177,6 @@ header {
     0 4px 16px 0 var(--candy-color-shadow1);
 }
 
-.background-fixed {
-  background-attachment: fixed;
-}
-
 footer > *,
 .header-content > div {
   padding: 1rem;
