@@ -485,10 +485,6 @@ figure figcaption {
   --candy-table-padding-horizontal: 0.5rem;
 }
 
-[data-page="resume"] .candy-table a:not(:hover) {
-  text-decoration-line: none;
-}
-
 [data-page="resume"] h1 small,
 [data-page="resume"] h2 small,
 [data-page="resume"] h3 small {
