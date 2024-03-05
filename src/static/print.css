@@ -65,6 +65,14 @@ table {
   border-collapse: collapse;
 }
 
+thead :is(th, td) {
+  border-bottom: 1px solid;
+}
+
+table th {
+  text-align: left;
+}
+
 tbody > tr > td,
 tbody > tr > th {
   padding: 0.25rem 0;
