@@ -68,6 +68,7 @@
   --candy-color-shadow1: hsl(160 50% 5% / 50%);
   --candy-color-text1: hsl(160 50% 90%);
   --candy-color-text2: hsl(160 50% 70%);
+  --candy-button-radius: 9999px;
 }
 
 .hero {
