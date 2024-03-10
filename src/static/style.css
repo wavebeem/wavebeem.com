@@ -509,7 +509,7 @@ figure figcaption {
   --c1a: hsl(160 20% 50%);
   --c1b: hsl(160 50% 50%);
   --c2: hsl(85 80% 60%);
-  --c3: hsl(330 90% 80%);
+  --c3: hsl(320 90% 80%);
   --c4: hsl(20 90% 80%);
 
   --comment: var(--c1a);
