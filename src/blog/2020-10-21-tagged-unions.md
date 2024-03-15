@@ -3,8 +3,6 @@ title: "Tagged unions in JavaScript"
 description: "A disciplined approach to state management and domain modeling for JavaScript and TypeScript. Also known as algebraic data types / discriminated unions."
 ---
 
-@[toc]
-
 ## Why tagged unions?
 
 Redux. MobX. XState. Vuex. RxJS. State management is hard, and developers are always looking for a tool to help them. Tagged unions are a programming pattern that you can use with immutable state libraries, or even on their own. Tagged unions make it possible to visualize all the states your application can be in, and prevent you from accessing the wrong data at the wrong time.

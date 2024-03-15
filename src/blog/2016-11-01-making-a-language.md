@@ -3,8 +3,6 @@ title: "Making a language"
 description: "How to make a programming language from scratch in JS."
 ---
 
-@[toc]
-
 ## What's in a programming language?
 
 Programming language implementations vary wildly, but the steps are roughly as follows:

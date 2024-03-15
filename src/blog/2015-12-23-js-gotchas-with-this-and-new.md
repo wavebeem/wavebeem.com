@@ -3,8 +3,6 @@ title: "JS gotchas with this and new"
 description: "How JS's 'this' and 'new' work, and how to avoid issues with them."
 ---
 
-@[toc]
-
 ## Note
 
 This was originally [posted on Medium.com](https://medium.com/@wavebeem/javascript-gotchas-with-this-and-new-dfb65e387ef) on December 23, 2015, but I'm reposting it on my personal blog on January 5, 2017.

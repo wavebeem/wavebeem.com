@@ -4,34 +4,32 @@ tags:
   - "blog"
 ---
 
-<main class="content">
-  <h1 class="candy-bright">Blog</h1>
+<h1 class="candy-bright">Blog</h1>
 
-  <p>
-    Subscribe via my <a class="candy-link" href="/feed.xml">RSS feed</a> to stay
-    updated.
-  </p>
+<p>
+  Subscribe via my <a class="candy-link" href="/feed.xml">RSS feed</a> to stay
+  updated.
+</p>
 
-  <div class="post-list">
-    {% for post in collections.post | reverse %}
-    <section class="post-list--post candy-card candy-texture-concave">
-      <h2 class="candy-bright">
-        <a class="candy-link no-underline" href="{{ post.url }}">
-          {{ post.data.title }}
-        </a>
-      </h2>
+<div class="post-list">
+  {% for post in collections.post | reverse %}
+  <section class="post-list--post candy-card candy-texture-concave">
+    <h2 class="candy-bright">
+      <a class="candy-link no-underline" href="{{ post.url }}">
+        {{ post.data.title }}
+      </a>
+    </h2>
 
-      <p>
-        {{ post.data.description }}
-      </p>
+    <p>
+      {{ post.data.description }}
+    </p>
 
-      <time
-        datetime="{{ post.date | formatDate('yyyy-mm-dd') }}"
-        >{{ post.date | formatDate('yyyy mmmm d') }}</time
-      >
-    </section>
-    {% endfor %}
-  </div>
+    <time
+      datetime="{{ post.date | formatDate('yyyy-mm-dd') }}"
+      >{{ post.date | formatDate('yyyy mmmm d') }}</time
+    >
+  </section>
+  {% endfor %}
+</div>
 
-  {{ content | safe }}
-</main>
+{{ content | safe }}

@@ -3,8 +3,6 @@ title: "JavaScript iterators and more"
 description: "A comparison and overview of generators, iterators, and iterables in JS."
 ---
 
-@[toc]
-
 ## Why
 
 Many languages (Java, C#, Python, etc) have a concept of an object being _iterable_, that is, capable of giving you values from first to last in a particular order. This often comes in the form of a "for each" loop such as this in Python:

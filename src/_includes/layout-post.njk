@@ -4,23 +4,21 @@ tags:
   - "post"
 ---
 
-<main class="content">
-  <h1 class="candy-bright">
-    <a class="candy-link" href="">{{ title }}</a>
-  </h1>
+<h1 class="candy-bright">
+  {{ title }}
+</h1>
 
-  <p class="post-date date">
-    <time
-      datetime="{{ page.date | formatDate('yyyy-mm-dd') }}"
-      >{{ page.date | formatDate('yyyy mmmm d') }}</time
-    >
-  </p>
+<p class="post-date date">
+  <time
+    datetime="{{ page.date | formatDate('yyyy-mm-dd') }}"
+    >{{ page.date | formatDate('yyyy mmmm d') }}</time
+  >
+</p>
 
-  <blockquote>
-    {{ description }}
-  </blockquote>
+<blockquote>
+  {{ description }}
+</blockquote>
 
-  <div class="candy-prose post">
-    {{ content | safe }}
-  </div>
-</main>
+<div class="candy-prose post">
+  {{ content | safe }}
+</div>

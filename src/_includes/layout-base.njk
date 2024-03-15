@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="candy-root candy-scrollbar">
+<html lang="en" class="candy-root candy-scrollbar candy-texture-striped" data-tags="{{ tags or [] | join(' ') }}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="content-security-policy" content="{{ csp | safe }}" />
@@ -87,12 +87,8 @@
     />
   </head>
   <body>
-    <header class="screen-only">
-      <div
-        aria-hidden="true"
-        class="header-decoration candy-texture-striped"
-      ></div>
-      <div class="header-content candy-texture-convex">
+    <header class="screen-only candy-texture-concave candy-card">
+      <div class="header-content">
         <div>
           <a href="/" class="flex align-center logo candy-link"
             >wavebeem<span aria-hidden="true">&nbsp;*-</span>
@@ -106,8 +102,10 @@
         </div>
       </div>
     </header>
-    {{ content | safe }}
-    <footer class="screen-only candy-texture-convex">
+    <main class="content candy-card candy-texture-default">
+      {{ content | safe }}
+    </main>
+    <footer class="screen-only candy-texture-concave footer candy-card">
       <div>
         <span>
           &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i

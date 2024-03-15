@@ -2,29 +2,27 @@
 layout: "layout-base"
 ---
 
-<main class="content">
-  <h1 class="candy-bright">Drafts</h1>
+<h1 class="candy-bright">Drafts</h1>
 
-  <div class="post-list">
-    {% for draft in collections.draft | reverse %}
-    <section class="post-list--post candy-card">
-      <h2 class="candy-bright">
-        <a class="candy-link no-underline" href="{{ draft.url }}">
-          {{ draft.data.title }}
-        </a>
-      </h2>
+<div class="post-list">
+  {% for draft in collections.draft | reverse %}
+  <section class="post-list--post candy-card">
+    <h2 class="candy-bright">
+      <a class="candy-link no-underline" href="{{ draft.url }}">
+        {{ draft.data.title }}
+      </a>
+    </h2>
 
-      <p>
-        {{ draft.data.description }}
-      </p>
+    <p>
+      {{ draft.data.description }}
+    </p>
 
-      <time
-        datetime="{{ draft.date | formatDate('yyyy-mm-dd') }}"
-        >{{ draft.date | formatDate('yyyy mmmm d') }}</time
-      >
-    </section>
-    {% endfor %}
-  </div>
+    <time
+      datetime="{{ draft.date | formatDate('yyyy-mm-dd') }}"
+      >{{ draft.date | formatDate('yyyy mmmm d') }}</time
+    >
+  </section>
+  {% endfor %}
+</div>
 
-  {{ content | safe }}
-</main>
+{{ content | safe }}

@@ -1,6 +1,6 @@
-for (const button of document.querySelectorAll("[data-bizarro-button]")) {
+for (const button of document.querySelectorAll("[data-bizarro]")) {
   button.addEventListener("click", function () {
-    document.documentElement.classList.toggle("bizarro");
+    button.classList.toggle("bizarro");
   });
 }
 

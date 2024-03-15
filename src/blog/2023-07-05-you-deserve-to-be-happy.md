@@ -5,8 +5,6 @@ description: |
   A discussion of why people hate JS, Electron, and the web. Also a plea about how excessive negativity hurts you and those around you.
 ---
 
-@[toc]
-
 ## Why do people hate JS so much?
 
 People love telling you how much they hate JS or even the entire web. I gasped reading this post: _"People who use [TypeScript/React/etc] should be beheaded, or at least hanged"_. I'm sure it's meant as a hyperbolic, but what on Earth gets people so twisted about JS and its ecosystem? I saw another user with _"burning hatred for javascript"_ in their bio, and much more. _"Web development is a fucking nightmare"_, no, it's your attitude that's a nightmare.

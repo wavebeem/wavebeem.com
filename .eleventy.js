@@ -1,7 +1,6 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
-const markdownItTocAndAnchor = require("markdown-it-toc-and-anchor").default;
 const dateformat = require("dateformat");
 const util = require("util");
 
@@ -10,9 +9,6 @@ module.exports = function (config) {
     html: true,
     linkify: true,
     typographer: true,
-  }).use(markdownItTocAndAnchor, {
-    wrapHeadingTextInAnchor: true,
-    tocFirstLevel: 2,
   });
   config.setLibrary("md", markdown);
   config.addPlugin(pluginRss);

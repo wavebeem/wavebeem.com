@@ -5,8 +5,6 @@ description: |
   The default Proxy implementation doesn't work well with private properties, but we can fix this! I also explore other approaches to private data in JS.
 ---
 
-@[toc]
-
 ## What is Proxy?
 
 The JS [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) class allows you to add functions that hook into internal JS features such as reading and writing object properties. [Vue](https://vuejs.org/) uses it to implement its reactivity system by exposing `Proxy` wrapped objects to framework users instead of the real object.

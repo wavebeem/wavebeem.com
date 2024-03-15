@@ -49,8 +49,41 @@
   --content-width: 800px;
   overflow-y: scroll;
   color-scheme: dark;
-  /* Approximation used for offsetting headings when clicked */
-  --header-height: 115px;
+
+  /* https://linear-easing-generator.netlify.app/ */
+  --spring-easing: linear(
+    0,
+    0.009,
+    0.035 2.1%,
+    0.141,
+    0.281 6.7%,
+    0.723 12.9%,
+    0.938 16.7%,
+    1.017,
+    1.077,
+    1.121,
+    1.149 24.3%,
+    1.159,
+    1.163,
+    1.161,
+    1.154 29.9%,
+    1.129 32.8%,
+    1.051 39.6%,
+    1.017 43.1%,
+    0.991,
+    0.977 51%,
+    0.974 53.8%,
+    0.975 57.1%,
+    0.997 69.8%,
+    1.003 76.9%,
+    1.004 83.8%,
+    1
+  );
+  --spring-duration: 1.333s;
+}
+
+:root.candy-texture-striped {
+  background-attachment: fixed;
 }
 
 .candy-root {
@@ -69,35 +102,11 @@
   --candy-color-text1: hsl(160 50% 90%);
   --candy-color-text2: hsl(160 50% 70%);
   --candy-button-radius: 9999px;
-  --candy-texture-striped-size: 2px;
-}
-
-.hero {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  border-bottom: 1px solid var(--candy-color-border2);
-}
-
-.hero-card {
-  margin: 1rem 0;
-}
-
-.hero-card > :first-child {
-  margin-top: 0;
-}
-
-.hero-card > :last-child {
-  margin-bottom: 0;
+  --candy-texture-striped-size: 3px;
 }
 
 * {
   box-sizing: border-box;
-}
-
-/* Offset headings by header height for #fragment links */
-:where(h1, h2, h3, h4, h5, h6):target {
-  scroll-margin-top: calc(var(--header-height) + 1rem);
 }
 
 body {
@@ -111,6 +120,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.5;
   margin: 0 auto;
+  padding: 1rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -118,7 +128,6 @@ body {
 
 .content {
   flex: auto;
-  padding: 0 1rem;
   margin: 0 auto;
   max-width: var(--content-width);
   width: 100%;
@@ -157,35 +166,28 @@ summary {
   margin-top: 2rem;
 }
 
-h1 .candy-link,
-.post .markdownIt-Anchor {
-  text-decoration-line: none;
-}
-
-/* @[toc] gets embedded inside a <p> which is invalid, so the HTML parser
- * creates an empty <p> tag on the page, which is weird. Even though it doesn't
- * ruin the layout right now, I'd still rather just hide it entirely.
- */
-p:empty {
-  display: none;
-}
-
 header {
-  border-bottom: 1px solid var(--candy-color-border2);
-  isolation: isolate;
+  margin: 0 auto 1rem auto;
+  border: 1px solid var(--candy-color-border2);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 1px 0 0 var(--candy-color-shadow1),
-    0 4px 16px 0 var(--candy-color-shadow1);
+  max-width: var(--content-width);
+  width: 100%;
 }
 
-footer > *,
-.header-content > div {
+main {
   padding: 1rem;
+}
+
+:is(main, .candy-prose) > :last-child {
+  margin-bottom: 0;
+}
+
+.header-content > div {
   margin: 0 auto;
   max-width: var(--content-width);
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   flex-direction: column;
   flex: auto;
 }
@@ -197,35 +199,17 @@ footer > *,
 
 h1 {
   font-size: 2.5rem;
+  margin: 0 0 1rem 0;
 }
 
-h1,
 h2,
 h3 {
   margin: 2rem 0 1rem 0;
 }
 
-h2 .markdownIt-Anchor::before {
-  content: "✧ ";
-  color: var(--candy-color-accent1);
-}
-
-h3 .markdownIt-Anchor::before {
-  content: "✧✧ ";
-  color: var(--candy-color-accent1);
-}
-
-h1 .candy-link,
-h2 .markdownIt-Anchor:not(:hover):not(:focus),
-h3 .markdownIt-Anchor:not(:hover):not(:focus),
-h2 .markdownIt-Anchor:focus::before,
-h3 .markdownIt-Anchor:focus::before {
-  color: inherit;
-}
-
 nav {
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
   font-weight: bold;
 }
 
@@ -239,10 +223,6 @@ details > summary {
 
 details[open] > summary {
   margin-bottom: 1rem;
-}
-
-.bizarro {
-  filter: hue-rotate(100deg);
 }
 
 .width-max-content {
@@ -262,6 +242,7 @@ details[open] > summary {
 }
 
 .logo {
+  text-align: center;
   font-family: var(--font-logo);
   color: var(--candy-color-text1);
   text-decoration-line: none;
@@ -273,7 +254,7 @@ details[open] > summary {
 .post-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .post-list--post {
@@ -296,10 +277,12 @@ nav .candy-link {
   text-decoration-line: none;
 }
 
-footer {
+.footer {
+  margin: 0 auto;
+  max-width: var(--content-width);
+  width: 100%;
   font-size: 1rem;
-  border-top: 1px solid var(--candy-color-border2);
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 p {
@@ -333,7 +316,7 @@ pre {
 }
 
 blockquote {
-  border-left: 1px solid var(--candy-color-border3);
+  border-left: 1px solid var(--candy-color-border1);
   margin-left: 0;
   padding-left: 1rem;
   font-style: italic;
@@ -418,11 +401,6 @@ figure figcaption {
   margin-bottom: 0;
 }
 
-.markdownIt-TOC a {
-  text-decoration-line: none;
-  line-height: 2;
-}
-
 :any-link:hover {
   text-decoration-line: underline;
 }
@@ -433,18 +411,27 @@ figure figcaption {
   padding: var(--padding);
   display: flex;
   float: right;
-  margin: 2rem 1rem 2rem 2rem;
+  margin: 1rem;
   border-radius: var(--radius);
-  transition: 500ms transform;
 }
 
 .avatar img {
   border-radius: calc(var(--radius) - var(--padding));
   background: var(--candy-color-background2);
+  transition-duration: var(--spring-duration);
+  transition-property: transform, filter;
+  transition-timing-function: var(--spring-easing);
 }
 
-.bizarro .avatar {
-  transform: scaleX(-1);
+.avatar img.bizarro {
+  transform: rotateZ(1turn);
+  filter: hue-rotate(0.5turn);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar img.bizarro {
+    transform: none;
+  }
 }
 
 .post-date {
@@ -479,25 +466,31 @@ figure figcaption {
   gap: 1rem;
 }
 
+main > :is(h2, h3) {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px dotted var(--candy-color-border3);
+}
+
 /* --- Page specific styles --- */
 
-[data-page="resume"] .candy-table {
+[data-tags~="resume"] .candy-table {
   --candy-table-padding-vertical: 0.5rem;
   --candy-table-padding-horizontal: 0.5rem;
 }
 
-[data-page="resume"] h1 small,
-[data-page="resume"] h2 small,
-[data-page="resume"] h3 small {
+[data-tags~="resume"] h1 small,
+[data-tags~="resume"] h2 small,
+[data-tags~="resume"] h3 small {
   color: var(--candy-color-text2);
   font-weight: normal;
 }
 
-[data-page="resume"] .candy-card ul:last-of-type {
+[data-tags~="resume"] .candy-card ul:last-of-type {
   margin-bottom: 0;
 }
 
-[data-page="resume"] ul li + li {
+[data-tags~="resume"] ul li + li {
   margin-top: 1rem;
 }
 
@@ -601,10 +594,6 @@ figure figcaption {
 /* --- Media queries --- */
 
 @media (min-width: 600px) {
-  :root {
-    --header-height: 75px;
-  }
-
   .header-content > div,
   footer > * {
     flex-direction: row;
@@ -641,24 +630,17 @@ figure figcaption {
   }
 }
 
-@media (min-height: 720px) {
-  header {
-    top: 0;
-    position: sticky;
-  }
-}
-
 @media (max-width: 800px) {
   body {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 

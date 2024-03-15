@@ -3,8 +3,6 @@ title: "The leaning tower of Babel"
 description: "An exploration of Babel's caveats."
 ---
 
-@[toc]
-
 ## About Babel
 
 [Babel][3] is the most popular [ES6][1] (aka ES2015) compiler right now. It takes code written in ES6 and turns it into code that runs in any ES5 JavaScript engine. ES5 is the overwhelming standard in JavaScript engines right now, but that is ever-changing, as evidenced by the [ES6 compatibility table][2].

@@ -3,8 +3,6 @@ title: "Mechanical keyboards 201"
 description: "Thinking beyond pre-built gear, this guide will help prepare you to build your own keyboard."
 ---
 
-@[toc]
-
 ## Who is this article for
 
 This article is for people who have some familiarity with mechanical keyboards already. If not, you should read my first article, [Mechanical Keyboards 101](/blog/2018/07/28/mechanical-keyboards-101/). You might be considering building your own keyboard or trying out more niche hardware.
