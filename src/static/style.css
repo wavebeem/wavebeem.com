@@ -49,8 +49,37 @@
   --content-width: 800px;
   overflow-y: scroll;
   color-scheme: dark;
-  /* Approximation used for offsetting headings when clicked */
-  --header-height: 115px;
+
+  /* https://linear-easing-generator.netlify.app/ */
+  --spring-easing: linear(
+    0,
+    0.009,
+    0.035 2.1%,
+    0.141,
+    0.281 6.7%,
+    0.723 12.9%,
+    0.938 16.7%,
+    1.017,
+    1.077,
+    1.121,
+    1.149 24.3%,
+    1.159,
+    1.163,
+    1.161,
+    1.154 29.9%,
+    1.129 32.8%,
+    1.051 39.6%,
+    1.017 43.1%,
+    0.991,
+    0.977 51%,
+    0.974 53.8%,
+    0.975 57.1%,
+    0.997 69.8%,
+    1.003 76.9%,
+    1.004 83.8%,
+    1
+  );
+  --spring-duration: 1.333s;
 }
 
 :root.candy-texture-striped {
@@ -98,11 +127,6 @@
   box-sizing: border-box;
 }
 
-/* Offset headings by header height for #fragment links */
-:where(h1, h2, h3, h4, h5, h6):target {
-  scroll-margin-top: calc(var(--header-height) + 1rem);
-}
-
 body {
   /**
    * Setting font size on body rather than html so that 1rem can refer to the
@@ -125,9 +149,6 @@ body {
   margin: 0 auto;
   max-width: var(--content-width);
   width: 100%;
-}
-
-header.content {
 }
 
 summary {
@@ -167,19 +188,6 @@ h1 .candy-link,
 .post .markdownIt-Anchor {
   text-decoration-line: none;
 }
-
-/* header {
-  border-radius: 9999px;
-  margin: 0 auto 1rem auto;
-  border: 1px solid var(--candy-color-border2);
-  isolation: isolate;
-  display: flex;
-  flex-direction: column;
-  max-width: calc(var(--content-width) - 1rem);
-  width: 100%;
-  box-shadow: 0 1px 0 0 var(--candy-color-shadow1),
-    0 4px 16px 0 var(--candy-color-shadow1);
-} */
 
 header {
   margin: 0 auto 1rem auto;
@@ -222,27 +230,9 @@ h3 {
   margin: 2rem 0 1rem 0;
 }
 
-h2 .markdownIt-Anchor::before {
-  content: "✧ ";
-  color: var(--candy-color-accent1);
-}
-
-h3 .markdownIt-Anchor::before {
-  content: "✧✧ ";
-  color: var(--candy-color-accent1);
-}
-
-h1 .candy-link,
-h2 .markdownIt-Anchor:not(:hover):not(:focus),
-h3 .markdownIt-Anchor:not(:hover):not(:focus),
-h2 .markdownIt-Anchor:focus::before,
-h3 .markdownIt-Anchor:focus::before {
-  color: inherit;
-}
-
 nav {
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
   font-weight: bold;
 }
 
@@ -449,17 +439,18 @@ figure figcaption {
 .avatar img {
   border-radius: calc(var(--radius) - var(--padding));
   background: var(--candy-color-background2);
-  transition-duration: 500ms;
+  transition-duration: var(--spring-duration);
   transition-property: transform, filter;
+  transition-timing-function: var(--spring-easing);
 }
 
-.bizarro .avatar img {
+.avatar img.bizarro {
   transform: rotateZ(1turn);
-  filter: hue-rotate(100deg);
+  filter: hue-rotate(0.5turn);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .bizarro .avatar img {
+  .avatar img.bizarro {
     transform: none;
   }
 }
@@ -624,10 +615,6 @@ figure figcaption {
 /* --- Media queries --- */
 
 @media (min-width: 600px) {
-  :root {
-    --header-height: 75px;
-  }
-
   .header-content > div,
   footer > * {
     flex-direction: row;
