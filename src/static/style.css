@@ -105,24 +105,6 @@
   --candy-texture-striped-size: 3px;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-.hero-card {
-  margin: 1rem 0;
-}
-
-.hero-card > :first-child {
-  margin-top: 0;
-}
-
-.hero-card > :last-child {
-  margin-bottom: 0;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -182,11 +164,6 @@ summary {
 
 .post dd + dt {
   margin-top: 2rem;
-}
-
-h1 .candy-link,
-.post .markdownIt-Anchor {
-  text-decoration-line: none;
 }
 
 header {
