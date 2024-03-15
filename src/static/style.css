@@ -53,6 +53,10 @@
   --header-height: 115px;
 }
 
+:root.candy-texture-striped {
+  background-attachment: fixed;
+}
+
 .candy-root {
   --candy-color-accent-background1: hsl(85 80% 50%);
   --candy-color-accent-background2: hsl(85 80% 45%);
@@ -69,14 +73,13 @@
   --candy-color-text1: hsl(160 50% 90%);
   --candy-color-text2: hsl(160 50% 70%);
   --candy-button-radius: 9999px;
-  --candy-texture-striped-size: 2px;
+  --candy-texture-striped-size: 3px;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  border-bottom: 1px solid var(--candy-color-border2);
 }
 
 .hero-card {
@@ -111,6 +114,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.5;
   margin: 0 auto;
+  padding: 1rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -118,10 +122,12 @@ body {
 
 .content {
   flex: auto;
-  padding: 0 1rem;
   margin: 0 auto;
   max-width: var(--content-width);
   width: 100%;
+}
+
+header.content {
 }
 
 summary {
@@ -170,22 +176,41 @@ p:empty {
   display: none;
 }
 
-header {
-  border-bottom: 1px solid var(--candy-color-border2);
+/* header {
+  border-radius: 9999px;
+  margin: 0 auto 1rem auto;
+  border: 1px solid var(--candy-color-border2);
   isolation: isolate;
   display: flex;
   flex-direction: column;
+  max-width: calc(var(--content-width) - 1rem);
+  width: 100%;
   box-shadow: 0 1px 0 0 var(--candy-color-shadow1),
     0 4px 16px 0 var(--candy-color-shadow1);
+} */
+
+header {
+  margin: 0 auto 1rem auto;
+  border: 1px solid var(--candy-color-border2);
+  display: flex;
+  flex-direction: column;
+  max-width: var(--content-width);
+  width: 100%;
 }
 
-footer > *,
-.header-content > div {
+main {
   padding: 1rem;
+}
+
+:is(main, .candy-prose) > :last-child {
+  margin-bottom: 0;
+}
+
+.header-content > div {
   margin: 0 auto;
   max-width: var(--content-width);
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   flex-direction: column;
   flex: auto;
 }
@@ -197,9 +222,9 @@ footer > *,
 
 h1 {
   font-size: 2.5rem;
+  margin: 0 0 1rem 0;
 }
 
-h1,
 h2,
 h3 {
   margin: 2rem 0 1rem 0;
@@ -241,10 +266,6 @@ details[open] > summary {
   margin-bottom: 1rem;
 }
 
-.bizarro {
-  filter: hue-rotate(100deg);
-}
-
 .width-max-content {
   width: max-content;
 }
@@ -262,6 +283,7 @@ details[open] > summary {
 }
 
 .logo {
+  text-align: center;
   font-family: var(--font-logo);
   color: var(--candy-color-text1);
   text-decoration-line: none;
@@ -273,7 +295,7 @@ details[open] > summary {
 .post-list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .post-list--post {
@@ -296,10 +318,10 @@ nav .candy-link {
   text-decoration-line: none;
 }
 
-footer {
+footer.content {
   font-size: 1rem;
-  border-top: 1px solid var(--candy-color-border2);
-  margin-top: 2rem;
+  margin: 0 auto;
+  margin-top: 1rem;
 }
 
 p {
@@ -333,7 +355,7 @@ pre {
 }
 
 blockquote {
-  border-left: 1px solid var(--candy-color-border3);
+  border-left: 1px solid var(--candy-color-border1);
   margin-left: 0;
   padding-left: 1rem;
   font-style: italic;
@@ -435,16 +457,24 @@ figure figcaption {
   float: right;
   margin: 2rem 1rem 2rem 2rem;
   border-radius: var(--radius);
-  transition: 500ms transform;
 }
 
 .avatar img {
   border-radius: calc(var(--radius) - var(--padding));
   background: var(--candy-color-background2);
+  transition-duration: 500ms;
+  transition-property: transform, filter;
 }
 
-.bizarro .avatar {
-  transform: scaleX(-1);
+.bizarro .avatar img {
+  transform: rotateZ(1turn);
+  filter: hue-rotate(100deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bizarro .avatar img {
+    transform: none;
+  }
 }
 
 .post-date {
@@ -477,6 +507,12 @@ figure figcaption {
 }
 .gap3 {
   gap: 1rem;
+}
+
+.candy-prose :is(h2, h3) {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px dotted var(--candy-color-border3);
 }
 
 /* --- Page specific styles --- */
@@ -638,13 +674,6 @@ figure figcaption {
 
   .grid-2 {
     grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-height: 720px) {
-  header {
-    top: 0;
-    position: sticky;
   }
 }
 

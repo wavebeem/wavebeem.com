@@ -29,7 +29,6 @@
     "dateformat": "^3.0.3",
     "fast-average-color-node": "^2.2.0",
     "image-size": "^1.0.1",
-    "markdown-it": "^13.0.1",
-    "markdown-it-toc-and-anchor": "^4.2.0"
+    "markdown-it": "^13.0.1"
   }
 }
