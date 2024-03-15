@@ -277,9 +277,11 @@ nav .candy-link {
   text-decoration-line: none;
 }
 
-footer.content {
-  font-size: 1rem;
+.footer {
   margin: 0 auto;
+  max-width: var(--content-width);
+  width: 100%;
+  font-size: 1rem;
   margin-top: 1rem;
 }
 
@@ -464,7 +466,7 @@ figure figcaption {
   gap: 1rem;
 }
 
-.candy-prose :is(h2, h3) {
+main > :is(h2, h3) {
   padding-top: 1rem;
   margin-top: 1rem;
   border-top: 1px dotted var(--candy-color-border3);
@@ -472,23 +474,23 @@ figure figcaption {
 
 /* --- Page specific styles --- */
 
-[data-page="resume"] .candy-table {
+[data-tags~="resume"] .candy-table {
   --candy-table-padding-vertical: 0.5rem;
   --candy-table-padding-horizontal: 0.5rem;
 }
 
-[data-page="resume"] h1 small,
-[data-page="resume"] h2 small,
-[data-page="resume"] h3 small {
+[data-tags~="resume"] h1 small,
+[data-tags~="resume"] h2 small,
+[data-tags~="resume"] h3 small {
   color: var(--candy-color-text2);
   font-weight: normal;
 }
 
-[data-page="resume"] .candy-card ul:last-of-type {
+[data-tags~="resume"] .candy-card ul:last-of-type {
   margin-bottom: 0;
 }
 
-[data-page="resume"] ul li + li {
+[data-tags~="resume"] ul li + li {
   margin-top: 1rem;
 }
 
