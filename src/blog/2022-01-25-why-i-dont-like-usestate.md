@@ -3,8 +3,6 @@ title: "Why I don't like useState"
 description: "Why useState is so hard to use correctly, and what we can do about it."
 ---
 
-@[toc]
-
 ## Prologue
 
 I've been using React hooks since their public release roughly 3 years ago, and I was incredibly excited for them. I still think hooks are great, but `useState` in particular is hard to use correctly.

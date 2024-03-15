@@ -3,8 +3,6 @@ title: "React without JSX"
 description: "A quick overview on using React without JSX or any build tools."
 ---
 
-@[toc]
-
 ## Misconceptions about React
 
 The discourse around React would lead you to believe you need to get started with Babel, Webpack, source maps, and all kinds of complex tooling to use React, but you actually can drop React into any existing page pretty easily. It could be fully server-side rendered from Rails, a mix with jQuery in it, or even a front-end app written with another framework entirely.

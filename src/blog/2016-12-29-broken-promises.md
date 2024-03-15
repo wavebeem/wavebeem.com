@@ -3,8 +3,6 @@ title: "Broken promises"
 description: "How to use promises effectively (written before async/await existed)"
 ---
 
-@[toc]
-
 ## About
 
 This post is about how to use promises effectively. In it, I'm going to use some ES6 syntax. ES6 is the latest version of JavaScript. When you see:

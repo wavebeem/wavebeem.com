@@ -3,8 +3,6 @@ title: "Mechanical keyboards 101"
 description: "An introduction to the exciting world of mechanical keyboards."
 ---
 
-@[toc]
-
 ## Introduction
 
 I bet you're reading this because you're curious what all the fuss is about mechanical keyboards lately. Maybe your friend has one and you're kinda interested in getting your own, but don't know where to start. It's not just you, it is a little confusing to find the right keyboard for you. In fact, I'm still learning new things about keyboards all the time.

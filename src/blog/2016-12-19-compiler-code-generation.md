@@ -3,8 +3,6 @@ title: "Compiler code generation"
 description: "How to make code generation for a compiler."
 ---
 
-@[toc]
-
 ## What is code generation?
 
 Compilers and interpreters are basically big pipelines, transforming one type of data to into another, and finally either generating code or running a program.

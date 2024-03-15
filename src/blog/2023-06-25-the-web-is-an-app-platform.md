@@ -5,8 +5,6 @@ description: |
   The web has been an app platform for most of its life. I discuss the history of the web and my definition of "app".
 ---
 
-@[toc]
-
 ## Defining the word app
 
 Apps usually have these properties:
