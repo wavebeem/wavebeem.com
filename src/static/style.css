@@ -466,7 +466,7 @@ figure figcaption {
   gap: 1rem;
 }
 
-main > :is(h2, h3) {
+:where(main, .candy-prose) > :is(h2, h3) {
   padding-top: 1rem;
   margin-top: 1rem;
   border-top: 1px dotted var(--candy-color-border3);
