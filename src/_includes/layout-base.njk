@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="candy-root candy-scrollbar candy-texture-striped" data-tags="{{ tags or [] | join(' ') }}">
+<html lang="en" class="candy-root candy-scrollbar candy-texture-striped" data-tags="{{ (tags or []) | join(' ') }}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="content-security-policy" content="{{ csp | safe }}" />

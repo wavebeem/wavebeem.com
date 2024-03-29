@@ -11,7 +11,7 @@ Recently I was writing automated tests against an application that uses custom e
 
 If you're not familiar with shadow DOM, I suggested [reading about it on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM).
 
-## What was I trying to do
+## Writing shadow DOM tests for Stencil.js
 
 I was writing tests for some [Stencil](https://stenciljs.com/) components. For complicated reasons, we had previously disabled shadow DOM for our internal modal dialog component. We had written tests around this component, and they all started failing after I switched the component to use shadow DOM.
 
