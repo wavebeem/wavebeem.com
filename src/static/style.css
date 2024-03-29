@@ -477,7 +477,7 @@ figure figcaption {
 :where(main, .candy-prose) > :is(h2, h3) {
   padding-top: 1rem;
   margin-top: 1rem;
-  border-top: 1px dotted var(--candy-color-border1);
+  border-top: 1px solid var(--candy-color-border3);
 }
 
 /* --- Page specific styles --- */
