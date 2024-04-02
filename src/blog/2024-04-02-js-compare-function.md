@@ -17,13 +17,13 @@ I went against my usual coding style (always use braces) in order to make this s
 
 ```js
 function compare(a, b) {
-  if (a === b) return 0;
   if (a < b) return -1;
-  return 1;
+  if (a > b) return 1;
+  return 0;
 }
 ```
 
-**Note:** If you care about comparing `NaN` correctly, you should add a call to `Object.is(a, b)` in addition to `a === b` since `NaN !== NaN`.
+**Note:** This function won't behave well with objects and arrays. A stricter function would throw an error or use a more complex algorithm to compare data structures.
 
 ## What now?
 
@@ -31,7 +31,7 @@ Two key facts allow this function to shine:
 
 1. JS defines `a || b` as evaluating to either `a` or `b`, not just `true` or `false`
 
-2. Since `-compare(a, b)` is equivalent to `compare(b, a)`, you can prefix each descending comparison with a special character to make it more obvious than flipping the arguments
+2. Since `-compare(a, b)` is equivalent to `compare(b, a)`, you can prefix each descending\_ comparison with a special character to make it more obvious than flipping the arguments
 
 Seeing as `0 || x` evaluates to `x`, and `compare(a, b) === 0` means `a === b`, the `||` operator lets us chain these "failing" comparisons elegantly to define complex ordering:
 
