@@ -487,11 +487,15 @@ figure figcaption {
   --candy-table-padding-horizontal: 0.5rem;
 }
 
-[data-tags~="resume"] h1 small,
-[data-tags~="resume"] h2 small,
-[data-tags~="resume"] h3 small {
+[data-tags~="resume"] :is(h1, h2, h3) small {
   color: var(--candy-color-text2);
   font-weight: normal;
+}
+
+@media (max-width: 800px) {
+  [data-tags~="resume"] small {
+    display: block;
+  }
 }
 
 [data-tags~="resume"] .candy-card ul:last-of-type {
@@ -665,6 +669,10 @@ figure figcaption {
 
   h2 {
     font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
   }
 }
 
