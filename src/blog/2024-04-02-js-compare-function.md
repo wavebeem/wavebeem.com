@@ -9,7 +9,7 @@ description: |
 
 The JS [Array sort method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) is notorious for taking verbose comparison functions.
 
-By adding a short `compare` function and using the `||` operator with unary negation (`-x`), we can clearly express ordering without resorting to external libraries like [Lodash](https://lodash.com/).
+By adding a short `compare` function and using the `||` operator with unary negation (`-`), we can clearly express ordering without resorting to external libraries like [Lodash](https://lodash.com/).
 
 ## The compare function
 
@@ -31,7 +31,7 @@ Two key facts allow this function to shine:
 
 1. JS defines `a || b` as evaluating to either `a` or `b`, not just `true` or `false`
 
-2. Since `-compare(a, b)` is equivalent to `compare(b, a)`, you can prefix each _descending_ comparison with a special character to make it more obvious than flipping the arguments
+2. Since `-compare(a, b)` is equivalent to `compare(b, a)`, you can prefix each descending comparison with a special character to make it more obvious than flipping the arguments
 
 Seeing as `0 || x` evaluates to `x`, and `compare(a, b) === 0` means `a === b`, the `||` operator lets us chain these "failing" comparisons elegantly to define complex ordering:
 
