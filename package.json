@@ -22,13 +22,14 @@
   },
   "homepage": "https://wavebeem.com",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-cache-assets": "^2.3.0",
-    "@11ty/eleventy-plugin-rss": "^1.1.2",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "dateformat": "^3.0.3",
-    "fast-average-color-node": "^2.2.0",
-    "image-size": "^1.0.1",
-    "markdown-it": "^13.0.1"
+    "fast-average-color-node": "^3.0.0",
+    "image-size": "^1.1.1",
+    "markdown-it": "^14.1.0",
+    "npm-check": "^6.0.1"
   }
 }
