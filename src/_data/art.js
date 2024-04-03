@@ -6,18 +6,24 @@ const { AssetCache } = require("@11ty/eleventy-cache-assets");
 
 const root = path.resolve(__dirname, "../static/img/art");
 
+function isHiddenFile(filename) {
+  return path.basename(filename).startsWith(".");
+}
+
 async function getArt() {
-  return await Promise.all(fs.readdirSync(root).map(readInfo));
+  return await Promise.all(
+    fs
+      .readdirSync(root)
+      .filter((f) => !isHiddenFile(f))
+      .map(readInfo)
+  );
 }
 
 async function readInfo(filename) {
   const url = `/static/img/art/${filename}`;
-  const cleanName = path
-    .basename(filename)
-    .replace(/\.(png|gif)$/, "")
-    .replace(/-/g, " ")
-    .replace(/^(\d{4}) (\d{2}) (\d{2}) (.*)$/, "$4 ($1-$2-$3)");
-  const [, name, date] = cleanName.match(/^(.*?) \((.*)\)$/);
+  const cleanName = path.basename(filename).replace(/\.(png|gif)$/, "");
+  let [, date, name] = cleanName.match(/^(\d{4}-\d{2}-\d{2})-(.*)$/);
+  name = name.replace(/-/g, " ");
   const file = path.join(root, filename);
   const { width, height } = getImageSize(file);
   const { hex: color } = await getAverageColor(file, {
