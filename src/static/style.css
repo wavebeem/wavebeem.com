@@ -81,20 +81,20 @@
 }
 
 .candy-root {
-  --candy-color-accent-background1: hsl(85 80% 50%);
-  --candy-color-accent-background2: hsl(85 80% 45%);
-  --candy-color-accent-border1: hsl(85 80% 80%);
-  --candy-color-accent-text1: hsl(85 80% 5%);
-  --candy-color-background1: hsl(160 50% 10%);
-  --candy-color-background2: hsl(160 50% 20%);
-  --candy-color-background3: hsl(160 50% 17%);
-  --candy-color-background4: hsl(160 50% 14%);
-  --candy-color-border1: hsl(160 50% 45%);
-  --candy-color-border2: hsl(160 50% 26%);
-  --candy-color-border3: hsl(160 50% 22%);
-  --candy-color-shadow1: hsl(160 50% 5% / 50%);
-  --candy-color-text1: hsl(160 50% 90%);
-  --candy-color-text2: hsl(160 50% 70%);
+  --candy-color-accent-background1: hsl(100 80% 50%);
+  --candy-color-accent-background2: hsl(100 80% 45%);
+  --candy-color-accent-border1: hsl(100 80% 80%);
+  --candy-color-accent-text1: hsl(100 80% 5%);
+  --candy-color-background1: hsl(190 10% 10%);
+  --candy-color-background2: hsl(190 10% 20%);
+  --candy-color-background3: hsl(190 10% 17%);
+  --candy-color-background4: hsl(190 10% 14%);
+  --candy-color-border1: hsl(190 10% 45%);
+  --candy-color-border2: hsl(190 10% 26%);
+  --candy-color-border3: hsl(190 10% 22%);
+  --candy-color-shadow1: hsl(190 10% 5% / 50%);
+  --candy-color-text1: hsl(190 10% 95%);
+  --candy-color-text2: hsl(190 10% 75%);
   --candy-button-radius: 9999px;
   --candy-texture-striped-size: 3px;
 }
@@ -511,9 +511,9 @@ figure figcaption {
 .candy-prose pre {
   border: 1px solid var(--candy-color-border3);
 
-  --c1a: hsl(160 20% 50%);
-  --c1b: hsl(160 50% 50%);
-  --c2: hsl(85 80% 60%);
+  --c1a: hsl(190 20% 50%);
+  --c1b: hsl(190 50% 50%);
+  --c2: hsl(90 80% 60%);
   --c3: hsl(320 90% 80%);
   --c4: hsl(20 90% 80%);
 
