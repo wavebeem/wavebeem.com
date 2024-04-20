@@ -181,14 +181,9 @@ main {
   margin: 0 auto;
   max-width: var(--content-width);
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   flex-direction: column;
   flex: auto;
-}
-
-.header-decoration {
-  height: 1rem;
-  border-bottom: 1px solid var(--candy-color-border2);
 }
 
 h1,
@@ -511,11 +506,11 @@ figure figcaption {
 .candy-prose pre {
   border: 1px solid var(--candy-color-border3);
 
-  --c1a: hsl(190 20% 50%);
-  --c1b: hsl(190 50% 50%);
-  --c2: hsl(90 80% 60%);
-  --c3: hsl(320 90% 80%);
-  --c4: hsl(20 90% 80%);
+  --c1a: hsl(190 5% 50%);
+  --c1b: hsl(190 20% 50%);
+  --c2: hsl(100 90% 70%);
+  --c3: hsl(280 90% 85%);
+  --c4: hsl(190 90% 70%);
 
   --comment: var(--c1a);
   --punctuation: var(--c1b);
