@@ -306,6 +306,11 @@ nav .candy-link {
   margin-top: 1rem;
 }
 
+::selection {
+  background: var(--candy-color-accent-background1);
+  color: var(--candy-color-accent-text1);
+}
+
 p {
   margin: 1rem 0;
 }
@@ -527,7 +532,7 @@ figure figcaption {
   --c1a: oklch(0.65 0.02 190);
   --c1b: oklch(0.65 0.1 190);
   --c2: oklch(0.8 0.2 135);
-  --c3: oklch(0.9 0.1 190);
+  --c3: oklch(0.8 0.1 300);
   --c4: oklch(0.9 0.1 40);
 
   --comment: var(--c1a);
