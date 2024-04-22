@@ -81,33 +81,19 @@
 }
 
 .candy-root {
-  /* --candy-color-accent-background1: hsl(100 80% 50%);
-  --candy-color-accent-background2: hsl(100 80% 45%);
-  --candy-color-accent-border1: hsl(100 80% 80%);
-  --candy-color-accent-text1: hsl(100 80% 5%);
-  --candy-color-background1: hsl(190 10% 10%);
-  --candy-color-background2: hsl(190 10% 20%);
-  --candy-color-background3: hsl(190 10% 17%);
-  --candy-color-background4: hsl(190 10% 14%);
-  --candy-color-border1: hsl(190 10% 45%);
-  --candy-color-border2: hsl(190 10% 26%);
-  --candy-color-border3: hsl(190 10% 22%);
-  --candy-color-shadow1: hsl(190 10% 5% / 50%);
-  --candy-color-text1: hsl(190 10% 95%);
-  --candy-color-text2: hsl(190 10% 75%); */
-  --candy-button-radius: 9999px;
-  --candy-texture-striped-size: 3px;
-}
-
-.candy-root {
-  /* https://caniuse.com/mdn-css_types_color_oklch */
+  /* OKLCH has been in every browser for almost a year... let's just use it
+  https://caniuse.com/mdn-css_types_color_oklch */
   --candy-color-accent-background1: oklch(80% 55% 135);
   --candy-color-accent-background2: oklch(75% 55% 135);
   --candy-color-accent-border1: oklch(100% 55% 135);
   --candy-color-accent-text1: oklch(5% 55% 135);
   --candy-color-background1: oklch(22% 5% 190);
-  --candy-color-background2: oklch(33% 5% 190);
-  --candy-color-background3: oklch(30% 5% 190);
+  /* There's some kind of bug with repeating-linear-gradient and oklch() in
+  Firefox, so I've temporarily converted these colors */
+  --candy-color-background2: hsl(176 15% 19%);
+  --candy-color-background3: hsl(176 18% 16%);
+  /* --candy-color-background2: oklch(33% 5% 190);
+  --candy-color-background3: oklch(30% 5% 190); */
   --candy-color-background4: oklch(27% 5% 190);
   --candy-color-border1: oklch(62% 5% 190);
   --candy-color-border2: oklch(40% 5% 190);
@@ -115,6 +101,9 @@
   --candy-color-shadow1: oklch(15% 5% 190 / 50%);
   --candy-color-text1: oklch(96% 5% 190);
   --candy-color-text2: oklch(82% 5% 190);
+
+  --candy-button-radius: 9999px;
+  --candy-texture-striped-size: 3px;
 }
 
 * {
