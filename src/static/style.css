@@ -82,6 +82,7 @@
 
 .candy-root {
   /* OKLCH has been in every browser for almost a year... let's just use it
+
   https://caniuse.com/mdn-css_types_color_oklch */
   --candy-color-accent-background1: oklch(80% 55% 135);
   --candy-color-accent-background2: oklch(75% 55% 135);
@@ -89,7 +90,9 @@
   --candy-color-accent-text1: oklch(5% 55% 135);
   --candy-color-background1: oklch(22% 5% 190);
   /* There's some kind of bug with repeating-linear-gradient and oklch() in
-  Firefox, so I've temporarily converted these colors */
+  Firefox, so I've temporarily converted these colors
+
+  https://bugzilla.mozilla.org/show_bug.cgi?id=1892653*/
   --candy-color-background2: hsl(176 15% 19%);
   --candy-color-background3: hsl(176 18% 16%);
   /* --candy-color-background2: oklch(33% 5% 190);
