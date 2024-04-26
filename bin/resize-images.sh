@@ -11,5 +11,5 @@ set -eu
 cd src/static
 
 for size in 48 96 180 192 360 512; do
-  :resize "photo.jpg" "$size" "photo-${size}.jpg"
+  :resize "photo.webp" "$size" "photo-${size}.webp"
 done

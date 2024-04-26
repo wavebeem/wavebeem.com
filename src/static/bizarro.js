@@ -1,6 +1,6 @@
 for (const button of document.querySelectorAll("[data-bizarro]")) {
   button.addEventListener("click", function () {
-    button.classList.toggle("bizarro");
+    button.dataset.bizarro = button.dataset.bizarro === "on" ? "off" : "on";
   });
 }
 
