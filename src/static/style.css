@@ -55,18 +55,11 @@
   https://caniuse.com/mdn-css_types_color_oklch */
   --candy-color-accent-background1: oklch(80% 55% 135);
   --candy-color-accent-background2: oklch(75% 55% 135);
-  /* Chrome render OKLCH with L=100% as white... I think that's a bug? */
-  --candy-color-accent-border1: oklch(99% 55% 135);
+  --candy-color-accent-border1: oklch(90% 55% 135);
   --candy-color-accent-text1: oklch(5% 55% 135);
   --candy-color-background1: oklch(22% 5% 190);
-  /* There's some kind of bug with repeating-linear-gradient and oklch() in
-  Firefox, so I've temporarily converted these colors
-
-  https://bugzilla.mozilla.org/show_bug.cgi?id=1892653*/
-  --candy-color-background2: hsl(176 15% 19%);
-  --candy-color-background3: hsl(176 18% 16%);
-  /* --candy-color-background2: oklch(33% 5% 190);
-  --candy-color-background3: oklch(30% 5% 190); */
+  --candy-color-background2: oklch(33% 5% 190);
+  --candy-color-background3: oklch(30% 5% 190);
   --candy-color-background4: oklch(27% 5% 190);
   --candy-color-border1: oklch(62% 5% 190);
   --candy-color-border2: oklch(40% 5% 190);
@@ -81,6 +74,15 @@
 
 * {
   box-sizing: border-box;
+}
+
+.candy-texture-striped {
+  /* There's some kind of bug with repeating-linear-gradient and oklch() in
+  Firefox, so I've temporarily converted these colors
+
+  https://bugzilla.mozilla.org/show_bug.cgi?id=1892653*/
+  --candy-color-background2: hsl(176 15% 19%);
+  --candy-color-background3: hsl(176 18% 16%);
 }
 
 body {
@@ -409,19 +411,22 @@ figure figcaption {
 }
 
 .avatar[data-bizarro] {
-  transition: 500ms transform;
+  --timing-duration: 750ms;
+  /* https://easings.net/#easeOutBack */
+  --timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: var(--timing-duration) transform var(--timing-function);
 }
 
 .avatar[data-bizarro="on"] {
-  transform: scaleX(-1);
+  transform: rotateY(-0.5turn);
 }
 
 .avatar[data-bizarro] img {
-  transition: 500ms filter;
+  transition: var(--timing-duration) filter var(--timing-function);
 }
 
 .avatar[data-bizarro="on"] img {
-  filter: hue-rotate(0.5turn);
+  filter: hue-rotate(0.5turn) contrast(0.75) brightness(1.25);
 }
 
 @media (prefers-reduced-motion: reduce) {
