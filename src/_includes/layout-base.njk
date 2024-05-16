@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="candy-root candy-scrollbar candy-texture-striped" data-tags="{{ (tags or []) | join(' ') }}">
+<html
+  lang="en"
+  class="candy-root candy-scrollbar candy-texture-default"
+  data-tags="{{ (tags or []) | join(' ') }}"
+>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="content-security-policy" content="{{ csp | safe }}" />
@@ -29,7 +33,7 @@
       crossorigin="anonymous"
       href="/static/fonts/UltraHi-GlossFinal-UltraBoldItalic.woff2"
     />
-  <meta name="author" content="wavebeem" />
+    <meta name="author" content="wavebeem" />
     <meta name="description" content="{{ description }}" />
     <meta name="theme-color" content="oklch(30% 5% 190)" />
     <link
@@ -82,33 +86,25 @@
     />
   </head>
   <body>
-    <header class="screen-only candy-texture-concave candy-card">
-      <div class="header-content">
-        <div>
-          <span class="flex align-center logo candy-link"
-            >wavebeem<span aria-hidden="true">&nbsp;*-</span>
-          </span>
-          <nav>
-            <a class="candy-link" href="/">Home</a>
-            <a class="candy-link" href="/blog/">Blog</a>
-            <a class="candy-link" href="/art/">Art</a>
-            <a class="candy-link" href="/resume/">Resume</a>
-          </nav>
-        </div>
-      </div>
+    <header class="screen-only">
+      <span class="flex align-center logo candy-link"
+        >wavebeem<span aria-hidden="true">&nbsp;*-</span>
+      </span>
+      <nav>
+        <a class="candy-link" href="/">Home</a>
+        <a class="candy-link" href="/blog/">Blog</a>
+        <a class="candy-link" href="/art/">Art</a>
+        <a class="candy-link" href="/resume/">Resume</a>
+      </nav>
     </header>
     <main class="content candy-card candy-texture-default">
       {{ content | safe }}
+      <footer class="screen-only">
+        &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
+          class="candy-bright"
+          >wavebeem</i
+        >)
+      </footer>
     </main>
-    <footer class="screen-only candy-texture-concave footer candy-card">
-      <div>
-        <span>
-          &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
-            class="candy-bright"
-            >wavebeem</i
-          >)
-        </span>
-      </div>
-    </footer>
   </body>
 </html>
