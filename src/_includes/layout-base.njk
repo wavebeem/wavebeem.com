@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html
   lang="en"
-  class="candy-root candy-scrollbar candy-texture-default"
+  class="candy-root candy-scrollbar candy-texture-striped"
   data-tags="{{ (tags or []) | join(' ') }}"
 >
   <head>
@@ -79,17 +79,24 @@
       media="screen"
       href="/static/style.css?t={{ dateNow }}"
     />
+    {% for url in (css or []) %}
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="/static/{{ url }}.css?t={{ dateNow }}"
+    />
+    {% endfor %}
     <link
       rel="stylesheet"
       media="print"
       href="/static/print.css?t={{ dateNow }}"
     />
   </head>
-  <body>
+  <body class="candy-root">
     <header class="screen-only">
-      <span class="flex align-center logo candy-link"
-        >wavebeem<span aria-hidden="true">&nbsp;*-</span>
-      </span>
+      <a href="/" class="flex align-center logo candy-link"
+        ><span aria-hidden="true">&nbsp;-*&nbsp;</span>wavebeem<span aria-hidden="true">&nbsp;*-</span>
+      </a>
       <nav>
         <a class="candy-link" href="/">Home</a>
         <a class="candy-link" href="/blog/">Blog</a>
@@ -97,14 +104,14 @@
         <a class="candy-link" href="/resume/">Resume</a>
       </nav>
     </header>
-    <main class="content candy-card candy-texture-default">
+    <main class="candy-root content candy-card candy-texture-paper">
       {{ content | safe }}
-      <footer class="screen-only">
-        &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
-          class="candy-bright"
-          >wavebeem</i
-        >)
-      </footer>
     </main>
+    <footer class="footer screen-only">
+      &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
+        class="candy-bright"
+        >wavebeem</i
+      >)
+    </footer>
   </body>
 </html>

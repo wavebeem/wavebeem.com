@@ -9,18 +9,16 @@ tags: ["art"]
 
 <div class="art-container">
   {% for img in art | reverse %}
-  <figure class="art-container--frame candy-card candy-texture-concave">
-    <div class="candy-box flex">
-      <img
-        src="{{ img.url }}"
-        alt=""
-        width="{{ img.width }}"
-        height="{{ img.height }}"
-        style="background-color: {{ img.color }};"
-        loading="lazy"
-      />
-    </div>
-    <figcaption class="text-center">
+  <figure class="art-container--frame sage-well">
+    <img
+      src="{{ img.url }}"
+      alt=""
+      width="{{ img.width }}"
+      height="{{ img.height }}"
+      style="background-color: {{ img.color }};"
+      loading="lazy"
+    />
+    <figcaption>
       <a class="candy-link" href="{{ img.url }}">{{ img.name }}</a>
       <time
         class="weight-normal"
