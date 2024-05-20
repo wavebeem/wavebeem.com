@@ -66,9 +66,9 @@ b {
 
 .candy-root {
   --fg: oklch(100% 0% 0);
-  --bg1: oklch(44% 30% 150);
-  --bg2: oklch(40% 30% 150);
-  --bg3: oklch(36% 30% 150);
+  --bg1: oklch(44% 30% 160);
+  --bg2: oklch(40% 30% 160);
+  --bg3: oklch(36% 30% 160);
   --candy-color-accent-background1: var(--fg);
   --candy-color-accent-background2: var(--fg);
   --candy-color-accent-border1: var(--bg1);
@@ -93,17 +93,17 @@ main.candy-root {
   /* OKLCH has been in every browser for almost a year... let's just use it
 
   https://caniuse.com/mdn-css_types_color_oklch */
-  --candy-color-accent-background1: oklch(54% 60% 300);
-  --candy-color-accent-background2: oklch(48% 60% 300);
-  --candy-color-accent-border1: oklch(30% 60% 300);
+  --candy-color-accent-background1: oklch(54% 50% 290);
+  --candy-color-accent-background2: oklch(48% 50% 290);
+  --candy-color-accent-border1: oklch(40% 50% 290);
   --candy-color-accent-text1: oklch(100% 0% 0);
   --candy-color-background1: oklch(100% 0% 0);
   --candy-color-background2: oklch(100% 0% 0);
   --candy-color-background3: oklch(97% 0% 0);
   --candy-color-background4: oklch(93% 0% 0);
-  --candy-color-border1: oklch(30% 0% 0);
+  --candy-color-border1: oklch(60% 0% 0);
   --candy-color-border2: oklch(80% 0% 0);
-  --candy-color-border3: oklch(85% 0% 0);
+  --candy-color-border3: oklch(90% 0% 0);
   --candy-color-shadow1: oklch(15% 0% 0 / 10%);
   --candy-color-text1: oklch(0% 0% 0);
   --candy-color-text2: oklch(30% 0% 0);
@@ -111,11 +111,38 @@ main.candy-root {
   --candy-button-radius: 9999px;
   --candy-texture-striped-size: 3px;
 
+  --color-main-border: oklch(0% 0% 0 / 20%);
+
   border-radius: 1rem;
-  border-color: oklch(0% 0% 0 / 15%);
+  border-color: var(--color-main-border);
   background-clip: padding-box;
   padding: 2rem;
-  margin-top: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  main.candy-root {
+    /* OKLCH has been in every browser for almost a year... let's just use it
+
+  https://caniuse.com/mdn-css_types_color_oklch */
+    --candy-color-accent-background1: oklch(80% 40% 290);
+    --candy-color-accent-background2: oklch(76% 40% 290);
+    --candy-color-accent-border1: oklch(90% 40% 290);
+    --candy-color-accent-text1: oklch(0% 0% 0);
+    --candy-color-background1: oklch(29% 0% 0);
+    --candy-color-background2: oklch(26% 0% 0);
+    --candy-color-background3: oklch(22% 0% 0);
+    --candy-color-background4: oklch(20% 0% 0);
+    --candy-color-border1: oklch(60% 0% 0);
+    --candy-color-border2: oklch(40% 0% 0);
+    --candy-color-border3: oklch(30% 0% 0);
+    --candy-color-shadow1: oklch(10% 0% 0 / 10%);
+    --candy-color-text1: oklch(100% 0% 0);
+    --candy-color-text2: oklch(80% 0% 0);
+  }
+
+  main.candy-root {
+    --color-main-border: oklch(100% 0% 0 / 10%);
+  }
 }
 
 * {
@@ -133,8 +160,7 @@ body {
   font-family: var(--font-body);
   line-height: 1.5;
   margin: 0 auto;
-  padding: 0.5rem;
-  padding-top: 0;
+  padding: 0 0.5rem;
   min-height: 100vh;
   display: grid;
   max-width: 1024px;
@@ -142,7 +168,8 @@ body {
   gap: 0;
   box-shadow: 0 0 0 1px var(--candy-color-background1),
     0 0 1rem 0 var(--candy-color-background1);
-  grid-template-rows: max-content 1fr max-content;
+  grid-template-columns: minmax(1fr, max-content);
+  grid-template-rows: max-content max-content 1fr max-content;
   grid-template-areas:
     "logo    logo"
     "nav     nav"
@@ -153,7 +180,7 @@ body {
 .sage-well {
   box-sizing: border-box;
   border: 0;
-  border-top: 1px solid var(--candy-color-background4);
+  border-top: 1px solid var(--candy-color-border3);
   padding: var(--candy-well-padding-vertical)
     var(--candy-well-padding-horizontal);
   box-shadow: none;
@@ -161,7 +188,7 @@ body {
   background: linear-gradient(
     to bottom,
     var(--candy-color-background3),
-    var(--candy-color-background2)
+    var(--candy-color-background1)
   );
 }
 
@@ -172,6 +199,7 @@ header {
 .logo {
   grid-area: logo;
   padding: 1rem;
+  max-width: max-content;
 }
 
 .content {
@@ -315,7 +343,7 @@ nav .candy-link {
   grid-area: footer;
   margin: 0 auto;
   font-size: 1rem;
-  margin-top: 1rem;
+  padding: 1rem;
 }
 
 ::selection {
@@ -537,10 +565,15 @@ figure figcaption {
 @media (max-width: 400px) {
   .avatar img {
     width: 100px;
+    height: auto;
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 800px) {
+  :root {
+    padding: 0 2rem;
+  }
+
   body {
     grid-template-columns: max-content 1fr;
     grid-template-rows: max-content 1fr max-content;
@@ -552,7 +585,7 @@ figure figcaption {
 
   .avatar img {
     width: 160px;
-    height: 160px;
+    height: auto;
   }
 
   .grid-2 {
@@ -565,23 +598,15 @@ figure figcaption {
 }
 
 @media (max-width: 800px) {
-  .sage-well:is(main, header, footer) {
+  /* .candy-prose pre {
+    margin-left: -2rem;
+    margin-right: -2rem;
     border-radius: 0;
     border-left: 0;
     border-right: 0;
-  }
-
-  .candy-prose pre {
-    margin-left: -1rem;
-    margin-right: -1rem;
-    border-radius: 0;
-    border-left: 0;
-    border-right: 0;
-  }
+  } */
 
   body {
-    padding-left: 0;
-    padding-right: 0;
     font-size: 1rem;
   }
 
