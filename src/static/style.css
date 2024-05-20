@@ -86,7 +86,7 @@ b {
 
   --candy-button-radius: 9999px;
   --candy-texture-striped-size: 64px;
-  --candy-link-underline: 2px;
+  --candy-link-underline: 1.5px;
 }
 
 main.candy-root {
@@ -545,6 +545,13 @@ figure figcaption {
   padding-top: 1rem;
   margin-top: 1rem;
   border-top: 1px dotted var(--candy-color-border1);
+  border-image: linear-gradient(
+    to right,
+    var(--candy-color-background1),
+    var(--candy-color-border3),
+    var(--candy-color-background1)
+  );
+  border-image-slice: 1 9;
 }
 
 /* --- Media queries --- */
