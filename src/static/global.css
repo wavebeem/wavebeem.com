@@ -1,0 +1,433 @@
+/* TODO: Use @layer */
+/* TODO: Try to remove util styles */
+
+/* --- Fonts --- */
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/static/fonts/nunito-variable.woff2") format("woff2");
+  font-weight: 1 1000;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("/static/fonts/nunito-italic-variable.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 1 1000;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ultra Hi-Gloss";
+  src: url("/static/fonts/UltraHi-GlossFinal-UltraBoldItalic.woff2")
+    format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/static/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+/* --- Other CSS --- */
+
+:root {
+  --font-body: "Nunito", system-ui, sans-serif;
+  --font-logo: "Ultra Hi-Gloss", var(--font-body);
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", SFMono-Regular,
+    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --content-width: 800px;
+  overflow-y: scroll;
+  color-scheme: dark;
+}
+
+:root.candy-texture-striped {
+  background-attachment: fixed;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+:not(:where(h1, h2, h3)) > a {
+  /* :where(p, li) a { */
+  font-weight: 600;
+}
+
+b {
+  font-weight: 600;
+}
+
+.candy-root {
+  --fg: oklch(100% 0% 0);
+  --bg1: oklch(44% 30% 160);
+  --bg2: oklch(40% 30% 160);
+  --bg3: oklch(36% 30% 160);
+  --candy-color-accent-background1: var(--fg);
+  --candy-color-accent-background2: var(--fg);
+  --candy-color-accent-border1: var(--bg1);
+  --candy-color-accent-text1: var(--bg1);
+  --candy-color-background1: var(--bg3);
+  --candy-color-background2: var(--bg1);
+  --candy-color-background3: var(--bg2);
+  --candy-color-background4: var(--bg1);
+  --candy-color-border1: var(--bg1);
+  --candy-color-border2: var(--bg1);
+  --candy-color-border3: var(--bg1);
+  --candy-color-shadow1: var(--bg1);
+  --candy-color-text1: var(--fg);
+  --candy-color-text2: var(--fg);
+
+  --candy-button-radius: 9999px;
+  --candy-texture-striped-size: 64px;
+  --candy-link-underline: 1.5px;
+}
+
+main.candy-root {
+  /* OKLCH has been in every browser for almost a year... let's just use it
+
+  https://caniuse.com/mdn-css_types_color_oklch */
+  --candy-color-accent-background1: oklch(54% 50% 290);
+  --candy-color-accent-background2: oklch(48% 50% 290);
+  --candy-color-accent-border1: oklch(40% 50% 290);
+  --candy-color-accent-text1: oklch(100% 0% 0);
+  --candy-color-background1: oklch(100% 0% 0);
+  --candy-color-background2: oklch(100% 0% 0);
+  --candy-color-background3: oklch(97% 0% 0);
+  --candy-color-background4: oklch(93% 0% 0);
+  --candy-color-border1: oklch(60% 0% 0);
+  --candy-color-border2: oklch(80% 0% 0);
+  --candy-color-border3: oklch(90% 0% 0);
+  --candy-color-shadow1: oklch(15% 0% 0 / 10%);
+  --candy-color-text1: oklch(0% 0% 0);
+  --candy-color-text2: oklch(30% 0% 0);
+
+  --candy-button-radius: 9999px;
+  --candy-texture-striped-size: 3px;
+
+  --color-main-border: oklch(0% 0% 0 / 20%);
+
+  border-radius: 1rem;
+  border-color: var(--color-main-border);
+  background-clip: padding-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  main.candy-root {
+    /* OKLCH has been in every browser for almost a year... let's just use it
+
+  https://caniuse.com/mdn-css_types_color_oklch */
+    --candy-color-accent-background1: oklch(80% 40% 290);
+    --candy-color-accent-background2: oklch(76% 40% 290);
+    --candy-color-accent-border1: oklch(90% 40% 290);
+    --candy-color-accent-text1: oklch(0% 0% 0);
+    --candy-color-background1: oklch(29% 0% 0);
+    --candy-color-background2: oklch(26% 0% 0);
+    --candy-color-background3: oklch(22% 0% 0);
+    --candy-color-background4: oklch(20% 0% 0);
+    --candy-color-border1: oklch(60% 0% 0);
+    --candy-color-border2: oklch(40% 0% 0);
+    --candy-color-border3: oklch(30% 0% 0);
+    --candy-color-shadow1: oklch(10% 0% 0 / 10%);
+    --candy-color-text1: oklch(100% 0% 0);
+    --candy-color-text2: oklch(80% 0% 0);
+  }
+
+  main.candy-root {
+    --color-main-border: oklch(100% 0% 0 / 10%);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /**
+   * Setting font size on body rather than html so that 1rem can refer to the
+   * user's specified font size anywhere in my CSS, rather than 1.25 times that
+   * value; but this way most things get bumped up a little bigger, for a
+   * slightly comfier to read site (since this is a blog, after all)
+   */
+  font-size: 1.25rem;
+  font-family: var(--font-body);
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+  min-height: 100vh;
+  display: grid;
+  max-width: 1024px;
+  width: 100%;
+  gap: 0;
+  box-shadow: 0 0 0 1px var(--candy-color-background1),
+    0 0 1rem 0 var(--candy-color-background1);
+  grid-template-columns: minmax(1fr, max-content);
+  grid-template-rows: max-content max-content 1fr max-content;
+  grid-template-areas:
+    "logo    logo"
+    "nav     nav"
+    "main    main"
+    "footer  footer";
+}
+
+.sage-well {
+  box-sizing: border-box;
+  border: 0;
+  border-top: 1px solid var(--candy-color-border3);
+  padding: var(--candy-well-padding-vertical)
+    var(--candy-well-padding-horizontal);
+  box-shadow: none;
+  border-radius: 1rem;
+  background: linear-gradient(
+    to bottom,
+    var(--candy-color-background3),
+    var(--candy-color-background1)
+  );
+}
+
+header {
+  display: contents;
+}
+
+.logo {
+  grid-area: logo;
+  padding: 1rem;
+  max-width: max-content;
+}
+
+summary {
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.font-ultra-hi-gloss {
+  font-family: var(--font-logo);
+}
+
+main.candy-root {
+  grid-area: main;
+  padding: 1rem;
+  min-width: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+}
+
+h2,
+h3 {
+  font-size: 1.75rem;
+  margin: 2rem 0 1rem 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  flex-direction: row;
+}
+
+header :any-link {
+  padding: 1rem 1rem;
+  font-weight: 700;
+  border-radius: 1rem;
+}
+
+header :any-link:hover {
+  background: var(--candy-color-background3);
+}
+
+details {
+  margin: 1rem 0;
+}
+
+details > summary {
+  user-select: none;
+}
+
+details[open] > summary {
+  margin-bottom: 1rem;
+}
+
+.logo {
+  text-align: center;
+  font-family: var(--font-logo);
+  color: var(--candy-color-text1);
+  text-decoration-line: none;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+nav .candy-link {
+  text-decoration-line: none;
+}
+
+.footer {
+  grid-area: footer;
+  margin: 0 auto;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+::selection {
+  background: var(--candy-color-accent-background1);
+  color: var(--candy-color-accent-text1);
+}
+
+p {
+  margin: 1rem 0;
+}
+
+ul {
+  padding-left: 1em;
+  list-style-type: disc;
+}
+
+ol {
+  padding-left: 1em;
+}
+
+:where(ul, ol) ::marker {
+  color: var(--candy-color-text1);
+}
+
+.box-grid > * {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-variant-ligatures: none;
+}
+
+blockquote {
+  border-left: 4px solid var(--candy-color-border3);
+  margin-left: 0;
+  padding: 0;
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.no-underline {
+  text-decoration-line: none;
+}
+
+:any-link:hover {
+  text-decoration-line: underline;
+}
+
+:where(main, .candy-prose) > :is(h2, h3) {
+  padding-top: 1rem;
+  margin-top: 1rem;
+  border-top: 1px dotted var(--candy-color-border1);
+  border-image: linear-gradient(
+    to right,
+    var(--candy-color-background1),
+    var(--candy-color-border3),
+    var(--candy-color-background1)
+  );
+  border-image-slice: 1 9;
+}
+
+/* --- Media queries --- */
+
+@media (min-width: 800px) {
+  :root {
+    padding: 0 2rem;
+  }
+
+  body {
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: max-content 1fr max-content;
+    grid-template-areas:
+      "logo    nav"
+      "main    main"
+      "footer  footer";
+  }
+
+  main.candy-root {
+    padding: 2rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header :any-link {
+    border-radius: 0 0 1rem 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .logo {
+    margin-top: 0.5rem;
+  }
+
+  nav {
+    margin-bottom: 0.5rem;
+  }
+
+  body {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

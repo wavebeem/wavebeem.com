@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="candy-root candy-scrollbar candy-texture-striped" data-tags="{{ (tags or []) | join(' ') }}">
+<html
+  lang="en"
+  class="candy-root candy-scrollbar candy-texture-striped"
+  data-tags="{{ (tags or []) | join(' ') }}"
+>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="content-security-policy" content="{{ csp | safe }}" />
@@ -29,7 +33,7 @@
       crossorigin="anonymous"
       href="/static/fonts/UltraHi-GlossFinal-UltraBoldItalic.woff2"
     />
-  <meta name="author" content="wavebeem" />
+    <meta name="author" content="wavebeem" />
     <meta name="description" content="{{ description }}" />
     <meta name="theme-color" content="oklch(30% 5% 190)" />
     <link
@@ -73,42 +77,41 @@
     <link
       rel="stylesheet"
       media="screen"
-      href="/static/style.css?t={{ dateNow }}"
+      href="/static/global.css?t={{ dateNow }}"
     />
+    {% for url in (css or []) %}
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="/static/{{ url }}.css?t={{ dateNow }}"
+    />
+    {% endfor %}
     <link
       rel="stylesheet"
       media="print"
       href="/static/print.css?t={{ dateNow }}"
     />
   </head>
-  <body>
-    <header class="screen-only candy-texture-concave candy-card">
-      <div class="header-content">
-        <div>
-          <span class="flex align-center logo candy-link"
-            >wavebeem<span aria-hidden="true">&nbsp;*-</span>
-          </span>
-          <nav>
-            <a class="candy-link" href="/">Home</a>
-            <a class="candy-link" href="/blog/">Blog</a>
-            <a class="candy-link" href="/art/">Art</a>
-            <a class="candy-link" href="/resume/">Resume</a>
-          </nav>
-        </div>
-      </div>
+  <body class="candy-root">
+    <header class="screen-only">
+      <a href="/" class="flex align-center logo candy-link"
+        >wavebeem<span aria-hidden="true">&nbsp;*-</span>
+      </a>
+      <nav>
+        <a class="candy-link" href="/">Home</a>
+        <a class="candy-link" href="/blog/">Blog</a>
+        <a class="candy-link" href="/art/">Art</a>
+        <a class="candy-link" href="/resume/">Resume</a>
+      </nav>
     </header>
-    <main class="content candy-card candy-texture-default">
+    <main class="candy-root candy-card candy-texture-paper">
       {{ content | safe }}
     </main>
-    <footer class="screen-only candy-texture-concave footer candy-card">
-      <div>
-        <span>
-          &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
-            class="candy-bright"
-            >wavebeem</i
-          >)
-        </span>
-      </div>
+    <footer class="footer screen-only">
+      &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
+        class="candy-bright"
+        >wavebeem</i
+      >)
     </footer>
   </body>
 </html>

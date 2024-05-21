@@ -1,0 +1,23 @@
+.candy-table {
+  --candy-table-padding-vertical: 0.5rem;
+  --candy-table-padding-horizontal: 0.5rem;
+}
+
+:is(h1, h2, h3) small {
+  color: var(--candy-color-text2);
+  font-weight: normal;
+}
+
+@media (max-width: 800px) {
+  small {
+    display: block;
+  }
+}
+
+.sage-well ul:last-of-type {
+  margin-bottom: 0;
+}
+
+ul li + li {
+  margin-top: 1rem;
+}

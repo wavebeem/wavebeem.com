@@ -1,0 +1,21 @@
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.post-list--post {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-list--post > * {
+  margin: 0;
+}
+
+.post-list--post > time {
+  flex: auto;
+  font-size: 1rem;
+  font-weight: 700;
+}
