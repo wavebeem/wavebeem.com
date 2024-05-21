@@ -26,6 +26,27 @@
   margin-bottom: 1rem;
 }
 
+figure {
+  margin: 1rem 0;
+  color: var(--candy-color-text1);
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+figure figcaption {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.pixelated {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
 .candy-prose pre {
   --c1a: oklch(0.65 0.02 190);
   --c1b: oklch(0.65 0.1 190);
@@ -42,8 +63,8 @@
   --keyword: var(--c2);
 
   border: 0;
-  background: oklch(22% 5% 190);
-  color: oklch(96% 5% 190);
+  background: oklch(22% 0% 0);
+  color: oklch(96% 0% 0);
 }
 
 .token.script {

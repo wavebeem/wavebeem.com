@@ -1,3 +1,6 @@
+/* TODO: Use @layer */
+/* TODO: Try to remove util styles */
+
 /* --- Fonts --- */
 
 @font-face {
@@ -56,8 +59,9 @@ h3 {
   font-weight: 600;
 }
 
-a {
-  font-weight: 500;
+:not(:where(h1, h2, h3)) > a {
+  /* :where(p, li) a { */
+  font-weight: 600;
 }
 
 b {
@@ -217,19 +221,6 @@ main.candy-root {
   min-width: 0;
 }
 
-:is(main, .candy-prose) > :last-child {
-  margin-bottom: 0;
-}
-
-.header-content > div {
-  margin: 0 auto;
-  max-width: var(--content-width);
-  display: flex;
-  gap: 1rem;
-  flex-direction: column;
-  flex: auto;
-}
-
 h1,
 h2,
 h3,
@@ -282,22 +273,6 @@ details[open] > summary {
   margin-bottom: 1rem;
 }
 
-.width-max-content {
-  width: max-content;
-}
-
-.m0 {
-  margin: 0;
-}
-
-.card-heading {
-  border: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-}
-
 .logo {
   text-align: center;
   font-family: var(--font-logo);
@@ -306,28 +281,6 @@ details[open] > summary {
   font-size: 1.5rem;
   letter-spacing: 1px;
   line-height: 1;
-}
-
-.post-list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.post-list--post {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.post-list--post > * {
-  margin: 0;
-}
-
-.post-list--post > time {
-  flex: auto;
-  font-size: 1rem;
-  font-weight: bold;
 }
 
 nav .candy-link {
@@ -384,41 +337,12 @@ blockquote {
   font-style: italic;
 }
 
-figure {
-  margin: 1rem 0;
-  color: var(--candy-color-text1);
-}
-
-figure img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-figure figcaption {
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.pixelated {
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
-}
-
 .flex {
   display: flex;
 }
 
 .flex-column {
   flex-direction: column;
-}
-
-.flex-auto {
-  flex: auto;
-}
-
-.clearfix {
-  clear: both;
 }
 
 .align-center {
@@ -429,79 +353,8 @@ figure figcaption {
   text-decoration-line: none;
 }
 
-.mb0 {
-  margin-bottom: 0;
-}
-
 :any-link:hover {
   text-decoration-line: underline;
-}
-
-.avatar {
-  --radius: 9999px;
-  --padding: 0.5rem;
-  padding: var(--padding);
-  display: flex;
-  float: right;
-  margin: 1rem;
-  border-radius: var(--radius);
-}
-
-.avatar img {
-  border-radius: calc(var(--radius) - var(--padding));
-  background: var(--candy-color-background2);
-}
-
-.avatar[data-bizarro] {
-  --timing-duration: 750ms;
-  /* https://easings.net/#easeOutBack */
-  --timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
-  transition: var(--timing-duration) transform var(--timing-function);
-}
-
-.avatar[data-bizarro="on"] {
-  transform: rotateY(-0.5turn);
-}
-
-.avatar[data-bizarro] img {
-  transition: var(--timing-duration) filter var(--timing-function);
-}
-
-.avatar[data-bizarro="on"] img {
-  filter: hue-rotate(0.5turn) contrast(0.75) brightness(1.25);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .avatar img.bizarro {
-    transform: none;
-  }
-}
-
-.print-only {
-  display: none;
-}
-
-.grid-2 {
-  display: grid;
-  gap: 1rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.weight-normal {
-  font-weight: normal;
-}
-
-.gap1 {
-  gap: 0.25rem;
-}
-.gap2 {
-  gap: 0.5rem;
-}
-.gap3 {
-  gap: 1rem;
 }
 
 :where(main, .candy-prose) > :is(h2, h3) {
@@ -519,21 +372,6 @@ figure figcaption {
 
 /* --- Media queries --- */
 
-@media (min-width: 600px) {
-  .header-content > div,
-  footer > * {
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
-@media (max-width: 400px) {
-  .avatar img {
-    width: 100px;
-    height: auto;
-  }
-}
-
 @media (min-width: 800px) {
   :root {
     padding: 0 2rem;
@@ -550,11 +388,6 @@ figure figcaption {
 
   main.candy-root {
     padding: 2rem;
-  }
-
-  .avatar img {
-    width: 160px;
-    height: auto;
   }
 
   .grid-2 {

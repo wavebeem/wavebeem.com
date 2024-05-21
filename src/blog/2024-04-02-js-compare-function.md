@@ -31,7 +31,7 @@ Two key facts allow this function to shine:
 
 1. JS defines `a || b` as evaluating to either `a` or `b`, not just `true` or `false`
 
-2. Since `-compare(a, b)` is equivalent to `compare(b, a)`, you can prefix each descending\_ comparison with a special character to make it more obvious than flipping the arguments
+2. Since `-compare(a, b)` is equivalent to `compare(b, a)`, you can prefix each descending comparison with a special character to make it more obvious than flipping the arguments
 
 Seeing as `0 || x` evaluates to `x`, and `compare(a, b) === 0` means `a === b`, the `||` operator lets us chain these "failing" comparisons elegantly to define complex ordering:
 

@@ -1,0 +1,78 @@
+.m0 {
+  margin: 0;
+}
+
+.grid-2 {
+  display: grid;
+  gap: 1rem;
+}
+
+.card-heading {
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.width-max-content {
+  width: max-content;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.avatar {
+  --radius: 9999px;
+  --padding: 0.5rem;
+  padding: var(--padding);
+  display: flex;
+  float: right;
+  margin: 1rem;
+  border-radius: var(--radius);
+}
+
+.avatar img {
+  border-radius: calc(var(--radius) - var(--padding));
+  background: var(--candy-color-background2);
+}
+
+@media (max-width: 400px) {
+  .avatar img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .avatar img {
+    width: 160px;
+    height: auto;
+  }
+}
+
+.avatar[data-bizarro] {
+  --timing-duration: 750ms;
+  /* https://easings.net/#easeOutBack */
+  --timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: var(--timing-duration) transform var(--timing-function);
+}
+
+.avatar[data-bizarro="on"] {
+  transform: rotateY(-0.5turn);
+}
+
+.avatar[data-bizarro] img {
+  transition: var(--timing-duration) filter var(--timing-function);
+}
+
+.avatar[data-bizarro="on"] img {
+  filter: hue-rotate(0.5turn) contrast(0.75) brightness(1.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar img.bizarro {
+    transform: none;
+  }
+}

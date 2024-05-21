@@ -30,6 +30,22 @@
   flex: auto;
 }
 
+figure {
+  margin: 1rem 0;
+  color: var(--candy-color-text1);
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+figure figcaption {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 @media (min-width: 600px) {
   .art-container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
