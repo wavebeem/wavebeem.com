@@ -77,7 +77,7 @@
     <link
       rel="stylesheet"
       media="screen"
-      href="/static/style.css?t={{ dateNow }}"
+      href="/static/global.css?t={{ dateNow }}"
     />
     {% for url in (css or []) %}
     <link
@@ -104,7 +104,7 @@
         <a class="candy-link" href="/resume/">Resume</a>
       </nav>
     </header>
-    <main class="candy-root content candy-card candy-texture-paper">
+    <main class="candy-root candy-card candy-texture-paper">
       {{ content | safe }}
     </main>
     <footer class="footer screen-only">
