@@ -20,8 +20,7 @@
 
 @font-face {
   font-family: "Ultra Hi-Gloss";
-  src: url("/static/fonts/UltraHi-GlossFinal-UltraBoldItalic.woff2")
-    format("woff2");
+  src: url("/static/fonts/ultra-hi-gloss.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -33,7 +32,7 @@
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", SFMono-Regular,
     Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   overflow-y: scroll;
-  color-scheme: dark;
+  color-scheme: light dark;
 }
 
 :root.candy-texture-striped {
@@ -53,7 +52,6 @@ h3 {
 }
 
 :not(:where(h1, h2, h3)) > a {
-  /* :where(p, li) a { */
   font-weight: 600;
 }
 
