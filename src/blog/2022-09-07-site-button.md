@@ -20,5 +20,3 @@ Recently I've been hanging out a lot on [cohost!](https://cohost.org/wavebeem), 
     wavebeem.com site button
   </figcaption>
 </figure>
-
-I made a tiny [retro home page](/retro/) to showcase my button, along with other buttons I found.

@@ -48,27 +48,47 @@ figure figcaption {
 }
 
 .candy-prose pre {
-  --c1a: oklch(0.65 0.02 190);
-  --c1b: oklch(0.65 0.1 190);
-  --c2: oklch(0.8 0.2 135);
-  --c3: oklch(0.8 0.1 300);
-  --c4: oklch(0.9 0.1 40);
+  --color-text: var(--candy-color-text1);
+  --color-border1: var(--candy-color-border3);
+  --color-border2: var(--candy-color-background1);
+  --color-background1: var(--candy-color-background2);
+  --color-background2: var(--candy-color-background1);
 
-  --comment: var(--c1a);
-  --punctuation: var(--c1b);
-  --string: var(--c3);
-  --property: var(--c4);
-  --operator: oklch(0.7 0.1 190);
-  --function: var(--c4);
-  --keyword: var(--c2);
+  --comment: oklch(45% 80% 140);
+  --keyword: oklch(45% 80% 210);
+  --property: oklch(45% 80% 310);
+  --string: oklch(45% 80% 0);
+  --punctuation: oklch(50% 0% 0);
 
+  margin: 1rem -2rem;
+  padding: 1rem 2rem;
+  border-radius: 0;
   border: 0;
-  background: oklch(22% 0% 0);
-  color: oklch(96% 0% 0);
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(
+    to right,
+    var(--color-border1),
+    var(--color-border2)
+  );
+  border-image-slice: 1 9;
+  background-color: var(--color-background2);
+  background-image: linear-gradient(
+    to right,
+    var(--color-background1),
+    var(--color-background2)
+  );
+  color: var(--color-text);
 }
 
-.token.script {
-  color: oklch(0.9 0.02 190);
+@media (prefers-color-scheme: dark) {
+  .candy-prose pre {
+    --comment: oklch(85% 40% 140);
+    --keyword: oklch(85% 40% 210);
+    --property: oklch(85% 40% 310);
+    --string: oklch(85% 40% 40);
+    --punctuation: oklch(70% 0% 0);
+  }
 }
 
 .token.comment,
@@ -76,6 +96,7 @@ figure figcaption {
 .token.doctype,
 .token.cdata {
   color: var(--comment);
+  font-style: italic;
 }
 
 .token.punctuation {
@@ -99,22 +120,22 @@ figure figcaption {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: var(--operator);
+  color: var(--punctuation);
 }
 
 .token.atrule,
 .token.function,
 .token.class-name {
-  color: var(--function);
+  color: var(--property);
 }
 
-.token.operator,
 .token.tag {
   color: var(--keyword);
 }
 
 .token.keyword {
   color: var(--keyword);
+  font-weight: bold;
 }
 
 .language-css .token.property,

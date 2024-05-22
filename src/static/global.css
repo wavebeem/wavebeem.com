@@ -25,12 +25,6 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/static/fonts/JetBrainsMono-Regular.woff2") format("woff2");
-  font-display: swap;
-}
-
 /* --- Other CSS --- */
 
 :root {
@@ -38,7 +32,6 @@
   --font-logo: "Ultra Hi-Gloss", var(--font-body);
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", SFMono-Regular,
     Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --content-width: 800px;
   overflow-y: scroll;
   color-scheme: dark;
 }
@@ -102,7 +95,7 @@ main.candy-root {
   --candy-color-accent-border1: oklch(40% 50% 290);
   --candy-color-accent-text1: oklch(100% 0% 0);
   --candy-color-background1: oklch(100% 0% 0);
-  --candy-color-background2: oklch(100% 0% 0);
+  --candy-color-background2: oklch(98% 0% 0);
   --candy-color-background3: oklch(97% 0% 0);
   --candy-color-background4: oklch(93% 0% 0);
   --candy-color-border1: oklch(60% 0% 0);
@@ -136,11 +129,11 @@ main.candy-root {
     --candy-color-background3: oklch(22% 0% 0);
     --candy-color-background4: oklch(20% 0% 0);
     --candy-color-border1: oklch(60% 0% 0);
-    --candy-color-border2: oklch(40% 0% 0);
-    --candy-color-border3: oklch(30% 0% 0);
+    --candy-color-border2: oklch(50% 0% 0);
+    --candy-color-border3: oklch(40% 0% 0);
     --candy-color-shadow1: oklch(10% 0% 0 / 10%);
     --candy-color-text1: oklch(100% 0% 0);
-    --candy-color-text2: oklch(80% 0% 0);
+    --candy-color-text2: oklch(85% 0% 0);
   }
 
   main.candy-root {
@@ -183,16 +176,22 @@ body {
 .sage-well {
   box-sizing: border-box;
   border: 0;
-  border-top: 1px solid var(--candy-color-border3);
   padding: var(--candy-well-padding-vertical)
     var(--candy-well-padding-horizontal);
-  box-shadow: none;
   border-radius: 1rem;
   background: linear-gradient(
-    to bottom,
-    var(--candy-color-background3),
-    var(--candy-color-background1)
-  );
+        to right,
+        transparent,
+        var(--candy-color-border3),
+        transparent
+      )
+      0 0 / 100% 1px repeat-x,
+    linear-gradient(
+        to bottom,
+        var(--candy-color-background2),
+        var(--candy-color-background1)
+      )
+      0 0 / 100% 100% var(--candy-color-background2);
 }
 
 header {

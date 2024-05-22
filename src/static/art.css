@@ -1,6 +1,6 @@
 .art-container {
   display: grid;
-  gap: 2rem;
+  gap: 1rem;
   grid-template-columns: 1fr;
   justify-content: space-between;
 }
@@ -23,7 +23,6 @@
 .art-container--frame figcaption {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
 }
 
 .art-container--frame a {
