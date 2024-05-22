@@ -63,7 +63,10 @@ b {
   --fg: oklch(100% 0% 0);
   --bg1: oklch(44% 30% 160);
   --bg2: oklch(40% 30% 160);
+  --bg2x: oklch(44% 30% 160 / 50%);
   --bg3: oklch(36% 30% 160);
+  --cool-text-shadow: 0 2px 4px oklch(20% 30% 160);
+
   --candy-color-accent-background1: var(--fg);
   --candy-color-accent-background2: var(--fg);
   --candy-color-accent-border1: var(--bg1);
@@ -143,25 +146,28 @@ main.candy-root {
   box-sizing: border-box;
 }
 
-body {
+body.candy-root {
   /**
    * Setting font size on body rather than html so that 1rem can refer to the
    * user's specified font size anywhere in my CSS, rather than 1.25 times that
    * value; but this way most things get bumped up a little bigger, for a
    * slightly comfier to read site (since this is a blog, after all)
    */
+  --body-padding-y: 0;
+  --body-padding-x: 0.5rem;
   font-size: 1.25rem;
   font-family: var(--font-body);
   line-height: 1.5;
   margin: 0 auto;
-  padding: 0 0.5rem;
+  padding: var(--body-padding-y) var(--body-padding-x);
   min-height: 100vh;
   display: grid;
   max-width: 1024px;
   width: 100%;
   gap: 0;
-  box-shadow: 0 0 0 1px var(--candy-color-background1),
-    0 0 1rem 0 var(--candy-color-background1);
+  box-shadow: inset 1px 0 0 0 oklch(100% 0% 0 / 10%),
+    inset -1px 0 0 0 oklch(100% 0% 0 / 10%), 0 0 0 1px oklch(0% 0% 0 / 10%),
+    0 0 16px oklch(0% 0% 0 / 30%);
   grid-template-columns: minmax(1fr, max-content);
   grid-template-rows: max-content max-content 1fr max-content;
   grid-template-areas:
@@ -169,6 +175,7 @@ body {
     "nav     nav"
     "main    main"
     "footer  footer";
+  background: var(--bg2x);
 }
 
 .sage-well {
@@ -196,6 +203,11 @@ header {
   display: contents;
 }
 
+header,
+footer {
+  text-shadow: var(--cool-text-shadow);
+}
+
 .logo {
   grid-area: logo;
   padding: 1rem;
@@ -213,8 +225,10 @@ summary {
 }
 
 main.candy-root {
+  --main-padding-x: 1rem;
+  --main-padding-y: 1rem;
   grid-area: main;
-  padding: 1rem;
+  padding: var(--main-padding-y) var(--main-padding-x);
   min-width: 0;
 }
 
@@ -252,10 +266,6 @@ header :any-link {
   padding: 1rem 1rem;
   font-weight: 700;
   border-radius: 1rem;
-}
-
-header :any-link:hover {
-  background: var(--candy-color-background3);
 }
 
 details {
@@ -386,7 +396,8 @@ blockquote {
     padding: 0 2rem;
   }
 
-  body {
+  body.candy-root {
+    --body-padding-x: 1rem;
     grid-template-columns: max-content 1fr;
     grid-template-rows: max-content 1fr max-content;
     grid-template-areas:
@@ -396,7 +407,8 @@ blockquote {
   }
 
   main.candy-root {
-    padding: 2rem;
+    --main-padding-x: 2rem;
+    --main-padding-y: 2rem;
   }
 
   .grid-2 {
@@ -417,7 +429,7 @@ blockquote {
     margin-bottom: 0.5rem;
   }
 
-  body {
+  body.candy-root {
     font-size: 1rem;
   }
 

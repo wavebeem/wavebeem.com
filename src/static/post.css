@@ -60,7 +60,7 @@ figure figcaption {
   --string: oklch(45% 80% 0);
   --punctuation: oklch(50% 0% 0);
 
-  margin: 1rem -2rem;
+  margin: 1rem calc(-1 * var(--main-padding-x));
   padding: 1rem 2rem;
   border-radius: 0;
   border: 0;
