@@ -29,8 +29,8 @@
 :root {
   --font-body: "Nunito", system-ui, sans-serif;
   --font-logo: "Ultra Hi-Gloss", var(--font-body);
-  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", SFMono-Regular,
-    Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", "SFMono-Regular",
+    "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
   overflow-y: scroll;
   color-scheme: light dark;
 }
@@ -117,7 +117,7 @@ main.candy-root {
   main.candy-root {
     /* OKLCH has been in every browser for almost a year... let's just use it
 
-  https://caniuse.com/mdn-css_types_color_oklch */
+    https://caniuse.com/mdn-css_types_color_oklch */
     --candy-color-accent-background1: oklch(80% 40% 290);
     --candy-color-accent-background2: oklch(76% 40% 290);
     --candy-color-accent-border1: oklch(90% 40% 290);
@@ -357,6 +357,18 @@ blockquote {
 :where(main, .candy-prose) > :is(h2, h3) {
   padding-top: 1rem;
   margin-top: 1rem;
+  border-top: 1px dotted var(--candy-color-border1);
+  border-image: linear-gradient(
+    to right,
+    var(--candy-color-background1),
+    var(--candy-color-border3),
+    var(--candy-color-background1)
+  );
+  border-image-slice: 1 9;
+}
+
+.candy-prose :where(hr),
+.candy-divider {
   border-top: 1px dotted var(--candy-color-border1);
   border-image: linear-gradient(
     to right,

@@ -31,6 +31,13 @@
   float: right;
   margin: 1rem;
   border-radius: var(--radius);
+  border-top: 1px solid var(--candy-color-border3);
+  background: linear-gradient(
+      to bottom,
+      var(--candy-color-background3),
+      var(--candy-color-background1)
+    )
+    var(--candy-color-background1);
 }
 
 .avatar img {
