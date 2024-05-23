@@ -18,6 +18,33 @@
   margin-bottom: 0;
 }
 
+.sage-well > details {
+  margin-block: 0;
+}
+
 ul li + li {
   margin-top: 1rem;
+}
+
+ul {
+  padding-left: 1em;
+  list-style-type: circle;
+}
+
+ol {
+  padding-left: 1em;
+}
+
+summary {
+  border-radius: 0.5rem;
+}
+
+summary:hover {
+  outline: 1px solid var(--candy-color-border3);
+  background: linear-gradient(
+    to right,
+    var(--candy-color-background2),
+    var(--candy-color-background4),
+    var(--candy-color-background2)
+  );
 }

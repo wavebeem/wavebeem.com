@@ -319,7 +319,7 @@ ol {
 }
 
 :where(ul, ol) ::marker {
-  color: var(--candy-color-text1);
+  color: var(--candy-color-border1);
 }
 
 .box-grid > * {
@@ -345,6 +345,10 @@ blockquote {
 
 .flex {
   display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
 }
 
 .flex-column {

@@ -56,6 +56,10 @@ ul {
   padding-left: 1rem;
 }
 
+details > summary {
+  list-style-type: none;
+}
+
 table {
   margin: 0.5rem 0;
   border-collapse: collapse;
