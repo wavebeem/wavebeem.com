@@ -63,9 +63,10 @@ b {
   --fg: oklch(100% 0% 0);
   --bg1: oklch(44% 30% 160);
   --bg2: oklch(40% 30% 160);
-  --bg2x: oklch(44% 30% 160 / 50%);
+  --bg2x: oklch(74% 30% 160 / 20%);
   --bg3: oklch(36% 30% 160);
-  --cool-text-shadow: 0 2px 4px oklch(20% 30% 160);
+  --cool-text-shadow: 0 2px 4px oklch(20% 30% 160),
+    0 0 16px oklch(20% 30% 160 / 50%);
 
   --candy-color-accent-background1: var(--fg);
   --candy-color-accent-background2: var(--fg);
@@ -138,7 +139,7 @@ main.candy-root {
   }
 
   main.candy-root {
-    --color-main-border: oklch(100% 0% 0 / 10%);
+    --color-main-border: oklch(100% 0% 0 / 20%);
   }
 }
 
@@ -165,9 +166,6 @@ body.candy-root {
   max-width: 1024px;
   width: 100%;
   gap: 0;
-  box-shadow: inset 1px 0 0 0 oklch(100% 0% 0 / 10%),
-    inset -1px 0 0 0 oklch(100% 0% 0 / 10%), 0 0 0 1px oklch(0% 0% 0 / 10%),
-    0 0 16px oklch(0% 0% 0 / 30%);
   grid-template-columns: minmax(1fr, max-content);
   grid-template-rows: max-content max-content 1fr max-content;
   grid-template-areas:
@@ -263,9 +261,10 @@ nav {
 }
 
 header :any-link {
-  padding: 1rem 1rem;
-  font-weight: 700;
+  padding: 1rem;
+  font-weight: 800;
   border-radius: 1rem;
+  font-size: 1.25rem;
 }
 
 details {
@@ -280,7 +279,7 @@ details[open] > summary {
   margin-bottom: 1rem;
 }
 
-.logo {
+header .logo {
   text-align: center;
   font-family: var(--font-logo);
   color: var(--candy-color-text1);
@@ -398,6 +397,9 @@ blockquote {
 
   body.candy-root {
     --body-padding-x: 1rem;
+    box-shadow: inset 1px 0 0 0 oklch(100% 0% 0 / 20%),
+      inset -1px 0 0 0 oklch(100% 0% 0 / 20%), 0 0 0 1px oklch(0% 0% 0 / 20%),
+      0 0 16px oklch(0% 0% 0 / 30%);
     grid-template-columns: max-content 1fr;
     grid-template-rows: max-content 1fr max-content;
     grid-template-areas:
@@ -421,14 +423,6 @@ blockquote {
 }
 
 @media (max-width: 800px) {
-  .logo {
-    margin-top: 0.5rem;
-  }
-
-  nav {
-    margin-bottom: 0.5rem;
-  }
-
   body.candy-root {
     font-size: 1rem;
   }
