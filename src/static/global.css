@@ -115,6 +115,7 @@ main.candy-root {
   border-radius: 1rem;
   border-color: var(--color-main-border);
   background-clip: padding-box;
+  box-shadow: 0 0 0 1px oklch(100% 0% 0 / 20%);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -139,7 +140,7 @@ main.candy-root {
   }
 
   main.candy-root {
-    --color-main-border: oklch(100% 0% 0 / 20%);
+    --color-main-border: oklch(0% 0% 0);
   }
 }
 
@@ -206,10 +207,16 @@ footer {
   text-shadow: var(--cool-text-shadow);
 }
 
-.logo {
+header .logo {
   grid-area: logo;
   padding: 1rem;
   max-width: max-content;
+}
+
+@media (max-width: 800px) {
+  header .logo {
+    padding-bottom: 0;
+  }
 }
 
 summary {
@@ -260,10 +267,9 @@ nav {
   flex-direction: row;
 }
 
-header :any-link {
+nav :any-link {
   padding: 1rem;
   font-weight: 800;
-  border-radius: 1rem;
   font-size: 1.25rem;
 }
 

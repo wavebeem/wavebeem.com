@@ -56,6 +56,16 @@ ul {
   padding-left: 1rem;
 }
 
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem 2rem;
+}
+
+dd {
+  margin-inline: 0;
+}
+
 details > summary {
   list-style-type: none;
 }
