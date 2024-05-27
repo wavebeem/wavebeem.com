@@ -1,9 +1,13 @@
+// @ts-check
+
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const markdownIt = require("markdown-it");
+/** @type {any} */
 const dateformat = require("dateformat");
 const util = require("util");
 
+/** @param config {import("@11ty/eleventy").UserConfig} */
 module.exports = function (config) {
   const markdown = markdownIt({
     html: true,
@@ -13,7 +17,6 @@ module.exports = function (config) {
   config.setLibrary("md", markdown);
   config.addPlugin(pluginRss);
   config.addPlugin(syntaxHighlight);
-  config.addPassthroughCopy("src/_redirects");
   config.addPassthroughCopy("src/static");
   const now = new Date();
   config.addFilter("formatDate", function (value, format) {

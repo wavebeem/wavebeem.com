@@ -1,0 +1,22 @@
+---
+permalink: "main.css"
+---
+
+[data-theme="light"],
+:root { {% for key, val in colors.light %}
+  --{{key}}: {{ val }};{% endfor %}
+}
+
+
+[data-theme="dark"] { {% for key, val in colors.dark %}
+  --{{key}}: {{ val }};{% endfor %}
+}
+
+
+@media (prefers-color-scheme: dark) {
+  :root { {% for key, val in colors.dark %}
+    --{{key}}: {{ val }};{% endfor %}
+  }
+}
+
+{% include "./static/global.css" %}

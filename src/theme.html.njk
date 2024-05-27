@@ -1,0 +1,32 @@
+---
+title: "Theme"
+description: "Theme | wavebeem.com"
+layout: "layout-base"
+permalink: "theme.html"
+css:
+  - "theme"
+---
+
+<h1 class="candy-bright">
+  {{ title }}
+</h1>
+
+<h2 class="candy-bright">Light</h2>
+
+<div class="theme-properties candy-root candy-texture-paper" data-theme="light">
+  {% for name, value in colors.light %}
+  <div class="theme-properties--color" style="--color: {{ value }}"></div>
+  <div class="theme-properties--value"><code>{{ value }}</code></div>
+  <div class="theme-properties--name"><code>{{ name }}</code></div>
+  {% endfor %}
+</div>
+
+<h2 class="candy-bright">Dark</h2>
+
+<div class="theme-properties candy-root candy-texture-paper" data-theme="dark">
+  {% for name, value in colors.dark %}
+  <div class="theme-properties--color" style="--color: {{ value }}"></div>
+  <div class="theme-properties--value"><code>{{ value }}</code></div>
+  <div class="theme-properties--name"><code>{{ name }}</code></div>
+  {% endfor %}
+</div>

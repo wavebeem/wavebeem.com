@@ -21,6 +21,7 @@ ul li + li {
   margin-top: 1rem;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 ul {
   padding-left: 1em;
   list-style-type: circle;

@@ -13,6 +13,7 @@
   margin: 0;
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .post dt {
   margin-bottom: 0.5rem;
 }
@@ -54,12 +55,6 @@ figure figcaption {
   --color-background1: var(--candy-color-background2);
   --color-background2: var(--candy-color-background1);
 
-  --comment: oklch(45% 80% 140);
-  --keyword: oklch(45% 80% 210);
-  --property: oklch(45% 80% 310);
-  --string: oklch(45% 80% 0);
-  --punctuation: oklch(50% 0% 0);
-
   margin: 1rem calc(-1 * var(--main-padding-x));
   padding: 1rem 2rem;
   border-radius: 0;
@@ -81,26 +76,16 @@ figure figcaption {
   color: var(--color-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  .candy-prose pre {
-    --comment: oklch(85% 40% 140);
-    --keyword: oklch(85% 40% 210);
-    --property: oklch(85% 40% 310);
-    --string: oklch(85% 40% 40);
-    --punctuation: oklch(70% 0% 0);
-  }
-}
-
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: var(--comment);
+  color: var(--color-syntax-comment);
   font-style: italic;
 }
 
 .token.punctuation {
-  color: var(--punctuation);
+  color: var(--color-syntax-punctuation);
 }
 
 .token.attr-value,
@@ -112,7 +97,7 @@ figure figcaption {
 .token.regex,
 /* .token.builtin, */
 .token.inserted {
-  color: var(--string);
+  color: var(--color-syntax-string);
 }
 
 .token.operator,
@@ -120,21 +105,21 @@ figure figcaption {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: var(--punctuation);
+  color: var(--color-syntax-punctuation);
 }
 
 .token.atrule,
 .token.function,
 .token.class-name {
-  color: var(--property);
+  color: var(--color-syntax-property);
 }
 
 .token.tag {
-  color: var(--keyword);
+  color: var(--color-syntax-keyword);
 }
 
 .token.keyword {
-  color: var(--keyword);
+  color: var(--color-syntax-keyword);
   font-weight: bold;
 }
 
@@ -146,7 +131,7 @@ figure figcaption {
 .token.symbol,
 .token.deleted,
 .token.important {
-  color: var(--property);
+  color: var(--color-syntax-property);
 }
 
 .token.important,

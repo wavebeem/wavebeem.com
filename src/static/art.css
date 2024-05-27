@@ -25,6 +25,7 @@
   flex-direction: column;
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 .art-container--frame a {
   flex: auto;
 }
@@ -34,12 +35,14 @@ figure {
   color: var(--candy-color-text1);
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 figure img {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 figure figcaption {
   font-weight: 600;
   font-size: 1rem;
