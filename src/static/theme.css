@@ -1,0 +1,21 @@
+.theme-properties {
+  margin: 1rem calc(-1 * var(--main-padding-x));
+  padding-inline: var(--main-padding-x);
+  padding-block: 1rem;
+  display: grid;
+  grid-template-columns: max-content max-content 1fr;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-properties--color {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--color);
+  border-radius: 0.5rem;
+}
+
+.theme-properties--name {
+  font-size: 1.25rem;
+}

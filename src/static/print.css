@@ -92,6 +92,7 @@ tbody > tr > th {
   padding-right: 1rem;
 }
 
+/* stylelint-disable-next-line no-duplicate-selectors */
 tbody > tr > th {
   text-align: left;
 }
