@@ -86,6 +86,8 @@ b {
   --candy-button-radius: 9999px;
   --candy-texture-striped-size: 64px;
   --candy-link-underline: 1.5px;
+
+  scrollbar-color: var(--candy-color-text2) var(--candy-color-background2);
 }
 
 main.candy-root {
