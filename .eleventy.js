@@ -6,6 +6,7 @@ const markdownIt = require("markdown-it");
 /** @type {any} */
 const dateformat = require("dateformat");
 const util = require("util");
+const html = String.raw;
 
 /** @param config {import("@11ty/eleventy").UserConfig} */
 module.exports = function (config) {
@@ -34,6 +35,21 @@ module.exports = function (config) {
   });
   config.addFilter("inspect", function (value) {
     return util.inspect(value, {});
+  });
+  config.addPairedShortcode("navLink", function (content, url) {
+    return html`<a
+      class="candy-link"
+      href="${url}"
+      ${url === this.page.url && `aria-current="page"`}
+      >${content}</a
+    >`;
+  });
+  config.addFilter("navHref", function (url) {
+    let ret = `href="${url}"`;
+    if (url === this.page.url) {
+      ret += ' aria-current="page"';
+    }
+    return ret;
   });
   config.addFilter("objectKeys", function (object) {
     return Object.keys(object);
