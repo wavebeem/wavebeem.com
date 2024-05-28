@@ -107,19 +107,45 @@ body .candy-root {
   --candy-texture-striped-size: 3px;
 }
 
-main.candy-root {
-  --color-main-border: hsl(0 0% 0% / 20%);
-  border-radius: 1rem;
-  border-color: var(--color-main-border);
+.window-content {
+  --color-window-border: hsl(0 0% 0% / 20%);
+  --window-border-radius: 0.5rem;
+  border-radius: var(--window-border-radius);
   background-clip: padding-box;
+  border: 1px solid var(--color-window-border);
   box-shadow: 0 0 0 1px hsl(0 0% 100% / 20%);
   scrollbar-color: var(--candy-color-text2) var(--candy-color-background2);
 }
 
 @media (prefers-color-scheme: dark) {
-  main.candy-root {
-    --color-main-border: hsl(0 0% 0%);
+  .window-content {
+    --color-window-border: hsl(0 0% 0%);
   }
+}
+
+.window-nav {
+  border-radius: var(--window-border-radius) var(--window-border-radius) 0 0;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--candy-color-border3);
+}
+
+.window-nav :any-link {
+  padding: 0.25rem 0.5rem;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.window-nav :any-link:hover {
+  text-decoration-line: underline;
+}
+
+.window-main {
+  border-radius: 0 0 var(--window-border-radius) var(--window-border-radius);
+  padding: var(--candy-card-padding-vertical)
+    var(--candy-card-padding-horizontal);
 }
 
 * {
@@ -141,17 +167,11 @@ body.candy-root {
   margin: 0 auto;
   padding: var(--body-padding-y) var(--body-padding-x);
   min-height: 100vh;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   max-width: 1024px;
   width: 100%;
   gap: 0;
-  grid-template-columns: minmax(1fr, max-content);
-  grid-template-rows: max-content max-content 1fr max-content;
-  grid-template-areas:
-    "logo    logo"
-    "nav     nav"
-    "main    main"
-    "footer  footer";
   background: var(--color-root-bg2x);
 }
 
@@ -177,10 +197,12 @@ body.candy-root {
 }
 
 header {
-  display: contents;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-header > *,
+.logo,
 footer {
   /* Should use text-shadow, but the underline appears below the text shadow in
   Chrome & Safari, and Safari renders a really ugly text-shadow on Ultra
@@ -191,22 +213,15 @@ footer {
 
 :where(header, footer) :any-link:hover {
   background: radial-gradient(
-    ellipse at center,
+    circle at center,
     hsl(0 0% 0% / 30%),
     hsl(0 0% 0% / 0%) 75%
   );
 }
 
 header .logo {
-  grid-area: logo;
   padding: 1rem;
   max-width: max-content;
-}
-
-@media (max-width: 800px) {
-  header .logo {
-    padding-bottom: 0;
-  }
 }
 
 summary {
@@ -220,12 +235,10 @@ summary {
 }
 
 /* stylelint-disable-next-line no-duplicate-selectors */
-main.candy-root {
+.window-main {
   --main-padding-x: 1rem;
   --main-padding-y: 1rem;
-  grid-area: main;
   padding: var(--main-padding-y) var(--main-padding-x);
-  min-width: 0;
 }
 
 h1,
@@ -252,18 +265,6 @@ h3 {
 /* stylelint-disable-next-line no-duplicate-selectors */
 h3 {
   font-size: 1.5rem;
-}
-
-nav {
-  grid-area: nav;
-  display: flex;
-  flex-direction: row;
-}
-
-nav :any-link {
-  padding: 1rem;
-  font-weight: 800;
-  font-size: 1.25rem;
 }
 
 details {
@@ -294,7 +295,6 @@ nav .candy-link {
 }
 
 .footer {
-  grid-area: footer;
   margin: 0 auto;
   font-size: 1rem;
   padding: 1rem;
@@ -404,17 +404,11 @@ main :any-link:hover {
     box-shadow: inset 1px 0 0 0 hsl(0 0% 100% / 20%),
       inset -1px 0 0 0 hsl(0 0% 100% / 20%), 0 0 0 1px hsl(0 0% 0% / 20%),
       0 0 16px hsl(0 0% 0% / 30%);
-    grid-template-columns: max-content 1fr;
-    grid-template-rows: max-content 1fr max-content;
-    grid-template-areas:
-      "logo    nav"
-      "main    main"
-      "footer  footer";
   }
 
-  main.candy-root {
-    --main-padding-x: 2rem;
-    --main-padding-y: 2rem;
+  .window-main {
+    --main-padding-x: 1rem;
+    --main-padding-y: 1rem;
   }
 
   .grid-2 {

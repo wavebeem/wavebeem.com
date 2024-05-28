@@ -67,11 +67,7 @@
       media="screen"
       href="/static/candy.css?t={{ dateNow }}"
     />
-    <link
-      rel="stylesheet"
-      media="screen"
-      href="/main.css?t={{ dateNow }}"
-    />
+    <link rel="stylesheet" media="screen" href="/main.css?t={{ dateNow }}" />
     {% for url in (css or []) %}
     <link
       rel="stylesheet"
@@ -90,16 +86,18 @@
       <a href="/" class="flex align-center logo candy-link"
         >wavebeem<span aria-hidden="true">&nbsp;*-</span>
       </a>
-      <nav>
+    </header>
+    <div class="candy-root window-content">
+      <nav class="window-nav candy-texture-glossy screen-only">
         <a class="candy-link" href="/">Home</a>
         <a class="candy-link" href="/blog/">Blog</a>
         <a class="candy-link" href="/art/">Art</a>
         <a class="candy-link" href="/resume/">Resume</a>
       </nav>
-    </header>
-    <main class="candy-root candy-card candy-texture-paper">
-      {{ content | safe }}
-    </main>
+      <main class="window-main candy-texture-paper">
+        {{ content | safe }}
+      </main>
+    </div>
     <footer class="footer screen-only">
       &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
         class="candy-bright"

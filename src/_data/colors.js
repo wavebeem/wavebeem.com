@@ -24,7 +24,7 @@ module.exports = {
     "color-main-accent-text1": oklch(100, 0, 0),
     "color-main-background1": oklch(100, 0, 0),
     "color-main-background2": oklch(98, 0, 0),
-    "color-main-background3": oklch(97, 0, 0),
+    "color-main-background3": oklch(96, 0, 0),
     "color-main-background4": oklch(93, 0, 0),
     "color-main-border1": oklch(60, 0, 0),
     "color-main-border2": oklch(80, 0, 0),
