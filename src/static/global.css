@@ -115,6 +115,9 @@ body .candy-root {
   border: 1px solid var(--color-window-border);
   box-shadow: 0 0 0 1px hsl(0 0% 100% / 20%);
   scrollbar-color: var(--candy-color-text2) var(--candy-color-background2);
+  flex: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -130,12 +133,17 @@ body .candy-root {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+  background-image: linear-gradient(
+    to bottom,
+    var(--candy-color-background1) 0 50%,
+    var(--candy-color-background2) 50%
+  );
   border-bottom: 1px solid var(--candy-color-border3);
   border-image: linear-gradient(
     to right,
+    var(--candy-color-background2),
     var(--candy-color-border3),
-    var(--candy-color-border2),
-    var(--candy-color-border3)
+    var(--candy-color-background2)
   );
   border-image-slice: 1 9;
 }
@@ -151,6 +159,7 @@ body .candy-root {
 }
 
 .window-main {
+  flex: auto;
   border-radius: 0 0 calc(var(--window-border-radius) - 1px)
     calc(var(--window-border-radius) - 1px);
   padding: var(--candy-card-padding-vertical)
@@ -311,6 +320,7 @@ nav .candy-link {
   margin: 0 auto;
   font-size: 1rem;
   padding: 1rem;
+  font-weight: 600;
 }
 
 .center {
