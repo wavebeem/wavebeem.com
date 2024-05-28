@@ -108,7 +108,7 @@ body .candy-root {
 }
 
 .window-content {
-  --color-window-border: hsl(0 0% 0% / 20%);
+  --color-window-border: hsl(0 0% 0% / 50%);
   --window-border-radius: 0.5rem;
   border-radius: var(--window-border-radius);
   background-clip: padding-box;
@@ -124,16 +124,24 @@ body .candy-root {
 }
 
 .window-nav {
-  border-radius: var(--window-border-radius) var(--window-border-radius) 0 0;
-  padding: 0.5rem;
+  border-radius: calc(var(--window-border-radius) - 1px)
+    calc(var(--window-border-radius) - 1px) 0 0;
+  padding: 0 0.5rem;
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
   border-bottom: 1px solid var(--candy-color-border3);
+  border-image: linear-gradient(
+    to right,
+    var(--candy-color-border3),
+    var(--candy-color-border2),
+    var(--candy-color-border3)
+  );
+  border-image-slice: 1 9;
 }
 
 .window-nav :any-link {
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem;
   font-weight: 800;
   font-size: 1.25rem;
 }
@@ -143,7 +151,8 @@ body .candy-root {
 }
 
 .window-main {
-  border-radius: 0 0 var(--window-border-radius) var(--window-border-radius);
+  border-radius: 0 0 calc(var(--window-border-radius) - 1px)
+    calc(var(--window-border-radius) - 1px);
   padding: var(--candy-card-padding-vertical)
     var(--candy-card-padding-horizontal);
 }
@@ -198,30 +207,34 @@ body.candy-root {
 
 header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   gap: 0.5rem;
+  text-decoration-line: none;
+  padding-inline: 1px;
 }
 
-.logo,
+.logo {
+  padding: 1rem;
+  text-decoration-line: none;
+}
+
+.logo:hover {
+  background: linear-gradient(
+    to right,
+    transparent,
+    hsl(0 0% 0% / 10%) 20% 80%,
+    transparent
+  );
+}
+
+header,
 footer {
   /* Should use text-shadow, but the underline appears below the text shadow in
   Chrome & Safari, and Safari renders a really ugly text-shadow on Ultra
   Hi-Gloss font. */
   filter: drop-shadow(0 0 2px hsl(0 0% 0% / 50%))
     drop-shadow(0 0 8px hsl(0 0% 0% / 50%));
-}
-
-:where(header, footer) :any-link:hover {
-  background: radial-gradient(
-    circle at center,
-    hsl(0 0% 0% / 30%),
-    hsl(0 0% 0% / 0%) 75%
-  );
-}
-
-header .logo {
-  padding: 1rem;
-  max-width: max-content;
 }
 
 summary {
@@ -280,7 +293,7 @@ details[open] > summary {
 }
 
 /* stylelint-disable-next-line no-duplicate-selectors */
-header .logo {
+header {
   text-align: center;
   font-family: var(--font-logo);
   color: var(--candy-color-text1);
@@ -298,6 +311,10 @@ nav .candy-link {
   margin: 0 auto;
   font-size: 1rem;
   padding: 1rem;
+}
+
+.center {
+  margin-inline: auto;
 }
 
 ::selection {
