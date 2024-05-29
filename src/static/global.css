@@ -127,35 +127,43 @@ body .candy-root {
 .window-nav {
   padding-inline: 0.5rem;
   padding-block: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
   border-bottom: 1px solid var(--candy-color-border3);
   border-image: linear-gradient(
     to right,
-    var(--candy-color-background3),
     var(--candy-color-border3),
-    var(--candy-color-background3)
+    var(--candy-color-border2),
+    var(--candy-color-border3)
   );
   border-image-slice: 1 9;
 }
 
 .window-nav :any-link {
+  outline-offset: 2px;
   text-align: center;
-  flex: 0 1 120px;
+  flex: auto;
   padding: 0.5rem 1rem;
   font-weight: 800;
   font-size: 1.25rem;
-  /* border: 1px solid var(--candy-color-border3); */
-  /* border-bottom: 0; */
   border-radius: 9999px;
   background: linear-gradient(
     to bottom,
-    var(--candy-color-background4),
-    var(--candy-color-background1)
+    var(--candy-color-background1),
+    var(--candy-color-background4)
   );
   box-shadow: inset 0 -1px 0 0 var(--candy-color-border3);
+}
+
+@media (min-width: 420px) {
+  .window-nav {
+    display: flex;
+  }
+
+  .window-nav :any-link {
+    flex: 0 1 120px;
+  }
 }
 
 .window-nav :any-link:hover {
@@ -164,13 +172,26 @@ body .candy-root {
 
 .window-nav :any-link[aria-current="page"] {
   background: linear-gradient(
-    to top,
-    var(--candy-color-accent-background1),
-    var(--candy-color-accent-background2)
+    to bottom,
+    var(--candy-color-accent-background2),
+    var(--candy-color-accent-background1)
   );
   color: var(--candy-color-accent-text1);
+  box-shadow: inset 0 -1px 0 0 var(--candy-color-accent-border1);
+
+  /* color: var(--candy-color-text1);
+  background: linear-gradient(
+    to bottom,
+    var(--candy-color-background4),
+    var(--candy-color-background1)
+  ); */
+
+  /* text-decoration-thickness: 1px;
+  text-decoration-line: underline;
+  text-decoration-style: double;
+  text-decoration-color: var(--candy-color-accent-background1); */
+
   /* border: 1px solid var(--candy-color-accent-border1); */
-  box-shadow: 0 1px 0 0 var(--candy-color-accent-border1);
   /* box-shadow: 0 1px 0 0 var(--candy-color-background1); */
   /* border-top: 4px solid var(--candy-color-accent-background1); */
 }
