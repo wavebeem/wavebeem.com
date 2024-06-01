@@ -163,7 +163,9 @@ body .candy-root {
   .window-nav {
     display: flex;
   }
+}
 
+@media (min-width: 800px) {
   .window-nav :any-link {
     flex: 0 1 120px;
     padding: 0.5rem 1rem;
