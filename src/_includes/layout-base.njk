@@ -32,12 +32,12 @@
     <link
       rel="icon"
       sizes="16x16"
-      href="/static/favicon.png?v={{ faviconVersion }}"
+      href="/static/favicon.png?v={{ contentHashes.favicon }}"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/static/photo-180.webp?v={{ photoVersion }}"
+      href="/static/photo-180.webp?v={{ contentHashes.photo }}"
     />
     <link
       rel="alternate"
@@ -48,7 +48,7 @@
     <meta
       name="og:image"
       content="https://www.wavebeem.com/static/photo-512.webp?v={{
-        photoVersion
+        contentHashes.photo
       }}"
     />
     <meta name="og:image:width" content="512" />
