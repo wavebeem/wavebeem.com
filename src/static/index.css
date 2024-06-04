@@ -45,7 +45,7 @@
   background: var(--candy-color-background2);
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
   .avatar img {
     width: 100px;
     height: auto;
