@@ -30,6 +30,7 @@ wavebeem-easter-egg {
 }
 
 wavebeem-easter-egg img {
+  touch-action: none;
   filter: rotateX(calc(1turn * var(--x)));
 }
 
