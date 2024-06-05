@@ -14,8 +14,6 @@ export class WavebeemEasterEgg extends HTMLElement {
         const h = this.clientHeight;
         const cx = 2 * (x / w) - 1;
         const cy = 2 * (y / h) - 1;
-        this.dataset.x = cx;
-        this.dataset.y = cy;
         this.style.setProperty("--x", cx);
         this.style.setProperty("--y", cy);
       },

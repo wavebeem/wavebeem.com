@@ -26,6 +26,7 @@
 wavebeem-easter-egg {
   display: block;
   position: relative;
+  touch-action: none;
 }
 
 wavebeem-easter-egg img {
