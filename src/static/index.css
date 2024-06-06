@@ -46,9 +46,18 @@
 }
 
 wavebeem-easter-egg {
+  --k: 0.05turn;
+  --transform: rotateY(calc(var(--k) * var(--x)))
+    rotateX(calc(var(--k) * var(--y)));
   display: block;
   position: relative;
   touch-action: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  wavebeem-easter-egg {
+    --k: 0turn;
+  }
 }
 
 wavebeem-easter-egg[data-state="outside"] img {
@@ -58,12 +67,11 @@ wavebeem-easter-egg[data-state="outside"] img {
 wavebeem-easter-egg[data-state="inside"] img {
   pointer-events: none;
   touch-action: none;
-  --k: 0.05turn;
-  transform: rotateY(calc(var(--k) * var(--x)))
-    rotateX(calc(var(--k) * var(--y)));
+  transform: var(--transform);
 }
 
 wavebeem-easter-egg::after {
+  transform: var(--transform);
   transition: opacity 500ms;
   pointer-events: none;
   content: "";

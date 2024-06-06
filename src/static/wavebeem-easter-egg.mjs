@@ -7,7 +7,7 @@ export class WavebeemEasterEgg extends HTMLElement {
     const { signal } = this.abortController;
     this.style.setProperty("--x", "0");
     this.style.setProperty("--y", "0");
-    this.style.setProperty("--angle", "90rad");
+    this.style.setProperty("--angle", "0.25turn");
     this.style.setProperty("--r", "0.5");
     this.addEventListener(
       "pointermove",
@@ -19,8 +19,8 @@ export class WavebeemEasterEgg extends HTMLElement {
         const y = event.offsetY;
         const w = this.clientWidth;
         const h = this.clientHeight;
-        const cx = 2 * (x / w) - 1;
-        const cy = 2 * (y / h) - 1;
+        const cx = this.#clamp(2 * (x / w) - 1, -1, 1);
+        const cy = this.#clamp(2 * (y / h) - 1, -1, 1);
         const angle = Math.atan2(cy, cx) + Math.PI / 2;
         const radius = Math.sqrt(cx ** 2 + cy ** 2);
         this.style.setProperty("--x", cx);
@@ -55,6 +55,10 @@ export class WavebeemEasterEgg extends HTMLElement {
 
   #prefersReducedMotion() {
     return matchMedia("(prefers-reduced-motion: reduce)").matches;
+  }
+
+  #clamp(x, min, max) {
+    return Math.min(max, Math.max(min, x));
   }
 }
 
