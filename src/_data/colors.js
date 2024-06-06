@@ -38,6 +38,9 @@ module.exports = {
     "color-syntax-property": oklch(53, 80, 310),
     "color-syntax-string": oklch(53, 80, 0),
     "color-syntax-punctuation": oklch(50, 0, 0),
+
+    "color-easter-egg-shadow": oklch(15, 0, 0, 40),
+    "color-easter-egg-highlight": oklch(100, 0, 0, 50),
   },
   dark: {
     "color-main-accent-background1": oklch(80, 40, 290),
@@ -60,5 +63,8 @@ module.exports = {
     "color-syntax-property": oklch(80, 40, 310),
     "color-syntax-string": oklch(80, 40, 40),
     "color-syntax-punctuation": oklch(70, 0, 0),
+
+    "color-easter-egg-shadow": oklch(15, 0, 0, 100),
+    "color-easter-egg-highlight": oklch(100, 0, 0, 30),
   },
 };

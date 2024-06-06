@@ -46,8 +46,9 @@
 }
 
 wavebeem-easter-egg {
+  --wavebeem-easter-egg--shadow-color: hsl(0 0% 0% / 50%);
   --k: 0.05turn;
-  --transform: rotateY(calc(var(--k) * var(--x)))
+  --transform: scale(1.1) rotateY(calc(var(--k) * var(--x)))
     rotateX(calc(var(--k) * var(--y)));
   display: block;
   position: relative;
@@ -61,13 +62,19 @@ wavebeem-easter-egg {
 }
 
 wavebeem-easter-egg[data-state="outside"] img {
-  transition: transform 1000ms;
+  transition-timing-function: ease;
+  transition-duration: 500ms;
+  transition-property: transform, box-shadow, outline;
 }
 
 wavebeem-easter-egg[data-state="inside"] img {
   pointer-events: none;
   touch-action: none;
   transform: var(--transform);
+  outline: 1px solid var(--color-easter-egg-highlight);
+  outline-offset: -1px;
+  box-shadow: calc(-1rem * var(--x)) calc(-1rem * var(--y))
+    calc(2rem * var(--r)) var(--color-easter-egg-shadow);
 }
 
 wavebeem-easter-egg::after {
