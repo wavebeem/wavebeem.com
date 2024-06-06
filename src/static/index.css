@@ -101,12 +101,25 @@ wavebeem-easter-egg::after {
   top: 0;
   opacity: 0;
   mix-blend-mode: hard-light;
+  --texture-size: 2rem;
   background: linear-gradient(
-      var(--angle),
-      hsl(var(--angle) 100% 90% / 70%),
-      hsl(var(--angle) 100% 90% / 20%) calc(100% * var(--r))
-    )
-    0 0 / 100% 100%;
+        var(--angle),
+        hsl(var(--angle) 100% 90% / 70%),
+        hsl(var(--angle) 100% 90% / 20%) calc(100% * var(--r))
+      )
+      0 0 / 100% 100%,
+    linear-gradient(
+        45deg,
+        hsl(0 0% 100% / 0%) 0 50%,
+        hsl(0 0% 100% / 2%) 50% 100%
+      )
+      0 0 / var(--texture-size) var(--texture-size),
+    linear-gradient(
+        -45deg,
+        hsl(0 0% 100% / 0%) 0 50%,
+        hsl(0 0% 100% / 4%) 50% 100%
+      )
+      0 0 / var(--texture-size) var(--texture-size);
   /* Subtract padding and border from the radius */
   clip-path: circle(calc(50% - (17px / 2)));
 }
