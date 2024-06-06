@@ -2,13 +2,13 @@ export class WavebeemEasterEgg extends HTMLElement {
   abortController = new AbortController();
 
   connectedCallback() {
-    this.dataset.state = "outside";
     this.abortController = new AbortController();
     const { signal } = this.abortController;
-    this.style.setProperty("--x", "0");
-    this.style.setProperty("--y", "0");
-    this.style.setProperty("--angle", "0.25turn");
-    this.style.setProperty("--r", "0.5");
+    this.dataset.state = "outside";
+    this.#css("--x", "0");
+    this.#css("--y", "0");
+    this.#css("--angle", "0.25turn");
+    this.#css("--r", "0.5");
     this.addEventListener(
       "pointermove",
       (event) => {
@@ -19,14 +19,14 @@ export class WavebeemEasterEgg extends HTMLElement {
         const y = event.offsetY;
         const w = this.clientWidth;
         const h = this.clientHeight;
-        const cx = this.#clamp(2 * (x / w) - 1, -1, 1);
-        const cy = this.#clamp(2 * (y / h) - 1, -1, 1);
+        const cx = this.#clamp(2 * (x / w) - 1);
+        const cy = this.#clamp(2 * (y / h) - 1);
         const angle = Math.atan2(cy, cx) + Math.PI / 2;
         const radius = Math.sqrt(cx ** 2 + cy ** 2);
-        this.style.setProperty("--x", cx);
-        this.style.setProperty("--y", cy);
-        this.style.setProperty("--angle", `${angle}rad`);
-        this.style.setProperty("--r", String(radius));
+        this.#css("--x", cx);
+        this.#css("--y", cy);
+        this.#css("--angle", `${angle}rad`);
+        this.#css("--r", radius);
       },
       {
         signal: this.abortController.signal,
@@ -57,8 +57,12 @@ export class WavebeemEasterEgg extends HTMLElement {
     return matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
 
-  #clamp(x, min, max) {
-    return Math.min(max, Math.max(min, x));
+  #clamp(x) {
+    return Math.min(1, Math.max(-1, x));
+  }
+
+  #css(key, value) {
+    this.style.setProperty(key, value);
   }
 }
 
