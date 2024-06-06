@@ -24,6 +24,7 @@
 }
 
 .avatar {
+  --avatar-size: 120px;
   --radius: 9999px;
   --padding: 0.5rem;
   padding: var(--padding);
@@ -40,9 +41,16 @@
     var(--candy-color-background1);
 }
 
+wavebeem-easter-egg.avatar[data-state="inside"] {
+  background: transparent;
+  border-color: transparent;
+}
+
 .avatar img {
   border-radius: calc(var(--radius) - var(--padding));
   background: var(--candy-color-background2);
+  width: var(--avatar-size);
+  height: var(--avatar-size);
 }
 
 wavebeem-easter-egg {
@@ -73,8 +81,12 @@ wavebeem-easter-egg[data-state="inside"] img {
   transform: var(--transform);
   outline: 1px solid var(--color-easter-egg-highlight);
   outline-offset: -1px;
-  box-shadow: calc(-1rem * var(--x)) calc(-1rem * var(--y))
-    calc(2rem * var(--r)) var(--color-easter-egg-shadow);
+  --k1: calc(-1 / 32);
+  --k2: calc(1 / 16);
+  box-shadow: calc(var(--k1) * var(--avatar-size) * var(--x))
+    calc(var(--k1) * var(--avatar-size) * var(--y))
+    calc(var(--k2) * var(--avatar-size) * var(--r))
+    var(--color-easter-egg-shadow);
 }
 
 wavebeem-easter-egg::after {
@@ -95,11 +107,8 @@ wavebeem-easter-egg::after {
       hsl(var(--angle) 100% 90% / 20%) calc(100% * var(--r))
     )
     0 0 / 100% 100%;
-  mask-image: radial-gradient(
-    circle at center,
-    black 0 calc(65% - 2px),
-    transparent 65%
-  );
+  /* Subtract padding and border from the radius */
+  clip-path: circle(calc(50% - (17px / 2)));
 }
 
 wavebeem-easter-egg[data-state="inside"]::after {
@@ -107,15 +116,13 @@ wavebeem-easter-egg[data-state="inside"]::after {
 }
 
 @media (max-width: 420px) {
-  .avatar img {
-    width: 100px;
-    height: auto;
+  .avatar {
+    --avatar-size: 100px;
   }
 }
 
 @media (min-width: 800px) {
-  .avatar img {
-    width: 160px;
-    height: auto;
+  .avatar {
+    --avatar-size: 180px;
   }
 }
