@@ -89,7 +89,9 @@ wavebeem-easter-egg[data-state="inside"] img {
     var(--color-easter-egg-shadow);
 }
 
+wavebeem-easter-egg::before,
 wavebeem-easter-egg::after {
+  z-index: 10;
   transform: var(--transform);
   transition: opacity 500ms;
   pointer-events: none;
@@ -100,30 +102,41 @@ wavebeem-easter-egg::after {
   left: 0;
   top: 0;
   opacity: 0;
-  mix-blend-mode: hard-light;
-  --texture-size: 2rem;
-  background: linear-gradient(
-        var(--angle),
-        hsl(var(--angle) 100% 90% / 70%),
-        hsl(var(--angle) 100% 90% / 20%) calc(100% * var(--r))
-      )
-      0 0 / 100% 100%,
-    linear-gradient(
-        45deg,
-        hsl(0 0% 100% / 0%) 0 50%,
-        hsl(0 0% 100% / 2%) 50% 100%
-      )
-      0 0 / var(--texture-size) var(--texture-size),
-    linear-gradient(
-        -45deg,
-        hsl(0 0% 100% / 0%) 0 50%,
-        hsl(0 0% 100% / 4%) 50% 100%
-      )
-      0 0 / var(--texture-size) var(--texture-size);
   /* Subtract padding and border from the radius */
   clip-path: circle(calc(50% - (17px / 2)));
 }
 
+wavebeem-easter-egg::before {
+  mix-blend-mode: soft-light;
+
+  /* https://css-pattern.com/wave-circles/ */
+  --s: 30px; /* control the size*/
+  --c1: #bbb;
+  --c2: #aaa;
+
+  --_g: var(--s) var(--s)
+    radial-gradient(var(--c1) 17%, var(--c2) 18% 35%, #0000 36.5%);
+
+  background: calc(var(--s) / -4) calc(var(--s) / -4) / var(--_g),
+    calc(var(--s) / 4) calc(var(--s) / 4) / var(--_g),
+    radial-gradient(var(--c2) 34%, var(--c1) 36% 68%, #0000 70%) 0 0 /
+      calc(var(--s) / 2) calc(var(--s) / 2),
+    repeating-linear-gradient(45deg, var(--c1) -12.5% 12.5%, var(--c2) 0 37.5%)
+      0 0 / var(--s) var(--s);
+}
+
+wavebeem-easter-egg::after {
+  mix-blend-mode: hard-light;
+
+  background: linear-gradient(
+      var(--angle),
+      hsl(var(--angle) 100% 80% / 70%),
+      hsl(var(--angle) 100% 80% / 10%) calc(100% * var(--r))
+    )
+    0 0 / 100% 100%;
+}
+
+wavebeem-easter-egg[data-state="inside"]::before,
 wavebeem-easter-egg[data-state="inside"]::after {
   opacity: 1;
 }
