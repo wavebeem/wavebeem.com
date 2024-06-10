@@ -109,7 +109,7 @@ body .candy-root {
 
 .window-content {
   --color-window-border: hsl(0 0% 0% / 50%);
-  --window-inner-radius: 0.5rem;
+  --window-inner-radius: 1rem;
   border-radius: var(--window-inner-radius);
   background-clip: padding-box;
   border: 1px solid var(--color-window-border);
@@ -129,11 +129,10 @@ body .candy-root {
 .window-nav {
   border-radius: calc(var(--window-inner-radius) - 1px)
     calc(var(--window-inner-radius) - 1px) 0 0;
-  padding-inline: 0.5rem;
-  padding-block: 0.5rem;
+  padding: 1rem;
+  gap: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.5rem;
   border-bottom: 1px solid var(--candy-color-border3);
   border-image: linear-gradient(
     to right,
