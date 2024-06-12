@@ -111,12 +111,17 @@ wavebeem-easter-egg::before {
 
   /* https://css-pattern.com/wave-circles/ */
   --s: 30px; /* control the size*/
-  --c1: #bbb;
-  --c2: #aaa;
+  --c1: hsl(0 0% 80%);
+  --c2: hsl(0 0% 50%);
 
   --_g: var(--s) var(--s)
     radial-gradient(var(--c1) 17%, var(--c2) 18% 35%, #0000 36.5%);
 
+  mask-image: linear-gradient(
+    var(--angle),
+    hsl(0 0% 0% / 100%),
+    hsl(0 0% 0% / 0%) calc(100% * var(--r))
+  );
   background: calc(var(--s) / -4) calc(var(--s) / -4) / var(--_g),
     calc(var(--s) / 4) calc(var(--s) / 4) / var(--_g),
     radial-gradient(var(--c2) 34%, var(--c1) 36% 68%, #0000 70%) 0 0 /
@@ -127,7 +132,6 @@ wavebeem-easter-egg::before {
 
 wavebeem-easter-egg::after {
   mix-blend-mode: hard-light;
-
   background: linear-gradient(
       var(--angle),
       hsl(var(--angle) 100% 80% / 70%),
