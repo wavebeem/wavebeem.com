@@ -55,8 +55,10 @@ wavebeem-easter-egg.avatar[data-state="inside"] {
 
 wavebeem-easter-egg {
   --wavebeem-easter-egg--shadow-color: hsl(0 0% 0% / 50%);
+  --t: 2px;
   --k: 0.05turn;
-  --transform: scale(1.1) rotateY(calc(var(--k) * var(--x)))
+  --transform: translate(calc(var(--t) * var(--x)), calc(var(--t) * var(--y)))
+    scale(1.1) rotateY(calc(var(--k) * var(--x)))
     rotateX(calc(var(--k) * var(--y)));
   display: block;
   position: relative;
@@ -81,8 +83,8 @@ wavebeem-easter-egg[data-state="inside"] img {
   transform: var(--transform);
   outline: 1px solid var(--color-easter-egg-highlight);
   outline-offset: -1px;
-  --k1: calc(-1 / 16);
-  --k2: calc(1 / 32);
+  --k1: calc(-1 / 32);
+  --k2: calc(1 / 16);
   box-shadow: calc(var(--k1) * var(--avatar-size) * var(--x))
     calc(var(--k1) * var(--avatar-size) * var(--y))
     calc(var(--k2) * var(--avatar-size) * var(--r))
