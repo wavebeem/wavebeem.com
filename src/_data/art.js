@@ -21,7 +21,7 @@ async function getArt() {
 
 async function readInfo(filename) {
   const url = `/static/img/art/${filename}`;
-  const cleanName = path.basename(filename).replace(/\.(png|gif)$/, "");
+  const cleanName = path.basename(filename).replace(/\.(png|gif|webp)$/, "");
   let [, date, name] = cleanName.match(/^(\d{4}-\d{2}-\d{2})-(.*)$/);
   name = name.replace(/-/g, " ");
   const file = path.join(root, filename);
