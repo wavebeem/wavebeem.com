@@ -62,9 +62,9 @@ b {
 body.candy-root,
 :root.candy-root {
   --candy-color-accent-background1: var(--color-root-fg);
-  --candy-color-accent-background2: var(--color-root-fg);
+  --candy-color-accent-background2: var(--color-root-fg2);
   --candy-color-accent-border1: var(--color-root-bg1);
-  --candy-color-accent-text1: var(--color-root-bg1);
+  --candy-color-accent-text1: var(--color-root-text);
   --candy-color-background1: var(--color-root-bg3);
   --candy-color-background2: var(--color-root-bg1);
   --candy-color-background3: var(--color-root-bg2);
@@ -141,7 +141,7 @@ body .candy-root {
   flex: auto;
   padding: 0.25rem 0.5rem;
   font-weight: 800;
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   background-image: linear-gradient(
     to bottom,
     var(--candy-color-background1),
@@ -175,8 +175,8 @@ body .candy-root {
 .window-nav :any-link[aria-current="page"] {
   background-image: linear-gradient(
     to bottom,
-    var(--candy-color-accent-background2),
-    var(--candy-color-accent-background1)
+    var(--candy-color-accent-background1),
+    var(--candy-color-accent-background2)
   );
   color: var(--candy-color-accent-text1);
   border: 1px solid hsl(0 0% 0% / 50%);

@@ -13,10 +13,12 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 module.exports = {
   light: {
     "color-root-fg": oklch(100, 0, 0),
+    "color-root-fg2": oklch(93, 0, 0),
     "color-root-bg1": oklch(44, 30, 160),
     "color-root-bg2": oklch(40, 30, 160),
     "color-root-bg2x": oklch(74, 30, 160, 20),
     "color-root-bg3": oklch(36, 30, 160),
+    "color-root-text": oklch(0, 0, 0),
 
     "color-main-accent-background1": oklch(54, 50, 290),
     "color-main-accent-background2": oklch(48, 50, 290),
