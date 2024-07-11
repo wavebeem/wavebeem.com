@@ -89,10 +89,10 @@
     </header>
     <div class="window-content">
       <nav class="window-nav screen-only">
-        {% navLink "/" %}Home{% endnavLink %}
-        {% navLink "/blog/" %}Blog{% endnavLink %}
-        {% navLink "/art/" %}Art{% endnavLink %}
-        {% navLink "/resume/" %}Resume{% endnavLink %}
+        <a class="candy-link" href="/">Home</a>
+        <a class="candy-link" href="/blog/">Blog</a>
+        <a class="candy-link" href="/art/">Art</a>
+        <a class="candy-link" href="/resume/">Resume</a>
       </nav>
       <main class="candy-root window-main candy-texture-paper">
         {{ content | safe }}

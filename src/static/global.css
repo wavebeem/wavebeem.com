@@ -121,40 +121,34 @@ body .candy-root {
 }
 
 .window-nav {
-  padding-bottom: 1rem;
-  padding-top: 0.5rem;
-  gap: 1rem;
+  margin-bottom: 1rem;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border-image: linear-gradient(
-    to right,
-    var(--candy-color-border3),
-    var(--candy-color-border2),
-    var(--candy-color-border3)
-  );
-  border-image-slice: 1 9;
-}
-
-.window-nav :any-link {
-  outline-offset: 2px;
-  text-align: center;
-  flex: auto;
-  padding: 0.25rem 0.5rem;
-  font-weight: 800;
-  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+  gap: 1rem;
   background-image: linear-gradient(
     to bottom,
     var(--candy-color-background1),
     var(--candy-color-background4)
   );
-  background-clip: padding-box;
-  border: 1px solid hsl(0 0% 100% / 20%);
-  box-shadow: inset 0 0 0 1px hsl(0 0% 0% / 10%),
-    inset 0 0 4px hsl(0 0% 0% / 30%);
+  background-origin: border-box;
+  border: 1px solid hsl(0 0% 0% / 30%);
+  box-shadow: 0 0 0 1px hsl(0 0% 100% / 20%), inset 0 0 4px hsl(0 0% 0% / 30%);
+  text-shadow: 0 0 2px hsl(0 0% 0% / 50%), 0 0 8px hsl(0 0% 0% / 50%);
+  border-radius: 0.5rem;
+}
+
+.window-nav :any-link {
+  text-align: center;
+  flex: auto;
+  padding: 0.5rem 0;
+  font-weight: 800;
+  border-radius: 0.5rem;
+  background-image: none;
+  background-origin: border-box;
   text-shadow: 0 0 2px hsl(0 0% 0% / 50%), 0 0 8px hsl(0 0% 0% / 50%);
 }
 
-@media (min-width: 420px) {
+@media (min-width: 120px) {
   .window-nav {
     display: flex;
   }
@@ -162,26 +156,20 @@ body .candy-root {
 
 @media (min-width: 800px) {
   .window-nav :any-link {
-    flex: 0 1 120px;
-    padding: 0.5rem 1rem;
+    flex: 0 0 auto;
+    padding: 0.5rem 0.5rem;
     font-size: 1.25rem;
   }
 }
 
 .window-nav :any-link:hover {
   text-decoration-line: underline;
-}
-
-.window-nav :any-link[aria-current="page"] {
   background-image: linear-gradient(
-    to bottom,
-    var(--candy-color-accent-background1),
-    var(--candy-color-accent-background2)
+    to right,
+    transparent,
+    hsl(0 0% 0% / 20%),
+    transparent
   );
-  color: var(--candy-color-accent-text1);
-  border: 1px solid hsl(0 0% 0% / 50%);
-  box-shadow: 0 0 0 1px hsl(0 0% 100% / 20%);
-  text-shadow: initial;
 }
 
 .window-main {
@@ -260,6 +248,15 @@ header {
   padding-left: 0;
   border-radius: 0;
   text-decoration-line: none;
+}
+
+.logo:hover {
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    hsl(0 0% 0% / 20%),
+    transparent
+  );
 }
 
 header,

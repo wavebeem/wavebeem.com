@@ -27,21 +27,11 @@ module.exports = function (config) {
     return dateformat(value, format, isUTC);
   });
   config.addFilter("formatTitle", function (value) {
-    if (!value) {
-      return "wavebeem";
-    }
-    return `${value} | wavebeem`;
+    const base = "wavebeem";
+    return [value, base].filter((x) => x).join(" | ");
   });
   config.addFilter("inspect", function (value) {
     return util.inspect(value, {});
-  });
-  config.addPairedShortcode("navLink", function (content, url) {
-    let s = `<a class="candy-link" href="${url}"`;
-    if (url === this.page.url) {
-      s += ` aria-current="page"`;
-    }
-    s += `>${content}</a>`;
-    return s;
   });
   config.addFilter("objectKeys", function (object) {
     return Object.keys(object);
