@@ -122,9 +122,10 @@ body .candy-root {
 
 .window-nav {
   margin-bottom: 1rem;
-  display: grid;
-  padding: 0 0.5rem;
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 calc(0.5 * var(--main-padding-x));
   background-image: linear-gradient(
     to bottom,
     var(--candy-color-background1),
@@ -140,7 +141,8 @@ body .candy-root {
 .window-nav :any-link {
   text-align: center;
   flex: auto;
-  padding: 0.5rem 0;
+  flex: 0 0 auto;
+  padding: 0.5rem calc(0.5 * var(--main-padding-x));
   font-weight: 800;
   border-radius: 0.5rem;
   background-image: none;
@@ -148,16 +150,16 @@ body .candy-root {
   text-shadow: 0 0 2px hsl(0 0% 0% / 50%), 0 0 8px hsl(0 0% 0% / 50%);
 }
 
-@media (min-width: 120px) {
+@media (min-width: 420px) {
   .window-nav {
     display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
   }
 }
 
 @media (min-width: 800px) {
   .window-nav :any-link {
-    flex: 0 0 auto;
-    padding: 0.5rem 0.5rem;
     font-size: 1.25rem;
   }
 }
@@ -196,6 +198,8 @@ body.candy-root {
    */
   --body-padding-y: 0;
   --body-padding-x: 0.5rem;
+  --main-padding-x: 1rem;
+  --main-padding-y: 1rem;
   font-size: 1.25rem;
   font-family: var(--font-body);
   line-height: 1.5;
@@ -280,8 +284,6 @@ summary {
 
 /* stylelint-disable-next-line no-duplicate-selectors */
 .window-main {
-  --main-padding-x: 1rem;
-  --main-padding-y: 1rem;
   padding: var(--main-padding-y) var(--main-padding-x);
 }
 
@@ -352,6 +354,7 @@ nav .candy-link {
 ::selection {
   background: var(--candy-color-accent-background1);
   color: var(--candy-color-accent-text1);
+  text-shadow: none;
 }
 
 p {
@@ -450,14 +453,11 @@ main :any-link:hover {
 
   body.candy-root {
     --body-padding-x: 1rem;
+    --main-padding-x: 2rem;
+    --main-padding-y: 2rem;
     box-shadow: inset 1px 0 0 0 hsl(0 0% 100% / 20%),
       inset -1px 0 0 0 hsl(0 0% 100% / 20%), 0 0 0 1px hsl(0 0% 0% / 20%),
       0 0 16px hsl(0 0% 0% / 30%);
-  }
-
-  .window-main {
-    --main-padding-x: 1rem;
-    --main-padding-y: 1rem;
   }
 
   .grid-2 {
