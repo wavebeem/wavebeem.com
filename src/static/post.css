@@ -51,9 +51,9 @@ figure figcaption {
 .candy-prose pre {
   --color-text: var(--candy-color-text1);
   --color-border1: var(--candy-color-border3);
-  --color-border2: var(--candy-color-background1);
+  --color-border2: var(--candy-color-background2);
   --color-background1: var(--candy-color-background2);
-  --color-background2: var(--candy-color-background1);
+  --color-background2: var(--candy-color-background2);
 
   margin: 1rem calc(-1 * var(--main-padding-x));
   padding: 1rem 2rem;
@@ -68,11 +68,6 @@ figure figcaption {
   );
   border-image-slice: 1 9;
   background-color: var(--color-background2);
-  background-image: linear-gradient(
-    to right,
-    var(--color-background1),
-    var(--color-background2)
-  );
   color: var(--color-text);
 }
 

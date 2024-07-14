@@ -124,13 +124,10 @@ body .candy-root {
   margin-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 1rem;
   padding: 0 calc(0.5 * var(--main-padding-x));
-  background-image: linear-gradient(
-    to bottom,
-    var(--candy-color-background1),
-    var(--candy-color-background4)
-  );
+  background-color: var(--candy-color-background3);
   background-origin: border-box;
   border: 1px solid hsl(0 0% 0% / 30%);
   box-shadow: 0 0 0 1px hsl(0 0% 100% / 20%), inset 0 0 4px hsl(0 0% 0% / 30%);
@@ -153,8 +150,6 @@ body .candy-root {
 @media (min-width: 420px) {
   .window-nav {
     display: flex;
-    justify-content: flex-start;
-    gap: 1rem;
   }
 }
 
@@ -223,17 +218,12 @@ body.candy-root {
   border-radius: 1rem;
   background: linear-gradient(
         to right,
-        transparent,
+        var(--candy-color-background2),
         var(--candy-color-border3),
-        transparent
+        var(--candy-color-background2)
       )
       0 0 / 100% 1px repeat-x,
-    linear-gradient(
-        to bottom,
-        var(--candy-color-background2),
-        var(--candy-color-background1)
-      )
-      0 0 / 100% 100% var(--candy-color-background2);
+    var(--candy-color-background2);
 }
 
 header {
