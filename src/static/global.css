@@ -195,7 +195,7 @@ body.candy-root {
   --body-padding-x: 0.5rem;
   --main-padding-x: 1rem;
   --main-padding-y: 1rem;
-  --window-border-radius: 2em;
+  --window-border-radius: 0.5rem;
   font-size: 1.25rem;
   font-family: var(--font-body);
   line-height: 1.5;
