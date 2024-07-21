@@ -55,6 +55,7 @@ figure figcaption {
   border: 0;
   background-color: var(--sage-color-background1);
   color: var(--sage-color-text1);
+  overflow-x: auto;
 }
 
 .token.comment,

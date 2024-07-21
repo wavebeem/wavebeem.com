@@ -168,16 +168,17 @@ code.sage-bright,
 }
 
 .window-nav {
+  margin-inline: -1rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  gap: 1rem;
+  gap: 0;
   border-radius: var(--window-border-radius);
 }
 
 .window-nav :any-link {
-  padding: 1rem 0;
+  padding: 1rem;
   font-weight: 800;
   border-radius: 0.5rem;
 }
@@ -231,7 +232,7 @@ body {
 
 .content-column {
   padding: var(--body-padding-y) var(--body-padding-x);
-  max-width: 1024px;
+  max-width: 800px;
   width: 100%;
   margin-inline: auto;
 }
@@ -247,12 +248,20 @@ body {
 header .content-column {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding-block: 1rem;
+  gap: 0;
+  padding-block: 0;
   text-decoration-line: none;
 }
 
+header .content-column :any-link {
+  padding-block: 1rem;
+}
+
 .logo {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1;
+
   font-family: var(--font-logo);
   /* padding: 1rem var(--body-padding-x); */
   /* Prevent Safari from making this even bolder lol */
@@ -309,18 +318,14 @@ details[open] > summary {
 }
 
 header {
-  text-align: center;
   color: var(--sage-color-text1);
   text-decoration-line: none;
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  line-height: 1;
+  padding-block: 1rem;
 }
 
 main {
-  border: 4px solid var(--sage-color-border3);
-  border-left-width: 0;
-  border-right-width: 0;
+  border-top: 2px solid var(--sage-color-background2);
+  border-bottom: 2px solid var(--sage-color-border3);
 }
 
 nav .sage-link {
