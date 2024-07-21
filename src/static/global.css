@@ -59,35 +59,32 @@ b {
   font-weight: 600;
 }
 
+:root {
+  background: repeating-conic-gradient(
+    var(--color-root-bg1) 0% 25%,
+    var(--color-root-bg2) 0% 50%
+  );
+  --check-size: 64px;
+  background-position: 0 0, var(--check-size) var(--check-size);
+  background-size: calc(2 * var(--check-size)) calc(2 * var(--check-size));
+  background-color: var(--color-root-bg2);
+  scrollbar-color: var(--candy-color-accent-text1) var(--color-root-bg2);
+}
+
 body.candy-root,
 :root.candy-root {
-  --candy-color-accent-background1: var(--color-root-fg);
-  --candy-color-accent-background2: var(--color-root-fg2);
-  --candy-color-accent-border1: var(--color-root-bg1);
-  --candy-color-accent-text1: var(--color-root-text);
-  --candy-color-background1: var(--color-root-bg3);
-  --candy-color-background2: var(--color-root-bg1);
-  --candy-color-background3: var(--color-root-bg2);
-  --candy-color-background4: var(--color-root-bg1);
-  --candy-color-border1: var(--color-root-bg1);
-  --candy-color-border2: var(--color-root-bg1);
-  --candy-color-border3: var(--color-root-bg1);
-  --candy-color-shadow1: var(--color-root-bg1);
-  --candy-color-text1: var(--color-root-fg);
-  --candy-color-text2: var(--color-root-fg);
-
-  scrollbar-color: var(--candy-color-text2) var(--candy-color-background2);
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
 .candy-root {
   --candy-button-radius: 9999px;
-  --candy-texture-striped-size: 64px;
+  /* --candy-texture-striped-size: 64px; */
+  --candy-texture-striped-size: 3px;
   --candy-link-underline: 1.5px;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-body .candy-root {
+.candy-root {
   --candy-color-accent-background1: var(--color-main-accent-background1);
   --candy-color-accent-background2: var(--color-main-accent-background2);
   --candy-color-accent-border1: var(--color-main-accent-border1);
@@ -121,17 +118,19 @@ body .candy-root {
 }
 
 .window-nav {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-items: center;
   gap: 1rem;
   padding: 0 calc(0.5 * var(--main-padding-x));
-  background-color: var(--candy-color-background3);
+  /* background-color: var(--candy-color-background3);
   background-origin: border-box;
   border: 1px solid hsl(0 0% 0% / 30%);
-  box-shadow: 0 0 0 1px hsl(0 0% 100% / 20%), inset 0 0 4px hsl(0 0% 0% / 30%);
-  text-shadow: 0 0 2px hsl(0 0% 0% / 50%), 0 0 8px hsl(0 0% 0% / 50%);
+  box-shadow: 0 0 0 1px hsl(0 0% 100% / 20%), inset 0 0 4px hsl(0 0% 0% / 30%); */
+  text-shadow: 0 0 2px var(--candy-color-background1),
+    0 0 8px var(--candy-color-background1);
   border-radius: var(--window-border-radius);
 }
 
@@ -139,12 +138,13 @@ body .candy-root {
   text-align: center;
   flex: auto;
   flex: 0 0 auto;
-  padding: 0.5rem calc(0.5 * var(--main-padding-x));
+  padding: 1rem calc(0.5 * var(--main-padding-x));
   font-weight: 800;
   border-radius: 0.5rem;
   background-image: none;
   background-origin: border-box;
-  text-shadow: 0 0 2px hsl(0 0% 0% / 50%), 0 0 8px hsl(0 0% 0% / 50%);
+  text-shadow: 0 0 2px var(--candy-color-background1),
+    0 0 8px var(--candy-color-background1);
 }
 
 @media (min-width: 420px) {
@@ -164,16 +164,22 @@ body .candy-root {
   background-image: linear-gradient(
     to right,
     transparent,
-    hsl(0 0% 0% / 20%),
+    var(--candy-color-background1),
     transparent
   );
 }
 
 .window-main {
-  border-radius: var(--window-border-radius);
-  background-clip: padding-box;
-  border: 1px solid var(--color-window-border);
-  box-shadow: 0 0 0 1px hsl(0 0% 100% / 20%);
+  border: 1px solid var(--candy-color-border3);
+  border-image: linear-gradient(
+    to right,
+    var(--candy-color-border3),
+    var(--candy-color-border2),
+    var(--candy-color-border3)
+  );
+  border-image-slice: 1 9;
+  border-left: 0;
+  border-right: 0;
   scrollbar-color: var(--candy-color-text2) var(--candy-color-background2);
   flex: auto;
   padding: var(--candy-card-padding-vertical)
@@ -192,10 +198,10 @@ body.candy-root {
    * slightly comfier to read site (since this is a blog, after all)
    */
   --body-padding-y: 0;
-  --body-padding-x: 0.5rem;
+  --body-padding-x: 0;
   --main-padding-x: 1rem;
   --main-padding-y: 1rem;
-  --window-border-radius: 0.5rem;
+  --window-border-radius: 0;
   font-size: 1.25rem;
   font-family: var(--font-body);
   line-height: 1.5;
@@ -207,7 +213,7 @@ body.candy-root {
   max-width: 1024px;
   width: 100%;
   gap: 0;
-  background: var(--color-root-bg2x);
+  /* background: var(--color-root-bg2x); */
 }
 
 .sage-well {
@@ -229,18 +235,18 @@ body.candy-root {
 header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 0.5rem;
   text-decoration-line: none;
-  padding-inline: 1px;
+  /* padding-inline: 1px; */
 }
 
 .logo {
+  font-family: var(--font-logo);
+  padding: 1rem var(--main-padding-x);
   /* Prevent Safari from making this even bolder lol */
   font-synthesis: none;
   font-weight: initial;
-  padding: 1rem;
-  padding-left: 0;
   border-radius: 0;
   text-decoration-line: none;
 }
@@ -254,13 +260,13 @@ header {
   );
 }
 
-header,
+.logo,
 footer {
   /* Should use text-shadow, but the underline appears below the text shadow in
   Chrome & Safari, and Safari renders a really ugly text-shadow on Ultra
   Hi-Gloss font. */
-  filter: drop-shadow(0 0 2px hsl(0 0% 0% / 50%))
-    drop-shadow(0 0 8px hsl(0 0% 0% / 50%));
+  /* filter: drop-shadow(0 0 2px var(--candy-color-background1))
+    drop-shadow(0 0 8px var(--candy-color-background1)); */
 }
 
 summary {
@@ -319,7 +325,6 @@ details[open] > summary {
 /* stylelint-disable-next-line no-duplicate-selectors */
 header {
   text-align: center;
-  font-family: var(--font-logo);
   color: var(--candy-color-text1);
   text-decoration-line: none;
   font-size: 1.5rem;
@@ -332,7 +337,7 @@ nav .candy-link {
 }
 
 .footer {
-  margin: 0 auto;
+  text-align: center;
   font-size: 1rem;
   padding: 1rem;
   font-weight: 600;
@@ -443,12 +448,14 @@ main :any-link:hover {
   }
 
   body.candy-root {
-    --body-padding-x: 1rem;
+    --body-padding-x: 0;
     --main-padding-x: 2rem;
     --main-padding-y: 2rem;
-    box-shadow: inset 1px 0 0 0 hsl(0 0% 100% / 20%),
-      inset -1px 0 0 0 hsl(0 0% 100% / 20%), 0 0 0 1px hsl(0 0% 0% / 20%),
-      0 0 16px hsl(0 0% 0% / 30%);
+    border: 1px solid hsl(0 0% 0% / 50%);
+    border-top: 0;
+    border-bottom: 0;
+    box-shadow: 0 0 16px hsl(0 0% 0% / 30%);
+    background-clip: padding-box;
   }
 
   .grid-2 {

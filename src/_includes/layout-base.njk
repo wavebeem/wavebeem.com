@@ -82,23 +82,23 @@
     />
   </head>
   <body class="candy-root">
-    <header class="screen-only">
+    <header class="screen-only candy-texture-striped">
       <a href="/" class="logo candy-link"
         >wavebeem<span aria-hidden="true">&nbsp;*-</span>
       </a>
-    </header>
-    <div class="window-content">
       <nav class="window-nav screen-only">
         <a class="candy-link" href="/">Home</a>
         <a class="candy-link" href="/blog/">Blog</a>
         <a class="candy-link" href="/art/">Art</a>
         <a class="candy-link" href="/resume/">Resume</a>
       </nav>
+    </header>
+    <div class="window-content">
       <main class="candy-root window-main candy-texture-paper">
         {{ content | safe }}
       </main>
     </div>
-    <footer class="footer screen-only">
+    <footer class="footer screen-only candy-texture-striped">
       &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
         class="candy-bright"
         >wavebeem</i
