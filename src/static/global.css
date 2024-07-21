@@ -33,7 +33,7 @@
     "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
   overflow-y: scroll;
   color-scheme: light dark;
-  scrollbar-color: var(--sage-color-text2) var(--sage-color-background4);
+  scrollbar-color: var(--sage-color-text2) var(--sage-color-background2);
 }
 
 h1 {
@@ -41,19 +41,19 @@ h1 {
 }
 
 h2 {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 h3 {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 :not(:where(h1, h2, h3)) > a {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 b {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .sage-root {
@@ -125,20 +125,20 @@ code.sage-bright,
 .sage-button {
   font: inherit;
   font-weight: 600;
-  border: 2px solid;
+  border: 2px solid transparent;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
-  background: var(--sage-color-background4);
-  color: var(--sage-color-accent-background1);
+  background: var(--sage-color-text1);
+  color: var(--sage-color-background1);
 }
 
 .sage-button:hover {
-  background: var(--sage-color-background3);
+  background: var(--sage-color-text2);
 }
 
 .sage-button:focus-visible {
-  outline: 3px solid;
-  outline-offset: -1px;
+  outline: 2px solid var(--sage-color-accent-background1);
+  outline-offset: 2px;
 }
 
 .sage-texture-striped {
@@ -154,21 +154,8 @@ code.sage-bright,
     var(--sage-color-background3);
 }
 
-.window-content {
-  --color-window-border: hsl(0 0% 0% / 50%);
-  flex: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-@media (prefers-color-scheme: dark) {
-  .window-content {
-    --color-window-border: hsl(0 0% 0%);
-  }
-}
-
 .window-nav {
-  margin-inline: -1rem;
+  margin-inline: ;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -217,7 +204,7 @@ body {
    * value; but this way most things get bumped up a little bigger, for a
    * slightly comfier to read site (since this is a blog, after all)
    */
-  --body-padding-y: 1rem;
+  --body-padding-y: 2rem;
   --body-padding-x: 1rem;
   --window-border-radius: 0;
   font-size: 1.25rem;
@@ -232,7 +219,7 @@ body {
 
 .content-column {
   padding: var(--body-padding-y) var(--body-padding-x);
-  max-width: 800px;
+  max-width: 1024px;
   width: 100%;
   margin-inline: auto;
 }
@@ -249,21 +236,18 @@ header .content-column {
   display: flex;
   flex-direction: column;
   gap: 0;
-  padding-block: 0;
+  padding: 0 calc(0.5 * var(--body-padding-x));
   text-decoration-line: none;
 }
 
 header .content-column :any-link {
-  padding-block: 1rem;
+  padding: 1rem calc(0.5 * var(--body-padding-x));
 }
 
 .logo {
   font-size: 1.5rem;
   letter-spacing: 1px;
-  line-height: 1;
-
   font-family: var(--font-logo);
-  /* padding: 1rem var(--body-padding-x); */
   /* Prevent Safari from making this even bolder lol */
   font-synthesis: none;
   font-weight: initial;
@@ -324,8 +308,11 @@ header {
 }
 
 main {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
   border-top: 2px solid var(--sage-color-background2);
-  border-bottom: 2px solid var(--sage-color-border3);
+  border-bottom: 2px solid var(--sage-color-background2);
 }
 
 nav .sage-link {
@@ -335,8 +322,10 @@ nav .sage-link {
 .footer {
   text-align: center;
   font-size: 1rem;
-  font-weight: 600;
-  text-shadow: 0 0 4px var(--sage-color-background1);
+  font-weight: 800;
+  text-shadow: 0 0 4px var(--sage-color-background1),
+    0 0 8px var(--sage-color-background1),
+    0 0 16px var(--sage-color-background1);
 }
 
 .center {

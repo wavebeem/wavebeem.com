@@ -29,6 +29,7 @@
   display: flex;
   float: right;
   margin: 1rem;
+  margin-top: 0;
 }
 
 wavebeem-easter-egg.avatar[data-state="inside"] {

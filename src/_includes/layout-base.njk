@@ -80,12 +80,7 @@
     <header class="screen-only sage-root theme-header">
       <div class="content-column">
         <div class="flex">
-          <a href="/" class="logo sage-link"
-            >wavebeem
-          </a>
-          <span aria-hidden="true" class="font-ultra-hi-gloss">
-            *-
-          </span>
+          <a href="/" class="logo sage-link">wavebeem </a>
         </div>
         <nav class="window-nav screen-only">
           <a class="sage-link" href="/">Home</a>
@@ -95,11 +90,9 @@
         </nav>
       </div>
     </header>
-    <div class="window-content">
-      <main>
-        <div class="content-column">{{ content | safe }}</div>
-      </main>
-    </div>
+    <main>
+      <div class="content-column">{{ content | safe }}</div>
+    </main>
     <footer class="footer screen-only sage-texture-striped">
       <div class="content-column">
         &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
