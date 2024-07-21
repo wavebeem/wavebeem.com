@@ -5,7 +5,7 @@ css:
   - "art"
 ---
 
-<h1 class="candy-bright">Art</h1>
+<h1 class="sage-bright">Art</h1>
 
 {{ content | safe }}
 
@@ -21,7 +21,7 @@ css:
       loading="lazy"
     />
     <figcaption>
-      <a class="candy-link" href="{{ img.url }}">{{ img.name }}</a>
+      <a class="sage-link" href="{{ img.url }}">{{ img.name }}</a>
       <time
         datetime="{{ img.date | formatDate('yyyy-mm-dd') }}"
         >{{ img.date | formatDate('yyyy mmmm d') }}</time

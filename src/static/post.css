@@ -3,7 +3,7 @@
 }
 
 .post dd {
-  border-left: 1px solid var(--candy-color-shadow);
+  border-left: 1px solid var(--sage-color-shadow);
   margin-left: 0;
   padding-left: 2rem;
 }
@@ -29,7 +29,7 @@
 
 figure {
   margin: 1rem 0;
-  color: var(--candy-color-text1);
+  color: var(--sage-color-text1);
 }
 
 figure img {
@@ -48,27 +48,13 @@ figure figcaption {
   image-rendering: pixelated;
 }
 
-.candy-prose pre {
-  --color-text: var(--candy-color-text1);
-  --color-border1: var(--candy-color-border3);
-  --color-border2: var(--candy-color-background2);
-  --color-background1: var(--candy-color-background2);
-  --color-background2: var(--candy-color-background2);
-
-  margin: 1rem calc(-1 * var(--main-padding-x));
-  padding: 1rem 2rem;
-  border-radius: 0;
+.sage-prose pre {
+  border-radius: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
   border: 0;
-  border-top: 1px solid;
-  border-bottom: 1px solid;
-  border-image: linear-gradient(
-    to right,
-    var(--color-border1),
-    var(--color-border2)
-  );
-  border-image-slice: 1 9;
-  background-color: var(--color-background2);
-  color: var(--color-text);
+  background-color: var(--sage-color-background1);
+  color: var(--sage-color-text1);
 }
 
 .token.comment,

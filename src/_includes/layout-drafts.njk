@@ -4,13 +4,13 @@ css:
   - "blog"
 ---
 
-<h1 class="candy-bright">Drafts</h1>
+<h1 class="sage-bright">Drafts</h1>
 
 <div class="post-list">
   {% for draft in collections.draft | reverse %}
   <section class="post-list--post sage-well">
-    <h2 class="candy-bright">
-      <a class="candy-link no-underline" href="{{ draft.url }}">
+    <h2 class="sage-bright">
+      <a class="sage-link no-underline" href="{{ draft.url }}">
         {{ draft.data.title }}
       </a>
     </h2>

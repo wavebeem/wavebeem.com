@@ -33,10 +33,7 @@
     "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
   overflow-y: scroll;
   color-scheme: light dark;
-}
-
-:root.candy-texture-striped {
-  background-attachment: fixed;
+  scrollbar-color: var(--sage-color-text2) var(--sage-color-background4);
 }
 
 h1 {
@@ -59,49 +56,102 @@ b {
   font-weight: 600;
 }
 
-:root {
-  background: repeating-conic-gradient(
-    var(--color-root-bg1) 0% 25%,
-    var(--color-root-bg2) 0% 50%
-  );
-  --check-size: 64px;
-  background-position: 0 0, var(--check-size) var(--check-size);
-  background-size: calc(2 * var(--check-size)) calc(2 * var(--check-size));
-  background-color: var(--color-root-bg2);
-  scrollbar-color: var(--candy-color-accent-text1) var(--color-root-bg2);
+.sage-root {
+  --sage-button-radius: 9999px;
+  --sage-link-underline: 1.5px;
+
+  --sage-color-accent-background1: var(--color-main-accent-background1);
+  --sage-color-accent-background2: var(--color-main-accent-background2);
+  --sage-color-accent-border1: var(--color-main-accent-border1);
+  --sage-color-accent-text1: var(--color-main-accent-text1);
+  --sage-color-background1: var(--color-main-background1);
+  --sage-color-background2: var(--color-main-background2);
+  --sage-color-background3: var(--color-main-background3);
+  --sage-color-background4: var(--color-main-background4);
+  --sage-color-border1: var(--color-main-border1);
+  --sage-color-border2: var(--color-main-border2);
+  --sage-color-border3: var(--color-main-border3);
+  --sage-color-shadow1: var(--color-main-shadow1);
+  --sage-color-text1: var(--color-main-text1);
+  --sage-color-text2: var(--color-main-text2);
+
+  background: var(--sage-color-background4);
+  color: var(--sage-color-text2);
 }
 
-body.candy-root,
-:root.candy-root {
+.sage-root.theme-header {
+  --sage-color-accent-background1: var(--color-root-fg);
+  --sage-color-accent-background2: var(--color-root-fg);
+  --sage-color-accent-border1: var(--color-root-fg);
+  --sage-color-accent-text1: var(--color-root-bg1);
+  --sage-color-background1: var(--color-root-bg1);
+  --sage-color-background2: var(--color-root-bg1);
+  --sage-color-background3: var(--color-root-bg2);
+  --sage-color-background4: var(--color-root-bg2);
+  --sage-color-border1: var(--color-root-bg2);
+  --sage-color-border2: var(--color-root-bg2);
+  --sage-color-border3: var(--color-root-bg2);
+  --sage-color-shadow1: var(--color-main-shadow1);
+  --sage-color-text1: var(--color-root-fg);
+  --sage-color-text2: var(--color-root-fg);
+  /* background: linear-gradient(
+    to top,
+    var(--sage-color-background2),
+    var(--color-main-background4)
+  ); */
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
-.candy-root {
-  --candy-button-radius: 9999px;
-  /* --candy-texture-striped-size: 64px; */
-  --candy-texture-striped-size: 3px;
-  --candy-link-underline: 1.5px;
+.sage-prose a,
+.sage-link {
+  text-decoration-thickness: 1.5px;
+  color: var(--sage-color-accent-background1);
+  border-radius: 0.25rem;
 }
 
-/* stylelint-disable-next-line no-descending-specificity */
-.candy-root {
-  --candy-color-accent-background1: var(--color-main-accent-background1);
-  --candy-color-accent-background2: var(--color-main-accent-background2);
-  --candy-color-accent-border1: var(--color-main-accent-border1);
-  --candy-color-accent-text1: var(--color-main-accent-text1);
-  --candy-color-background1: var(--color-main-background1);
-  --candy-color-background2: var(--color-main-background2);
-  --candy-color-background3: var(--color-main-background3);
-  --candy-color-background4: var(--color-main-background4);
-  --candy-color-border1: var(--color-main-border1);
-  --candy-color-border2: var(--color-main-border2);
-  --candy-color-border3: var(--color-main-border3);
-  --candy-color-shadow1: var(--color-main-shadow1);
-  --candy-color-text1: var(--color-main-text1);
-  --candy-color-text2: var(--color-main-text2);
+:focus-visible {
+  outline: 2px solid;
+  outline-offset: 1px;
+  text-decoration-line: none;
+}
 
-  --candy-button-radius: 9999px;
-  --candy-texture-striped-size: 3px;
+code.sage-bright,
+.sage-prose :not(pre) > code {
+  background: var(--sage-color-background2);
+  color: var(--sage-color-text1);
+  padding: calc(1em / 16) calc(1em / 4);
+  border-radius: calc(1em / 4);
+}
+
+.sage-button {
+  font: inherit;
+  font-weight: 600;
+  border: 2px solid;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background: var(--sage-color-background4);
+  color: var(--sage-color-accent-background1);
+}
+
+.sage-button:hover {
+  background: var(--sage-color-background3);
+}
+
+.sage-button:focus-visible {
+  outline: 3px solid;
+  outline-offset: -1px;
+}
+
+.sage-texture-striped {
+  --size: 8px;
+  background: repeating-linear-gradient(
+      -45deg,
+      var(--sage-color-background3) 0 calc(0.5 * var(--size)),
+      var(--sage-color-background2) calc(0.5 * var(--size) + 0.5px)
+        calc(1.5 * var(--size) - 0.5px),
+      var(--sage-color-background3) calc(1.5 * var(--size))
+        calc(2 * var(--size))
+    )
+    var(--sage-color-background3);
 }
 
 .window-content {
@@ -118,38 +168,30 @@ body.candy-root,
 }
 
 .window-nav {
-  /* margin-bottom: 1rem; */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
-  padding: 0 calc(0.5 * var(--main-padding-x));
-  /* background-color: var(--candy-color-background3);
-  background-origin: border-box;
-  border: 1px solid hsl(0 0% 0% / 30%);
-  box-shadow: 0 0 0 1px hsl(0 0% 100% / 20%), inset 0 0 4px hsl(0 0% 0% / 30%); */
-  text-shadow: 0 0 2px var(--candy-color-background1),
-    0 0 8px var(--candy-color-background1);
   border-radius: var(--window-border-radius);
 }
 
 .window-nav :any-link {
-  text-align: center;
-  flex: auto;
-  flex: 0 0 auto;
-  padding: 1rem calc(0.5 * var(--main-padding-x));
+  padding: 1rem 0;
   font-weight: 800;
   border-radius: 0.5rem;
-  background-image: none;
-  background-origin: border-box;
-  text-shadow: 0 0 2px var(--candy-color-background1),
-    0 0 8px var(--candy-color-background1);
 }
 
 @media (min-width: 420px) {
   .window-nav {
     display: flex;
+  }
+  header .content-column {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding-block: 1rem;
+    text-decoration-line: none;
   }
 }
 
@@ -159,129 +201,73 @@ body.candy-root,
   }
 }
 
-.window-nav :any-link:hover {
+:any-link:hover {
   text-decoration-line: underline;
-  background-image: linear-gradient(
-    to right,
-    transparent,
-    var(--candy-color-background1),
-    transparent
-  );
-}
-
-.window-main {
-  border: 1px solid var(--candy-color-border3);
-  border-image: linear-gradient(
-    to right,
-    var(--candy-color-border3),
-    var(--candy-color-border2),
-    var(--candy-color-border3)
-  );
-  border-image-slice: 1 9;
-  border-left: 0;
-  border-right: 0;
-  scrollbar-color: var(--candy-color-text2) var(--candy-color-background2);
-  flex: auto;
-  padding: var(--candy-card-padding-vertical)
-    var(--candy-card-padding-horizontal);
 }
 
 * {
   box-sizing: border-box;
 }
 
-body.candy-root {
+body {
   /**
    * Setting font size on body rather than html so that 1rem can refer to the
    * user's specified font size anywhere in my CSS, rather than 1.25 times that
    * value; but this way most things get bumped up a little bigger, for a
    * slightly comfier to read site (since this is a blog, after all)
    */
-  --body-padding-y: 0;
-  --body-padding-x: 0;
-  --main-padding-x: 1rem;
-  --main-padding-y: 1rem;
+  --body-padding-y: 1rem;
+  --body-padding-x: 1rem;
   --window-border-radius: 0;
   font-size: 1.25rem;
   font-family: var(--font-body);
   line-height: 1.5;
   margin: 0 auto;
-  padding: var(--body-padding-y) var(--body-padding-x);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  gap: 0;
+}
+
+.content-column {
+  padding: var(--body-padding-y) var(--body-padding-x);
   max-width: 1024px;
   width: 100%;
-  gap: 0;
-  /* background: var(--color-root-bg2x); */
+  margin-inline: auto;
 }
 
 .sage-well {
   box-sizing: border-box;
   border: 0;
-  padding: var(--candy-well-padding-vertical)
-    var(--candy-well-padding-horizontal);
+  padding: 1rem;
   border-radius: 1rem;
-  background: linear-gradient(
-        to right,
-        var(--candy-color-background2),
-        var(--candy-color-border3),
-        var(--candy-color-background2)
-      )
-      0 0 / 100% 1px repeat-x,
-    var(--candy-color-background2);
+  background: var(--sage-color-background2);
 }
 
-header {
+header .content-column {
   display: flex;
-  flex-direction: row;
-  /* justify-content: space-between; */
+  flex-direction: column;
   gap: 0.5rem;
+  padding-block: 1rem;
   text-decoration-line: none;
-  /* padding-inline: 1px; */
 }
 
 .logo {
   font-family: var(--font-logo);
-  padding: 1rem var(--main-padding-x);
+  /* padding: 1rem var(--body-padding-x); */
   /* Prevent Safari from making this even bolder lol */
   font-synthesis: none;
   font-weight: initial;
-  border-radius: 0;
   text-decoration-line: none;
 }
 
-.logo:hover {
-  background-image: linear-gradient(
-    to right,
-    transparent,
-    hsl(0 0% 0% / 20%),
-    transparent
-  );
-}
-
-.logo,
-footer {
-  /* Should use text-shadow, but the underline appears below the text shadow in
-  Chrome & Safari, and Safari renders a really ugly text-shadow on Ultra
-  Hi-Gloss font. */
-  /* filter: drop-shadow(0 0 2px var(--candy-color-background1))
-    drop-shadow(0 0 8px var(--candy-color-background1)); */
-}
-
 summary {
-  cursor: default;
   -webkit-user-select: none;
   user-select: none;
 }
 
 .font-ultra-hi-gloss {
   font-family: var(--font-logo);
-}
-
-/* stylelint-disable-next-line no-duplicate-selectors */
-.window-main {
-  padding: var(--main-padding-y) var(--main-padding-x);
 }
 
 h1,
@@ -322,25 +308,30 @@ details[open] > summary {
   margin-bottom: 1rem;
 }
 
-/* stylelint-disable-next-line no-duplicate-selectors */
 header {
   text-align: center;
-  color: var(--candy-color-text1);
+  color: var(--sage-color-text1);
   text-decoration-line: none;
   font-size: 1.5rem;
   letter-spacing: 1px;
   line-height: 1;
 }
 
-nav .candy-link {
+main {
+  border: 4px solid var(--sage-color-border3);
+  border-left-width: 0;
+  border-right-width: 0;
+}
+
+nav .sage-link {
   text-decoration-line: none;
 }
 
 .footer {
   text-align: center;
   font-size: 1rem;
-  padding: 1rem;
   font-weight: 600;
+  text-shadow: 0 0 4px var(--sage-color-background1);
 }
 
 .center {
@@ -348,8 +339,8 @@ nav .candy-link {
 }
 
 ::selection {
-  background: var(--candy-color-accent-background1);
-  color: var(--candy-color-accent-text1);
+  background: var(--sage-color-accent-background1);
+  color: var(--sage-color-accent-text1);
   text-shadow: none;
 }
 
@@ -367,7 +358,7 @@ ol {
 }
 
 :where(ul, ol) ::marker {
-  color: var(--candy-color-border1);
+  color: var(--sage-color-border1);
 }
 
 .box-grid > * {
@@ -384,7 +375,7 @@ pre {
 }
 
 blockquote {
-  border-left: 4px solid var(--candy-color-border3);
+  border-left: 4px solid var(--sage-color-border3);
   margin-left: 0;
   padding: 0;
   padding-left: 1rem;
@@ -411,50 +402,14 @@ blockquote {
   text-decoration-line: none;
 }
 
-main :any-link:hover {
-  text-decoration-line: underline;
-}
-
-:where(main, .candy-prose) > :is(h2, h3) {
-  padding-top: 1rem;
-  margin-top: 1rem;
-  border-top: 1px dotted var(--candy-color-border1);
-  border-image: linear-gradient(
-    to right,
-    var(--candy-color-background1),
-    var(--candy-color-border3),
-    var(--candy-color-background1)
-  );
-  border-image-slice: 1 9;
-}
-
-.candy-prose :where(hr),
-.candy-divider {
-  border-top: 1px dotted var(--candy-color-border1);
-  border-image: linear-gradient(
-    to right,
-    var(--candy-color-background1),
-    var(--candy-color-border3),
-    var(--candy-color-background1)
-  );
-  border-image-slice: 1 9;
-}
-
 /* --- Media queries --- */
 
 @media (min-width: 800px) {
-  :root {
-    padding: 0 2rem;
-  }
-
-  body.candy-root {
-    --body-padding-x: 0;
-    --main-padding-x: 2rem;
-    --main-padding-y: 2rem;
-    border: 1px solid hsl(0 0% 0% / 50%);
+  body {
+    --body-padding-x: 2rem;
+    --body-padding-y: 2rem;
     border-top: 0;
     border-bottom: 0;
-    box-shadow: 0 0 16px hsl(0 0% 0% / 30%);
     background-clip: padding-box;
   }
 
@@ -464,7 +419,7 @@ main :any-link:hover {
 }
 
 @media (max-width: 800px) {
-  body.candy-root {
+  body {
     font-size: 1rem;
   }
 
