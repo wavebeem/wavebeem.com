@@ -143,19 +143,25 @@ code.sage-bright,
 
 .sage-texture-striped {
   --size: 8px;
+  --a: var(--sage-color-background3);
+  --b: var(--sage-color-background2);
   background: repeating-linear-gradient(
       -45deg,
-      var(--sage-color-background3) 0 calc(0.5 * var(--size)),
-      var(--sage-color-background2) calc(0.5 * var(--size) + 0.5px)
-        calc(1.5 * var(--size) - 0.5px),
-      var(--sage-color-background3) calc(1.5 * var(--size))
-        calc(2 * var(--size))
+      var(--a) 0 calc(0.5 * var(--size)),
+      var(--b) calc(0.5 * var(--size) + 0.5px) calc(1.5 * var(--size) - 0.5px),
+      var(--a) calc(1.5 * var(--size)) calc(2 * var(--size))
     )
-    var(--sage-color-background3);
+    var(--a);
+}
+
+.warning-stripe {
+  --size: 8px;
+  --a: var(--color-root-bg1);
+  --b: var(--color-root-fg);
+  height: 8px;
 }
 
 .window-nav {
-  margin-inline: ;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -311,8 +317,9 @@ main {
   flex: auto;
   display: flex;
   flex-direction: column;
-  border-top: 2px solid var(--sage-color-background2);
-  border-bottom: 2px solid var(--sage-color-background2);
+  border: 2px dotted var(--sage-color-border2);
+  border-left-width: 0;
+  border-right-width: 0;
 }
 
 nav .sage-link {
