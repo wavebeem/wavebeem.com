@@ -24,7 +24,6 @@ ul li + li {
 /* stylelint-disable-next-line no-descending-specificity */
 ul {
   padding-left: 1em;
-  list-style-type: circle;
 }
 
 ol {

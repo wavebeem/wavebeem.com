@@ -12,14 +12,20 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 
 module.exports = {
   light: {
-    "color-root-fg": oklch(30, 30, 135),
-    "color-root-fg2": oklch(30, 30, 135),
-    "color-root-bg1": oklch(95, 30, 135),
-    "color-root-bg2": oklch(93, 30, 135),
-    "color-root-shadow": oklch(10, 30, 135, 20),
+    // "color-root-fg": oklch(95, 60, 125),
+    "color-root-fg": oklch(100, 5, 290),
+    "color-root-fg2": oklch(100, 5, 290),
+    "color-root-bg1": oklch(30, 30, 290),
+    "color-root-bg2": oklch(30, 30, 290),
+    "color-root-shadow": oklch(10, 60, 125, 20),
+    // "color-root-bg2": oklch(95, 60, 125),
 
-    "color-main-accent-background1": oklch(54, 50, 290),
-    "color-main-accent-background2": oklch(48, 50, 290),
+    "color-stripe-background1": oklch(80, 80, 40),
+    "color-stripe-background2": oklch(82, 80, 40),
+    "color-stripe-border": oklch(100, 80, 40),
+
+    "color-main-accent-background1": oklch(50, 50, 290),
+    "color-main-accent-background2": oklch(50, 50, 290),
     "color-main-accent-border1": oklch(48, 50, 290),
     "color-main-accent-text1": oklch(100, 0, 0),
     "color-main-background1": oklch(100, 5, 290),
@@ -32,6 +38,7 @@ module.exports = {
     "color-main-shadow1": oklch(15, 0, 0, 10),
     "color-main-text1": oklch(30, 30, 290),
     "color-main-text2": oklch(30, 30, 290),
+    "color-main-code": oklch(50, 100, 40),
 
     "color-syntax-comment": oklch(55, 0, 300),
     "color-syntax-keyword": oklch(47, 100, 300),

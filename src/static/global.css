@@ -94,11 +94,6 @@ b {
   --sage-color-shadow1: var(--color-main-shadow1);
   --sage-color-text1: var(--color-root-fg);
   --sage-color-text2: var(--color-root-fg);
-  /* background: linear-gradient(
-    to top,
-    var(--sage-color-background2),
-    var(--color-main-background4)
-  ); */
 }
 
 .sage-prose a,
@@ -116,8 +111,8 @@ b {
 
 code.sage-bright,
 .sage-prose :not(pre) > code {
-  background: var(--sage-color-background2);
-  color: var(--sage-color-text1);
+  background: var(--sage-color-background3);
+  color: var(--color-main-code);
   padding: calc(1em / 16) calc(1em / 4);
   border-radius: calc(1em / 4);
 }
@@ -152,13 +147,6 @@ code.sage-bright,
       var(--a) calc(1.5 * var(--size)) calc(2 * var(--size))
     )
     var(--a);
-}
-
-.warning-stripe {
-  --size: 8px;
-  --a: var(--color-root-bg1);
-  --b: var(--color-root-fg);
-  height: 8px;
 }
 
 .window-nav {
@@ -258,6 +246,14 @@ header .content-column :any-link {
   font-synthesis: none;
   font-weight: initial;
   text-decoration-line: none;
+  /* background: var(--color-stripe-background1);
+  color: black;
+  border-radius: 9999px;
+  padding: 0.25rem 1rem !important; */
+  /* box-shadow: 0 0 4px var(--color-stripe-border),
+    0 0 8px var(--color-stripe-border), 0 0 16px var(--color-stripe-border); */
+  /* text-shadow: 0 0 4px var(--color-stripe-border),
+    0 0 8px var(--color-stripe-border); */
 }
 
 summary {
@@ -317,7 +313,7 @@ main {
   flex: auto;
   display: flex;
   flex-direction: column;
-  border: 2px dotted var(--sage-color-border2);
+  border-bottom: 2px dotted var(--sage-color-border2);
   border-left-width: 0;
   border-right-width: 0;
 }
