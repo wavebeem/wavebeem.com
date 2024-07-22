@@ -12,17 +12,11 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 
 module.exports = {
   light: {
-    // "color-root-fg": oklch(95, 60, 125),
-    "color-root-fg": oklch(100, 5, 290),
-    "color-root-fg2": oklch(100, 5, 290),
-    "color-root-bg1": oklch(30, 30, 290),
-    "color-root-bg2": oklch(30, 30, 290),
-    "color-root-shadow": oklch(10, 60, 125, 20),
-    // "color-root-bg2": oklch(95, 60, 125),
+    "color-header-text": oklch(30, 30, 290),
+    "color-header-background": oklch(95, 60, 125),
 
-    "color-stripe-background1": oklch(80, 80, 40),
-    "color-stripe-background2": oklch(82, 80, 40),
-    "color-stripe-border": oklch(100, 80, 40),
+    "color-nav-text": oklch(30, 30, 290),
+    "color-nav-background": oklch(90, 5, 290),
 
     "color-main-accent-background1": oklch(50, 50, 290),
     "color-main-accent-background2": oklch(50, 50, 290),

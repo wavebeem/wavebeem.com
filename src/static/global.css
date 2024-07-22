@@ -80,20 +80,37 @@ b {
 }
 
 .sage-root.theme-header {
-  --sage-color-accent-background1: var(--color-root-fg);
-  --sage-color-accent-background2: var(--color-root-fg);
-  --sage-color-accent-border1: var(--color-root-fg);
-  --sage-color-accent-text1: var(--color-root-bg1);
-  --sage-color-background1: var(--color-root-bg1);
-  --sage-color-background2: var(--color-root-bg1);
-  --sage-color-background3: var(--color-root-bg2);
-  --sage-color-background4: var(--color-root-bg2);
-  --sage-color-border1: var(--color-root-bg2);
-  --sage-color-border2: var(--color-root-bg2);
-  --sage-color-border3: var(--color-root-bg2);
-  --sage-color-shadow1: var(--color-main-shadow1);
-  --sage-color-text1: var(--color-root-fg);
-  --sage-color-text2: var(--color-root-fg);
+  --sage-color-accent-background1: var(--color-header-text);
+  --sage-color-accent-background2: var(--color-header-text);
+  --sage-color-accent-border1: var(--color-header-text);
+  --sage-color-accent-text1: var(--color-header-background);
+  --sage-color-background1: var(--color-header-background);
+  --sage-color-background2: var(--color-header-background);
+  --sage-color-background3: var(--color-header-background);
+  --sage-color-background4: var(--color-header-background);
+  --sage-color-border1: var(--color-header-background);
+  --sage-color-border2: var(--color-header-background);
+  --sage-color-border3: var(--color-header-background);
+  --sage-color-shadow1: var(--color-header-background);
+  --sage-color-text1: var(--color-header-text);
+  --sage-color-text2: var(--color-header-text);
+}
+
+.sage-root.theme-nav {
+  --sage-color-accent-background1: var(--color-nav-text);
+  --sage-color-accent-background2: var(--color-nav-text);
+  --sage-color-accent-border1: var(--color-nav-text);
+  --sage-color-accent-text1: var(--color-nav-background);
+  --sage-color-background1: var(--color-nav-background);
+  --sage-color-background2: var(--color-nav-background);
+  --sage-color-background3: var(--color-nav-background);
+  --sage-color-background4: var(--color-nav-background);
+  --sage-color-border1: var(--color-nav-background);
+  --sage-color-border2: var(--color-nav-background);
+  --sage-color-border3: var(--color-nav-background);
+  --sage-color-shadow1: var(--color-nav-background);
+  --sage-color-text1: var(--color-nav-text);
+  --sage-color-text2: var(--color-nav-text);
 }
 
 .sage-prose a,
@@ -212,10 +229,13 @@ body {
 }
 
 .content-column {
-  padding: var(--body-padding-y) var(--body-padding-x);
   max-width: 1024px;
   width: 100%;
   margin-inline: auto;
+}
+
+:is(main, footer) .content-column {
+  padding: var(--body-padding-y) var(--body-padding-x);
 }
 
 .sage-well {
@@ -246,14 +266,6 @@ header .content-column :any-link {
   font-synthesis: none;
   font-weight: initial;
   text-decoration-line: none;
-  /* background: var(--color-stripe-background1);
-  color: black;
-  border-radius: 9999px;
-  padding: 0.25rem 1rem !important; */
-  /* box-shadow: 0 0 4px var(--color-stripe-border),
-    0 0 8px var(--color-stripe-border), 0 0 16px var(--color-stripe-border); */
-  /* text-shadow: 0 0 4px var(--color-stripe-border),
-    0 0 8px var(--color-stripe-border); */
 }
 
 summary {
@@ -306,14 +318,14 @@ details[open] > summary {
 header {
   color: var(--sage-color-text1);
   text-decoration-line: none;
-  padding-block: 1rem;
+  border-bottom: 4px solid;
 }
 
 main {
   flex: auto;
   display: flex;
   flex-direction: column;
-  border-bottom: 2px dotted var(--sage-color-border2);
+  /* border-bottom: 2px dotted var(--sage-color-border2); */
   border-left-width: 0;
   border-right-width: 0;
 }
