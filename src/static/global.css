@@ -33,7 +33,7 @@
     "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
   overflow-y: scroll;
   color-scheme: light dark;
-  scrollbar-color: var(--sage-color-text2) var(--sage-color-background2);
+  scrollbar-color: var(--color-nav-text) var(--color-nav-background);
 }
 
 h1 {
@@ -54,6 +54,19 @@ h3 {
 
 b {
   font-weight: 700;
+}
+
+:is(h2, h3)::before {
+  content: "*-";
+  font-family: var(--font-logo);
+  background: var(--color-nav-background);
+  margin-right: 0.5em;
+  border-radius: 100%;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  line-height: 1.5em;
+  text-align: center;
 }
 
 .sage-root {
@@ -318,13 +331,17 @@ details[open] > summary {
 header {
   color: var(--sage-color-text1);
   text-decoration-line: none;
-  border-bottom: 4px solid;
+  border-bottom: 1px solid var(--color-main-background1);
 }
 
 main {
   flex: auto;
   display: flex;
   flex-direction: column;
+  /* border: 2px dotted var(--sage-color-border2); */
+  /* border-top: 2px solid var(--color-main-border2); */
+  border-top: 1px solid var(--color-main-background1);
+  border-bottom: 1px solid var(--color-main-border3);
   /* border-bottom: 2px dotted var(--sage-color-border2); */
   border-left-width: 0;
   border-right-width: 0;
