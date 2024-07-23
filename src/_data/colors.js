@@ -42,7 +42,7 @@ module.exports = {
     "color-syntax-string": oklch(52, 100, 135),
     "color-syntax-punctuation": oklch(55, 40, 300),
 
-    "color-easter-egg-shadow": oklch(15, 0, 0, 40),
+    "color-easter-egg-shadow": oklch(70, 20, 290),
     "color-easter-egg-highlight": oklch(100, 0, 0, 50),
   },
 

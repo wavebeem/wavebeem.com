@@ -1,7 +1,4 @@
 .theme-properties {
-  margin: 1rem calc(-1 * var(--main-padding-x));
-  padding-inline: var(--main-padding-x);
-  padding-block: 1rem;
   display: grid;
   grid-template-columns: max-content max-content 1fr;
   gap: 1rem;

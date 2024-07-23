@@ -238,9 +238,13 @@ body {
 }
 
 .netpet {
+  display: flex;
   image-rendering: pixelated;
   mix-blend-mode: multiply;
-  background: currentColor;
+}
+
+.netpet:hover {
+  mix-blend-mode: hard-light;
 }
 
 @media (prefers-reduced-motion: reduce) {
