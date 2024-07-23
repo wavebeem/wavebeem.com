@@ -34,6 +34,8 @@ module.exports = {
     "color-main-text2": oklch(30, 30, 290),
     "color-main-code": oklch(50, 100, 40),
 
+    "color-main-card-shadow": oklch(90, 20, 290),
+
     "color-syntax-comment": oklch(55, 0, 300),
     "color-syntax-keyword": oklch(47, 100, 300),
     "color-syntax-property": oklch(52, 100, 190),

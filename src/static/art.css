@@ -33,7 +33,7 @@
 
 figure {
   margin: 1rem 0;
-  color: var(--sage-color-text1);
+  color: var(--color-main-text1);
 }
 
 /* stylelint-disable-next-line no-descending-specificity */

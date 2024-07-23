@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html
   lang="en"
-  class="sage-root sage-scrollbar"
+  class="theme-root sage-scrollbar"
   data-tags="{{ (tags or []) | join(' ') }}"
 >
   <head>
@@ -77,14 +77,20 @@
     />
   </head>
   <body>
-    <header class="screen-only sage-root theme-header">
+    <header class="header theme-root screen-only theme-header">
       <div class="content-column">
         <div class="flex">
           <a href="/" class="logo sage-link">wavebeem </a>
+          <img
+            class="netpet"
+            width="32"
+            height="32"
+            src="/static/img/page/netpet.webp"
+          />
         </div>
       </div>
     </header>
-    <div class="screen-only sage-root theme-nav">
+    <div class="nav theme-root screen-only theme-nav">
       <div class="content-column">
         <nav class="window-nav screen-only">
           <a class="sage-link" href="/">Home</a>

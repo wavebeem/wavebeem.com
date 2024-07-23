@@ -39,7 +39,6 @@ wavebeem-easter-egg.avatar[data-state="inside"] {
 
 .avatar img {
   border-radius: 9999px;
-  background: var(--sage-color-background2);
   width: var(--avatar-size);
   height: var(--avatar-size);
 }
