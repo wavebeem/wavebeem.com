@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html
   lang="en"
-  class="candy-root candy-texture-striped"
+  class="theme-root sage-scrollbar"
   data-tags="{{ (tags or []) | join(' ') }}"
 >
   <head>
@@ -62,11 +62,6 @@
       data-domain="wavebeem.com"
       src="https://plausible.io/js/plausible.js"
     ></script>
-    <link
-      rel="stylesheet"
-      media="screen"
-      href="/static/candy.css?t={{ dateNow }}"
-    />
     <link rel="stylesheet" media="screen" href="/main.css?t={{ dateNow }}" />
     {% for url in (css or []) %}
     <link
@@ -81,28 +76,43 @@
       href="/static/print.css?t={{ dateNow }}"
     />
   </head>
-  <body class="candy-root">
-    <header class="screen-only">
-      <a href="/" class="logo candy-link"
-        >wavebeem<span aria-hidden="true">&nbsp;*-</span>
-      </a>
+  <body>
+    <header class="header theme-root screen-only theme-header">
+      <div class="content-column">
+        <div class="flex">
+          <a href="/" class="logo sage-link">wavebeem </a>
+          <a href="https://netpet.wavebeem.com" class="netpet sage-link">
+            <img
+              width="32"
+              height="32"
+              src="/static/img/page/netpet.webp"
+              alt="netpet, a virtual pet"
+            />
+          </a>
+        </div>
+      </div>
     </header>
-    <div class="window-content">
-      <nav class="window-nav screen-only">
-        <a class="candy-link" href="/">Home</a>
-        <a class="candy-link" href="/blog/">Blog</a>
-        <a class="candy-link" href="/art/">Art</a>
-        <a class="candy-link" href="/resume/">Resume</a>
-      </nav>
-      <main class="candy-root window-main candy-texture-paper">
-        {{ content | safe }}
-      </main>
+    <div class="nav theme-root screen-only theme-nav">
+      <div class="content-column">
+        <nav class="window-nav screen-only">
+          <a class="sage-link" href="/">Home</a>
+          <a class="sage-link" href="/blog/">Blog</a>
+          <a class="sage-link" href="/art/">Art</a>
+          <a class="sage-link" href="/resume/">Resume</a>
+        </nav>
+      </div>
     </div>
-    <footer class="footer screen-only">
-      &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
-        class="candy-bright"
-        >wavebeem</i
-      >)
+    <main>
+      <div class="warning-stripe sage-texture-striped"></div>
+      <div class="content-column">{{ content | safe }}</div>
+    </main>
+    <footer class="footer screen-only sage-texture-striped">
+      <div class="content-column">
+        &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
+          class="sage-bright"
+          >wavebeem</i
+        >)
+      </div>
     </footer>
   </body>
 </html>

@@ -1,5 +1,5 @@
 :is(h1, h2, h3) small {
-  color: var(--candy-color-text2);
+  color: var(--color-main-text2);
   font-weight: normal;
 }
 
@@ -24,7 +24,6 @@ ul li + li {
 /* stylelint-disable-next-line no-descending-specificity */
 ul {
   padding-left: 1em;
-  list-style-type: circle;
 }
 
 ol {
@@ -36,13 +35,7 @@ summary {
 }
 
 summary:hover {
-  outline: 1px solid var(--candy-color-border3);
-  background: linear-gradient(
-    to right,
-    var(--candy-color-background2),
-    var(--candy-color-background4),
-    var(--candy-color-background2)
-  );
+  background: var(--color-main-background3);
 }
 
 dl {

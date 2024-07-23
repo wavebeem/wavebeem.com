@@ -15,8 +15,9 @@
   font-size: 1.25rem;
 }
 
-.width-max-content {
+.read-more-button {
   width: max-content;
+  margin-inline: auto;
 }
 
 .clearfix {
@@ -25,20 +26,10 @@
 
 .avatar {
   --avatar-size: 120px;
-  --radius: 9999px;
-  --padding: 0.5rem;
-  padding: var(--padding);
   display: flex;
   float: right;
   margin: 1rem;
-  border-radius: var(--radius);
-  border-top: 1px solid var(--candy-color-border3);
-  background: linear-gradient(
-      to bottom,
-      var(--candy-color-background3),
-      var(--candy-color-background1)
-    )
-    var(--candy-color-background1);
+  margin-top: 0;
 }
 
 wavebeem-easter-egg.avatar[data-state="inside"] {
@@ -47,8 +38,7 @@ wavebeem-easter-egg.avatar[data-state="inside"] {
 }
 
 .avatar img {
-  border-radius: calc(var(--radius) - var(--padding));
-  background: var(--candy-color-background2);
+  border-radius: 9999px;
   width: var(--avatar-size);
   height: var(--avatar-size);
 }
@@ -104,8 +94,7 @@ wavebeem-easter-egg::after {
   left: 0;
   top: 0;
   opacity: 0;
-  /* Subtract padding and border from the radius */
-  clip-path: circle(calc(50% - (17px / 2)));
+  clip-path: circle(50%);
 }
 
 wavebeem-easter-egg::before {

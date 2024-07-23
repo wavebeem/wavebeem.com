@@ -6,18 +6,18 @@ css:
   - "blog"
 ---
 
-<h1 class="candy-bright">Blog</h1>
+<h1 class="sage-bright">Blog</h1>
 
 <p>
-  Subscribe via my <a class="candy-link" href="/feed.xml">RSS feed</a> to stay
+  Subscribe via my <a class="sage-link" href="/feed.xml">RSS feed</a> to stay
   updated.
 </p>
 
 <div class="post-list">
   {% for post in collections.post | reverse %}
   <section class="post-list--post sage-well">
-    <h2 class="candy-bright">
-      <a class="candy-link no-underline" href="{{ post.url }}">
+    <h2 class="sage-bright">
+      <a class="sage-link no-underline" href="{{ post.url }}">
         {{ post.data.title }}
       </a>
     </h2>
