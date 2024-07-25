@@ -29,9 +29,9 @@ figure figcaption {
   padding: 1rem;
   border: 0;
   background-color: var(--color-main-background1);
-  color: var(--color-main-text1);
+  color: var(--color-main-text);
   overflow-x: auto;
-  box-shadow: 0 2px 0 var(--color-main-card-shadow);
+  box-shadow: 0 2px 0 var(--color-main-shadow);
 }
 
 .token.comment,
