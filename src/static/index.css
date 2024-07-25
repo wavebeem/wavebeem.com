@@ -30,6 +30,8 @@
   float: right;
   margin: 1rem;
   margin-top: 0;
+  box-shadow: 0 0 4px var(--color-main-background1);
+  border-radius: 9999px;
 }
 
 wavebeem-easter-egg.avatar[data-state="inside"] {

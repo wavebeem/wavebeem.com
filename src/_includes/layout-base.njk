@@ -42,17 +42,17 @@
     <link
       rel="alternate"
       type="application/atom+xml"
-      href="https://www.wavebeem.com/feed.xml"
+      href="{{ origin }}/feed.xml"
       title="Subscribe to wavebeem.com"
     />
     <meta
       name="og:image"
-      content="https://www.wavebeem.com/static/photo-512.webp?v={{
-        contentHashes.photo
+      content="{{ origin }}/static/og-image.png?v={{
+        contentHashes.ogImage
       }}"
     />
     <meta name="og:image:width" content="512" />
-    <meta name="og:image:height" content="512" />
+    <meta name="og:image:height" content="256" />
     <meta name="og:title" content="{{ title | formatTitle }}" />
     <meta name="og:description" content="{{ description }}" />
     <title>{{ title | formatTitle }}</title>

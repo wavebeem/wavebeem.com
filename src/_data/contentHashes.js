@@ -11,4 +11,5 @@ function createContentHash(filename) {
 module.exports = {
   favicon: createContentHash("src/static/favicon.png"),
   photo: createContentHash("src/static/photo.webp"),
+  ogImage: createContentHash("src/static/og-image.png"),
 };
