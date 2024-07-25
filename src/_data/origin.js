@@ -7,4 +7,6 @@ if (process.env.CI) {
   origin = "http://localhost:1312";
 }
 
+console.log(process.env);
+
 module.exports = origin;
