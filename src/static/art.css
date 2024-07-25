@@ -2,7 +2,7 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   justify-content: space-between;
 }
 
@@ -14,7 +14,8 @@
 }
 
 .art-container--frame a {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  flex: auto;
 }
 
 .art-container--frame img {
@@ -24,11 +25,6 @@
 .art-container--frame figcaption {
   display: flex;
   flex-direction: column;
-}
-
-/* stylelint-disable-next-line no-duplicate-selectors */
-.art-container--frame a {
-  flex: auto;
 }
 
 figure {

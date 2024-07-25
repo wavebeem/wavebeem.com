@@ -310,6 +310,12 @@ header {
   border-radius: 1rem;
 }
 
+hr {
+  margin-block: 1rem;
+  border: 0;
+  border-top: 2px dotted var(--color-main-border2);
+}
+
 .nav {
   border-bottom: 2px dotted var(--color-main-border2);
   border-top: 2px dotted var(--color-main-border2);
