@@ -1,4 +1,5 @@
 // https://docs.netlify.com/configure-builds/environment-variables/
+
 const fallbackOrigin = process.env.CI
   ? "https://wavebeem.com"
   : "http://localhost:1312";

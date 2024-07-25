@@ -1,5 +1,5 @@
 :is(h1, h2, h3) small {
-  color: var(--color-main-text2);
+  color: var(--color-main-text);
   font-weight: normal;
 }
 
@@ -35,7 +35,7 @@ summary {
 }
 
 summary:hover {
-  background: var(--color-main-background3);
+  background: var(--color-main-background2);
 }
 
 dl {
