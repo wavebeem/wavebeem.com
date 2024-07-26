@@ -6,8 +6,8 @@ const fallbackOrigin = process.env.CI
 
 const prettyOrigin =
   process.env.CONTEXT === "production"
-    ? process.env.DEPLOY_PRIME_URL
-    : process.env.URL;
+    ? process.env.URL
+    : process.env.DEPLOY_PRIME_URL;
 
 const origin = prettyOrigin || fallbackOrigin;
 
