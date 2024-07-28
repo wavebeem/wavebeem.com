@@ -37,9 +37,8 @@
   --theme-color-accent: var(--color-main-accent);
 
   overflow-y: scroll;
-  color-scheme: light;
-  /* color-scheme: light dark; */
-  scrollbar-color: var(--color-header-text) var(--color-header-background);
+  color-scheme: light dark;
+  scrollbar-color: var(--color-nav-text) var(--color-nav-background);
 }
 
 h1 {

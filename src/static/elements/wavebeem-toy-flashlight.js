@@ -23,13 +23,13 @@ class WavebeemToyFlashlight extends HTMLElement {
           z-index: var(--z-index);
           top: 0;
           left: 0;
-          width: 30vmax;
-          height: 30vmax;
-          filter: blur(8px);
+          width: 20vmax;
+          height: 20vmax;
+          filter: blur(16px);
           box-shadow: 0 0 0 200vmax hsl(0 0% 0% / 85%);
           background: radial-gradient(
-            hsl(0 0% 90% / 30%),
-            hsl(0 0% 90% / 10%) 30% 40%
+            hsl(0 0% 100% / 50%),
+            hsl(0 0% 100% / 30%) 30% 40%
           );
           position: fixed;
           border-radius: 9999px;
@@ -79,14 +79,15 @@ class WavebeemToyFlashlight extends HTMLElement {
 
   #onClick(event) {
     const flashlight = this.#flashlight();
+    const root = document.documentElement;
     if (flashlight.hidden) {
       flashlight.hidden = false;
       // Disable touch scrolling in Chrome since it causes us to lose the
       // `pointermove` event entirely...
-      document.documentElement.style.touchAction = "none";
+      root.style.touchAction = "none";
     } else {
       flashlight.hidden = true;
-      document.documentElement.style.touchAction = "";
+      root.style.touchAction = "";
     }
   }
 
