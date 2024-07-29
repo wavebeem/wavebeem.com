@@ -23,7 +23,7 @@
   },
   "homepage": "https://wavebeem.com",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "3.0.0-alpha.17",
     "@11ty/eleventy-cache-assets": "^2.3.0",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
@@ -33,7 +33,7 @@
     "image-size": "^1.1.1",
     "markdown-it": "^14.1.0",
     "npm-check": "^6.0.1",
-    "stylelint-config-recommended": "^14.0.0",
-    "stylelint": "^16.6.0"
+    "stylelint": "^16.6.0",
+    "stylelint-config-recommended": "^14.0.0"
   }
 }
