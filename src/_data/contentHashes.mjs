@@ -1,5 +1,5 @@
-const crypto = require("node:crypto");
-const fs = require("node:fs");
+import * as crypto from "node:crypto";
+import * as fs from "node:fs";
 
 function createContentHash(filename) {
   return crypto
@@ -8,7 +8,7 @@ function createContentHash(filename) {
     .digest("hex");
 }
 
-module.exports = {
+export default {
   favicon: createContentHash("src/static/favicon.png"),
   photo: createContentHash("src/static/photo.webp"),
   ogImage: createContentHash("src/static/og-image.png"),

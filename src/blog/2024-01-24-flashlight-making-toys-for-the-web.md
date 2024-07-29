@@ -7,7 +7,7 @@ description: |
 
 <script
   type="module"
-  src="/static/elements/wavebeem-toy-flashlight.js?t={{ dateNow }}"
+  src="/static/elements/wavebeem-toy-flashlight.mjs?t={{ dateNow }}"
 ></script>
 
 ## Introducing: Flashlight
@@ -20,7 +20,7 @@ Today I made a flashlight you can toggle on this page.
   <button class="sage-button sage-primary">Toggle flashlight mode</button>
 </wavebeem-toy-flashlight>
 
-[View source](/static/elements/wavebeem-toy-flashlight.js)
+[View source](/static/elements/wavebeem-toy-flashlight.mjs)
 
 ## Why I wanted to learn programming
 

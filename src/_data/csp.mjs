@@ -10,13 +10,15 @@ if (!process.env.CI) {
   scriptSrc.push("'unsafe-inline'");
 }
 
-const csp = {
+const cspObject = {
   "default-src": defaultSrc,
   "img-src": imgSrc,
   "script-src": scriptSrc,
   "style-src": styleSrc,
 };
 
-module.exports = Object.entries(csp)
+const cspString = Object.entries(cspObject)
   .map(([k, v]) => `${k} ${v.join(" ")};`)
   .join(" ");
+
+export default cspString;

@@ -1,14 +1,15 @@
 // @ts-check
 
-const pluginRss = require("@11ty/eleventy-plugin-rss");
-const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const markdownIt = require("markdown-it");
+import pluginRss from "@11ty/eleventy-plugin-rss";
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import markdownIt from "markdown-it";
 /** @type {any} */
-const dateformat = require("dateformat");
-const util = require("util");
+import dateformat from "dateformat";
+/** @ts-expect-error */
+import { inspect } from "node:util";
 
 /** @param config {import("@11ty/eleventy").UserConfig} */
-module.exports = function (config) {
+export default function getConfig(config) {
   const markdown = markdownIt({
     html: true,
     linkify: true,
@@ -31,7 +32,7 @@ module.exports = function (config) {
     return [value, base].filter((x) => x).join(" | ");
   });
   config.addFilter("inspect", function (value) {
-    return util.inspect(value, {});
+    return inspect(value, {});
   });
   config.addFilter("objectKeys", function (object) {
     return Object.keys(object);
@@ -45,4 +46,4 @@ module.exports = function (config) {
       output: "_site",
     },
   };
-};
+}

@@ -11,4 +11,4 @@ const prettyOrigin =
 
 const origin = prettyOrigin || fallbackOrigin;
 
-module.exports = origin;
+export default origin;
