@@ -1,8 +1,38 @@
 const html = String.raw;
 const css = String.raw;
 
-class WavebeemToyFlashlight extends HTMLElement {
+export class WavebeemToyFlashlight extends HTMLElement {
   #abortController = new AbortController();
+
+  #style = css`
+    :host {
+      display: block;
+    }
+
+    .flashlight {
+      --x: 0px;
+      --y: 0px;
+      --z-index: 100;
+      z-index: var(--z-index);
+      top: 0;
+      left: 0;
+      width: 20vmax;
+      height: 20vmax;
+      filter: blur(16px);
+      box-shadow: 0 0 0 200vmax hsl(0 0% 0% / 85%);
+      background: radial-gradient(
+        hsl(0 0% 100% / 50%),
+        hsl(0 0% 100% / 30%) 30% 40%
+      );
+      position: fixed;
+      border-radius: 9999px;
+      translate: -50% -50%;
+      transform: translate(var(--x), var(--y));
+      cursor: none;
+      pointer-events: none;
+      mix-blend-mode: hard-light;
+    }
+  `;
 
   constructor() {
     super();
@@ -12,33 +42,7 @@ class WavebeemToyFlashlight extends HTMLElement {
   connectedCallback() {
     this.shadowRoot.innerHTML = html`
       <style>
-        :host {
-          display: block;
-        }
-
-        .flashlight {
-          --x: 0px;
-          --y: 0px;
-          --z-index: 100;
-          z-index: var(--z-index);
-          top: 0;
-          left: 0;
-          width: 20vmax;
-          height: 20vmax;
-          filter: blur(16px);
-          box-shadow: 0 0 0 200vmax hsl(0 0% 0% / 85%);
-          background: radial-gradient(
-            hsl(0 0% 100% / 50%),
-            hsl(0 0% 100% / 30%) 30% 40%
-          );
-          position: fixed;
-          border-radius: 9999px;
-          translate: -50% -50%;
-          transform: translate(var(--x), var(--y));
-          cursor: none;
-          pointer-events: none;
-          mix-blend-mode: hard-light;
-        }
+        ${this.#style}
       </style>
       <div class="flashlight" id="flashlight" hidden></div>
       <slot></slot>

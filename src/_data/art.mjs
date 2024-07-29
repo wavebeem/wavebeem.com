@@ -1,10 +1,10 @@
-const path = require("path");
-const fs = require("fs");
-const { getAverageColor } = require("fast-average-color-node");
-const getImageSize = require("image-size");
-const { AssetCache } = require("@11ty/eleventy-cache-assets");
+import * as path from "node:path";
+import * as fs from "node:fs";
+import { getAverageColor } from "fast-average-color-node";
+import getImageSize from "image-size";
+import { AssetCache } from "@11ty/eleventy-cache-assets";
 
-const root = path.resolve(__dirname, "../static/img/art");
+const root = "src/static/img/art";
 
 function isHiddenFile(filename) {
   return path.basename(filename).startsWith(".");
@@ -44,4 +44,4 @@ async function getArtCached() {
   return art;
 }
 
-module.exports = getArtCached;
+export default getArtCached;
