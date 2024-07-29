@@ -4,8 +4,6 @@
   "version": "1.0.0",
   "description": "wavebeem.com",
   "scripts": {
-    "dev:candy": "cp ../candy-css/src/candy.css src/static/candy.css",
-    "upgrade:candy": "curl -sSL https://candy.wavebeem.com/candy.css -o src/static/candy.css",
     "start": "eleventy --serve --quiet --port=1312",
     "upgrade": "npm-check -u",
     "lint": "stylelint \"src/**/*.css\" --formatter unix",

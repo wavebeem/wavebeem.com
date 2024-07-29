@@ -1,5 +1,12 @@
-const Color = require("colorjs.io").default;
+import Color from "colorjs.io";
 
+/**
+ * @param lightness {number}
+ * @param chroma {number}
+ * @param hue {number}
+ * @param alpha {number}
+ * @returns {string}
+ */
 function oklch(lightness, chroma, hue, alpha = 100) {
   const l = lightness / 100;
   const c = (chroma / 100) * 0.4;
@@ -37,4 +44,4 @@ const colors = {
   "color-easter-egg-highlight": oklch(100, 0, 0, 50),
 };
 
-module.exports = colors;
+export default colors;
