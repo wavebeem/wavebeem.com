@@ -1,7 +1,4 @@
 /* TODO: Use @layer */
-/* TODO: Try to remove util styles */
-
-/* --- Fonts --- */
 
 @font-face {
   font-family: "Nunito";
@@ -23,8 +20,6 @@
   src: url("/static/fonts/ultra-hi-gloss.woff2") format("woff2");
   font-display: swap;
 }
-
-/* --- Other CSS --- */
 
 ::before,
 ::after,
@@ -184,8 +179,6 @@ main {
   text-decoration-line: none;
 }
 
-/* UTILS */
-
 .font-logo {
   font-family: var(--font-logo);
 }
@@ -209,8 +202,6 @@ main {
 .no-underline {
   text-decoration-line: none;
 }
-
-/* IDK */
 
 .theme-root {
   background-color: var(--theme-color-background);
