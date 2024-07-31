@@ -71,9 +71,6 @@ body {
   body {
     --body-padding-x: 2rem;
     --body-padding-y: 2rem;
-    border-top: 0;
-    border-bottom: 0;
-    background-clip: padding-box;
   }
 }
 
@@ -367,8 +364,7 @@ code.sage-bright,
 }
 
 .nav {
-  border-bottom: 2px dotted var(--color-main-border1);
-  border-top: 2px dotted var(--color-main-border1);
+  border-block: 2px dotted var(--color-main-border1);
 }
 
 :is(.nav, .header) .sage-link {
@@ -383,9 +379,6 @@ code.sage-bright,
   text-align: center;
   font-size: 1rem;
   font-weight: 800;
-  text-shadow: 0 0 4px var(--color-main-background1),
-    0 0 8px var(--color-main-background1),
-    0 0 16px var(--color-main-background1);
 }
 
 @media (prefers-reduced-motion: reduce) {
