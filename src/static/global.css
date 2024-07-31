@@ -77,8 +77,9 @@ body {
   }
 }
 
-:any-link:hover {
-  text-decoration-line: underline;
+a,
+b {
+  font-weight: 700;
 }
 
 h1 {
@@ -118,14 +119,6 @@ h3 {
   h3 {
     font-size: 1.15rem;
   }
-}
-
-:not(:where(h1, h2, h3)) > a {
-  font-weight: 700;
-}
-
-b {
-  font-weight: 700;
 }
 
 details {
@@ -296,7 +289,7 @@ code.sage-bright,
 }
 
 @media (min-width: 420px) {
-  ® :is(.nav, .header) .content-column {
+  :is(.nav, .header) .content-column {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
@@ -378,8 +371,12 @@ code.sage-bright,
   border-top: 2px dotted var(--color-main-border1);
 }
 
-.nav .sage-link {
+:is(.nav, .header) .sage-link {
   text-decoration-line: none;
+}
+
+:is(.nav, .header) .sage-link:hover {
+  text-decoration-line: underline;
 }
 
 .footer {
