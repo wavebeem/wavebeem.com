@@ -7,6 +7,12 @@
   gap: 1rem;
 }
 
+@media (min-width: 800px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .card-heading {
   border: none;
   padding: 0;
@@ -32,6 +38,12 @@
   margin-top: 0;
   box-shadow: 0 0 4px var(--color-main-background1);
   border-radius: 9999px;
+}
+
+.box-grid > * {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 wavebeem-easter-egg.avatar[data-state="inside"] {
