@@ -47,9 +47,7 @@
     />
     <meta
       name="og:image"
-      content="{{ origin }}/static/og-image.png?v={{
-        contentHashes.ogImage
-      }}"
+      content="{{ origin }}/static/og-image.png?v={{ contentHashes.ogImage }}"
     />
     <meta name="og:image:width" content="512" />
     <meta name="og:image:height" content="256" />
@@ -92,16 +90,14 @@
         </div>
       </div>
     </header>
-    <div class="nav theme-root screen-only theme-nav">
-      <div class="content-column">
-        <nav class="window-nav screen-only">
-          <a class="sage-link" href="/">Home</a>
-          <a class="sage-link" href="/blog/">Blog</a>
-          <a class="sage-link" href="/art/">Art</a>
-          <a class="sage-link" href="/resume/">Resume</a>
-        </nav>
+    <nav class="nav theme-root theme-nav screen-only">
+      <div class="flex content-column">
+        <a class="sage-link" href="/">Home</a>
+        <a class="sage-link" href="/blog/">Blog</a>
+        <a class="sage-link" href="/art/">Art</a>
+        <a class="sage-link" href="/resume/">Resume</a>
       </div>
-    </div>
+    </nav>
     <main>
       <div class="content-column">{{ content | safe }}</div>
     </main>
