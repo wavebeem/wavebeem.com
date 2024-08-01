@@ -1,5 +1,3 @@
-/* TODO: Use @layer */
-
 @font-face {
   font-family: "Nunito";
   src: url("/static/fonts/nunito-variable.woff2") format("woff2");
@@ -69,9 +67,13 @@ body {
   }
 }
 
-a,
-b {
+p a,
+p b {
   font-weight: 700;
+}
+
+:any-link:hover {
+  text-decoration-line: underline;
 }
 
 h1 {
@@ -229,7 +231,7 @@ main {
 
 .sage-prose a,
 .sage-link {
-  text-decoration-thickness: 1.5px;
+  text-decoration-thickness: 2px;
   color: var(--theme-color-accent);
   border-radius: 0.25rem;
 }
