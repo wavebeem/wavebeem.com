@@ -12,6 +12,6 @@ const cspObject = {
 
 const cspString = Object.entries(cspObject)
   .map(([k, v]) => `${k} ${v.join(" ")};`)
-  .join("");
+  .join(" ");
 
 export default cspString;
