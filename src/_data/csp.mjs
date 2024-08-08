@@ -1,7 +1,7 @@
 const defaultSrc = ["'self'", "https://plausible.io"];
 const imgSrc = [...defaultSrc];
 const scriptSrc = [...defaultSrc];
-const styleSrc = ["'self'"];
+const styleSrc = ["'self'", "'unsafe-inline'"];
 
 const cspObject = {
   "default-src": defaultSrc,

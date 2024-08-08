@@ -337,7 +337,6 @@ code.sage-bright,
 .netpet {
   display: flex;
   image-rendering: pixelated;
-  mix-blend-mode: multiply;
 }
 
 .netpet:hover {
