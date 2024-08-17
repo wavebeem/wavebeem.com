@@ -42,8 +42,7 @@
 
 .box-grid > * {
   display: flex;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-direction: column;
 }
 
 wavebeem-easter-egg.avatar[data-state="inside"] {
