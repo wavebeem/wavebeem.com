@@ -26,14 +26,14 @@ const colors = {
   "color-nav-background": oklch(98, 50, 170),
 
   "color-main-accent": oklch(50, 50, 250),
-  "color-main-background1": oklch(100, 20, 40),
-  "color-main-background2": oklch(98, 20, 40),
-  "color-main-background3": oklch(97, 20, 40),
+  "color-main-background1": oklch(99, 20, 40),
+  "color-main-background2": oklch(97, 20, 40),
+  "color-main-background3": oklch(96, 20, 40),
   "color-main-border1": oklch(75, 15, 40),
   "color-main-border2": oklch(85, 15, 40),
   "color-main-text": oklch(40, 60, 40),
   "color-main-code": oklch(50, 100, 340),
-  "color-main-shadow": oklch(93, 20, 40),
+  "color-main-shadow": oklch(92, 20, 40),
 
   "color-syntax-default": oklch(20, 30, 40),
   "color-syntax-comment": oklch(52, 0, 170),
