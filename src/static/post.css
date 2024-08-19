@@ -34,6 +34,11 @@ figure figcaption {
   box-shadow: 0 2px 0 var(--color-main-shadow);
 }
 
+/* Reset color for nested scripts */
+.token.script {
+  color: var(--color-syntax-default);
+}
+
 .token.comment,
 .token.prolog,
 .token.doctype,
@@ -72,7 +77,8 @@ figure figcaption {
   color: var(--color-syntax-property);
 }
 
-.token.tag {
+.token.tag,
+.token.tag > .token.class-name {
   color: var(--color-syntax-keyword);
 }
 

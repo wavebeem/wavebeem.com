@@ -27,7 +27,7 @@ For the purposes of this blog post, I'm going to use a small React UI as an exam
 
 Let's look at an example React app for online pizza delivery.
 
-```js
+```jsx
 // function PizzaDelivery()
 
 const [state, setState] = React.useState({
@@ -42,7 +42,7 @@ const [state, setState] = React.useState({
 
 You've probably worked with state like this before: there's a couple boolean properties controlling what mode you're in, there's a property that might be null, and there's state (size, style, toppings) that's not always relevant (I'll take a large pepperoni with errors).
 
-```js
+```jsx
 if (state.error) {
   return <ErrorScreen>{error.message}</ErrorScreen>;
 }
@@ -50,7 +50,7 @@ if (state.error) {
 
 First up, we check if `state.error` is not null. If so, we show the error screen. Even though you probably won't see this much, it has to be the first `if` statement. After all, if there's an error, it's definitely the most important thing to show.
 
-```js
+```jsx
 if (state.outForDelivery) {
   return (
     <OrderOutForDeliveryScreen
@@ -66,7 +66,7 @@ if (state.outForDelivery) {
 
 Next up, we have to check `outForDelivery` **before** `orderReceived`. After all, your order is still technically received while your pizza is out for delivery, so that screen should take priority.
 
-```js
+```jsx
 if (state.orderReceived) {
   return (
     <OrderReceivedScreen
@@ -85,7 +85,7 @@ if (state.orderReceived) {
 
 If your order has been received, we should show a screen letting you know that, rather than staying on the order form.
 
-```js
+```jsx
 return (
   <PizzaOrderForm
     onCheckout={async () => {
@@ -131,7 +131,7 @@ With tagged unions, we pick **one** property (the "tag") to be in charge of whic
 
 The key difference here is this `mode` property with 4 different string possibilities.
 
-```js
+```jsx
 // function PizzaDelivery()
 
 const [state, setState] = React.useState({
@@ -144,7 +144,7 @@ const [state, setState] = React.useState({
 
 This `mode` is in charge of what screen to show. We've listed which values are allowed, and there's nothing to second guess. It's not possible to have a confusing state like "order received" _AND_ "out for delivery" _AND_ "error" in this system. If you wanted to keep track of a complicated state like that, you would make a new mode like `delivery-error` (we can assume order is received if the order is out for delivery, so it doesn't need to be `received-delivery-error`).
 
-```js
+```jsx
 if (state.mode === "ordering") {
   return (
     <PizzaOrderForm
@@ -182,7 +182,7 @@ if (state.mode === "ordering") {
 
 Now that we have a single source of truth on the current mode, we can write the `if` statements in any order. I'm choosing to put `ordering` first since it's the first step in the user workflow.
 
-```js
+```jsx
 if (state.mode === "received") {
   return (
     <OrderReceivedScreen
@@ -201,7 +201,7 @@ if (state.mode === "received") {
 
 For the next `if` statement, we can use the 2nd step in the workflow. You can see that this time around, we did not have to use the "updater function" style of `setState`. When transitioning from one mode to another, you'll usually want a full new object from scratch, since most modes don't share properties with each other.
 
-```js
+```jsx
 if (state.mode === "delivery") {
   return (
     <OrderOutForDeliveryScreen
@@ -217,7 +217,7 @@ if (state.mode === "delivery") {
 
 Again we use the next step of the workflow, and we use a full new object from scratch with `setState`, since we are transitioning modes.
 
-```js
+```jsx
 if (state.mode === "error") {
   // Check error first since it's higher priority than the other states
   return <ErrorScreen>{state.error.message}</ErrorScreen>;
@@ -285,7 +285,7 @@ If you're still itching to learn more, try searching for **algebraic data types*
 
 If you are using React, be careful with `this.setState`, the state management method for class components. React's `this.setState` merges its parameter into the current state, so it is not suitable for use with tagged unions, which need to be able to add/remove properties. If you have to use `this.setState`, you can nest your tagged union state within an object like this:
 
-```js
+```jsx
 class MyComponent extends React.Component {
   constructor() {
     this.state = {
@@ -419,7 +419,7 @@ When using tagged unions, you might enjoy this helper function if you're using J
 
 If you're using TypeScript, you can omit this, since TypeScript will catch your type errors at compile time.
 
-```js
+```jsx
 function strictObject(object) {
   return new Proxy(object, {
     get(target, prop) {
@@ -496,7 +496,7 @@ class App {
 
 Vue is well suited to use tagged unions. Just remember to assign the entire state object every time, rather than modifying its properties.
 
-```js
+```jsx
 const html = String.raw;
 const app = new Vue({
   el: "#app",
@@ -534,7 +534,7 @@ const app = new Vue({
 
 Tagged unions don't have to be used for state management. You could use them for data modeling as well. Consider these two ways to model mathematical shapes.
 
-```js
+```jsx
 class Rectangle {
   constructor(width, height) {
     this.width = width;
@@ -567,7 +567,7 @@ The class approach is nice because people expect it, and you can write `.area()`
 
 Using plain JSON objects as tagged unions means that anyone can write a function that operates on any plain JSON object.
 
-```js
+```jsx
 function rectangle(width, height) {
   return { type: "rectangle", width, height };
 }
