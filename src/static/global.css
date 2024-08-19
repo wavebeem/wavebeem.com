@@ -67,11 +67,6 @@ body {
   }
 }
 
-p a,
-p b {
-  font-weight: 700;
-}
-
 :any-link:hover {
   text-decoration-line: underline;
 }
@@ -130,6 +125,7 @@ details[open] > summary {
 
 header {
   text-decoration-line: none;
+  border-block-end: 2px dotted var(--color-header-border);
 }
 
 ::selection {
@@ -170,7 +166,7 @@ main {
   flex: auto;
   display: flex;
   flex-direction: column;
-  border-bottom: 2px dotted var(--color-main-border1);
+  border-block: 2px dotted var(--color-main-border1);
   border-left-width: 0;
   border-right-width: 0;
 }
@@ -231,7 +227,7 @@ main {
 
 .sage-prose a,
 .sage-link {
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: 1.5px;
   color: var(--theme-color-accent);
   border-radius: 0.25rem;
 }
@@ -340,7 +336,7 @@ code.sage-bright,
 }
 
 .netpet:hover {
-  mix-blend-mode: hard-light;
+  opacity: 0.8;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -356,7 +352,7 @@ code.sage-bright,
 }
 
 .nav {
-  border-block: 2px dotted var(--color-main-border1);
+  /* border-block: 2px dotted var(--color-main-border1); */
 }
 
 :is(.nav, .header) .sage-link {

@@ -29,7 +29,7 @@ figure figcaption {
   padding: 1rem;
   border: 0;
   background-color: var(--color-main-background1);
-  color: var(--color-main-text);
+  color: var(--color-syntax-default);
   overflow-x: auto;
   box-shadow: 0 2px 0 var(--color-main-shadow);
 }

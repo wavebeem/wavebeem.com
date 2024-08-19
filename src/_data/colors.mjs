@@ -18,29 +18,31 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 }
 
 const colors = {
-  "color-header-text": oklch(40, 40, 125),
-  "color-header-background": oklch(95, 50, 125),
+  "color-header-text": oklch(40, 40, 170),
+  "color-header-background": oklch(95, 50, 170),
+  "color-header-border": oklch(80, 25, 170),
 
-  "color-nav-text": oklch(30, 30, 290),
-  "color-nav-background": oklch(90, 20, 290),
+  "color-nav-text": oklch(40, 40, 170),
+  "color-nav-background": oklch(98, 50, 170),
 
-  "color-main-accent": oklch(50, 50, 290),
-  "color-main-background1": oklch(100, 20, 290),
-  "color-main-background2": oklch(98, 20, 290),
-  "color-main-background3": oklch(97, 20, 290),
-  "color-main-border1": oklch(75, 15, 290),
-  "color-main-border2": oklch(85, 15, 290),
-  "color-main-text": oklch(30, 30, 290),
-  "color-main-code": oklch(50, 100, 40),
-  "color-main-shadow": oklch(93, 20, 290),
+  "color-main-accent": oklch(50, 50, 250),
+  "color-main-background1": oklch(100, 20, 40),
+  "color-main-background2": oklch(98, 20, 40),
+  "color-main-background3": oklch(97, 20, 40),
+  "color-main-border1": oklch(75, 15, 40),
+  "color-main-border2": oklch(85, 15, 40),
+  "color-main-text": oklch(40, 60, 40),
+  "color-main-code": oklch(50, 100, 340),
+  "color-main-shadow": oklch(93, 20, 40),
 
-  "color-syntax-comment": oklch(55, 0, 300),
-  "color-syntax-keyword": oklch(47, 100, 300),
-  "color-syntax-property": oklch(52, 100, 190),
-  "color-syntax-string": oklch(52, 100, 135),
-  "color-syntax-punctuation": oklch(55, 40, 300),
+  "color-syntax-default": oklch(20, 30, 40),
+  "color-syntax-comment": oklch(52, 0, 170),
+  "color-syntax-keyword": oklch(52, 100, 170),
+  "color-syntax-property": oklch(52, 60, 340),
+  "color-syntax-string": oklch(52, 100, 250),
+  "color-syntax-punctuation": oklch(52, 30, 40),
 
-  "color-easter-egg-shadow": oklch(90, 20, 290),
+  "color-easter-egg-shadow": oklch(90, 20, 40),
   "color-easter-egg-highlight": oklch(100, 0, 0, 50),
 };
 
