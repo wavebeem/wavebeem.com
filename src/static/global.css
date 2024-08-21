@@ -37,7 +37,7 @@
 
   overflow-y: scroll;
   color-scheme: light dark;
-  scrollbar-color: var(--color-nav-text) var(--color-nav-background);
+  scrollbar-color: var(--color-main-text) var(--color-main-background3);
 }
 
 body {
