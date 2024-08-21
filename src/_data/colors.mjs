@@ -32,6 +32,7 @@ const colors = {
   "color-main-border1": oklch(75, 15, 40),
   "color-main-border2": oklch(85, 15, 40),
   "color-main-text": oklch(40, 60, 40),
+  "color-main-text-bright": oklch(35, 60, 40),
   "color-main-code": oklch(50, 100, 340),
   "color-main-shadow": oklch(92, 20, 40),
 

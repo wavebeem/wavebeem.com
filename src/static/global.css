@@ -232,6 +232,11 @@ main {
   border-radius: 0.25rem;
 }
 
+.sage-prose :is(h1, h2, h3),
+.sage-bright {
+  color: var(--color-main-text-bright);
+}
+
 code.sage-bright,
 .sage-prose :not(pre) > code {
   background: var(--color-main-background1);
