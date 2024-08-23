@@ -1,0 +1,192 @@
+---
+title: |
+  10 years of themes
+description: |
+  An image gallery and reflection all the themes I've made for wavebeem.com
+---
+
+Let's take a tour through the last 10 years of themes for this site.
+
+Note: Older screenshots have been altered to cover up "legacy" images, names, and pronouns.
+
+## 2013
+
+Based on the copyright footer, I already had this website since 2010. It was my my first website at a domain I owned and operated. I think it was hosted via GitHub pages. It was made as plain HTML files :) I clearly hadn't heard of the concept of "line height" yet, and it looks a little barren. It's really just a resume, but it almost looks like technical documentation for an uninteresting library. This establishes my love for green and my desire to have something a little softer than stark white.
+
+<figure>
+  <figcaption>
+    Basic resume&mdash;with two background colors
+  </figcaption>
+  <a href="/static/img/theme-history/site2013.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2013.webp" alt="">
+  </a>
+</figure>
+
+## 2014
+
+Welp, I used Bootstrap lol xD Everyone else as at the time, and I probably did this because I thought it would be good practice or something? Honestly it looks pretty good even by today's standards, in my opinion. The bluer green looks a lot nicer, there's a photo to welcome you and humanize me, and I put contact info front and center. It's a bit dense with all the sections of text and relying just on heading sizes to differentiate everything, but I was trying!
+
+<figure>
+  <figcaption>
+    Bootstrap&mdash;It looks like a lot of other sites from
+  </figcaption>
+  <a href="/static/img/theme-history/site2014.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2014.webp" alt="">
+  </a>
+</figure>
+
+## 2015
+
+I think at this point I switched back to fully custom CSS. This was released the year after Material Design came out, so you can see I was clearly inspired by flatness and cards. I guess I wasn't interested in using CSS `box-shadow`, which was [definitely supported](https://caniuse.com/css-boxshadow) in every browser at the time. The layout is giving a [masonry layout](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/) vibe, which was probably already a big deal on Pinterest or something at the time.
+
+The green has shifted even bluer---maybe too blue.
+
+<figure>
+  <figcaption>
+    Cards&mdash;It's all about cards now
+  </figcaption>
+  <a href="/static/img/theme-history/site2015.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2015.webp" alt="">
+  </a>
+</figure>
+
+## 2016
+
+Wow, did the "mobile first" bug bite me here? The 2015 layout was a bit overwhelming and dense, but this layout feels incredibly silly and sparse on desktop! Looks like I tried to bring serif fonts back for a minute, but it's just so weirdly columnar.
+
+The green looks really nice in this image to me.
+
+<figure>
+  <figcaption>
+    Mobile first&mdash;a simple landing page
+  </figcaption>
+  <a href="/static/img/theme-history/site2016.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2016.webp" alt="">
+  </a>
+</figure>
+
+## 2017
+
+Whoa, I guess I was thinking about Material Design again with the ALL CAPS and underlined tab bar on top of stark white. It kinda looks like a mobile app. It's clean, but it's lacking a bit of personality. Clearly I tried to inject some with the "chat bubble" interface at the top and my fun pixel art self portrait. I like that I put more content on here and it's more conversational, but it just doesn't have enough color for me.
+
+<figure>
+  <figcaption>
+    Material design&mdash;and a pixel art self portrait
+  </figcaption>
+  <a href="/static/img/theme-history/site2017.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2017.webp" alt="">
+  </a>
+</figure>
+
+## 2018
+
+Not a huge shift, honestly. I got over the Material Design nonsense and injected some color back into the page. The massive commissioned portrait is fun! And I'm sure I was proud of the speech bubble arrow at the time haha.
+
+<figure>
+  <figcaption>
+    More green&mdash;plus a commissioned portrait
+  </figcaption>
+  <a href="/static/img/theme-history/site2018.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2018.webp" alt="">
+  </a>
+</figure>
+
+## 2020
+
+I'm not sure what happened in 2019, maybe I was too busy to update how my site looked? Maybe I missed a theme update in my Git history when I was browsing it. Well, we all know what happened in 2020 that made people spend a lot more time on the computer, but it looks like I made this new theme back in January before the US was taking any COVID-19 precautions.
+
+Sadly, green is almost entirely absent from this theme. It looks cool, though. I wish it was my own art, but my recolored Dragon Quest slime was animated and made the page feel lively. I went hard on serif fonts here, but I think it works really well given the parchment colors and adventure vibes on the front page. Also I implemented a reactive pixel art container using CSS which I was super proud of. This was also my first site to include a dark mode! I had previously been a massive dark mode nerd when I used Linux, especially while I was in college, so the whole dark mode trend felt kinda like "well duh" to me at the time. Fast forward to 2024 when I find them painful to look at on average, probably in part due to my astigmatism causing light text on a dark background to look blurry.
+
+So in many ways this feels more me, but like I lost something.
+
+<figure>
+  <figcaption>
+    <a href="https://lospec.com/palette-list/en4">EN4</a> color palette&mdash;animated Dragon Quest Slime &amp; old timey parchment vibe
+  </figcaption>
+  <a href="/static/img/theme-history/site2020.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2020.webp" alt="">
+  </a>
+</figure>
+
+## 2021
+
+You can see 2021's design swinging hard back to 2018 with the color palette and nav bar especially. This time I made a much cooler self portrait, one that I'm still proud of honestly. You'll notice it's got a nonbinary flag in the background: this was the year I came out as nonbinary :3
+
+The colors are a bit more relaxed here, and it's (barely) using my <a href="https://1bit-ui.wavebeem.com">1bit-ui</a> library.
+
+<figure>
+  <figcaption>
+    Cards again&mdash;Another self portrait &amp; it uses my <a href="https://1bit-ui.wavebeem.com">1bit-ui</a> library
+  </figcaption>
+  <a href="/static/img/theme-history/site2021.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2021.webp" alt="">
+  </a>
+</figure>
+
+## 2022
+
+Minty fresh! Pink still isn't a fave color for me but it works really well here. I miss having a contrasting nav bar, and the <a href="https://2bit-ui.wavebeem.com">2bit-ui</a> usage makes it feel a bit drab with so few overall colors, but this one is finally oozing some personality.
+
+<figure>
+  <figcaption>
+    Mint green &amp; pink&mdash;plus it uses my <a href="https://2bit-ui.wavebeem.com">2bit-ui</a> library
+  </figcaption>
+  <a href="/static/img/theme-history/site2022.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2022.webp" alt="">
+  </a>
+</figure>
+
+## 2023
+
+<figure>
+  <figcaption>
+    Dark purple and lime&mdash;and my matching hair!
+  </figcaption>
+  <a href="/static/img/theme-history/site2023.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2023.webp" alt="">
+  </a>
+</figure>
+
+## 2024 part 1
+
+<figure>
+  <figcaption>
+    Dark green and lime&mdash;featuring my <a href="https://candy.wavebeem.com">candy.css</a> library
+  </figcaption>
+  <a href="/static/img/theme-history/site2024a.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2024a.webp" alt="">
+  </a>
+</figure>
+
+## 2024 part 2
+
+<figure>
+  <figcaption>
+    Windows Vista meets Nintendo Wii
+  </figcaption>
+  <a href="/static/img/theme-history/site2024b.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2024b.webp" alt="">
+  </a>
+</figure>
+
+## 2024 part 3
+
+<figure>
+  <figcaption>
+    Lavender and lime&mdash;fully custom CSS again
+  </figcaption>
+  <a href="/static/img/theme-history/site2024c.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2024c.webp" alt="">
+  </a>
+</figure>
+
+## 2024 part 4
+
+<figure>
+  <figcaption>
+    Summer theme
+  </figcaption>
+  <a href="/static/img/theme-history/site2024d.webp">
+    <img loading="lazy" src="/static/img/theme-history/site2024d.webp" alt="">
+  </a>
+</figure>
