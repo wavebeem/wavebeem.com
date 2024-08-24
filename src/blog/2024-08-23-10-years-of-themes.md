@@ -2,7 +2,7 @@
 title: |
   10 years of themes
 description: |
-  An image gallery and reflection all the themes I've made for wavebeem.com
+  An image gallery and reflection of 10 years of themes I've made for wavebeem.com
 ---
 
 Let's take a tour through the last 10 years of themes for this site.
