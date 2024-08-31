@@ -1,0 +1,23 @@
+.sage-well > details {
+  margin: 0;
+}
+
+.sage-well > details > summary > * {
+  display: inline;
+}
+
+.sage-well > details > :last-child {
+  margin-block-end: 0;
+}
+
+.sage-well:has(> details) {
+  margin-block: 1rem;
+}
+
+summary {
+  border-radius: 0.5rem;
+}
+
+summary:hover {
+  background: var(--color-main-background2);
+}
