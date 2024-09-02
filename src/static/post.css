@@ -6,7 +6,7 @@
 hr {
   border: 0;
   border-bottom: 2px dotted;
-  color: var(--color-main-border2);
+  color: var(--color-main-shadow);
 }
 
 figure {

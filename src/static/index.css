@@ -36,7 +36,7 @@
   float: right;
   margin: 1rem;
   margin-top: 0;
-  box-shadow: 0 0 4px var(--color-main-background1);
+  box-shadow: 0 2px 0 0 var(--color-main-shadow);
   border-radius: 9999px;
 }
 
