@@ -19,22 +19,20 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 
 const colors = {
   "color-header-text": oklch(40, 40, 170),
-  "color-header-background": oklch(95, 30, 170),
-  "color-header-border": oklch(96, 30, 170),
+  "color-header-background": oklch(90, 25, 170),
+  "color-header-border": oklch(86, 25, 170),
 
   "color-nav-text": oklch(40, 40, 170),
-  "color-nav-background": oklch(98, 30, 170),
-  "color-nav-border": oklch(97, 30, 170),
-  "color-nav-shadow": oklch(88, 10, 40),
+  "color-nav-background": oklch(99, 25, 170),
 
-  "color-main-accent": oklch(50, 50, 250),
-  "color-main-background1": oklch(99.5, 20, 40),
+  "color-main-accent": oklch(50, 50, 170),
+  "color-main-background1": oklch(99, 20, 40),
   "color-main-background2": oklch(97, 20, 40),
   "color-main-background3": oklch(96, 20, 40),
   "color-main-text": oklch(40, 60, 40),
   "color-main-text-bright": oklch(35, 60, 40),
   "color-main-code": oklch(50, 100, 340),
-  "color-main-shadow": oklch(88, 10, 40),
+  "color-main-shadow": oklch(88, 15, 40),
 
   "color-syntax-default": oklch(20, 30, 40),
   "color-syntax-comment": oklch(52, 0, 170),
