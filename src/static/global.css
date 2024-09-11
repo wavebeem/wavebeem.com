@@ -123,6 +123,10 @@ details[open] > summary {
   margin-bottom: 1rem;
 }
 
+.margin0 {
+  margin: 0;
+}
+
 .header {
   text-decoration-line: none;
   border-bottom: 2px solid var(--color-header-border);
