@@ -21,11 +21,6 @@
   font-size: 1.25rem;
 }
 
-.read-more-button {
-  width: max-content;
-  margin-inline: auto;
-}
-
 .clearfix {
   clear: both;
 }
