@@ -47,7 +47,7 @@ body {
    * value; but this way most things get bumped up a little bigger, for a
    * slightly comfier to read site (since this is a blog, after all)
    */
-  --body-padding-y: 2rem;
+  --body-padding-y: 1rem;
   --body-padding-x: 1rem;
   --window-border-radius: 0;
   font-size: 1.25rem;
@@ -62,7 +62,7 @@ body {
 
 @media (min-width: 800px) {
   body {
-    --body-padding-x: 2rem;
+    --body-padding-x: 1rem;
     --body-padding-y: 2rem;
   }
 }
@@ -127,10 +127,43 @@ details[open] > summary {
   margin: 0;
 }
 
-.header {
-  grid-area: header;
-  text-decoration-line: none;
-  padding-bottom: 4rem;
+.hamburger {
+  margin: 0;
+}
+
+.hamburger summary {
+  list-style-type: none;
+  position: relative;
+  background: var(--color-header-button);
+  padding: 0.5rem 1rem;
+  /* margin: 0.5rem; */
+  border-radius: 1rem;
+}
+
+.hamburger[open] summary {
+  margin: inherit;
+  /* margin: 0.5rem; */
+}
+
+.hamburger:has(:checked) {
+  filter: invert(1);
+}
+
+.header .content-column {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  justify-content: space-between;
+  align-items: center;
+  isolation: isolate;
+}
+
+.header .hamburger {
+  display: contents;
+}
+
+.slime[data-position="top"] {
+  height: 3rem;
+  background: var(--color-header-background);
   --mask: radial-gradient(
         43.27px at 50% calc(100% - 60px),
         #000 99%,
@@ -139,7 +172,7 @@ details[open] > summary {
       calc(50% - 48px) 0/96px 100%,
     radial-gradient(43.27px at 50% calc(100% + 36px), #0000 99%, #000 101%) 50%
       calc(100% - 24px) / 96px 100% repeat-x;
-  --webkit-mask: var(--mask);
+  -webkit-mask: var(--mask);
   mask: var(--mask);
 }
 
@@ -197,6 +230,10 @@ main {
   display: flex;
 }
 
+.flex-auto {
+  flex: auto;
+}
+
 .inline-flex {
   display: inline-flex;
 }
@@ -222,6 +259,10 @@ main {
   color: var(--theme-color-text);
 }
 
+.theme-root :any-link {
+  color: var(--theme-color-accent);
+}
+
 .theme-header {
   --theme-color-background: var(--color-header-background);
   --theme-color-text: var(--color-header-text);
@@ -238,13 +279,6 @@ main {
   width: 1.25em;
   height: auto;
   vertical-align: middle;
-}
-
-.header .flex {
-  flex: auto;
-  justify-content: space-between;
-  gap: 1rem;
-  align-items: center;
 }
 
 .sage-prose a,
@@ -284,8 +318,8 @@ code.sage-bright,
 
 .sage-texture-striped {
   --size: 0.5rem;
-  --a: var(--color-straw-background2);
-  --b: var(--color-straw-background1);
+  --a: var(--color-stripe-background2);
+  --b: var(--color-stripe-background1);
   background: repeating-linear-gradient(
       -45deg,
       var(--a) 0 calc(0.5 * var(--size)),
@@ -295,20 +329,19 @@ code.sage-bright,
     var(--a);
 }
 
-.nav :any-link {
-  padding: 1rem;
-  font-weight: 800;
-  border-radius: 0.5rem;
+.nav {
+  grid-column: 1 / -1;
 }
 
-@media (min-width: 420px) {
-  :is(.nav, .header) .content-column {
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    padding-block: 1rem;
-    text-decoration-line: none;
-  }
+.nav :any-link {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  text-decoration-line: none;
+  border-radius: 0.5rem;
+  text-decoration-thickness: 2px;
+}
+.nav :any-link:hover {
+  text-decoration-line: underline;
 }
 
 @media (min-width: 800px) {
@@ -321,10 +354,10 @@ code.sage-bright,
   max-width: 800px;
   width: 100%;
   margin-inline: auto;
+  padding: var(--body-padding-y) var(--body-padding-x);
 }
 
 :is(main, footer) .content-column {
-  padding: var(--body-padding-y) var(--body-padding-x);
 }
 
 .sage-well {
@@ -336,18 +369,8 @@ code.sage-bright,
   /* box-shadow: 0 2px 0 0 var(--color-main-shadow); */
 }
 
-:is(.nav, .header) .content-column {
-  display: flex;
-  gap: 0.5rem;
-  padding: 0 calc(0.5 * var(--body-padding-x));
-  text-decoration-line: none;
-}
-
-:is(.nav, .header) .content-column :any-link {
-  padding: 1rem calc(0.5 * var(--body-padding-x));
-}
-
 .logo {
+  padding: 0.5rem 1rem;
   font-size: 1.5rem;
   letter-spacing: 1px;
   font-family: var(--font-logo);
@@ -373,11 +396,6 @@ code.sage-bright,
   }
 }
 
-:is(header, nav) :any-link:focus-visible {
-  outline-offset: -0.5rem;
-  border-radius: 1rem;
-}
-
 :is(.nav, .header) .sage-link {
   text-decoration-line: none;
 }
@@ -387,16 +405,17 @@ code.sage-bright,
 }
 
 .footer {
-  text-align: center;
+  /* text-align: center; */
   font-size: 1rem;
   font-weight: 800;
-  padding-top: 4rem;
-  --mask: radial-gradient(43.27px at 50% 60px, #000 99%, #0000 101%) 50% 0/96px
-      100%,
-    radial-gradient(43.27px at 50% -36px, #0000 99%, #000 101%) calc(50% - 48px)
-      24px/96px 100% repeat-x;
-  --webkit-mask: var(--mask);
-  mask: var(--mask);
+  margin-top: 2rem;
+  /* padding-top: 4rem; */
+  /* border-bottom: 1rem solid var(--color-main-background1); */
+  /* background: linear-gradient(
+    to bottom,
+    transparent 0 calc(100% - 1rem),
+    var(--color-footer-text) calc(100% - 1rem)
+  ); */
 }
 
 @media (prefers-reduced-motion: reduce) {

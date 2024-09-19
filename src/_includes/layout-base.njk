@@ -75,25 +75,31 @@
     />
   </head>
   <body>
-    <header class="header theme-root screen-only theme-header">
+    <header class="header theme-root theme-header screen-only">
       <div class="content-column">
         <div class="flex">
           <a href="/" class="logo sage-link">wavebeem </a>
-          <a href="https://netpet.wavebeem.com" class="netpet sage-link">
-            <img
-              width="32"
-              height="32"
-              src="/static/img/page/netpet.webp"
-              alt="netpet, a virtual pet"
-            />
-          </a>
         </div>
+        <details class="hamburger">
+          <summary>menu</summary>
+          <nav class="nav flex flex-auto flex-wrap">
+            <a href="/">home</a>
+            <a href="/projects/">projects</a>
+            <a href="/contact/">contact</a>
+            <a href="/blog/">blog</a>
+            <a href="/art/">art</a>
+            <a href="/resume/">resume</a>
+            <a href="/about/">about</a>
+            <a href="/uses/">uses</a>
+          </nav>
+        </details>
       </div>
     </header>
+    <div class="slime" data-position="top"></div>
     <main>
       <div class="content-column">{{ content | safe }}</div>
     </main>
-    <footer class="footer screen-only theme-root theme-footer">
+    <footer class="footer screen-only sage-texture-striped">
       <div class="content-column">
         &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
           class="sage-bright"
