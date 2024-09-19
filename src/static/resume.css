@@ -1,49 +1,49 @@
-:is(h1, h2, h3) small {
+main :is(h1, h2, h3) small {
   color: var(--color-main-text);
   font-weight: normal;
 }
 
 @media (max-width: 800px) {
-  small {
+  main small {
     display: block;
   }
 }
 
-.sage-well ul:last-of-type {
+main .sage-well ul:last-of-type {
   margin-bottom: 0;
 }
 
-.sage-well > details {
+main .sage-well > details {
   margin-block: 0;
 }
 
-ul li + li {
+main ul li + li {
   margin-top: 1rem;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-ul {
+main ul {
   padding-left: 1em;
 }
 
-ol {
+main ol {
   padding-left: 1em;
 }
 
-summary {
+main summary {
   border-radius: 0.5rem;
 }
 
-summary:hover {
+main summary:hover {
   background: var(--color-main-background2);
 }
 
-dl {
+main dl {
   margin-block: 0;
 }
 
 @media (min-width: 800px) {
-  dl {
+  main dl {
     display: grid;
     grid-template-columns: max-content 1fr;
     gap: 1rem 2rem;
@@ -51,11 +51,11 @@ dl {
 }
 
 @media (max-width: 800px) {
-  dd + dt {
+  main dd + dt {
     margin-top: 1rem;
   }
 }
 
-dd {
+main dd {
   margin-inline: 0;
 }

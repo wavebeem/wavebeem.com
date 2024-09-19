@@ -135,9 +135,12 @@ details[open] > summary {
   list-style-type: none;
   position: relative;
   background: var(--color-header-button);
-  padding: 0.5rem 1rem;
-  /* margin: 0.5rem; */
-  border-radius: 1rem;
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
+}
+
+.hamburger summary:hover {
+  background: var(--color-header-button-hover);
 }
 
 .hamburger[open] summary {
@@ -155,6 +158,7 @@ details[open] > summary {
   justify-content: space-between;
   align-items: center;
   isolation: isolate;
+  padding: 1rem 1rem 1rem 0;
 }
 
 .header .hamburger {
@@ -162,7 +166,7 @@ details[open] > summary {
 }
 
 .slime[data-position="top"] {
-  height: 3rem;
+  height: 2rem;
   background: var(--color-header-background);
   --mask: radial-gradient(
         43.27px at 50% calc(100% - 60px),
@@ -176,11 +180,11 @@ details[open] > summary {
   mask: var(--mask);
 }
 
-::selection {
+/* ::selection {
   background: var(--color-main-text);
   color: var(--color-main-background1);
   text-shadow: none;
-}
+} */
 
 p {
   margin: 1rem 0;
@@ -331,6 +335,8 @@ code.sage-bright,
 
 .nav {
   grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .nav :any-link {

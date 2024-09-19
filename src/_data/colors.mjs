@@ -21,6 +21,7 @@ const colors = {
   "color-header-text": oklch(40, 40, 140),
   "color-header-background": oklch(90, 30, 140),
   "color-header-button": oklch(85, 30, 140),
+  "color-header-button-hover": oklch(83, 30, 140),
 
   "color-main-accent": oklch(50, 50, 290),
   "color-main-background1": oklch(95, 20, 30),
