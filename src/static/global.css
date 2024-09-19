@@ -130,6 +130,17 @@ details[open] > summary {
 .header {
   grid-area: header;
   text-decoration-line: none;
+  padding-bottom: 4rem;
+  --mask: radial-gradient(
+        43.27px at 50% calc(100% - 60px),
+        #000 99%,
+        #0000 101%
+      )
+      calc(50% - 48px) 0/96px 100%,
+    radial-gradient(43.27px at 50% calc(100% + 36px), #0000 99%, #000 101%) 50%
+      calc(100% - 24px) / 96px 100% repeat-x;
+  --webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 
 ::selection {
@@ -271,25 +282,6 @@ code.sage-bright,
   outline-offset: 2px;
 }
 
-.straw {
-  height: 0.125rem;
-  background-origin: border-box;
-  /* border-block: 1px solid var(--color-straw-border); */
-}
-
-.sage-texture-striped {
-  --size: 0.125rem;
-  --a: var(--color-straw-background2);
-  --b: var(--color-straw-background1);
-  background: repeating-linear-gradient(
-      to right,
-      var(--a) 0 calc(1 * var(--size)),
-      var(--b) calc(1 * var(--size)) calc(2 * var(--size))
-    )
-    var(--a);
-}
-
-/*
 .sage-texture-striped {
   --size: 0.5rem;
   --a: var(--color-straw-background2);
@@ -301,7 +293,7 @@ code.sage-bright,
       var(--a) calc(1.5 * var(--size)) calc(2 * var(--size))
     )
     var(--a);
-} */
+}
 
 .nav :any-link {
   padding: 1rem;
@@ -398,6 +390,13 @@ code.sage-bright,
   text-align: center;
   font-size: 1rem;
   font-weight: 800;
+  padding-top: 4rem;
+  --mask: radial-gradient(43.27px at 50% 60px, #000 99%, #0000 101%) 50% 0/96px
+      100%,
+    radial-gradient(43.27px at 50% -36px, #0000 99%, #000 101%) calc(50% - 48px)
+      24px/96px 100% repeat-x;
+  --webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 
 @media (prefers-reduced-motion: reduce) {
