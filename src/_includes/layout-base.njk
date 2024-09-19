@@ -90,18 +90,12 @@
         </div>
       </div>
     </header>
-    <nav class="nav theme-root theme-nav screen-only">
-      <div class="flex content-column">
-        <a class="sage-link" href="/">Home</a>
-        <a class="sage-link" href="/blog/">Blog</a>
-        <a class="sage-link" href="/art/">Art</a>
-        <a class="sage-link" href="/resume/">Resume</a>
-      </div>
-    </nav>
+    <div class="straw sage-texture-striped"></div>
     <main>
       <div class="content-column">{{ content | safe }}</div>
     </main>
-    <footer class="footer screen-only sage-texture-striped">
+    <div class="straw sage-texture-striped"></div>
+    <footer class="footer screen-only theme-root theme-footer">
       <div class="content-column">
         &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
           class="sage-bright"

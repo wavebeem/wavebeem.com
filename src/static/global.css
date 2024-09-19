@@ -130,7 +130,6 @@ details[open] > summary {
 .header {
   grid-area: header;
   text-decoration-line: none;
-  border-bottom: 2px solid var(--color-header-border);
 }
 
 ::selection {
@@ -171,10 +170,6 @@ main {
   flex: auto;
   display: flex;
   flex-direction: column;
-  border-top: 2px solid var(--color-main-shadow);
-  border-bottom: 2px dotted var(--color-main-shadow);
-  border-left-width: 0;
-  border-right-width: 0;
 }
 
 :focus-visible {
@@ -222,10 +217,10 @@ main {
   --theme-color-accent: var(--color-header-text);
 }
 
-.theme-nav {
-  --theme-color-background: var(--color-nav-background);
-  --theme-color-text: var(--color-nav-text);
-  --theme-color-accent: var(--color-nav-text);
+.theme-footer {
+  --theme-color-background: var(--color-footer-background);
+  --theme-color-text: var(--color-footer-text);
+  --theme-color-accent: var(--color-footer-text);
 }
 
 .emoji {
@@ -276,10 +271,29 @@ code.sage-bright,
   outline-offset: 2px;
 }
 
+.straw {
+  height: 0.125rem;
+  background-origin: border-box;
+  /* border-block: 1px solid var(--color-straw-border); */
+}
+
 .sage-texture-striped {
-  --size: 8px;
-  --a: var(--color-main-background2);
-  --b: var(--color-main-background1);
+  --size: 0.125rem;
+  --a: var(--color-straw-background2);
+  --b: var(--color-straw-background1);
+  background: repeating-linear-gradient(
+      to right,
+      var(--a) 0 calc(1 * var(--size)),
+      var(--b) calc(1 * var(--size)) calc(2 * var(--size))
+    )
+    var(--a);
+}
+
+/*
+.sage-texture-striped {
+  --size: 0.5rem;
+  --a: var(--color-straw-background2);
+  --b: var(--color-straw-background1);
   background: repeating-linear-gradient(
       -45deg,
       var(--a) 0 calc(0.5 * var(--size)),
@@ -287,7 +301,7 @@ code.sage-bright,
       var(--a) calc(1.5 * var(--size)) calc(2 * var(--size))
     )
     var(--a);
-}
+} */
 
 .nav :any-link {
   padding: 1rem;
@@ -327,7 +341,7 @@ code.sage-bright,
   padding: 1rem;
   border-radius: 1rem;
   background: var(--color-main-background1);
-  box-shadow: 0 2px 0 0 var(--color-main-shadow);
+  /* box-shadow: 0 2px 0 0 var(--color-main-shadow); */
 }
 
 :is(.nav, .header) .content-column {
