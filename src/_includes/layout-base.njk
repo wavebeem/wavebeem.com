@@ -84,16 +84,9 @@
         <details class="hamburger">
           <summary>Menu</summary>
           <nav class="nav">
-            <a href="/">Home</a>
-            <a href="/projects/">Projects</a>
-            <a href="/contact/">Contact info</a>
-            <a href="/blog/">Blog</a>
-            <a href="/art/">Art gallery</a>
-            <a href="/resume/">Resume</a>
-            <a href="/about/">About this site</a>
-            <a href="/uses/">Things I use</a>
-            <a href="/links/">Cool links</a>
-            <a href="/shrines/">Shrines</a>
+            {% for item in menu %}
+              <a href="{{ item.url }}">{{ item.title }}</a>
+            {% endfor %}
           </nav>
         </details>
       </div>

@@ -46,14 +46,7 @@ css:
 <h2 class="sage-bright">Take a look around</h2>
 
 <div class="clicky-list">
-  <a class="link-card" href="/">Home</a>
-  <a class="link-card" href="/projects/">Projects</a>
-  <a class="link-card" href="/contact/">Contact info</a>
-  <a class="link-card" href="/blog/">Blog</a>
-  <a class="link-card" href="/art/">Art gallery</a>
-  <a class="link-card" href="/resume/">Resume</a>
-  <a class="link-card" href="/about/">About this site</a>
-  <a class="link-card" href="/uses/">Things I use</a>
-  <a class="link-card" href="/links/">Cool links</a>
-  <a class="link-card" href="/shrines/">Shrines</a>
+  {% for item in menu %}
+    <a class="link-card" href="{{ item.url }}">{{ item.title }}</a>
+  {% endfor %}
 </div>
