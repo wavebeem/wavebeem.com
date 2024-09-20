@@ -140,6 +140,7 @@ details[open] > summary {
   padding: 0.25rem 1rem;
   border-radius: 9999px;
   font-weight: 800;
+  cursor: default;
 }
 
 .hamburger summary:hover {
@@ -293,7 +294,7 @@ code.sage-bright,
   border: 2px solid transparent;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
-  background: var(--color-main-text);
+  background: var(--color-main-link);
   color: var(--color-main-background3);
 }
 
