@@ -2,17 +2,6 @@
   margin: 0;
 }
 
-.grid-2 {
-  display: grid;
-  gap: 1rem;
-}
-
-@media (min-width: 800px) {
-  .grid-2 {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .card-heading {
   border: none;
   padding: 0;

@@ -2,11 +2,6 @@
   margin: 0;
 }
 
-.grid-2 {
-  display: grid;
-  gap: 1rem;
-}
-
 .clicky-list {
   display: grid;
   gap: 1rem;
@@ -14,25 +9,6 @@
 
 @media (min-width: 500px) {
   .clicky-list {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.clicky-list--item {
-  display: flex;
-  flex-direction: column;
-  font-weight: 600;
-  font-size: 1.25rem;
-  text-decoration-line: none;
-  text-decoration-thickness: 2px;
-  padding: 1rem;
-  border-radius: 1rem;
-  color: var(--color-main-link);
-  background: var(--color-main-background1);
-}
-
-@media (min-width: 800px) {
-  .grid-2 {
     grid-template-columns: 1fr 1fr;
   }
 }

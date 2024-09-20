@@ -363,6 +363,17 @@ code.sage-bright,
   padding: var(--body-padding-y) var(--body-padding-x);
 }
 
+.grid2 {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 800px) {
+  .grid2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .sage-well {
   box-sizing: border-box;
   border: 0;
@@ -370,6 +381,19 @@ code.sage-bright,
   border-radius: 1rem;
   background: var(--color-main-background1);
   /* box-shadow: 0 2px 0 0 var(--color-main-shadow); */
+}
+
+.link-card {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-decoration-line: none;
+  text-decoration-thickness: 2px;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--color-main-link);
+  background: var(--color-main-background1);
 }
 
 .logo {
