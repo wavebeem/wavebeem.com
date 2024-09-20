@@ -161,17 +161,18 @@ details[open] > summary {
   display: contents;
 }
 
-.slime[data-position="top"] {
+.slime {
   height: 2rem;
   background: var(--color-header-background);
+  /* https://css-generators.com/wavy-shapes/ */
   --mask: radial-gradient(
-        43.27px at 50% calc(100% - 60px),
+        1.35rem at 50% calc(100% - 1.9rem),
         #000 99%,
         #0000 101%
       )
-      calc(50% - 48px) 0/96px 100%,
-    radial-gradient(43.27px at 50% calc(100% + 36px), #0000 99%, #000 101%) 50%
-      calc(100% - 24px) / 96px 100% repeat-x;
+      calc(50% - 2rem) 0/4rem 100%,
+    radial-gradient(1.35rem at 50% calc(100% + 0.9rem), #0000 99%, #000 101%)
+      50% calc(100% - 1rem) / 4rem 100% repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
