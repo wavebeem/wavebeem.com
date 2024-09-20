@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html
   lang="en"
-  class="theme-root sage-scrollbar"
+  class="sage-scrollbar"
   data-tags="{{ (tags or []) | join(' ') }}"
 >
   <head>
@@ -9,6 +9,7 @@
     <meta http-equiv="content-security-policy" content="{{ csp | safe }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content="{{ eleventy.generator }}" />
+    <meta name="theme-color" content="{{ colors['color-header-background'] }}"
     <link
       rel="preload"
       as="font"
@@ -75,29 +76,22 @@
     />
   </head>
   <body>
-    <header class="header theme-root screen-only theme-header">
+    <header class="header screen-only">
       <div class="content-column">
         <div class="flex">
           <a href="/" class="logo sage-link">wavebeem </a>
-          <a href="https://netpet.wavebeem.com" class="netpet sage-link">
-            <img
-              width="32"
-              height="32"
-              src="/static/img/page/netpet.webp"
-              alt="netpet, a virtual pet"
-            />
-          </a>
         </div>
+        <details class="hamburger">
+          <summary>Menu</summary>
+          <nav class="nav">
+            {% for item in menu %}
+              <a href="{{ item.url }}">{{ item.title }}</a>
+            {% endfor %}
+          </nav>
+        </details>
       </div>
     </header>
-    <nav class="nav theme-root theme-nav screen-only">
-      <div class="flex content-column">
-        <a class="sage-link" href="/">Home</a>
-        <a class="sage-link" href="/blog/">Blog</a>
-        <a class="sage-link" href="/art/">Art</a>
-        <a class="sage-link" href="/resume/">Resume</a>
-      </div>
-    </nav>
+    <div class="slime"></div>
     <main>
       <div class="content-column">{{ content | safe }}</div>
     </main>

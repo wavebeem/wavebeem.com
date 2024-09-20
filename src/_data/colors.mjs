@@ -18,31 +18,33 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 }
 
 const colors = {
-  "color-header-text": oklch(40, 40, 165),
-  "color-header-background": oklch(90, 25, 165),
-  "color-header-border": oklch(86, 25, 165),
+  "color-header-text": oklch(40, 40, 140),
+  "color-header-background": oklch(90, 30, 140),
+  "color-header-button": oklch(86, 32, 140),
+  "color-header-button-hover": oklch(84, 32, 140),
 
-  "color-nav-text": oklch(40, 40, 165),
-  "color-nav-background": oklch(99, 25, 165),
+  "color-main-link": oklch(50, 50, 290),
+  "color-main-background1": oklch(95, 20, 30),
+  "color-main-background2": oklch(96, 20, 30),
+  "color-main-background3": oklch(98, 20, 30),
+  "color-main-border1": oklch(75, 15, 30),
+  "color-main-border2": oklch(85, 15, 30),
+  "color-main-text": oklch(30, 30, 30),
+  "color-main-text-bright": oklch(30, 80, 30),
+  "color-main-code": oklch(50, 100, 30),
+  "color-main-shadow": oklch(93, 20, 30),
 
-  "color-main-accent": oklch(50, 50, 165),
-  "color-main-background1": oklch(99, 15, 40),
-  "color-main-background2": oklch(97, 15, 40),
-  "color-main-background3": oklch(96, 15, 40),
-  "color-main-text": oklch(40, 60, 40),
-  "color-main-text-bright": oklch(35, 60, 40),
-  "color-main-code": oklch(50, 100, 340),
-  "color-main-shadow": oklch(88, 15, 40),
+  "color-stripe-background1": oklch(98.5, 20, 30),
+  "color-stripe-background2": oklch(99.5, 20, 30),
 
-  "color-syntax-default": oklch(20, 30, 40),
-  "color-syntax-comment": oklch(52, 0, 165),
-  "color-syntax-keyword": oklch(52, 100, 165),
-  "color-syntax-property": oklch(52, 60, 340),
-  "color-syntax-string": oklch(52, 100, 250),
-  "color-syntax-punctuation": oklch(52, 30, 40),
+  "color-syntax-comment": oklch(55, 0, 300),
+  "color-syntax-keyword": oklch(47, 100, 300),
+  "color-syntax-property": oklch(52, 100, 190),
+  "color-syntax-string": oklch(52, 100, 140),
+  "color-syntax-punctuation": oklch(55, 40, 300),
 
-  "color-easter-egg-shadow": oklch(88, 15, 40),
-  "color-easter-egg-highlight": oklch(100, 0, 0, 50),
+  "color-easter-egg-shadow": oklch(90, 20, 30),
+  "color-easter-egg-highlight": oklch(100, 0, 0, 70),
 };
 
 export default colors;

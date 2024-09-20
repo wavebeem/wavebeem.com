@@ -2,13 +2,13 @@
   margin: 0;
 }
 
-.grid-2 {
+.clicky-list {
   display: grid;
   gap: 1rem;
 }
 
-@media (min-width: 800px) {
-  .grid-2 {
+@media (min-width: 500px) {
+  .clicky-list {
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -19,11 +19,6 @@
   margin: 0;
   margin-bottom: 0.5rem;
   font-size: 1.25rem;
-}
-
-.read-more-button {
-  width: max-content;
-  margin-inline: auto;
 }
 
 .clearfix {
