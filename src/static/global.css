@@ -38,6 +38,8 @@
   overflow-y: scroll;
   color-scheme: light dark;
   scrollbar-color: var(--color-main-text) var(--color-main-background3);
+  background: var(--color-main-background3);
+  color: var(--color-main-text);
 }
 
 body {
@@ -148,6 +150,16 @@ details[open] > summary {
   margin: inherit;
 }
 
+.header {
+  background: var(--color-header-background);
+  color: var(--color-header-text);
+}
+
+.header .logo,
+.header :any-link {
+  color: inherit;
+}
+
 .header .content-column {
   display: grid;
   grid-template-columns: 1fr max-content;
@@ -247,27 +259,6 @@ main {
 
 .no-underline {
   text-decoration-line: none;
-}
-
-.theme-root {
-  background-color: var(--theme-color-background);
-  color: var(--theme-color-text);
-}
-
-.theme-root :any-link {
-  color: var(--theme-color-link);
-}
-
-.theme-header {
-  --theme-color-background: var(--color-header-background);
-  --theme-color-text: var(--color-header-text);
-  --theme-color-link: var(--color-header-text);
-}
-
-.theme-footer {
-  --theme-color-background: var(--color-footer-background);
-  --theme-color-text: var(--color-footer-text);
-  --theme-color-link: var(--color-footer-text);
 }
 
 .emoji {

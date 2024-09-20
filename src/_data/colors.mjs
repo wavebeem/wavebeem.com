@@ -37,13 +37,10 @@ const colors = {
   "color-stripe-background1": oklch(98.5, 20, 30),
   "color-stripe-background2": oklch(99.5, 20, 30),
 
-  "color-footer-background": oklch(95, 10, 140),
-  "color-footer-text": oklch(40, 40, 140),
-
   "color-syntax-comment": oklch(55, 0, 300),
   "color-syntax-keyword": oklch(47, 100, 300),
   "color-syntax-property": oklch(52, 100, 190),
-  "color-syntax-string": oklch(52, 100, 135),
+  "color-syntax-string": oklch(52, 100, 140),
   "color-syntax-punctuation": oklch(55, 40, 300),
 
   "color-easter-egg-shadow": oklch(90, 20, 30),
