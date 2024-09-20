@@ -20,10 +20,10 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 const colors = {
   "color-header-text": oklch(40, 40, 140),
   "color-header-background": oklch(90, 30, 140),
-  "color-header-button": oklch(85, 30, 140),
-  "color-header-button-hover": oklch(83, 30, 140),
+  "color-header-button": oklch(86, 32, 140),
+  "color-header-button-hover": oklch(84, 32, 140),
 
-  "color-main-accent": oklch(50, 50, 290),
+  "color-main-link": oklch(50, 50, 290),
   "color-main-background1": oklch(95, 20, 30),
   "color-main-background2": oklch(96, 20, 30),
   "color-main-background3": oklch(98, 20, 30),
@@ -47,7 +47,7 @@ const colors = {
   "color-syntax-punctuation": oklch(55, 40, 300),
 
   "color-easter-egg-shadow": oklch(90, 20, 30),
-  "color-easter-egg-highlight": oklch(100, 0, 0, 50),
+  "color-easter-egg-highlight": oklch(100, 0, 0, 70),
 };
 
 export default colors;
