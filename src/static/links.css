@@ -1,0 +1,6 @@
+.site-button {
+  width: calc(2 * 88px);
+  height: auto;
+  display: flex;
+  image-rendering: pixelated;
+}

@@ -400,15 +400,6 @@ code.sage-bright,
   text-decoration-line: none;
 }
 
-.netpet {
-  display: flex;
-  image-rendering: pixelated;
-}
-
-.netpet:hover {
-  opacity: 0.8;
-}
-
 @media (prefers-reduced-motion: reduce) {
   /* Ideally we'd make the animation stop, but it's not that easy... */
   .netpet {
