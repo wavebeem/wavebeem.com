@@ -18,7 +18,7 @@ export default function getConfig(config) {
   config.setLibrary("md", markdown);
   config.addPlugin(pluginRss);
   config.addPlugin(syntaxHighlight);
-  config.addPassthroughCopy("src/static");
+  config.addPassthroughCopy({ "src/static": "/" });
 
   config.addFilter("formatDate", function (value, format) {
     if (value === "now") {

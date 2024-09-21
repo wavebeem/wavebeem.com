@@ -24,8 +24,8 @@ little softer than stark white.
   <figcaption>
     Basic resume&mdash;with two background colors
   </figcaption>
-  <a href="/static/img/theme-history/site2013.webp">
-    <img src="/static/img/theme-history/site2013.webp" alt="">
+  <a href="/img/theme-history/site2013.webp">
+    <img src="/img/theme-history/site2013.webp" alt="">
   </a>
 </figure>
 
@@ -42,8 +42,8 @@ relying just on heading sizes to differentiate everything, but I was trying!
   <figcaption>
     Bootstrap&mdash;It looks like a lot of other sites from this era
   </figcaption>
-  <a href="/static/img/theme-history/site2014.webp">
-    <img src="/static/img/theme-history/site2014.webp" alt="">
+  <a href="/img/theme-history/site2014.webp">
+    <img src="/img/theme-history/site2014.webp" alt="">
   </a>
 </figure>
 
@@ -64,8 +64,8 @@ The green has shifted even bluer---maybe too blue.
   <figcaption>
     Cards&mdash;It's all about cards now
   </figcaption>
-  <a href="/static/img/theme-history/site2015.webp">
-    <img src="/static/img/theme-history/site2015.webp" alt="">
+  <a href="/img/theme-history/site2015.webp">
+    <img src="/img/theme-history/site2015.webp" alt="">
   </a>
 </figure>
 
@@ -82,8 +82,8 @@ The green looks really nice in this image to me.
   <figcaption>
     Mobile first&mdash;a simple landing page
   </figcaption>
-  <a href="/static/img/theme-history/site2016.webp">
-    <img src="/static/img/theme-history/site2016.webp" alt="">
+  <a href="/img/theme-history/site2016.webp">
+    <img src="/img/theme-history/site2016.webp" alt="">
   </a>
 </figure>
 
@@ -100,8 +100,8 @@ doesn't have enough color for me.
   <figcaption>
     Material design&mdash;and a pixel art self portrait
   </figcaption>
-  <a href="/static/img/theme-history/site2017.webp">
-    <img src="/static/img/theme-history/site2017.webp" alt="">
+  <a href="/img/theme-history/site2017.webp">
+    <img src="/img/theme-history/site2017.webp" alt="">
   </a>
 </figure>
 
@@ -115,8 +115,8 @@ sure I was proud of the speech bubble arrow at the time haha.
   <figcaption>
     More green&mdash;plus a commissioned portrait
   </figcaption>
-  <a href="/static/img/theme-history/site2018.webp">
-    <img src="/static/img/theme-history/site2018.webp" alt="">
+  <a href="/img/theme-history/site2018.webp">
+    <img src="/img/theme-history/site2018.webp" alt="">
   </a>
 </figure>
 
@@ -146,8 +146,8 @@ So in many ways this feels more me, but like I lost something.
   <figcaption>
     <a href="https://lospec.com/palette-list/en4">EN4</a> color palette&mdash;animated Dragon Quest Slime &amp; old timey parchment vibe
   </figcaption>
-  <a href="/static/img/theme-history/site2020.webp">
-    <img src="/static/img/theme-history/site2020.webp" alt="">
+  <a href="/img/theme-history/site2020.webp">
+    <img src="/img/theme-history/site2020.webp" alt="">
   </a>
 </figure>
 
@@ -165,8 +165,8 @@ The colors are a bit more relaxed here, and it's (barely) using my
   <figcaption>
     Cards again&mdash;Another self portrait &amp; it uses my <a href="https://1bit-ui.wavebeem.com">1bit-ui</a> library
   </figcaption>
-  <a href="/static/img/theme-history/site2021.webp">
-    <img src="/static/img/theme-history/site2021.webp" alt="">
+  <a href="/img/theme-history/site2021.webp">
+    <img src="/img/theme-history/site2021.webp" alt="">
   </a>
 </figure>
 
@@ -182,8 +182,8 @@ personality.
   <figcaption>
     Mint green &amp; pink&mdash;plus it uses my <a href="https://2bit-ui.wavebeem.com">2bit-ui</a> library
   </figcaption>
-  <a href="/static/img/theme-history/site2022.webp">
-    <img src="/static/img/theme-history/site2022.webp" alt="">
+  <a href="/img/theme-history/site2022.webp">
+    <img src="/img/theme-history/site2022.webp" alt="">
   </a>
 </figure>
 
@@ -202,8 +202,8 @@ My favorite part is the new logo font! It's Ultra Hi-Gloss by Froyo Tam.
   <figcaption>
     Dark purple and lime&mdash;and my matching hair!
   </figcaption>
-  <a href="/static/img/theme-history/site2023.webp">
-    <img src="/static/img/theme-history/site2023.webp" alt="">
+  <a href="/img/theme-history/site2023.webp">
+    <img src="/img/theme-history/site2023.webp" alt="">
   </a>
 </figure>
 
@@ -227,8 +227,8 @@ honestly feels suffocating!
   <figcaption>
     Dark green and lime&mdash;featuring my <a href="https://candy.wavebeem.com">candy.css</a> library
   </figcaption>
-  <a href="/static/img/theme-history/site2024a.webp">
-    <img src="/static/img/theme-history/site2024a.webp" alt="">
+  <a href="/img/theme-history/site2024a.webp">
+    <img src="/img/theme-history/site2024a.webp" alt="">
   </a>
 </figure>
 
@@ -246,8 +246,8 @@ though I never owned a Wii, is quite nostalgic to me.
   <figcaption>
     Windows Vista meets Nintendo Wii
   </figcaption>
-  <a href="/static/img/theme-history/site2024b.webp">
-    <img src="/static/img/theme-history/site2024b.webp" alt="">
+  <a href="/img/theme-history/site2024b.webp">
+    <img src="/img/theme-history/site2024b.webp" alt="">
   </a>
 </figure>
 
@@ -272,8 +272,8 @@ I'm still really proud of this design, though I've tweaked it since.
   <figcaption>
     Lavender and lime&mdash;fully custom CSS again
   </figcaption>
-  <a href="/static/img/theme-history/site2024c.webp">
-    <img src="/static/img/theme-history/site2024c.webp" alt="">
+  <a href="/img/theme-history/site2024c.webp">
+    <img src="/img/theme-history/site2024c.webp" alt="">
   </a>
 </figure>
 
@@ -306,7 +306,7 @@ love a good subtle shadow in a UI :)
   <figcaption>
     Summer theme
   </figcaption>
-  <a href="/static/img/theme-history/site2024d.webp">
-    <img src="/static/img/theme-history/site2024d.webp" alt="">
+  <a href="/img/theme-history/site2024d.webp">
+    <img src="/img/theme-history/site2024d.webp" alt="">
   </a>
 </figure>

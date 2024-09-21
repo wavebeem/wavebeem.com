@@ -15,7 +15,7 @@ there.
 
 <figure>
   <img
-    src="/static/site-button-old.gif"
+    src="/site-button-old.gif"
     title="wavebeem"
     alt="wavebeem"
     width="88"

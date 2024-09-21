@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Nunito";
-  src: url("/static/fonts/nunito-variable.woff2") format("woff2");
+  src: url("/fonts/nunito-variable.woff2") format("woff2");
   font-weight: 1 1000;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Nunito";
-  src: url("/static/fonts/nunito-italic-variable.woff2") format("woff2");
+  src: url("/fonts/nunito-italic-variable.woff2") format("woff2");
   font-style: italic;
   font-weight: 1 1000;
   font-display: swap;
@@ -15,7 +15,7 @@
 
 @font-face {
   font-family: "Ultra Hi-Gloss";
-  src: url("/static/fonts/ultra-hi-gloss.woff2") format("woff2");
+  src: url("/fonts/ultra-hi-gloss.woff2") format("woff2");
   font-display: swap;
 }
 

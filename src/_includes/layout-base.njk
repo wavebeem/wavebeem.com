@@ -14,31 +14,31 @@
       rel="preload"
       as="font"
       crossorigin="anonymous"
-      href="/static/fonts/nunito-variable.woff2"
+      href="/fonts/nunito-variable.woff2"
     />
     <link
       rel="preload"
       as="font"
       crossorigin="anonymous"
-      href="/static/fonts/nunito-italic-variable.woff2"
+      href="/fonts/nunito-italic-variable.woff2"
     />
     <link
       rel="preload"
       as="font"
       crossorigin="anonymous"
-      href="/static/fonts/ultra-hi-gloss.woff2"
+      href="/fonts/ultra-hi-gloss.woff2"
     />
     <meta name="author" content="wavebeem" />
     <meta name="description" content="{{ description }}" />
     <link
       rel="icon"
       sizes="16x16"
-      href="/static/favicon.png?v={{ contentHashes.favicon }}"
+      href="/favicon.png?v={{ contentHashes.favicon }}"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="/static/photo-180.webp?v={{ contentHashes.photo }}"
+      href="/photo-180.webp?v={{ contentHashes.photo }}"
     />
     <link
       rel="alternate"
@@ -48,7 +48,7 @@
     />
     <meta
       name="og:image"
-      content="{{ origin }}/static/og-image.png?v={{ contentHashes.ogImage }}"
+      content="{{ origin }}/og-image.png?v={{ contentHashes.ogImage }}"
     />
     <meta name="og:image:width" content="512" />
     <meta name="og:image:height" content="256" />
@@ -66,13 +66,13 @@
     <link
       rel="stylesheet"
       media="screen"
-      href="/static/{{ url }}.css?t={{ dateNow }}"
+      href="/{{ url }}.css?t={{ dateNow }}"
     />
     {% endfor %}
     <link
       rel="stylesheet"
       media="print"
-      href="/static/print.css?t={{ dateNow }}"
+      href="/print.css?t={{ dateNow }}"
     />
   </head>
   <body>
