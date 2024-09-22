@@ -41,6 +41,7 @@ css:
     width="88"
     height="31"
     alt="wavebeem.com"
+    title="wavebeem.com"
     src="https://wavebeem.com/button.gif"
     style="image-rendering: pixelated;"
   /&gt;
@@ -49,18 +50,26 @@ css:
   </div>
 </details>
 
-<h2 class="sage-bright">Under construction</h2>
+<h2 class="sage-bright">🚧 Under construction 🚧</h2>
 
-<p>These links are in dire need of organization.</p>
+<p>
+  These links are in dire need of organization. Please email me if I'm missing
+  your site button or it needs to be updated.
+</p>
 
 <h2 class="sage-bright">Site button links</h2>
 
+<p>
+  TODO: Find all the missing site buttons for the other websites I've linked.
+</p>
+
 <div class="site-button--grid">
   {% for siteButton in siteButtons %}
-  <a class="site-button--link" href="{{ siteButton.mainUrl }}">
+  <a class="site-button--link sage-link" href="{{ siteButton.mainUrl }}">
     <img
       src="{{ siteButton.localUrl }}"
       alt="{{ siteButton.title }}"
+      title="{{ siteButton.title }}"
       class="site-button--image"
       width="88"
       height="31"
@@ -117,4 +126,6 @@ css:
   <a class="link-card" href="https://sproutsnout.com">sproutsnout's garden</a>
   <a class="link-card" href="https://maya.land">maya.land</a>
   <a class="link-card" href="https://meow.garden">meow.garden</a>
+  <a class="link-card" href="https://huhidk.dev">HUHIDK.DEV</a>
+  <a class="link-card" href="https://hjeojeo.com">HJEOJEO.COM</a>
 </div>

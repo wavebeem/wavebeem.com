@@ -22,6 +22,19 @@ const siteButtons = [
     title: "platinumtulip | digital garden sanctuary",
     localUrl: "",
   },
+  {
+    mainUrl: "https://renkotsuban.com/",
+    buttonUrl: "http://renkotsuban.com/button.gif",
+    title: "Midnight Reading: Renkon's Personal Site",
+    localUrl: "",
+  },
+  {
+    mainUrl: "https://indietsushin.net/",
+    buttonUrl: "https://indietsushin.net/button.gif",
+    title:
+      "インディー通信 Indie Tsushin: Highlighting indie games and developers from Japan!",
+    localUrl: "",
+  },
 ];
 
 for (const siteButton of siteButtons) {
