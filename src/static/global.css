@@ -208,6 +208,7 @@ pre {
   font-family: var(--font-mono);
   font-size: 1rem;
   font-variant-ligatures: none;
+  white-space: pre-wrap;
 }
 
 blockquote {
@@ -232,6 +233,22 @@ main {
 
 .font-logo {
   font-family: var(--font-logo);
+}
+
+.grid-full {
+  grid-column: 1 / -1;
+}
+
+.gap1 {
+  gap: 0.25rem;
+}
+
+.gap2 {
+  gap: 0.5rem;
+}
+
+.gap3 {
+  gap: 1rem;
 }
 
 .flex {
