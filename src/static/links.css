@@ -4,3 +4,25 @@
   display: flex;
   image-rendering: pixelated;
 }
+
+.read-more {
+  max-width: max-content;
+}
+
+.mode-light,
+.mode-dark {
+  padding: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.mode-light {
+  background: white;
+  color: black;
+}
+
+.mode-dark {
+  background: black;
+  color: white;
+}
