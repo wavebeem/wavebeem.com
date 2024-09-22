@@ -1,6 +1,28 @@
+:root {
+  --site-button-size: calc(2 * 88px);
+  /* --site-button-size: 88px; */
+}
+
 .site-button {
   width: calc(2 * 88px);
   height: auto;
   display: flex;
+  image-rendering: pixelated;
+}
+
+.site-button--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, var(--site-button-size));
+  gap: 1rem;
+}
+
+.site-button--link {
+  display: flex;
+  text-decoration: none;
+}
+
+.site-button--image {
+  width: 100%;
+  height: auto;
   image-rendering: pixelated;
 }

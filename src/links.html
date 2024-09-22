@@ -22,6 +22,24 @@ css:
 
 <p>These links are in dire need of organization.</p>
 
+<h2 class="sage-bright">Site button links</h2>
+
+<div class="site-button--grid">
+  {% for siteButton in siteButtons %}
+  <a class="site-button--link" href="{{ siteButton.mainUrl }}">
+    <img
+      src="{{ siteButton.localUrl }}"
+      alt="{{ siteButton.title }}"
+      class="site-button--image"
+      width="88"
+      height="31"
+    />
+  </a>
+  {% endfor %}
+</div>
+
+<h2 class="sage-bright">Regular links</h2>
+
 <div class="grid2">
   <a class="link-card" href="https://www.joshwcomeau.com">Josh W. Comeau</a>
   <a class="link-card" href="https://anhvn.com">anhvn</a>
