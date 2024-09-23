@@ -21,8 +21,9 @@
 
 .site-button--link {
   display: flex;
-  overflow: hidden;
-  border-radius: 0;
+  border-radius: 2px;
+  outline-offset: 2px;
+  outline-width: 3px;
   align-items: flex-start;
 }
 
@@ -30,6 +31,10 @@
   width: 100%;
   height: auto;
   image-rendering: pixelated;
+}
+
+.site-button--image:hover {
+  opacity: 0.85;
 }
 
 .read-more {
