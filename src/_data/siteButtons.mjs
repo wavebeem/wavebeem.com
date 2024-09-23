@@ -56,6 +56,12 @@ const siteButtons = [
     localUrl: "",
   },
   {
+    mainUrl: "https://lexfeathers.ca/",
+    buttonUrl: "https://lexfeathers.ca/uploads/lexfeathers88x31.gif",
+    title: "Lex Feathers - home",
+    localUrl: "",
+  },
+  {
     mainUrl: "https://zine.milliesquilly.com/",
     buttonUrl: "https://zine.milliesquilly.com/button.png",
     title: "zine of millie",
