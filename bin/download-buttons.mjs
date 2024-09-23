@@ -11,11 +11,13 @@ async function main() {
     const filename = `src/static/buttons/${hostname}.gif`;
     if (existsSync(filename)) {
       console.log("...", hostname);
-    } else {
+    } else if (buttonUrl) {
       console.log("NEW", hostname);
       const resp = await fetch(buttonUrl);
       const data = await resp.arrayBuffer();
       await writeFile(filename, new Uint8Array(data));
+    } else {
+      console.log("??? MISSING", hostname);
     }
   }
 }
