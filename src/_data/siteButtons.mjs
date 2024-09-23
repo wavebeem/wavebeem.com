@@ -35,6 +35,19 @@ const siteButtons = [
       "インディー通信 Indie Tsushin: Highlighting indie games and developers from Japan!",
     localUrl: "",
   },
+  {
+    mainUrl: "https://milliesquilly.com/",
+    buttonUrl:
+      "https://milliesquilly.com/media/posts/42/responsive/millie-squilly-dot-com-button-2xl.png",
+    title: "Millie Squilly Dot Com",
+    localUrl: "",
+  },
+  {
+    mainUrl: "https://zine.milliesquilly.com/",
+    buttonUrl: "https://zine.milliesquilly.com/button.png",
+    title: "zine of millie",
+    localUrl: "",
+  },
 ];
 
 for (const siteButton of siteButtons) {
