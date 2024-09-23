@@ -1,17 +1,22 @@
 #!/usr/bin/env node
 // @ts-check
 
+import { existsSync } from "node:fs";
 import { writeFile } from "node:fs/promises";
 import siteButtons from "../src/_data/siteButtons.mjs";
 
 async function main() {
-  for (const { buttonUrl } of siteButtons) {
-    console.log("Downloading...", buttonUrl);
-    const resp = await fetch(buttonUrl);
-    const data = await resp.arrayBuffer();
-    const hostname = new URL(buttonUrl).hostname;
+  for (const { mainUrl, buttonUrl } of siteButtons) {
+    const { hostname } = new URL(mainUrl);
     const filename = `src/static/buttons/${hostname}.gif`;
-    await writeFile(filename, new Uint8Array(data));
+    if (existsSync(filename)) {
+      console.log("...", hostname);
+    } else {
+      console.log("NEW", hostname);
+      const resp = await fetch(buttonUrl);
+      const data = await resp.arrayBuffer();
+      await writeFile(filename, new Uint8Array(data));
+    }
   }
 }
 

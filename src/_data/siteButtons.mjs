@@ -48,10 +48,17 @@ const siteButtons = [
     title: "zine of millie",
     localUrl: "",
   },
+  {
+    mainUrl: "https://froey.bearblog.dev/",
+    buttonUrl:
+      "https://bear-images.sfo2.cdn.digitaloceanspaces.com/froey/ellebutton.png",
+    title: "Froey",
+    localUrl: "",
+  },
 ];
 
 for (const siteButton of siteButtons) {
-  const hostname = new URL(siteButton.buttonUrl).hostname;
+  const { hostname } = new URL(siteButton.mainUrl);
   const filename = `/buttons/${hostname}.gif`;
   siteButton.localUrl = filename;
 }
