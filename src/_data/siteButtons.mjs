@@ -36,6 +36,13 @@ const siteButtons = [
     localUrl: "",
   },
   {
+    mainUrl: "https://cdrom.ca/",
+    // TODO: It's a PNG...
+    buttonUrl: "https://cdrom.ca/images/buttons/cdromjournal.png",
+    title: "CD-ROM Journal",
+    localUrl: "",
+  },
+  {
     mainUrl: "https://milliesquilly.com/",
     buttonUrl:
       "https://milliesquilly.com/media/posts/42/responsive/millie-squilly-dot-com-button-2xl.png",

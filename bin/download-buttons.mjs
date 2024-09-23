@@ -8,6 +8,9 @@ import siteButtons from "../src/_data/siteButtons.mjs";
 async function main() {
   for (const { mainUrl, buttonUrl } of siteButtons) {
     const { hostname } = new URL(mainUrl);
+    // TODO: Support downloading other file formats... Chrome/Firefox/Safari all
+    // seem to handle the incorrect MIME type just fine, but they shouldn't have
+    // to!
     const filename = `src/static/buttons/${hostname}.gif`;
     if (existsSync(filename)) {
       console.log("...", hostname);
