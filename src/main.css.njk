@@ -2,8 +2,14 @@
 permalink: "main.css"
 ---
 
-:root { {% for key, val in colors %}
+:root { {% for key, val in colors.light %}
   --{{key}}: {{ val }};{% endfor %}
+}
+
+@media (prefers-color-scheme: dark) {
+  :root { {% for key, val in colors.dark %}
+    --{{key}}: {{ val }};{% endfor %}
+  }
 }
 
 {% include "./static/global.css" %}

@@ -1,10 +1,10 @@
 import Color from "colorjs.io";
 
 /**
- * @param lightness {number}
- * @param chroma {number}
- * @param hue {number}
- * @param alpha {number}
+ * @param {number} lightness
+ * @param {number} chroma
+ * @param {number} hue
+ * @param {number} alpha
  * @returns {string}
  */
 function oklch(lightness, chroma, hue, alpha = 100) {
@@ -17,7 +17,7 @@ function oklch(lightness, chroma, hue, alpha = 100) {
   return color.to("srgb").toString({ format: "hex" });
 }
 
-const colors = {
+export const light = {
   "color-header-text": oklch(40, 40, 140),
   "color-header-background": oklch(90, 30, 140),
   "color-header-button": oklch(86, 32, 140),
@@ -45,4 +45,30 @@ const colors = {
   "color-easter-egg-highlight": oklch(100, 0, 0, 70),
 };
 
-export default colors;
+export const dark = {
+  "color-header-text": oklch(90, 40, 140),
+  "color-header-background": oklch(34, 5, 30),
+  "color-header-button": oklch(30, 5, 30),
+  "color-header-button-hover": oklch(28, 5, 30),
+
+  "color-main-link": oklch(90, 40, 140),
+  "color-main-background1": oklch(34, 5, 30),
+  "color-main-background2": oklch(32, 5, 30),
+  "color-main-background3": oklch(30, 5, 30),
+  "color-main-text": oklch(80, 5, 30),
+  "color-main-text-bright": oklch(90, 5, 30),
+  "color-main-code": oklch(80, 100, 30),
+  "color-main-shadow": oklch(34, 5, 30),
+
+  "color-stripe-background1": oklch(32, 5, 30),
+  "color-stripe-background2": oklch(34, 5, 30),
+
+  "color-syntax-comment": oklch(70, 10, 190),
+  "color-syntax-keyword": oklch(80, 70, 300),
+  "color-syntax-property": oklch(80, 70, 190),
+  "color-syntax-string": oklch(80, 50, 140),
+  "color-syntax-punctuation": oklch(70, 20, 300),
+
+  "color-easter-egg-shadow": oklch(25, 5, 30),
+  "color-easter-egg-highlight": oklch(100, 0, 0, 30),
+};

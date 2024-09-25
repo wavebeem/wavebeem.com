@@ -9,7 +9,15 @@
     <meta http-equiv="content-security-policy" content="{{ csp | safe }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content="{{ eleventy.generator }}" />
-    <meta name="theme-color" content="{{ colors['color-header-background'] }}"
+    <meta
+      name="theme-color"
+      content="{{ colors.light['color-header-background'] }}"
+    />
+    <meta
+      name="theme-color"
+      content="{{ colors.dark['color-header-background'] }}"
+      media="(prefers-color-scheme: dark)"
+    />
     <link
       rel="preload"
       as="font"
@@ -69,11 +77,7 @@
       href="/{{ url }}.css?t={{ dateNow }}"
     />
     {% endfor %}
-    <link
-      rel="stylesheet"
-      media="print"
-      href="/print.css?t={{ dateNow }}"
-    />
+    <link rel="stylesheet" media="print" href="/print.css?t={{ dateNow }}" />
   </head>
   <body>
     <header class="header screen-only">
@@ -85,7 +89,7 @@
           <summary>Menu</summary>
           <nav class="nav">
             {% for item in menu %}
-              <a href="{{ item.url }}">{{ item.title }}</a>
+            <a href="{{ item.url }}">{{ item.title }}</a>
             {% endfor %}
           </nav>
         </details>

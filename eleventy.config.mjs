@@ -6,7 +6,9 @@ import markdownIt from "markdown-it";
 import dateformat from "dateformat";
 import { inspect } from "node:util";
 
-/** @param config {import("@11ty/eleventy").UserConfig} */
+/** @typedef {import("@11ty/eleventy").UserConfig} UserConfig */
+
+/** @param {UserConfig} config */
 export default function getConfig(config) {
   const now = new Date();
   const markdown = markdownIt({
