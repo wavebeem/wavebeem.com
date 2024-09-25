@@ -86,6 +86,12 @@ export const siteButtons = [
     buttonUrl: "https://aloe.gay/contact/btn-bg.gif",
     localUrl: "",
   },
+  {
+    title: "RECCANTI's Chaos Site",
+    mainUrl: "https://reccanti.art/",
+    buttonUrl: "https://reccanti.art/_next/static/media/btn-smol.3299e405.gif",
+    localUrl: "",
+  },
 ];
 
 siteButtons.sort((a, b) => a.title.localeCompare(b.title));
@@ -114,10 +120,6 @@ export const allLinks = [
   {
     title: "anhvn",
     url: "https://anhvn.com/",
-  },
-  {
-    title: "RECCANTI's Chaos Site",
-    url: "https://reccanti.art/",
   },
   {
     title: "the melt zone",
