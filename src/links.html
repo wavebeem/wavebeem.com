@@ -50,21 +50,16 @@ css:
   </div>
 </details>
 
-<h2 class="sage-bright">🚧 Under construction 🚧</h2>
-
 <p>
-  These links are in dire need of organization. Please email me if I'm missing
-  your site button or it needs to be updated.
+  Please email me if I'm missing your site button or it needs to be updated.
+  Site button links are also displayed in text form below. All links are in
+  alphabetical order.
 </p>
 
 <h2 class="sage-bright">Site button links</h2>
 
-<p>
-  TODO: Find all the missing site buttons for the other websites I've linked.
-</p>
-
 <div class="site-button--grid">
-  {% for siteButton in siteButtons %}
+  {% for siteButton in coolLinks.siteButtons %}
   <a class="site-button--link sage-link" href="{{ siteButton.mainUrl }}">
     <img
       src="{{ siteButton.localUrl }}"
@@ -78,55 +73,10 @@ css:
   {% endfor %}
 </div>
 
-<h2 class="sage-bright">Regular links</h2>
+<h2 class="sage-bright">All links</h2>
 
 <div class="grid2">
-  <a class="link-card" href="https://www.joshwcomeau.com">Josh W. Comeau</a>
-  <a class="link-card" href="https://anhvn.com">anhvn</a>
-  <a class="link-card" href="https://reccanti.art">RECCANTI's Chaos Site</a>
-  <a class="link-card" href="https://meltknuckles.net">the melt zone</a>
-  <a class="link-card" href="https://chostett.com">CJ | design & video games</a>
-  <a class="link-card" href="https://platinumtulip.garden"
-    >platinumtulip | digital garden sanctuary</a
-  >
-  <a class="link-card" href="https://renkotsuban.com"
-    >Midnight Reading: Renkon's Personal Site</a
-  >
-  <a class="link-card" href="https://nicegear.games">Nice Gear Games</a>
-  <a class="link-card" href="https://indietsushin.net"
-    >インディー通信 Indie Tsushin: Highlighting indie games and developers from
-    Japan!</a
-  >
-  <a class="link-card" href="https://cdrom.ca">CD-ROM Journal</a>
-  <a class="link-card" href="https://wowperfect.net">wow, perfect!</a>
-  <a class="link-card" href="https://madmaddiecomms.carrd.co"
-    >MADDIEBISCUITS ART</a
-  >
-  <a class="link-card" href="https://itsnotdiegues.carrd.co"
-    >NotDiegues - Illustration</a
-  >
-  <a class="link-card" href="https://www.shaferbrown.com"
-    >Shafer Brown Illustration</a
-  >
-  <a class="link-card" href="https://noctivagant.net">Noctivagant</a>
-  <a class="link-card" href="https://maddie.vision">Maddie Lim</a>
-  <a class="link-card" href="https://milliesquilly.com"
-    >Millie Squilly Dot Com</a
-  >
-  <a class="link-card" href="https://erysdren.me">erysdren's WWW site</a>
-  <a class="link-card" href="https://erambert.me">Damien Erambert</a>
-  <a class="link-card" href="https://2mello.net">2 Mello</a>
-  <a class="link-card" href="https://jneen.net">jneens web site</a>
-  <a class="link-card" href="https://eev.ee">eevee's fuzzy notepad</a>
-  <a class="link-card" href="https://www.atylerrobertson.com"
-    >Tyler Robertson</a
-  >
-  <a class="link-card" href="https://aurahack.jp">AURAHACK</a>
-  <a class="link-card" href="https://goofpunk.com">goofpunk.com</a>
-  <a class="link-card" href="https://bunp.neocities.org">bunp dot com</a>
-  <a class="link-card" href="https://sproutsnout.com">sproutsnout's garden</a>
-  <a class="link-card" href="https://maya.land">maya.land</a>
-  <a class="link-card" href="https://meow.garden">meow.garden</a>
-  <a class="link-card" href="https://huhidk.dev">HUHIDK.DEV</a>
-  <a class="link-card" href="https://hjeojeo.com">HJEOJEO.COM</a>
+  {% for link in coolLinks.allLinks %}
+  <a class="link-card" href="{{ link.url }}">{{ link.title }}</a>
+  {% endfor %}
 </div>

@@ -3,7 +3,7 @@
 
 import { existsSync } from "node:fs";
 import { writeFile } from "node:fs/promises";
-import siteButtons from "../src/_data/siteButtons.mjs";
+import { siteButtons } from "../src/_data/coolLinks.mjs";
 
 async function main() {
   for (const { mainUrl, buttonUrl } of siteButtons) {
