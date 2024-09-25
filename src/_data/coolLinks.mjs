@@ -1,3 +1,5 @@
+// @ts-check
+
 /**
  * @typedef SiteButton
  * @prop {string} mainUrl
@@ -72,6 +74,18 @@ export const siteButtons = [
     title: "Froey",
     localUrl: "",
   },
+  {
+    title: "Damien Erambert",
+    mainUrl: "https://erambert.me/",
+    buttonUrl: "https://files.damien.zone/88x31_damien.png",
+    localUrl: "",
+  },
+  {
+    title: "aloe dot gay",
+    mainUrl: "https://aloe.gay/",
+    buttonUrl: "https://aloe.gay/contact/btn-bg.gif",
+    localUrl: "",
+  },
 ];
 
 siteButtons.sort((a, b) => a.title.localeCompare(b.title));
@@ -140,10 +154,6 @@ export const allLinks = [
   {
     title: "erysdren's WWW site",
     url: "https://erysdren.me/",
-  },
-  {
-    title: "Damien Erambert",
-    url: "https://erambert.me/",
   },
   {
     title: "2 Mello",
