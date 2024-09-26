@@ -92,6 +92,12 @@ export const siteButtons = [
     buttonUrl: "https://reccanti.art/_next/static/media/btn-smol.3299e405.gif",
     localUrl: "",
   },
+  {
+    title: "the melt zone",
+    mainUrl: "https://meltknuckles.net/",
+    buttonUrl: "https://meltknuckles.net/badges/meltknucklesbadge.gif",
+    localUrl: "",
+  },
 ];
 
 siteButtons.sort((a, b) => a.title.localeCompare(b.title));
@@ -120,10 +126,6 @@ export const allLinks = [
   {
     title: "anhvn",
     url: "https://anhvn.com/",
-  },
-  {
-    title: "the melt zone",
-    url: "https://meltknuckles.net/",
   },
   {
     title: "Nice Gear Games",
