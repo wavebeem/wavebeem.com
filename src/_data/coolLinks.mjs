@@ -23,6 +23,12 @@ export const siteButtons = [
     localUrl: "",
   },
   {
+    mainUrl: "https://platinumtulip.net/",
+    buttonUrl: "https://files.platinumtulip.net/88x31.png",
+    title: "platinumtulip | digital artist",
+    localUrl: "",
+  },
+  {
     mainUrl: "https://platinumtulip.garden/",
     buttonUrl: "https://platinumtulip.garden/img/gif/tulip88x31.gif",
     title: "platinumtulip | digital garden sanctuary",
