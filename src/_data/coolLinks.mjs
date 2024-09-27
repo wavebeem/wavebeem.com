@@ -147,6 +147,10 @@ export const allLinks = [
     title: b.title,
   })),
   {
+    title: "Dracat",
+    url: "https://drac.at/",
+  },
+  {
     title: "Site of Jill",
     url: "https://jillcrungus.com/",
   },
