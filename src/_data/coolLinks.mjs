@@ -117,6 +117,13 @@ export const siteButtons = [
     buttonUrl: "https://badges.easrng.net/easrng.gif",
     localUrl: "",
   },
+  {
+    title: "Codarobo's Webzone",
+    mainUrl: "https://codarobo.online/",
+    buttonUrl:
+      "https://staging.cohostcdn.org/attachment/d4d2b4a0-5958-47f6-9e62-5bd98cb7f4c5/88x31coda-big.png",
+    localUrl: "",
+  },
 ];
 
 siteButtons.sort((a, b) => a.title.localeCompare(b.title));
