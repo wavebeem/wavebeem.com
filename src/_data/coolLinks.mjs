@@ -98,6 +98,25 @@ export const siteButtons = [
     buttonUrl: "https://meltknuckles.net/badges/meltknucklesbadge.gif",
     localUrl: "",
   },
+  {
+    title: "The web site of curilagann",
+    mainUrl: "https://curilagann.neocities.org/",
+    buttonUrl: "https://i.ibb.co/Fhspk6Q/ezgif-5-08c00de7f0.gif",
+    localUrl: "",
+  },
+  {
+    title: "Noctivagant",
+    mainUrl: "https://noctivagant.net/",
+    buttonUrl:
+      "https://noctivagant.net/images/ribbons%20stuff/ribbonsbutton.png",
+    localUrl: "",
+  },
+  {
+    title: "easrng",
+    mainUrl: "https://easrng.net/",
+    buttonUrl: "https://badges.easrng.net/easrng.gif",
+    localUrl: "",
+  },
 ];
 
 siteButtons.sort((a, b) => a.title.localeCompare(b.title));
@@ -114,11 +133,16 @@ for (const siteButton of siteButtons) {
  * @prop {string} title
  */
 
+/** @type {CoolLink[]} */
 export const allLinks = [
   ...siteButtons.map((b) => ({
     url: b.mainUrl,
     title: b.title,
   })),
+  {
+    title: "Site of Jill",
+    url: "https://jillcrungus.com/",
+  },
   {
     title: "Josh W. Comeau",
     url: "https://www.joshwcomeau.com/",
@@ -146,10 +170,6 @@ export const allLinks = [
   {
     title: "Shafer Brown Illustration",
     url: "https://www.shaferbrown.com/",
-  },
-  {
-    title: "Noctivagant",
-    url: "https://noctivagant.net/",
   },
   {
     title: "Maddie Lim",

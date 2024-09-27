@@ -1,6 +1,7 @@
 ---
 title: "Cool links"
-description: "A collection of links to sites I like."
+description: |
+  A collection of links to sites I like or want to visit again in the future. Links are not necessarily endorsements.
 layout: "layout-base"
 css:
   - "links"
@@ -12,30 +13,17 @@ css:
 
 <h2 class="sage-bright">Embed my site button</h2>
 
+<img
+  class="site-button"
+  src="/button.gif"
+  width="88"
+  height="31"
+  alt="wavebeem.com"
+/>
+
 <details>
-  <summary class="read-more sage-button">Show instructions</summary>
-  <div class="flex flex-column gap3">
-    <div class="grid2">
-      <div class="mode-light">
-        <img
-          class="site-button"
-          src="/button.gif"
-          width="88"
-          height="31"
-          alt="wavebeem.com"
-        />
-      </div>
-      <div class="mode-dark">
-        <img
-          class="site-button"
-          src="/button.gif"
-          width="88"
-          height="31"
-          alt="wavebeem.com"
-        />
-      </div>
-    </div>
-    <pre class="grid-full margin0 sage-well">
+  <summary class="read-more sage-link"><b>Show instructions</b></summary>
+  <pre class="margin0 sage-well">
 &lt;a href="https://wavebeem.com"&gt;
   &lt;img
     width="88"
@@ -46,17 +34,15 @@ css:
     style="image-rendering: pixelated;"
   /&gt;
 &lt;/a&gt;</pre
-    >
-  </div>
+  >
 </details>
 
-<p>
-  Please email me if I'm missing your site button or it needs to be updated.
-  Site button links are also displayed in text form below. All links are in
-  alphabetical order.
-</p>
-
 <h2 class="sage-bright">Site button links</h2>
+
+<p>
+  Please email me if I'm missing your site button or it needs to be updated. All
+  links are in alphabetical order.
+</p>
 
 <div class="site-button--grid">
   {% for siteButton in coolLinks.siteButtons %}
@@ -74,6 +60,8 @@ css:
 </div>
 
 <h2 class="sage-bright">All links</h2>
+
+<p>Includes links from the site buttons section.</p>
 
 <div class="grid2">
   {% for link in coolLinks.allLinks %}
