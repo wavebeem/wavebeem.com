@@ -1,3 +1,167 @@
 [build]
 publish = "_site"
 command = "npm run build"
+
+[[redirects]]
+from = "/old-path"
+to = "/new-path"
+status = 301
+force = false
+
+[[redirects]]
+from = "http://mockbrian.com/*"
+to = "https://www.wavebeem.com/:splat"
+status = 307
+force = true
+
+[[redirects]]
+from = "http://www.mockbrian.com/*"
+to = "https://www.wavebeem.com/:splat"
+status = 307
+force = true
+
+[[redirects]]
+from = "http://blog.mockbrian.com/*"
+to = "https://www.wavebeem.com/blog/:splat"
+status = 307
+force = true
+
+[[redirects]]
+from = "/blog/2024/09/21/i-made-a-new-88-31-site-button/"
+to = "/blog/2024/site-button/"
+status = 307
+
+[[redirects]]
+from = "/blog/2024/08/23/10-years-of-themes/"
+to = "/blog/2024/10-years-of-themes/"
+status = 307
+
+[[redirects]]
+from = "/blog/2024/04/02/js-compare-function/"
+to = "/blog/2024/js-compare-function/"
+status = 307
+
+[[redirects]]
+from = "/blog/2024/01/27/querying-shadow-dom/"
+to = "/blog/2024/querying-shadow-dom/"
+status = 307
+
+[[redirects]]
+from = "/blog/2024/01/24/flashlight-making-toys-for-the-web/"
+to = "/blog/2024/flashlight-making-toys-for-the-web/"
+status = 307
+
+[[redirects]]
+from = "/blog/2024/01/15/js-proxy-and-private-properties/"
+to = "/blog/2024/js-proxy-and-private-properties/"
+status = 307
+
+[[redirects]]
+from = "/blog/2023/11/25/developing-with-web-components/"
+to = "/blog/2023/developing-with-web-components/"
+status = 307
+
+[[redirects]]
+from = "/blog/2023/07/05/you-deserve-to-be-happy-or-the-web-wasnt-a-mistake/"
+to = "/blog/2023/the-web-wasnt-a-mistake/"
+status = 307
+
+[[redirects]]
+from = "/blog/2023/06/25/the-web-is-an-app-platform/"
+to = "/blog/2023/the-web-is-an-app-platform/"
+status = 307
+
+[[redirects]]
+from = "/blog/2022/09/07/i-made-a-geocities-site-button/"
+to = "/blog/2022/site-button/"
+status = 307
+
+[[redirects]]
+from = "/blog/2022/03/20/recipe-best-dip-ever/"
+to = "/blog/2022/recipe-best-dip-ever/"
+status = 307
+
+[[redirects]]
+from = "/blog/2022/01/25/why-i-dont-like-usestate/"
+to = "/blog/2022/why-i-dont-like-usestate/"
+status = 307
+
+[[redirects]]
+from = "/blog/2021/03/11/recipe-buttermilk-biscuits/"
+to = "/blog/2021/recipe-buttermilk-biscuits/"
+status = 307
+
+[[redirects]]
+from = "/blog/2020/11/29/adventures-in-de-googling/"
+to = "/blog/2020/adventures-in-degoogling/"
+status = 307
+
+[[redirects]]
+from = "/blog/2020/11/02/recipe-crispy-tofu/"
+to = "/blog/2020/recipe-crispy-tofu/"
+status = 307
+
+[[redirects]]
+from = "/blog/2020/10/21/tagged-unions-in-javascript/"
+to = "/blog/2020/tagged-unions/"
+status = 307
+
+[[redirects]]
+from = "/blog/2019/11/10/seagl-2019/"
+to = "/blog/2019/seagl-2019/"
+status = 307
+
+[[redirects]]
+from = "/blog/2019/07/08/mechanical-keyboards-201/"
+to = "/blog/2019/mechanical-keyboards-201/"
+status = 307
+
+[[redirects]]
+from = "/blog/2018/07/28/mechanical-keyboards-101/"
+to = "/blog/2018/mechanical-keyboards-101/"
+status = 307
+
+[[redirects]]
+from = "/blog/2018/07/04/7-tips-for-better-bash/"
+to = "/blog/2018/better-bash-7-tips/"
+status = 307
+
+[[redirects]]
+from = "/blog/2017/08/27/javascript-iterators-and-more/"
+to = "/blog/2017/js-iterators/"
+status = 307
+
+[[redirects]]
+from = "/blog/2017/08/11/react-without-jsx/"
+to = "/blog/2017/react-without-jsx/"
+status = 307
+
+[[redirects]]
+from = "/blog/2016/12/29/broken-promises/"
+to = "/blog/2016/broken-promises/"
+status = 307
+
+[[redirects]]
+from = "/blog/2016/12/19/compiler-code-generation/"
+to = "/blog/2016/compiler-code-generation/"
+status = 307
+
+[[redirects]]
+from = "/blog/2016/11/01/making-a-language/"
+to = "/blog/2016/making-a-language/"
+status = 307
+
+[[redirects]]
+from = "/blog/2016/08/22/the-leaning-tower-of-babel/"
+to = "/blog/2016/the-leaning-tower-of-babel/"
+status = 307
+
+[[redirects]]
+from = "/blog/2015/12/23/js-gotchas-with-this-and-new/"
+to = "/blog/2015/js-gotchas-with-this-and-new/"
+status = 307
+
+[[redirects]]
+from = "/blog/2015/07/01/squiggle-a-js-language/"
+to = "/blog/2015/squiggle-a-js-language/"
+status = 307

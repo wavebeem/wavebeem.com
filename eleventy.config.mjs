@@ -2,8 +2,8 @@
 
 import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import markdownIt from "markdown-it";
 import dateformat from "dateformat";
+import markdownIt from "markdown-it";
 import { inspect } from "node:util";
 
 /** @typedef {import("@11ty/eleventy").UserConfig} UserConfig */
@@ -21,17 +21,6 @@ export default function getConfig(config) {
   config.addPlugin(syntaxHighlight);
   config.addPassthroughCopy({ "src/static": "/" });
 
-  const feedMetadata = {
-    language: "en",
-    title: "wavebeem.com blog",
-    subtitle: "sage fennel's website",
-    base: "https://www.wavebeem.com/",
-    author: {
-      name: "sage fennel",
-      email: "mail@wavebeem.com",
-    },
-  };
-
   config.addPlugin(feedPlugin, {
     type: "atom", // or "rss", "json"
     outputPath: "/feed.xml",
@@ -39,7 +28,16 @@ export default function getConfig(config) {
       name: "post", // iterate over `collections.post`
       limit: 0, // 0 means no limit
     },
-    metadata: feedMetadata,
+    metadata: {
+      language: "en",
+      title: "wavebeem.com blog",
+      subtitle: "sage fennel's website",
+      base: "https://www.wavebeem.com/",
+      author: {
+        name: "sage fennel",
+        email: "mail@wavebeem.com",
+      },
+    },
   });
 
   config.addFilter("formatDate", function (value, format) {
