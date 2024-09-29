@@ -1,30 +1,29 @@
 ---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
 layout: "layout-base"
+eleventyComputed:
+  title: "Tagged “{{ tag }}”"
+permalink: "/tags/{{ tag }}/"
 css:
   - "blog"
 ---
 
-<h1 class="sage-bright">{{ title }}</h1>
 
-<p>
-  Subscribe via my <a class="sage-link" href="/feed.xml">RSS feed</a> to stay
-  updated.
-</p>
+<h1 class="sage-bright">Tagged “{{ tag }}”</h1>
 
-<h2 class="sage-bright">Browse by tag</h2>
-
-<ul class="tag-list">
-  {% for tag in collections.all | getAllTags | sort | filterTagList %}
-  <li>
-    <a href="/tags/{{ tag }}/" class="sage-link">{{ tag }}</a>
-  </li>
-  {% endfor %}
-</ul>
-
-<h2 class="sage-bright">All posts</h2>
+<p>&larr; <a href="/blog/" class="sage-link">Back to blog</a></p>
 
 <div class="post-list">
-  {% for post in collections.post | reverse %}
+  {% for post in collections[tag] | reverse %}
   <section class="post-list--post sage-well">
     <h2 class="sage-bright">
       <a class="sage-link no-underline" href="{{ post.url }}">
@@ -43,5 +42,3 @@ css:
   </section>
   {% endfor %}
 </div>
-
-{{ content | safe }}

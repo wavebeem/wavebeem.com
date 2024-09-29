@@ -1,11 +1,16 @@
 ---
 title: "Broken promises"
-description: "How to use promises effectively (written before async/await existed)"
+description:
+  "How to use promises effectively (written before async/await existed)"
+tags:
+  - "programming"
+  - "javascript"
 ---
 
 ## About
 
-This post is about how to use promises effectively. In it, I'm going to use some ES6 syntax. ES6 is the latest version of JavaScript. When you see:
+This post is about how to use promises effectively. In it, I'm going to use some
+ES6 syntax. ES6 is the latest version of JavaScript. When you see:
 
 ```js
 // Arrow function
@@ -19,13 +24,17 @@ That's basically the same as:
 function(x) { return x + 1; }
 ```
 
-If you're not sure if you can use ES6, check out the [ES6 compatibility table][1] and [Babel][2]. Otherwise, just manually change the arrow functions like shown above.
+If you're not sure if you can use ES6, check out the [ES6 compatibility
+table][1] and [Babel][2]. Otherwise, just manually change the arrow functions
+like shown above.
 
 ## Error handling
 
-Promises don't have a very large API, but that doesn't mean they're simple to learn. How error handling works is a bit tricky in promises.
+Promises don't have a very large API, but that doesn't mean they're simple to
+learn. How error handling works is a bit tricky in promises.
 
-First of all, there's `p.then(ok)`. This is the "happy path" handler, and the one you should be using most of the time.
+First of all, there's `p.then(ok)`. This is the "happy path" handler, and the
+one you should be using most of the time.
 
 ```js
 var p = Promise.resolve(1)
@@ -37,7 +46,8 @@ var p = Promise.resolve(1)
 p.then((x) => console.log(x));
 ```
 
-If one of those steps fail, then the final `console.log` there will never happen.
+If one of those steps fail, then the final `console.log` there will never
+happen.
 
 ```js
 var p = Promise.resolve(1)
@@ -51,7 +61,9 @@ var p = Promise.resolve(1)
 p.then((x) => console.log(x));
 ```
 
-There's also `p.then(ok, fail)`. This calls `fail` if `p` is rejected, but does _not_ call `fail` if the `ok` handler is rejected. Also, `p.catch(fail)` is a shortcut for `p.then(null, fail)`.
+There's also `p.then(ok, fail)`. This calls `fail` if `p` is rejected, but does
+_not_ call `fail` if the `ok` handler is rejected. Also, `p.catch(fail)` is a
+shortcut for `p.then(null, fail)`.
 
 ```js
 var p = Promise.resolve(1)
@@ -70,7 +82,9 @@ var p = Promise.resolve(1)
 p.then((x) => console.log(x));
 ```
 
-You should always either `throw` or `return` from the fail handlers for your promises, because JavaScript will implicitly `return undefined` at the end of a function for you, which you probably don't want in your promise value:
+You should always either `throw` or `return` from the fail handlers for your
+promises, because JavaScript will implicitly `return undefined` at the end of a
+function for you, which you probably don't want in your promise value:
 
 ```js
 var p = Promise.resolve(1)
@@ -86,7 +100,8 @@ var p = Promise.resolve(1)
 p.then((x) => console.log(x));
 ```
 
-So if you just rethrow the error for errors you can't actually recover from, you'll be fine:
+So if you just rethrow the error for errors you can't actually recover from,
+you'll be fine:
 
 ```js
 var p = Promise.resolve(1)
@@ -105,7 +120,11 @@ p.then((x) => console.log(x));
 
 ## Value your promises
 
-The most important thing about promises, compared to callbacks, is that promises are _values_. That means you can assign them to a variable, return them from a function, or pass them to another function. If you don't do something with the value of your promise, you're losing information! You might not always need this information, but it's there, and don't forget it.
+The most important thing about promises, compared to callbacks, is that promises
+are _values_. That means you can assign them to a variable, return them from a
+function, or pass them to another function. If you don't do something with the
+value of your promise, you're losing information! You might not always need this
+information, but it's there, and don't forget it.
 
 So instead of something like this:
 
@@ -154,7 +173,10 @@ function chaseData(url) {
 }
 ```
 
-This often happens because the value from one promise is used to get another promise, and so on. But promises were built for handling this already! If you have a simple pipeline where the next operation only depends on the previous, you can totally flatten your pyramid into a nice and easy road:
+This often happens because the value from one promise is used to get another
+promise, and so on. But promises were built for handling this already! If you
+have a simple pipeline where the next operation only depends on the previous,
+you can totally flatten your pyramid into a nice and easy road:
 
 ```js
 function chaseData(url) {
@@ -165,7 +187,10 @@ function chaseData(url) {
 }
 ```
 
-Ta-da! Much simpler to understand now. But I'm sure some of you at home are thinking, "but what about cases where you need to keep _all_ the data until the final step". Well, you're right, that still is a little tricky. Sometimes you'll see code like this:
+Ta-da! Much simpler to understand now. But I'm sure some of you at home are
+thinking, "but what about cases where you need to keep _all_ the data until the
+final step". Well, you're right, that still is a little tricky. Sometimes you'll
+see code like this:
 
 ```js
 function something(urlA, urlB) {
@@ -181,7 +206,8 @@ function something(urlA, urlB) {
 }
 ```
 
-Of course, there's also the more complicated case where you need `a` in order to determine `urlB`, such as in this example:
+Of course, there's also the more complicated case where you need `a` in order to
+determine `urlB`, such as in this example:
 
 ```js
 function userWithImage(userId) {
@@ -195,11 +221,13 @@ function userWithImage(userId) {
 }
 ```
 
-Just making a temporary `data` object you can reference in the next step of the pipeline completely flattens the need for nesting.
+Just making a temporary `data` object you can reference in the next step of the
+pipeline completely flattens the need for nesting.
 
 ## Don't catch and release
 
-If you're making a new function that returns a promise but you know you might encounter an error, you might write something like this:
+If you're making a new function that returns a promise but you know you might
+encounter an error, you might write something like this:
 
 ```js
 function asyncThing(x) {
@@ -213,7 +241,9 @@ function asyncThing(x) {
 }
 ```
 
-But the Promise constructor (and `.then` functions) are designed to automatically call reject for you if something is thrown! Which means we can ignore the `reject` parameter entirely.
+But the Promise constructor (and `.then` functions) are designed to
+automatically call reject for you if something is thrown! Which means we can
+ignore the `reject` parameter entirely.
 
 ```js
 function asyncThing(x) {
@@ -227,7 +257,8 @@ function asyncThing(x) {
 }
 ```
 
-And then at this point there's no reason to even have the `try/catch` any more, we can just simplify to:
+And then at this point there's no reason to even have the `try/catch` any more,
+we can just simplify to:
 
 ```js
 function asyncThing(x) {

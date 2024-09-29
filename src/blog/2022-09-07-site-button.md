@@ -3,6 +3,9 @@ title: "I made a Geocities site button"
 description:
   "88×31 GIFs were all the rage back on Geocities; I decided to finally make one
   for my own site."
+tags:
+  - "web"
+  - "art"
 ---
 
 Do you remember Geocities site buttons? Little 88x31 GIFs that served as links

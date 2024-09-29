@@ -1,6 +1,9 @@
 ---
 title: "7 tips for better bash"
 description: "You'll be writing better bash code after following these 7 tips."
+tags:
+  - "programming"
+  - "bash"
 ---
 
 ## Who is this post for?
@@ -372,19 +375,23 @@ There is a lot to know with bash! So once you think you've mastered these tips,
 you might want to check out the following links to learn more about programming
 in bash.
 
-The article [Use the Unofficial Bash Strict Mode (Unless You Looove Debugging)][1] is the inspiration for this blog post. I
-don't agree with it 100%, but it's still a fun read, and goes into some things
-not mentioned here.
+The article [Use the Unofficial Bash Strict Mode (Unless You Looove
+Debugging)][1] is the inspiration for this blog post. I don't agree with it
+100%, but it's still a fun read, and goes into some things not mentioned here.
 
-If you need to write an `if` statement in your script [you should use \[\[][2] because it offers many useful features over the classic `[` conditional expression.
+If you need to write an `if` statement in your script [you should use \[\[][2]
+because it offers many useful features over the classic `[` conditional
+expression.
 
-The [dynamic variable scoping][3] in bash is different from almost every other language.
+The [dynamic variable scoping][3] in bash is different from almost every other
+language.
 
 [getopts][4] is the standard way to accept command line arguments.
 
 Cleanup at the end of your script can be done via [trap][5].
 
-Some scripts benefit from assuming they [run in the directory where they live][6], instead of your current working directory.
+Some scripts benefit from assuming they [run in the directory where they
+live][6], instead of your current working directory.
 
 It may seem like bash is entirely based around strings, but you can also have
 [arrays of strings][7]!

@@ -20,6 +20,18 @@ css:
     {{ description }}
   </blockquote>
 
+  <ul class="tag-list">
+    {% for tag in tags | sort | filterTagList %}
+    <li>
+      <a class="sage-link" href="/tags/{{ tag }}/">{{ tag }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <p>&larr; <a href="/blog/" class="sage-link">Back to blog</a></p>
+
+  <hr />
+
   <div class="sage-prose post">
     {{ content | safe }}
   </div>
@@ -33,3 +45,7 @@ css:
   My blog doesn't support comments, but you can
   <a href="/contact/" class="sage-link">contact me</a> to talk about this post.
 </div>
+
+<div class="spacer3"></div>
+
+<a href="/blog/" class="sage-button">&larr; Back to blog</a>

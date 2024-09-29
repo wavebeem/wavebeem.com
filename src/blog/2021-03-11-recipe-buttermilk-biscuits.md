@@ -1,8 +1,11 @@
 ---
 title: |
-  Recipe - Buttermilk biscuits
+  Recipe: Buttermilk biscuits
 description: |
   Detailed instructions on how to make fluffy biscuits at home.
+tags:
+  - "cooking"
+  - "recipe"
 ---
 
 ## Ingredients
@@ -29,13 +32,13 @@ description: |
 
 4. Mix flour, baking powder, and salt in a large bowl.
 
-5. Take the butter out of the freezer and incorporate it into the dough.
-   Your goal is to keep it cold and break it up into small pieces, like the size
-   of a pea. You can use a pastry blender if you have one. Otherwise you might
-   want to use a grater and grate your cold butter. Again, you don't want to
-   handle the butter too much or it will melt as soon as you put it in the oven,
-   and all your butter will leak out on to the pan and deep fry the bottom of
-   your biscuits instead. Or you can use a food processor if you have one.
+5. Take the butter out of the freezer and incorporate it into the dough. Your
+   goal is to keep it cold and break it up into small pieces, like the size of a
+   pea. You can use a pastry blender if you have one. Otherwise you might want
+   to use a grater and grate your cold butter. Again, you don't want to handle
+   the butter too much or it will melt as soon as you put it in the oven, and
+   all your butter will leak out on to the pan and deep fry the bottom of your
+   biscuits instead. Or you can use a food processor if you have one.
 
 6. Add milk and stir with a fork just long enough to mix the wet and dry
    ingredients. Do not overmix the dough.

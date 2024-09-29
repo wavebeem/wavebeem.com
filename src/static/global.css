@@ -306,7 +306,23 @@ code.sage-bright,
   border-radius: calc(1em / 4);
 }
 
+.spacer1 {
+  width: 0.25rem;
+  aspect-ratio: 1 / 1;
+}
+
+.spacer2 {
+  width: 0.5rem;
+  aspect-ratio: 1 / 1;
+}
+
+.spacer3 {
+  width: 1rem;
+  aspect-ratio: 1 / 1;
+}
+
 .sage-button {
+  display: inline-block;
   font: inherit;
   font-weight: 700;
   border: 2px solid transparent;
@@ -314,11 +330,28 @@ code.sage-bright,
   border-radius: 9999px;
   background: var(--color-main-link);
   color: var(--color-main-background3);
+  text-decoration-line: none;
+  text-decoration-thickness: 2px;
 }
 
 .sage-button:focus-visible {
   outline: 2px solid var(--theme-color-link);
   outline-offset: 2px;
+}
+
+.tag-list {
+  display: flex;
+  margin-inline: 0;
+  padding-inline: 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tag-list li {
+  list-style-type: none;
+  background: var(--color-main-background1);
+  padding: 0.25rem 1rem;
+  border-radius: 9999px;
 }
 
 .sage-texture-striped {

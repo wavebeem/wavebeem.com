@@ -3,17 +3,26 @@ title: |
   JS compare function
 description: |
   Exploring a small but mighty function that supercharges the JS Array sort method to rival Lodash's orderBy
+tags:
+  - "programming"
+  - "javascript"
 ---
 
 ## The problem
 
-The JS [Array sort method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) is notorious for taking verbose comparison functions.
+The JS
+[Array sort method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+is notorious for taking verbose comparison functions.
 
-By adding a short `compare` function and using the `||` operator with unary negation (`-`), we can clearly express ordering without resorting to external libraries like [Lodash](https://lodash.com/).
+By adding a short `compare` function and using the `||` operator with unary
+negation (`-`), we can clearly express ordering without resorting to external
+libraries like [Lodash](https://lodash.com/).
 
 ## The compare function
 
-I went against my usual coding style (always use braces) in order to make this short function more memorable. I also spared y'all the horror of nested `?:` conditional operators :)
+I went against my usual coding style (always use braces) in order to make this
+short function more memorable. I also spared y'all the horror of nested `?:`
+conditional operators :)
 
 ```js
 function compare(a, b) {
@@ -23,17 +32,24 @@ function compare(a, b) {
 }
 ```
 
-**Note:** This function won't behave well with objects and arrays. A stricter function would throw an error or use a more complex algorithm to compare data structures.
+**Note:** This function won't behave well with objects and arrays. A stricter
+function would throw an error or use a more complex algorithm to compare data
+structures.
 
 ## What now?
 
 Two key facts allow this function to shine:
 
-1. JS defines `a || b` as evaluating to either `a` or `b`, not just `true` or `false`
+1. JS defines `a || b` as evaluating to either `a` or `b`, not just `true` or
+   `false`
 
-2. Since `-compare(a, b)` is equivalent to `compare(b, a)`, you can prefix each descending comparison with a special character to make it more obvious than flipping the arguments
+2. Since `-compare(a, b)` is equivalent to `compare(b, a)`, you can prefix each
+   descending comparison with a special character to make it more obvious than
+   flipping the arguments
 
-Seeing as `0 || x` evaluates to `x`, and `compare(a, b) === 0` means `a === b`, the `||` operator lets us chain these "failing" comparisons elegantly to define complex ordering:
+Seeing as `0 || x` evaluates to `x`, and `compare(a, b) === 0` means `a === b`,
+the `||` operator lets us chain these "failing" comparisons elegantly to define
+complex ordering:
 
 ```js
 const users = [
@@ -54,7 +70,8 @@ const users = [
 ];
 ```
 
-I think it's pretty clear that `compare` is a massive improvement over writing a comparison function from scratch:
+I think it's pretty clear that `compare` is a massive improvement over writing a
+comparison function from scratch:
 
 ```js
 [...users].sort((a, b) => {
@@ -77,7 +94,8 @@ I think it's pretty clear that `compare` is a massive improvement over writing a
 
 ## A real world example
 
-And for a realistic example from my website [Pokémon Type Calculator](https://pkmn.help):
+And for a realistic example from my website
+[Pokémon Type Calculator](https://pkmn.help):
 
 ```js
 array.sort((a, b) => {
@@ -92,7 +110,9 @@ array.sort((a, b) => {
 });
 ```
 
-It's not quite as readable as [Lodash's orderBy](https://lodash.com/docs/#orderBy), but I like how the ascending/descending information is colocated with the sort properties.
+It's not quite as readable as
+[Lodash's orderBy](https://lodash.com/docs/#orderBy), but I like how the
+ascending/descending information is colocated with the sort properties.
 
 ```js
 _.orderBy(
@@ -111,7 +131,8 @@ _.orderBy(
 
 ## Other thoughts
 
-This pattern can be also applied to functions that return `undefined` or `null` in the failure case by chaining the `??` operator:
+This pattern can be also applied to functions that return `undefined` or `null`
+in the failure case by chaining the `??` operator:
 
 ```js
 function parseInteger(value) {
@@ -145,4 +166,6 @@ parseInteger(NaN) ??
 // => 42
 ```
 
-You can even return entire objects, taking the result from the first call that didn't fail. Debugging can be tougher compared with using exceptions or failure objects, though.
+You can even return entire objects, taking the result from the first call that
+didn't fail. Debugging can be tougher compared with using exceptions or failure
+objects, though.

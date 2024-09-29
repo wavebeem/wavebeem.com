@@ -1,15 +1,25 @@
 ---
 title: "Why I don't like useState"
-description: "Why useState is so hard to use correctly, and what we can do about it."
+description:
+  "Why useState is so hard to use correctly, and what we can do about it."
+tags:
+  - "programming"
+  - "javascript"
+  - "react"
 ---
 
 ## Prologue
 
-I've been using React hooks since their public release roughly 3 years ago, and I was incredibly excited for them. I still think hooks are great, but `useState` in particular is hard to use correctly.
+I've been using React hooks since their public release roughly 3 years ago, and
+I was incredibly excited for them. I still think hooks are great, but `useState`
+in particular is hard to use correctly.
 
-I will cover the issues I see repeatedly, why they're so confusing, and some possible remedies.
+I will cover the issues I see repeatedly, why they're so confusing, and some
+possible remedies.
 
-NOTE: This post assumes familiarity with [React](https://reactjs.org/docs/getting-started.html) and [React hooks](https://reactjs.org/docs/hooks-intro.html).
+NOTE: This post assumes familiarity with
+[React](https://reactjs.org/docs/getting-started.html) and
+[React hooks](https://reactjs.org/docs/hooks-intro.html).
 
 ## How state works
 
@@ -34,9 +44,14 @@ function App() {
 }
 ```
 
-It's easy to forget that this `App` function is not called just once, but _every time the component needs to re-render_. Functions don't store state between multiple calls, so React actually stores this state. React _remembers_ this component "instance" and stores its state internally. Every time the component re-renders, React sends the correct state back when you call `useState`.
+It's easy to forget that this `App` function is not called just once, but _every
+time the component needs to re-render_. Functions don't store state between
+multiple calls, so React actually stores this state. React _remembers_ this
+component "instance" and stores its state internally. Every time the component
+re-renders, React sends the correct state back when you call `useState`.
 
-It's a bit weird, and it only gets weirder as your app grows in complexity. Let's add some async code:
+It's a bit weird, and it only gets weirder as your app grows in complexity.
+Let's add some async code:
 
 ```jsx
 function App() {
@@ -63,13 +78,20 @@ function App() {
 }
 ```
 
-Both the "immediate" and the "async" value are always 1 behind the value displayed in the UI. This is the result of [variable closure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures), an often surprising feature to developers.
+Both the "immediate" and the "async" value are always 1 behind the value
+displayed in the UI. This is the result of
+[variable closure](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures),
+an often surprising feature to developers.
 
-`num` is a `const` variable, meaning it can never be reassigned. But the value gets "updated"! Every time `App` is called, React returns a new value from `useState`. The `onClick` handler was created by a previous call to `App`, so its closure is attached to an older `num` variable.
+`num` is a `const` variable, meaning it can never be reassigned. But the value
+gets "updated"! Every time `App` is called, React returns a new value from
+`useState`. The `onClick` handler was created by a previous call to `App`, so
+its closure is attached to an older `num` variable.
 
 ## A workaround with useRef
 
-The problem is circumvented by using objects and mutation. `useRef` allows you to do this, but there are some caveats.
+The problem is circumvented by using objects and mutation. `useRef` allows you
+to do this, but there are some caveats.
 
 ```jsx
 function useUpdate() {
@@ -112,7 +134,8 @@ numRef.current++;
 console.log(oldNum, "-->", numRef.current);
 ```
 
-Hooks like `useEffect` rely on object equality (`===`), so you might have issues with effects not running since new objects are not created.
+Hooks like `useEffect` rely on object equality (`===`), so you might have issues
+with effects not running since new objects are not created.
 
 ## An alternative: useMagicState
 
@@ -180,22 +203,43 @@ function useMagicState(state) {
 }
 ```
 
-Using `useMagicState` you can treat the returned object like a regular object, except the assigning any of its properties will trigger a re-render. Because `state` proxies to a single object, `state.property` will always refer to the latest value of `property`. If you need to keep old values, use `const oldState = { ...state }` to make a shallow copy. Variable closure still happens, but the proxy always points to the latest values.
+Using `useMagicState` you can treat the returned object like a regular object,
+except the assigning any of its properties will trigger a re-render. Because
+`state` proxies to a single object, `state.property` will always refer to the
+latest value of `property`. If you need to keep old values, use
+`const oldState = { ...state }` to make a shallow copy. Variable closure still
+happens, but the proxy always points to the latest values.
 
-This API is called [reactivity in Vue.js](https://v3.vuejs.org/guide/reactivity.html#what-is-reactivity). It was inspired by hooks, and it may be time for React to take inspiration from Vue.
+This API is called
+[reactivity in Vue.js](https://v3.vuejs.org/guide/reactivity.html#what-is-reactivity).
+It was inspired by hooks, and it may be time for React to take inspiration from
+Vue.
 
 ## Why does it work this way?
 
-I would love to hear _why_ the React core team created `useState` with this pitfall. Even if you understand variable closure, it's frequently quite inconvenient to deal with in React.
+I would love to hear _why_ the React core team created `useState` with this
+pitfall. Even if you understand variable closure, it's frequently quite
+inconvenient to deal with in React.
 
-I swear I've seen some discussion of this on Twitter, but my search for written answers has failed me.
+I swear I've seen some discussion of this on Twitter, but my search for written
+answers has failed me.
 
-My theory is that because React looks at object identity to determine when to re-render memoized components, and when to re-run hooks, a `useRef`-style solution isn't good enough. Given that `Proxy` is required for other hooks to not misbehave, maybe they weren't interested in requiring `Proxy` to use `useState`, since `Proxy` can't be polyfilled for Internet Explorer. Perhaps they just thought this approach wasn't worth the complication. Maybe they didn't consider it? I don't know.
+My theory is that because React looks at object identity to determine when to
+re-render memoized components, and when to re-run hooks, a `useRef`-style
+solution isn't good enough. Given that `Proxy` is required for other hooks to
+not misbehave, maybe they weren't interested in requiring `Proxy` to use
+`useState`, since `Proxy` can't be polyfilled for Internet Explorer. Perhaps
+they just thought this approach wasn't worth the complication. Maybe they didn't
+consider it? I don't know.
 
 ## Conclusion
 
-Many blog posts document the difficulty of working with closures in React hooks, but I haven't seen any that mention how we can make new hooks to deal with the issue. Don't forget that you can always make new hooks to help you solve problems.
+Many blog posts document the difficulty of working with closures in React hooks,
+but I haven't seen any that mention how we can make new hooks to deal with the
+issue. Don't forget that you can always make new hooks to help you solve
+problems.
 
 ## Addendum
 
-[Preact signals](https://preactjs.com/guide/v10/signals/) look like an even better solution to the problem. I like Preact anyway for a lot of reasons.
+[Preact signals](https://preactjs.com/guide/v10/signals/) look like an even
+better solution to the problem. I like Preact anyway for a lot of reasons.

@@ -3,6 +3,8 @@ title: "Mechanical keyboards 201"
 description:
   "Thinking beyond pre-built gear, this guide will help prepare you to build
   your own keyboard."
+tags:
+  - "keyboards"
 ---
 
 ## Who is this article for
