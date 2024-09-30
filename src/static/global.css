@@ -354,6 +354,10 @@ code.sage-bright,
   border-radius: 9999px;
 }
 
+:where(.tag-list) .sage-link {
+  text-decoration-line: none;
+}
+
 .sage-texture-striped {
   --size: 0.5rem;
   --a: var(--color-stripe-background2);
