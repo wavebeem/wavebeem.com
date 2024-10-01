@@ -45,10 +45,6 @@ export default function getConfig(config) {
           newDate.setUTCMonth(m - 1);
           newDate.setUTCDate(d);
           item.feedDate = newDate;
-          console.log(":keys     ", Object.keys(item.data.image));
-          console.log("y,m,d     ", y, m, d);
-          console.log("item.date ", item.date);
-          console.log("feedDate  ", newDate);
         } else {
           item.feedDate = item.date;
         }
