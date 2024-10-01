@@ -1,10 +1,16 @@
 // @ts-check
 
-import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateformat from "dateformat";
 import markdownIt from "markdown-it";
 import { inspect } from "node:util";
+
+function compare(a, b) {
+  if (a < b) return -1;
+  if (a > b) return 1;
+  return 0;
+}
 
 /** @typedef {import("@11ty/eleventy").UserConfig} UserConfig */
 
@@ -21,28 +27,60 @@ export default function getConfig(config) {
   config.addPlugin(syntaxHighlight);
   config.addPassthroughCopy({ "src/static": "/" });
 
-  config.addPlugin(feedPlugin, {
-    type: "atom", // or "rss", "json"
-    outputPath: "/feed.xml",
-    collection: {
-      name: "post", // iterate over `collections.post`
-      limit: 0, // 0 means no limit
-    },
-    metadata: {
-      language: "en",
-      title: "wavebeem.com blog",
-      subtitle: "sage fennel's website",
-      base: "https://www.wavebeem.com/",
-      author: {
-        name: "sage fennel",
-        email: "mail@wavebeem.com",
-      },
-    },
+  config.addCollection("feed", async function (collectionApi) {
+    return collectionApi
+      .getAllSorted()
+      .filter((item) => {
+        const tags = item?.data?.tags || [];
+        return tags.includes("post") || tags.includes("art");
+      })
+      .map((item) => {
+        const tags = item?.data?.tags || [];
+        if (tags.includes("art") && item?.data?.image?.date) {
+          const [y, m, d] = (item?.data?.image?.date || "")
+            .split("-")
+            .map(Number);
+          const newDate = new Date(item.date);
+          newDate.setUTCFullYear(y);
+          newDate.setUTCMonth(m - 1);
+          newDate.setUTCDate(d);
+          item.feedDate = newDate;
+          console.log(":keys     ", Object.keys(item.data.image));
+          console.log("y,m,d     ", y, m, d);
+          console.log("item.date ", item.date);
+          console.log("feedDate  ", newDate);
+        } else {
+          item.feedDate = item.date;
+        }
+        return item;
+      })
+      .sort((a, b) => {
+        return compare(getDate(a), getDate(b)) || compare(a.title, b.title);
+      });
+  });
+
+  config.addPlugin(pluginRss);
+
+  // Eleventy doesn't let you override `date`, so we have a second kind of date
+  // reserved for making our own dates... sigh.
+  function getDate(value) {
+    return value.feedDate || value.date;
+  }
+
+  config.addFilter("getDate", getDate);
+
+  config.addFilter("getNewestDate", function (value) {
+    const dates = value.map(getDate);
+    dates.sort(compare).reverse();
+    return dates[0];
   });
 
   config.addFilter("formatDate", function (value, format) {
     if (value === "now") {
       value = now;
+    }
+    if (!value) {
+      throw new Error(`bad date: ${value}`);
     }
     const isUTC = true;
     return dateformat(value, format, isUTC);

@@ -1,0 +1,34 @@
+---
+pagination:
+  data: "art"
+  size: 1
+  alias: "image"
+  filter:
+    - "all"
+    - "post"
+    - "posts"
+    - "tagList"
+  addAllPagesToCollections: true
+layout: "layout-art"
+eleventyComputed:
+  title: "{{ image.name }}"
+permalink: "/art/{{ image.year }}/{{ image.slug }}/"
+tags:
+  - "art"
+css:
+  - "art-item"
+---
+
+<a
+  class="frame"
+  href="{{ image.url }}"
+>
+  <img
+    src="{{ image.url }}"
+    alt="{{ image.name }}"
+    width="{{ image.width }}"
+    height="{{ image.height }}"
+    style="--image-bg: {{ image.color }};"
+    loading="lazy"
+  />
+</a>

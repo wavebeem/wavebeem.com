@@ -22,14 +22,17 @@ async function getArt() {
 async function readInfo(filename) {
   const url = `/img/art/${filename}`;
   const cleanName = path.basename(filename).replace(/\.(png|gif|webp)$/, "");
+  let extension = path.basename(filename).split(/\./).pop();
   let [, date, name] = cleanName.match(/^(\d{4}-\d{2}-\d{2})-(.*)$/);
+  let [year] = date.split(/-/);
+  const slug = name;
   name = name.replace(/-/g, " ");
   const file = path.join(root, filename);
   const { width, height } = getImageSize(file);
   const { hex: color } = await getAverageColor(file, {
     algorithm: "dominant",
   });
-  const obj = { url, name, date, width, height, color };
+  const obj = { url, year, name, date, width, height, color, extension, slug };
   return obj;
 }
 
