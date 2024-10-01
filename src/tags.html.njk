@@ -1,13 +1,13 @@
 ---
 pagination:
-  data: collections
+  data: "collections"
   size: 1
-  alias: tag
+  alias: "tag"
   filter:
-    - all
-    - post
-    - posts
-    - tagList
+    - "all"
+    - "post"
+    - "posts"
+    - "tagList"
   addAllPagesToCollections: true
 layout: "layout-base"
 eleventyComputed:
@@ -19,8 +19,6 @@ css:
 
 
 <h1 class="sage-bright">Tagged “{{ tag }}”</h1>
-
-<p>&larr; <a href="/blog/" class="sage-link">Back to blog</a></p>
 
 <div class="post-list">
   {% for post in collections[tag] | reverse %}
