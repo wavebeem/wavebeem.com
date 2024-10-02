@@ -63,7 +63,7 @@
     <meta name="og:title" content="{{ title | formatTitle }}" />
     <meta name="og:description" content="{{ description }}" />
     <title>{{ title | formatTitle }}</title>
-    <script src="/wavebeem-theme-select.js"></script>
+    <script type="module" src="/wavebeem-theme-select.mjs"></script>
     <script
       async
       defer
@@ -111,6 +111,7 @@
         <wavebeem-theme-select>
           <select class="theme-select sage-button">
             <option value="" disabled>Select theme...</option>
+            <option value="auto">Auto</option>
             <option value="light">Light</option>
             <option value="dark">Dark</option>
           </select>
