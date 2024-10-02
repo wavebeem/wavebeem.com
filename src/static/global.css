@@ -358,22 +358,10 @@ code.sage-bright,
   text-decoration-line: none;
 }
 
-.sage-texture-striped {
-  --size: 0.5rem;
-  --a: var(--color-stripe-background2);
-  --b: var(--color-stripe-background1);
-  background: repeating-linear-gradient(
-      -45deg,
-      var(--a) 0 calc(0.5 * var(--size)),
-      var(--b) calc(0.5 * var(--size) + 0.5px) calc(1.5 * var(--size) - 0.5px),
-      var(--a) calc(1.5 * var(--size)) calc(2 * var(--size))
-    )
-    var(--a);
-}
-
 .theme-select {
   -webkit-appearance: none;
   appearance: none;
+  max-width: max-content;
 }
 
 .nav {
@@ -480,13 +468,23 @@ code.sage-bright,
   font-size: 1rem;
   font-weight: 800;
   margin-top: 2rem;
-  /* padding-top: 4rem; */
-  /* border-bottom: 1rem solid var(--color-main-background1); */
-  /* background: linear-gradient(
-    to bottom,
-    transparent 0 calc(100% - 1rem),
-    var(--color-footer-text) calc(100% - 1rem)
-  ); */
+  padding-top: 2rem;
+  background: var(--color-main-background1);
+  /* https://css-generators.com/wavy-shapes/ */
+  --mask: radial-gradient(1.35rem at 50% 1.9rem, #000 99%, #0000 101%)
+      calc(50% - 2rem) 0/4rem 100%,
+    radial-gradient(1.35rem at 50% -0.9rem, #0000 99%, #000 101%) 50% 1rem/4rem
+      100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.footer .sage-button {
+  padding-block: 0.25rem;
+  max-width: max-content;
+  /* border: 2px solid; */
+  /* background: var(--color-stripe-background1);
+  color: var(--color-main-text); */
 }
 
 @media (prefers-reduced-motion: reduce) {
