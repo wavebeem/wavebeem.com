@@ -21,7 +21,6 @@ export const light = {
   "color-header-text": oklch(40, 40, 140),
   "color-header-background": oklch(90, 30, 140),
   "color-header-button": oklch(86, 32, 140),
-  "color-header-button-hover": oklch(84, 32, 140),
 
   "color-main-link": oklch(50, 50, 290),
   "color-main-background1": oklch(95, 20, 30),
@@ -43,12 +42,11 @@ export const light = {
 };
 
 export const dark = {
-  "color-header-text": oklch(90, 40, 140),
-  "color-header-background": oklch(34, 5, 30),
-  "color-header-button": oklch(30, 5, 30),
-  "color-header-button-hover": oklch(28, 5, 30),
+  "color-header-text": oklch(96, 40, 140),
+  "color-header-background": oklch(50, 30, 140),
+  "color-header-button": oklch(45, 32, 140),
 
-  "color-main-link": oklch(90, 40, 140),
+  "color-main-link": oklch(80, 100, 290),
   "color-main-background1": oklch(34, 5, 30),
   "color-main-background2": oklch(32, 5, 30),
   "color-main-background3": oklch(30, 5, 30),

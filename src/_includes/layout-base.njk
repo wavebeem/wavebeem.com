@@ -102,12 +102,12 @@
     </main>
     <footer class="footer screen-only sage-texture-striped">
       <div class="content-column flex flex-column gap3">
-        <div>
-          &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
-            class="sage-bright"
-            >wavebeem</i
-          >)
-        </div>
+        <div>&copy; {{ "now" | formatDate("yyyy") }} Sage Fennel</div>
+        <nav class="grid2 footer-links">
+          {% for item in menu %}
+          <a href="{{ item.url }}" class="sage-link">{{ item.title }}</a>
+          {% endfor %}
+        </nav>
         <wavebeem-theme-select>
           <select class="theme-select sage-button">
             <option value="" disabled>Select theme...</option>
