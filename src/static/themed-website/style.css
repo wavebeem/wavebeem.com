@@ -1,18 +1,24 @@
 :root {
+  --color-background: #eee;
+  --color-text: #444;
+  --color-link: #00f;
+  color-scheme: light;
   font-family: system-ui, sans-serif;
   background-color: var(--color-background);
   color: var(--color-text);
 }
 
-:any-link {
-  color: var(--color-link);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #333;
+    --color-text: #eee;
+    --color-link: #0cc;
+    color-scheme: dark;
+  }
 }
 
-:root[data-theme="light"] {
-  --color-background: #eee;
-  --color-text: #444;
-  --color-link: #00f;
-  color-scheme: light;
+:any-link {
+  color: var(--color-link);
 }
 
 :root[data-theme="dark"] {
