@@ -371,6 +371,11 @@ code.sage-bright,
     var(--a);
 }
 
+.theme-select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .nav {
   grid-column: 1 / -1;
   display: grid;

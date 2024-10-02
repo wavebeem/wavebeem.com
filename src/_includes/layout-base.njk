@@ -63,6 +63,7 @@
     <meta name="og:title" content="{{ title | formatTitle }}" />
     <meta name="og:description" content="{{ description }}" />
     <title>{{ title | formatTitle }}</title>
+    <script src="/wavebeem-theme-select.js"></script>
     <script
       async
       defer
@@ -100,11 +101,20 @@
       <div class="content-column">{{ content | safe }}</div>
     </main>
     <footer class="footer screen-only sage-texture-striped">
-      <div class="content-column">
-        &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
-          class="sage-bright"
-          >wavebeem</i
-        >)
+      <div class="content-column flex flex-column gap3">
+        <div>
+          &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
+            class="sage-bright"
+            >wavebeem</i
+          >)
+        </div>
+        <wavebeem-theme-select>
+          <select class="theme-select sage-button">
+            <option value="" disabled>Theme</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </wavebeem-theme-select>
       </div>
     </footer>
   </body>

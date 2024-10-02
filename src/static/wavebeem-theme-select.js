@@ -17,7 +17,7 @@
     localStorage.setItem("theme", theme);
   }
 
-  class ThemeSelect extends HTMLElement {
+  class WavebeemThemeSelect extends HTMLElement {
     #abortController = new AbortController();
 
     constructor() {
@@ -56,7 +56,20 @@
         { signal }
       );
       // Ensure the default option is selected
-      this.querySelector("select").value = "";
+      const select = this.querySelector("select");
+      if (select) {
+        select.value = "";
+      }
+      addEventListener(
+        "DOMContentLoaded",
+        () => {
+          const select = this.querySelector("select");
+          if (select) {
+            select.value = "";
+          }
+        },
+        { signal }
+      );
     }
 
     disconnectedCallback() {
@@ -66,5 +79,5 @@
   }
 
   saveTheme(localStorage.getItem("theme") || getSystemTheme());
-  customElements.define("theme-select", ThemeSelect);
+  customElements.define("wavebeem-theme-select", WavebeemThemeSelect);
 }

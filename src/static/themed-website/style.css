@@ -1,11 +1,22 @@
 :root {
+  font-family: system-ui, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+:root,
+:root[data-theme="light"] {
   --color-background: #eee;
   --color-text: #444;
   --color-link: #00f;
   color-scheme: light;
-  font-family: system-ui, sans-serif;
-  background-color: var(--color-background);
-  color: var(--color-text);
+}
+
+:root[data-theme="dark"] {
+  --color-background: #333;
+  --color-text: #eee;
+  --color-link: #0cc;
+  color-scheme: dark;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,13 +30,6 @@
 
 :any-link {
   color: var(--color-link);
-}
-
-:root[data-theme="dark"] {
-  --color-background: #333;
-  --color-text: #eee;
-  --color-link: #0cc;
-  color-scheme: dark;
 }
 
 select {
