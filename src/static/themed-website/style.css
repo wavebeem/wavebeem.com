@@ -1,0 +1,31 @@
+:root {
+  font-family: system-ui, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+:any-link {
+  color: var(--color-link);
+}
+
+:root[data-theme="light"] {
+  --color-background: #eee;
+  --color-text: #444;
+  --color-link: #00f;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --color-background: #333;
+  --color-text: #eee;
+  --color-link: #0cc;
+  color-scheme: dark;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  all: unset;
+  user-select: none;
+  border-bottom: 1px solid;
+}

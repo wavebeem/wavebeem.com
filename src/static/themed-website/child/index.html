@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example website with a theme</title>
+    <script type="module" src="/themed-website/theme.mjs"></script>
+    <link rel="stylesheet" href="/themed-website/style.css" />
+  </head>
+  <body>
+    <h1>Themed Website</h1>
+    <ul>
+      <li><a href="/themed-website/">Home</a></li>
+      <ul>
+        <li><a>Child</a></li>
+      </ul>
+    </ul>
+    <div>
+      <theme-select>
+        <select>
+          <option value="" disabled>Theme</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </theme-select>
+    </div>
+  </body>
+</html>
