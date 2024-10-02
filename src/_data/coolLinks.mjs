@@ -11,9 +11,21 @@
 /** @type {SiteButton[]} */
 export const siteButtons = [
   {
-    mainUrl: "https://chostett.com/",
-    buttonUrl: "https://chostett.com/images/illuminesce_88x31.gif",
-    title: "illuminesce.",
+    mainUrl: "https://algometric.pink/",
+    buttonUrl: "https://algometric.pink/algobutton.gif",
+    title: "algometric.pink",
+    localUrl: "",
+  },
+  {
+    mainUrl: "https://tati.codes/",
+    buttonUrl: "https://tati.codes/static/tati.png",
+    title: "Welcome to my garage!",
+    localUrl: "",
+  },
+  {
+    mainUrl: "https://illuminesce.net/",
+    buttonUrl: "https://illuminesce.net/images/illuminesce_88x31.gif",
+    title: "CJ | design & video games",
     localUrl: "",
   },
   {
@@ -152,6 +164,14 @@ export const allLinks = [
     url: b.mainUrl,
     title: b.title,
   })),
+  {
+    url: "https://moonlitdecadence.neocities.org/",
+    title: "platinumtulip | digital garden sanctuary",
+  },
+  {
+    url: "https://alainawastaken.neocities.org/",
+    title: "ALAINA'S FUCK SPACE",
+  },
   {
     title: "Dracat",
     url: "https://drac.at/",
