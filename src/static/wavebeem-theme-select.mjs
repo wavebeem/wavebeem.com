@@ -7,6 +7,8 @@
 // Change this if you want to use a different localStorage key
 const storageKey = "theme";
 
+// TODO: Also manage the `<meta name="theme-color">`
+
 const html = String.raw;
 const root = document.documentElement;
 const darkModeQuery = matchMedia("(prefers-color-scheme: dark)");
