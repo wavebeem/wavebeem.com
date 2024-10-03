@@ -21,7 +21,6 @@ export const light = {
   "color-header-text": oklch(40, 40, 140),
   "color-header-background": oklch(90, 30, 140),
   "color-header-button": oklch(86, 32, 140),
-  "color-header-button-hover": oklch(84, 32, 140),
 
   "color-main-link": oklch(50, 50, 290),
   "color-main-background1": oklch(95, 20, 30),
@@ -31,9 +30,6 @@ export const light = {
   "color-main-text-bright": oklch(40, 30, 30),
   "color-main-code": oklch(50, 100, 30),
   "color-main-shadow": oklch(93, 20, 30),
-
-  "color-stripe-background1": oklch(98.5, 20, 30),
-  "color-stripe-background2": oklch(99.5, 20, 30),
 
   "color-syntax-comment": oklch(55, 0, 300),
   "color-syntax-keyword": oklch(47, 100, 300),
@@ -46,22 +42,18 @@ export const light = {
 };
 
 export const dark = {
-  "color-header-text": oklch(90, 40, 140),
-  "color-header-background": oklch(34, 5, 30),
-  "color-header-button": oklch(30, 5, 30),
-  "color-header-button-hover": oklch(28, 5, 30),
+  "color-header-text": oklch(96, 40, 140),
+  "color-header-background": oklch(50, 20, 140),
+  "color-header-button": oklch(45, 22, 140),
 
-  "color-main-link": oklch(90, 40, 140),
-  "color-main-background1": oklch(34, 5, 30),
-  "color-main-background2": oklch(32, 5, 30),
-  "color-main-background3": oklch(30, 5, 30),
+  "color-main-link": oklch(80, 100, 290),
+  "color-main-background1": oklch(34, 4, 30),
+  "color-main-background2": oklch(32, 4, 30),
+  "color-main-background3": oklch(30, 4, 30),
   "color-main-text": oklch(80, 5, 30),
-  "color-main-text-bright": oklch(90, 5, 30),
+  "color-main-text-bright": oklch(95, 5, 30),
   "color-main-code": oklch(80, 100, 30),
   "color-main-shadow": oklch(34, 5, 30),
-
-  "color-stripe-background1": oklch(32, 5, 30),
-  "color-stripe-background2": oklch(34, 5, 30),
 
   "color-syntax-comment": oklch(70, 10, 190),
   "color-syntax-keyword": oklch(80, 70, 300),

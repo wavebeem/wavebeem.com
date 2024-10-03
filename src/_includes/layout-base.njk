@@ -9,15 +9,6 @@
     <meta http-equiv="content-security-policy" content="{{ csp | safe }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content="{{ eleventy.generator }}" />
-    <meta
-      name="theme-color"
-      content="{{ colors.light['color-header-background'] }}"
-    />
-    <meta
-      name="theme-color"
-      content="{{ colors.dark['color-header-background'] }}"
-      media="(prefers-color-scheme: dark)"
-    />
     <link
       rel="preload"
       as="font"
@@ -63,6 +54,7 @@
     <meta name="og:title" content="{{ title | formatTitle }}" />
     <meta name="og:description" content="{{ description }}" />
     <title>{{ title | formatTitle }}</title>
+    <script type="module" src="/wavebeem-theme-select.mjs"></script>
     <script
       async
       defer
@@ -100,11 +92,21 @@
       <div class="content-column">{{ content | safe }}</div>
     </main>
     <footer class="footer screen-only sage-texture-striped">
-      <div class="content-column">
-        &copy; {{ "now" | formatDate("yyyy") }} Sage Fennel (<i
-          class="sage-bright"
-          >wavebeem</i
-        >)
+      <div class="content-column flex flex-column gap3">
+        <div>&copy; {{ "now" | formatDate("yyyy") }} Sage Fennel</div>
+        <nav class="grid2 footer-links">
+          {% for item in menu %}
+          <a href="{{ item.url }}" class="sage-link">{{ item.title }}</a>
+          {% endfor %}
+        </nav>
+        <wavebeem-theme-select>
+          <select class="theme-select sage-button" autocomplete="off">
+            <option value="" disabled selected>Select theme...</option>
+            <option value="auto">Auto</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </wavebeem-theme-select>
       </div>
     </footer>
   </body>

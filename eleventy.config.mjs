@@ -100,7 +100,9 @@ export default function getConfig(config) {
     const set = new Set();
     for (const item of collection) {
       for (const tag of item.data.tags || []) {
-        set.add(tag);
+        if (tag !== "draft") {
+          set.add(tag);
+        }
       }
     }
     return Array.from(set);

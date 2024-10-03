@@ -1,3 +1,8 @@
+/**
+ * @license MIT
+ * @copyright Sage Fennel 2024
+ * @see https://www.wavebeem.com/
+ */
 export class WavebeemEasterEgg extends HTMLElement {
   abortController = new AbortController();
 
