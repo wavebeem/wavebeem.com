@@ -8,139 +8,110 @@ tags:
   - "web_components"
 ---
 
-## Note
+## It's weirdly hard to do this
 
-This was originally
-[posted on Medium.com](https://medium.com/@wavebeem/squiggle-a-compile-to-js-language-771e1a4abe5d)
-on July 1, 2015, but I'm reposting it on my personal blog on May 8, 2019.
+If you want a web page in only one theme, that's relatively straightfoward. If
+you want to support dark mode, the use of `@media (prefers-color-scheme: dark)`
+with
+[CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
+isn't too bad. But adding a theme selector requires... **_JavaScript_**.
 
-## Why
+Follow along to see how I did it.
 
-Yeah, I know: yet another programming language.
+## ...You don't have to do this
 
-Still with me? You might be wondering why I decided to make a programming
-language. Here’s a few reasons:
+I was interested in the challenge of doing this. If you just want to
+automatically pick light/dark mode based on the user's preferences, just use CSS
+custom properties with `@media (prefers-color-scheme: dark)`.
 
-- I can.
+## The JS
 
-- I’ve never written a compiled language before (Only an interpreted one:
-  LatteScript).
+Download and install [wavebeem-theme-select.mjs](/wavebeem-theme-select.mjs).
+The source code is commented and less than a hundred lines.
 
-- I wanted an expression-oriented language.
-
-- I wanted immutable data (That is also transparently usable from JS).
-
-- I wanted constant variable bindings (Makes code easier to reason about).
-
-- I wanted function arity (argument count) checking (Fix common source of
-  mistakes with callbacks and such).
-
-- I wanted a powerful runtime type system (TypeScript only enforces checks at
-  compile time, forcing library authors to perform additional manual runtime
-  checking to avoid processing incorrect data).
-
-- There’s a chance I might make something useful.
-
-Here’s the “Hello, World!” program:
-
-```
-console.log("Hello, World!")
+```html
+<script type="module" src="/wavebeem-theme-select.mjs"></script>
 ```
 
-“But that’s just JavaScript without a semicolon,” you think. “Are they just
-making another CoffeeScript?” No.
+Wondering what an `.mjs` file is? Keep reading to see more.
 
-## Factorial Example
+## The HTML
 
-Let’s look at a more involved example:
+I made a custom
+[web component](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)
+that wraps a `<select>` tag and updates `localStorage` and the `[data-theme]` on
+the `<html>` element.
 
+```html
+<wavebeem-theme-select>
+  <select class="theme-select sage-button" autocomplete="off">
+    <option value="" disabled selected>Select theme...</option>
+    <option value="auto">Auto</option>
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+  </select>
+</wavebeem-theme-select>
 ```
-let (
-    factorial = ~(n)
-        if <(n, 2)
-        then 1
-        else *(n, factorial(-(n, 1))),
-    main = ~() factorial(4)
-) in {"main": main}
-```
 
-We have a program where the main function computes `factorial(4)`. Please excuse
-the prefix notation on the math operators, that’s likely to change in the
-future.
+The CSS classes are just part of my own styles, but the other parts can be
+customized to your liking. The mandatory parts are the options and specific
+values, since the `<wavebeem-theme-select>` relies on them.
 
-If I were to hand write the JavaScript for this module, it would look something
-like this:
+## The CSS
 
-```js
-function factorial(n) {
-  return n < 2 ? 1 : n * factorial(n - 1);
+I highly recommend using CSS custom properties to set color variables.
+
+```css
+/* Styles for before the component has loaded */
+:root,
+/* Styles for after the component has loaded */
+:root[data-theme="light"] {
+  --color-background: #fff;
+  --color-text: #222;
+
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
-function main() {
-  return factorial(4);
+
+/* Styles when dark mode set by JS */
+:root[data-theme="dark"] {
+  --color-background: #333;
+  --color-text: #ccc;
 }
-module.exports = { main: main };
 ```
 
-This probably looks cleaner than the Squiggle version, even if I had to say
-return everywhere. But the output of Squiggle is a bit more involved than this.
+For best compatibility, you should also include the dark mode styles in a media
+query, so that dark mode is applied when the JS doesn't load. Granted, it's
+tedious to repeat the colors in a separate media query, so you may want to avoid
+this if you don't like keeping these things synced up.
 
-Here is the JavaScript output from Squiggle, with the Squiggle internal and
-standard library functions removed for clarity:
-
-```js
-module.exports = (function () {
-  var factorial = function (n) {
-    if (arguments.length !== 1) {
-      throw new LANG$$js_Error("...");
-    }
-    return $lt(n, 2) ? 1 : $star(n, factorial($minus(n, 1)));
-  };
-  var main = function () {
-    if (arguments.length !== 0) {
-      throw new LANG$$js_Error("...");
-    }
-    return factorial(4);
-  };
-  return LANG$$object([["main", main]]);
-})();
+```css
+/* Styles when dark mode is set by browser */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #000;
+    --color-text: #fff;
+  }
+}
 ```
 
-Notice how `<` becomes `$lt`, and `*` becomes `$star`? These are internal
-Squiggle functions that wrap JavaScript’s built-in operators and will eventually
-provide type checking. No more `(3*'hi')` giving you `NaN`. This will throw an
-error. The operator `++` will call `.concat()` if its arguments are both strings
-or both arrays.
+## What's an .mjs file?
 
-Functions you create automatically have arity checking inserted. No more
-forgetting the argument to factorial and getting NaN. No more passing extra
-ignored arguments accidentally. There’s even plans to add runtime value
-assertions (pre- and post-conditions), as follows (subject to change):
+An `.mjs` file is really the same thing as a `.js` file, but the name is a clue
+that it holds JS code using the "new" module system. Modules were created as
+part of the ECMAScript 2015 specification, and were implemented in all major
+browsers by 2018.
 
-```
-let (
-    nonempty = ~(xs) >(xs.length, 0),
-    first = ~(xs: nonempty) xs[0]
-) in {"first": first}
-```
+Some web servers don't understand `.mjs` files. In this case, I suggest renaming
+the file to `wavebeem-theme-select.esm.js`. The `.esm.js` is a reminder that you
+need to load the JS code as a module for it to work correctly.
 
-Also, `LANG$$object` creates an object using `Object.freeze`, so no one can ever
-mess up your values. And because it’s a function, not an object literal, keys
-can be computed values, not just string literals.
+## You don't have to do this, but...
 
-This code would assert that `nonempty(xs)` is true every time first is run,
-ensuring that the preconditions have been satisfied, or throwing an exception.
-The precondition could be any function returning a boolean value, allowing you
-to easily reuse constraints across many functions to ensure clean APIs in
-programs you write.
-
-Unlike TypeScript, this would not detect any errors at compile time, but also
-unlike TypeScript, this would detect errors at runtime, even by plain JavaScript
-consumers.
-
-## What’s Next?
-
-I already have a decent amount of language implemented, so my next post will
-probably be a dive into the concepts available in Squiggle.
-
-You can find the source on
-[GitHub](https://github.com/squiggle-lang/squiggle-lang).
+Having a light theme and a dark theme is important for accessibility. Dark
+themes are useful for low light situations, or for people who are sensitive to
+light! However, I have a hard time reading dark themes because the text appears
+more blurry to [my vision](https://en.wikipedia.org/wiki/Astigmatism). When
+possible, both is best. And you really don't need a complicated theme switcher
+like I have. Using the system dark mode setting via media queries is more than
+enough for most personal sites.
