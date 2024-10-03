@@ -43,13 +43,13 @@ export const light = {
 
 export const dark = {
   "color-header-text": oklch(96, 40, 140),
-  "color-header-background": oklch(50, 30, 140),
-  "color-header-button": oklch(45, 32, 140),
+  "color-header-background": oklch(50, 20, 140),
+  "color-header-button": oklch(45, 22, 140),
 
   "color-main-link": oklch(80, 100, 290),
-  "color-main-background1": oklch(34, 5, 30),
-  "color-main-background2": oklch(32, 5, 30),
-  "color-main-background3": oklch(30, 5, 30),
+  "color-main-background1": oklch(34, 4, 30),
+  "color-main-background2": oklch(32, 4, 30),
+  "color-main-background3": oklch(30, 4, 30),
   "color-main-text": oklch(80, 5, 30),
   "color-main-text-bright": oklch(95, 5, 30),
   "color-main-code": oklch(80, 100, 30),
