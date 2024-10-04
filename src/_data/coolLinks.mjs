@@ -47,6 +47,13 @@ export const siteButtons = [
     localUrl: "",
   },
   {
+    mainUrl: "https://moonlitdecadence.neocities.org/",
+    buttonUrl:
+      "https://moonlitdecadence.neocities.org/site/88x31%20moonlit.png",
+    title: "moonlit decadence",
+    localUrl: "",
+  },
+  {
     mainUrl: "https://renkotsuban.com/",
     buttonUrl: "http://renkotsuban.com/button.gif",
     title: "Midnight Reading: Renkon's Personal Site",
@@ -164,10 +171,6 @@ export const allLinks = [
     url: b.mainUrl,
     title: b.title,
   })),
-  {
-    url: "https://moonlitdecadence.neocities.org/",
-    title: "platinumtulip | digital garden sanctuary",
-  },
   {
     url: "https://alainawastaken.neocities.org/",
     title: "ALAINA'S FUCK SPACE",
