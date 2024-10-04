@@ -34,6 +34,48 @@ figure figcaption {
   font-size: 1rem;
 }
 
+blockquote {
+  font-style: italic;
+  background: var(--color-main-background1);
+  margin-inline: 0;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.sage-prose .infobox {
+  position: relative;
+  margin-block: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--color-aside-background);
+}
+
+.sage-prose .infobox::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: 0 0 0 2px var(--color-main-background3);
+  background: var(--color-main-link);
+  color: var(--color-main-background3);
+  margin: -0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 9999px;
+  font-weight: 800;
+  content: "i";
+}
+
+.sage-prose .infobox :first-child {
+  margin-top: 0;
+}
+
+.sage-prose .infobox :last-child {
+  margin-bottom: 0;
+}
+
 .pixelated {
   image-rendering: crisp-edges;
   image-rendering: pixelated;

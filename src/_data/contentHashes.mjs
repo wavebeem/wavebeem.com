@@ -9,6 +9,9 @@ function createContentHash(filename) {
 }
 
 export default {
+  wavebeemThemeSelect: createContentHash(
+    "src/static/wavebeem-theme-select.mjs"
+  ),
   favicon: createContentHash("src/static/favicon.png"),
   photo: createContentHash("src/static/photo.webp"),
   ogImage: createContentHash("src/static/og-image.png"),

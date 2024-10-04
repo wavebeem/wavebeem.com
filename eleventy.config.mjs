@@ -27,7 +27,7 @@ export default function getConfig(config) {
   config.addPlugin(syntaxHighlight);
   config.addPassthroughCopy({ "src/static": "/" });
 
-  config.addCollection("feed", async function (collectionApi) {
+  config.addCollection("feed", function (collectionApi) {
     return collectionApi
       .getAllSorted()
       .filter((item) => {
@@ -64,6 +64,15 @@ export default function getConfig(config) {
   }
 
   config.addFilter("getDate", getDate);
+
+  config.addFilter("getPostsByTag", function (collections, tag) {
+    return collections.post.flatMap((p) => {
+      if (p.data?.tags?.includes(tag)) {
+        return [p];
+      }
+      return [];
+    });
+  });
 
   config.addFilter("getNewestDate", function (value) {
     const dates = value.map(getDate);

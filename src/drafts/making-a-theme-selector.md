@@ -19,13 +19,15 @@ with
 [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 isn't too bad. But adding a theme selector requires... **_JavaScript_**.
 
-Follow along to see how I did it.
+<aside class="infobox">
 
-## ...You don't have to do this
+### Don't feel obligated to make a theme switcher
 
 I was interested in the challenge of doing this. If you just want to
 automatically pick light/dark mode based on the user's preferences, just use CSS
 custom properties with `@media (prefers-color-scheme: dark)`.
+
+</aside>
 
 ## The JS
 
@@ -36,7 +38,20 @@ The source code is commented and less than a hundred lines.
 <script type="module" src="/wavebeem-theme-select.mjs"></script>
 ```
 
-Wondering what an `.mjs` file is? Keep reading to see more.
+<aside class="infobox">
+
+### What's an .mjs file?
+
+An `.mjs` file is really the same thing as a `.js` file, but the name is a clue
+that it holds JS code using the "new" module system. Modules were created as
+part of the ECMAScript 2015 specification, and were implemented in all major
+browsers by 2018.
+
+Some web servers don't understand `.mjs` files. In this case, I suggest renaming
+the file to `wavebeem-theme-select.esm.js`. The `.esm.js` is a reminder that you
+need to load the JS code as a module for it to work correctly.
+
+</aside>
 
 ## The HTML
 
@@ -98,18 +113,7 @@ this if you don't like keeping these things synced up.
 }
 ```
 
-## What's an .mjs file?
-
-An `.mjs` file is really the same thing as a `.js` file, but the name is a clue
-that it holds JS code using the "new" module system. Modules were created as
-part of the ECMAScript 2015 specification, and were implemented in all major
-browsers by 2018.
-
-Some web servers don't understand `.mjs` files. In this case, I suggest renaming
-the file to `wavebeem-theme-select.esm.js`. The `.esm.js` is a reminder that you
-need to load the JS code as a module for it to work correctly.
-
-## You don't have to do this, but...
+## Accessibility is complicated
 
 Having a light theme and a dark theme is important for accessibility. Dark
 themes are useful for low light situations, or for people who are sensitive to
