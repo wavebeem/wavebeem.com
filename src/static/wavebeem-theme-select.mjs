@@ -7,9 +7,19 @@
 // Change this if you want to use a different localStorage key
 const storageKey = "theme";
 
+function $(selector, element = document) {
+  return element.querySelector(selector);
+}
+
 const html = String.raw;
-const root = document.documentElement;
+
 const darkModeQuery = matchMedia("(prefers-color-scheme: dark)");
+
+const themeColorElement = $(`meta[name="theme-color"]`);
+const lightModeColor = $(`meta[name="theme-color"]`)?.content ?? "";
+const darkModeColor =
+  $(`meta[name="theme-color"][media="(prefers-color-scheme: dark)"]`)
+    ?.content ?? lightModeColor;
 
 // Get the current system theme
 function getSystemTheme() {
@@ -22,7 +32,11 @@ function applyTheme() {
   if (!computedTheme || computedTheme === "auto") {
     computedTheme = getSystemTheme();
   }
-  root.dataset.theme = computedTheme;
+  document.documentElement.dataset.theme = computedTheme;
+  if (themeColorElement) {
+    themeColorElement.content =
+      computedTheme === "dark" ? darkModeColor : lightModeColor;
+  }
 }
 
 export class WavebeemThemeSelect extends HTMLElement {
