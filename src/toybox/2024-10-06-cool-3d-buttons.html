@@ -1,0 +1,147 @@
+---
+title: "Cool 3D buttons"
+description:
+  "A nice collection of buttons you'll want to push over and over again. These
+  3D buttons call back to a time of shiny silver plastic and tactile
+  experiences."
+---
+
+<h2 class="sage-bright">The buttons</h2>
+
+<style>
+  pre b {
+    color: var(--color-main-code);
+  }
+
+  .toybox-toy {
+    --toybox-toy-base: calc(1rem / 4);
+    --toybox-toy-line: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem;
+    background: #ddd;
+    color: #333;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    background: linear-gradient(#fff, #ddd) padding-box,
+      linear-gradient(#0001, #0006) border-box;
+  }
+
+  .toybox-toy button {
+    all: unset;
+    text-align: center;
+    user-select: none;
+    border: solid var(--toybox-toy-base) transparent;
+    padding: calc(var(--toybox-toy-base) + var(--toybox-toy-line));
+    border-radius: 9999px;
+    box-shadow: inset 0 0 0 var(--toybox-toy-line) #777;
+    transition: 50ms filter;
+    text-shadow: 1px 1px 0 #fff;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+  }
+
+  .toybox-toy button[data-direction="concave"] {
+    background: linear-gradient(#ddd, #fff) content-box,
+      linear-gradient(#fff, #ccc) padding-box,
+      linear-gradient(#ccc, #fff) border-box;
+  }
+
+  .toybox-toy button[data-direction="convex"] {
+    background: linear-gradient(#fff, #ddd) padding-box,
+      linear-gradient(#ccc, #fff) border-box;
+  }
+
+  .toybox-toy button[data-direction="shiny"] {
+    background: linear-gradient(#eee, #fff, #aaa) padding-box,
+      linear-gradient(#ccc, #fff) border-box;
+  }
+
+  .toybox-toy button > span {
+    display: block;
+    padding: calc(1rem / 8) 1rem;
+  }
+
+  .toybox-toy button:focus-visible {
+    outline: 2px solid;
+    outline-offset: 1px;
+  }
+
+  .toybox-toy button:hover {
+    filter: brightness(105%);
+  }
+
+  .toybox-toy button:active {
+    filter: brightness(95%);
+  }
+</style>
+
+<div class="flex flex-column gap3">
+  <div class="toybox-toy">
+    <button type="button" data-direction="concave"><span>Concave</span></button>
+    <button type="button" data-direction="concave"><span>Concave</span></button>
+    <button type="button" data-direction="concave"><span>Concave</span></button>
+    <button type="button" data-direction="concave"><span>Concave</span></button>
+  </div>
+
+  <div class="toybox-toy">
+    <button type="button" data-direction="convex"><span>Convex</span></button>
+    <button type="button" data-direction="convex"><span>Convex</span></button>
+    <button type="button" data-direction="convex"><span>Convex</span></button>
+    <button type="button" data-direction="convex"><span>Convex</span></button>
+  </div>
+</div>
+
+<h2 class="sage-bright">The explanation</h2>
+
+<p>
+  The important part here is knowing that each image in
+  <code>background-image</code> can have a separate
+  <code>background-clip</code> applied to it.
+</p>
+
+<pre>
+background:
+  linear-gradient(#bbb, #fff) <b>content-box</b>,
+  linear-gradient(#fff, #999) <b>padding-box</b>,
+  linear-gradient(#999, #fff) <b>border-box</b>;
+</pre>
+
+<p>
+  This uses the <code>background</code> shorthand to set the
+  <code>background-clip</code> next to each associated
+  <code>background-image</code>.
+</p>
+
+<h2 class="sage-bright">Accessibility</h2>
+
+<p>
+  It's important to note that the internal dark <q>border</q> not only
+  <em>looks good</em> but is <strong>necessary</strong> for accessibility, based
+  on the
+  <a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast"
+    >WCAG contrast rules</a
+  >.
+</p>
+
+<h2 class="sage-bright">Credit</h2>
+
+<p>
+  These buttons are heavily inspired by
+  <a href="https://codepen.io/thebabydino/pen/QWLJpOb">Ana Tudor's Codepen</a>.
+  Rather than using fixed size buttons, I compromised by requiring a child
+  <code>&lt;span&gt;</code> for the actual text padding.
+</p>
+
+<p>
+  You can read more about the technique in Ana's <i>CSS Tricks</i> article about
+  <a href="https://css-tricks.com/the-backgound-clip-property-and-use-cases/"
+    >background-clip</a
+  >.
+</p>
