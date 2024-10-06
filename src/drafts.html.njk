@@ -1,7 +1,7 @@
 ---
+title: "Drafts"
 layout: "layout-base"
-css:
-  - "blog"
+permalink: "/drafts/"
 ---
 
 <h1 class="sage-bright">Drafts</h1>
@@ -23,6 +23,7 @@ css:
       datetime="{{ draft.date | formatDate('yyyy-mm-dd') }}"
       >{{ draft.date | formatDate('yyyy mmmm d') }}</time
     >
+
   </section>
   {% endfor %}
 </div>

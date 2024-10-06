@@ -1,7 +1,7 @@
 const html = String.raw;
 const css = String.raw;
 
-export class WavebeemToyFlashlight extends HTMLElement {
+export class WavebeemToyboxFlashlight extends HTMLElement {
   #abortController = new AbortController();
 
   #style = css`
@@ -108,4 +108,4 @@ export class WavebeemToyFlashlight extends HTMLElement {
   }
 }
 
-customElements.define("wavebeem-toy-flashlight", WavebeemToyFlashlight);
+customElements.define("wavebeem-toybox-flashlight", WavebeemToyboxFlashlight);

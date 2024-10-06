@@ -160,7 +160,7 @@ summary {
   user-select: none;
 }
 
-details[open] > summary {
+main details[open] > summary:not(.sage-button) {
   margin-bottom: 1rem;
 }
 
@@ -370,6 +370,10 @@ code.sage-bright,
   padding-inline: 0;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.tag-list:empty {
+  display: none;
 }
 
 .tag-list li {

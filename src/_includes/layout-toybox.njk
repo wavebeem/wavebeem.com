@@ -1,0 +1,27 @@
+---
+layout: "layout-base"
+css:
+  - "post"
+  - "crime"
+---
+
+<article>
+  <h1 class="sage-bright">
+    {{ title }}
+  </h1>
+
+  <p class="post-date date">
+    <time
+      datetime="{{ page.date | formatDate('yyyy-mm-dd') }}"
+      >{{ page.date | formatDate('yyyy mmmm d') }}</time
+    >
+  </p>
+
+  <blockquote>
+    {{ description }}
+  </blockquote>
+
+  <div class="sage-prose post">
+    {{ content | safe }}
+  </div>
+</article>

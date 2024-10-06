@@ -1,0 +1,5 @@
+{
+  "layout": "layout-toybox",
+  "tags": ["post", "toybox"],
+  "permalink": "toybox/{{ page.date | formatDate: 'yyyy' }}/{{ page.fileSlug }}/"
+}

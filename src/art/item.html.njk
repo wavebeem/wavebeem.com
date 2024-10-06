@@ -9,7 +9,7 @@ pagination:
     - "posts"
     - "tagList"
   addAllPagesToCollections: true
-layout: "layout-art"
+layout: "layout-base"
 eleventyComputed:
   title: "{{ image.name }}"
 permalink: "/art/{{ image.year }}/{{ image.slug }}/"
@@ -19,16 +19,28 @@ css:
   - "art-item"
 ---
 
-<a
-  class="frame"
-  href="{{ image.url }}"
->
-  <img
-    src="{{ image.url }}"
-    alt="{{ image.name }}"
-    width="{{ image.width }}"
-    height="{{ image.height }}"
-    style="--image-bg: {{ image.color }};"
-    loading="lazy"
-  />
-</a>
+<article class="art">
+  <h1 class="sage-bright">
+    {{ title }}
+  </h1>
+
+  <p class="post-date date">
+    <time
+      datetime="{{ image.date | formatDate('yyyy-mm-dd') }}"
+      >{{ image.date | formatDate('yyyy mmmm d') }}</time
+    >
+  </p>
+
+  <div>
+    <a class="frame" href="{{ image.url }}">
+      <img
+        src="{{ image.url }}"
+        alt="{{ image.name }}"
+        width="{{ image.width }}"
+        height="{{ image.height }}"
+        style="--image-bg: {{ image.color }};"
+        loading="lazy"
+      />
+    </a>
+  </div>
+</article>

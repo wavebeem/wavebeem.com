@@ -4,7 +4,6 @@ import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateformat from "dateformat";
 import markdownIt from "markdown-it";
-import { inspect } from "node:util";
 
 function compare(a, b) {
   if (a < b) return -1;
@@ -37,9 +36,7 @@ export default function getConfig(config) {
       .map((item) => {
         const tags = item?.data?.tags || [];
         if (tags.includes("art") && item?.data?.image?.date) {
-          const [y, m, d] = (item?.data?.image?.date || "")
-            .split("-")
-            .map(Number);
+          const [y, m, d] = item.data.image.date.split("-").map(Number);
           const newDate = new Date(item.date);
           newDate.setUTCFullYear(y);
           newDate.setUTCMonth(m - 1);
@@ -94,10 +91,6 @@ export default function getConfig(config) {
   config.addFilter("formatTitle", function (value) {
     const base = "wavebeem";
     return [value, base].filter((x) => x).join(" | ");
-  });
-
-  config.addFilter("inspect", function (value) {
-    return inspect(value, {});
   });
 
   config.addFilter("markdown", function (content) {

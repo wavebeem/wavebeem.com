@@ -17,6 +17,7 @@ const menu = [
   { url: "/about/", title: "About this site" },
   { url: "/uses/", title: "Things I use" },
   { url: "/links/", title: "Cool links" },
+  { url: "/toybox/", title: "Toybox" },
   { url: "/shrines/", title: "Shrines" },
 ];
 

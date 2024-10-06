@@ -7,13 +7,12 @@ tags:
   - "programming"
   - "javascript"
   - "web"
-  - "toys"
   - "tech"
 ---
 
 <script
   type="module"
-  src="/elements/wavebeem-toy-flashlight.mjs?t={{ dateNow }}"
+  src="/elements/wavebeem-toybox-flashlight.mjs?t={{ dateNow }}"
 ></script>
 
 ## Introducing: Flashlight
@@ -25,11 +24,11 @@ entertainment.
 
 Today I made a flashlight you can toggle on this page.
 
-<wavebeem-toy-flashlight>
+<wavebeem-toybox-flashlight>
   <button class="sage-button sage-primary">Toggle flashlight mode</button>
-</wavebeem-toy-flashlight>
+</wavebeem-toybox-flashlight>
 
-[View source](/elements/wavebeem-toy-flashlight.mjs)
+[View source](/elements/wavebeem-toybox-flashlight.mjs)
 
 ## Why I wanted to learn programming
 
