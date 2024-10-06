@@ -14,8 +14,9 @@ tags:
 ## It's weirdly hard to do this
 
 If you want a web page in only one theme, that's relatively straightfoward. If
-you want to support dark mode, the use of `@media (prefers-color-scheme: dark)`
-with
+you want to support dark mode, the use of
+[@media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media)
+`(prefers-color-scheme: dark)` with
 [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 isn't too bad. But adding a theme selector requires... **_JavaScript_**.
 
@@ -23,9 +24,9 @@ isn't too bad. But adding a theme selector requires... **_JavaScript_**.
 
 ### Don't feel obligated to make a theme switcher
 
-I was interested in the challenge of doing this. If you just want to
-automatically pick light/dark mode based on the user's preferences, just use CSS
-custom properties with `@media (prefers-color-scheme: dark)`.
+I was interested in the challenge of doing this. If you only want to
+automatically pick light/dark mode based on the user's preferences, it's easeier
+to use CSS custom properties with `@media (prefers-color-scheme: dark)`.
 
 </aside>
 
@@ -62,7 +63,7 @@ the `<html>` element.
 
 ```html
 <wavebeem-theme-select>
-  <select class="theme-select sage-button" autocomplete="off">
+  <select autocomplete="off">
     <option value="" disabled selected>Select theme...</option>
     <option value="auto">Auto</option>
     <option value="light">Light</option>
@@ -71,9 +72,10 @@ the `<html>` element.
 </wavebeem-theme-select>
 ```
 
-The CSS classes are just part of my own styles, but the other parts can be
-customized to your liking. The mandatory parts are the options and specific
-values, since the `<wavebeem-theme-select>` relies on them.
+You can add other elements inside `<wavebeem-theme-select>` like `<label>` for
+example. The mandatory parts are the `<option>` elements and the specific values
+`""`, `"auto"`, `"light"`, and `"dark"`, since the `<wavebeem-theme-select>`
+relies on them.
 
 ## The CSS
 
@@ -112,6 +114,28 @@ this if you don't like keeping these things synced up.
   }
 }
 ```
+
+## Bonus round: theme-color for mobile
+
+There's also the
+[theme-color](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color)
+meta property which mobile browsers use to color the browser UI. It's rarely
+used on desktop, though.
+
+```html
+<meta name="theme-color" content="#0000ff" />
+<meta
+  name="theme-color"
+  content="#0088ff"
+  media="(prefers-color-scheme: dark)"
+/>
+```
+
+You can use the `media` property to contain a CSS
+[@media](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) query in order
+to automatically apply to system dark mode. If you need to support user selected
+themes, then you can use JavaScript to update the `content` value of the
+`<meta>` tag.
 
 ## Accessibility is complicated
 
