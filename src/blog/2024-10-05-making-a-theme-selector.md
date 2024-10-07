@@ -25,7 +25,7 @@ isn't too bad. But adding a theme selector requires... **_JavaScript_**.
 ### Don't feel obligated to make a theme switcher
 
 I was interested in the challenge of doing this. If you only want to
-automatically pick light/dark mode based on the user's preferences, it's easeier
+automatically pick light/dark mode based on the user's preferences, it's easier
 to use CSS custom properties with `@media (prefers-color-scheme: dark)`.
 
 </aside>
