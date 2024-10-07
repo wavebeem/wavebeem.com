@@ -9,10 +9,6 @@ description:
 <h2 class="sage-bright">The buttons</h2>
 
 <style>
-  pre b {
-    color: var(--color-main-code);
-  }
-
   .toybox-toy {
     --toybox-toy-base: calc(1rem / 4);
     --toybox-toy-line: 1px;
@@ -24,7 +20,7 @@ description:
     margin: 0;
     padding: 1rem;
     background: #ddd;
-    color: #333;
+    color: #444;
     border-radius: 0.5rem;
     border: 1px solid transparent;
     background: linear-gradient(#fff, #ddd) padding-box,
@@ -40,27 +36,22 @@ description:
     border-radius: 9999px;
     box-shadow: inset 0 0 0 var(--toybox-toy-line) #777;
     transition: 50ms filter;
-    text-shadow: 1px 1px 0 #fff;
+    text-shadow: 1px 1px 0 #f8f8f8;
+    font-weight: 700;
     display: flex;
     justify-content: center;
-    font-family: var(--font-mono);
     font-size: 1rem;
   }
 
-  .toybox-toy button[data-direction="concave"] {
+  .toybox-toy button[data-type="1"] {
     background: linear-gradient(#ddd, #fff) content-box,
       linear-gradient(#fff, #ccc) padding-box,
       linear-gradient(#ccc, #fff) border-box;
   }
 
-  .toybox-toy button[data-direction="convex"] {
-    background: linear-gradient(#fff, #ddd) padding-box,
-      linear-gradient(#ccc, #fff) border-box;
-  }
-
-  .toybox-toy button[data-direction="shiny"] {
-    background: linear-gradient(#eee, #fff, #aaa) padding-box,
-      linear-gradient(#ccc, #fff) border-box;
+  .toybox-toy button[data-type="2"] {
+    background: linear-gradient(#fff, #ccc) padding-box,
+      linear-gradient(#ddd, #fff) border-box;
   }
 
   .toybox-toy button > span {
@@ -74,27 +65,27 @@ description:
   }
 
   .toybox-toy button:hover {
-    filter: brightness(105%);
+    filter: brightness(103%);
   }
 
   .toybox-toy button:active {
-    filter: brightness(95%);
+    filter: brightness(97%);
   }
 </style>
 
 <div class="flex flex-column gap3">
   <div class="toybox-toy">
-    <button type="button" data-direction="concave"><span>Concave</span></button>
-    <button type="button" data-direction="concave"><span>Concave</span></button>
-    <button type="button" data-direction="concave"><span>Concave</span></button>
-    <button type="button" data-direction="concave"><span>Concave</span></button>
+    <button type="button" data-type="1"><span>Type 1</span></button>
+    <button type="button" data-type="1"><span>Type 1</span></button>
+    <button type="button" data-type="1"><span>Type 1</span></button>
+    <button type="button" data-type="1"><span>Type 1</span></button>
   </div>
 
   <div class="toybox-toy">
-    <button type="button" data-direction="convex"><span>Convex</span></button>
-    <button type="button" data-direction="convex"><span>Convex</span></button>
-    <button type="button" data-direction="convex"><span>Convex</span></button>
-    <button type="button" data-direction="convex"><span>Convex</span></button>
+    <button type="button" data-type="2"><span>Type 2</span></button>
+    <button type="button" data-type="2"><span>Type 2</span></button>
+    <button type="button" data-type="2"><span>Type 2</span></button>
+    <button type="button" data-type="2"><span>Type 2</span></button>
   </div>
 </div>
 
