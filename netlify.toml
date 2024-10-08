@@ -15,13 +15,19 @@ status = 307
 force = true
 
 [[redirects]]
-from = "http://www.mockbrian.com/*"
+from = "https://www.mockbrian.com/*"
 to = "https://www.wavebeem.com/:splat"
 status = 307
 force = true
 
 [[redirects]]
 from = "http://blog.mockbrian.com/*"
+to = "https://www.wavebeem.com/blog/:splat"
+status = 307
+force = true
+
+[[redirects]]
+from = "https://blog.mockbrian.com/*"
 to = "https://www.wavebeem.com/blog/:splat"
 status = 307
 force = true
