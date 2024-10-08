@@ -175,6 +175,10 @@ summary {
   cursor: default;
 }
 
+.hamburger summary:hover {
+  background: var(--color-header-button);
+}
+
 .hamburger[open] summary {
   margin: inherit;
 }
