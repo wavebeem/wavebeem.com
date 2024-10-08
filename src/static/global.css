@@ -61,7 +61,7 @@
   --font-size-h3: 1.25rem;
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
-  --font-size-code: 1.15rem;
+  --font-size-code: 1rem;
 
   --theme-color-background: var(--color-main-background3);
   --theme-color-text: var(--color-main-text);
@@ -139,6 +139,7 @@ pre {
     --font-size-h2: 1.25rem;
     --font-size-h3: 1.15rem;
     --font-size-base: 1rem;
+    --font-size-small: 1rem;
     --font-size-code: 0.9rem;
   }
 }
