@@ -60,6 +60,7 @@
   --font-size-h2: 1.75rem;
   --font-size-h3: 1.25rem;
   --font-size-base: 1.25rem;
+  --font-size-small: 1rem;
   --font-size-code: 1.15rem;
 
   --theme-color-background: var(--color-main-background3);
@@ -504,13 +505,6 @@ code.sage-bright,
   text-decoration-line: none;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  /* Ideally we'd make the animation stop, but it's not that easy... */
-  .netpet {
-    display: none;
-  }
-}
-
 :where(.footer-links) .sage-link {
   font-weight: 600;
   max-width: max-content;
@@ -525,8 +519,7 @@ code.sage-bright,
 }
 
 .footer {
-  /* text-align: center; */
-  font-size: 1rem;
+  font-size: var(--font-size-small);
   font-weight: 800;
   margin-top: 2rem;
   padding-top: 2rem;
