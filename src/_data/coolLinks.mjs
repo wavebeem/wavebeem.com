@@ -176,6 +176,10 @@ export const allLinks = [
     title: "ALAINA'S FUCK SPACE",
   },
   {
+    url: "https://srxl.me/",
+    title: "welcome | srxl.me",
+  },
+  {
     title: "Dracat",
     url: "https://drac.at/",
   },

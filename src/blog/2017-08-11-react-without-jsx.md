@@ -23,7 +23,7 @@ surprisingly simple route if you want to take it.
 **index.html**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <head>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js"></script>
