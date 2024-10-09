@@ -2,6 +2,28 @@
 publish = "_site"
 command = "npm run build"
 
+[[headers]]
+for = "/*"
+
+[headers.values]
+Content-Security-Policy = """
+default-src
+  'self'
+  https://plausible.io;
+
+img-src
+  'self'
+  https://plausible.io;
+
+script-src
+  'self'
+  https://plausible.io;
+
+style-src
+  'self'
+  'unsafe-inline';
+"""
+
 [[redirects]]
 from = "/old-path"
 to = "/new-path"
