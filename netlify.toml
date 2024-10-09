@@ -22,6 +22,9 @@ script-src
 style-src
   'self'
   'unsafe-inline';
+
+frame-ancestors
+  'self';
 """
 
 [[redirects]]

@@ -23,11 +23,11 @@ main ul li + li {
 
 /* stylelint-disable-next-line no-descending-specificity */
 main ul {
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 
 main ol {
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 
 main summary {

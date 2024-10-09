@@ -232,12 +232,20 @@ p {
 }
 
 ul {
-  padding-left: 1em;
+  padding-left: 1rem;
   list-style-type: disc;
 }
 
+li:first-child > p {
+  margin-top: 0;
+}
+
+li:last-child > p {
+  margin-bottom: 0;
+}
+
 ol {
-  padding-left: 1em;
+  padding-left: 1rem;
 }
 
 main {
@@ -408,9 +416,6 @@ code.sage-bright,
   justify-content: flex-end;
   max-width: max-content;
   margin-left: auto;
-  /* background: var(--color-header-button);
-  border-radius: 1rem;
-  padding: 0.5rem; */
 
   /* triangle dimension */
   --b: 1rem; /* base */
@@ -484,7 +489,14 @@ code.sage-bright,
   padding: 1rem;
   border-radius: 1rem;
   background: var(--color-main-background1);
-  /* box-shadow: 0 2px 0 0 var(--color-main-shadow); */
+}
+
+.sage-well > :first-child {
+  margin-top: 0;
+}
+
+.sage-well > :last-child {
+  margin-bottom: 0;
 }
 
 .link-card {
@@ -515,11 +527,11 @@ code.sage-bright,
   max-width: max-content;
 }
 
-:is(.nav, .header, .footer) .sage-link {
+:is(.nav, .header, .footer-links) .sage-link {
   text-decoration-line: none;
 }
 
-:is(.nav, .header, .footer) .sage-link:hover {
+:is(.nav, .header, .footer-links) .sage-link:hover {
   text-decoration-line: underline;
 }
 

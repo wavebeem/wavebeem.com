@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -100,7 +100,7 @@
     </main>
     <footer class="footer screen-only sage-texture-striped">
       <div class="content-column flex flex-column gap3">
-        <div>&copy; {{ "now" | formatDate("yyyy") }} Sage Fennel</div>
+        <div>Navigation</div>
         <nav class="grid2 footer-links">
           {% for item in menu %}
           <a href="{{ item.url }}" class="sage-link">{{ item.title }}</a>
@@ -114,6 +114,13 @@
             <option value="dark">Dark</option>
           </select>
         </wavebeem-theme-select>
+        <div>&copy; {{ "now" | formatDate("yyyy") }} Sage Fennel</div>
+        <div>
+          Made with
+          <a class="sage-link" href="https://www.11ty.dev/">Eleventy</a>,
+          <a class="sage-link" href="https://www.netlify.com/">Netlify</a>, and
+          <a class="sage-link" href="/about/">more</a>.
+        </div>
       </div>
     </footer>
   </body>
