@@ -36,38 +36,30 @@ are _very_ few custom options for those form factors.
 This little dictionary should help you understand some of the incomprehensible
 jargon thrown around by keyboard enthusiasts.
 
-**Keeb**
+### Keeb
 
 > Short for keyboard, keeb is a fun word for talking about keyboards. You may
 > also see "MK" for mechanical keyboard. I think keeb is more fun though.
 
----
-
-**Stab**
+### Stab
 
 > Stabilizers are often called stabs. They are used to keep long keys from
 > becoming misaligned while typing.
 
----
-
-**Lube**
+### Lube
 
 > Lubricant is usually just called lube, and it's applied to stabilizers and key
 > switches in order to make them smoother and quieter. It's generally a liquid
 > or thin paste which fills in the rough surface on the metal or plastic pieces
 > that are touching each other.
 
----
-
-**MoQ (minimum order quantity)**
+### MoQ (minimum order quantity)
 
 > The smallest order size a factory will take. Running a factory is hard work,
 > and calibrating everything just to make a single keycap set is expensive. This
 > number allows the factories to make a profit.
 
----
-
-**GB (group buy)**
+### GB (group buy)
 
 > This is a selling method usually used for custom keycaps. Keycaps are
 > generally made in large factories, but such factories have high MoQs, so it's
@@ -76,72 +68,54 @@ jargon thrown around by keyboard enthusiasts.
 > (several months in advance), and if the MoQ is reached, eventually get their
 > keycaps in the mail.
 
----
-
-**IC (interest check)**
+### IC (interest check)
 
 > Usually a Google Form, this is a survey about a potential group buy, in order
 > to gauge interest and receive feedback (e.g. I really wish this keycap set
 > supported my Ergodox, that shade of blue is not pretty, etc)
 
----
-
-**QMK (quantum mechanical keyboard)**
+### QMK (quantum mechanical keyboard)
 
 > This is the most common custom firmware for keyboards. It is written in C and
 > hosted on GitHub. It is designed to be extensible so that new keyboards can be
 > easily added to the QMK project, allowing the PCB to communicate with a
 > computer as a keyboard.
 
----
-
-**PCB (printed circuit board)**
+### PCB (printed circuit board)
 
 > This is the "chip" that powers the keyboard, which all the components plug
 > into.
 
----
-
-**Nippers**
+### Nippers
 
 > These are basically specialized pliers designed for cutting thin soft plastics
 > and metals. Please do not use scissors instead.
 
----
-
-**OEM, DSA, SA, DCS, XDA, Cherry profile**
+### OEM, DSA, SA, DCS, XDA, Cherry profile
 
 > These are keycap profiles (shapes). See this
 > [helpful comparison image](http://i.imgur.com/kFxqOm8.jpg) from
 > [u/jacobolus](https://www.reddit.com/user/jacobolus).
 
----
-
-**ABS (acrylonitrile butadiene styrene)**
+### ABS (acrylonitrile butadiene styrene)
 
 > ABS is the most common type of plastic used for cases and keycaps. It is
 > versatile, but tends to become "shiny" (smooth and reflective) over time and
 > with repeated typing. This leads to the perception of it as lower quality than
 > PBT.
 
----
-
-**PBT (polybutylene terephthalate)**
+### PBT (polybutylene terephthalate)
 
 > PBT is a type of plastic that is much more resistant to "shining". Many PBT
 > keycaps are also made thicker than ABS keycaps, which gives a deeper sound
 > when typing.
 
----
-
-**POM (polyoxymethylene)**
+### POM (polyoxymethylene)
 
 > POM is a very smooth plastic. It does not get used much for keyboards, but a
 > few keycap sets are available using it, and the NovelKeys Cream switches.
 
----
-
-**dye-sub (dye-sublimated)**
+### dye-sub (dye-sublimated)
 
 > Dye-sublimation is a durable printing process used for making the legends
 > (letters) on keycaps. Note that because this process uses dye, you can only
@@ -149,9 +123,7 @@ jargon thrown around by keyboard enthusiasts.
 > on a black plastic, for example. This method is usually used for PBT keycaps.
 > Complex multicolor graphics can be printed using this technique.
 
----
-
-**double-shot**
+### double-shot
 
 > Double-shot injection molding is a technique that involves using two separate
 > plastics (usually ABS) in order to make a keycap. This is the ideal method for
@@ -298,7 +270,7 @@ if you want to change things later.
 
 ## Kits and builds
 
-**Solder-free hot-swap plate-free build for quick maintenance and trial:**
+### Solder-free hot-swap plate-free build for quick maintenance and trial:
 
 - [1upkeyboards RGB PCB hot-swap edition](https://www.1upkeyboards.com/shop/controllers/1up-rgb-pcb-hse)
 - [Frosted acrylic 60% case](https://www.1upkeyboards.com/shop/bases-and-cases/acrylic-60-base-frosted)
@@ -310,9 +282,7 @@ or solder, you can remove the switches and stabilizers at any time. This is
 great if you don't want to lube your switches and stabilizers before your build,
 but you feel like doing it later.
 
----
-
-**More expensive hot swap kit:**
+### More expensive hot swap kit:
 
 - [DZ60RGB hot-swap DIY kit](https://kbdfans.cn/collections/diy-kit/products/kbdfans-dz60rgb-ansi-hot-swap-diy-kit)
 
@@ -327,9 +297,7 @@ As for plate options, this is really a personal preference thing. Polycarbonate
 is transparent and would look really good with the acrylic case, whereas brass
 is really heavy and will provide a very solid feel for your keyboard.
 
----
-
-**Cheaper 65%:**
+### Cheaper 65%:
 
 - [Tada68 keyboard DIY kit](https://kbdfans.cn/collections/diy-kit/products/tada68-keyboard-diy-kit)
 
@@ -337,18 +305,14 @@ Still not sure you can live without dedicated arrow keys? Don't worry, the \$89
 DIY kit for the Tada68 is a great deal. If you have a bit more money, you can
 upgrade to the aluminum case option for a bit more weight and elegance.
 
----
-
-**Minimal soldering 40% keyboard kit:**
+### Minimal soldering 40% keyboard kit:
 
 - [Zlant 40% keyboard kit](https://www.1upkeyboards.com/shop/keyboard-kits/diy-40-kits/zlant-40-keyboard-kit)
 
 This \$70 DIY kit has everything you need to make your first 40% keyboard, and
 at only 48 keys the build should go by quickly.
 
----
-
-**Good soldering tutorial macro pad:**
+### Good soldering tutorial macro pad:
 
 - [Sweet 16 macro pad](https://www.1upkeyboards.com/shop/keyboard-kits/macro-pads/sweet-16-macro-pad-black)
 
