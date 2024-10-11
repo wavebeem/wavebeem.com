@@ -42,6 +42,14 @@ blockquote {
   padding: 1rem;
 }
 
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
 .sage-prose .infobox {
   position: relative;
   margin-block: 1rem;
