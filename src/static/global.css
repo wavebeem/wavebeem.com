@@ -335,25 +335,7 @@ main {
 
 code.sage-bright,
 .sage-prose :not(pre) > code {
-  background: var(--color-main-background2);
   color: var(--color-main-code);
-  padding: calc(1em / 16) calc(1em / 4);
-  border-radius: calc(1em / 4);
-}
-
-.spacer1 {
-  width: 0.25rem;
-  aspect-ratio: 1 / 1;
-}
-
-.spacer2 {
-  width: 0.5rem;
-  aspect-ratio: 1 / 1;
-}
-
-.spacer3 {
-  width: 1rem;
-  aspect-ratio: 1 / 1;
 }
 
 .sage-button {
@@ -544,7 +526,7 @@ code.sage-bright,
   font-weight: 800;
   margin-top: 2rem;
   padding-top: 2rem;
-  background: var(--color-main-background1);
+  background: var(--color-main-background2);
   /* https://css-generators.com/wavy-shapes/ */
   --mask: radial-gradient(1.35rem at 50% 1.9rem, #000 99%, #0000 101%)
       calc(50% - 2rem) 0/4rem 100%,

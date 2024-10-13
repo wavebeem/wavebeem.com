@@ -5,8 +5,9 @@
 
 hr {
   border: 0;
-  border-bottom: 2px dotted;
-  color: var(--color-main-shadow);
+  border-bottom: 2px solid var(--color-main-background1);
+  color: inherit;
+  border-radius: 9999px;
 }
 
 figure {
@@ -93,9 +94,8 @@ blockquote > :last-child {
   border-radius: 1rem;
   margin: 1rem 0;
   padding: 1rem;
-  border: 0;
-  background-color: var(--color-main-background2);
-  color: var(--color-syntax-default);
+  background: var(--color-syntax-background);
+  color: var(--color-syntax-text);
   overflow-x: auto;
 }
 
