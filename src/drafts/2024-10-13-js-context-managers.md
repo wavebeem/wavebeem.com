@@ -14,10 +14,10 @@ The old way of opening and reading a file in Python looked something like this:
 
 ```py
 try:
-  file = open("file.txt", "r")
-  print(file.read())
+    file = open("file.txt", "r")
+    print(file.read())
 finally:
-  file.close()
+    file.close()
 ```
 
 Forgetting to run `file.close()` is really easy, and your program will generally
@@ -34,7 +34,7 @@ to "clean up after ourselves". Very nice.
 
 ```py
 with open("file.txt", "r") as file:
-  print(file.read())
+    print(file.read())
 ```
 
 ## Making your own context manager
@@ -68,7 +68,7 @@ def using_thing(x):
       thing.close()
 
 with using_thing("foo") as foo:
-  print(foo.do_whatever())
+    print(foo.do_whatever())
 ```
 
 ## How can we translate this to JS?
