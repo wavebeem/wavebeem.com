@@ -63,7 +63,7 @@ def using_thing(x):
     # Code to acquire resource, e.g.:
     thing = get_thing(x)
     try:
-        yield thing
+      yield thing
     finally:
       thing.close()
 
@@ -141,8 +141,7 @@ await withTextFileContents("thefile.txt", (text) => {
 
 Callback functions are fine but they ahve one major drawback: you can't use them
 in conjunction with regular flow control like `try/catch` or even `return`! This
-is the biggest reason why I recommend `for (item of array) {}` loops over
-`array.forEach(item => {})`.
+is the biggest reason why I recommend `for...of` loops over `array.forEach`.
 
 ```js
 const list = [1, 2, 3, 4];
@@ -176,6 +175,6 @@ function testForEachMethod() {
 
 ## Summary
 
-Using generator functions with `try/finally` and `for(of)` loops lets us
+Using generator functions with `try...finally` and `for...of` loops lets us
 abstract cleanup logic elegantly in JS, without the pitfalls of functions that
 take callbacks (inability to use regular flow control).
