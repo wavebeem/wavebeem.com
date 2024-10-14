@@ -11,6 +11,13 @@
 /** @type {SiteButton[]} */
 export const siteButtons = [
   {
+    mainUrl: "https://candiedreptile.club/bloglet/index.html",
+    buttonUrl:
+      "https://candiedreptile.club/bloglet/images/banners/karmabutton.gif",
+    title: "Terrarium",
+    localUrl: "",
+  },
+  {
     mainUrl: "https://algometric.pink/",
     buttonUrl: "https://algometric.pink/algobutton.gif",
     title: "algometric.pink",

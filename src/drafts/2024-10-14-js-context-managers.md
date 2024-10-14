@@ -1,8 +1,8 @@
 ---
 title: "JS context managers"
 description:
-  "Adapting Python's context managers for use in JavaScript. Break free from
-  clunky try / finally blocks with this one weird trick."
+  "See how to adapt Python's context managers for use in JavaScript. Break free
+  from clunky try...finally blocks with this one weird trick."
 tags:
   - "javascript"
   - "python"
@@ -15,26 +15,29 @@ The old way of opening and reading a file in Python looked something like this:
 ```py
 try:
     file = open("file.txt", "r")
-    print(file.read())
+    text = file.read()
+    print(text)
 finally:
-    file.close()
+    if file:
+        file.close()
 ```
 
-Forgetting to run `file.close()` is really easy, and your program will generally
-be fine if you don't. But leaving file handles open too long can be a problem.
-Plus, it's weird to look at code that uses `try/finally` everywhere especially
-without a block to handle exceptions.
+It's easy to forget to run `file.close()`, and your program won't immediately
+show problems if you forget. But leaving file handles open too long can be a
+problem. Plus, it's weird to look at code that uses `try...finally` everywhere
+especially without a block to handle exceptions.
 
 ## Save me, context managers!
 
 Fortunately, Python added
 [context managers](https://docs.python.org/3/library/contextlib.html) and `with`
-to deal with this problem. Suddenly 5 lines of code become 2, and we don't have
+to deal with this problem. Suddenly 7 lines of code become 3, and we don't have
 to "clean up after ourselves". Very nice.
 
 ```py
 with open("file.txt", "r") as file:
-    print(file.read())
+    text = file.read()
+    print(text)
 ```
 
 ## Making your own context manager
@@ -42,7 +45,7 @@ with open("file.txt", "r") as file:
 But what if you want to make your own context manager? There's a low level way
 to do it, but the nicest way is to make a context manager using the decorator
 `@contextmanager` to wrap a Python generator function... and then use
-`try/finally` within there!
+`try...finally` within there!
 
 <aside class="infobox">
 
@@ -51,7 +54,9 @@ to do it, but the nicest way is to make a context manager using the decorator
 Despite being included in the ES2015 specification, generators don't seem very
 popular. If you're unfamiliar, you can read my blog post about
 [generators, iterators, and iterables](/blog/2017/js-iterators/). The short
-version is, they're like a cross between functions and arrays.
+version is, they're like a cross between functions and arrays. `yield` is like
+`return` but can happen as many times as you want, since it doesn't exit the
+function.
 
 </aside>
 
@@ -59,16 +64,17 @@ version is, they're like a cross between functions and arrays.
 from contextlib import contextmanager
 
 @contextmanager
-def using_thing(x):
-    # Code to acquire resource, e.g.:
-    thing = get_thing(x)
+def using_file_text(name):
     try:
-      yield thing
+        file = open(name)
+        text = file.read()
+        yield text
     finally:
-      thing.close()
+        if file:
+            file.close()
 
-with using_thing("foo") as foo:
-    print(foo.do_whatever())
+with using_file_text("foo.txt") as text:
+    print(text)
 ```
 
 ## How can we translate this to JS?
@@ -82,7 +88,7 @@ import { open } from "node:fs/promises";
 
 let file;
 try {
-  file = await open("thefile.txt", "r");
+  file = await open("file.txt", "r");
   const text = await file.readFile("utf-8");
   console.log(text);
 } finally {
@@ -99,7 +105,7 @@ Look at how much easier to read this is with a helper function:
 ```js
 import { open } from "node:fs/promises";
 
-for await (const text of withTextFileContents("thefile.txt")) {
+for await (const text of withFileText("file.txt")) {
   console.log(text);
 }
 ```
@@ -107,10 +113,10 @@ for await (const text of withTextFileContents("thefile.txt")) {
 And here's how to make the helper function:
 
 ```js
-async function* withTextFileContents(filename, flags = "r") {
+async function* withFileText(filename) {
   let file;
   try {
-    file = await open(filename, flags);
+    file = await open(filename, "r");
     const text = await file.readFile("utf-8");
     yield text;
   } finally {
@@ -126,22 +132,21 @@ async function* withTextFileContents(filename, flags = "r") {
 Yes, this pattern looks really similar to using callback functions:
 
 ```js
-for await (const text of withTextFileContents("thefile.txt")) {
+for await (const text of withFileText("file.txt")) {
   console.log(text);
 }
 ```
 
-vs
-
 ```js
-await withTextFileContents("thefile.txt", (text) => {
+await withFileText("file.txt", (text) => {
   console.log(text);
 });
 ```
 
-Callback functions are fine but they ahve one major drawback: you can't use them
-in conjunction with regular flow control like `try/catch` or even `return`! This
-is the biggest reason why I recommend `for...of` loops over `array.forEach`.
+Callback functions are fine but they have one major drawback: you can't use them
+in conjunction with regular flow control like `try...catch` or even `return`!
+This is the biggest reason why I recommend `for...of` loops over
+`array.forEach`.
 
 ```js
 const list = [1, 2, 3, 4];

@@ -61,7 +61,7 @@ export const dark = {
   "color-main-code": oklch(80, 40, 340),
   "color-main-shadow": oklch(34, 4, 30),
 
-  "color-syntax-background": oklch(32, 4, 30),
+  "color-syntax-background": oklch(28, 4, 30),
   "color-syntax-text": oklch(90, 5, 30),
   "color-syntax-comment": oklch(70, 10, 300),
   "color-syntax-keyword": oklch(80, 70, 170),
