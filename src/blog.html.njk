@@ -18,7 +18,7 @@ css:
 <ul class="tag-list">
   {% for tag in collections.all | getAllTags | sort | filterTagList %}
   <li>
-    <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag }}</a>
+    <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag | prettyTag }}</a>
   </li>
   {% endfor %}
 </ul>

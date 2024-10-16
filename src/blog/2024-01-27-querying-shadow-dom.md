@@ -7,7 +7,7 @@ tags:
   - "programming"
   - "javascript"
   - "web"
-  - "web_components"
+  - "web-components"
 ---
 
 ## Inspiration

@@ -97,6 +97,35 @@ export default function getConfig(config) {
     return markdown.render(content);
   });
 
+  const prettyTagMap = new Map([
+    ["art", "Art"],
+    ["bash", "Bash"],
+    ["compilers", "Compilers"],
+    ["cooking", "Cooking"],
+    ["css", "CSS"],
+    ["design", "Design"],
+    ["essay", "Essay"],
+    ["feed", "Feed"],
+    ["javascript", "JavaScript"],
+    ["keyboards", "Keyboards"],
+    ["programming", "Programming"],
+    ["python", "Python"],
+    ["react", "React"],
+    ["recipe", "Recipe"],
+    ["tech", "Tech"],
+    ["toybox", "Toybox"],
+    ["typescript", "TypeScript"],
+    ["web", "Web"],
+    ["web-components", "Web components"],
+  ]);
+
+  config.addFilter("prettyTag", function (content) {
+    if (!prettyTagMap.has(content)) {
+      throw new Error(`unknown tag: ${content}`);
+    }
+    return prettyTagMap.get(content);
+  });
+
   // Return all the tags used in a collection
   config.addFilter("getAllTags", function (collection) {
     const set = new Set();
@@ -114,7 +143,7 @@ export default function getConfig(config) {
     return [...data].sort((a, b) => a.localeCompare(b));
   });
 
-  const blockedTags = new Set(["all", "nav", "post", "posts"]);
+  const blockedTags = new Set(["all", "post", "posts"]);
 
   config.addFilter("filterTagList", function (tags) {
     tags = tags || [];

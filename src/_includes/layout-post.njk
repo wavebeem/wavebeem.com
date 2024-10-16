@@ -46,7 +46,7 @@ css:
 <ul class="tag-list">
   {% for tag in tags | sort | filterTagList %}
   <li>
-    <a class="sage-link" href="/blog/tags/{{ tag }}/">{{ tag }}</a>
+    <a class="sage-link" href="/blog/tags/{{ tag }}/">{{ tag | prettyTag }}</a>
   </li>
   {% endfor %}
 </ul>

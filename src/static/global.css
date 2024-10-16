@@ -380,10 +380,6 @@ code.sage-bright,
   display: flex;
 }
 
-.tag-list a::before {
-  content: "#";
-}
-
 :where(.tag-list) .sage-link {
   text-decoration-line: none;
 }

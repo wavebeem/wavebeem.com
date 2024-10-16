@@ -8,7 +8,7 @@ tags:
   - "javascript"
   - "css"
   - "web"
-  - "web_components"
+  - "web-components"
 ---
 
 ## It's weirdly hard to do this

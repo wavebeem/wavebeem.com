@@ -11,14 +11,14 @@ pagination:
   addAllPagesToCollections: true
 layout: "layout-base"
 eleventyComputed:
-  title: "Tagged “{{ tag }}”"
+  title: "Tagged “{{ tag | prettyTag }}”"
 permalink: "/blog/tags/{{ tag }}/"
 css:
   - "blog"
 ---
 
 
-<h1 class="sage-bright">Posts tagged #{{ tag }}</h1>
+<h1 class="sage-bright">Posts tagged <q>{{ tag | prettyTag }}</q></h1>
 
 <div class="post-list">
   {% for post in collections | getPostsByTag(tag) | reverse %}
