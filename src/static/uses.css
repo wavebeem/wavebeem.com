@@ -2,8 +2,29 @@
   margin: 0;
 }
 
+.sage-well > details > summary {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sage-well > details > summary::after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 0.5rem;
+  clip-path: polygon(50% 100%, 100% 0, 0 0);
+  background: currentColor;
+}
+
+.sage-well > details[open] > summary::after {
+  rotate: 0.5turn;
+}
+
 .sage-well > details > summary > * {
   display: inline;
+  margin: 0;
 }
 
 .sage-well > details > :last-child {
