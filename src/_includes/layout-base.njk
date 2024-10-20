@@ -35,7 +35,12 @@
     <meta name="description" content="{{ description }}" />
     <link
       rel="icon"
-      sizes="16x16"
+      href="/favicon.svg?v={{ contentHashes.faviconVector }}"
+      type="image/svg+xml"
+    />
+    <link
+      rel="icon"
+      sizes="32x32"
       href="/favicon.png?v={{ contentHashes.favicon }}"
     />
     <link
@@ -98,7 +103,7 @@
     <main>
       <div class="content-column">{{ content | safe }}</div>
     </main>
-    <footer class="footer screen-only sage-texture-striped">
+    <footer class="footer screen-only">
       <div class="content-column flex flex-column gap3">
         <div>Navigation</div>
         <nav class="grid2 footer-links">

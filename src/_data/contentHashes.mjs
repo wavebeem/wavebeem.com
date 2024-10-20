@@ -13,6 +13,7 @@ export default {
     "src/static/wavebeem-theme-select.mjs"
   ),
   favicon: createContentHash("src/static/favicon.png"),
+  faviconVector: createContentHash("src/static/favicon.svg"),
   photo: createContentHash("src/static/photo.webp"),
   ogImage: createContentHash("src/static/og-image.png"),
 };

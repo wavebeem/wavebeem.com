@@ -104,6 +104,7 @@ export default function getConfig(config) {
     ["cooking", "Cooking"],
     ["css", "CSS"],
     ["design", "Design"],
+    ["draft", "Draft"],
     ["essay", "Essay"],
     ["feed", "Feed"],
     ["javascript", "JavaScript"],
@@ -115,6 +116,7 @@ export default function getConfig(config) {
     ["tech", "Tech"],
     ["toybox", "Toybox"],
     ["typescript", "TypeScript"],
+    ["video-games", "Video games"],
     ["web", "Web"],
     ["web-components", "Web components"],
   ]);
@@ -130,10 +132,12 @@ export default function getConfig(config) {
   config.addFilter("getAllTags", function (collection) {
     const set = new Set();
     for (const item of collection) {
-      for (const tag of item.data.tags || []) {
-        if (tag !== "draft") {
-          set.add(tag);
-        }
+      const tags = item.data.tags || [];
+      if (tags.includes("draft")) {
+        continue;
+      }
+      for (const tag of tags) {
+        set.add(tag);
       }
     }
     return Array.from(set);
