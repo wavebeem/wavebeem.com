@@ -48,10 +48,6 @@
   opacity: 0.85;
 }
 
-.read-more {
-  max-width: max-content;
-}
-
 .mode-light,
 .mode-dark {
   padding: 1rem;
