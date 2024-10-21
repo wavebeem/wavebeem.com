@@ -112,7 +112,11 @@
           {% endfor %}
         </nav>
         <wavebeem-theme-select>
-          <select class="theme-select sage-button" autocomplete="off">
+          <select
+            class="theme-select sage-button"
+            autocomplete="off"
+            aria-label="Select theme..."
+          >
             <option value="" disabled selected>Select theme...</option>
             <option value="auto">Auto</option>
             <option value="light">Light</option>
@@ -120,12 +124,6 @@
           </select>
         </wavebeem-theme-select>
         <div>&copy; {{ "now" | formatDate("yyyy") }} Sage Fennel</div>
-        <div>
-          Made with
-          <a class="sage-link" href="https://www.11ty.dev/">Eleventy</a>,
-          <a class="sage-link" href="https://www.netlify.com/">Netlify</a>, and
-          <a class="sage-link" href="/about/">more</a>.
-        </div>
       </div>
     </footer>
   </body>

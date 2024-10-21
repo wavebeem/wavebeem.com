@@ -18,11 +18,11 @@ css:
     >
       <img
         src="{{ img.url }}"
-        alt=""
+        alt="{{ img.name }}"
         width="{{ img.width }}"
         height="{{ img.height }}"
         style="background-color: {{ img.color }};"
-        loading="lazy"
+        loading="{% if loop.index > 4 %}lazy{% else %}eager{% endif %}"
       />
     </a>
     <figcaption>
