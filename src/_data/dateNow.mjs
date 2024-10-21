@@ -1,1 +1,3 @@
-export default Date.now();
+const dateNow = Date.now();
+
+export default dateNow;

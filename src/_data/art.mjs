@@ -1,8 +1,11 @@
+// @ts-check
+
 import * as path from "node:path";
 import * as fs from "node:fs";
 import { getAverageColor } from "fast-average-color-node";
 import getImageSize from "image-size";
 import { AssetCache } from "@11ty/eleventy-cache-assets";
+import artTitles from "./artTitles.mjs";
 
 const root = "src/static/img/art";
 
@@ -21,18 +24,33 @@ async function getArt() {
 
 async function readInfo(filename) {
   const url = `/img/art/${filename}`;
-  const cleanName = path.basename(filename).replace(/\.(png|gif|webp)$/, "");
+  const cleanName = path.basename(filename, ".webp");
   let extension = path.basename(filename).split(/\./).pop();
-  let [, date, name] = cleanName.match(/^(\d{4}-\d{2}-\d{2})-(.*)$/);
+  let [, date, name] = cleanName.match(/^(\d{4}-\d{2}-\d{2})-(.*)$/) || [];
   let [year] = date.split(/-/);
   const slug = name;
   name = name.replace(/-/g, " ");
+  const title = artTitles[filename];
+  if (!title) {
+    throw new Error(`can't get title for ${filename}`);
+  }
+  name = title;
   const file = path.join(root, filename);
   const { width, height } = getImageSize(file);
   const { hex: color } = await getAverageColor(file, {
     algorithm: "dominant",
   });
-  const obj = { url, year, name, date, width, height, color, extension, slug };
+  const obj = {
+    url,
+    year,
+    name,
+    date,
+    width,
+    height,
+    color,
+    extension,
+    slug,
+  };
   return obj;
 }
 
