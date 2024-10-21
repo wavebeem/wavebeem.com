@@ -11,6 +11,13 @@
 /** @type {SiteButton[]} */
 export const siteButtons = [
   {
+    mainUrl: "https://blog.curiousquail.com/",
+    buttonUrl:
+      "https://bear-images.sfo2.cdn.digitaloceanspaces.com/curiousquail/quailblog_8831.png",
+    title: "quailblog",
+    localUrl: "",
+  },
+  {
     mainUrl: "https://candiedreptile.club/bloglet/index.html",
     buttonUrl:
       "https://candiedreptile.club/bloglet/images/banners/karmabutton.gif",
