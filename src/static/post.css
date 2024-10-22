@@ -36,7 +36,6 @@ figure figcaption {
 }
 
 blockquote {
-  font-style: italic;
   background: var(--color-main-background1);
   margin-inline: 0;
   border-radius: 1rem;

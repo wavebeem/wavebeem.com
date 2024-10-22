@@ -1,20 +1,13 @@
 @font-face {
-  font-family: "Dosis";
-  src: url("/fonts/dosis.woff2") format("woff2");
+  font-family: "Rubik";
+  src: url("/fonts/rubik.woff2") format("woff2");
   font-weight: 1 1000;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("/fonts/inter.woff2") format("woff2");
-  font-weight: 1 1000;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("/fonts/inter-italic.woff2") format("woff2");
+  font-family: "Rubik";
+  src: url("/fonts/rubik-italic.woff2") format("woff2");
   font-style: italic;
   font-weight: 1 1000;
   font-display: swap;
@@ -58,8 +51,7 @@
 }
 
 :root {
-  --font-body: "Inter", system-ui, sans-serif;
-  --font-heading: "Dosis", var(--font-body);
+  --font-body: "Rubik", system-ui, sans-serif;
   --font-logo: "Ultra Hi-Gloss", var(--font-body);
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", "SFMono-Regular",
     "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
@@ -80,6 +72,7 @@
   scrollbar-color: var(--color-main-text) var(--color-main-background3);
   background: var(--color-main-background3);
   color: var(--color-main-text);
+  font-synthesis: none;
 }
 
 body {
@@ -115,24 +108,21 @@ body {
 
 h1 {
   font-size: var(--font-size-h1);
-  font-family: var(--font-heading);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.25;
   margin: 0 0 1rem 0;
 }
 
 h2 {
   font-size: var(--font-size-h2);
-  font-family: var(--font-heading);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.25;
   margin: 2rem 0 1rem 0;
 }
 
 h3 {
   font-size: var(--font-size-h3);
-  font-family: var(--font-heading);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.25;
   margin: 2rem 0 1rem 0;
 }
@@ -200,7 +190,7 @@ summary {
   background: var(--color-header-button);
   padding: 0.25rem 1rem;
   border-radius: 9999px;
-  font-weight: 800;
+  font-weight: 700;
   cursor: default;
 }
 
@@ -589,7 +579,7 @@ code.sage-bright,
 
 .footer {
   font-size: var(--font-size-small);
-  font-weight: 800;
+  font-weight: 700;
   margin-top: 2rem;
   padding-top: 2rem;
   background: var(--color-main-background2);
