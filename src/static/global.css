@@ -108,14 +108,14 @@ body {
 
 h1 {
   font-size: var(--font-size-h1);
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.25;
   margin: 0 0 1rem 0;
 }
 
 h2 {
   font-size: var(--font-size-h2);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.25;
   margin: 2rem 0 1rem 0;
 }
@@ -141,7 +141,7 @@ pre {
     --font-size-h3: 1.25rem;
     --font-size-base: 1.1rem;
     --font-size-small: 1rem;
-    --font-size-code: 0.9rem;
+    --font-size-code: 1rem;
   }
 }
 
@@ -190,7 +190,7 @@ summary {
   background: var(--color-header-button);
   padding: 0.25rem 1rem;
   border-radius: 9999px;
-  font-weight: 700;
+  font-weight: 600;
   cursor: default;
 }
 
@@ -346,12 +346,7 @@ main {
   border-radius: 0.25rem;
 }
 
-.sage-prose :is(h1, h2, h3),
-.sage-bright {
-  color: var(--color-main-text-bright);
-}
-
-code.sage-bright,
+code,
 .sage-prose :not(pre) > code {
   color: var(--color-main-code);
 }
@@ -359,7 +354,7 @@ code.sage-bright,
 .sage-button {
   display: inline-block;
   font: inherit;
-  font-weight: 700;
+  font-weight: 500;
   border: 2px solid transparent;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
@@ -446,7 +441,6 @@ code.sage-bright,
 
 .nav :any-link {
   padding: 0.5rem 1rem;
-  font-weight: 600;
   text-decoration-line: none;
   border-radius: 0;
   border-radius: 0.5rem;
@@ -544,7 +538,6 @@ code.sage-bright,
 .link-card {
   display: flex;
   flex-direction: column;
-  font-weight: 600;
   text-decoration-line: none;
   text-decoration-thickness: 2px;
   padding: 1rem;
@@ -565,7 +558,7 @@ code.sage-bright,
 }
 
 :where(.footer-links) .sage-link {
-  font-weight: 600;
+  font-weight: 400;
   max-width: max-content;
 }
 
@@ -579,7 +572,7 @@ code.sage-bright,
 
 .footer {
   font-size: var(--font-size-small);
-  font-weight: 700;
+  font-weight: 500;
   margin-top: 2rem;
   padding-top: 2rem;
   background: var(--color-main-background2);

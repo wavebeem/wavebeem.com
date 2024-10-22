@@ -28,8 +28,7 @@ export const light = {
   "color-main-background1": oklch(95, 20, 30),
   "color-main-background2": oklch(96, 20, 30),
   "color-main-background3": oklch(98, 20, 30),
-  "color-main-text": oklch(30, 30, 30),
-  "color-main-text-bright": oklch(40, 30, 30),
+  "color-main-text": oklch(40, 20, 30),
   "color-main-code": oklch(52, 100, 340),
   "color-main-shadow": oklch(93, 20, 30),
 
@@ -57,7 +56,6 @@ export const dark = {
   "color-main-background2": oklch(32, 4, 30),
   "color-main-background3": oklch(30, 4, 30),
   "color-main-text": oklch(85, 5, 30),
-  "color-main-text-bright": oklch(95, 5, 30),
   "color-main-code": oklch(80, 40, 340),
   "color-main-shadow": oklch(34, 4, 30),
 

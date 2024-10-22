@@ -17,13 +17,14 @@ css:
   - "blog"
 ---
 
-
-<h1 class="sage-bright">Posts tagged <q>{{ tag | prettyTag }}</q></h1>
+<h1>
+  Posts tagged <q>{{ tag | prettyTag }}</q>
+</h1>
 
 <div class="post-list">
   {% for post in collections | getPostsByTag(tag) | reverse %}
   <section class="post-list--post sage-well">
-    <h2 class="sage-bright">
+    <h2>
       <a class="sage-link no-underline" href="{{ post.url }}">
         {{ post.data.title }}
       </a>

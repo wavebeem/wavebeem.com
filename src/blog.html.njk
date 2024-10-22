@@ -6,14 +6,14 @@ css:
   - "blog"
 ---
 
-<h1 class="sage-bright">{{ title }}</h1>
+<h1>{{ title }}</h1>
 
 <p>
   Subscribe to my <a class="sage-link" href="/feed.xml">RSS feed</a> to stay up
   to date with my posts.
 </p>
 
-<h2 class="sage-bright">Browse by tag</h2>
+<h2>Browse by tag</h2>
 
 <ul class="tag-list">
   {% for tag in collections.all | getAllTags | sort | filterTagList %}
@@ -23,12 +23,12 @@ css:
   {% endfor %}
 </ul>
 
-<h2 class="sage-bright">All posts</h2>
+<h2>All posts</h2>
 
 <div class="post-list">
   {% for post in collections.post | reverse %}
   <section class="post-list--post sage-well">
-    <h2 class="sage-bright">
+    <h2>
       <a class="sage-link no-underline" href="{{ post.url }}">
         {{ post.data.title }}
       </a>

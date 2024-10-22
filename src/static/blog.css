@@ -16,6 +16,6 @@
 
 .post-list--post > time {
   flex: auto;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: var(--font-size-small);
+  font-weight: 500;
 }
