@@ -1,13 +1,20 @@
 @font-face {
-  font-family: "Nunito";
-  src: url("/fonts/nunito-variable.woff2") format("woff2");
+  font-family: "Dosis";
+  src: url("/fonts/dosis.woff2") format("woff2");
   font-weight: 1 1000;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Nunito";
-  src: url("/fonts/nunito-italic-variable.woff2") format("woff2");
+  font-family: "Inter";
+  src: url("/fonts/inter.woff2") format("woff2");
+  font-weight: 1 1000;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/inter-italic.woff2") format("woff2");
   font-style: italic;
   font-weight: 1 1000;
   font-display: swap;
@@ -51,7 +58,8 @@
 }
 
 :root {
-  --font-body: "Nunito", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-heading: "Dosis", var(--font-body);
   --font-logo: "Ultra Hi-Gloss", var(--font-body);
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", "SFMono-Regular",
     "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
@@ -107,6 +115,7 @@ body {
 
 h1 {
   font-size: var(--font-size-h1);
+  font-family: var(--font-heading);
   font-weight: 600;
   line-height: 1.25;
   margin: 0 0 1rem 0;
@@ -114,6 +123,7 @@ h1 {
 
 h2 {
   font-size: var(--font-size-h2);
+  font-family: var(--font-heading);
   font-weight: 800;
   line-height: 1.25;
   margin: 2rem 0 1rem 0;
@@ -121,6 +131,7 @@ h2 {
 
 h3 {
   font-size: var(--font-size-h3);
+  font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.25;
   margin: 2rem 0 1rem 0;
