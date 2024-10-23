@@ -12,23 +12,25 @@ css:
 
 <p>{{ description }}</p>
 
+<h2>All toys</h2>
+
 <div class="post-list">
   {% for post in collections.toybox | reverse %}
   <section class="post-list--post sage-well">
-    <h2>
+    <h3>
       <a class="sage-link no-underline" href="{{ post.url }}">
         {{ post.data.title }}
       </a>
-    </h2>
-
-    <p>
-      {{ post.data.description }}
-    </p>
+    </h3>
 
     <time
       datetime="{{ post.date | formatDate('yyyy-mm-dd') }}"
       >{{ post.date | formatDate('yyyy mmmm d') }}</time
     >
+
+    <p>
+      {{ post.data.description }}
+    </p>
   </section>
   {% endfor %}
 </div>

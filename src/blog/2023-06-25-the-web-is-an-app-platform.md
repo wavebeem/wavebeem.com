@@ -57,26 +57,25 @@ by my definition.
 Web development can be as simple or as complex as you want. I've been a web
 developer since 2012, and I've seen the creation of many modern web development
 tools. I maintain side projects that are a
-[git repository full of plain HTML/CSS/JS](https://2bit-ui.wavebeem.com/ "https://2bit-ui.wavebeem.com/")
-files. I also maintain projects that use
-[advanced build systems like Vite](https://www.pkmn.help/defense/?mode=solo&types=normal&ability=none&format=simple "https://www.pkmn.help/defense/?mode=solo&types=normal&ability=none&format=simple").
-I choose tools based on the problem I'm solving.
+[git repository full of plain HTML/CSS/JS](https://2bit-ui.wavebeem.com/) files.
+I also maintain projects that use
+[advanced build systems like Vite](https://www.pkmn.help/). I choose tools based
+on the problem I'm solving.
 
 Modern web development stacks might seem useless or counterproductive to some.
 Sometimes we go overboard with tooling, but it serves a purpose.
-[npm](https://www.npmjs.com/ "https://www.npmjs.com/") and
+[npm](https://www.npmjs.com/) and
 [Browserify](https://en.wikipedia.org/wiki/Browserify "https://en.wikipedia.org/wiki/Browserify")
 made integrating millions of packages easy. Modern websites rely on lots of
 third party code, enabling more ambitious projects. TypeScript made coding safer
 and IDEs smarter. Once you get used to these tools, their absence can feel
 frustrating.
 
-You can drag-and-drop a `.zip` file into
-[Netlify](https://www.netlify.com/ "https://www.netlify.com/") to start hosting
-your site. You can use the web-based HTML editor on
-[Neocities](https://neocities.org/ "https://neocities.org/"). These hosting
-platforms can serve high-traffic pages for free. And they support modern
-protocols like HTTPS and HTTP/2.
+You can drag-and-drop a `.zip` file into [Netlify](https://www.netlify.com/) to
+start hosting your site. You can use the web-based HTML editor on
+[Neocities](https://neocities.org/). These hosting platforms can serve
+high-traffic pages for free. And they support modern protocols like HTTPS and
+HTTP/2.
 
 Module bundlers have enabled JS bloat by hiding complexity. We used to include
 every library by hand, but
@@ -95,9 +94,8 @@ bundlers.
 - Owning a secure site is easy thanks to services like Netlify, Vercel, and
   Neocities
 - Impressive commitment to backwards compatibility
-  - The
-    [first website](http://info.cern.ch/hypertext/WWW/TheProject.html "http://info.cern.ch/hypertext/WWW/TheProject.html")
-    from 1991 still works in modern browsers
+  - The [first website](http://info.cern.ch/hypertext/WWW/TheProject.html) from
+    1991 still works in modern browsers
 
 ## We needed an app platform
 
@@ -117,29 +115,28 @@ I was born in 1990, started programming in 2004, and started working as a
 software developer in 2012\. I researched this section to the best of my
 ability. Let me know if I've made any mistakes.
 
-**1990 – WorldWideWeb**
+### 1990 – WorldWideWeb
 
 Tim Berners-Lee created
 [WorldWideWeb](https://www.mozilla.org/en-US/firefox/browsers/browser-history/),
 the first web browser.
 
-**1991 – The first website**
+### 1991 – The first website
 
 CERN released the first website:
 ["World Wide Web"](http://info.cern.ch/hypertext/WWW/TheProject.html "http://info.cern.ch/hypertext/WWW/TheProject.html").
 
-**1994 – Netscape Navigator**
+### 1994 – Netscape Navigator
 
 Netscape released
-[Netscape Navigator](https://www.mozilla.org/en-US/firefox/browsers/browser-history/ "https://www.mozilla.org/en-US/firefox/browsers/browser-history/")
+[Netscape Navigator](https://www.mozilla.org/en-US/firefox/browsers/browser-history/)
 in 1994\. It was the first popular web browser.
 
-**1995 – HTML 2.0**
+### 1995 – HTML 2.0
 
 The HTML 2.0 specification was published as
-[RFC 1866](https://datatracker.ietf.org/doc/html/rfc1866 "https://datatracker.ietf.org/doc/html/rfc1866")
-in November 1995\. It included all the features needed to make server side web
-apps:
+[RFC 1866](https://datatracker.ietf.org/doc/html/rfc1866) in November 1995\. It
+included all the features needed to make server side web apps:
 
 - HTML forms
   - text inputs
@@ -154,31 +151,29 @@ apps:
 - POST method
   - Allows side-effects in request processing, enabling the creation of web apps
 
-**1995 – Java applets**
+### 1995 – Java applets
 
 Sun Microsystems released
 [Java](https://en.wikipedia.org/wiki/Java_applet "https://en.wikipedia.org/wiki/Java_applet")
 in 1995, along with Java applets for the web.
 
-**1997 – ECMAScript**
+### 1997 – ECMAScript
 
 [ECMAScript](https://en.wikipedia.org/wiki/JavaScript#The_rise_of_JScript "https://en.wikipedia.org/wiki/JavaScript#The_rise_of_JScript")
 was published in June 1997\. This marked the beginning of JS as an open standard
 for the web. Microsoft had already reverse engineered JS for use in Internet
 Explorer.
 
-**1998 – DOM Level 1**
+### 1998 – DOM Level 1
 
-The
-[DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/ "https://www.w3.org/TR/REC-DOM-Level-1/")
-specification was published in October 1998\. This included basic APIs to
-manipulate the DOM, such as
-[document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement "https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement").
+The [DOM Level 1](https://www.w3.org/TR/REC-DOM-Level-1/) specification was
+published in October 1998\. This included basic APIs to manipulate the DOM, such
+as
+[document.createElement()](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement).
 
-**2006 – XMLHttpRequest**
+### 2006 – XMLHttpRequest
 
-The
-[XMLHttpRequest](https://www.w3.org/TR/2006/WD-XMLHttpRequest-20060405/ "https://www.w3.org/TR/2006/WD-XMLHttpRequest-20060405/")
+The [XMLHttpRequest](https://www.w3.org/TR/2006/WD-XMLHttpRequest-20060405/)
 specification was published in 2006\. This class allows the web page to make
 network requests via JS and read their values. This allowed web apps to bypass
 the need for full page loads when making network requests. This was the
@@ -186,21 +181,20 @@ beginning of the single page app (SPA). Some APIs used
 [JSONP](https://en.wikipedia.org/wiki/JSONP "https://en.wikipedia.org/wiki/JSONP")
 before this, but it wasn't a good security practice.
 
-**2009 – ECMAScript 5**
+### 2009 – ECMAScript 5
 
-[ECMAScript 5](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/ "https://www.ecma-international.org/publications-and-standards/standards/ecma-262/")
+[ECMAScript 5](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
 was published in 2009\. JS became a lot more powerful with this release.
 
-**2012 – NW.js (aka node-webkit)**
+### 2012 – NW.js (aka node-webkit)
 
-[Version 0.2.0 of NW.js](https://github.com/nwjs/nw.js/releases/tag/v0.2.0 "https://github.com/nwjs/nw.js/releases/tag/v0.2.0")
-was released in 2012\. This framework later inspired
-[Electron.](<https://en.wikipedia.org/wiki/Electron_(software_framework)> "https://en.wikipedia.org/wiki/Electron_(software_framework)")
-It popularized shipping web apps as "native" apps for Windows, macOS, and Linux.
+[Version 0.2.0 of NW.js](https://github.com/nwjs/nw.js/releases/tag/v0.2.0) was
+released in 2012\. This framework later inspired
+[Electron.](<https://en.wikipedia.org/wiki/Electron_(software_framework)>) It
+popularized shipping web apps as "native" apps for Windows, macOS, and Linux.
 
-**2015 – ECMAScript 2015 (aka ES6)**
+### 2015 – ECMAScript 2015 (aka ES6)
 
-[ECMAScript 2015](https://262.ecma-international.org/6.0/ "https://262.ecma-international.org/6.0/")
-was published in 2015\. This marked the shift towards publishing yearly
-ECMAScript revisions. Browsers have generally moved to continuous update model
-as well.
+[ECMAScript 2015](https://262.ecma-international.org/6.0/) was published in
+2015\. This marked the shift towards publishing yearly ECMAScript revisions.
+Browsers have generally moved to continuous update model as well.

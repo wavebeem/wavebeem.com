@@ -18,4 +18,5 @@
   flex: auto;
   font-size: var(--font-size-small);
   font-weight: 500;
+  margin-top: -1rem;
 }

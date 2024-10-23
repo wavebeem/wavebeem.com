@@ -11,15 +11,27 @@ pagination:
   addAllPagesToCollections: true
 layout: "layout-base"
 eleventyComputed:
-  title: "Tagged “{{ tag | prettyTag }}”"
+  title: "{{ tag | prettyTag }} | Tagged posts"
 permalink: "/blog/tags/{{ tag }}/"
 css:
   - "blog"
 ---
 
-<h1>
+<h1>Tagged posts</h1>
+
+<h2>Browse by tag</h2>
+
+<ul class="tag-list">
+  {% for tag in collections.all | getAllTags | sort | filterTagList %}
+  <li>
+    <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag | prettyTag }}</a>
+  </li>
+  {% endfor %}
+</ul>
+
+<h2>
   Posts tagged <q>{{ tag | prettyTag }}</q>
-</h1>
+</h2>
 
 <div class="post-list">
   {% for post in collections | getPostsByTag(tag) | reverse %}
@@ -30,14 +42,14 @@ css:
       </a>
     </h2>
 
-    <p>
-      {{ post.data.description }}
-    </p>
-
     <time
       datetime="{{ post.date | formatDate('yyyy-mm-dd') }}"
       >{{ post.date | formatDate('yyyy mmmm d') }}</time
     >
+
+    <p>
+      {{ post.data.description }}
+    </p>
   </section>
   {% endfor %}
 </div>

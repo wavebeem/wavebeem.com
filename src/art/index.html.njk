@@ -29,11 +29,11 @@ css:
       <a class="sage-link" href="/art/{{ img.year }}/{{ img.slug }}/">{{
         img.name
       }}</a>
-      <time
-        datetime="{{ img.date | formatDate('yyyy-mm-dd') }}"
-        >{{ img.date | formatDate('yyyy mmmm d') }}</time
-      >
     </figcaption>
+    <time
+      datetime="{{ img.date | formatDate('yyyy-mm-dd') }}"
+      >{{ img.date | formatDate('yyyy mmmm d') }}</time
+    >
   </figure>
   {% endfor %}
 </div>

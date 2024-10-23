@@ -56,9 +56,9 @@
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", "SFMono-Regular",
     "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
 
-  --font-size-h1: 2.5rem;
-  --font-size-h2: 1.75rem;
-  --font-size-h3: 1.25rem;
+  --font-size-h1: 3rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
   --font-size-code: 1rem;
@@ -114,14 +114,14 @@ h1 {
 
 h2 {
   font-size: var(--font-size-h2);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.25;
   margin: 2rem 0 1rem 0;
 }
 
 h3 {
   font-size: var(--font-size-h3);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.25;
   margin: 2rem 0 1rem 0;
 }
@@ -135,7 +135,7 @@ pre {
 
 @media (max-width: 800px) {
   :root {
-    --font-size-h1: 1.75rem;
+    --font-size-h1: 2rem;
     --font-size-h2: 1.5rem;
     --font-size-h3: 1.25rem;
     --font-size-base: 1.1rem;
@@ -345,8 +345,7 @@ main {
   border-radius: 0.25rem;
 }
 
-code,
-.sage-prose :not(pre) > code {
+:not(pre) > code {
   color: var(--color-main-code);
 }
 
