@@ -242,6 +242,8 @@ summary {
       50% calc(100% - 1rem) / 4rem 100% repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
+  /* Don't let slime get in the way of clicking stuff */
+  pointer-events: none;
   position: sticky;
   top: 0;
   z-index: 1;
