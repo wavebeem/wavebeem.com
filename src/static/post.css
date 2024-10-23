@@ -3,10 +3,37 @@
 }
 
 hr {
-  border: 0;
-  border-bottom: 2px solid var(--color-main-background1);
+  border: none;
+  margin-inline: 0;
+  margin-block: 2rem;
+  display: flex;
+  justify-content: center;
   color: inherit;
-  border-radius: 9999px;
+  position: relative;
+}
+
+hr::after {
+  font-size: 2rem;
+  content: "⋄◆⋄";
+  font-family: var(--font-mono);
+  text-align: center;
+  display: block;
+  background: var(--color-main-background3);
+  color: var(--color-main-decoration);
+  position: relative;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+}
+
+hr::before {
+  content: "";
+  width: 100%;
+  border-top: 2px solid var(--color-main-background1);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 0;
 }
 
 figure {
