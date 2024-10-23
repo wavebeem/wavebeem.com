@@ -14,7 +14,7 @@
 }
 
 .art-container--frame a {
-  font-size: 1.25rem;
+  font-size: var(--font-size-h3);
   flex: auto;
 }
 
@@ -42,6 +42,5 @@ figure img {
 
 /* stylelint-disable-next-line no-descending-specificity */
 figure figcaption {
-  font-weight: 600;
-  font-size: 1rem;
+  font-size: var(--font-size-small);
 }

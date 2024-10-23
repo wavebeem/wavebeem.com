@@ -31,7 +31,6 @@
   float: right;
   margin: 1rem;
   margin-top: 0;
-  box-shadow: 0 2px 0 0 var(--color-main-shadow);
   border-radius: 9999px;
 }
 
@@ -49,6 +48,7 @@ wavebeem-easter-egg.avatar[data-state="inside"] {
   border-radius: 9999px;
   width: var(--avatar-size);
   height: var(--avatar-size);
+  filter: sepia(25%) hue-rotate(-30deg) brightness(90%) contrast(110%);
 }
 
 wavebeem-easter-egg {
