@@ -571,16 +571,19 @@ main {
 .footer {
   font-size: var(--font-size-small);
   font-weight: 500;
-  margin-top: 2rem;
-  padding-top: 2rem;
   background: var(--color-main-background2);
-  /* https://css-generators.com/wavy-shapes/ */
-  --mask: radial-gradient(1.35rem at 50% 1.9rem, #000 99%, #0000 101%)
-      calc(50% - 2rem) 0/4rem 100%,
-    radial-gradient(1.35rem at 50% -0.9rem, #0000 99%, #000 101%) 50% 1rem/4rem
-      100% repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
+}
+
+/* https://css-shape.com/rounded-edge/ */
+.footer-top {
+  background: var(--color-main-background2);
+  clip-path: ellipse(65% 100% at 50% 100%);
+  padding-top: 3rem;
+  margin-top: 2rem;
+}
+
+.footer .content-column {
+  padding-top: 0;
 }
 
 .footer .sage-button {
