@@ -188,7 +188,7 @@ summary {
   position: relative;
   background: var(--color-header-button);
   padding: 0.25rem 1rem;
-  border-radius: 0.5rem;
+  border-radius: 9999px;
   font-weight: 600;
   cursor: default;
 }
@@ -416,7 +416,7 @@ main {
   padding: 0.5rem 1rem;
   background: var(--color-header-button);
   color: var(--color-header-text);
-  border-radius: 0.5rem;
+  border-radius: 9999px;
   text-decoration-line: none;
 }
 
@@ -532,9 +532,15 @@ main {
   text-decoration-line: none;
 }
 
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 :where(.footer-links) .sage-link {
   font-weight: 400;
   max-width: max-content;
+  padding: 0.5rem 0;
 }
 
 :is(.nav, .header, .footer-links) .sage-link {
