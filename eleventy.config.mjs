@@ -90,7 +90,7 @@ export default function getConfig(config) {
 
   config.addFilter("formatTitle", function (value) {
     const base = "wavebeem";
-    return [value, base].filter((x) => x).join(" | ");
+    return [value, base].filter((x) => x).join(" - ");
   });
 
   config.addFilter("markdown", function (content) {

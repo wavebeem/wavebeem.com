@@ -188,7 +188,7 @@ summary {
   position: relative;
   background: var(--color-header-button);
   padding: 0.25rem 1rem;
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   font-weight: 600;
   cursor: default;
 }
@@ -409,44 +409,15 @@ main {
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
   justify-content: flex-end;
-  max-width: max-content;
-  margin-left: auto;
-
-  /* triangle dimension */
-  --b: 1rem; /* base */
-  --h: 0.5rem; /* height */
-
-  --p: calc(100% - 50px); /* triangle position (0%:left 100%:right) */
-  --r: 1rem; /* the radius */
-  --c: var(--color-main-background);
-
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  border-radius: min(var(--r), var(--p) - var(--b) / 2)
-    min(var(--r), 100% - var(--p) - var(--b) / 2) var(--r) var(--r) / var(--r);
-  clip-path: polygon(
-    0 0,
-    0 100%,
-    100% 100%,
-    100% 0,
-    min(100%, var(--p) + var(--b) / 2) 0,
-    var(--p) calc(-1 * var(--h)),
-    max(0%, var(--p) - var(--b) / 2) 0
-  );
-  background: var(--c);
-  border-image: conic-gradient(var(--c) 0 0) fill 0/ 0 calc(
-      100% - var(--p) - var(--b) / 2
-    ) var(--r) calc(var(--p) - var(--b) / 2) / var(--h) 0 0 0;
+  padding: 0;
 }
 
 .nav :any-link {
   padding: 0.5rem 1rem;
-  text-decoration-line: none;
-  border-radius: 0;
+  background: var(--color-header-button);
+  color: var(--color-header-text);
   border-radius: 0.5rem;
-  background: var(--color-card-background);
-  color: var(--color-main-link);
-  text-decoration-thickness: 2px;
+  text-decoration-line: none;
 }
 
 .nav :any-link:hover {
@@ -454,6 +425,10 @@ main {
 }
 
 @media (min-width: 800px) {
+  .nav {
+    margin-left: auto;
+  }
+
   .nav :any-link {
     font-size: 1.25rem;
   }
