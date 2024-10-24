@@ -63,14 +63,14 @@
   --font-size-small: 1rem;
   --font-size-code: 1rem;
 
-  --theme-color-background: var(--color-main-background3);
+  --theme-color-background: var(--color-main-background);
   --theme-color-text: var(--color-main-text);
   --theme-color-link: var(--color-main-link);
 
   overflow-y: scroll;
   color-scheme: light dark;
-  scrollbar-color: var(--color-main-text) var(--color-main-background3);
-  background: var(--color-main-background3);
+  scrollbar-color: var(--color-main-text) var(--color-main-background);
+  background: var(--color-main-background);
   color: var(--color-main-text);
   font-synthesis: none;
 }
@@ -359,7 +359,7 @@ main {
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   background: var(--color-main-link);
-  color: var(--color-main-background3);
+  color: var(--color-main-background);
   text-decoration-line: none;
   text-decoration-thickness: 2px;
 }
@@ -386,7 +386,7 @@ main {
 }
 
 .tag-list a {
-  background: var(--color-main-background1);
+  background: var(--color-card-background);
   font-size: var(--font-size-small);
   padding: 0.25rem 1rem;
   border-radius: 9999px;
@@ -418,7 +418,7 @@ main {
 
   --p: calc(100% - 50px); /* triangle position (0%:left 100%:right) */
   --r: 1rem; /* the radius */
-  --c: var(--color-main-background3);
+  --c: var(--color-main-background);
 
   margin-top: 0.5rem;
   padding: 0.5rem;
@@ -444,7 +444,7 @@ main {
   text-decoration-line: none;
   border-radius: 0;
   border-radius: 0.5rem;
-  background: var(--color-main-background1);
+  background: var(--color-card-background);
   color: var(--color-main-link);
   text-decoration-thickness: 2px;
 }
@@ -482,7 +482,7 @@ main {
   border: 0;
   padding: 1rem;
   border-radius: 1rem;
-  background: var(--color-main-background1);
+  background: var(--color-card-background);
 }
 
 .sage-well > :first-child {
@@ -532,7 +532,7 @@ main {
 }
 
 .sage-well > details > summary:hover {
-  background: var(--color-main-background2);
+  background: var(--color-card-hover);
 }
 
 .link-card {
@@ -543,7 +543,7 @@ main {
   padding: 1rem;
   border-radius: 1rem;
   color: var(--color-main-link);
-  background: var(--color-main-background1);
+  background: var(--color-card-background);
 }
 
 .logo {
@@ -573,12 +573,12 @@ main {
 .footer {
   font-size: var(--font-size-small);
   font-weight: 500;
-  background: var(--color-main-background2);
+  background: var(--color-footer-background);
 }
 
 /* https://css-shape.com/rounded-edge/ */
 .footer-top {
-  background: var(--color-main-background2);
+  background: var(--color-footer-background);
   clip-path: ellipse(65% 100% at 50% 100%);
   padding-top: 3rem;
   margin-top: 2rem;

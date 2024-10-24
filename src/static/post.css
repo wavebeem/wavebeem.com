@@ -21,7 +21,7 @@ hr::after {
   padding-inline: 0.5rem;
   /* https://www.smashingmagazine.com/2024/01/css-border-image-property/ */
   --s: 2px; /* the thickness */
-  --c: var(--color-main-background1); /* the color */
+  --c: var(--color-card-background); /* the color */
   --w: 100vw; /* the width */
   --g: 0rem; /* the gap */
   border-image: linear-gradient(
@@ -42,7 +42,7 @@ figure {
   border: 0;
   padding: 1rem;
   border-radius: 1rem;
-  background: var(--color-main-background1);
+  background: var(--color-card-background);
 }
 
 figure img {
@@ -58,7 +58,7 @@ figure figcaption {
 }
 
 blockquote {
-  background: var(--color-main-background1);
+  background: var(--color-card-background);
   margin-inline: 0;
   border-radius: 1rem;
   padding: 1rem;
@@ -85,9 +85,9 @@ blockquote > :last-child {
   position: absolute;
   inset: 0 0 auto auto;
   content: "i";
-  box-shadow: 0 0 0 2px var(--color-main-background3);
+  box-shadow: 0 0 0 2px var(--color-main-background);
   background: var(--color-main-link);
-  color: var(--color-main-background3);
+  color: var(--color-main-background);
   margin: -0.5rem;
   width: 1.5rem;
   height: 1.5rem;

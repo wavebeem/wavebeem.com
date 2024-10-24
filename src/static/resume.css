@@ -35,7 +35,7 @@ main summary {
 }
 
 main summary:hover {
-  background: var(--color-main-background2);
+  background: var(--color-card-hover);
 }
 
 main dl {
