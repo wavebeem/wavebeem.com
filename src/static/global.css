@@ -51,7 +51,32 @@
 }
 
 :root {
-  --font-body: "Rubik", system-ui, sans-serif;
+  --font-body: "PP Mori", system-ui, sans-serif;
+  /* --font-body: "Rubik", system-ui, sans-serif; */
+  /* --font-body: "Fira Sans", system-ui, sans-serif; */
+  /* --font-body: "Onest", system-ui, sans-serif; */
+  /* --font-body: "Outfit", system-ui, sans-serif; */
+  /* --font-body: "Poppins", system-ui, sans-serif; */
+  /* --font-body: "Quicksand", system-ui, sans-serif; */
+  /* --font-body: "Merriweather", system-ui, sans-serif; */
+  /* --font-body: "Noticia Text", system-ui, sans-serif; */
+  /* --font-body: "Merriweather", system-ui, sans-serif; */
+  /* --font-body: "DM Serif Text", system-ui, sans-serif; */
+  /* --font-heading: "Quando", var(--font-body); */
+  --font-heading: "PP Agrandir", var(--font-body);
+  /* --font-heading: "PP Mori", var(--font-body); */
+  /* --font-heading: "Merriweather", var(--font-body); */
+  /* --font-heading: "Alice", var(--font-body); */
+  /* --font-heading: "Bree Serif", var(--font-body); */
+  /* --font-heading: "Domine", var(--font-body); */
+  /* --font-heading: "Ultra", var(--font-body); */
+  /* --font-heading: "Concert One", var(--font-body);
+  --font-heading: "Dangrek", var(--font-body);
+  --font-heading: "Lilita One", var(--font-body); */
+  /* --font-heading: "Cherry Bomb One", var(--font-body); */
+  /* --font-ui: system-ui, var(--font-body); */
+  --font-ui: var(--font-body);
+  /* --font-logo: "Cherry Bomb One", var(--font-body); */
   --font-logo: "Ultra Hi-Gloss", var(--font-body);
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", "SFMono-Regular",
     "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
@@ -62,10 +87,6 @@
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
   --font-size-code: 1rem;
-
-  --theme-color-background: var(--color-main-background);
-  --theme-color-text: var(--color-main-text);
-  --theme-color-link: var(--color-main-link);
 
   overflow-y: scroll;
   color-scheme: light dark;
@@ -105,7 +126,21 @@ body {
   text-decoration-line: underline;
 }
 
+input,
+select,
+button {
+  font: inherit;
+}
+
+header,
+input,
+select,
+button {
+  font-family: var(--font-ui);
+}
+
 h1 {
+  font-family: var(--font-heading);
   font-size: var(--font-size-h1);
   font-weight: 400;
   line-height: 1.25;
@@ -113,6 +148,7 @@ h1 {
 }
 
 h2 {
+  font-family: var(--font-heading);
   font-size: var(--font-size-h2);
   font-weight: 600;
   line-height: 1.25;
@@ -120,8 +156,9 @@ h2 {
 }
 
 h3 {
+  font-family: var(--font-heading);
   font-size: var(--font-size-h3);
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.25;
   margin: 2rem 0 1rem 0;
 }
@@ -343,7 +380,7 @@ main {
 .sage-prose a,
 .sage-link {
   text-decoration-thickness: 1.5px;
-  color: var(--theme-color-link);
+  color: var(--color-main-link);
   border-radius: 0.25rem;
 }
 
@@ -353,8 +390,7 @@ main {
 
 .sage-button {
   display: inline-block;
-  font: inherit;
-  font-weight: 500;
+  font-weight: 600;
   border: 2px solid transparent;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
@@ -365,7 +401,7 @@ main {
 }
 
 .sage-button:focus-visible {
-  outline: 2px solid var(--theme-color-link);
+  outline: 2px solid var(--color-main-link);
   outline-offset: 2px;
 }
 
@@ -530,6 +566,7 @@ main {
   font-synthesis: none;
   font-weight: initial;
   text-decoration-line: none;
+  text-transform: uppercase;
 }
 
 .footer-links {
@@ -553,7 +590,7 @@ main {
 
 .footer {
   font-size: var(--font-size-small);
-  font-weight: 500;
+  font-weight: 600;
   background: var(--color-footer-background);
 }
 
