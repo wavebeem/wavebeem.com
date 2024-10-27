@@ -6,6 +6,7 @@ description: |
 tags:
   - "art"
   - "web"
+  - "meta"
 ---
 
 It's been a while since I updated my 88×31 site button. With
