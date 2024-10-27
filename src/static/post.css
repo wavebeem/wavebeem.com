@@ -53,7 +53,7 @@ figure img {
 }
 
 figure figcaption {
-  font-weight: 500;
+  font-weight: bold;
   font-size: var(--font-size-small);
 }
 
@@ -96,7 +96,7 @@ blockquote > :last-child {
   text-align: center;
   border-radius: 9999px;
   font-family: var(--font-mono);
-  font-weight: 700;
+  font-weight: bold;
 }
 
 .sage-prose .infobox :first-child {

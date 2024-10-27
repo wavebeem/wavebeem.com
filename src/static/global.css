@@ -1,15 +1,44 @@
 @font-face {
-  font-family: "Rubik";
-  src: url("/fonts/rubik.woff2") format("woff2");
-  font-weight: 1 1000;
+  font-family: "PP Agrandir";
+  src: url("/fonts/pp-agrandir-regular.woff2") format("woff2");
+  font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Rubik";
-  src: url("/fonts/rubik-italic.woff2") format("woff2");
+  font-family: "PP Agrandir";
+  src: url("/fonts/pp-agrandir-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Object Sans";
+  src: url("/fonts/pp-object-sans-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Object Sans";
+  src: url("/fonts/pp-object-sans-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Object Sans";
+  src: url("/fonts/pp-object-sans-slanted.woff2") format("woff2");
   font-style: italic;
-  font-weight: 1 1000;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Object Sans";
+  src: url("/fonts/pp-object-sans-bold-slanted.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 700;
   font-display: swap;
 }
 
@@ -51,7 +80,8 @@
 }
 
 :root {
-  --font-body: "Rubik", system-ui, sans-serif;
+  --font-body: "PP Object Sans", system-ui, sans-serif;
+  --font-heading: "PP Agrandir", var(--font-body);
   --font-logo: "Ultra Hi-Gloss", var(--font-body);
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", "SFMono-Regular",
     "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
@@ -62,10 +92,6 @@
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
   --font-size-code: 1rem;
-
-  --theme-color-background: var(--color-main-background);
-  --theme-color-text: var(--color-main-text);
-  --theme-color-link: var(--color-main-link);
 
   overflow-y: scroll;
   color-scheme: light dark;
@@ -105,23 +131,32 @@ body {
   text-decoration-line: underline;
 }
 
+input,
+select,
+button {
+  font: inherit;
+}
+
 h1 {
+  font-family: var(--font-heading);
   font-size: var(--font-size-h1);
-  font-weight: 400;
+  font-weight: normal;
   line-height: 1.25;
   margin: 0 0 1rem 0;
 }
 
 h2 {
+  font-family: var(--font-heading);
   font-size: var(--font-size-h2);
-  font-weight: 600;
+  font-weight: bold;
   line-height: 1.25;
   margin: 2rem 0 1rem 0;
 }
 
 h3 {
+  font-family: var(--font-heading);
   font-size: var(--font-size-h3);
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.25;
   margin: 2rem 0 1rem 0;
 }
@@ -189,7 +224,7 @@ summary {
   background: var(--color-header-button);
   padding: 0.25rem 1rem;
   border-radius: 9999px;
-  font-weight: 600;
+  font-weight: bold;
   cursor: default;
 }
 
@@ -290,6 +325,14 @@ main {
   font-family: var(--font-mono);
 }
 
+.demo-font {
+  font-size: var(--font-size-h3);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
 .grid-full {
   grid-column: 1 / -1;
 }
@@ -343,7 +386,7 @@ main {
 .sage-prose a,
 .sage-link {
   text-decoration-thickness: 1.5px;
-  color: var(--theme-color-link);
+  color: var(--color-main-link);
   border-radius: 0.25rem;
 }
 
@@ -353,8 +396,7 @@ main {
 
 .sage-button {
   display: inline-block;
-  font: inherit;
-  font-weight: 500;
+  font-weight: bold;
   border: 2px solid transparent;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
@@ -365,7 +407,7 @@ main {
 }
 
 .sage-button:focus-visible {
-  outline: 2px solid var(--theme-color-link);
+  outline: 2px solid var(--color-main-link);
   outline-offset: 2px;
 }
 
@@ -528,8 +570,9 @@ main {
   font-family: var(--font-logo);
   /* Prevent Safari from making this even bolder lol */
   font-synthesis: none;
-  font-weight: initial;
+  font-weight: normal;
   text-decoration-line: none;
+  text-transform: uppercase;
 }
 
 .footer-links {
@@ -538,7 +581,7 @@ main {
 }
 
 :where(.footer-links) .sage-link {
-  font-weight: 400;
+  font-weight: normal;
   max-width: max-content;
   padding: 0.5rem 0;
 }
@@ -553,7 +596,7 @@ main {
 
 .footer {
   font-size: var(--font-size-small);
-  font-weight: 500;
+  font-weight: bold;
   background: var(--color-footer-background);
 }
 
