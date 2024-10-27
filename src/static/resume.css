@@ -1,6 +1,5 @@
 main :is(h1, h2, h3) small {
-  color: var(--color-main-text);
-  font-weight: 400;
+  font-weight: normal;
   font-family: var(--font-body);
 }
 
@@ -62,5 +61,5 @@ main dd {
 }
 
 main dt {
-  font-weight: 600;
+  font-weight: bold;
 }
