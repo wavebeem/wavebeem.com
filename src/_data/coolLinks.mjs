@@ -169,6 +169,12 @@ export const siteButtons = [
     buttonUrl: "https://erysdren.me/images/erysdren_88x31.png",
     localUrl: "",
   },
+  {
+    title: "Apple Annie’s Weblog",
+    mainUrl: "https://weblog.anniegreens.lol/",
+    buttonUrl: "https://cdn.anniegreens.lol/assets/image/88x31_weblog-lt.png",
+    localUrl: "",
+  },
 ];
 
 siteButtons.sort((a, b) => a.title.localeCompare(b.title));

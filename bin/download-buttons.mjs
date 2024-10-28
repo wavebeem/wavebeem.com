@@ -11,7 +11,7 @@ async function main() {
     const { hostname } = new URL(mainUrl);
     const filename = `src/static/buttons/${hostname}.webp`;
     if (buttonUrl) {
-      console.log("NEW", hostname);
+      console.log("...", hostname);
       const resp = await fetch(buttonUrl);
       const data = await resp.arrayBuffer();
       await writeFile(tmp, new Uint8Array(data));
