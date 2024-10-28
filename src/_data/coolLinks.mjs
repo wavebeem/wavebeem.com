@@ -32,7 +32,7 @@ export const siteButtons = [
   },
   {
     mainUrl: "https://tati.codes/",
-    buttonUrl: "https://tati.codes/static/tati.png",
+    buttonUrl: "https://tati.codes/static/33.png",
     title: "Welcome to my garage!",
     localUrl: "",
   },
@@ -163,6 +163,12 @@ export const siteButtons = [
       "https://staging.cohostcdn.org/attachment/d4d2b4a0-5958-47f6-9e62-5bd98cb7f4c5/88x31coda-big.png",
     localUrl: "",
   },
+  {
+    title: "erysdren's WWW site",
+    mainUrl: "https://erysdren.me/",
+    buttonUrl: "https://erysdren.me/images/erysdren_88x31.png",
+    localUrl: "",
+  },
 ];
 
 siteButtons.sort((a, b) => a.title.localeCompare(b.title));
@@ -232,10 +238,6 @@ export const allLinks = [
   {
     title: "Maddie Lim",
     url: "https://maddie.vision/",
-  },
-  {
-    title: "erysdren's WWW site",
-    url: "https://erysdren.me/",
   },
   {
     title: "2 Mello",
