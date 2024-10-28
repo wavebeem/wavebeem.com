@@ -16,7 +16,7 @@ indie web are using site buttons, apparently!
 
 <figure>
   <img
-    src="/button.gif"
+    src="/button.webp"
     title="wavebeem"
     alt="wavebeem"
     width="88"

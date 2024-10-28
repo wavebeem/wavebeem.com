@@ -20,7 +20,7 @@ export const siteButtons = [
   {
     mainUrl: "https://candiedreptile.club/bloglet/index.html",
     buttonUrl:
-      "https://candiedreptile.club/bloglet/images/banners/karmabutton.gif",
+      "https://candiedreptile.club/bloglet/images/banners/candiedreptile_static.png",
     title: "Terrarium",
     localUrl: "",
   },
@@ -38,7 +38,7 @@ export const siteButtons = [
   },
   {
     mainUrl: "https://illuminesce.net/",
-    buttonUrl: "https://illuminesce.net/images/illuminesce_88x31.gif",
+    buttonUrl: "https://illuminesce.net/images/illuminesce_88x31.png",
     title: "CJ | design & video games",
     localUrl: "",
   },
@@ -134,7 +134,7 @@ export const siteButtons = [
   {
     title: "the melt zone",
     mainUrl: "https://meltknuckles.net/",
-    buttonUrl: "https://meltknuckles.net/badges/meltknucklesbadge.gif",
+    buttonUrl: "https://meltknuckles.net/buttons/meltknuckles.png",
     localUrl: "",
   },
   {
@@ -175,7 +175,7 @@ siteButtons.sort((a, b) => a.title.localeCompare(b.title));
 
 for (const siteButton of siteButtons) {
   const { hostname } = new URL(siteButton.mainUrl);
-  const filename = `/buttons/${hostname}.gif`;
+  const filename = `/buttons/${hostname}.webp`;
   siteButton.localUrl = filename;
 }
 

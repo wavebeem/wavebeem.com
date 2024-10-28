@@ -1,24 +1,21 @@
 #!/usr/bin/env node
 // @ts-check
 
-import { existsSync } from "node:fs";
+import { spawnSync } from "node:child_process";
 import { unlink, writeFile } from "node:fs/promises";
 import { siteButtons } from "../src/_data/coolLinks.mjs";
-import { spawnSync } from "node:child_process";
 
 async function main() {
   const tmp = "temporary-image";
   for (const { mainUrl, buttonUrl } of siteButtons) {
     const { hostname } = new URL(mainUrl);
-    const filename = `src/static/buttons/${hostname}.gif`;
-    if (existsSync(filename)) {
-      console.log("...", hostname);
-    } else if (buttonUrl) {
+    const filename = `src/static/buttons/${hostname}.webp`;
+    if (buttonUrl) {
       console.log("NEW", hostname);
       const resp = await fetch(buttonUrl);
       const data = await resp.arrayBuffer();
       await writeFile(tmp, new Uint8Array(data));
-      spawnSync("magick", [tmp, "-strip", filename]);
+      spawnSync("magick", [`${tmp}[0]`, "-strip", "-quality", "100", filename]);
     } else {
       console.log("??? MISSING", hostname);
     }
