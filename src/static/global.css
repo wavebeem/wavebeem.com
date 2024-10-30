@@ -166,6 +166,7 @@ pre {
   font-family: var(--font-mono);
   font-size: var(--font-size-code);
   font-variant-ligatures: none;
+  overflow-x: auto;
 }
 
 @media (max-width: 800px) {
@@ -389,7 +390,7 @@ main {
 
 .sage-prose a,
 .sage-link {
-  text-decoration-thickness: 1.5px;
+  text-decoration-thickness: 2px;
   color: var(--color-main-link);
   border-radius: 0.25rem;
 }
@@ -435,7 +436,7 @@ main {
   background: var(--color-card-background);
   font-size: var(--font-size-small);
   padding: 0.25rem 1rem;
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   display: flex;
 }
 
@@ -462,8 +463,9 @@ main {
   padding: 0.5rem 1rem;
   background: var(--color-header-button);
   color: var(--color-header-text);
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   text-decoration-line: none;
+  text-decoration-thickness: 2px;
 }
 
 .nav :any-link:hover {
@@ -562,7 +564,7 @@ main {
   text-decoration-line: none;
   text-decoration-thickness: 2px;
   padding: 0.5rem 1rem;
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   color: var(--color-main-link);
   background: var(--color-card-background);
 }
