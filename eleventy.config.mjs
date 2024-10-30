@@ -28,8 +28,8 @@ export default function getConfig(config) {
   config.addPlugin(syntaxHighlight);
   config.addPassthroughCopy({ "src/static": "/" });
 
-  config.addCollection("feed", function (collectionApi) {
-    return collectionApi
+  config.addCollection("feed", function (collectionsApi) {
+    return collectionsApi
       .getAllSorted()
       .filter((item) => {
         const tags = item?.data?.tags || [];
@@ -97,6 +97,10 @@ export default function getConfig(config) {
 
   config.addFilter("markdown", function (content) {
     return markdown.render(content);
+  });
+
+  config.addFilter("take", function (array, count) {
+    return array.slice(0, count);
   });
 
   const prettyTagMap = new Map([

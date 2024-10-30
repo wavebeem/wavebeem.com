@@ -198,6 +198,10 @@ summary {
   margin: 0;
 }
 
+.text-right {
+  text-align: right;
+}
+
 .hamburger {
   margin: 0;
 }
@@ -557,8 +561,8 @@ main {
   flex-direction: column;
   text-decoration-line: none;
   text-decoration-thickness: 2px;
-  padding: 1rem;
-  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
   color: var(--color-main-link);
   background: var(--color-card-background);
 }
@@ -615,6 +619,29 @@ main {
 .footer .sage-button {
   padding-block: 0.25rem;
   max-width: max-content;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-list--post {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.post-list--post > * {
+  margin: 0;
+}
+
+.post-list--post > time {
+  flex: auto;
+  font-size: var(--font-size-small);
+  font-weight: bold;
+  margin-top: -1rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
