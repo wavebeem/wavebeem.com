@@ -9,7 +9,6 @@ tags:
   - "react"
   - "essay"
   - "web"
-  - "web"
 ---
 
 _Originally posted 2023 March 15 on Cohost._

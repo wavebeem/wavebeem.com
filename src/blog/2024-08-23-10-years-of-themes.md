@@ -6,6 +6,7 @@ description: |
 tags:
   - "web"
   - "design"
+  - "meta"
 ---
 
 Let's take a tour through the last 10 years of themes for this site.

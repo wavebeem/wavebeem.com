@@ -20,7 +20,7 @@ export const siteButtons = [
   {
     mainUrl: "https://candiedreptile.club/bloglet/index.html",
     buttonUrl:
-      "https://candiedreptile.club/bloglet/images/banners/karmabutton.gif",
+      "https://candiedreptile.club/bloglet/images/banners/candiedreptile_static.png",
     title: "Terrarium",
     localUrl: "",
   },
@@ -32,13 +32,13 @@ export const siteButtons = [
   },
   {
     mainUrl: "https://tati.codes/",
-    buttonUrl: "https://tati.codes/static/tati.png",
+    buttonUrl: "https://tati.codes/static/33.png",
     title: "Welcome to my garage!",
     localUrl: "",
   },
   {
     mainUrl: "https://illuminesce.net/",
-    buttonUrl: "https://illuminesce.net/images/illuminesce_88x31.gif",
+    buttonUrl: "https://illuminesce.net/images/illuminesce_88x31.png",
     title: "CJ | design & video games",
     localUrl: "",
   },
@@ -134,7 +134,7 @@ export const siteButtons = [
   {
     title: "the melt zone",
     mainUrl: "https://meltknuckles.net/",
-    buttonUrl: "https://meltknuckles.net/badges/meltknucklesbadge.gif",
+    buttonUrl: "https://meltknuckles.net/buttons/meltknuckles.png",
     localUrl: "",
   },
   {
@@ -163,13 +163,25 @@ export const siteButtons = [
       "https://staging.cohostcdn.org/attachment/d4d2b4a0-5958-47f6-9e62-5bd98cb7f4c5/88x31coda-big.png",
     localUrl: "",
   },
+  {
+    title: "erysdren's WWW site",
+    mainUrl: "https://erysdren.me/",
+    buttonUrl: "https://erysdren.me/images/erysdren_88x31.png",
+    localUrl: "",
+  },
+  {
+    title: "Apple Annie’s Weblog",
+    mainUrl: "https://weblog.anniegreens.lol/",
+    buttonUrl: "https://cdn.anniegreens.lol/assets/image/88x31_weblog-lt.png",
+    localUrl: "",
+  },
 ];
 
 siteButtons.sort((a, b) => a.title.localeCompare(b.title));
 
 for (const siteButton of siteButtons) {
   const { hostname } = new URL(siteButton.mainUrl);
-  const filename = `/buttons/${hostname}.gif`;
+  const filename = `/buttons/${hostname}.webp`;
   siteButton.localUrl = filename;
 }
 
@@ -232,10 +244,6 @@ export const allLinks = [
   {
     title: "Maddie Lim",
     url: "https://maddie.vision/",
-  },
-  {
-    title: "erysdren's WWW site",
-    url: "https://erysdren.me/",
   },
   {
     title: "2 Mello",

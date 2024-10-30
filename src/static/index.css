@@ -4,7 +4,7 @@
 
 .clicky-list {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 @media (min-width: 500px) {

@@ -6,6 +6,7 @@ description: |
 tags:
   - "art"
   - "web"
+  - "meta"
 ---
 
 It's been a while since I updated my 88×31 site button. With
@@ -15,7 +16,7 @@ indie web are using site buttons, apparently!
 
 <figure>
   <img
-    src="/button.gif"
+    src="/button.webp"
     title="wavebeem"
     alt="wavebeem"
     width="88"

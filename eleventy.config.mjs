@@ -5,6 +5,8 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateformat from "dateformat";
 import markdownIt from "markdown-it";
 
+const html = String.raw;
+
 function compare(a, b) {
   if (a < b) return -1;
   if (a > b) return 1;
@@ -26,8 +28,8 @@ export default function getConfig(config) {
   config.addPlugin(syntaxHighlight);
   config.addPassthroughCopy({ "src/static": "/" });
 
-  config.addCollection("feed", function (collectionApi) {
-    return collectionApi
+  config.addCollection("feed", function (collectionsApi) {
+    return collectionsApi
       .getAllSorted()
       .filter((item) => {
         const tags = item?.data?.tags || [];
@@ -97,6 +99,10 @@ export default function getConfig(config) {
     return markdown.render(content);
   });
 
+  config.addFilter("take", function (array, count) {
+    return array.slice(0, count);
+  });
+
   const prettyTagMap = new Map([
     ["art", "Art"],
     ["bash", "Bash"],
@@ -109,6 +115,7 @@ export default function getConfig(config) {
     ["feed", "Feed"],
     ["javascript", "JavaScript"],
     ["keyboards", "Keyboards"],
+    ["meta", "Meta"],
     ["programming", "Programming"],
     ["python", "Python"],
     ["react", "React"],
@@ -117,8 +124,8 @@ export default function getConfig(config) {
     ["toybox", "Toybox"],
     ["typescript", "TypeScript"],
     ["video-games", "Video games"],
-    ["web", "Web"],
     ["web-components", "Web components"],
+    ["web", "Web"],
   ]);
 
   config.addFilter("prettyTag", function (content) {

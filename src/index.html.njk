@@ -3,6 +3,7 @@ description: "Sage Fennel's website"
 layout: "layout-base"
 css:
   - "index"
+permalink: "/"
 ---
 
 <script type="module" src="/wavebeem-easter-egg.mjs"></script>
@@ -49,3 +50,28 @@ css:
   <a class="link-card" href="{{ item.url }}">{{ item.title }}</a>
   {% endfor %}
 </div>
+
+<h2>Recent posts</h2>
+
+<div class="post-list">
+  {% for post in collections.post | reverse | take(3) %}
+  <section class="post-list--post sage-well">
+    <h3>
+      <a class="sage-link no-underline" href="{{ post.url }}">
+        {{ post.data.title }}
+      </a>
+    </h3>
+    <time
+      datetime="{{ post.date | formatDate('yyyy-mm-dd') }}"
+      >{{ post.date | formatDate('yyyy mmmm d') }}</time
+    >
+
+    <p>{{ post.data.description }}</p>
+  </section>
+  {% endfor %}
+</div>
+
+<p class="text-right">
+  <a href="/blog/" class="sage-link">All blog posts</a>
+  <span aria-hidden="true">&rarr;</span>
+</p>

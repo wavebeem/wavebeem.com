@@ -6,6 +6,7 @@ description:
 tags:
   - "web"
   - "art"
+  - "meta"
 ---
 
 Do you remember Geocities site buttons? Little 88x31 GIFs that served as links

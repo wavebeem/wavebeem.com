@@ -28,12 +28,6 @@ frame-ancestors
 """
 
 [[redirects]]
-from = "/old-path"
-to = "/new-path"
-status = 301
-force = false
-
-[[redirects]]
 from = "http://mockbrian.com/*"
 to = "https://www.wavebeem.com/:splat"
 status = 307
@@ -56,6 +50,11 @@ from = "https://blog.mockbrian.com/*"
 to = "https://www.wavebeem.com/blog/:splat"
 status = 307
 force = true
+
+[[redirects]]
+from = "/button.gif"
+to = "/button.webp"
+status = 307
 
 [[redirects]]
 from = "/blog/2024/09/21/i-made-a-new-88-31-site-button/"
