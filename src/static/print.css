@@ -68,6 +68,12 @@ dd {
 
 details > summary {
   list-style-type: none;
+  appearance: none;
+  text-align: inherit;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
 }
 
 table {

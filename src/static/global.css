@@ -208,11 +208,17 @@ summary {
 }
 
 .hamburger > summary {
-  list-style-type: none;
+  list-style: none;
+  appearance: none;
+  text-align: inherit;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
+}
+
+.hamburger summary::-webkit-details-marker {
+  display: none;
 }
 
 .hamburger > summary::after {
@@ -526,6 +532,10 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
+}
+
+.sage-well > details > summary::-webkit-details-marker {
+  display: none;
 }
 
 .sage-well > details > summary::after {
