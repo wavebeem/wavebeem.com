@@ -832,6 +832,208 @@ main {
   font-weight: bold;
 }
 
+/* --- POST --- */
+
+.post-date {
+  margin-bottom: 1rem;
+}
+
+.sage-prose hr {
+  border: none;
+  margin-inline: 0;
+  margin-block: 2rem;
+  display: flex;
+  color: inherit;
+}
+
+.sage-prose hr::after {
+  font-size: 2rem;
+  content: "⋄◆⋄";
+  font-family: var(--font-mono);
+  display: block;
+  color: var(--color-main-decoration);
+  position: relative;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+  /* https://www.smashingmagazine.com/2024/01/css-border-image-property/ */
+  --s: 2px; /* the thickness */
+  --c: var(--color-card-background); /* the color */
+  --w: 100vw; /* the width */
+  --g: 0rem; /* the gap */
+  border-image: linear-gradient(
+      transparent calc(50% - var(--s) / 2),
+      var(--c) 0 calc(50% + var(--s) / 2),
+      transparent 0
+    )
+    0 1 / 0 var(--w) / 0 calc(var(--w) + var(--g));
+}
+
+.sage-prose figure {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  box-sizing: border-box;
+  border: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--color-card-background);
+}
+
+.sage-prose figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+.sage-prose figure figcaption {
+  font-weight: bold;
+  font-size: var(--font-size-small);
+}
+
+.sage-prose blockquote {
+  background: var(--color-card-background);
+  margin-inline: 0;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.sage-prose blockquote > :first-child {
+  margin-top: 0;
+}
+
+.sage-prose blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.sage-prose .infobox {
+  position: relative;
+  margin-block: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--color-aside-background);
+}
+
+.sage-prose .infobox::before {
+  display: block;
+  position: absolute;
+  inset: 0 0 auto auto;
+  content: "i";
+  box-shadow: 0 0 0 2px var(--color-main-background);
+  background: var(--color-main-link);
+  color: var(--color-main-background);
+  margin: -0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-weight: bold;
+}
+
+.sage-prose .infobox :first-child {
+  margin-top: 0;
+}
+
+.sage-prose .infobox :last-child {
+  margin-bottom: 0;
+}
+
+.pixelated {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+.sage-prose pre {
+  border-radius: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--color-syntax-background);
+  color: var(--color-syntax-text);
+  overflow-x: auto;
+}
+
+/* Reset color for nested scripts */
+.token.script {
+  color: var(--color-syntax-default);
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--color-syntax-comment);
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: var(--color-syntax-punctuation);
+}
+
+.token.attr-value,
+.token.selector,
+.token.string,
+.token.char,
+.token.boolean,
+.token.number,
+.token.regex,
+/* .token.builtin, */
+.token.inserted {
+  color: var(--color-syntax-string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--color-syntax-punctuation);
+}
+
+.token.atrule,
+.token.function,
+.token.class-name {
+  color: var(--color-syntax-property);
+}
+
+.token.tag,
+.token.tag > .token.class-name {
+  color: var(--color-syntax-keyword);
+}
+
+.token.keyword {
+  color: var(--color-syntax-keyword);
+  font-weight: bold;
+}
+
+.language-css .token.property,
+.token.attr-name,
+/* .token.property, */
+.token.variable,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.important {
+  color: var(--color-syntax-property);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
 .sage-well {
   box-sizing: border-box;
   border: 0;
