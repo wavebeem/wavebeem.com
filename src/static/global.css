@@ -69,7 +69,7 @@
 }
 
 ::selection {
-  background-color: var(--color-header-background);
+  background-color: var(--color-selection);
   text-shadow: none;
 }
 
@@ -533,8 +533,6 @@ main {
   background: white;
 }
 
-/* --- END TOYBOX --- */
-
 /* --- LINKS --- */
 
 .site-button {
@@ -713,8 +711,6 @@ main {
   }
 }
 
-/* --- END HOME --- */
-
 /* --- RESUME --- */
 
 [data-page-name="resume"] main :is(h1, h2, h3) small {
@@ -783,38 +779,6 @@ main {
 [data-page-name="resume"] main dt {
   font-weight: bold;
 }
-
-/* --- END RESUME --- */
-
-/* --- ART ITEM --- */
-
-[data-page-name="art-item"] {
-  text-align: center;
-}
-
-[data-page-name="art-item"] .post-date {
-  margin-bottom: 1rem;
-}
-
-[data-page-name="art-item"] .frame {
-  display: flex;
-  max-width: max-content;
-  margin-inline: auto;
-}
-
-[data-page-name="art-item"] img {
-  display: flex;
-  max-width: max-content;
-  max-width: 480px;
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
-  background-color: var(--image-bg);
-}
-
-/* --- END ART ITEM --- */
-
-/* --- END LINKS --- */
 
 .sage-well {
   box-sizing: border-box;
