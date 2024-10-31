@@ -1,5 +1,6 @@
 {
   "layout": "layout-post",
-  "tags": ["post"],
+  "tags": ["posts"],
+  "pageName": "blog-post",
   "permalink": "blog/{{ page.date | formatDate: 'yyyy' }}/{{ page.fileSlug }}/"
 }

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  lang="en"
+  data-page-name="{{ pageName or '' }}"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -135,7 +138,9 @@
           <summary>Menu</summary>
           <nav class="nav">
             {% for item in menu %}
-            <a href="{{ item.url }}">{{ item.title }}</a>
+            <a
+            {% if page.url == item.url %} aria-current="page"{% endif %}
+            href="{{ item.url }}">{{ item.title }}</a>
             {% endfor %}
           </nav>
         </details>
@@ -143,7 +148,7 @@
     </header>
     <div class="slime"></div>
     <main>
-      <div class="content-column" data-page-name="{{ pageName or '' }}">
+      <div class="content-column">
         {{ content | safe }}
       </div>
     </main>
@@ -152,7 +157,9 @@
       <div class="content-column flex flex-column gap3">
         <nav class="footer-links">
           {% for item in menu %}
-          <a href="{{ item.url }}" class="sage-link">{{ item.title }}</a>
+          <a
+          {% if page.url == item.url %} aria-current="page"{% endif %}
+          href="{{ item.url }}" class="sage-link">{{ item.title }}</a>
           {% endfor %}
         </nav>
         <wavebeem-theme-select>

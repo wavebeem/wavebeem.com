@@ -13,8 +13,6 @@ layout: "layout-base"
 eleventyComputed:
   title: "{{ tag | prettyTag }} - Tagged posts"
 permalink: "/blog/tags/{{ tag }}/"
-css:
-  - "blog"
 ---
 
 <h1>Tagged posts</h1>
@@ -39,7 +37,7 @@ css:
 </h2>
 
 <div class="post-list">
-  {% for post in collections | getPostsByTag(tag) | reverse %}
+  {% for post in collections.post | reverse %}
   <section class="post-list--post sage-well">
     <h2>
       <a class="sage-link no-underline" href="{{ post.url }}">

@@ -2,8 +2,6 @@
 title: "Drafts"
 layout: "layout-base"
 permalink: "/drafts/"
-css:
-  - "blog"
 ---
 
 <h1>Drafts</h1>
@@ -27,7 +25,6 @@ css:
       datetime="{{ draft.date | formatDate('yyyy-mm-dd') }}"
       >{{ draft.date | formatDate('yyyy mmmm d') }}</time
     >
-
   </section>
   {% endfor %}
 </div>

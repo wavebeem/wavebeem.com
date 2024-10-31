@@ -1,8 +1,7 @@
 ---
 description: "Sage Fennel's website"
 layout: "layout-base"
-css:
-  - "index"
+pageName: "home"
 permalink: "/"
 ---
 
@@ -47,7 +46,9 @@ permalink: "/"
 
 <div class="clicky-list">
   {% for item in menu %}
-  <a class="link-card" href="{{ item.url }}">{{ item.title }}</a>
+  <a class="link-card"
+  {% if page.url == item.url %} aria-current="page"{% endif %}
+  href="{{ item.url }}">{{ item.title }}</a>
   {% endfor %}
 </div>
 

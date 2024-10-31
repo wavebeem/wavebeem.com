@@ -2,8 +2,7 @@
 layout: "layout-base"
 permalink: "/art/"
 title: "Art gallery"
-css:
-  - "art"
+pageName: "art"
 ---
 
 <h1>{{ title }}</h1>
@@ -11,11 +10,7 @@ css:
 <div class="art-container">
   {% for img in art | reverse %}
   <figure class="art-container--frame sage-well">
-    <a
-      class="flex sage-link"
-      tabindex="-1"
-      href="/art/{{ img.year }}/{{ img.slug }}/"
-    >
+    <a class="flex sage-link" tabindex="-1" href="{{ img.url }}">
       <img
         src="{{ img.url }}"
         alt="{{ img.name }}"
@@ -26,9 +21,7 @@ css:
       />
     </a>
     <figcaption>
-      <a class="sage-link" href="/art/{{ img.year }}/{{ img.slug }}/">{{
-        img.name
-      }}</a>
+      <a class="sage-link" href="{{ img.url }}">{{ img.name }}</a>
     </figcaption>
     <time
       datetime="{{ img.date | formatDate('yyyy-mm-dd') }}"

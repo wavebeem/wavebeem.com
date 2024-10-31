@@ -27,7 +27,7 @@
   <subtitle>{{ metadata.description }}</subtitle>
   <link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
   <link href="{{ metadata.base | addPathPrefixToFullUrl }}" />
-  <updated>{{ collections.feed | getNewestDate | dateToRfc3339 }}</updated>
+  <updated>{{ collections.feed | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.base | addPathPrefixToFullUrl }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>

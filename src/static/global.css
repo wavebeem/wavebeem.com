@@ -69,7 +69,7 @@
 }
 
 ::selection {
-  background-color: var(--color-header-background);
+  background-color: var(--color-selection);
   text-shadow: none;
 }
 
@@ -533,8 +533,6 @@ main {
   background: white;
 }
 
-/* --- END TOYBOX --- */
-
 /* --- LINKS --- */
 
 .site-button {
@@ -581,7 +579,460 @@ main {
   opacity: 0.85;
 }
 
-/* --- END LINKS --- */
+/* --- HOME --- */
+
+.clearfix {
+  clear: both;
+}
+
+[data-page-name="home"] .avatar {
+  --avatar-size: 120px;
+  display: flex;
+  float: right;
+  margin: 1rem;
+  margin-top: 0;
+  border-radius: 9999px;
+}
+
+[data-page-name="home"] wavebeem-easter-egg.avatar[data-state="inside"] {
+  background: transparent;
+  border-color: transparent;
+}
+
+[data-page-name="home"] .avatar img {
+  border-radius: 9999px;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  filter: sepia(25%) hue-rotate(-30deg) brightness(90%) contrast(110%);
+}
+
+[data-page-name="home"] wavebeem-easter-egg {
+  --wavebeem-easter-egg--shadow-color: hsl(0 0% 0% / 50%);
+  --t: 2px;
+  --k: 0.05turn;
+  --transform: translate(calc(var(--t) * var(--x)), calc(var(--t) * var(--y)))
+    scale(1.1) rotateY(calc(var(--k) * var(--x)))
+    rotateX(calc(var(--k) * var(--y)));
+  display: block;
+  position: relative;
+  touch-action: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-page-name="home"] wavebeem-easter-egg {
+    --k: 0turn;
+  }
+}
+
+[data-page-name="home"] wavebeem-easter-egg[data-state="outside"] img {
+  transition-timing-function: ease;
+  transition-duration: 500ms;
+  transition-property: transform, box-shadow, outline;
+}
+
+[data-page-name="home"] wavebeem-easter-egg[data-state="inside"] img {
+  pointer-events: none;
+  touch-action: none;
+  transform: var(--transform);
+  outline: 1px solid var(--color-easter-egg-highlight);
+  outline-offset: -1px;
+  --k1: calc(-1 / 16);
+  --k2: calc(1 / 32);
+  box-shadow: calc(var(--k1) * var(--avatar-size) * var(--x))
+    calc(var(--k1) * var(--avatar-size) * var(--y))
+    calc(var(--k2) * var(--avatar-size) * var(--r))
+    var(--color-easter-egg-shadow);
+}
+
+[data-page-name="home"] wavebeem-easter-egg::before,
+[data-page-name="home"] wavebeem-easter-egg::after {
+  z-index: 10;
+  transform: var(--transform);
+  transition: opacity 500ms;
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  clip-path: circle(50%);
+}
+
+[data-page-name="home"] wavebeem-easter-egg::before {
+  mix-blend-mode: soft-light;
+
+  /* https://css-pattern.com/wave-circles/ */
+  --s: 30px; /* control the size*/
+  --c1: hsl(0 0% 80%);
+  --c2: hsl(0 0% 50%);
+
+  --_g: var(--s) var(--s)
+    radial-gradient(var(--c1) 17%, var(--c2) 18% 35%, #0000 36.5%);
+
+  mask-image: linear-gradient(
+    var(--angle),
+    hsl(0 0% 0% / 100%),
+    hsl(0 0% 0% / 0%) calc(100% * var(--r))
+  );
+  background: calc(var(--s) / -4) calc(var(--s) / -4) / var(--_g),
+    calc(var(--s) / 4) calc(var(--s) / 4) / var(--_g),
+    radial-gradient(var(--c2) 34%, var(--c1) 36% 68%, #0000 70%) 0 0 /
+      calc(var(--s) / 2) calc(var(--s) / 2),
+    repeating-linear-gradient(45deg, var(--c1) -12.5% 12.5%, var(--c2) 0 37.5%)
+      0 0 / var(--s) var(--s);
+}
+
+[data-page-name="home"] wavebeem-easter-egg::after {
+  mix-blend-mode: hard-light;
+  background: linear-gradient(
+      var(--angle),
+      hsl(var(--angle) 100% 80% / 70%),
+      hsl(var(--angle) 100% 80% / 10%) calc(100% * var(--r))
+    )
+    0 0 / 100% 100%;
+}
+
+[data-page-name="home"] wavebeem-easter-egg[data-state="inside"]::before,
+[data-page-name="home"] wavebeem-easter-egg[data-state="inside"]::after {
+  opacity: 1;
+}
+
+@media (max-width: 420px) {
+  [data-page-name="home"] .avatar {
+    --avatar-size: 100px;
+  }
+}
+
+@media (min-width: 800px) {
+  [data-page-name="home"] .avatar {
+    --avatar-size: 180px;
+  }
+}
+
+/* --- RESUME --- */
+
+[data-page-name="resume"] main :is(h1, h2, h3) small {
+  font-weight: normal;
+  font-family: var(--font-body);
+}
+
+@media (max-width: 800px) {
+  [data-page-name="resume"] main small {
+    display: block;
+  }
+}
+
+[data-page-name="resume"] main .sage-well ul:last-of-type {
+  margin-bottom: 0;
+}
+
+[data-page-name="resume"] main .sage-well > details {
+  margin-block: 0;
+}
+
+[data-page-name="resume"] main ul li + li {
+  margin-top: 1rem;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+[data-page-name="resume"] main ul {
+  padding-left: 1rem;
+}
+
+[data-page-name="resume"] main ol {
+  padding-left: 1rem;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+[data-page-name="resume"] main summary {
+  border-radius: 0.5rem;
+}
+
+[data-page-name="resume"] main summary:hover {
+  background: var(--color-card-hover);
+}
+
+[data-page-name="resume"] main dl {
+  margin-block: 0;
+}
+
+/* --- ART GALLERY --- */
+
+[data-page-name="art"] .art-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-content: space-between;
+}
+
+[data-page-name="art"] .art-container--frame {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+[data-page-name="art"] .art-container--frame a {
+  font-family: var(--font-heading);
+  font-weight: bold;
+  font-size: var(--font-size-h3);
+  flex: auto;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+[data-page-name="art"] .art-container--frame img {
+  border-radius: 0.25rem;
+}
+
+[data-page-name="art"] .art-container--frame figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+[data-page-name="art"] figure {
+  margin: 1rem 0;
+  color: var(--color-main-text);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+[data-page-name="art"] figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+[data-page-name="art"] figure figcaption {
+  font-size: var(--font-size-small);
+}
+
+@media (min-width: 800px) {
+  [data-page-name="resume"] main dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1rem 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  [data-page-name="resume"] main dd + dt {
+    margin-top: 1rem;
+  }
+}
+
+[data-page-name="resume"] main dd {
+  margin-inline: 0;
+}
+
+[data-page-name="resume"] main dt {
+  font-weight: bold;
+}
+
+/* --- POST --- */
+
+[data-page-name="blog-post"] .post-date {
+  margin-bottom: 1rem;
+}
+
+[data-page-name="blog-post"] hr {
+  border: none;
+  margin-inline: 0;
+  margin-block: 2rem;
+  display: flex;
+  color: inherit;
+}
+
+[data-page-name="blog-post"] hr::after {
+  font-size: 2rem;
+  content: "⋄◆⋄";
+  font-family: var(--font-mono);
+  display: block;
+  color: var(--color-main-decoration);
+  position: relative;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
+  /* https://www.smashingmagazine.com/2024/01/css-border-image-property/ */
+  --s: 2px; /* the thickness */
+  --c: var(--color-card-background); /* the color */
+  --w: 100vw; /* the width */
+  --g: 0rem; /* the gap */
+  border-image: linear-gradient(
+      transparent calc(50% - var(--s) / 2),
+      var(--c) 0 calc(50% + var(--s) / 2),
+      transparent 0
+    )
+    0 1 / 0 var(--w) / 0 calc(var(--w) + var(--g));
+}
+
+[data-page-name="blog-post"] figure {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  box-sizing: border-box;
+  border: 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--color-card-background);
+}
+
+[data-page-name="blog-post"] figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+}
+
+[data-page-name="blog-post"] figure figcaption {
+  font-weight: bold;
+  font-size: var(--font-size-small);
+}
+
+[data-page-name="blog-post"] blockquote {
+  background: var(--color-card-background);
+  margin-inline: 0;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+[data-page-name="blog-post"] blockquote > :first-child {
+  margin-top: 0;
+}
+
+[data-page-name="blog-post"] blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+[data-page-name="blog-post"] .infobox {
+  position: relative;
+  margin-block: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--color-aside-background);
+}
+
+[data-page-name="blog-post"] .infobox::before {
+  display: block;
+  position: absolute;
+  inset: 0 0 auto auto;
+  content: "i";
+  box-shadow: 0 0 0 2px var(--color-main-background);
+  background: var(--color-main-link);
+  color: var(--color-main-background);
+  margin: -0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-weight: bold;
+}
+
+[data-page-name="blog-post"] .infobox :first-child {
+  margin-top: 0;
+}
+
+[data-page-name="blog-post"] .infobox :last-child {
+  margin-bottom: 0;
+}
+
+.pixelated {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+[data-page-name="blog-post"] pre {
+  border-radius: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--color-syntax-background);
+  color: var(--color-syntax-text);
+  overflow-x: auto;
+}
+
+/* Reset color for nested scripts */
+.token.script {
+  color: var(--color-syntax-default);
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--color-syntax-comment);
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: var(--color-syntax-punctuation);
+}
+
+.token.attr-value,
+.token.selector,
+.token.string,
+.token.char,
+.token.boolean,
+.token.number,
+.token.regex,
+/* .token.builtin, */
+.token.inserted {
+  color: var(--color-syntax-string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--color-syntax-punctuation);
+}
+
+.token.atrule,
+.token.function,
+.token.class-name {
+  color: var(--color-syntax-property);
+}
+
+.token.tag,
+.token.tag > .token.class-name {
+  color: var(--color-syntax-keyword);
+}
+
+.token.keyword {
+  color: var(--color-syntax-keyword);
+  font-weight: bold;
+}
+
+.language-css .token.property,
+.token.attr-name,
+/* .token.property, */
+.token.variable,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.important {
+  color: var(--color-syntax-property);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
 
 .sage-well {
   box-sizing: border-box;
