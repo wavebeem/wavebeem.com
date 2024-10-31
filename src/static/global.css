@@ -838,7 +838,7 @@ main {
   margin-bottom: 1rem;
 }
 
-.sage-prose hr {
+hr:not([class]) {
   border: none;
   margin-inline: 0;
   margin-block: 2rem;
@@ -846,7 +846,7 @@ main {
   color: inherit;
 }
 
-.sage-prose hr::after {
+hr:not([class])::after {
   font-size: 2rem;
   content: "⋄◆⋄";
   font-family: var(--font-mono);
