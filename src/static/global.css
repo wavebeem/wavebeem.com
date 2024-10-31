@@ -581,6 +581,34 @@ main {
   opacity: 0.85;
 }
 
+/* --- ART ITEM --- */
+
+[data-page-name="art-item"] {
+  text-align: center;
+}
+
+[data-page-name="art-item"] .post-date {
+  margin-bottom: 1rem;
+}
+
+[data-page-name="art-item"] .frame {
+  display: flex;
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+[data-page-name="art-item"] img {
+  display: flex;
+  max-width: max-content;
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  background-color: var(--image-bg);
+}
+
+/* --- END ART ITEM --- */
+
 /* --- END LINKS --- */
 
 .sage-well {

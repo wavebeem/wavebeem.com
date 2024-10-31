@@ -1,6 +1,6 @@
 const artTitles = {
   "2019-09-28-king-slime-big.webp": "King Slime",
-  "2020-01-23-human-and-cat.webp": "Human & Slime",
+  "2020-01-23-human-and-cat.webp": "Human & Cat",
   "2020-02-02-slimeagotchi.webp": "Slime-a-Gotchi",
   "2020-04-07-self-portrait-cat-mouth.webp": "Self portrait",
   "2020-04-10-hiyoko.webp": "Hiyoko",

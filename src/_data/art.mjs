@@ -7,23 +7,24 @@ import getImageSize from "image-size";
 import { AssetCache } from "@11ty/eleventy-cache-assets";
 import artTitles from "./artTitles.mjs";
 
-const root = "src/static/img/art";
+const root = "src/art";
 
-function isHiddenFile(filename) {
-  return path.basename(filename).startsWith(".");
+function isArtImage(filename) {
+  const base = path.basename(filename);
+  if (base.startsWith(".")) {
+    return false;
+  }
+  return base.endsWith(".webp");
 }
 
 async function getArt() {
   return await Promise.all(
-    fs
-      .readdirSync(root)
-      .filter((f) => !isHiddenFile(f))
-      .map(readInfo)
+    fs.readdirSync(root).filter(isArtImage).map(readInfo)
   );
 }
 
 async function readInfo(filename) {
-  const url = `/img/art/${filename}`;
+  const url = `/art/${filename}`;
   const cleanName = path.basename(filename, ".webp");
   let extension = path.basename(filename).split(/\./).pop();
   let [, date, name] = cleanName.match(/^(\d{4}-\d{2}-\d{2})-(.*)$/) || [];
