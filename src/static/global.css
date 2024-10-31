@@ -834,11 +834,11 @@ main {
 
 /* --- POST --- */
 
-.post-date {
+[data-page-name="blog-post"] .post-date {
   margin-bottom: 1rem;
 }
 
-hr:not([class]) {
+[data-page-name="blog-post"] hr {
   border: none;
   margin-inline: 0;
   margin-block: 2rem;
@@ -846,7 +846,7 @@ hr:not([class]) {
   color: inherit;
 }
 
-hr:not([class])::after {
+[data-page-name="blog-post"] hr::after {
   font-size: 2rem;
   content: "⋄◆⋄";
   font-family: var(--font-mono);
@@ -868,7 +868,7 @@ hr:not([class])::after {
     0 1 / 0 var(--w) / 0 calc(var(--w) + var(--g));
 }
 
-.sage-prose figure {
+[data-page-name="blog-post"] figure {
   margin: 1rem 0;
   display: flex;
   flex-direction: column;
@@ -881,34 +881,34 @@ hr:not([class])::after {
   background: var(--color-card-background);
 }
 
-.sage-prose figure img {
+[data-page-name="blog-post"] figure img {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
   display: block;
 }
 
-.sage-prose figure figcaption {
+[data-page-name="blog-post"] figure figcaption {
   font-weight: bold;
   font-size: var(--font-size-small);
 }
 
-.sage-prose blockquote {
+[data-page-name="blog-post"] blockquote {
   background: var(--color-card-background);
   margin-inline: 0;
   border-radius: 1rem;
   padding: 1rem;
 }
 
-.sage-prose blockquote > :first-child {
+[data-page-name="blog-post"] blockquote > :first-child {
   margin-top: 0;
 }
 
-.sage-prose blockquote > :last-child {
+[data-page-name="blog-post"] blockquote > :last-child {
   margin-bottom: 0;
 }
 
-.sage-prose .infobox {
+[data-page-name="blog-post"] .infobox {
   position: relative;
   margin-block: 1rem;
   padding: 1rem;
@@ -916,7 +916,7 @@ hr:not([class])::after {
   background: var(--color-aside-background);
 }
 
-.sage-prose .infobox::before {
+[data-page-name="blog-post"] .infobox::before {
   display: block;
   position: absolute;
   inset: 0 0 auto auto;
@@ -935,11 +935,11 @@ hr:not([class])::after {
   font-weight: bold;
 }
 
-.sage-prose .infobox :first-child {
+[data-page-name="blog-post"] .infobox :first-child {
   margin-top: 0;
 }
 
-.sage-prose .infobox :last-child {
+[data-page-name="blog-post"] .infobox :last-child {
   margin-bottom: 0;
 }
 
@@ -948,7 +948,7 @@ hr:not([class])::after {
   image-rendering: pixelated;
 }
 
-.sage-prose pre {
+[data-page-name="blog-post"] pre {
   border-radius: 1rem;
   margin: 1rem 0;
   padding: 1rem;

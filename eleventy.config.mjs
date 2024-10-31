@@ -94,7 +94,7 @@ export default function getConfig(config) {
     return [...data].sort((a, b) => a.localeCompare(b));
   });
 
-  const blockedTags = new Set(["all", "post", "posts"]);
+  const blockedTags = new Set(["all", "posts"]);
 
   config.addFilter("filterTagList", function (tags) {
     tags = tags || [];
