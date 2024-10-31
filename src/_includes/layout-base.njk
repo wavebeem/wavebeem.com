@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  lang="en"
+  data-page-name="{{ pageName or '' }}"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -145,7 +148,7 @@
     </header>
     <div class="slime"></div>
     <main>
-      <div class="content-column" data-page-name="{{ pageName or '' }}">
+      <div class="content-column">
         {{ content | safe }}
       </div>
     </main>

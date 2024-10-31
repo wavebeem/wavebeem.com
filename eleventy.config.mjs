@@ -27,6 +27,7 @@ export default function getConfig(config) {
   config.setLibrary("md", markdown);
   config.addPlugin(syntaxHighlight);
   config.addPassthroughCopy({ "src/static": "/" });
+  config.addPassthroughCopy("src/art/*.webp");
 
   config.addCollection("feed", function (collectionsApi) {
     return collectionsApi
