@@ -506,6 +506,83 @@ main {
   }
 }
 
+.clicky-list {
+  display: grid;
+  gap: 0.5rem;
+}
+
+@media (min-width: 500px) {
+  .clicky-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* --- TOYBOX --- */
+
+.crime-frame {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.crime-frame :is(details, summary) {
+  margin: unset;
+}
+
+.crime-frame > details {
+  background: white;
+}
+
+/* --- END TOYBOX --- */
+
+/* --- LINKS --- */
+
+.site-button {
+  width: calc(2 * 88px);
+  height: auto;
+  display: flex;
+  image-rendering: pixelated;
+}
+
+.site-button--grid {
+  display: grid;
+  gap: 0.5rem;
+}
+
+@media (min-width: 400px) {
+  .site-button--grid {
+    grid-template-columns: repeat(auto-fit, calc(2 * 88px));
+    justify-content: center;
+  }
+}
+
+@media (min-width: 800px) {
+  .site-button--grid {
+    justify-content: space-between;
+  }
+}
+
+.site-button--link {
+  display: flex;
+  border-radius: 2px;
+  outline-offset: 2px;
+  outline-width: 3px;
+  align-items: flex-start;
+}
+
+.site-button--image {
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  image-rendering: pixelated;
+}
+
+.site-button--image:hover {
+  opacity: 0.85;
+}
+
+/* --- END LINKS --- */
+
 .sage-well {
   box-sizing: border-box;
   border: 0;

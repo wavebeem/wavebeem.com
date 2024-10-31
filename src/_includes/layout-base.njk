@@ -143,7 +143,9 @@
     </header>
     <div class="slime"></div>
     <main>
-      <div class="content-column">{{ content | safe }}</div>
+      <div class="content-column" data-page-name="{{ pageName or '' }}">
+        {{ content | safe }}
+      </div>
     </main>
     <div class="footer-top"></div>
     <footer class="footer screen-only">

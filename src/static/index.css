@@ -2,17 +2,6 @@
   margin: 0;
 }
 
-.clicky-list {
-  display: grid;
-  gap: 0.5rem;
-}
-
-@media (min-width: 500px) {
-  .clicky-list {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
 .card-heading {
   border: none;
   padding: 0;

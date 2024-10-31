@@ -175,6 +175,12 @@ export const siteButtons = [
     buttonUrl: "https://cdn.anniegreens.lol/assets/image/88x31_weblog-lt.png",
     localUrl: "",
   },
+  {
+    title: "Frills",
+    mainUrl: "https://frills.dev/",
+    buttonUrl: "",
+    localUrl: "",
+  },
 ];
 
 siteButtons.sort((a, b) => a.title.localeCompare(b.title));

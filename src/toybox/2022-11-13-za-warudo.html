@@ -30,7 +30,7 @@ description: "Originally posted on cohost.org."
         style="
           user-select: none;
           cursor: pointer;
-          font-size: 1rem;
+          font-size: clamp(1rem, 3vw, 2rem);
           background: white;
           color: black;
           font-weight: bold;
@@ -49,22 +49,21 @@ description: "Originally posted on cohost.org."
       style="
         font-weight: bold;
         pointer-events: none;
-        position: absolute;
+        position: fixed;
         width: 100%;
         height: 100%;
         top: 0px;
         left: 0px;
         z-index: 1000;
-        backdrop-filter: blur(1px) invert(1) hue-rotate(180deg);
+        backdrop-filter: blur(2px) invert(100%) brightness(75%) contrast(125%)
+          hue-rotate(0.5turn);
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 3rem;
-        color: yellow;
+        font-size: max(1.5rem, 7vw);
+        color: #ff0;
         text-align: left;
-        text-shadow: black 2px 2px 2px, black -2px -2px 2px, black 2px -2px 2px,
-          black -2px 2px 2px, black 8px 8px 8px, black -8px -8px 8px,
-          black 8px -8px 8px, black -8px 8px 8px;
+        text-shadow: #000 0 0 4px, #000 0 0 8px, #000 0 0 12px, #000 0 0 16px;
       "
     >
       <p style="margin-top: 2rem">

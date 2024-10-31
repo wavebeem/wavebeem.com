@@ -3,43 +3,11 @@ title: "Cool links"
 description: |
   A collection of links to sites I like or want to visit again in the future. Links are not necessarily endorsements.
 layout: "layout-base"
-css:
-  - "links"
 ---
 
 <h1>{{ title }}</h1>
 
 <p>{{ description }}</p>
-
-<h2>Embed my site button</h2>
-
-<p>
-  <img
-    class="site-button"
-    src="/button.webp"
-    width="88"
-    height="31"
-    alt="wavebeem.com"
-  />
-</p>
-
-<div class="sage-well">
-  <details>
-    <summary>Show HTML code</summary>
-    <pre>
-&lt;a href="https://wavebeem.com"&gt;
-  &lt;img
-    width="88"
-    height="31"
-    alt="wavebeem.com"
-    title="wavebeem.com"
-    src="https://wavebeem.com/button.webp"
-    style="image-rendering: pixelated;"
-  /&gt;
-&lt;/a&gt;</pre
-    >
-  </details>
-</div>
 
 <h2>Site button links</h2>
 
@@ -48,7 +16,7 @@ css:
   site button or it needs to be updated. All links are in alphabetical order.
 </p>
 
-<div class="site-button--grid">
+<div class="site-button--grid sage-well">
   {% for siteButton in coolLinks.siteButtons %}
   <a class="site-button--link sage-link" href="{{ siteButton.mainUrl }}">
     <img
@@ -67,8 +35,36 @@ css:
 
 <p>Includes links from the site buttons section.</p>
 
-<div class="grid2">
+<div class="clicky-list">
   {% for link in coolLinks.allLinks %}
   <a class="link-card" href="{{ link.url }}">{{ link.title }}</a>
   {% endfor %}
+</div>
+
+<h2>Embed my site button</h2>
+
+<p>
+  <img
+    class="site-button"
+    src="/button.webp"
+    width="88"
+    height="31"
+    alt="wavebeem.com"
+    title="wavebeem.com"
+  />
+</p>
+
+<div class="sage-well">
+  <pre>
+&lt;a href="https://wavebeem.com"&gt;
+  &lt;img
+    width="88"
+    height="31"
+    alt="wavebeem.com"
+    title="wavebeem.com"
+    src="https://wavebeem.com/button.webp"
+    style="image-rendering: pixelated;"
+  /&gt;
+&lt;/a&gt;</pre
+  >
 </div>
