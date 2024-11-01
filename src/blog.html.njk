@@ -24,7 +24,7 @@ permalink: "/blog/"
 <h2>All posts</h2>
 
 <div class="post-list">
-  {% for post in collections.post | reverse %}
+  {% for post in collections.posts | reverse %}
   <section class="post-list--post sage-well">
     <h3>
       <a class="sage-link no-underline" href="{{ post.url }}">
