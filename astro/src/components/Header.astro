@@ -1,0 +1,33 @@
+---
+import menu from "../data/menu";
+// NOTE: Use `Astro.url.pathname` to check the current path for "active"
+// checks for anchor tags...
+---
+
+<header class="header screen-only">
+  <div class="content-column">
+    <div class="flex">
+      <a href="/" class="logo sage-link">wavebeem </a>
+    </div>
+    <details class="hamburger">
+      <summary>Menu</summary>
+      <nav class="nav">
+        {
+          menu.map((item) => {
+            return (
+              <a href={item.url} class="sage-link">
+                {item.title}
+              </a>
+            );
+          })
+        }
+      </nav>
+    </details>
+  </div>
+</header>
+<div class="slime"></div>
+<style>
+  * {
+    --cool: stuff;
+  }
+</style>

@@ -1,0 +1,140 @@
+---
+// Import the global.css file here so that it is included on
+// all pages through the use of the <BaseHead /> component.
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const { title, description, image = "/og-image.png" } = Astro.props;
+---
+
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- Metadata -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="author" content="wavebeem" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
+
+<!-- Advertise my build system -->
+<meta name="generator" content={Astro.generator} />
+
+<!-- Theme color for browser accents -->
+<meta
+  name="theme-color"
+  content="{{ colors.light['color-header-background'] }}"
+/>
+<meta
+  name="theme-color"
+  content="{{ colors.dark['color-header-background'] }}"
+  media="(prefers-color-scheme: dark)"
+/>
+
+<!-- Preloads to optimize content loading -->
+<link
+  rel="preload"
+  as="font"
+  crossorigin="anonymous"
+  href="/fonts/pp-agrandir-regular.woff2"
+/>
+<link
+  rel="preload"
+  as="font"
+  crossorigin="anonymous"
+  href="/fonts/pp-agrandir-bold.woff2"
+/>
+<link
+  rel="preload"
+  as="font"
+  crossorigin="anonymous"
+  href="/fonts/pp-object-sans-regular.woff2"
+/>
+<link
+  rel="preload"
+  as="font"
+  crossorigin="anonymous"
+  href="/fonts/pp-object-sans-bold.woff2"
+/>
+<link
+  rel="preload"
+  as="font"
+  crossorigin="anonymous"
+  href="/fonts/ultra-hi-gloss.woff2"
+/>
+
+<!-- Prefetches to optimize content loading -->
+<link
+  rel="prefetch"
+  as="font"
+  crossorigin="anonymous"
+  href="/fonts/jetbrains-mono-regular.woff2"
+/>
+<link
+  rel="prefetch"
+  as="font"
+  crossorigin="anonymous"
+  href="/fonts/jetbrains-mono-bold.woff2"
+/>
+<link
+  rel="prefetch"
+  as="font"
+  crossorigin="anonymous"
+  href="/fonts/jetbrains-mono-italic.woff2"
+/>
+<link
+  rel="prefetch"
+  as="font"
+  crossorigin="anonymous"
+  href="/fonts/pp-object-sans-slanted.woff2"
+/>
+<link
+  rel="prefetch"
+  as="font"
+  crossorigin="anonymous"
+  href="/fonts/pp-object-sans-bold-slanted.woff2"
+/>
+
+<!-- Icons -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" sizes="32x32" href="/favicon.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/photo-180.webp" />
+
+<!-- Feeds -->
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  href="{{ origin }}/feed.xml"
+  title="wavebeem.com"
+/>
+
+<!-- <script
+  type="module"
+  src="/wavebeem-theme-select.mjs?v={{ contentHashes.wavebeemThemeSelect }}"
+></script> -->
+<!-- <link rel="stylesheet" media="print" href="/print.css?t={{ dateNow }}" /> -->
+
+<!-- Canonical URL -->
+<link rel="canonical" href={canonicalURL} />
+
+<!-- Analytics -->
+<script
+  is:inline
+  async
+  defer
+  data-domain="wavebeem.com"
+  src="https://plausible.io/js/plausible.js"></script>

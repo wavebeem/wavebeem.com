@@ -1,0 +1,24 @@
+---
+interface Props {
+  date: Date;
+}
+
+const { date } = Astro.props;
+const newDate = new Date(0);
+newDate.setHours(0, 0, 0, 0);
+newDate.setFullYear(
+  date.getUTCFullYear(),
+  date.getUTCMonth(),
+  date.getUTCDate()
+);
+---
+
+<time datetime={date.toISOString()}>
+  {
+    newDate.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
+  }
+</time>

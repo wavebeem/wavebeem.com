@@ -18,6 +18,7 @@
   }
 }
 ---
+
 <?xml version="1.0" encoding="utf-8"?>
 <feed
   xmlns="http://www.w3.org/2005/Atom"
@@ -27,12 +28,15 @@
   <subtitle>{{ metadata.description }}</subtitle>
   <link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
   <link href="{{ metadata.base | addPathPrefixToFullUrl }}" />
-  <updated>{{ collections.feed | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <updated>{{
+    collections.posts | getNewestCollectionItemDate | dateToRfc3339
+  }}</updated>
   <id>{{ metadata.base | addPathPrefixToFullUrl }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
   </author>
-  {%- for post in collections.feed | reverse %} {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.base)
+  {%- for post in collections.posts | reverse %} {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.base)
+
 
   }}{% endset %}
   <entry>

@@ -1,0 +1,35 @@
+---
+const today = new Date();
+import { MY_NAME } from "../consts";
+import menu from "../data/menu";
+---
+
+<div class="footer-top"></div>
+<footer class="footer screen-only">
+  <div class="content-column flex flex-column gap3">
+    <nav class="footer-links">
+      {
+        menu.map((item) => {
+          return (
+            <a href={item.url} class="sage-link">
+              {item.title}
+            </a>
+          );
+        })
+      }
+    </nav>
+    <wavebeem-theme-select>
+      <select
+        class="theme-select sage-button"
+        autocomplete="off"
+        aria-label="Select theme..."
+      >
+        <option value="" disabled selected>Select theme...</option>
+        <option value="auto">Auto</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </wavebeem-theme-select>
+    <div>&copy; {today.getFullYear()} {MY_NAME}</div>
+  </div>
+</footer>

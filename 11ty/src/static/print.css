@@ -1,0 +1,108 @@
+html {
+  font-family: "Helvetica", sans-serif;
+  font-size: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+main > div {
+  margin: 1rem 0;
+}
+
+.screen-only,
+footer,
+nav,
+header {
+  display: none;
+}
+
+li {
+  margin-top: 0.35em;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.contact-info p {
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info a {
+  text-decoration: none;
+}
+
+h2,
+h3 {
+  padding-top: 1rem;
+  border-top: 2px dotted;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem 2rem;
+}
+
+dd {
+  margin-inline: 0;
+}
+
+details > summary {
+  list-style-type: none;
+  appearance: none;
+  text-align: inherit;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+table {
+  margin: 0.5rem 0;
+  border-collapse: collapse;
+}
+
+thead :is(th, td) {
+  border-bottom: 1px solid;
+}
+
+table th {
+  text-align: left;
+}
+
+tbody > tr > td,
+tbody > tr > th {
+  padding: 0.25rem 0;
+}
+
+tbody > tr > th {
+  padding-right: 1rem;
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+tbody > tr > th {
+  text-align: left;
+}
+
+:any-link {
+  color: blue;
+}
