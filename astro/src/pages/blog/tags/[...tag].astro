@@ -12,7 +12,7 @@ import {
 } from "../../../data/posts";
 import Page from "../../../layouts/Page.astro";
 
-export const getStaticPaths = async function () {
+export const getStaticPaths = (async () => {
   const allPosts = await getPosts();
   const tags = getAllTagsForPosts(allPosts);
   return tags.map((tag) => {
@@ -26,7 +26,7 @@ export const getStaticPaths = async function () {
       },
     };
   });
-} satisfies GetStaticPaths;
+}) satisfies GetStaticPaths;
 
 // type Params = InferGetStaticParamsType<typeof getStaticPaths>;
 type Props = InferGetStaticPropsType<typeof getStaticPaths>;
