@@ -1,11 +1,9 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import FormattedDate from "../components/FormattedDate.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import menu from "../data/menu";
 import { getPosts } from "../data/posts";
-import FormattedDate from "../components/FormattedDate.astro";
+import Page from "../layouts/Page.astro";
 
 const title = SITE_TITLE;
 const description = SITE_DESCRIPTION;
@@ -13,97 +11,81 @@ const allPosts = await getPosts();
 const recentPosts = allPosts.slice(0, 3);
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} />
-  </head>
+<Page title={title} description={description}>
+  <script is:inline type="module" src="/wavebeem-easter-egg.mjs"></script>
 
-  <body>
-    <Header />
-    <main>
-      <div class="content-column">
-        <script is:inline type="module" src="/wavebeem-easter-egg.mjs"></script>
-
-        <wavebeem-easter-egg class="avatar">
-          <img
-            alt=""
-            srcset="
+  <wavebeem-easter-egg class="avatar">
+    <img
+      alt=""
+      srcset="
               /photo-180.webp?v={{ contentHashes.photo }} 1x,
               /photo-360.webp?v={{ contentHashes.photo }} 2x
             "
-            src="/photo-360.webp?v={{ contentHashes.photo }}"
-            width="120"
-            height="120"
-          />
-        </wavebeem-easter-egg>
+      src="/photo-360.webp?v={{ contentHashes.photo }}"
+      width="120"
+      height="120"
+    />
+  </wavebeem-easter-egg>
 
-        <h1>Hello!</h1>
+  <h1>Hello!</h1>
 
-        <p>
-          I'm
-          <a class="sage-link" href="/my-names/">Sage Fennel</a>
-          (they/them), aka <q>wavebeem</q>.
-        </p>
+  <p>
+    I'm
+    <a class="sage-link" href="/my-names/">Sage Fennel</a>
+    (they/them), aka <q>wavebeem</q>.
+  </p>
 
-        <p>
-          I love video games, web development, makeup, pixel art, progressive
-          metal, cats, and the color green.
-        </p>
+  <p>
+    I love video games, web development, makeup, pixel art, progressive metal,
+    cats, and the color green.
+  </p>
 
-        <p>
-          I live in
-          <a
-            class="sage-link"
-            href="https://en.wikipedia.org/wiki/Portland,_Oregon">Portland</a
-          > where I enjoy gray skies, green leaves, and gentle rain.
-        </p>
+  <p>
+    I live in
+    <a class="sage-link" href="https://en.wikipedia.org/wiki/Portland,_Oregon"
+      >Portland</a
+    > where I enjoy gray skies, green leaves, and gentle rain.
+  </p>
 
-        <div class="clearfix"></div>
+  <div class="clearfix"></div>
 
-        <h2>Take a look around</h2>
+  <h2>Take a look around</h2>
 
-        <div class="clicky-list">
-          {
-            menu.map((item) => {
-              return (
-                <a href={item.url} class="link-card">
-                  {item.title}
-                </a>
-              );
-            })
-          }
-        </div>
+  <div class="clicky-list">
+    {
+      menu.map((item) => {
+        return (
+          <a href={item.url} class="link-card">
+            {item.title}
+          </a>
+        );
+      })
+    }
+  </div>
 
-        <h2>Recent posts</h2>
+  <h2>Recent posts</h2>
 
-        <div class="post-list">
-          {
-            recentPosts.map((post) => (
-              <section class="post-list--post sage-well">
-                <h3>
-                  <a
-                    class="sage-link no-underline"
-                    href={`/blog/${post.slug}/`}
-                  >
-                    {post.data.title}
-                  </a>
-                </h3>
-                <FormattedDate date={post.data.pubDate} />
-                <p>{post.data.description}</p>
-              </section>
-            ))
-          }
-        </div>
+  <div class="post-list">
+    {
+      recentPosts.map((post) => (
+        <section class="post-list--post sage-well">
+          <h3>
+            <a class="sage-link no-underline" href={`/blog/${post.slug}/`}>
+              {post.data.title}
+            </a>
+          </h3>
+          <FormattedDate date={post.data.pubDate} />
+          <p>{post.data.description}</p>
+        </section>
+      ))
+    }
+  </div>
 
-        <p class="text-right">
-          <a href="/blog/" class="sage-link">All blog posts</a>
-          <span aria-hidden="true">&rarr;</span>
-        </p>
-      </div>
-    </main>
-    <Footer />
-  </body>
-</html>
+  <p class="text-right">
+    <a href="/blog/" class="sage-link">All blog posts</a>
+    <span aria-hidden="true">&rarr;</span>
+  </p>
+</Page>
 
 <style>
   .clearfix {

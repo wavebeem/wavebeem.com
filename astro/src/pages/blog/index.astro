@@ -1,9 +1,7 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
 import FormattedDate from "../../components/FormattedDate.astro";
-import { getPosts, getAllTagsForPosts } from "../../data/posts";
+import { getAllTagsForPosts, getPosts } from "../../data/posts";
+import Page from "../../layouts/Page.astro";
 
 const title = "Blog";
 const description = title;
@@ -11,61 +9,47 @@ const posts = await getPosts();
 const allTags = getAllTagsForPosts(posts);
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <div class="content-column">
-        <h1>{title}</h1>
+<Page title={title} description={description}>
+  <h1>{title}</h1>
 
-        <p>
-          Subscribe to my <a class="sage-link" href="/feed.xml">RSS feed</a>
-          to stay up to date with my posts.
-        </p>
+  <p>
+    Subscribe to my <a class="sage-link" href="/feed.xml">RSS feed</a>
+    to stay up to date with my posts.
+  </p>
 
-        <h2>Browse by tag</h2>
+  <h2>Browse by tag</h2>
 
-        <ul class="tag-list">
-          {
-            allTags.map((tag) => {
-              return (
-                <li>
-                  <a href={`/blog/tags/${tag.id}/`} class="sage-link">
-                    {tag.title}
-                  </a>
-                </li>
-              );
-            })
-          }
-        </ul>
+  <ul class="tag-list">
+    {
+      allTags.map((tag) => {
+        return (
+          <li>
+            <a href={`/blog/tags/${tag.id}/`} class="sage-link">
+              {tag.title}
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
 
-        <h2>All posts</h2>
+  <h2>All posts</h2>
 
-        <div class="post-list">
-          {
-            posts.map((post) => {
-              return (
-                <section class="post-list--post sage-well">
-                  <h3>
-                    <a
-                      class="sage-link no-underline"
-                      href={`/blog/${post.slug}/`}
-                    >
-                      {post.data.title}
-                    </a>
-                  </h3>
-                  <FormattedDate date={post.data.pubDate} />
-                  <p>{post.data.description}</p>
-                </section>
-              );
-            })
-          }
-        </div>
-      </div>
-      <Footer />
-    </main>
-  </body>
-</html>
+  <div class="post-list">
+    {
+      posts.map((post) => {
+        return (
+          <section class="post-list--post sage-well">
+            <h3>
+              <a class="sage-link no-underline" href={`/blog/${post.slug}/`}>
+                {post.data.title}
+              </a>
+            </h3>
+            <FormattedDate date={post.data.pubDate} />
+            <p>{post.data.description}</p>
+          </section>
+        );
+      })
+    }
+  </div>
+</Page>

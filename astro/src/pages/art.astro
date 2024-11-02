@@ -1,8 +1,6 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
 import { compare } from "../lib/compare";
+import Page from "../layouts/Page.astro";
 // import { Image } from "astro:assets";
 
 async function getImages() {
@@ -30,89 +28,81 @@ const images = await getImages();
 // TODO: Consider using <Image> or <Picture> for automatic sizing...
 ---
 
-<html lang="en">
-  <head>
-    <BaseHead title={title} description={description} />
-    <style>
-      .art-container {
-        display: grid;
-        gap: 1rem;
-        grid-template-columns: 1fr;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        justify-content: space-between;
-      }
+<Page title={title} description={description}>
+  <h1>{title}</h1>
 
-      .art-container--frame {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        margin: 0;
-      }
+  <div class="art-container">
+    {
+      images.map((img, i) => {
+        return (
+          <figure class="art-container--frame sage-well">
+            <a class="flex sage-link" tabindex="-1" href={img.src}>
+              <img
+                src={img.src}
+                width={img.width}
+                height={img.height}
+                alt={img.src}
+                loading={i > 4 ? "lazy" : "eager"}
+              />
+            </a>
+            <figcaption>
+              <a class="sage-link" href={img.src}>
+                [[placeholder name]]
+              </a>
+            </figcaption>
+            {/* <FormattedDate date={img.date} /> */}
+          </figure>
+        );
+      })
+    }
+  </div>
+</Page>
 
-      .art-container--frame a {
-        font-family: var(--font-heading);
-        font-weight: bold;
-        font-size: var(--font-size-h3);
-        flex: auto;
-      }
+<style>
+  .art-container {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    justify-content: space-between;
+  }
 
-      .art-container--frame img {
-        border-radius: 0.25rem;
-      }
+  .art-container--frame {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0;
+  }
 
-      .art-container--frame figcaption {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
+  .art-container--frame a {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: var(--font-size-h3);
+    flex: auto;
+  }
 
-      figure {
-        margin: 1rem 0;
-        color: var(--color-main-text);
-      }
+  .art-container--frame img {
+    border-radius: 0.25rem;
+  }
 
-      figure img {
-        width: 100%;
-        height: auto;
-        border-radius: 0.5rem;
-      }
+  .art-container--frame figcaption {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-      figure figcaption {
-        font-size: var(--font-size-small);
-      }
-    </style>
-  </head>
-  <body>
-    <Header />
-    <main>
-      <div class="content-column">
-        <h1>{title}</h1>
+  figure {
+    margin: 1rem 0;
+    color: var(--color-main-text);
+  }
 
-        <div class="art-container">
-          {
-            images.map((img, i) => {
-              return (
-                <figure class="art-container--frame sage-well">
-                  <a class="flex sage-link" tabindex="-1" href={img.src}>
-                    <img
-                      src={img.src}
-                      alt={img.src}
-                      loading={i > 4 ? "lazy" : "eager"}
-                    />
-                  </a>
-                  <figcaption>
-                    <a class="sage-link" href={img.src}>
-                      [[placeholder name]]
-                    </a>
-                  </figcaption>
-                  {/* <FormattedDate date={img.date} /> */}
-                </figure>
-              );
-            })
-          }
-        </div>
-      </div>
-    </main>
-    <Footer />
-  </body>
-</html>
+  figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+
+  figure figcaption {
+    font-size: var(--font-size-small);
+  }
+</style>
