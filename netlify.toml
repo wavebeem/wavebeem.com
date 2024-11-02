@@ -196,3 +196,9 @@ status = 307
 from = "/blog/2015/07/01/squiggle-a-js-language/"
 to = "/blog/2015/squiggle-a-js-language/"
 status = 307
+
+
+[[redirects]]
+from = "/blog/2024/wavebeem-2.0-slime-mode/"
+to = "/blog/2024/slime-mode/"
+status = 307

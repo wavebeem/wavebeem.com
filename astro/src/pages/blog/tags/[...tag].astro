@@ -1,0 +1,103 @@
+---
+import type {
+  GetStaticPaths,
+  // InferGetStaticParamsType,
+  InferGetStaticPropsType,
+} from "astro";
+import BaseHead from "../../../components/BaseHead.astro";
+import Footer from "../../../components/Footer.astro";
+import FormattedDate from "../../../components/FormattedDate.astro";
+import Header from "../../../components/Header.astro";
+import {
+  getAllTagsForPosts,
+  getPosts,
+  postHasTagById,
+} from "../../../data/posts";
+
+export const getStaticPaths = async function () {
+  const allPosts = await getPosts();
+  const tags = getAllTagsForPosts(allPosts);
+  return tags.map((tag) => {
+    return {
+      params: {
+        tag: tag.id,
+      },
+      props: {
+        tagTitle: tag.title,
+        taggedPosts: allPosts.filter((p) => postHasTagById(p, tag.id)),
+      },
+    };
+  });
+} satisfies GetStaticPaths;
+
+// type Params = InferGetStaticParamsType<typeof getStaticPaths>;
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+
+// const { tag } = Astro.params as Params;
+const { tagTitle, taggedPosts } = Astro.props as Props;
+
+const allPosts = await getPosts();
+const allTags = getAllTagsForPosts(allPosts);
+const title = "Tagged posts";
+const description = `Posts tagged "${tagTitle}"`;
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="content-column">
+        <h1>{title}</h1>
+
+        <p>
+          <span aria-hidden="true">&larr;</span>
+          <a href="/blog/" class="sage-link">All blog posts</a>
+        </p>
+
+        <h2>Browse by tag</h2>
+
+        <ul class="tag-list">
+          {
+            allTags.map((tag) => {
+              return (
+                <li>
+                  <a href={`/blog/tags/${tag.id}/`} class="sage-link">
+                    {tag.title}
+                  </a>
+                </li>
+              );
+            })
+          }
+        </ul>
+
+        <h2>{description}</h2>
+
+        <div class="post-list">
+          {
+            taggedPosts.map((post) => {
+              return (
+                <section class="post-list--post sage-well">
+                  <h3>
+                    <a
+                      class="sage-link no-underline"
+                      href={`/blog/${post.slug}/`}
+                    >
+                      {post.data.title}
+                    </a>
+                  </h3>
+                  <FormattedDate date={post.data.pubDate} />
+
+                  <p>{post.data.description}</p>
+                </section>
+              );
+            })
+          }
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

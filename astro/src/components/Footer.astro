@@ -33,3 +33,47 @@ import menu from "../data/menu";
     <div>&copy; {today.getFullYear()} {MY_NAME}</div>
   </div>
 </footer>
+
+<style>
+  .footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  :where(.footer-links) .sage-link {
+    font-weight: normal;
+    max-width: max-content;
+    padding: 0.5rem 0;
+  }
+
+  :is(.nav, .header, .footer-links) .sage-link {
+    text-decoration-line: none;
+  }
+
+  :is(.nav, .header, .footer-links) .sage-link:hover {
+    text-decoration-line: underline;
+  }
+
+  .footer {
+    font-size: var(--font-size-small);
+    font-weight: bold;
+    background: var(--color-footer-background);
+  }
+
+  /* https://css-shape.com/rounded-edge/ */
+  .footer-top {
+    background: var(--color-footer-background);
+    clip-path: ellipse(65% 100% at 50% 100%);
+    padding-top: 3rem;
+    margin-top: 2rem;
+  }
+
+  .footer .content-column {
+    padding-top: 0;
+  }
+
+  .footer .sage-button {
+    padding-block: 0.25rem;
+    max-width: max-content;
+  }
+</style>

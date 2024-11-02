@@ -26,3 +26,25 @@ import menu from "../data/menu";
   </div>
 </header>
 <div class="slime"></div>
+
+<style>
+  .logo {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-family: var(--font-logo);
+    /* Prevent Safari from making this even bolder lol */
+    font-synthesis: none;
+    font-weight: normal;
+    text-decoration-line: none;
+    text-transform: uppercase;
+  }
+
+  :is(.nav, .header, .footer-links) .sage-link {
+    text-decoration-line: none;
+  }
+
+  :is(.nav, .header, .footer-links) .sage-link:hover {
+    text-decoration-line: underline;
+  }
+</style>

@@ -4,261 +4,274 @@ import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import FormattedDate from "../components/FormattedDate.astro";
+import { upgradeTags } from "../data/posts";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, pubDate, tags, updatedDate, heroImage } =
+  Astro.props;
+
+const blogPostTags = upgradeTags(tags);
 ---
 
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
-    <style>
-      .post-date {
-        margin-bottom: 1rem;
-      }
-
-      .blog-post :global(hr) {
-        border: none;
-        margin-inline: 0;
-        margin-block: 2rem;
-        display: flex;
-        color: inherit;
-      }
-
-      .blog-post :global(hr::after) {
-        font-size: 2rem;
-        content: "⋄◆⋄";
-        font-family: var(--font-mono);
-        display: block;
-        color: var(--color-main-decoration);
-        position: relative;
-        margin-inline: auto;
-        padding-inline: 0.5rem;
-        /* https://www.smashingmagazine.com/2024/01/css-border-image-property/ */
-        --s: 2px; /* the thickness */
-        --c: var(--color-card-background); /* the color */
-        --w: 100vw; /* the width */
-        --g: 0rem; /* the gap */
-        border-image: linear-gradient(
-            transparent calc(50% - var(--s) / 2),
-            var(--c) 0 calc(50% + var(--s) / 2),
-            transparent 0
-          )
-          0 1 / 0 var(--w) / 0 calc(var(--w) + var(--g));
-      }
-
-      .sage-prose :global(figure) {
-        margin: 1rem 0;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-
-        box-sizing: border-box;
-        border: 0;
-        padding: 1rem;
-        border-radius: 1rem;
-        background: var(--color-card-background);
-      }
-
-      .sage-prose :global(figure img) {
-        width: 100%;
-        height: auto;
-        border-radius: 0.5rem;
-        display: block;
-      }
-
-      .sage-prose :global(figure figcaption) {
-        font-weight: bold;
-        font-size: var(--font-size-small);
-      }
-
-      .blog-post :global(blockquote) {
-        background: var(--color-card-background);
-        margin-inline: 0;
-        border-radius: 1rem;
-        padding: 1rem;
-      }
-
-      .sage-prose :global(blockquote > :first-child) {
-        margin-top: 0;
-      }
-
-      .sage-prose :global(blockquote > :last-child) {
-        margin-bottom: 0;
-      }
-
-      .sage-prose :global(.infobox) {
-        position: relative;
-        margin-block: 1rem;
-        padding: 1rem;
-        border-radius: 1rem;
-        background: var(--color-aside-background);
-      }
-
-      .sage-prose :global(.infobox::before) {
-        display: block;
-        position: absolute;
-        inset: 0 0 auto auto;
-        content: "i";
-        box-shadow: 0 0 0 2px var(--color-main-background);
-        background: var(--color-main-link);
-        color: var(--color-main-background);
-        margin: -0.5rem;
-        width: 1.5rem;
-        height: 1.5rem;
-        line-height: 1.5rem;
-        font-size: 1rem;
-        text-align: center;
-        border-radius: 9999px;
-        font-family: var(--font-mono);
-        font-weight: bold;
-      }
-
-      .sage-prose :global(.infobox :first-child) {
-        margin-top: 0;
-      }
-
-      .sage-prose :global(.infobox :last-child) {
-        margin-bottom: 0;
-      }
-
-      .sage-prose :global(pre) {
-        border-radius: 1rem;
-        margin: 1rem 0;
-        padding: 1rem;
-        background: var(--color-syntax-background);
-        color: var(--color-syntax-text);
-        overflow-x: auto;
-      }
-
-      /* Reset color for nested scripts */
-      .sage-prose :global(.token.script) {
-        color: var(--color-syntax-default);
-      }
-
-      .sage-prose :global(.token.comment),
-      .sage-prose :global(.token.prolog),
-      .sage-prose :global(.token.doctype),
-      .sage-prose :global(.token.cdata) {
-        color: var(--color-syntax-comment);
-        font-style: italic;
-      }
-
-      .sage-prose :global(.token.punctuation) {
-        color: var(--color-syntax-punctuation);
-      }
-
-      .sage-prose :global(.token.attr-value),
-      .sage-prose :global(.token.selector),
-      .sage-prose :global(.token.string),
-      .sage-prose :global(.token.char),
-      .sage-prose :global(.token.boolean),
-      .sage-prose :global(.token.number),
-      .sage-prose :global(.token.regex),
-      .sage-prose :global(.token.inserted) {
-        color: var(--color-syntax-string);
-      }
-
-      .sage-prose :global(.token.operator),
-      .sage-prose :global(.token.entity),
-      .sage-prose :global(.token.url),
-      .sage-prose :global(.language-css .token.string),
-      .sage-prose :global(.style .token.string) {
-        color: var(--color-syntax-punctuation);
-      }
-
-      .sage-prose :global(.token.atrule),
-      .sage-prose :global(.token.function),
-      .sage-prose :global(.token.class-name) {
-        color: var(--color-syntax-property);
-      }
-
-      .sage-prose :global(.token.tag),
-      .sage-prose :global(.token.tag > .token.class-name) {
-        color: var(--color-syntax-keyword);
-      }
-
-      .sage-prose :global(.token.keyword) {
-        color: var(--color-syntax-keyword);
-        font-weight: bold;
-      }
-
-      .sage-prose :global(.language-css .token.property),
-      .sage-prose :global(.token.attr-name),
-      .sage-prose :global(.token.variable),
-      .sage-prose :global(.token.constant),
-      .sage-prose :global(.token.symbol),
-      .sage-prose :global(.token.deleted),
-      .sage-prose :global(.token.important) {
-        color: var(--color-syntax-property);
-      }
-
-      .sage-prose :global(.token.important),
-      .sage-prose :global(.token.bold) {
-        font-weight: bold;
-      }
-
-      .sage-prose :global(.token.italic) {
-        font-style: italic;
-      }
-
-      .sage-prose :global(.token.entity) {
-        cursor: help;
-      }
-    </style></head
-  >
+  </head>
 </html>
 
 <body>
   <Header />
   <main>
-    <article class="blog-post content-column">
-      <h1>{title}</h1>
+    <div class="content-column">
+      <article class="blog-post">
+        <h1>{title}</h1>
 
-      <p class="post-date date">
-        <FormattedDate date={pubDate} />
+        <p class="post-date date">
+          <FormattedDate date={pubDate} />
+        </p>
+
+        <blockquote>
+          {description}
+        </blockquote>
+
+        <div class="sage-prose">
+          <slot />
+        </div>
+      </article>
+
+      <hr />
+
+      <h2>Comments</h2>
+
+      <div class="sage-well">
+        I would be thrilled if you want to
+        <a href="/contact/" class="sage-link">contact me</a> to talk about this post.
+      </div>
+
+      <h2>Stay up to date</h2>
+
+      <p>
+        Subscribe to my <a class="sage-link" href="/feed.xml">RSS feed</a> to stay
+        up to date with my posts.
       </p>
 
-      <blockquote>
-        {description}
-      </blockquote>
+      <h2>Related posts by tag</h2>
 
-      <div class="sage-prose">
-        <slot />
-      </div>
-    </article>
+      <ul class="tag-list">
+        {
+          blogPostTags.map((tag) => (
+            <li>
+              <a class="sage-link" href={`/blog/tags/${tag.id}/`}>
+                {tag.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
 
-    <hr />
-
-    <h2>Comments</h2>
-
-    <div class="sage-well">
-      I would be thrilled if you want to
-      <a href="/contact/" class="sage-link">contact me</a> to talk about this post.
+      <p>
+        <span aria-hidden="true">&larr;</span>
+        <a href="/blog/" class="sage-link">All blog posts</a>
+      </p>
     </div>
-
-    <h2>Stay up to date</h2>
-
-    <p>
-      Subscribe to my <a class="sage-link" href="/feed.xml">RSS feed</a> to stay
-      up to date with my posts.
-    </p>
-
-    <h2>Related posts by tag</h2>
-
-    <!-- <ul class="tag-list">
-      {% for tag in tags | sort | filterTagList %}
-      <li>
-        <a class="sage-link" href="/blog/tags/{{ tag }}/">{{ tag | prettyTag }}</a>
-      </li>
-      {% endfor %}
-    </ul> -->
-
-    <p>
-      <span aria-hidden="true">&larr;</span>
-      <a href="/blog/" class="sage-link">All blog posts</a>
-    </p>
   </main>
   <Footer />
 </body>
+
+<style>
+  .post-date {
+    margin-bottom: 1rem;
+  }
+
+  hr,
+  :global(hr) {
+    border: none;
+    margin-inline: 0;
+    margin-block: 2rem;
+    display: flex;
+    color: inherit;
+  }
+
+  hr::after,
+  :global(hr::after) {
+    font-size: 2rem;
+    content: "⋄◆⋄";
+    font-family: var(--font-mono);
+    display: block;
+    color: var(--color-main-decoration);
+    position: relative;
+    margin-inline: auto;
+    padding-inline: 0.5rem;
+    /* https://www.smashingmagazine.com/2024/01/css-border-image-property/ */
+    --s: 2px; /* the thickness */
+    --c: var(--color-card-background); /* the color */
+    --w: 100vw; /* the width */
+    --g: 0rem; /* the gap */
+    border-image: linear-gradient(
+        transparent calc(50% - var(--s) / 2),
+        var(--c) 0 calc(50% + var(--s) / 2),
+        transparent 0
+      )
+      0 1 / 0 var(--w) / 0 calc(var(--w) + var(--g));
+  }
+
+  .sage-prose :global(figure) {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    box-sizing: border-box;
+    border: 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: var(--color-card-background);
+  }
+
+  .sage-prose :global(figure img) {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    display: block;
+  }
+
+  .sage-prose :global(figure figcaption) {
+    font-weight: bold;
+    font-size: var(--font-size-small);
+  }
+
+  .blog-post :global(blockquote) {
+    background: var(--color-card-background);
+    margin-inline: 0;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  .sage-prose :global(blockquote > :first-child) {
+    margin-top: 0;
+  }
+
+  .sage-prose :global(blockquote > :last-child) {
+    margin-bottom: 0;
+  }
+
+  .sage-prose :global(.infobox) {
+    position: relative;
+    margin-block: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: var(--color-aside-background);
+  }
+
+  .sage-prose :global(.infobox::before) {
+    display: block;
+    position: absolute;
+    inset: 0 0 auto auto;
+    content: "i";
+    box-shadow: 0 0 0 2px var(--color-main-background);
+    background: var(--color-main-link);
+    color: var(--color-main-background);
+    margin: -0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 9999px;
+    font-family: var(--font-mono);
+    font-weight: bold;
+  }
+
+  .sage-prose :global(.infobox :first-child) {
+    margin-top: 0;
+  }
+
+  .sage-prose :global(.infobox :last-child) {
+    margin-bottom: 0;
+  }
+
+  .sage-prose :global(pre) {
+    border-radius: 1rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: var(--color-syntax-background);
+    color: var(--color-syntax-text);
+    overflow-x: auto;
+  }
+
+  /* Reset color for nested scripts */
+  .sage-prose :global(.token.script) {
+    color: var(--color-syntax-default);
+  }
+
+  .sage-prose :global(.token.comment),
+  .sage-prose :global(.token.prolog),
+  .sage-prose :global(.token.doctype),
+  .sage-prose :global(.token.cdata) {
+    color: var(--color-syntax-comment);
+    font-style: italic;
+  }
+
+  .sage-prose :global(.token.punctuation) {
+    color: var(--color-syntax-punctuation);
+  }
+
+  .sage-prose :global(.token.attr-value),
+  .sage-prose :global(.token.selector),
+  .sage-prose :global(.token.string),
+  .sage-prose :global(.token.char),
+  .sage-prose :global(.token.boolean),
+  .sage-prose :global(.token.number),
+  .sage-prose :global(.token.regex),
+  .sage-prose :global(.token.inserted) {
+    color: var(--color-syntax-string);
+  }
+
+  .sage-prose :global(.token.operator),
+  .sage-prose :global(.token.entity),
+  .sage-prose :global(.token.url),
+  .sage-prose :global(.language-css .token.string),
+  .sage-prose :global(.style .token.string) {
+    color: var(--color-syntax-punctuation);
+  }
+
+  .sage-prose :global(.token.atrule),
+  .sage-prose :global(.token.function),
+  .sage-prose :global(.token.class-name) {
+    color: var(--color-syntax-property);
+  }
+
+  .sage-prose :global(.token.tag),
+  .sage-prose :global(.token.tag > .token.class-name) {
+    color: var(--color-syntax-keyword);
+  }
+
+  .sage-prose :global(.token.keyword) {
+    color: var(--color-syntax-keyword);
+    font-weight: bold;
+  }
+
+  .sage-prose :global(.language-css .token.property),
+  .sage-prose :global(.token.attr-name),
+  .sage-prose :global(.token.variable),
+  .sage-prose :global(.token.constant),
+  .sage-prose :global(.token.symbol),
+  .sage-prose :global(.token.deleted),
+  .sage-prose :global(.token.important) {
+    color: var(--color-syntax-property);
+  }
+
+  .sage-prose :global(.token.important),
+  .sage-prose :global(.token.bold) {
+    font-weight: bold;
+  }
+
+  .sage-prose :global(.token.italic) {
+    font-style: italic;
+  }
+
+  .sage-prose :global(.token.entity) {
+    cursor: help;
+  }
+</style>
