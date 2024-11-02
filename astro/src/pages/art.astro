@@ -1,0 +1,119 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { compare } from "../lib/compare";
+// import { Image } from "astro:assets";
+
+async function getImages() {
+  // List all album files from collections path
+  let images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/content/art/**/*.{webp,png,jpg}"
+  );
+
+  // Images are promises, so we need to resolve the glob promises
+  const resolvedImages = await Promise.all(
+    Object.values(images).map(async (image) => (await image()).default)
+  );
+
+  // Sort by filename
+  resolvedImages.sort((a, b) => -compare(a.src, b.src));
+
+  // TODO: Get date and image name?
+  return resolvedImages;
+}
+
+const title = "Art gallery";
+const description = title;
+const images = await getImages();
+
+// TODO: Consider using <Image> or <Picture> for automatic sizing...
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={title} description={description} />
+    <style>
+      .art-container {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        justify-content: space-between;
+      }
+
+      .art-container--frame {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 0;
+      }
+
+      .art-container--frame a {
+        font-family: var(--font-heading);
+        font-weight: bold;
+        font-size: var(--font-size-h3);
+        flex: auto;
+      }
+
+      .art-container--frame img {
+        border-radius: 0.25rem;
+      }
+
+      .art-container--frame figcaption {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      figure {
+        margin: 1rem 0;
+        color: var(--color-main-text);
+      }
+
+      figure img {
+        width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+      }
+
+      figure figcaption {
+        font-size: var(--font-size-small);
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="content-column">
+        <h1>{title}</h1>
+
+        <div class="art-container">
+          {
+            images.map((img, i) => {
+              return (
+                <figure class="art-container--frame sage-well">
+                  <a class="flex sage-link" tabindex="-1" href={img.src}>
+                    <img
+                      src={img.src}
+                      alt={img.src}
+                      loading={i > 4 ? "lazy" : "eager"}
+                    />
+                  </a>
+                  <figcaption>
+                    <a class="sage-link" href={img.src}>
+                      [[placeholder name]]
+                    </a>
+                  </figcaption>
+                  {/* <FormattedDate date={img.date} /> */}
+                </figure>
+              );
+            })
+          }
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
