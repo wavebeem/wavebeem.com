@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { date } = Astro.props;
+// Convert UTC date to equivalent date in local time
 const newDate = new Date(0);
 newDate.setHours(0, 0, 0, 0);
 newDate.setFullYear(
@@ -11,14 +12,13 @@ newDate.setFullYear(
   date.getUTCMonth(),
   date.getUTCDate()
 );
+const formatter = new Intl.DateTimeFormat("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
 ---
 
 <time datetime={date.toISOString()}>
-  {
-    newDate.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    })
-  }
+  {formatter.format(newDate)}
 </time>
