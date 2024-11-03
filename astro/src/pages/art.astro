@@ -23,15 +23,13 @@ const sortedArt = [...art].sort(
       sortedArt.map((item, i) => {
         return (
           <figure class="art-container--frame sage-well">
-            <a class="flex sage-link" tabindex="-1" href={item.data.image.src}>
-              <img
-                src={item.data.image.src}
-                width={item.data.image.width}
-                height={item.data.image.height}
-                alt={item.data.image.src}
-                loading={i > 4 ? "lazy" : "eager"}
-              />
-            </a>
+            <img
+              src={item.data.image.src}
+              width={item.data.image.width}
+              height={item.data.image.height}
+              alt=""
+              loading={i > 4 ? "lazy" : "eager"}
+            />
             <figcaption>
               <a class="sage-link" href={item.data.image.src}>
                 {item.data.title}
