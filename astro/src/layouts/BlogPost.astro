@@ -135,9 +135,21 @@ const blogPostTags = upgradeTags(tags);
     display: block;
   }
 
+  .sage-prose :global(p > img:only-child) {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    display: block;
+    box-shadow: 0 0 0.5rem var(--color-card-background);
+  }
+
   .sage-prose :global(figure figcaption) {
     font-weight: bold;
     font-size: var(--font-size-small);
+  }
+
+  .sage-prose :global(figure figcaption p) {
+    margin: 0;
   }
 
   .blog-post :global(blockquote) {

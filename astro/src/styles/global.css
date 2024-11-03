@@ -520,7 +520,7 @@ main {
 .tag-list a {
   background: var(--color-card-background);
   font-size: var(--font-size-small);
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
   display: flex;
 }

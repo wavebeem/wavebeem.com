@@ -11,16 +11,9 @@ tags:
 pubDate: "2024-10-27"
 ---
 
-import ImageFigure from "../../../../components/ImageFigure.astro";
-import imageLight from "./light.webp";
-import imageDark from "./dark.webp";
-import imageBlog from "./blog.webp";
-
 ## New style: fun with pastels
 
-<ImageFigure image={imageLight}>
-  Theme inspiration: playful, pastel, slime.
-</ImageFigure>
+![Theme inspiration: playful, pastel, slime.](./light.webp)
 
 In my post about [10 years of themes](/blog/2024/10-years-of-themes/), I left
 off with "summer theme". I made the summer theme as an experiment, despite it
@@ -33,9 +26,7 @@ color was very fun, but it didn't feel like _me_.
 
 ## Dark mode: chocolate factory
 
-<ImageFigure image={imageDark}>
-  Dark theme inspiration: chocolate, matcha.
-</ImageFigure>
+![Dark theme inspiration: chocolate, matcha.](./dark.webp)
 
 I have difficulty reading dark themes in general, but I made one for my site
 because it's clear that dark mode is an accessibility feature that countless
@@ -81,7 +72,7 @@ on the _PP Agrandir_ page, and I've chosen _PP Object Sans_ for now.
 
 ## Improved blog post navigation
 
-<ImageFigure image={imageBlog}>My blog posts filtered by tags.</ImageFigure>
+![My blog posts filtered by tags.](./blog.webp)
 
 You can now browse my blog posts by tags. Yay!
 
