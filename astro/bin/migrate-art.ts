@@ -1,5 +1,5 @@
-import { readdir, mkdir, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import { readdir, mkdir, writeFile, copyFile } from "node:fs/promises";
+import { join } from "node:path/posix";
 
 const artTitles = {
   "2019-09-28-king-slime-big.webp": "King Slime",
@@ -49,14 +49,13 @@ process.chdir("src/content/art");
 for (const f of await readdir(".")) {
   for (const [, pubDate = "", name = "", ext = ""] of match(
     f,
-    /^(\d+-\d+-\d+)-(.*)(\..+)/,
+    /^(\d+-\d+-\d+)-(.*)[.](.+)/,
   )) {
     const title = map.get(f);
     if (!title) {
       throw new Error(`no title for ${f}`);
     }
-    console.log(pubDate, name, title);
-    await mkdir(name, { recursive: true });
+    const image = `./image.${ext}`;
     const data = {
       title,
       pubDate,
@@ -64,7 +63,10 @@ for (const f of await readdir(".")) {
     };
     const json = JSON.stringify(data, null, 2);
     const dataFilename = join(name, "index.json");
+    console.log(name);
+    await mkdir(name, { recursive: true });
     await writeFile(dataFilename, json, "utf-8");
+    await copyFile(f, join(name, image));
   }
 }
 

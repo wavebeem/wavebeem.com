@@ -1,0 +1,14 @@
+---
+interface Props {
+  image: ImageMetadata;
+}
+
+const { image } = Astro.props;
+---
+
+<figure>
+  <a href={image.src}>
+    <img src={image.src} width={image.width} height={image.height} alt="" />
+  </a>
+  <figcaption><slot /></figcaption>
+</figure>

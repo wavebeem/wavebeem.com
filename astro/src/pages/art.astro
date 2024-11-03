@@ -1,14 +1,17 @@
 ---
-import { compare } from "../lib/compare";
 import Page from "../layouts/Page.astro";
 import { getCollection } from "astro:content";
 import FormattedDate from "../components/FormattedDate.astro";
-// import { Image } from "astro:assets";
+import { compare } from "../lib/compare";
 
 const title = "Art gallery";
 const description = title;
 const art = await getCollection("art");
+const sortedArt = [...art].sort(
+  (a, b) => -compare(a.data.pubDate, b.data.pubDate)
+);
 
+// import { Image } from "astro:assets";
 // TODO: Consider using <Image> or <Picture> for automatic sizing...
 ---
 
@@ -17,7 +20,7 @@ const art = await getCollection("art");
 
   <div class="art-container">
     {
-      art.map((item, i) => {
+      sortedArt.map((item, i) => {
         return (
           <figure class="art-container--frame sage-well">
             <a class="flex sage-link" tabindex="-1" href={item.data.image.src}>

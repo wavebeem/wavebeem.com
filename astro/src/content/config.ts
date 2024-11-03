@@ -18,16 +18,17 @@ const blog = defineCollection({
 });
 
 const art = defineCollection({
-  type: "content",
+  type: "data",
   // Type-check frontmatter using a schema
   schema: ({ image }) =>
     z.object({
       title: z.string(),
       pubDate: z.coerce.date(),
-      image: image().refine(({ width, height, src, format }) => {
-        // TODO: Complain about images that are too big or too small
-        return true;
-      }),
+      image: image(),
+      // .refine(({ width, height, src, format }) => {
+      //   // TODO: Complain about images that are too big or too small
+      //   return true;
+      // }),
     }),
 });
 
