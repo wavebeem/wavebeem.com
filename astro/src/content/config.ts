@@ -17,4 +17,18 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+const art = defineCollection({
+  type: "content",
+  // Type-check frontmatter using a schema
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      pubDate: z.coerce.date(),
+      image: image().refine(({ width, height, src, format }) => {
+        // TODO: Complain about images that are too big or too small
+        return true;
+      }),
+    }),
+});
+
+export const collections = { blog, art };

@@ -25,8 +25,8 @@ const description =
         <a class="site-button--link sage-link" href={siteButton.mainUrl}>
           <img
             src={siteButton.localUrl}
-            alt="{{ siteButton.title }}"
-            title="{{ siteButton.title }}"
+            alt={siteButton.title}
+            title={siteButton.title}
             class="site-button--image"
             width="88"
             height="31"
@@ -77,3 +77,10 @@ const description =
 &lt;/a&gt;</pre>
   </div>
 </Page>
+
+<style>
+  /* Reset font size in case alt text is showing */
+  .site-button--image {
+    font-size: var(--font-size-small);
+  }
+</style>
