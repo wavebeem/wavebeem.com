@@ -37,11 +37,10 @@ const { tagTitle, taggedPosts } = Astro.props as Props;
 const allPosts = await getPosts();
 const allTags = getAllTagsForPosts(allPosts);
 const title = "Tagged posts";
-const description = `Posts tagged "${tagTitle}"`;
+const description = `Posts tagged “${tagTitle}”`;
 ---
 
-<head>
-  <Page title={title} description={description} />
+<Page title={title} description={description}>
   <h1>{title}</h1>
 
   <p>
@@ -85,4 +84,4 @@ const description = `Posts tagged "${tagTitle}"`;
       })
     }
   </div>
-</head>
+</Page>

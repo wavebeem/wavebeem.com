@@ -227,51 +227,51 @@ const description = title;
 </Page>
 
 <style>
-  main :is(h1, h2, h3) small {
+  :is(h1, h2, h3) small {
     font-weight: normal;
     font-family: var(--font-body);
   }
 
   @media (max-width: 800px) {
-    main small {
+    small {
       display: block;
     }
   }
 
-  main .sage-well ul:last-of-type {
+  .sage-well ul:last-of-type {
     margin-bottom: 0;
   }
 
-  main .sage-well > details {
+  .sage-well > details {
     margin-block: 0;
   }
 
-  main ul li + li {
+  ul li + li {
     margin-top: 1rem;
   }
 
-  main ul {
+  ul {
     padding-left: 1rem;
   }
 
-  main ol {
+  ol {
     padding-left: 1rem;
   }
 
-  main summary {
+  summary {
     border-radius: 0.5rem;
   }
 
-  main summary:hover {
+  summary:hover {
     background: var(--color-card-hover);
   }
 
-  main dl {
+  dl {
     margin-block: 0;
   }
 
   @media (min-width: 800px) {
-    main dl {
+    dl {
       display: grid;
       grid-template-columns: max-content 1fr;
       gap: 1rem 2rem;
@@ -279,16 +279,16 @@ const description = title;
   }
 
   @media (max-width: 800px) {
-    main dd + dt {
+    dd + dt {
       margin-top: 1rem;
     }
   }
 
-  main dd {
+  dd {
     margin-inline: 0;
   }
 
-  main dt {
+  dt {
     font-weight: bold;
   }
 </style>

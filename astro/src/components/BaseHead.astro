@@ -35,13 +35,11 @@ const { title, description, image = "/og-image.png" } = Astro.props;
 <meta name="generator" content={Astro.generator} />
 
 <!-- Theme color for browser accents -->
+<!-- TODO: Get these colors from JS somehow -->
+<meta name="theme-color" content="#b3f2a6" />
 <meta
   name="theme-color"
-  content="{{ colors.light['color-header-background'] }}"
-/>
-<meta
-  name="theme-color"
-  content="{{ colors.dark['color-header-background'] }}"
+  content="#4a6e42"
   media="(prefers-color-scheme: dark)"
 />
 

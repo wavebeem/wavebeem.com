@@ -79,8 +79,48 @@ const description =
 </Page>
 
 <style>
-  /* Reset font size in case alt text is showing */
+  .site-button {
+    width: calc(2 * 88px);
+    height: auto;
+    display: flex;
+    image-rendering: pixelated;
+  }
+
+  .site-button--grid {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  @media (min-width: 400px) {
+    .site-button--grid {
+      grid-template-columns: repeat(auto-fit, calc(2 * 88px));
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: 800px) {
+    .site-button--grid {
+      justify-content: space-between;
+    }
+  }
+
+  .site-button--link {
+    display: flex;
+    border-radius: 2px;
+    outline-offset: 2px;
+    outline-width: 3px;
+    align-items: flex-start;
+  }
+
   .site-button--image {
+    width: 100%;
+    height: auto;
+    border-radius: 2px;
+    image-rendering: pixelated;
     font-size: var(--font-size-small);
+  }
+
+  .site-button--image:hover {
+    opacity: 0.85;
   }
 </style>

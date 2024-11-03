@@ -282,98 +282,6 @@ summary {
   text-align: right;
 }
 
-.hamburger {
-  margin: 0;
-}
-
-.hamburger > summary {
-  list-style: none;
-  appearance: none;
-  text-align: inherit;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.hamburger summary::-webkit-details-marker {
-  display: none;
-}
-
-.hamburger > summary::after {
-  content: "";
-  display: block;
-  width: 0.75rem;
-  height: 0.5rem;
-  clip-path: polygon(50% 100%, 100% 0, 0 0);
-  background: currentColor;
-}
-
-.hamburger > summary {
-  position: relative;
-  background: var(--color-header-button);
-  padding: 0.25rem 1rem;
-  border-radius: 9999px;
-  font-weight: bold;
-  cursor: default;
-}
-
-.hamburger[open] > summary {
-  margin: inherit;
-}
-
-.hamburger[open] > summary::after {
-  rotate: 0.5turn;
-}
-
-.header {
-  background: var(--color-header-background);
-  color: var(--color-header-text);
-}
-
-.header .logo,
-.header :any-link {
-  color: inherit;
-}
-
-.header .logo {
-  margin-left: -1rem;
-}
-
-.header .content-column {
-  display: grid;
-  grid-template-columns: 1fr max-content;
-  justify-content: space-between;
-  align-items: center;
-  isolation: isolate;
-  padding: 1rem;
-}
-
-.header .hamburger {
-  display: contents;
-}
-
-.slime {
-  height: 2rem;
-  background: var(--color-header-background);
-  /* https://css-generators.com/wavy-shapes/ */
-  --mask: radial-gradient(
-        1.35rem at 50% calc(100% - 1.9rem),
-        #000 99%,
-        #0000 101%
-      )
-      calc(50% - 2rem) 0/4rem 100%,
-    radial-gradient(1.35rem at 50% calc(100% + 0.9rem), #0000 99%, #000 101%)
-      50% calc(100% - 1rem) / 4rem 100% repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-  /* Don't let slime get in the way of clicking stuff */
-  pointer-events: none;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
 p {
   margin: 1rem 0;
 }
@@ -529,44 +437,6 @@ main {
   text-decoration-line: none;
 }
 
-.theme-select {
-  -webkit-appearance: none;
-  appearance: none;
-  max-width: max-content;
-}
-
-.nav {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
-  justify-content: flex-end;
-  padding: 0;
-}
-
-.nav :any-link {
-  padding: 0.5rem 1rem;
-  background: var(--color-header-button);
-  color: var(--color-header-text);
-  border-radius: 0.5rem;
-  text-decoration-line: none;
-  text-decoration-thickness: 2px;
-}
-
-.nav :any-link:hover {
-  text-decoration-line: underline;
-}
-
-@media (min-width: 800px) {
-  .nav {
-    margin-left: auto;
-  }
-
-  .nav :any-link {
-    font-size: 1.25rem;
-  }
-}
-
 .content-column {
   max-width: 800px;
   width: 100%;
@@ -610,57 +480,6 @@ main {
 
 .crime-frame > details {
   background: white;
-}
-
-/* --- LINKS --- */
-
-.site-button {
-  width: calc(2 * 88px);
-  height: auto;
-  display: flex;
-  image-rendering: pixelated;
-}
-
-.site-button--grid {
-  display: grid;
-  gap: 0.5rem;
-}
-
-@media (min-width: 400px) {
-  .site-button--grid {
-    grid-template-columns: repeat(auto-fit, calc(2 * 88px));
-    justify-content: center;
-  }
-}
-
-@media (min-width: 800px) {
-  .site-button--grid {
-    justify-content: space-between;
-  }
-}
-
-.site-button--link {
-  display: flex;
-  border-radius: 2px;
-  outline-offset: 2px;
-  outline-width: 3px;
-  align-items: flex-start;
-}
-
-.site-button--image {
-  width: 100%;
-  height: auto;
-  border-radius: 2px;
-  image-rendering: pixelated;
-}
-
-.site-button--image:hover {
-  opacity: 0.85;
-}
-
-.pixelated {
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
 }
 
 .sage-well {
