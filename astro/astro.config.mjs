@@ -12,7 +12,7 @@ export default defineConfig({
     // Let's try Shiki later. My code already assumes Prism.
     syntaxHighlight: "prism",
   },
-  // trailingSlash: "always",
+  trailingSlash: "always",
   site: "https://www.wavebeem.com",
-  integrations: [mdx(), sitemap()],
+  integrations: [mdx(), sitemap({})],
 });

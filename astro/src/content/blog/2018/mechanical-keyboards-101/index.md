@@ -16,17 +16,9 @@ still learning new things about keyboards all the time.
 
 ## Why
 
-<figure>
-  <!-- <img src="/img/keyboards/ducky.jpg" width="700" height="465" alt=""> -->
-  <img src="/img/keyboards/ducky.jpg" alt="">
-  <figcaption>
-    <a target="_blank" href="https://www.flickr.com/photos/asianoni/21181683774">Ducky 9008G2 - Year Of The Tiger</a>
-    by
-    <a target="_blank" href="https://www.flickr.com/photos/asianoni/">A. TSF</a>
-    is licensed under
-    <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>
-  </figcaption>
-</figure>
+![](./ducky.jpg)
+
+**Ducky 9008G2 - Year Of The Tiger**
 
 Here are some reasons you might want to get a mechanical keyboard:
 
@@ -53,12 +45,9 @@ Here are some reasons you might want to get a mechanical keyboard:
 
 ## Why not
 
-<figure>
-  <img src="/img/keyboards/whitefox.jpg" alt="">
-  <figcaption>
-    WhiteFox with Cherry keycaps and Filco palm rest
-  </figcaption>
-</figure>
+![](./whitefox.jpg)
+
+**WhiteFox with Cherry keycaps and Filco palm rest**
 
 Here are some reasons why you might not want to get a mechanical keyboard:
 
@@ -89,14 +78,9 @@ refers to roughly 104 keys, and everything else is measured relative to that.
 Usually it's possible to type missing keys by doing key combinations on smaller
 keyboards.
 
-<figure>
-  <img src="/img/keyboards/model-m.jpg" alt="">
-  <figcaption>
-    <a target="_blank" href="https://commons.wikimedia.org/wiki/File:IBM_Model_M.png">IBM Model M</a>
-    by Raymangold22 is licensed under
-    <a target="_blank" href="https://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0 1.0</a>
-  </figcaption>
-</figure>
+![](./model-m.jpg)
+
+**IBM Model M**
 
 Pictured above is the classic IBM Model M mechanical keyboard. Fortunately,
 mechanical keyboards have gotten a lot smaller and quieter since this one was
@@ -104,16 +88,9 @@ released.
 
 ## Full size form factor
 
-<figure>
-  <img src="/img/keyboards/das-ultimate-4.jpg" alt="">
-  <figcaption>
-    <a target="_blank" href="https://www.flickr.com/photos/mccaughan/27571492442">Das Keyboard Ultimate 4</a>
-    by
-    <a target="_blank" href="https://www.flickr.com/photos/mccaughan/">Doug McCaughan</a>
-    is licensed under
-    <a target="_blank" href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>
-  </figcaption>
-</figure>
+![](./das-ultimate-4.jpg)
+
+**Das Keyboard Ultimate 4**
 
 Full size keyboards are the classic size many people are used to seeing. The
 typically have around 104 keys, including a numpad and arrow keys. You
@@ -126,16 +103,9 @@ paragraphs).
 
 ## Tenkeyless form factor
 
-<figure>
-  <img src="/img/keyboards/tkl.jpg" alt="">
-  <figcaption>
-    <a target="_blank" href="https://www.flickr.com/photos/pdc/28266574949">MT3 /dev/tty</a>
-    by
-    <a target="_blank" href="https://www.flickr.com/photos/pdc/">Damian Cugley</a>
-    is licensed under
-    <a target="_blank" href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>
-  </figcaption>
-</figure>
+![](./tkl.jpg)
+
+**MT3 /dev/tty**
 
 Tenkeyless (TKL) keyboards typically have around 87 keys, including arrow keys
 but discarding the numpad area. This is usually about as many keys as a laptop
@@ -144,12 +114,9 @@ I think it's hard to go wrong with a TKL board since it makes few compromises.
 
 ## 75% form factor
 
-<figure>
-  <img src="/img/keyboards/race-3.jpg" alt="">
-  <figcaption>
-    Vortex Race 3 with DSA keycaps and Filco palm rest
-  </figcaption>
-</figure>
+![](./race-3.jpg)
+
+**Vortex Race 3 with DSA keycaps and Filco palm rest**
 
 75% keyboards typically have about 75% as many keys as a full size board.
 Usually these keyboards do have arrow keys, but have smaller Right Shift keys.
@@ -164,16 +131,9 @@ of desk space and keeping your hand even closer to the mouse or keyboard.
 
 ## 60% form factor
 
-<figure>
-  <img src="/img/keyboards/poker-3.jpg" alt="">
-  <figcaption>
-    <a target="_blank" href="https://www.flickr.com/photos/66451944@N03/42839323381">Pok3r keyboard with custom keycabs</a>
-    by
-    <a target="_blank" href="https://www.flickr.com/photos/66451944@N03/">Thomas Vogt</a>
-    is licensed under
-    <a target="_blank" href="https://creativecommons.org/licenses/by-sa/2.0/">CC BY-SA 2.0</a>
-  </figcaption>
-</figure>
+![](./poker-3.jpg)
+
+**Pok3r keyboard with custom keycabs**
 
 60% keyboards typically are missing the F1-F12 key strip along the top,
 generally opting for holding down the Fn key to access the numerous missing
@@ -194,16 +154,9 @@ keyboards.
 
 ## Keyboard extras
 
-<figure>
-  <img src="/img/keyboards/feet.jpg" alt="">
-  <figcaption>
-    <a target="_blank" href="https://www.flickr.com/photos/mawari/28692415581">Digstar StarTop USB mechanical gaming keyboard 22</a>
-    by
-    <a target="_blank" href="https://www.flickr.com/photos/mawari/">Hideya HAMANO</a>
-    is licensed under
-    <a target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/2.0/">CC BY-NC-ND 2.0</a>
-  </figcaption>
-</figure>
+![](./feet.jpg)
+
+**Digstar StarTop USB mechanical gaming keyboard 22**
 
 Additionally, you may want to consider keyboard angle. Having a very high angled
 keyboard strains your fingers more. Try miming a typing action with your fingers
@@ -211,14 +164,9 @@ angled up compared with down and you'll see how much more exhausting it is. Many
 keyboards are naturally sloped and deploying keyboard feet only makes them even
 more sloped, furthering finger fatigue.
 
-<figure>
-  <img src="/img/keyboards/hhkb.jpg" alt="">
-  <figcaption>
-    <a target="_blank" href="https://commons.wikimedia.org/wiki/File:Happy_Hacking_Keyboard_Professional_2.jpg">Happy Hacking Keyboard Professional 2</a>
-    by Aon fi is licensed under
-    <a target="_blank" href="https://creativecommons.org/licenses/by/3.0/deed.en">CC BY 3.0</a>
-  </figcaption>
-</figure>
+![](./hhkb.jpg)
+
+**Happy Hacking Keyboard Professional 2**
 
 Most keyboards come with black plastic cases and a matte finish. You might also
 find some in white plastic, or even aluminum. You should pick whichever material
@@ -226,16 +174,9 @@ you think will look nicest on your desk, but note that if the keys are mounted
 directly on metal with no plastic, you can have a slight metallic clang when
 fully pressing a key.
 
-<figure>
-  <img src="/img/keyboards/led.jpg" alt="">
-  <figcaption>
-    <a target="_blank" href="https://www.flickr.com/photos/bagogames/33836220354">DigsRoccat Suora FX RGB Mechanical Keyboard Review</a>
-    by
-    <a target="_blank" href="https://www.flickr.com/photos/bagogames/">BagoGames</a>
-    is licensed under
-    <a target="_blank" href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>
-  </figcaption>
-</figure>
+![](./led.jpg)
+
+**DigsRoccat Suora FX RGB Mechanical Keyboard Review**
 
 LEDs are also a topic of great interest for some folks. I generally type without
 looking at the keyboard, so I regard them mostly as a fun addition of color to
@@ -261,12 +202,9 @@ break.
 
 ## Clicky keyswitches
 
-<figure>
-  <img src="/img/keyboards/mx-clicky.jpg" alt="">
-  <figcaption>
-    Cherry MX Blue and Cherry MX Green Switches
-  </figcaption>
-</figure>
+![](./mx-clicky.jpg)
+
+**Cherry MX Blue and Cherry MX Green Switches**
 
 Clicky switches are the classic style that is probably most well known. Clicky
 switches are known for their somewhat high pitched clicking noise produced when
@@ -282,12 +220,9 @@ force to be pressed.
 
 ## Tactile keyswitches
 
-<figure>
-  <img src="/img/keyboards/mx-tactile.jpg" alt="">
-  <figcaption>
-    Cherry MX Brown and Cherry MX Clear Switches
-  </figcaption>
-</figure>
+![](./mx-tactile.jpg)
+
+**Cherry MX Brown and Cherry MX Clear Switches**
 
 Tactile switches are basically just clicky switches minus the clicky noise. They
 still have a satisfying "bump" feeling as you type on them, but they lose the
@@ -301,12 +236,9 @@ to be pressed. There's also the MX Clear which requires 65g.
 
 ## Linear keyswitches
 
-<figure>
-  <img src="/img/keyboards/mx-linear.jpg" alt="">
-  <figcaption>
-    Cherry MX Black and Cherry MX Red Switches
-  </figcaption>
-</figure>
+![](./mx-linear.jpg)
+
+**Cherry MX Black and Cherry MX Red Switches**
 
 Linear switches are often marketed towards gamers because they have a completely
 smooth movement as you push them, lacking the "bump" on the way down. They also
@@ -345,12 +277,9 @@ chart from PMK_][13] is also really useful.
 
 ## Medium profile keycaps
 
-<figure>
-  <img src="/img/keyboards/profile-cherry.jpg" alt="">
-  <figcaption>
-    WhiteFox with Cherry keycaps
-  </figcaption>
-</figure>
+![](./profile-cherry.jpg)
+
+**WhiteFox with Cherry keycaps**
 
 The most popular profile is probably OEM. Unsurprisingly it is a middle ground
 of size and shape compared to other popular profiles. Cherry profile is also
@@ -364,12 +293,9 @@ common than OEM.
 
 ## High profile keycaps
 
-<figure>
-  <img src="/img/keyboards/profile-mt3.jpg" alt="">
-  <figcaption>
-    Vortex Race 3 with MT3 keycaps
-  </figcaption>
-</figure>
+![](./profile-mt3.jpg)
+
+**Vortex Race 3 with MT3 keycaps**
 
 The SA keycap profile is also pretty popular. The sculpt on the keycaps is
 spherical which means it's sort of like a very shallow bowl.
@@ -382,12 +308,9 @@ is even more sculpted than SA.
 
 ## Low profile keycaps
 
-<figure>
-  <img src="/img/keyboards/profile-dsa.jpg" alt="">
-  <figcaption>
-    Vortex Race 3 with DSA keycaps
-  </figcaption>
-</figure>
+![](./profile-dsa.jpg)
+
+**Vortex Race 3 with DSA keycaps**
 
 The DSA keycap profile is quite short, completely uniform across all keys, and
 has a very comfortable spherical sculpt on the keycaps.
@@ -463,6 +386,46 @@ jargon to ask your friends for more info about mechanical keyboards.
 
 Thanks for reading and please consider sharing this post on social media if you
 enjoyed it.
+
+## Credits
+
+- **[Ducky 9008G2 - Year Of The Tiger](https://www.flickr.com/photos/asianoni/21181683774)**\
+  by
+  [A. TSF](https://www.flickr.com/photos/asianoni/) is licensed under
+  [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/).
+
+- **[IBM Model M](https://commons.wikimedia.org/wiki/File:IBM_Model_M.png)**\
+  by Raymangold22 is licensed under
+  [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en).
+
+- **[Das Keyboard Ultimate 4](https://www.flickr.com/photos/mccaughan/27571492442)**\
+  by
+  [Doug McCaughan](https://www.flickr.com/photos/mccaughan/) is licensed under
+  [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+
+- **[MT3 /dev/tty](https://www.flickr.com/photos/pdc/28266574949)**\
+  by [Damian Cugley](https://www.flickr.com/photos/pdc/) is licensed under
+  [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+
+- **[Pok3r keyboard with custom keycabs](https://www.flickr.com/photos/66451944@N03/42839323381)**\
+  by
+  [Thomas Vogt](https://www.flickr.com/photos/66451944@N03/) is licensed under
+  [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+
+- **[Digstar StarTop USB mechanical gaming keyboard 22](https://www.flickr.com/photos/mawari/28692415581)**\
+  by
+  [Hideya HAMANO](https://www.flickr.com/photos/mawari/) is licensed under
+  [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/).
+
+- **[Happy Hacking Keyboard Professional 2](https://commons.wikimedia.org/wiki/File:Happy_Hacking_Keyboard_Professional_2.jpg)**\
+  by
+  Aon fi is licensed under
+  [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/deed.en).
+
+- **[DigsRoccat Suora FX RGB Mechanical Keyboard Review](https://www.flickr.com/photos/bagogames/33836220354)**\
+  by
+  [BagoGames](https://www.flickr.com/photos/bagogames/) is licensed under
+  [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)
 
 [1]:
   https://www.amazon.com/Cooler-Master-MasterKeys-Tenkeyless-Mechanical/dp/B071W2697M/
