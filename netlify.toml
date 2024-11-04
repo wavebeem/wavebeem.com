@@ -26,6 +26,9 @@ style-src
 
 frame-ancestors
   'self';
+
+base-uri
+  'none';
 """
 
 [[redirects]]

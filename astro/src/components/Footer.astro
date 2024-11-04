@@ -1,7 +1,9 @@
 ---
-const today = new Date();
 import { MY_NAME } from "../consts";
 import menu from "../data/menu";
+import ThemeSelect from "./ThemeSelect.astro";
+
+const today = new Date();
 ---
 
 <div class="footer-top"></div>
@@ -18,18 +20,7 @@ import menu from "../data/menu";
         })
       }
     </nav>
-    <wavebeem-theme-select>
-      <select
-        class="theme-select sage-button"
-        autocomplete="off"
-        aria-label="Select theme..."
-      >
-        <option value="" disabled selected>Select theme...</option>
-        <option value="auto">Auto</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
-    </wavebeem-theme-select>
+    <ThemeSelect />
     <div>&copy; {today.getFullYear()} {MY_NAME}</div>
   </div>
 </footer>
@@ -74,12 +65,6 @@ import menu from "../data/menu";
 
   .footer .sage-button {
     padding-block: 0.25rem;
-    max-width: max-content;
-  }
-
-  .theme-select {
-    -webkit-appearance: none;
-    appearance: none;
     max-width: max-content;
   }
 </style>

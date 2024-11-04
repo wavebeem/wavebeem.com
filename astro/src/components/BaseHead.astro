@@ -116,15 +116,11 @@ const { title, description, image = "/og-image.png" } = Astro.props;
 <link
   rel="alternate"
   type="application/rss+xml"
-  href="{{ origin }}/feed.xml"
+  href={new URL("/feed.xml", Astro.url)}
   title="wavebeem.com"
 />
 
-<!-- <script
-  type="module"
-  src="/wavebeem-theme-select.mjs?v={{ contentHashes.wavebeemThemeSelect }}"
-></script> -->
-<!-- <link rel="stylesheet" media="print" href="/print.css?t={{ dateNow }}" /> -->
+<link rel="stylesheet" media="print" href="/print.css" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />

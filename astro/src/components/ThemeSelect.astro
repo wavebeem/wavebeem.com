@@ -1,0 +1,111 @@
+<wavebeem-theme-select>
+  <select
+    class="theme-select sage-button"
+    autocomplete="off"
+    aria-label="Select theme..."
+  >
+    <option value="" disabled selected>Select theme...</option>
+    <option value="auto">Auto</option>
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+  </select>
+</wavebeem-theme-select>
+
+<script>
+  // Change this if you want to use a different localStorage key
+  const storageKey = "theme";
+
+  let light = "";
+  let dark = "";
+  let meta: HTMLMetaElement | undefined;
+
+  for (const metaTag of document.getElementsByTagName("meta")) {
+    if (metaTag.name === "theme-color") {
+      if (metaTag.media === "(prefers-color-scheme: dark)") {
+        dark = metaTag.content;
+        metaTag.remove();
+      } else {
+        light = metaTag.content;
+        meta = metaTag;
+      }
+    }
+  }
+
+  if (!meta) {
+    throw new Error(`couldn't find <meta name="theme-color"> tag`);
+  }
+
+  const darkModeQuery = matchMedia("(prefers-color-scheme: dark)");
+
+  // Get the current system theme
+  function getSystemTheme() {
+    return darkModeQuery.matches ? "dark" : "light";
+  }
+
+  // Apply the current theme to the root element for CSS purposes
+  function applyTheme() {
+    let computedTheme = localStorage.getItem(storageKey);
+    if (!computedTheme || computedTheme === "auto") {
+      computedTheme = getSystemTheme();
+    }
+    document.documentElement.dataset.theme = computedTheme;
+    if (meta) {
+      meta.content = computedTheme === "dark" ? dark : light;
+    }
+  }
+
+  export class WavebeemThemeSelect extends HTMLElement {
+    #abortController = new AbortController();
+
+    connectedCallback() {
+      // Use this to remove event listeners if disconnected
+      this.#abortController = new AbortController();
+      const { signal } = this.#abortController;
+
+      // Listen for `<select>` changes and save the new theme selected
+      this.addEventListener(
+        "change",
+        (event) => {
+          if (event.target instanceof HTMLSelectElement) {
+            localStorage.setItem(storageKey, event.target.value);
+            applyTheme();
+            // Ensure the default option is selected
+            event.target.value = "";
+          }
+        },
+        { signal }
+      );
+      // Re-apply theme when system theme changes
+      darkModeQuery.addEventListener(
+        "change",
+        () => {
+          applyTheme();
+        },
+        { signal }
+      );
+      // Ensure the default option is selected
+      const select = this.querySelector("select");
+      if (select) {
+        select.value = "";
+      }
+    }
+
+    disconnectedCallback() {
+      // Remove event listeners when disconnected
+      this.#abortController.abort();
+    }
+  }
+
+  customElements.define("wavebeem-theme-select", WavebeemThemeSelect);
+
+  // Restore theme on load
+  applyTheme();
+</script>
+
+<style>
+  .theme-select {
+    -webkit-appearance: none;
+    appearance: none;
+    max-width: max-content;
+  }
+</style>

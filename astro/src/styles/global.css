@@ -274,14 +274,6 @@ summary {
   padding: 0.5rem;
 }
 
-.margin0 {
-  margin: 0;
-}
-
-.text-right {
-  text-align: right;
-}
-
 p {
   margin: 1rem 0;
 }
@@ -315,6 +307,14 @@ main {
   text-decoration-line: none;
 }
 
+.clearfix {
+  clear: both;
+}
+
+.text-right {
+  text-align: right;
+}
+
 .font-logo {
   font-family: var(--font-logo);
 }
@@ -329,10 +329,6 @@ main {
 
 .font-heading {
   font-family: var(--font-heading);
-}
-
-.grid-full {
-  grid-column: 1 / -1;
 }
 
 .pixelated {
@@ -397,6 +393,7 @@ main {
 }
 
 .sage-button {
+  appearance: none;
   display: inline-block;
   font-weight: bold;
   border: 2px solid transparent;
