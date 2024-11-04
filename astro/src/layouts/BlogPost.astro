@@ -135,14 +135,6 @@ const blogPostTags = upgradeTags(tags);
     display: block;
   }
 
-  .sage-prose :global(p > img:only-child) {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    display: block;
-    /* border: 2px solid var(--color-card-background); */
-  }
-
   .sage-prose :global(figure figcaption) {
     font-weight: bold;
     font-size: var(--font-size-small);
@@ -157,6 +149,31 @@ const blogPostTags = upgradeTags(tags);
     margin-inline: 0;
     border-radius: 1rem;
     padding: 1rem;
+  }
+
+  .sage-prose :global(p > img:only-child) {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    display: block;
+    background: var(--color-card-background);
+    border: 0.5rem solid transparent;
+  }
+
+  @media (max-width: 420px) {
+    .sage-prose :global(p > img:only-child) {
+      margin-inline: -1rem;
+      width: calc(100% + 2rem);
+    }
+  }
+
+  /* Fake version of figure+figcaption to work around Markdown
+  not having good support for many tags */
+  .sage-prose :global(p:has(> img:only-child) + p:has(> strong:only-child)) {
+    margin-top: -0.5rem;
+    padding-inline: 0.5rem;
+    text-align: center;
+    font-size: var(--font-size-small);
   }
 
   .sage-prose :global(blockquote > :first-child) {

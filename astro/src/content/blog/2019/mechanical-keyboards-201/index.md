@@ -352,19 +352,13 @@ have dedicated arrow keys, so you will need to program your keyboard to have
 arrow keys in a different way (many people use the Function key with WASD or
 IJKL).
 
-<figure>
-  <img src="/img/keebs-201/ansi60.png" alt="">
-  <figcaption>
-    ANSI (US) 60% layout
-  </figcaption>
-</figure>
+![](./ansi60.png)
 
-<figure>
-  <img src="/img/keebs-201/iso60.png" alt="">
-  <figcaption>
-    ISO (European) 60% layout
-  </figcaption>
-</figure>
+**ANSI (US) 60% layout**
+
+![](./iso60.png)
+
+**ISO (European) 60% layout**
 
 40% keyboards are relatively quick to build, and some don't even have
 stabilizers. However there are far fewer options. These keyboards lack number
@@ -372,48 +366,33 @@ keys, so you have to hold down a function key in order to type those. This is my
 personal favorite kind, but be advised it will take a few weeks to get back up
 to good typing speed if you need to type a lot symbols or numbers.
 
-<figure>
-  <img src="/img/keebs-201/jd40.png" alt="">
-  <figcaption>
-    JD40 40% layout
-  </figcaption>
-</figure>
+![](./jd40.png)
 
-<figure>
-  <img src="/img/keebs-201/zlant.png" alt="">
-  <figcaption>
-    Zlant 40% layout
-  </figcaption>
-</figure>
+**JD40 40% layout**
+
+![](./zlant.png)
+
+**Zlant 40% layout**
 
 Ortholinear keyboards make the rows of keys all line up to form a perfect grid,
 instead of the jagged edge you see on most keyboards. There's no research
 showing if this has any benefits, but I personally think it's more comfortable.
 
-<figure>
-  <img src="/img/keebs-201/planck.png" alt="">
-  <figcaption>
-    Planck 40% ortholinear layout
-  </figcaption>
-</figure>
+![](./planck.png)
+
+**Planck 40% ortholinear layout**
 
 Split keyboards are great for maintaining good posture and a healthy shoulder
 spread through your work day. They are harder to build, and there are few
 options, but many people never go back once trying them.
 
-<figure>
-  <img src="/img/keebs-201/ergodox.png" alt="">
-  <figcaption>
-    Ergodox split layout
-  </figcaption>
-</figure>
+![](./ergodox.png)
 
-<figure>
-  <img src="/img/keebs-201/letssplit.png" alt="">
-  <figcaption>
-    Let's Split split layout
-  </figcaption>
-</figure>
+**Ergodox split layout**
+
+![](./letssplit.png)
+
+**Let's Split split layout**
 
 ## My favorite shops
 

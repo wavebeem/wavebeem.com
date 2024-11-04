@@ -239,8 +239,8 @@ and
 [Symbol.iterator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator).
 It seems like this feature was added primarily to allow multiple types of APIs
 to exist on an object, without requiring names to be unique (all `Symbol` values
-are not equal to each other---like objects---even if they have the same display
-name).
+are not equal to each other&mdash;like objects&mdash;even if they have the same
+display name).
 
 ## Inspired by Lea Verou
 

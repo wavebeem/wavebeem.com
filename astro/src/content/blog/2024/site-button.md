@@ -15,8 +15,7 @@ It's been a while since I updated my 88×31 site button. With
 soon, I wanted to update my button to match my new theme. A lot of folks on the
 indie web are using site buttons, apparently!
 
-<figure>
-  <img
+<img
     src="/button.webp"
     title="wavebeem"
     alt="wavebeem"
@@ -24,7 +23,5 @@ indie web are using site buttons, apparently!
     height="31"
     class="pixelated"
   />
-  <figcaption>
-    wavebeem.com site button
-  </figcaption>
-</figure>
+
+**wavebeem.com site button**

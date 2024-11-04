@@ -25,14 +25,9 @@ resume, but it almost looks like technical documentation for an uninteresting
 library. This establishes my love for green and my desire to have something a
 little softer than stark white.
 
-<figure>
-  <figcaption>
-    Basic resume&mdash;with two background colors
-  </figcaption>
-  <a href="/img/theme-history/site2013.webp">
-    <img src="/img/theme-history/site2013.webp" alt="">
-  </a>
-</figure>
+![](./site2013.webp)
+
+**Basic resume&mdash;with two background colors**
 
 ## 2014
 
@@ -43,14 +38,9 @@ lot nicer, there's a photo to welcome you and humanize me, and I put contact
 info front and center. It's a bit dense with all the sections of text and
 relying just on heading sizes to differentiate everything, but I was trying!
 
-<figure>
-  <figcaption>
-    Bootstrap&mdash;It looks like a lot of other sites from this era
-  </figcaption>
-  <a href="/img/theme-history/site2014.webp">
-    <img src="/img/theme-history/site2014.webp" alt="">
-  </a>
-</figure>
+![](./site2014.webp)
+
+**Bootstrap&mdash;It looks like a lot of other sites from this era**
 
 ## 2015
 
@@ -63,16 +53,11 @@ at the time. The layout is giving a
 vibe, which was probably already a big deal on Pinterest or something at the
 time.
 
-The green has shifted even bluer---maybe too blue.
+The green has shifted even bluer&mdash;maybe too blue.
 
-<figure>
-  <figcaption>
-    Cards&mdash;It's all about cards now
-  </figcaption>
-  <a href="/img/theme-history/site2015.webp">
-    <img src="/img/theme-history/site2015.webp" alt="">
-  </a>
-</figure>
+![](./site2015.webp)
+
+**Cards&mdash;It's all about cards now**
 
 ## 2016
 
@@ -83,14 +68,9 @@ just so weirdly columnar.
 
 The green looks really nice in this image to me.
 
-<figure>
-  <figcaption>
-    Mobile first&mdash;a simple landing page
-  </figcaption>
-  <a href="/img/theme-history/site2016.webp">
-    <img src="/img/theme-history/site2016.webp" alt="">
-  </a>
-</figure>
+![](./site2016.webp)
+
+**Mobile first&mdash;a simple landing page**
 
 ## 2017
 
@@ -101,14 +81,9 @@ with the "chat bubble" interface at the top and my fun pixel art self portrait.
 I like that I put more content on here and it's more conversational, but it just
 doesn't have enough color for me.
 
-<figure>
-  <figcaption>
-    Material design&mdash;and a pixel art self portrait
-  </figcaption>
-  <a href="/img/theme-history/site2017.webp">
-    <img src="/img/theme-history/site2017.webp" alt="">
-  </a>
-</figure>
+![](./site2017.webp)
+
+**Material design&mdash;and a pixel art self portrait**
 
 ## 2018
 
@@ -116,14 +91,9 @@ Not a huge shift, honestly. I got over the Material Design nonsense and injected
 some color back into the page. The massive commissioned portrait is fun! And I'm
 sure I was proud of the speech bubble arrow at the time haha.
 
-<figure>
-  <figcaption>
-    More green&mdash;plus a commissioned portrait
-  </figcaption>
-  <a href="/img/theme-history/site2018.webp">
-    <img src="/img/theme-history/site2018.webp" alt="">
-  </a>
-</figure>
+![](./site2018.webp)
+
+**More green&mdash;plus a commissioned portrait**
 
 ## 2020
 
@@ -147,14 +117,10 @@ to look blurry.
 
 So in many ways this feels more me, but like I lost something.
 
-<figure>
-  <figcaption>
-    <a href="https://lospec.com/palette-list/en4">EN4</a> color palette&mdash;animated Dragon Quest Slime &amp; old timey parchment vibe
-  </figcaption>
-  <a href="/img/theme-history/site2020.webp">
-    <img src="/img/theme-history/site2020.webp" alt="">
-  </a>
-</figure>
+![](./site2020.webp)
+
+**[EN4](https://lospec.com/palette-list/en4) color palette&mdash;animated Dragon
+Quest Slime &amp; old timey parchment vibe**
 
 ## 2021
 
@@ -164,16 +130,11 @@ still proud of honestly. You'll notice it's got a nonbinary flag in the
 background: this was the year I came out as nonbinary :3
 
 The colors are a bit more relaxed here, and it's (barely) using my
-<a href="https://1bit-ui.wavebeem.com">1bit-ui</a> library.
+[1bit-ui](https://1bit-ui.wavebeem.com) library.
 
-<figure>
-  <figcaption>
-    Cards again&mdash;Another self portrait &amp; it uses my <a href="https://1bit-ui.wavebeem.com">1bit-ui</a> library
-  </figcaption>
-  <a href="/img/theme-history/site2021.webp">
-    <img src="/img/theme-history/site2021.webp" alt="">
-  </a>
-</figure>
+![](./site2021.webp)
+
+**Cards again&mdash;Another self portrait**
 
 ## 2022
 
@@ -183,14 +144,9 @@ I miss having a contrasting nav bar, and the
 drab with so few overall colors, but this one is finally oozing some
 personality.
 
-<figure>
-  <figcaption>
-    Mint green &amp; pink&mdash;plus it uses my <a href="https://2bit-ui.wavebeem.com">2bit-ui</a> library
-  </figcaption>
-  <a href="/img/theme-history/site2022.webp">
-    <img src="/img/theme-history/site2022.webp" alt="">
-  </a>
-</figure>
+![](./site2022.webp)
+
+**Mint green &amp; pink&mdash;plus it uses 2bit-ui**
 
 ## 2023
 
@@ -203,14 +159,9 @@ stand out just a bit.
 
 My favorite part is the new logo font! It's Ultra Hi-Gloss by Froyo Tam.
 
-<figure>
-  <figcaption>
-    Dark purple and lime&mdash;and my matching hair!
-  </figcaption>
-  <a href="/img/theme-history/site2023.webp">
-    <img src="/img/theme-history/site2023.webp" alt="">
-  </a>
-</figure>
+![](./site2023.webp)
+
+**Dark purple and lime&mdash;and my matching hair!**
 
 ## 2024 part 1
 
@@ -228,14 +179,10 @@ And my least favorite part is that it's just so _boxed in_. The concave cards
 look really cool, but having the whole page in a little container like that
 honestly feels suffocating!
 
-<figure>
-  <figcaption>
-    Dark green and lime&mdash;featuring my <a href="https://candy.wavebeem.com">candy.css</a> library
-  </figcaption>
-  <a href="/img/theme-history/site2024a.webp">
-    <img src="/img/theme-history/site2024a.webp" alt="">
-  </a>
-</figure>
+![](./site2024a.webp)
+
+**Dark green and lime&mdash;featuring my [candy.css](https://candy.wavebeem.com)
+library**
 
 ## 2024 part 2
 
@@ -247,14 +194,9 @@ white mixed with gray was really killing the vibe for me.
 The nav bar kinda made me feel like the Wii UI just a little bit, which even
 though I never owned a Wii, is quite nostalgic to me.
 
-<figure>
-  <figcaption>
-    Windows Vista meets Nintendo Wii
-  </figcaption>
-  <a href="/img/theme-history/site2024b.webp">
-    <img src="/img/theme-history/site2024b.webp" alt="">
-  </a>
-</figure>
+![](./site2024b.webp)
+
+**Windows Vista meets Nintendo Wii**
 
 ## 2024 part 3
 
@@ -273,14 +215,9 @@ netpet itself as a fun decoration to the site.
 
 I'm still really proud of this design, though I've tweaked it since.
 
-<figure>
-  <figcaption>
-    Lavender and lime&mdash;fully custom CSS again
-  </figcaption>
-  <a href="/img/theme-history/site2024c.webp">
-    <img src="/img/theme-history/site2024c.webp" alt="">
-  </a>
-</figure>
+![](./site2024c.webp)
+
+**Lavender and lime&mdash;fully custom CSS again**
 
 ## 2024 part 4
 
@@ -307,11 +244,6 @@ point, or maybe add a bit more depth to the page. I definitely don't want to go
 full [neumorphism](https://en.wikipedia.org/wiki/Neumorphism) or anything, but I
 love a good subtle shadow in a UI :)
 
-<figure>
-  <figcaption>
-    Summer theme
-  </figcaption>
-  <a href="/img/theme-history/site2024d.webp">
-    <img src="/img/theme-history/site2024d.webp" alt="">
-  </a>
-</figure>
+![](./site2024d.webp)
+
+**Summer theme**

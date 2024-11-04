@@ -1,12 +1,17 @@
 ---
 import FormattedDate from "../../components/FormattedDate.astro";
-import { getAllTagsForPosts, getPosts } from "../../data/posts";
+import {
+  getAllTagsForPosts,
+  getPosts,
+  postsGroupedByYear,
+} from "../../data/posts";
 import Page from "../../layouts/Page.astro";
 
 const title = "Blog";
 const description = title;
-const posts = await getPosts();
-const allTags = getAllTagsForPosts(posts);
+const allPosts = await getPosts();
+const groupedPosts = postsGroupedByYear(allPosts);
+const allTags = getAllTagsForPosts(allPosts);
 ---
 
 <Page title={title} description={description}>
@@ -33,23 +38,29 @@ const allTags = getAllTagsForPosts(posts);
     }
   </ul>
 
-  <h2>All posts</h2>
-
-  <div class="post-list">
-    {
-      posts.map((post) => {
-        return (
-          <section class="post-list--post sage-well">
-            <h3>
-              <a class="sage-link no-underline" href={`/blog/${post.slug}/`}>
-                {post.data.title}
-              </a>
-            </h3>
-            <FormattedDate date={post.data.pubDate} />
-            <p>{post.data.description}</p>
-          </section>
-        );
-      })
-    }
-  </div>
+  {
+    Array.from(groupedPosts.entries()).map(([year, posts]) => (
+      <div>
+        <h2>{year}</h2>
+        <div class="post-list">
+          {posts.map((post) => {
+            return (
+              <section class="post-list--post sage-well">
+                <h3>
+                  <a
+                    class="sage-link no-underline"
+                    href={`/blog/${post.slug}/`}
+                  >
+                    {post.data.title}
+                  </a>
+                </h3>
+                <FormattedDate date={post.data.pubDate} />
+                <p>{post.data.description}</p>
+              </section>
+            );
+          })}
+        </div>
+      </div>
+    ))
+  }
 </Page>

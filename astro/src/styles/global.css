@@ -335,6 +335,10 @@ main {
   grid-column: 1 / -1;
 }
 
+.pixelated {
+  image-rendering: pixelated;
+}
+
 .gap1 {
   gap: 0.25rem;
 }

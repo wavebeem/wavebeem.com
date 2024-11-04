@@ -18,8 +18,7 @@ Recently I've been hanging out a lot on [cohost!](https://cohost.org/wavebeem),
 and I've been inspired to make my own site button by some of my new friends
 there.
 
-<figure>
-  <img
+<img
     src="/button-old.gif"
     title="wavebeem"
     alt="wavebeem"
@@ -27,7 +26,5 @@ there.
     height="31"
     class="pixelated"
   />
-  <figcaption>
-    wavebeem.com site button
-  </figcaption>
-</figure>
+
+**wavebeem.com site button**
