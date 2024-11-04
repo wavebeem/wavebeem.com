@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-page-name="{{ pageName or '' }}">
+  <head>
+    {% include 'partials/head' %}
+  </head>
+  <body>
+    <header class="header screen-only">
+      <div class="content-column">
+        <div class="flex">
+          <a href="/" class="logo sage-link">wavebeem</a>
+        </div>
+        <details class="hamburger">
+          <summary>Menu</summary>
+          <nav class="nav">
+            {% for item in menu %}
+              <a
+                {% if page.url == item.url %}
+                aria-current="page"
+                {% endif %}
+                href="{{ item.url }}">{{ item.title }}</a>
+            {% endfor %}
+          </nav>
+        </details>
+      </div>
+    </header>
+    <div class="slime"></div>
+    <main>
+      <div class="content-column">
+        {{ content | safe }}
+      </div>
+    </main>
+    <div class="footer-top"></div>
+    <footer class="footer screen-only">
+      <div class="content-column flex flex-column gap3">
+        <nav class="footer-links">
+          {% for item in menu %}
+            <a
+              {% if page.url == item.url %}
+              aria-current="page"
+              {% endif %}
+              href="{{ item.url }}"
+              class="sage-link">{{ item.title }}</a>
+          {% endfor %}
+        </nav>
+        <wavebeem-theme-select>
+          <select
+            class="theme-select sage-button"
+            autocomplete="off"
+            aria-label="Select theme...">
+            <option
+              value=""
+              disabled
+              selected>Select theme...</option>
+            <option value="auto">Auto</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+          </select>
+        </wavebeem-theme-select>
+        <div>&copy; {{ "now" | formatDate("yyyy" ) }} Sage Fennel</div>
+      </div>
+    </footer>
+  </body>
+</html>

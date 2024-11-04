@@ -8,10 +8,7 @@ layout: "layout-base"
   </h1>
 
   <p class="post-date date">
-    <time
-      datetime="{{ page.date | formatDate('yyyy-mm-dd') }}"
-      >{{ page.date | formatDate('yyyy mmmm d') }}</time
-    >
+    <time datetime="{{ page.date | formatDate('yyyy-mm-dd') }}">{{ page.date | formatDate('yyyy mmmm d' ) }}</time>
   </p>
 
   <blockquote>
@@ -23,19 +20,22 @@ layout: "layout-base"
   </div>
 </article>
 
-<hr />
+<hr/>
 
 <h2>Comments</h2>
 
 <div class="sage-well">
   I would be thrilled if you want to
-  <a href="/contact/" class="sage-link">contact me</a> to talk about this post.
+  <a href="/contact/" class="sage-link">contact me</a>
+  to talk about this post.
 </div>
 
 <h2>Stay up to date</h2>
 
 <p>
-  Subscribe to my <a class="sage-link" href="/feed.xml">RSS feed</a> to stay up
+  Subscribe to my
+  <a class="sage-link" href="/feed.xml">RSS feed</a>
+  to stay up 
   to date with my posts.
 </p>
 
@@ -43,9 +43,9 @@ layout: "layout-base"
 
 <ul class="tag-list">
   {% for tag in tags | sort | filterTagList %}
-  <li>
-    <a class="sage-link" href="/blog/tags/{{ tag }}/">{{ tag | prettyTag }}</a>
-  </li>
+    <li>
+      <a class="sage-link" href="/blog/tags/{{ tag }}/">{{ tag | prettyTag }}</a>
+    </li>
   {% endfor %}
 </ul>
 

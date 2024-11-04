@@ -16,8 +16,7 @@ permalink: "/"
     "
     src="/photo-360.webp?v={{ contentHashes.photo }}"
     width="120"
-    height="120"
-  />
+    height="120" />
 </wavebeem-easter-egg>
 
 <h1>Hello!</h1>
@@ -25,19 +24,18 @@ permalink: "/"
 <p>
   I'm
   <a class="sage-link" href="/my-names/">Sage Fennel</a>
-  (they/them), aka <q>wavebeem</q>.
+  (they/them), aka
+  <q>wavebeem</q>.
 </p>
 
 <p>
-  I love video games, web development, makeup, pixel art, progressive metal,
+  I love video games, web development, makeup, pixel art, progressive metal, 
   cats, and the color green.
 </p>
 
 <p>
   I live in
-  <a class="sage-link" href="https://en.wikipedia.org/wiki/Portland,_Oregon"
-    >Portland</a
-  >, where I enjoy gray skies, green leaves, and gentle rain.
+  <a class="sage-link" href="https://en.wikipedia.org/wiki/Portland,_Oregon">Portland</a>, where I enjoy gray skies, green leaves, and gentle rain.
 </p>
 
 <div class="clearfix"></div>
@@ -46,9 +44,12 @@ permalink: "/"
 
 <div class="clicky-list">
   {% for item in menu %}
-  <a class="link-card"
-  {% if page.url == item.url %} aria-current="page"{% endif %}
-  href="{{ item.url }}">{{ item.title }}</a>
+    <a
+      class="link-card"
+      {% if page.url == item.url %}
+      aria-current="page"
+      {% endif %}
+      href="{{ item.url }}">{{ item.title }}</a>
   {% endfor %}
 </div>
 
@@ -56,19 +57,16 @@ permalink: "/"
 
 <div class="post-list">
   {% for post in collections.posts | reverse | take(3) %}
-  <section class="post-list--post sage-well">
-    <h3>
-      <a class="sage-link no-underline" href="{{ post.url }}">
-        {{ post.data.title }}
-      </a>
-    </h3>
-    <time
-      datetime="{{ post.date | formatDate('yyyy-mm-dd') }}"
-      >{{ post.date | formatDate('yyyy mmmm d') }}</time
-    >
+    <section class="post-list--post sage-well">
+      <h3>
+        <a class="sage-link no-underline" href="{{ post.url }}">
+          {{ post.data.title }}
+        </a>
+      </h3>
+      <time datetime="{{ post.date | formatDate('yyyy-mm-dd') }}">{{ post.date | formatDate('yyyy mmmm d' ) }}</time>
 
-    <p>{{ post.data.description }}</p>
-  </section>
+      <p>{{ post.data.description }}</p>
+    </section>
   {% endfor %}
 </div>
 

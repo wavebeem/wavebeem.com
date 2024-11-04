@@ -18,6 +18,9 @@ export default function getConfig(config) {
 
   config.setLibrary("md", markdown);
   config.addPlugin(syntaxHighlight);
+  config.setLiquidOptions({
+    strictFilters: true,
+  });
   config.addPassthroughCopy({ "src/static": "/" });
   config.addPassthroughCopy("src/art/*.webp");
 

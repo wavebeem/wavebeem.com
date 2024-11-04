@@ -26,33 +26,31 @@ permalink: "/blog/tags/{{ tag }}/"
 
 <ul class="tag-list">
   {% for tag in collections.all | getAllTags | sort | filterTagList %}
-  <li>
-    <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag | prettyTag }}</a>
-  </li>
+    <li>
+      <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag | prettyTag }}</a>
+    </li>
   {% endfor %}
 </ul>
 
 <h2>
-  Posts tagged <q>{{ tag | prettyTag }}</q>
+  Posts tagged
+  <q>{{ tag | prettyTag }}</q>
 </h2>
 
 <div class="post-list">
   {% for post in collections.posts | reverse %}
-  <section class="post-list--post sage-well">
-    <h2>
-      <a class="sage-link no-underline" href="{{ post.url }}">
-        {{ post.data.title }}
-      </a>
-    </h2>
+    <section class="post-list--post sage-well">
+      <h2>
+        <a class="sage-link no-underline" href="{{ post.url }}">
+          {{ post.data.title }}
+        </a>
+      </h2>
 
-    <time
-      datetime="{{ post.date | formatDate('yyyy-mm-dd') }}"
-      >{{ post.date | formatDate('yyyy mmmm d') }}</time
-    >
+      <time datetime="{{ post.date | formatDate('yyyy-mm-dd') }}">{{ post.date | formatDate('yyyy mmmm d' ) }}</time>
 
-    <p>
-      {{ post.data.description }}
-    </p>
-  </section>
+      <p>
+        {{ post.data.description }}
+      </p>
+    </section>
   {% endfor %}
 </div>
