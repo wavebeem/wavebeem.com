@@ -17,15 +17,15 @@ pageName: "art"
         width="{{ img.width }}"
         height="{{ img.height }}"
         style="background-color: {{ img.color }};"
-        loading="{% if loop.index > 4 %}lazy{% else %}eager{% endif %}"
+        loading="{% if forloop.index > 4 %}lazy{% else %}eager{% endif %}"
       />
     </a>
     <figcaption>
       <a class="sage-link" href="{{ img.url }}">{{ img.name }}</a>
     </figcaption>
     <time
-      datetime="{{ img.date | formatDate('yyyy-mm-dd') }}"
-      >{{ img.date | formatDate('yyyy mmmm d') }}</time
+      datetime="{{ img.date | formatDate: 'yyyy-mm-dd' }}"
+      >{{ img.date | formatDate: 'yyyy mmmm d' }}</time
     >
   </figure>
   {% endfor %}

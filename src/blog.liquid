@@ -9,7 +9,7 @@ permalink: "/blog/"
 <p>
   Subscribe to my
   <a class="sage-link" href="/feed.xml">RSS feed</a>
-  to stay up 
+  to stay up
   to date with my posts.
 </p>
 
@@ -18,7 +18,7 @@ permalink: "/blog/"
 <ul class="tag-list">
   {% for tag in collections.all | getAllTags | sort | filterTagList %}
     <li>
-      <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag | prettyTag }}</a>
+      {% comment %} <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag | prettyTag }}</a> {% endcomment %}
     </li>
   {% endfor %}
 </ul>
@@ -33,7 +33,7 @@ permalink: "/blog/"
           {{ post.data.title }}
         </a>
       </h3>
-      <time datetime="{{ post.date | formatDate('yyyy-mm-dd') }}">{{ post.date | formatDate('yyyy mmmm d' ) }}</time>
+      <time datetime="{{ post.date | formatDate: 'yyyy-mm-dd' }}">{{ post.date | formatDate: 'yyyy mmmm d' }}</time>
 
       <p>
         {{ post.data.description }}
@@ -42,4 +42,4 @@ permalink: "/blog/"
   {% endfor %}
 </div>
 
-{{ content | safe }}
+{{ content }}

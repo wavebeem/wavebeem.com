@@ -78,3 +78,6 @@ export const dark = {
   "color-easter-egg-shadow": oklch(25, 5, 30),
   "color-easter-egg-highlight": oklch(100, 0, 0, 30),
 };
+
+export const listLight = Object.entries(light);
+export const listDark = Object.entries(dark);

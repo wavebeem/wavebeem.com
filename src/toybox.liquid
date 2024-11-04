@@ -21,7 +21,7 @@ permalink: "/toybox/"
         </a>
       </h3>
 
-      <time datetime="{{ post.date | formatDate('yyyy-mm-dd') }}">{{ post.date | formatDate('yyyy mmmm d' ) }}</time>
+      <time datetime="{{ post.date | formatDate: 'yyyy-mm-dd' }}">{{ post.date | formatDate: 'yyyy mmmm d' }}</time>
 
       <p>
         {{ post.data.description }}
@@ -30,4 +30,4 @@ permalink: "/toybox/"
   {% endfor %}
 </div>
 
-{{ content | safe }}
+{{ content }}

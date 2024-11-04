@@ -72,6 +72,7 @@ export default function getConfig(config) {
   ]);
 
   config.addFilter("prettyTag", function (content) {
+    console.log("PRETTY TAG", content);
     if (!prettyTagMap.has(content)) {
       throw new Error(`unknown tag: ${content}`);
     }
@@ -95,6 +96,10 @@ export default function getConfig(config) {
 
   config.addFilter("sort", function (data) {
     return [...data].sort((a, b) => a.localeCompare(b));
+  });
+
+  config.addFilter("entries", function (data) {
+    return Object.entries(data);
   });
 
   const blockedTags = new Set(["all", "posts"]);

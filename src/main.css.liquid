@@ -1,21 +1,19 @@
+---
+permalink: "main.css"
+---
+
 :root,
-:root[data-theme="light"] {
-  {% for key, val in colors.light %}
-  --{{key}}: {{ val }};
-  {% endfor %}
+:root[data-theme="light"] { {% for item in colors.light | entries %}
+  --{{ item[0] }}: {{ item[1] }};{% endfor %}
 }
 
-:root[data-theme="dark"] {
-  {% for key, val in colors.dark %}
-  --{{key}}: {{ val }};
-  {% endfor %}
+:root[data-theme="dark"] { {% for item in colors.dark | entries %}
+  --{{ item[0] }}: {{ item[1] }};{% endfor %}
 }
 
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
-    {% for key, val in colors.dark %}
-    --{{key}}: {{ val }};
-    {% endfor %}
+  :root:not([data-theme]) { {% for item in colors.dark | entries %}
+    --{{ item[0] }}: {{ item[1] }};{% endfor %}
   }
 }
 

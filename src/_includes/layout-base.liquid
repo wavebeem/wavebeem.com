@@ -26,7 +26,7 @@
     <div class="slime"></div>
     <main>
       <div class="content-column">
-        {{ content | safe }}
+        {{ content }}
       </div>
     </main>
     <div class="footer-top"></div>
@@ -56,7 +56,7 @@
             <option value="dark">Dark</option>
           </select>
         </wavebeem-theme-select>
-        <div>&copy; {{ "now" | formatDate("yyyy" ) }} Sage Fennel</div>
+        <div>&copy; {{ "now" | formatDate: "yyyy" }} Sage Fennel</div>
       </div>
     </footer>
   </body>

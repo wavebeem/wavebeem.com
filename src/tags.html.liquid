@@ -27,14 +27,14 @@ permalink: "/blog/tags/{{ tag }}/"
 <ul class="tag-list">
   {% for tag in collections.all | getAllTags | sort | filterTagList %}
     <li>
-      <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag | prettyTag }}</a>
+      {% comment %} <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag | prettyTag }}</a> {% endcomment %}
     </li>
   {% endfor %}
 </ul>
 
 <h2>
   Posts tagged
-  <q>{{ tag | prettyTag }}</q>
+  {% comment %} <q>{{ tag | prettyTag }}</q> {% endcomment %}
 </h2>
 
 <div class="post-list">
@@ -46,7 +46,7 @@ permalink: "/blog/tags/{{ tag }}/"
         </a>
       </h2>
 
-      <time datetime="{{ post.date | formatDate('yyyy-mm-dd') }}">{{ post.date | formatDate('yyyy mmmm d' ) }}</time>
+      <time datetime="{{ post.date | formatDate: 'yyyy-mm-dd' }}">{{ post.date | formatDate: 'yyyy mmmm d' }}</time>
 
       <p>
         {{ post.data.description }}
