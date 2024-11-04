@@ -4,6 +4,7 @@ title: |
 description: |
   I made a toy flashlight for the web. It simulates darkening the web page and following the cursor. It looks somewhat convincingly like a flashlight. Enjoy!
 tags:
+  - "toybox"
   - "programming"
   - "javascript"
   - "web"

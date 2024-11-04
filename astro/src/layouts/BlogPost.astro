@@ -115,6 +115,20 @@ const blogPostTags = upgradeTags(tags);
       0 1 / 0 var(--w) / 0 calc(var(--w) + var(--g));
   }
 
+  .sage-prose :global(.crime-frame) {
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .sage-prose :global(.crime-frame :is(details, summary)) {
+    margin: unset;
+  }
+
+  .sage-prose :global(.crime-frame > details) {
+    background: white;
+  }
+
   .sage-prose :global(figure) {
     margin: 1rem 0;
     display: flex;

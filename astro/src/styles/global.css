@@ -470,22 +470,6 @@ main {
   }
 }
 
-/* --- TOYBOX --- */
-
-.crime-frame {
-  border-radius: 0.5rem;
-  overflow: hidden;
-  position: relative;
-}
-
-.crime-frame :is(details, summary) {
-  margin: unset;
-}
-
-.crime-frame > details {
-  background: white;
-}
-
 .sage-well {
   box-sizing: border-box;
   border: 0;
