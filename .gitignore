@@ -1,4 +1,5 @@
 .DS_Store
+.astro
 
 .vscode/*
 !.vscode/spellright.dict
