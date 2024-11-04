@@ -43,6 +43,7 @@ export default function getConfig(config) {
   });
 
   config.addFilter("take", function (array, count) {
+    console.log("take", array.length, count);
     return array.slice(0, count);
   });
 

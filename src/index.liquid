@@ -56,7 +56,8 @@ permalink: "/"
 <h2>Recent posts</h2>
 
 <div class="post-list">
-  {% for post in collections.posts | reverse | take: 3 %}
+  {% assign top3 = collections.posts | reverse | take: 3 %}
+  {% for post in top3 %}
     <section class="post-list--post sage-well">
       <h3>
         <a class="sage-link no-underline" href="{{ post.url }}">

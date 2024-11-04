@@ -25,16 +25,17 @@ permalink: "/blog/tags/{{ tag }}/"
 <h2>Browse by tag</h2>
 
 <ul class="tag-list">
-  {% for tag in collections.all | getAllTags | sort | filterTagList %}
+  {% assign tags = collections.all | getAllTags | sort | filterTagList %}
+  {% for tag in tags %}
     <li>
-      {% comment %} <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag | prettyTag }}</a> {% endcomment %}
+      <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag | prettyTag }}</a>
     </li>
   {% endfor %}
 </ul>
 
 <h2>
   Posts tagged
-  {% comment %} <q>{{ tag | prettyTag }}</q> {% endcomment %}
+  <q>{{ tag | prettyTag }}</q>
 </h2>
 
 <div class="post-list">

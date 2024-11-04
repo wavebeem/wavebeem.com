@@ -16,9 +16,10 @@ permalink: "/blog/"
 <h2>Browse by tag</h2>
 
 <ul class="tag-list">
-  {% for tag in collections.all | getAllTags | sort | filterTagList %}
+  {% assign tags = collections.all | getAllTags | sort | filterTagList %}
+  {% for tag in tags %}
     <li>
-      {% comment %} <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag | prettyTag }}</a> {% endcomment %}
+      <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag | prettyTag }}</a>
     </li>
   {% endfor %}
 </ul>
@@ -26,7 +27,8 @@ permalink: "/blog/"
 <h2>All posts</h2>
 
 <div class="post-list">
-  {% for post in collections.posts | reverse %}
+  {% assign posts = collections.posts | reverse %}
+  {% for post in posts %}
     <section class="post-list--post sage-well">
       <h3>
         <a class="sage-link no-underline" href="{{ post.url }}">

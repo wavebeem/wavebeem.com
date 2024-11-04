@@ -42,9 +42,10 @@ layout: "layout-base"
 <h2>Related posts by tag</h2>
 
 <ul class="tag-list">
-  {% for tag in tags | sort | filterTagList %}
+  {% assign realTags = tags | sort | filterTagList %}
+  {% for tag in realTags %}
     <li>
-      {% comment %} <a class="sage-link" href="/blog/tags/{{ tag }}/">{{ tag | prettyTag }}</a> {% endcomment %}
+      <a class="sage-link" href="/blog/tags/{{ tag }}/">{{ tag | prettyTag }}</a>
     </li>
   {% endfor %}
 </ul>
