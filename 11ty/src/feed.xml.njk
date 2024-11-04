@@ -18,7 +18,6 @@
   }
 }
 ---
-
 <?xml version="1.0" encoding="utf-8"?>
 <feed
   xmlns="http://www.w3.org/2005/Atom"
@@ -35,16 +34,15 @@
   <author>
     <name>{{ metadata.author.name }}</name>
   </author>
-  {%- for post in collections.posts | reverse %} {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.base)
-
-
+  {%- for post in collections.posts | reverse %}
+  {%- set absolutePostUrl %}{{
+    post.url | htmlBaseUrl(metadata.base)
   }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}" />
     <updated>{{ post | getDate | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.content }}</content>
   </entry>
   {%- endfor %}
 </feed>
