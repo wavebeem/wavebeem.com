@@ -1,5 +1,4 @@
 [build]
-base = "astro"
 publish = "dist"
 command = "npm run build"
 
