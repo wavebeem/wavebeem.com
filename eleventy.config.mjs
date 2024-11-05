@@ -1,5 +1,4 @@
 // @ts-check
-
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateformat from "dateformat";
@@ -73,7 +72,6 @@ export default function getConfig(config) {
   ]);
 
   config.addFilter("prettyTag", function (content) {
-    console.log("PRETTY TAG", content);
     if (!prettyTagMap.has(content)) {
       throw new Error(`unknown tag: ${content}`);
     }
