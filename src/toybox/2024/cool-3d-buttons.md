@@ -29,12 +29,13 @@ date: "2024-10-06"
 The important part here is knowing that each image in `background-image` can
 have a separate `background-clip` applied to it.
 
+<!-- prettier-ignore -->
 ```css
 button {
-  background: linear-gradient(#bbb, #fff) content-box, linear-gradient(
-        #fff,
-        #999
-      ) padding-box, linear-gradient(#999, #fff) border-box;
+  background:
+    linear-gradient(#bbb, #fff) content-box,
+    linear-gradient(#fff, #999) padding-box,
+    linear-gradient(#999, #fff) border-box;
 }
 ```
 
@@ -43,8 +44,8 @@ associated `background-image`.
 
 ## Accessibility
 
-It's important to note that the internal dark <q>border</q> not only _looks
-good_ but is **necessary** for accessibility, based on the
+It's important to note that the internal dark "border" not only _looks good_ but
+is **necessary** for accessibility, based on the
 [WCAG contrast rules](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast).
 
 ## Credit
