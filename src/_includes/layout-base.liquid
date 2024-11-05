@@ -13,11 +13,7 @@
           <summary>Menu</summary>
           <nav class="nav">
             {% for item in menu %}
-              <a
-                {% if page.url == item.url %}
-                aria-current="page"
-                {% endif %}
-                href="{{ item.url }}">{{ item.title }}</a>
+              <a href="{{ item.url }}">{{ item.title }}</a>
             {% endfor %}
           </nav>
         </details>
@@ -34,12 +30,7 @@
       <div class="content-column flex flex-column gap3">
         <nav class="footer-links">
           {% for item in menu %}
-            <a
-              {% if page.url == item.url %}
-              aria-current="page"
-              {% endif %}
-              href="{{ item.url }}"
-              class="sage-link">{{ item.title }}</a>
+            <a href="{{ item.url }}" class="sage-link">{{ item.title }}</a>
           {% endfor %}
         </nav>
         <wavebeem-theme-select>
