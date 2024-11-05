@@ -10,7 +10,7 @@ function createContentHash(filename) {
 
 export default {
   wavebeemThemeSelect: createContentHash(
-    "src/static/wavebeem-theme-select.mjs"
+    "src/static/elements/wavebeem-theme-select.mjs"
   ),
   favicon: createContentHash("src/static/favicon.png"),
   faviconVector: createContentHash("src/static/favicon.svg"),

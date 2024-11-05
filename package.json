@@ -28,7 +28,6 @@
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
     "colorjs.io": "^0.5.0",
     "dateformat": "^3.0.3",
-    "fast-average-color-node": "^3.0.0",
     "glob": "^11.0.0",
     "image-size": "^1.1.1",
     "markdown-it": "^14.1.0",

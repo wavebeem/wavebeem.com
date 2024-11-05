@@ -8,25 +8,23 @@ pageName: "art"
 <h1>{{ title }}</h1>
 
 <div class="art-container">
-  {% for img in art | reverse %}
-  <figure class="art-container--frame sage-well">
-    <a class="flex sage-link" tabindex="-1" href="{{ img.url }}">
-      <img
-        src="{{ img.url }}"
-        alt="{{ img.name }}"
-        width="{{ img.width }}"
-        height="{{ img.height }}"
-        style="background-color: {{ img.color }};"
-        loading="{% if forloop.index > 4 %}lazy{% else %}eager{% endif %}"
-      />
-    </a>
-    <figcaption>
-      <a class="sage-link" href="{{ img.url }}">{{ img.name }}</a>
-    </figcaption>
-    <time
-      datetime="{{ img.date | formatDate: 'yyyy-mm-dd' }}"
-      >{{ img.date | formatDate: 'yyyy mmmm d' }}</time
-    >
-  </figure>
+  {% for img in art reversed %}
+    <figure class="art-container--frame">
+      <a
+        class="flex sage-link"
+        tabindex="-1"
+        href="{{ img.url }}">
+        <img
+          src="{{ img.url }}"
+          alt=""
+          width="{{ img.width }}"
+          height="{{ img.height }}"
+          loading="{% if forloop.index > 4 %}lazy{% else %}eager{% endif %}" />
+      </a>
+      <figcaption>
+        <a class="sage-link" href="{{ img.url }}">{{ img.name }}</a>
+      </figcaption>
+      <time datetime="{{ img.date | formatDate: 'yyyy-mm-dd' }}">{{ img.date | formatDate: 'yyyy mmmm d' }}</time>
+    </figure>
   {% endfor %}
 </div>

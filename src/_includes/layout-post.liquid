@@ -1,56 +1,66 @@
----
-layout: "layout-base"
----
+<!doctype html>
+<html lang="en" data-page-name="{{ pageName }}">
+  <head>
+    {% include 'partials/head' %}
+  </head>
+  <body>
+    {% include 'partials/header' %}
+    <main>
+      <div class="content-column">
+        <article>
+          <h1>
+            {{ title }}
+          </h1>
 
-<article>
-  <h1>
-    {{ title }}
-  </h1>
+          <p class="post-date date">
+            <time datetime="{{ page.date | formatDate: 'yyyy-mm-dd' }}">{{ page.date | formatDate: 'yyyy mmmm d' }}</time>
+          </p>
 
-  <p class="post-date date">
-    <time datetime="{{ page.date | formatDate: 'yyyy-mm-dd' }}">{{ page.date | formatDate: 'yyyy mmmm d' }}</time>
-  </p>
+          <blockquote>
+            {{ description }}
+          </blockquote>
 
-  <blockquote>
-    {{ description }}
-  </blockquote>
+          <div class="sage-prose post">
+            {{ content }}
+          </div>
+        </article>
 
-  <div class="sage-prose post">
-    {{ content }}
-  </div>
-</article>
+        <hr/>
 
-<hr/>
+        <h2>Comments</h2>
 
-<h2>Comments</h2>
+        <div class="sage-well">
+          I would be thrilled if you want to
+          <a href="/contact/" class="sage-link">contact me</a>
+          to talk about this post.
+        </div>
 
-<div class="sage-well">
-  I would be thrilled if you want to
-  <a href="/contact/" class="sage-link">contact me</a>
-  to talk about this post.
-</div>
+        <h2>Stay up to date</h2>
 
-<h2>Stay up to date</h2>
-
-<p>
-  Subscribe to my
-  <a class="sage-link" href="/feed.xml">RSS feed</a>
-  to stay up 
+        <p>
+          Subscribe to my
+          <a class="sage-link" href="/feed.xml">RSS feed</a>
+          to stay up 
   to date with my posts.
-</p>
+        </p>
 
-<h2>Related posts by tag</h2>
+        <h2>Related posts by tag</h2>
 
-<ul class="tag-list">
-  {% assign realTags = tags | sort | filterTagList %}
-  {% for tag in realTags %}
-    <li>
-      <a class="sage-link" href="/blog/tags/{{ tag }}/">{{ tag | prettyTag }}</a>
-    </li>
-  {% endfor %}
-</ul>
+        <ul class="tag-list">
+          {% assign realTags = tags | sort | filterTagList %}
+          {% for tag in realTags %}
+            <li>
+              <a class="sage-link" href="/blog/tags/{{ tag }}/">{{ tag | prettyTag }}</a>
+            </li>
+          {% endfor %}
+        </ul>
 
-<p>
-  <span aria-hidden="true">&larr;</span>
-  <a href="/blog/" class="sage-link">All blog posts</a>
-</p>
+        <p>
+          <span aria-hidden="true">&larr;</span>
+          <a href="/blog/" class="sage-link">All blog posts</a>
+        </p>
+      </div>
+    </main>
+    {% include 'partials/footer' %}
+  </body>
+</html>

@@ -1,10 +1,8 @@
 // @ts-check
-
-import * as path from "node:path";
-import * as fs from "node:fs";
-import { getAverageColor } from "fast-average-color-node";
-import getImageSize from "image-size";
 import { AssetCache } from "@11ty/eleventy-cache-assets";
+import getImageSize from "image-size";
+import * as fs from "node:fs";
+import * as path from "node:path";
 import artTitles from "./artTitles.mjs";
 
 const root = "src/art";
@@ -38,9 +36,6 @@ async function readInfo(filename) {
   name = title;
   const file = path.join(root, filename);
   const { width, height } = getImageSize(file);
-  const { hex: color } = await getAverageColor(file, {
-    algorithm: "dominant",
-  });
   const obj = {
     url,
     year,
@@ -48,7 +43,6 @@ async function readInfo(filename) {
     date,
     width,
     height,
-    color,
     extension,
     slug,
   };

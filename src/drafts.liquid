@@ -9,7 +9,7 @@ permalink: "/drafts/"
 <h2>All drafts</h2>
 
 <div class="post-list">
-  {% for draft in collections.draft | reverse %}
+  {% for draft in collections.draft reversed %}
     <section class="post-list--post sage-well">
       <h3>
         <a class="sage-link no-underline" href="{{ draft.url }}">

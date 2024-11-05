@@ -39,7 +39,8 @@ permalink: "/blog/tags/{{ tag }}/"
 </h2>
 
 <div class="post-list">
-  {% for post in collections.posts | reverse %}
+  {% assign posts = collections.posts | filterByTag: tag %}
+  {% for post in posts reversed %}
     <section class="post-list--post sage-well">
       <h2>
         <a class="sage-link no-underline" href="{{ post.url }}">

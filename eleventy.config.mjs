@@ -42,7 +42,6 @@ export default function getConfig(config) {
   });
 
   config.addFilter("take", function (array, count) {
-    console.log("take", array.length, count);
     return array.slice(0, count);
   });
 
@@ -94,7 +93,6 @@ export default function getConfig(config) {
   });
 
   config.addFilter("groupByYear", function (collection) {
-    console.log("groupByYear", collection.length);
     const map = new Map();
     for (const page of collection) {
       const year = page.date.getFullYear();
@@ -119,6 +117,15 @@ export default function getConfig(config) {
 
   config.addFilter("entries", function (data) {
     return Object.entries(data);
+  });
+
+  config.addFilter("filterByTag", function (data, tag) {
+    return data.flatMap((p) => {
+      if (p.data?.tags?.includes(tag)) {
+        return [p];
+      }
+      return [];
+    });
   });
 
   const blockedTags = new Set(["all", "posts"]);
