@@ -9,7 +9,7 @@ permalink: "/blog/"
 <p>
   Subscribe to my
   <a class="sage-link" href="/feed.xml">RSS feed</a>
-  to stay up
+  to stay up 
   to date with my posts.
 </p>
 
@@ -27,8 +27,7 @@ permalink: "/blog/"
 <h2>All posts</h2>
 
 <div class="post-list">
-  {% assign posts = collections.posts | reverse %}
-  {% for post in posts %}
+  {% for post in collections.posts reversed %}
     <section class="post-list--post sage-well">
       <h3>
         <a class="sage-link no-underline" href="{{ post.url }}">
@@ -36,7 +35,6 @@ permalink: "/blog/"
         </a>
       </h3>
       <time datetime="{{ post.date | formatDate: 'yyyy-mm-dd' }}">{{ post.date | formatDate: 'yyyy mmmm d' }}</time>
-
       <p>
         {{ post.data.description }}
       </p>

@@ -93,6 +93,26 @@ export default function getConfig(config) {
     return Array.from(set);
   });
 
+  config.addFilter("groupByYear", function (collection) {
+    console.log("groupByYear", collection.length);
+    const map = new Map();
+    for (const page of collection) {
+      const year = page.date.getFullYear();
+      let group = map.get(year);
+      if (!group) {
+        group = [];
+        map.set(year, group);
+      }
+      group.push(page);
+    }
+    return Array.from(map.entries());
+  });
+
+  config.addFilter("debug", function (data) {
+    console.log(data);
+    return data;
+  });
+
   config.addFilter("sort", function (data) {
     return [...data].sort((a, b) => a.localeCompare(b));
   });
