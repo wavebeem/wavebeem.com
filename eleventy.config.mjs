@@ -99,9 +99,15 @@ export default function getConfig(config) {
     return Array.from(set);
   });
 
+  function* reversed(list) {
+    for (let i = list.length - 1; i >= 0; i--) {
+      yield list[i];
+    }
+  }
+
   config.addFilter("groupByYear", function (collection) {
     const map = new Map();
-    for (const page of collection) {
+    for (const page of reversed(collection)) {
       const year = page.date.getFullYear();
       let group = map.get(year);
       if (!group) {
@@ -114,8 +120,8 @@ export default function getConfig(config) {
   });
 
   config.addFilter("debug", function (data) {
-    console.log(data);
-    return data;
+    console.info(data);
+    return "";
   });
 
   config.addFilter("sort", function (data) {

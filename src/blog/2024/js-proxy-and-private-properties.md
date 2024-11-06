@@ -1,8 +1,8 @@
 ---
-title: |
-  JS Proxy and private properties
-description: |
-  The default Proxy implementation doesn't work well with private properties, but we can fix this! I also explore other approaches to private data in JS.
+title: "JS Proxy and private properties"
+description:
+  "The default Proxy implementation doesn't work well with private properties,
+  but we can fix this! I also explore other approaches to private data in JS."
 tags:
   - "programming"
   - "javascript"

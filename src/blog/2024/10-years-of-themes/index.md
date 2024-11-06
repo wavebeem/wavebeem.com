@@ -1,8 +1,8 @@
 ---
-title: |
-  10 years of themes
-description: |
-  An image gallery and reflection of 10 years of themes I've made for wavebeem.com
+title: "10 years of themes"
+description:
+  "An image gallery and reflection of 10 years of themes I've made for
+  wavebeem.com"
 tags:
   - "web"
   - "design"

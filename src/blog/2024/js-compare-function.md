@@ -1,8 +1,8 @@
 ---
-title: |
-  JS compare function
-description: |
-  Exploring a small but mighty function that supercharges the JS Array sort method to rival Lodash's orderBy
+title: "JS compare function"
+description:
+  "Exploring a small but mighty function that supercharges the JS Array sort
+  method to rival Lodash's orderBy"
 tags:
   - "programming"
   - "javascript"
@@ -126,7 +126,7 @@ _.orderBy(
     // Then sort by language name
     (item) => item,
   ],
-  ["desc", "asc", "asc"],
+  ["desc", "asc", "asc"]
 );
 ```
 

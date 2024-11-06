@@ -24,22 +24,28 @@ permalink: "/blog/"
   {% endfor %}
 </ul>
 
-<h2>All posts</h2>
+{% assign postsByYear = collections.posts | groupByYear %}
+{% for item in postsByYear %}
+  {% assign year = item[0] %}
+  {% assign postList = item[1] %}
 
-<div class="post-list">
-  {% for post in collections.posts reversed %}
-    <section class="post-list--post sage-well">
-      <h3>
-        <a class="sage-link no-underline" href="{{ post.url }}">
-          {{ post.data.title }}
-        </a>
-      </h3>
-      <time datetime="{{ post.date | formatDate: 'yyyy-mm-dd' }}">{{ post.date | formatDate: 'yyyy mmmm d' }}</time>
-      <p>
-        {{ post.data.description }}
-      </p>
-    </section>
-  {% endfor %}
-</div>
+  <h2>{{ year }}</h2>
+
+  <div class="post-list">
+    {% for post in postList %}
+      <section class="post-list--post sage-well">
+        <h3>
+          <a class="sage-link no-underline" href="{{ post.url }}">
+            {{ post.data.title | escape }}
+          </a>
+        </h3>
+        <time datetime="{{ post.date | formatDate: 'yyyy-mm-dd' }}">{{ post.date | formatDate: 'yyyy mmmm d' }}</time>
+        <p>
+          {{ post.data.description | escape }}
+        </p>
+      </section>
+    {% endfor %}
+  </div>
+{% endfor %}
 
 {{ content }}

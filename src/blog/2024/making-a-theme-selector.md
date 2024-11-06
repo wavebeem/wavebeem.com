@@ -1,8 +1,8 @@
 ---
-title: |
-  Making a theme selector
-description: |
-  How to make a theme selector for your website, and why you might want to have more than one theme.
+title: "Making a theme selector"
+description:
+  "How to make a theme selector for your website, and why you might want to have
+  more than one theme."
 tags:
   - "programming"
   - "javascript"

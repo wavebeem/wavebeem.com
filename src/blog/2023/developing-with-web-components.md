@@ -1,8 +1,9 @@
 ---
-title: |
-  Developing with web components
-description: |
-  Thoughts on developing with web components from scratch; no UI libraries. This covers custom elements and very basic use of the <template> element. Shadow DOM is mentioned but not used.
+title: "Developing with web components"
+description:
+  "Thoughts on developing with web components from scratch; no UI libraries.
+  This covers custom elements and very basic use of the <template> element.
+  Shadow DOM is mentioned but not used."
 tags:
   - "programming"
   - "javascript"
@@ -178,7 +179,7 @@ class HTMLCcFormOutputElement extends HTMLElement {
         foregrounds: split(this.foregrounds),
         backgrounds: split(this.backgrounds),
         groupBy: this.groupBy,
-      }),
+      })
     );
     this.innerHTML = "";
     if (combos.length === 0) {
