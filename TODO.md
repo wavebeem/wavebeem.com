@@ -1,8 +1,8 @@
 - Add image sizes to blog posts with images...
 
-- Group blog posts by year
-
 - Organize art folder by year and put metadata elsewhere?
+
+- Colocate blog post images with the posts themselves
 
 - Start using Font Awesome icons
 
