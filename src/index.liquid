@@ -1,0 +1,71 @@
+---
+description: "Sage Fennel's website"
+layout: "layout-base"
+pageName: "home"
+permalink: "/"
+---
+
+<script type="module" src="/elements/wavebeem-easter-egg.mjs"></script>
+
+<wavebeem-easter-egg class="avatar">
+  <img
+    alt=""
+    srcset="
+      /photo-180.webp?v={{ contentHashes.photo }} 1x,
+      /photo-360.webp?v={{ contentHashes.photo }} 2x
+    "
+    src="/photo-360.webp?v={{ contentHashes.photo }}"
+    width="120"
+    height="120" />
+</wavebeem-easter-egg>
+
+<h1>Hello!</h1>
+
+<p>
+  I'm
+  <a class="sage-link" href="/my-names/">Sage Fennel</a>
+  (they/them), aka
+  <q>wavebeem</q>.
+</p>
+
+<p>
+  I love video games, web development, makeup, pixel art, progressive metal, 
+  cats, and the color green.
+</p>
+
+<p>
+  I live in
+  <a class="sage-link" href="https://en.wikipedia.org/wiki/Portland,_Oregon">Portland</a>, where I enjoy gray skies, green leaves, and gentle rain.
+</p>
+
+<div class="clearfix"></div>
+
+<h2>Take a look around</h2>
+
+<div class="clicky-list">
+  {% for item in menu %}
+    <a class="link-card" href="{{ item.url }}">{{ item.title }}</a>
+  {% endfor %}
+</div>
+
+<h2>Recent posts</h2>
+
+<div class="post-list">
+  {% assign top3 = collections.posts | reverse | take: 3 %}
+  {% for post in top3 %}
+    <section class="post-list--post sage-well">
+      <h3>
+        <a class="sage-link no-underline" href="{{ post.url }}">
+          {{ post.data.title | escape }}
+        </a>
+      </h3>
+      {% render "partials/date" date: post.date %}
+      <p>{{ post.data.description | escape }}</p>
+    </section>
+  {% endfor %}
+</div>
+
+<p class="text-right">
+  <a href="/blog/" class="sage-link">All blog posts</a>
+  <span aria-hidden="true">&rarr;</span>
+</p>

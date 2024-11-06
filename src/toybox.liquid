@@ -1,0 +1,41 @@
+---
+title: "Toybox"
+description:
+  "A silly little collection of toys and jokes made specifically for the web."
+layout: "layout-base"
+permalink: "/toybox/"
+---
+
+<h1>{{ title }}</h1>
+
+<p>{{ description }}</p>
+
+<p>
+  Subscribe to my
+  <a class="sage-link" href="/feed.xml">RSS feed</a>
+  to stay up 
+  to date with my posts.
+</p>
+
+
+<h2>All toys</h2>
+
+<div class="post-list">
+  {% for post in collections.toybox reversed %}
+    <section class="post-list--post sage-well">
+      <h3>
+        <a class="sage-link no-underline" href="{{ post.url }}">
+          {{ post.data.title }}
+        </a>
+      </h3>
+
+      {% render "partials/date" date: post.date %}
+
+      <p>
+        {{ post.data.description | escape }}
+      </p>
+    </section>
+  {% endfor %}
+</div>
+
+{{ content }}

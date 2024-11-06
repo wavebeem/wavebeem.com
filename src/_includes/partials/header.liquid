@@ -1,0 +1,16 @@
+<header class="header screen-only">
+  <div class="content-column">
+    <div class="flex">
+      <a href="/" class="logo sage-link">wavebeem</a>
+    </div>
+    <details class="hamburger">
+      <summary>Menu</summary>
+      <nav class="nav">
+        {% for item in menu %}
+          <a href="{{ item.url }}">{{ item.title }}</a>
+        {% endfor %}
+      </nav>
+    </details>
+  </div>
+</header>
+<div class="slime"></div>

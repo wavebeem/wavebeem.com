@@ -1,7 +1,8 @@
 // @ts-check
-
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { fortawesomeSolidShortcode } from "@vidhill/fortawesome-solid-11ty-shortcode";
+import { fortawesomeBrandsShortcode } from "@vidhill/fortawesome-brands-11ty-shortcode";
 import dateformat from "dateformat";
 import markdownIt from "markdown-it";
 
@@ -18,10 +19,18 @@ export default function getConfig(config) {
 
   config.setLibrary("md", markdown);
   config.addPlugin(syntaxHighlight);
+  config.setLiquidOptions({
+    strictFilters: true,
+  });
   config.addPassthroughCopy({ "src/static": "/" });
   config.addPassthroughCopy("src/art/*.webp");
 
   config.addPlugin(pluginRss);
+
+  // https://fontawesome.com/search?o=r&m=free&s=solid&f=classic
+  config.addShortcode("icon", fortawesomeSolidShortcode);
+  // https://fontawesome.com/search?o=r&f=brands
+  config.addShortcode("brand", fortawesomeBrandsShortcode);
 
   config.addFilter("formatDate", function (value, format) {
     if (value === "now") {
@@ -90,8 +99,46 @@ export default function getConfig(config) {
     return Array.from(set);
   });
 
+  function* reversed(list) {
+    for (let i = list.length - 1; i >= 0; i--) {
+      yield list[i];
+    }
+  }
+
+  config.addFilter("groupByYear", function (collection) {
+    const map = new Map();
+    for (const page of reversed(collection)) {
+      const year = page.date.getFullYear();
+      let group = map.get(year);
+      if (!group) {
+        group = [];
+        map.set(year, group);
+      }
+      group.push(page);
+    }
+    return Array.from(map.entries());
+  });
+
+  config.addFilter("debug", function (data) {
+    console.info(data);
+    return "";
+  });
+
   config.addFilter("sort", function (data) {
     return [...data].sort((a, b) => a.localeCompare(b));
+  });
+
+  config.addFilter("entries", function (data) {
+    return Object.entries(data);
+  });
+
+  config.addFilter("filterByTag", function (data, tag) {
+    return data.flatMap((p) => {
+      if (p.data?.tags?.includes(tag)) {
+        return [p];
+      }
+      return [];
+    });
   });
 
   const blockedTags = new Set(["all", "posts"]);

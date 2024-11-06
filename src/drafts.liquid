@@ -1,0 +1,27 @@
+---
+title: "Drafts"
+layout: "layout-base"
+permalink: "/drafts/"
+---
+
+<h1>Drafts</h1>
+
+<h2>All drafts</h2>
+
+<div class="post-list">
+  {% for post in collections.draft reversed %}
+    <section class="post-list--post sage-well">
+      <h3>
+        <a class="sage-link no-underline" href="{{ post.url }}">
+          {{ post.data.title | escape }}
+        </a>
+      </h3>
+      {% render "partials/date" date: post.date %}
+      <p>
+        {{ post.data.description | escape }}
+      </p>
+    </section>
+  {% endfor %}
+</div>
+
+{{ content }}

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" data-page-name="{{ pageName }}">
+  <head>
+    {% include 'partials/head' %}
+  </head>
+  <body>
+    {% include 'partials/header' %}
+    <main>
+      <div class="content-column">
+        <article>
+          <h1>
+            {{ title }}
+          </h1>
+
+          <p class="post-date date">
+            {% render "partials/date" date: page.date %}
+          </p>
+
+          <blockquote>
+            {{ description }}
+          </blockquote>
+
+          <div class="sage-prose post">
+            {{ content }}
+          </div>
+        </article>
+
+        <hr/>
+
+        <h2>Comments</h2>
+
+        <div class="sage-well">
+          I would be thrilled if you want to
+          <a href="/contact/" class="sage-link">contact me</a>
+          to talk about this post.
+        </div>
+
+        <h2>Stay up to date</h2>
+
+        <p>
+          Subscribe to my
+          <a class="sage-link" href="/feed.xml">RSS feed</a>
+          to stay up to date with my posts.
+        </p>
+
+        <h2>Related posts by tag</h2>
+
+        <ul class="tag-list">
+          {% assign realTags = tags | sort | filterTagList %}
+          {% for tag in realTags %}
+            <li>
+              <a class="sage-link" href="/blog/tags/{{ tag }}/">{{ tag | prettyTag }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <p>
+          <span aria-hidden="true">&larr;</span>
+          <a href="/blog/" class="sage-link">All blog posts</a>
+        </p>
+      </div>
+    </main>
+    {% include 'partials/footer' %}
+  </body>
+</html>
