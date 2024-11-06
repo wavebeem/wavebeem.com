@@ -8,8 +8,6 @@ tags:
 date: "2024-10-20"
 ---
 
-Adapted from a Cohost post made on 2023 June 2.
-
 ## I wrote this after beating Tears of the Kingdom (TOTK)
 
 Like Breath of the Wild (BOTW) before it, this game could be played for hundreds
