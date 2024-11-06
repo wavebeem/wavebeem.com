@@ -24,7 +24,7 @@ pageName: "art"
       <figcaption>
         <a class="sage-link" href="{{ img.url }}">{{ img.name }}</a>
       </figcaption>
-      <time datetime="{{ img.date | formatDate: 'yyyy-mm-dd' }}">{{ img.date | formatDate: 'yyyy mmmm d' }}</time>
+      {% render "partials/date" date: img.date %}
     </figure>
   {% endfor %}
 </div>

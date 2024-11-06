@@ -13,12 +13,12 @@ permalink: "/drafts/"
     <section class="post-list--post sage-well">
       <h3>
         <a class="sage-link no-underline" href="{{ post.url }}">
-          {{ post.data.title }}
+          {{ post.data.title | escape }}
         </a>
       </h3>
-      <time datetime="{{ post.date | formatDate: 'yyyy-mm-dd' }}">{{ post.date | formatDate: 'yyyy mmmm d' }}</time>
+      {% render "partials/date" date: post.date %}
       <p>
-        {{ post.data.description }}
+        {{ post.data.description | escape }}
       </p>
     </section>
   {% endfor %}

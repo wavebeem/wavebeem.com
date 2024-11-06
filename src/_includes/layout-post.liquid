@@ -13,7 +13,7 @@
           </h1>
 
           <p class="post-date date">
-            <time datetime="{{ page.date | formatDate: 'yyyy-mm-dd' }}">{{ page.date | formatDate: 'yyyy mmmm d' }}</time>
+            {% render "partials/date" date: page.date %}
           </p>
 
           <blockquote>

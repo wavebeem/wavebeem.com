@@ -39,7 +39,7 @@ permalink: "/blog/"
             {{ post.data.title | escape }}
           </a>
         </h3>
-        <time datetime="{{ post.date | formatDate: 'yyyy-mm-dd' }}">{{ post.date | formatDate: 'yyyy mmmm d' }}</time>
+        {% render "partials/date" date: post.date %}
         <p>
           {{ post.data.description | escape }}
         </p>

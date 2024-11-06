@@ -1,7 +1,7 @@
 ---
 title: "Toybox"
-description: |
-  A silly little collection of toys and jokes made specifically for the web.
+description:
+  "A silly little collection of toys and jokes made specifically for the web."
 layout: "layout-base"
 permalink: "/toybox/"
 ---
@@ -29,10 +29,10 @@ permalink: "/toybox/"
         </a>
       </h3>
 
-      <time datetime="{{ post.date | formatDate: 'yyyy-mm-dd' }}">{{ post.date | formatDate: 'yyyy mmmm d' }}</time>
+      {% render "partials/date" date: post.date %}
 
       <p>
-        {{ post.data.description }}
+        {{ post.data.description | escape }}
       </p>
     </section>
   {% endfor %}
