@@ -1,6 +1,8 @@
 // @ts-check
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { fortawesomeSolidShortcode } from "@vidhill/fortawesome-solid-11ty-shortcode";
+import { fortawesomeBrandsShortcode } from "@vidhill/fortawesome-brands-11ty-shortcode";
 import dateformat from "dateformat";
 import markdownIt from "markdown-it";
 
@@ -24,6 +26,11 @@ export default function getConfig(config) {
   config.addPassthroughCopy("src/art/*.webp");
 
   config.addPlugin(pluginRss);
+
+  // https://fontawesome.com/search?o=r&m=free&s=solid&f=classic
+  config.addShortcode("icon", fortawesomeSolidShortcode);
+  // https://fontawesome.com/search?o=r&f=brands
+  config.addShortcode("brand", fortawesomeBrandsShortcode);
 
   config.addFilter("formatDate", function (value, format) {
     if (value === "now") {

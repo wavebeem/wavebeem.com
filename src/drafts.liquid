@@ -9,19 +9,17 @@ permalink: "/drafts/"
 <h2>All drafts</h2>
 
 <div class="post-list">
-  {% for draft in collections.draft reversed %}
+  {% for post in collections.draft reversed %}
     <section class="post-list--post sage-well">
       <h3>
-        <a class="sage-link no-underline" href="{{ draft.url }}">
-          {{ draft.data.title }}
+        <a class="sage-link no-underline" href="{{ post.url }}">
+          {{ post.data.title }}
         </a>
       </h3>
-
+      <time datetime="{{ post.date | formatDate: 'yyyy-mm-dd' }}">{{ post.date | formatDate: 'yyyy mmmm d' }}</time>
       <p>
-        {{ draft.data.description }}
+        {{ post.data.description }}
       </p>
-
-      <time datetime="{{ draft.date | formatDate: 'yyyy-mm-dd' }}">{{ draft.date | formatDate: 'yyyy mmmm d' }}</time>
     </section>
   {% endfor %}
 </div>

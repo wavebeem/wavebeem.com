@@ -4,6 +4,10 @@
 
 - Organize art folder by year and put metadata elsewhere?
 
+- Start using Font Awesome icons
+
+- Make an "include" for dates
+
 - Try out other templating languages besides Liquid
 
 - Put the toybox toys in the regular blog hole?
