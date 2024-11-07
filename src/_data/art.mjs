@@ -5,7 +5,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import artTitles from "./artTitles.mjs";
 
-const root = "src/art";
+const root = "src/static/art";
 
 function isArtImage(filename) {
   const base = path.basename(filename);
