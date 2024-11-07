@@ -2,8 +2,6 @@
 
 - Organize art folder by year and put metadata elsewhere?
 
-- Colocate blog post images with the posts themselves
-
 - Start using Font Awesome icons
 
 - Try out other templating languages besides Liquid

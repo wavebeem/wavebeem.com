@@ -23,7 +23,6 @@ export default function getConfig(config) {
     strictFilters: true,
   });
   config.addPassthroughCopy({ "src/static": "/" });
-  config.addPassthroughCopy("src/art/*.webp");
 
   config.addPlugin(pluginRss);
 
