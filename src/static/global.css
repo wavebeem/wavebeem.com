@@ -464,8 +464,8 @@ main {
   display: flex;
 
   box-shadow: 0 0 2px 0 hsl(12, 100%, 68%, 0.7),
-    inset -8px -8px 8px 0 hsl(12, 100%, 88%, 0.5),
-    inset 8px 8px 8px 0 hsl(12, 100%, 98%, 0.5);
+    inset -4px -4px 4px 0 hsl(12, 100%, 88%, 0.5),
+    inset 4px 4px 4px 0 hsl(12, 100%, 98%, 0.5);
 }
 
 :where(.tag-list) .sage-link {
@@ -1193,9 +1193,8 @@ main {
   color: var(--color-main-link);
   background: var(--color-card-background);
 
-  border-radius: 1rem;
   background: var(--color-card-background);
-  box-shadow: 1px 1px 4px 0 hsl(12, 100%, 68%, 0.7),
+  box-shadow: 0 0 2px 0 hsl(12, 100%, 68%, 0.7),
     inset -4px -4px 4px 0 hsl(12, 100%, 88%, 0.5),
     inset 4px 4px 4px 0 hsl(12, 100%, 98%, 0.5);
 }
