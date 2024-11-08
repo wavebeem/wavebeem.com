@@ -975,6 +975,12 @@ main {
   margin-inline: 0;
   border-radius: 1rem;
   padding: 1rem;
+
+  /* HACK HACK HACK */
+  box-shadow: inset 0 2px 0 0px hsl(12, 100%, 95%);
+  border-top: 2px solid hsl(12, 100%, 92.1%);
+  border-bottom: 2px solid hsl(12, 100%, 86.1%);
+  border-inline: 2px solid hsl(12, 100%, 90.1%);
 }
 
 [data-page-name="blog-post"] blockquote > :first-child {
