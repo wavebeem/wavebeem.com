@@ -215,6 +215,10 @@ summary {
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
+
+  box-shadow: 1px 1px 4px 0 hsl(109.7, 61.8%, 38%, 0.7),
+    inset -4px -4px 4px 0 hsl(109.7, 61.8%, 68%, 0.5),
+    inset 4px 4px 4px 0 hsl(109.7, 61.8%, 94%, 0.5);
 }
 
 .hamburger summary::-webkit-details-marker {
@@ -248,7 +252,10 @@ summary {
 }
 
 .header {
-  background: var(--color-header-background);
+  background: linear-gradient(
+    hsl(109.7, 74.5%, 84%),
+    hsl(109.7, 74.5%, 80%) 16px
+  );
   color: var(--color-header-text);
 }
 
@@ -274,9 +281,22 @@ summary {
   display: contents;
 }
 
+.slime-container {
+  /* Don't let slime get in the way of clicking stuff */
+  pointer-events: none;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  border-radius: 1rem;
+  filter: drop-shadow(0 2px 0 hsl(109.7, 74.5%, 92%, 0.7))
+    drop-shadow(0 2px 0 hsl(109.7, 74.5%, 58%, 0.7))
+    drop-shadow(0 4px 2px hsl(109.7, 74.5%, 38%, 0.3));
+}
+
 .slime {
   height: 2rem;
-  background: var(--color-header-background);
+  background: linear-gradient(hsl(109.7, 74.5%, 80%), hsl(109.7, 74.5%, 80%));
   /* https://css-generators.com/wavy-shapes/ */
   --mask: radial-gradient(
         1.35rem at 50% calc(100% - 1.9rem),
@@ -288,11 +308,6 @@ summary {
       50% calc(100% - 1rem) / 4rem 100% repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
-  /* Don't let slime get in the way of clicking stuff */
-  pointer-events: none;
-  position: sticky;
-  top: 0;
-  z-index: 1;
 }
 
 p {
@@ -508,7 +523,7 @@ main {
 
 .clicky-list {
   display: grid;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 @media (min-width: 500px) {
@@ -1088,6 +1103,14 @@ main {
   background: var(--color-card-background);
 }
 
+.sage-well {
+  border-radius: 1rem;
+  background: var(--color-card-background);
+  box-shadow: 2px 2px 8px 0 hsl(12, 100%, 68%, 0.7),
+    inset -8px -8px 8px 0 hsl(12, 100%, 88%, 0.5),
+    inset 8px 8px 8px 0 hsl(12, 100%, 98%, 0.5);
+}
+
 .sage-well > :first-child {
   margin-top: 0;
 }
@@ -1151,6 +1174,12 @@ main {
   border-radius: 0.5rem;
   color: var(--color-main-link);
   background: var(--color-card-background);
+
+  border-radius: 1rem;
+  background: var(--color-card-background);
+  box-shadow: 1px 1px 4px 0 hsl(12, 100%, 68%, 0.7),
+    inset -4px -4px 4px 0 hsl(12, 100%, 88%, 0.5),
+    inset 4px 4px 4px 0 hsl(12, 100%, 98%, 0.5);
 }
 
 .logo {
