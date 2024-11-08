@@ -49,34 +49,28 @@ export const light = {
 };
 
 export const dark = {
-  "color-selection": oklch(50, 20, 140, 75),
-
-  "color-header-text": oklch(96, 40, 140),
-  "color-header-background": oklch(50, 20, 140),
-  "color-header-button": oklch(45, 22, 140),
-
-  "color-footer-background": oklch(34, 4, 290),
-  "color-aside-background": oklch(34, 4, 290),
-
-  "color-card-background": oklch(34, 4, 30),
-  "color-card-hover": oklch(36, 4, 30),
-
-  "color-main-link": oklch(80, 100, 290),
-  "color-main-background": oklch(30, 4, 30),
-  "color-main-text": oklch(85, 4, 30),
-  "color-main-code": oklch(80, 40, 340),
-  "color-main-decoration": oklch(60, 4, 30),
-
-  "color-syntax-background": oklch(28, 4, 30),
-  "color-syntax-text": oklch(90, 5, 30),
-  "color-syntax-comment": oklch(70, 10, 300),
-  "color-syntax-keyword": oklch(80, 70, 170),
-  "color-syntax-property": oklch(80, 70, 250),
-  "color-syntax-string": oklch(80, 50, 340),
-  "color-syntax-punctuation": oklch(70, 15, 30),
-
-  "color-easter-egg-shadow": oklch(25, 5, 30),
-  "color-easter-egg-highlight": oklch(100, 0, 0, 30),
+  // "color-selection": oklch(50, 20, 140, 75),
+  // "color-header-text": oklch(96, 40, 140),
+  // "color-header-background": oklch(50, 20, 140),
+  // "color-header-button": oklch(45, 22, 140),
+  // "color-footer-background": oklch(34, 4, 290),
+  // "color-aside-background": oklch(34, 4, 290),
+  // "color-card-background": oklch(34, 4, 30),
+  // "color-card-hover": oklch(36, 4, 30),
+  // "color-main-link": oklch(80, 100, 290),
+  // "color-main-background": oklch(30, 4, 30),
+  // "color-main-text": oklch(85, 4, 30),
+  // "color-main-code": oklch(80, 40, 340),
+  // "color-main-decoration": oklch(60, 4, 30),
+  // "color-syntax-background": oklch(28, 4, 30),
+  // "color-syntax-text": oklch(90, 5, 30),
+  // "color-syntax-comment": oklch(70, 10, 300),
+  // "color-syntax-keyword": oklch(80, 70, 170),
+  // "color-syntax-property": oklch(80, 70, 250),
+  // "color-syntax-string": oklch(80, 50, 340),
+  // "color-syntax-punctuation": oklch(70, 15, 30),
+  // "color-easter-egg-shadow": oklch(25, 5, 30),
+  // "color-easter-egg-highlight": oklch(100, 0, 0, 30),
 };
 
 export const listLight = Object.entries(light);
