@@ -423,13 +423,16 @@ main {
 .sage-button {
   display: inline-block;
   font-weight: bold;
-  border: 2px solid transparent;
+  border: 0 solid transparent;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
   background: var(--color-main-link);
   color: var(--color-main-background);
   text-decoration-line: none;
   text-decoration-thickness: 2px;
+  box-shadow: 1px 1px 4px 0 hsl(256.6, 56.4%, 42%, 0.7),
+    inset -8px -8px 8px 0 hsl(256.6, 56.4%, 32%, 0.5),
+    inset 8px 8px 8px 0 hsl(256.6, 56.4%, 62%, 0.5);
 }
 
 .sage-button:focus-visible {
@@ -459,6 +462,10 @@ main {
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
   display: flex;
+
+  box-shadow: 0 0 2px 0 hsl(12, 100%, 68%, 0.7),
+    inset -8px -8px 8px 0 hsl(12, 100%, 88%, 0.5),
+    inset 8px 8px 8px 0 hsl(12, 100%, 98%, 0.5);
 }
 
 :where(.tag-list) .sage-link {
@@ -487,6 +494,10 @@ main {
   border-radius: 0.5rem;
   text-decoration-line: none;
   text-decoration-thickness: 2px;
+
+  box-shadow: 0 0 2px 0 hsl(109.7, 61.8%, 28%, 0.7),
+    inset -4px -4px 4px 0 hsl(109.7, 61.8%, 68%, 0.5),
+    inset 4px 4px 4px 0 hsl(109.7, 61.8%, 88%, 0.5);
 }
 
 .nav :any-link:hover {
@@ -924,7 +935,10 @@ main {
   border-radius: 1rem;
   display: block;
   background: var(--color-card-background);
-  border: 0.5rem solid transparent;
+  padding: 0.5rem;
+  box-shadow: 1px 1px 4px 0 hsl(12, 100%, 68%, 0.7),
+    inset -8px -8px 8px 0 hsl(12, 100%, 88%, 0.5),
+    inset 8px 8px 8px 0 hsl(12, 100%, 98%, 0.5);
 }
 
 @media (max-width: 420px) {
@@ -959,6 +973,10 @@ main {
   margin-inline: 0;
   border-radius: 1rem;
   padding: 1rem;
+
+  box-shadow: 1px 1px 4px 0 hsl(12, 100%, 68%, 0.7),
+    inset -8px -8px 8px 0 hsl(12, 100%, 88%, 0.5),
+    inset 8px 8px 8px 0 hsl(12, 100%, 98%, 0.5);
 }
 
 [data-page-name="blog-post"] blockquote > :first-child {
@@ -1106,7 +1124,7 @@ main {
 .sage-well {
   border-radius: 1rem;
   background: var(--color-card-background);
-  box-shadow: 2px 2px 8px 0 hsl(12, 100%, 68%, 0.7),
+  box-shadow: 1px 1px 4px 0 hsl(12, 100%, 68%, 0.7),
     inset -8px -8px 8px 0 hsl(12, 100%, 88%, 0.5),
     inset 8px 8px 8px 0 hsl(12, 100%, 98%, 0.5);
 }
