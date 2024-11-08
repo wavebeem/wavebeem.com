@@ -22,10 +22,15 @@ export const light = {
 
   "color-header-text": oklch(40, 40, 140),
   "color-header-background": oklch(90, 30, 140),
+  "color-header-background2": oklch(92, 30, 140),
+  "color-header-background3": oklch(80, 40, 140, 30),
+  "color-header-background3b": oklch(80, 40, 140, 30),
   "color-header-button": oklch(86, 32, 140),
 
   "color-footer-background": oklch(95, 20, 290),
   "color-aside-background": oklch(95, 20, 290),
+  "color-aside-background2": oklch(97, 20, 290),
+  "color-aside-background3": oklch(93, 20, 290),
 
   "color-card-background": oklch(95, 20, 30),
   "color-card-hover": oklch(97, 20, 30),

@@ -237,6 +237,12 @@ summary {
   border-radius: 9999px;
   font-weight: bold;
   cursor: default;
+
+  /* HACK HACK HACK */
+  box-shadow: inset 0 2px 0 0px hsl(109.6, 61.8%, 82.3%);
+  border-top: 2px solid hsl(109.6, 61.8%, 72.3%);
+  border-bottom: 2px solid hsl(109.6, 61.8%, 66.3%);
+  border-inline: 2px solid hsl(109.6, 61.8%, 70.3%);
 }
 
 .hamburger[open] > summary {
@@ -274,6 +280,17 @@ summary {
   display: contents;
 }
 
+.slime-container {
+  /* Don't let slime get in the way of clicking stuff */
+  pointer-events: none;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  filter: drop-shadow(0 2px 0 var(--color-header-background2))
+    drop-shadow(0 4px 0 var(--color-header-background3b))
+    drop-shadow(0 4px 0 var(--color-header-background3));
+}
+
 .slime {
   height: 2rem;
   background: var(--color-header-background);
@@ -288,11 +305,6 @@ summary {
       50% calc(100% - 1rem) / 4rem 100% repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
-  /* Don't let slime get in the way of clicking stuff */
-  pointer-events: none;
-  position: sticky;
-  top: 0;
-  z-index: 1;
 }
 
 p {
@@ -415,6 +427,12 @@ main {
   color: var(--color-main-background);
   text-decoration-line: none;
   text-decoration-thickness: 2px;
+
+  /* HACK HACK HACK */
+  box-shadow: inset 0 2px 0 0px hsl(256.6, 56.4%, 64.4%);
+  border-top: 2px solid hsl(256.6, 56.4%, 48.4%);
+  border-bottom: 2px solid hsl(256.6, 56.4%, 44.4%);
+  border-inline: 2px solid hsl(256.6, 56.4%, 46.4%);
 }
 
 .sage-button:focus-visible {
@@ -444,6 +462,12 @@ main {
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem;
   display: flex;
+
+  /* HACK HACK HACK */
+  box-shadow: inset 0 2px 0 0px hsl(12, 100%, 95%);
+  border-top: 2px solid hsl(12, 100%, 92.1%);
+  border-bottom: 2px solid hsl(12, 100%, 86.1%);
+  border-inline: 2px solid hsl(12, 100%, 90.1%);
 }
 
 :where(.tag-list) .sage-link {
@@ -468,6 +492,12 @@ main {
 .nav :any-link {
   padding: 0.5rem 1rem;
   background: var(--color-header-button);
+
+  box-shadow: inset 0 2px 0 0px hsl(109.6, 61.8%, 82.3%);
+  border-top: 2px solid hsl(109.6, 61.8%, 72.3%);
+  border-bottom: 2px solid hsl(109.6, 61.8%, 66.3%);
+  border-inline: 2px solid hsl(109.6, 61.8%, 70.3%);
+
   color: var(--color-header-text);
   border-radius: 0.5rem;
   text-decoration-line: none;
@@ -598,6 +628,7 @@ main {
   margin: 1rem;
   margin-top: 0;
   border-radius: 9999px;
+  border: 8px solid var(--color-card-background);
 }
 
 [data-page-name="home"] wavebeem-easter-egg.avatar[data-state="inside"] {
@@ -1086,6 +1117,12 @@ main {
   padding: 1rem;
   border-radius: 1rem;
   background: var(--color-card-background);
+
+  /* HACK HACK HACK */
+  box-shadow: inset 0 2px 0 0px hsl(12, 100%, 95%);
+  border-top: 2px solid hsl(12, 100%, 92.1%);
+  border-bottom: 2px solid hsl(12, 100%, 86.1%);
+  border-inline: 2px solid hsl(12, 100%, 90.1%);
 }
 
 .sage-well > :first-child {
@@ -1151,6 +1188,12 @@ main {
   border-radius: 0.5rem;
   color: var(--color-main-link);
   background: var(--color-card-background);
+
+  /* HACK HACK HACK */
+  box-shadow: inset 0 2px 0 0px hsl(12, 100%, 95%);
+  border-top: 2px solid hsl(12, 100%, 92.1%);
+  border-bottom: 2px solid hsl(12, 100%, 86.1%);
+  border-inline: 2px solid hsl(12, 100%, 90.1%);
 }
 
 .logo {
@@ -1188,6 +1231,11 @@ main {
   font-size: var(--font-size-small);
   font-weight: bold;
   background: var(--color-footer-background);
+}
+
+.footer-top-container {
+  filter: drop-shadow(0 -2px 0 var(--color-aside-background2))
+    drop-shadow(0 -4px 0 var(--color-aside-background3));
 }
 
 /* https://css-shape.com/rounded-edge/ */
