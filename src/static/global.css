@@ -962,12 +962,13 @@ main {
   display: block;
   padding: 0.5rem;
   background: var(--color-card-background);
-  border-top: 1px solid hsl(12, 100%, 68%, 0.1);
-  border-left: 1px solid hsl(12, 100%, 68%, 0.1);
-  border-bottom: 1px solid hsl(12, 100%, 68%, 0.5);
-  border-right: 1px solid hsl(12, 100%, 68%, 0.5);
-  box-shadow: inset -8px -8px 8px 0 hsl(12, 100%, 88%, 0.5),
-    inset 8px 8px 8px 0 hsl(12, 100%, 98%, 0.5);
+  background: var(--color-card-background);
+  background: linear-gradient(var(--color-card-background) 0 0) padding-box,
+    linear-gradient(to bottom, hsl(12, 100%, 92%), hsl(12, 100%, 82%, 1))
+      border-box;
+  border: 1px solid transparent;
+  box-shadow: inset -4px -4px 4px 0 hsl(12, 100%, 88%, 0.5),
+    inset 4px 4px 4px 0 hsl(12, 100%, 98%, 0.5);
 }
 
 @media (max-width: 420px) {
@@ -1003,12 +1004,13 @@ main {
   border-radius: 1rem;
   padding: 1rem;
 
-  border-top: 1px solid hsl(12, 100%, 68%, 0.1);
-  border-left: 1px solid hsl(12, 100%, 68%, 0.1);
-  border-bottom: 1px solid hsl(12, 100%, 68%, 0.5);
-  border-right: 1px solid hsl(12, 100%, 68%, 0.5);
-  box-shadow: inset -8px -8px 8px 0 hsl(12, 100%, 88%, 0.5),
-    inset 8px 8px 8px 0 hsl(12, 100%, 98%, 0.5);
+  background: var(--color-card-background);
+  background: linear-gradient(var(--color-card-background) 0 0) padding-box,
+    linear-gradient(to bottom, hsl(12, 100%, 92%), hsl(12, 100%, 82%, 1))
+      border-box;
+  border: 1px solid transparent;
+  box-shadow: inset -4px -4px 4px 0 hsl(12, 100%, 88%, 0.5),
+    inset 4px 4px 4px 0 hsl(12, 100%, 98%, 0.5);
 }
 
 [data-page-name="blog-post"] blockquote > :first-child {
@@ -1027,12 +1029,12 @@ main {
   background: var(--color-aside-background);
 
   background: var(--color-card-background);
-  border-top: 1px solid hsl(12, 100%, 68%, 0.1);
-  border-left: 1px solid hsl(12, 100%, 68%, 0.1);
-  border-bottom: 1px solid hsl(12, 100%, 68%, 0.5);
-  border-right: 1px solid hsl(12, 100%, 68%, 0.5);
-  box-shadow: inset -8px -8px 8px 0 hsl(12, 100%, 88%, 0.5),
-    inset 8px 8px 8px 0 hsl(12, 100%, 98%, 0.5);
+  background: linear-gradient(var(--color-card-background) 0 0) padding-box,
+    linear-gradient(to bottom, hsl(12, 100%, 92%), hsl(12, 100%, 82%, 1))
+      border-box;
+  border: 1px solid transparent;
+  box-shadow: inset -4px -4px 4px 0 hsl(12, 100%, 88%, 0.5),
+    inset 4px 4px 4px 0 hsl(12, 100%, 98%, 0.5);
 }
 
 /* [data-page-name="blog-post"] .infobox::before {
@@ -1080,6 +1082,13 @@ main {
   border-right: 1px solid hsl(26.7, 100%, 78.2%, 0.5);
   box-shadow: inset -8px -8px 8px 0 hsl(26.7, 100%, 94%, 0.5),
     inset 8px 8px 8px 0 hsl(26.7, 100%, 100%, 0.5);
+  background: var(--color-card-background);
+  background: linear-gradient(var(--color-card-background) 0 0) padding-box,
+    linear-gradient(to bottom, hsl(26.7, 100%, 78.2%), hsl(26.7, 100%, 78.2%))
+      border-box;
+  border: 1px solid transparent;
+  box-shadow: inset -4px -4px 4px 0 hsl(12, 100%, 88%, 0.5),
+    inset 4px 4px 4px 0 hsl(12, 100%, 98%, 0.5);
 }
 
 /* Reset color for nested scripts */
