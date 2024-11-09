@@ -8,7 +8,7 @@ import { Glob } from "glob";
 
 chdir("src/static");
 
-for await (const file of new Glob("img/{art,slime-mode}/**/*.{png,gif}", {})) {
+for await (const file of new Glob("{art,blog}/**/*.{png,gif}", {})) {
   for (const [, base] of match(file, /^(.*)\.(png|gif)/)) {
     console.log(file);
     spawnSync("magick", [file, "-quality", "100", `${base}.webp`]);
