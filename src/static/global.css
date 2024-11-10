@@ -187,6 +187,7 @@ details {
 summary {
   -webkit-user-select: none;
   user-select: none;
+  cursor: default;
 }
 
 .sage-well details > summary {
@@ -1144,13 +1145,19 @@ main {
 
 .link-card {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 0.5ch;
   text-decoration-line: none;
   text-decoration-thickness: 2px;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   color: var(--color-main-link);
   background: var(--color-card-background);
+}
+
+.link-card > img {
+  width: 1.5em;
+  height: auto;
 }
 
 .logo {
@@ -1188,6 +1195,7 @@ main {
   font-size: var(--font-size-small);
   font-weight: bold;
   background: var(--color-footer-background);
+  padding-top: 0.5rem;
 }
 
 /* https://css-shape.com/rounded-edge/ */

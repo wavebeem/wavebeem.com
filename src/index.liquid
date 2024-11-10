@@ -43,7 +43,13 @@ pageName: "home"
 
 <div class="clicky-list">
   {% for item in menu %}
-    <a class="link-card" href="{{ item.url }}">{{ item.title }}</a>
+    <a class="link-card" href="{{ item.url }}">
+      <img
+        src="{{ item.image }}"
+        width="24"
+        height="24" />
+      {{ item.title }}
+    </a>
   {% endfor %}
 </div>
 
