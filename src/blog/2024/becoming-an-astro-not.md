@@ -28,6 +28,10 @@ framework change to understand if I want to keep it or not.
 Their home page includes a cute cartoon opossum mascot that slowly floats in
 from the left side of the screen. It feels very no-nonsense, but a bit cute too.
 
+Seeing this I think "this is a well established tool made by a small group of
+quirky people". It seems like a good fit for an individual web enthusiast like
+me.
+
 ![](/blog/astro-not/11ty-home.webp)
 
 ![](/blog/astro-not/11ty-home2.webp)
@@ -36,16 +40,18 @@ from the left side of the screen. It feels very no-nonsense, but a bit cute too.
 
 **Eleventy's home page & documentation page**
 
-Seeing this I think "this is a well established tool made by a small group of
-quirky people". It seems like a good fit for an individual web enthusiast like
-me.
-
 ## Astro's vibes
 
 > **The web framework for content-driven websites**
 >
 > Astro powers the world's fastest marketing sites, blogs, e-commerce websites,
 > and more.
+
+Their home page opens with a highly polished style and catchy headline,
+underlined by a huge list of famous logos for some social proof.
+
+After that, we see a really cool hacker-esque set of code snippets about...
+building an e-commerce platform. I just want a blog with sprinkles lol.
 
 ![](/blog/astro-not/astro-home.webp)
 
@@ -54,9 +60,6 @@ me.
 ![](/blog/astro-not/astro-docs.webp)
 
 **Astro's home page & documentation page**
-
-Seeing this I immediately think "this page is trying to impress my CTO". This is
-for Business&trade;, which is fine, but I'm just a person with a website lol.
 
 ## What does it mean to be "simpler"?
 
@@ -71,23 +74,24 @@ really well for me.
 
 Astro on the other hand feels very business ready&trade;. With CSS modules,
 scoped inline styles, automatic script concatenation, JSX, TypeScript, etc... It
-brings a lot to the table for
+brings a lot to the table for larger teams and bigger sites.
 
 ## This isn't a hate post
 
-I'm fine with Astro. In fact, it seems really good. I'm trying to be more
+I'm fine with Astro. In fact, it seems really good. But I'm trying to be more
 conservative with my tech choices these days, with regard to not betting
 everything on brand new projects all the time (like so many of my peers seem to
 love doing).
 
 I think Astro seems like a really good framework for business use cases, and
-could be a nice alternative to the reigning
+could be a nice alternative to the recent dominance of Next.js and React-based
+websites.
 
 <aside class="infobox">
 
 ## Inline JavaScript in 2024?
 
-The documentation for Astro suggests
+Astro requires
 [allowing inline JavaScript](https://docs.astro.build/en/guides/troubleshooting/#refused-to-execute-inline-script).
 There's an
 [ongoing discussion](https://github.com/withastro/roadmap/discussions/377) about
@@ -95,13 +99,15 @@ changing this behavior, but it doesn't seem to be a priority.
 
 Google claims that most
 [Content Security Policy](https://research.google/pubs/csp-is-dead-long-live-csp-on-the-insecurity-of-whitelists-and-the-future-of-content-security-policy/)
-directives aren't actually effective in production, but the full text is not
-available.
+(CSP) directives aren't actually effective in production, but the full text is
+not available.
 
-My understanding is that primarily happens by compromising the integrity of
-third-party domains. I only include one third-party domain:
-[Plausible Analytics](https://plausible.io), and there is little value in XSS
-attacks against my site since it's a static blog with minimal traffic.
+My understanding is that cross-site scripting (XSS) attacks other than inline
+code (it's literally called `unsafe-inline` in CSP) execution primarily happen
+by compromising the integrity of third-party domains. I only include one
+third-party domain: [Plausible Analytics](https://plausible.io), and there is
+little value in XSS attacks against my site since it's a static blog with
+minimal traffic.
 
 </aside>
 
@@ -125,7 +131,8 @@ The documentation for various features can be pretty lightweight. I recently saw
 they added JSX support, but it's not especially documented besides a link out to
 an external
 [blog post from JetBrains](https://www.jetbrains.com/guide/javascript/tutorials/eleventy-tsx/)
-that didn't really work out for me very well.
+that didn't really work out for me very well. Maybe one day I'll get motivated
+and figure it out well enough to contribute to the official documentation.
 
 Nunjucks doesn't seem especially well supported these days, but migrating to
 Liquid was a horrible experience for me. Maybe I should play around with EJS?

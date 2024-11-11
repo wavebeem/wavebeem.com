@@ -140,24 +140,21 @@ button {
 h1 {
   font-family: var(--font-heading);
   font-size: var(--font-size-h1);
-  font-weight: normal;
-  line-height: 1.25;
+  line-height: 1;
   margin-block: 0 1rem;
 }
 
 h2 {
   font-family: var(--font-heading);
   font-size: var(--font-size-h2);
-  font-weight: bold;
-  line-height: 1.25;
+  line-height: 1;
   margin-block: 2rem 1rem;
 }
 
 h3 {
   font-family: var(--font-heading);
   font-size: var(--font-size-h3);
-  font-weight: bold;
-  line-height: 1.25;
+  line-height: 1;
   margin-block: 2rem 1rem;
 }
 
