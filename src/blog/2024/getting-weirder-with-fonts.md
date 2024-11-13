@@ -55,8 +55,7 @@ Not exactly a font thing, but the colored background for my "infoboxes" has been
 bothering me for a while. I love the color for my footer, but it feels out of
 place in the middle of the page. Also, it's a color that decreases the contrast
 of the foreground, which I'm not in love with. I like dotted borders a lot, and
-this felt like a really natural place to use them again. As seen in my
-[puffy 3D mode](/blog/2024/3d-puffy-experiment/) post, I'm growing
+this felt like a really natural place to use them again.
 
 ![](/blog/weird-fonts/info-before.webp)
 
