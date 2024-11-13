@@ -54,6 +54,7 @@ export default function getConfig(config) {
     ["draft", "Draft"],
     ["essay", "Essay"],
     ["feed", "Feed"],
+    ["fonts", "Fonts"],
     ["javascript", "JavaScript"],
     ["keyboards", "Keyboards"],
     ["meta", "Meta"],

@@ -12,9 +12,8 @@ date: "2019-07-08"
 
 This article is for people who have some familiarity with mechanical keyboards
 already. If not, you should read my first article,
-[Mechanical Keyboards 101](/blog/2018/07/28/mechanical-keyboards-101/). You
-might be considering building your own keyboard or trying out more niche
-hardware.
+[Mechanical Keyboards 101](/blog/2018/mechanical-keyboards-101/). You might be
+considering building your own keyboard or trying out more niche hardware.
 
 ## Why you might build your own
 

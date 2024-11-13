@@ -62,7 +62,7 @@ flawlessly supporting
 [custom elements](https://custom-elements-everywhere.com/), out of the box
 styling abstractions, routing, faster runtimes, and smaller file sizes. And
 don't even get me started on
-[hooks and useState](/blog/2022/01/25/why-i-don-t-like-usestate/).
+[hooks and useState](/blog/2022/why-i-dont-like-usestate/).
 
 I've made a goal for myself to learn more about the web platform. The pace of
 improvement to core web APIs and features is incredible. The level of code you

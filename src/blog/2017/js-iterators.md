@@ -419,4 +419,4 @@ on a feature, so we're not just limited to the language's built-in assumptions.
 [3]:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
 [4]: https://github.com/tj/co
-[5]: /blog/2016/08/22/the-leaning-tower-of-babel/
+[5]: /blog/2016/leaning-tower-of-babel/

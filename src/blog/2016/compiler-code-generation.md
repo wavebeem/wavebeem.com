@@ -192,7 +192,7 @@ as an exercise for the reader. I can suggest using [Parsimmon][5] as per my last
 blog post. The AST translation will require your own hard work, but escodegen
 can be used to turn the JS AST into JS code with ease.
 
-[1]: /blog/2016/11/01/making-a-language/
+[1]: /blog/2016/making-a-language/
 [2]: http://coffeescript.org/
 [3]: http://www.purescript.org/
 [4]: https://github.com/estools/escodegen
