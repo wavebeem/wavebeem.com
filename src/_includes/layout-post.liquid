@@ -12,16 +12,13 @@
             {{ title }}
           </h1>
 
-
           <p class="post-date date">
             {% render "partials/date" date: page.date %}
           </p>
 
-          <blockquote>
-            {{ description }}
-          </blockquote>
-
-          <hr/>
+          <div class="sage-well">
+            {{ description | escape }}
+          </div>
 
           <div class="sage-prose post">
             {{ content }}

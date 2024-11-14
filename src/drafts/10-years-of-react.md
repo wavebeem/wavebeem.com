@@ -100,8 +100,7 @@ immediate obvious feedback about these issues with jsx and always have.
 
 also, shout out to mithril js for doing the jsx thing before jsx with their
 awesome `m` function. that was cool and way ahead of its time. it inspired me to
-write about
-[react sans jsx](https://www.wavebeem.com/blog/2017/08/11/react-without-jsx/).
+write about [react sans jsx](/blog/2017/react-without-jsx/).
 
 ## what about css-in-js
 

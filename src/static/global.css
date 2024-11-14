@@ -1,13 +1,6 @@
 @font-face {
-  font-family: "PP Agrandir";
-  src: url("/fonts/pp-agrandir-regular.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Agrandir";
-  src: url("/fonts/pp-agrandir-bold.woff2") format("woff2");
+  font-family: "PP Talisman";
+  src: url("/fonts/pp-talisman-bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
@@ -80,11 +73,13 @@
 }
 
 :root {
-  --font-body: "PP Object Sans", system-ui, sans-serif;
-  --font-heading: "PP Agrandir", var(--font-body);
-  --font-logo: "Ultra Hi-Gloss", var(--font-body);
-  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", "SFMono-Regular",
-    "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
+  --font-fallback-main: system-ui, sans-serif;
+  --font-fallback-mono: ui-monospace, "Cascadia Code", "SFMono-Regular", "Menlo",
+    "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
+  --font-body: "PP Object Sans", var(--font-fallback-main);
+  --font-cool: "PP Talisman", var(--font-fallback-main);
+  --font-logo: "Ultra Hi-Gloss", var(--font-fallback-main);
+  --font-mono: "JetBrains Mono", var(--font-fallback-mono);
 
   --font-size-h1: 3rem;
   --font-size-h2: 2rem;
@@ -138,25 +133,25 @@ button {
 }
 
 h1 {
-  font-family: var(--font-heading);
+  font-family: var(--font-cool);
   font-size: var(--font-size-h1);
-  font-weight: normal;
+  letter-spacing: 1px;
   line-height: 1.25;
   margin-block: 0 1rem;
 }
 
 h2 {
-  font-family: var(--font-heading);
+  font-family: var(--font-cool);
   font-size: var(--font-size-h2);
-  font-weight: bold;
+  letter-spacing: 1px;
   line-height: 1.25;
   margin-block: 2rem 1rem;
 }
 
 h3 {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: var(--font-size-h3);
-  font-weight: bold;
+  font-style: italic;
   line-height: 1.25;
   margin-block: 2rem 1rem;
 }
@@ -187,6 +182,7 @@ details {
 summary {
   -webkit-user-select: none;
   user-select: none;
+  cursor: default;
 }
 
 .sage-well details > summary {
@@ -248,6 +244,7 @@ summary {
   height: 0.5rem;
   clip-path: polygon(50% 100%, 100% 0, 0 0);
   background: currentColor;
+  flex: none;
 }
 
 .hamburger > summary {
@@ -334,16 +331,16 @@ ul {
   list-style-type: disc;
 }
 
+ol {
+  padding-left: 1rem;
+}
+
 li:first-child > p {
   margin-top: 0;
 }
 
 li:last-child > p {
   margin-bottom: 0;
-}
-
-ol {
-  padding-left: 1rem;
 }
 
 main {
@@ -370,8 +367,8 @@ main {
   font-size: var(--font-size-h3);
 }
 
-.font-heading {
-  font-family: var(--font-heading);
+.font-cool {
+  font-family: var(--font-cool);
 }
 
 .grid-full {
@@ -795,12 +792,9 @@ main {
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
-[data-page-name="resume"] main ul {
-  padding-left: 1rem;
-}
-
-[data-page-name="resume"] main ol {
-  padding-left: 1rem;
+[data-page-name="resume"] main :is(ul, dl) {
+  list-style: none;
+  padding-left: 0;
 }
 
 /* stylelint-disable-next-line no-descending-specificity */
@@ -834,7 +828,7 @@ main {
 }
 
 [data-page-name="art"] .art-container--frame a {
-  font-family: var(--font-heading);
+  font-family: var(--font-cool);
   font-size: var(--font-size-h3);
   font-weight: bold;
   flex: auto;
@@ -1218,6 +1212,7 @@ main {
   height: 0.5rem;
   clip-path: polygon(50% 100%, 100% 0, 0 0);
   background: currentColor;
+  flex: none;
 }
 
 .sage-well > details[open] > summary::after {
@@ -1243,7 +1238,8 @@ main {
 
 .link-card {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 0.5ch;
   text-decoration-line: none;
   text-decoration-thickness: 2px;
   padding: 0.5rem 1rem;
@@ -1256,6 +1252,11 @@ main {
   border: 1px solid transparent;
   box-shadow: inset -4px -4px 4px 0 hsl(12, 100%, 88%, 0.5),
     inset 4px 4px 4px 0 hsl(12, 100%, 98%, 0.5);
+}
+
+.link-card > img {
+  width: 1.5em;
+  height: auto;
 }
 
 .logo {
@@ -1293,6 +1294,7 @@ main {
   font-size: var(--font-size-small);
   font-weight: bold;
   background: var(--color-footer-background);
+  padding-top: 0.5rem;
 }
 
 /* https://css-shape.com/rounded-edge/ */
@@ -1337,7 +1339,7 @@ main {
   flex: auto;
   font-size: var(--font-size-small);
   font-weight: bold;
-  margin-top: -1rem;
+  margin-top: -0.5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
