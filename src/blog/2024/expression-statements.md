@@ -9,26 +9,24 @@ description: >-
 tags:
   - "programming"
   - "javascript"
-  - "essay"
 ---
 
 ## What's an expression statement?
 
-`1 + 3` is an expression. It's the same as writing `4` in JS except you make the
-computer figure out the answer for you. You can do `console.log(1 + 3);`.
+`1 + 3` is an expression. It's like writing `4` in JS except you make the
+computer figure out the answer for you. `console.log(1 + 3);` is a statement.
 Arguments to functions are always expressions. And `console.log(x);` is a
-statement, because it has a semicolon at the end.
+statement... because it has a semicolon at the end?
 
-As a colloquial definition, statements are things with semicolons after them
-(besides `function` and `class` declarations, I guess). But in JS you can also
-write `1 + 3;` as a statement. You can't write `console.log(1 + 3;);` because
-that's trying to put a statement where an expression goes.
+Let's consider that a working definition rather than a technical one. But in JS
+you can also write `1 + 3;` as a statement. You can't write
+`console.log(1 + 3;);`. Even though assignment is usually done in a statement,
+like `x = 4;`, the syntax `x = 4` is actually an expression. You can write
+`console.log(x = 4);` which will assign `x` to `4`, evaluate to `4`, and then
+`console.log` that.
 
-It doesn't make sense to write `1 + 3;`, but JS allows it... probably for
-convenience at the language level. `console.log(x)` is also an expression...
-just like `f(x)` is or `myString.toUpperCase()`. You could add a semicolon and
-make any of those a statement, but `console.log(x)` is the one that makes the
-most sense. Expression statements exist for functions that have side effects.
+Expression statements exist for so we can use expressions that have side
+effects.
 
 <aside class="infobox">
 
@@ -43,17 +41,17 @@ calling other functions that perform side effects.
 
 </aside>
 
-## Async makes the expression statement even tougher to deal with
+## Async functions make things even harder
 
-JS already already had confusing things like `array.sort()`, which both modifies
-the array (a _side effect_) and returns a value. With async functions not only
-are the side effects hard to discover, but the _completion_ of the function is
-easy to ignore as well. If you try to use the return value of a function, but
-it's actually a
+JS already has confusing things like `array.sort()`, which both modifies the
+array (a _side effect_) and returns a value. With async functions not only are
+the side effects hard to discover, but the _completion_ of the function is easy
+to ignore as well. If you try to use the return value of a function, but it's
+actually a
 [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise),
 this usually isn't too bad to figure out. But if you're "throwing away" the
 result via an expression statement, it can be really hard to track down the
-rogue promise.
+stray promise.
 
 ```js
 someAsyncFunction();
@@ -80,10 +78,30 @@ functions, we could use the existing
 [void](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void)
 operator to explicitly discard return values we don't care about:
 
+<aside class="infobox">
+
+### What's the void operator?
+
+It's never been especially useful, but it's been here since the dawn of time.
+`void x` is like writing `x; undefined`, except the whole thing is an
+expression. So you can do something like `console.log(void add(3, 4));` and
+you'll log `undefined` instead of `7`.
+
+It's a way of saying "yeah, this has a value, but I don't want it". It just
+turns out we rarely need that feature in modern JS. It was mostly used in
+[JS URIs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void#javascript_uris)
+like `javascript:void(0);`
+
+For even more cursed information, there's the
+[comma operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator)
+(`,`), which is like semicolon (`;`) but for expressions rather than statements.
+
+</aside>
+
 ```js
 const myArray = [3, 2, 1];
 
-// Error: return value not used or ignored
+// LINTER ERROR: return value not used or ignored
 myArray.sort();
 
 // OK: return value explicitly discarded
@@ -95,4 +113,5 @@ The
 rule from [typescript-eslint](https://typescript-eslint.io/) actually uses this
 exact approach! This sort of behavior would be hard to add to JS without engine
 level changes, but a linter plugin for TypeScript can somewhat reliably catch
-issues like this.
+issues like this. Because `void` doesn't change behavior in statement context,
+it's safe to add to your existing code without changing runtime behavior.
