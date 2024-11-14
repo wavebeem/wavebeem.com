@@ -25,7 +25,7 @@ export const light = {
   "color-header-button": oklch(86, 32, 140),
 
   "color-footer-background": oklch(95, 20, 290),
-  "color-aside-background": oklch(99.95, 20, 30),
+  "color-aside-background": oklch(95, 20, 30),
 
   "color-card-background": oklch(95, 20, 30),
   "color-card-hover": oklch(97, 20, 30),
@@ -56,7 +56,7 @@ export const dark = {
   "color-header-button": oklch(45, 22, 140),
 
   "color-footer-background": oklch(34, 4, 290),
-  "color-aside-background": oklch(28, 4, 30),
+  "color-aside-background": oklch(34, 4, 30),
 
   "color-card-background": oklch(34, 4, 30),
   "color-card-hover": oklch(36, 4, 30),
