@@ -145,7 +145,7 @@ h2 {
   font-size: var(--font-size-h2);
   letter-spacing: 1px;
   line-height: 1.25;
-  margin-block: 2rem 1rem;
+  margin-block: 4rem 1rem;
 }
 
 h3 {
@@ -153,7 +153,7 @@ h3 {
   font-size: var(--font-size-h3);
   font-style: italic;
   line-height: 1.25;
-  margin-block: 2rem 1rem;
+  margin-block: 4rem 1rem;
 }
 
 code,
@@ -272,17 +272,17 @@ summary {
 }
 
 .slime {
-  height: 2rem;
+  height: 4rem;
   background: var(--color-header-background);
   /* https://css-generators.com/wavy-shapes/ */
   --mask: radial-gradient(
-        1.35rem at 50% calc(100% - 1.9rem),
+        4.47rem at 50% calc(100% - 6rem),
         #000 99%,
         #0000 101%
       )
-      calc(50% - 2rem) 0/4rem 100%,
-    radial-gradient(1.35rem at 50% calc(100% + 0.9rem), #0000 99%, #000 101%)
-      50% calc(100% - 1rem) / 4rem 100% repeat-x;
+      calc(50% - 4rem) 0/8rem 100%,
+    radial-gradient(4.47rem at 50% calc(100% + 4rem), #0000 99%, #000 101%) 50%
+      calc(100% - 2rem) / 8rem 100% repeat-x;
   -webkit-mask: var(--mask);
   mask: var(--mask);
   /* Don't let slime get in the way of clicking stuff */
@@ -459,7 +459,6 @@ main {
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
   justify-content: flex-end;
-  padding: 0;
 }
 
 .nav :any-link {
