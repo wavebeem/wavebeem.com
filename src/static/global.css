@@ -88,6 +88,9 @@
   --font-size-small: 1rem;
   --font-size-code: 1rem;
 
+  /* More closely match the text stroke width */
+  --link-underline-thickness: 1.5px;
+
   overflow-y: scroll;
   color-scheme: light dark;
   scrollbar-color: var(--color-main-text) var(--color-main-background);
@@ -393,7 +396,7 @@ main {
 
 .sage-prose a,
 .sage-link {
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--link-underline-thickness);
   color: var(--color-main-link);
   border-radius: 0.25rem;
 }
@@ -411,7 +414,7 @@ main {
   background: var(--color-main-link);
   color: var(--color-main-background);
   text-decoration-line: none;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--link-underline-thickness);
 }
 
 .sage-button:focus-visible {
@@ -467,7 +470,7 @@ main {
   color: var(--color-header-text);
   border-radius: 0.5rem;
   text-decoration-line: none;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--link-underline-thickness);
 }
 
 .nav :any-link:hover {
@@ -1141,7 +1144,7 @@ main {
   align-items: center;
   gap: 0.5ch;
   text-decoration-line: none;
-  text-decoration-thickness: 2px;
+  text-decoration-thickness: var(--link-underline-thickness);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   color: var(--color-main-link);
