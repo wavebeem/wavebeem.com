@@ -970,38 +970,20 @@ main {
   margin-bottom: 0;
 }
 
-[data-page-name="blog-post"] .infobox {
+[data-page-name="blog-post"] aside {
   position: relative;
   margin-block: 1rem;
   padding: 1rem;
   border-radius: 1rem;
-  background: var(--color-aside-background);
+  background: var(--color-syntax-background);
+  border: 2px dotted var(--color-main-decoration);
 }
 
-[data-page-name="blog-post"] .infobox::before {
-  display: block;
-  position: absolute;
-  inset: 0 0 auto auto;
-  content: "i";
-  box-shadow: 0 0 0 2px var(--color-main-background);
-  background: var(--color-main-link);
-  color: var(--color-main-background);
-  margin: -0.5rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  text-align: center;
-  border-radius: 9999px;
-  font-family: var(--font-mono);
-  font-weight: bold;
-}
-
-[data-page-name="blog-post"] .infobox :first-child {
+[data-page-name="blog-post"] aside :first-child {
   margin-top: 0;
 }
 
-[data-page-name="blog-post"] .infobox :last-child {
+[data-page-name="blog-post"] aside :last-child {
   margin-bottom: 0;
 }
 
