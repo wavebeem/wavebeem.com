@@ -208,7 +208,9 @@ summary {
   color: transparent;
 }
 
-.spoiler:hover {
+/* Apparently Apple thinks that tapped non-interactive elements are actived but
+Android thinks they're hovered */
+.spoiler:is(:active, :hover) {
   color: var(--color-main-background);
 }
 
