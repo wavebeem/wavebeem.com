@@ -202,6 +202,16 @@ summary {
   text-align: right;
 }
 
+.spoiler {
+  padding-inline: 0.25ch;
+  background: #000;
+  color: transparent;
+}
+
+.spoiler:hover {
+  color: #fff;
+}
+
 .hamburger {
   margin: 0;
 }
