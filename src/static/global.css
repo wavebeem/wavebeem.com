@@ -204,12 +204,12 @@ summary {
 
 .spoiler {
   padding-inline: 0.25ch;
-  background: #000;
+  background: var(--color-main-text);
   color: transparent;
 }
 
 .spoiler:hover {
-  color: #fff;
+  color: var(--color-main-background);
 }
 
 .hamburger {
