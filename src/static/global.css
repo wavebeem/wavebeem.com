@@ -202,6 +202,26 @@ summary {
   text-align: right;
 }
 
+.spoiler {
+  padding-inline: 0.25ch;
+  background: var(--color-main-text);
+  color: transparent;
+  cursor: default;
+}
+
+.spoiler:hover:where(:not(:focus)) {
+  opacity: 0.8;
+}
+
+.spoiler:focus {
+  color: var(--color-main-background);
+}
+
+.spoiler:focus-visible {
+  outline: 2px solid var(--color-main-text);
+  outline-offset: 2px;
+}
+
 .hamburger {
   margin: 0;
 }
@@ -950,38 +970,20 @@ main {
   margin-bottom: 0;
 }
 
-[data-page-name="blog-post"] .infobox {
+[data-page-name="blog-post"] aside {
   position: relative;
   margin-block: 1rem;
   padding: 1rem;
   border-radius: 1rem;
-  background: var(--color-aside-background);
+  background: var(--color-syntax-background);
+  border: 2px dotted var(--color-main-decoration);
 }
 
-[data-page-name="blog-post"] .infobox::before {
-  display: block;
-  position: absolute;
-  inset: 0 0 auto auto;
-  content: "i";
-  box-shadow: 0 0 0 2px var(--color-main-background);
-  background: var(--color-main-link);
-  color: var(--color-main-background);
-  margin: -0.5rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  line-height: 1.5rem;
-  font-size: 1rem;
-  text-align: center;
-  border-radius: 9999px;
-  font-family: var(--font-mono);
-  font-weight: bold;
-}
-
-[data-page-name="blog-post"] .infobox :first-child {
+[data-page-name="blog-post"] aside :first-child {
   margin-top: 0;
 }
 
-[data-page-name="blog-post"] .infobox :last-child {
+[data-page-name="blog-post"] aside :last-child {
   margin-bottom: 0;
 }
 
