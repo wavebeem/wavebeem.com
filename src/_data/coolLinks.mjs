@@ -17,6 +17,12 @@ export const siteButtons = [
     localUrl: "",
   },
   {
+    mainUrl: "https://spax.zone/",
+    buttonUrl: "https://spax.zone/buttons/spaxdotzone.gif",
+    title: "spax.zone",
+    localUrl: "",
+  },
+  {
     mainUrl: "https://blog.curiousquail.com/",
     buttonUrl:
       "https://bear-images.sfo2.cdn.digitaloceanspaces.com/curiousquail/quailblog_8831.png",

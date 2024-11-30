@@ -15,7 +15,16 @@ async function main() {
       const resp = await fetch(buttonUrl);
       const data = await resp.arrayBuffer();
       await writeFile(tmp, new Uint8Array(data));
-      spawnSync("magick", [`${tmp}[0]`, "-strip", "-quality", "100", filename]);
+      const result = spawnSync("magick", [
+        `${tmp}[0]`,
+        "-strip",
+        "-quality",
+        "100",
+        filename,
+      ]);
+      if (result.error) {
+        throw result.error;
+      }
     } else {
       console.log("??? MISSING", hostname);
     }
