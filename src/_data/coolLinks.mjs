@@ -11,6 +11,12 @@
 /** @type {SiteButton[]} */
 export const siteButtons = [
   {
+    mainUrl: "https://maya.land/",
+    buttonUrl: "https://maya.land/assets/banner.png",
+    title: "maya.land",
+    localUrl: "",
+  },
+  {
     mainUrl: "https://blog.curiousquail.com/",
     buttonUrl:
       "https://bear-images.sfo2.cdn.digitaloceanspaces.com/curiousquail/quailblog_8831.png",
@@ -282,10 +288,6 @@ export const allLinks = [
   {
     title: "sproutsnout's garden",
     url: "https://sproutsnout.com/",
-  },
-  {
-    title: "maya.land",
-    url: "https://maya.land/",
   },
   {
     title: "meow.garden",
