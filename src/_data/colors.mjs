@@ -27,8 +27,8 @@ export const light = {
   "color-footer-text": oklch(45, 40, 290),
   "color-footer-background": oklch(90, 40, 290),
 
-  "color-card-background": oklch(95, 20, 30),
-  "color-card-hover": oklch(97, 20, 30),
+  "color-card-background": oklch(94, 20, 30),
+  "color-card-hover": oklch(96, 20, 30),
 
   "color-main-link": oklch(50, 50, 290),
   "color-main-background": oklch(98, 20, 30),
@@ -36,7 +36,7 @@ export const light = {
   "color-main-code": oklch(52, 100, 340),
   "color-main-decoration": oklch(60, 20, 30),
 
-  "color-syntax-background": oklch(99.95, 20, 30),
+  "color-syntax-background": oklch(100, 20, 30),
   "color-syntax-text": oklch(20, 30, 30),
   "color-syntax-comment": oklch(55, 0, 300),
   "color-syntax-keyword": oklch(47, 100, 170),
@@ -58,8 +58,8 @@ export const dark = {
   "color-footer-text": oklch(90, 40, 290),
   "color-footer-background": oklch(35, 10, 290),
 
-  "color-card-background": oklch(34, 4, 30),
-  "color-card-hover": oklch(36, 4, 30),
+  "color-card-background": oklch(35, 4, 30),
+  "color-card-hover": oklch(37, 4, 30),
 
   "color-main-link": oklch(80, 100, 290),
   "color-main-background": oklch(30, 4, 30),
@@ -67,7 +67,7 @@ export const dark = {
   "color-main-code": oklch(80, 40, 340),
   "color-main-decoration": oklch(60, 4, 30),
 
-  "color-syntax-background": oklch(28, 4, 30),
+  "color-syntax-background": oklch(25, 4, 30),
   "color-syntax-text": oklch(90, 5, 30),
   "color-syntax-comment": oklch(70, 10, 300),
   "color-syntax-keyword": oklch(80, 70, 170),
@@ -78,6 +78,3 @@ export const dark = {
   "color-easter-egg-shadow": oklch(25, 5, 30),
   "color-easter-egg-highlight": oklch(100, 0, 0, 30),
 };
-
-export const listLight = Object.entries(light);
-export const listDark = Object.entries(dark);

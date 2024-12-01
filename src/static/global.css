@@ -873,7 +873,7 @@ main {
 }
 
 [data-page-name="blog-post"] hr::after {
-  font-size: 2rem;
+  font-size: 3rem;
   content: "⋄◆⋄";
   font-family: var(--font-mono);
   display: block;
@@ -882,10 +882,10 @@ main {
   margin-inline: auto;
   padding-inline: 0.5rem;
   /* https://www.smashingmagazine.com/2024/01/css-border-image-property/ */
-  --s: 2px; /* the thickness */
-  --c: var(--color-card-background); /* the color */
-  --w: 100vw; /* the width */
-  --g: 0rem; /* the gap */
+  --s: 2px; /* line thickness */
+  --c: var(--color-card-background); /* line color */
+  --w: 100vw; /* divider width */
+  --g: 0.5ch; /* content gap */
   border-image: linear-gradient(
       transparent calc(50% - var(--s) / 2),
       var(--c) 0 calc(50% + var(--s) / 2),
@@ -976,7 +976,6 @@ main {
   padding: 1rem;
   border-radius: 1rem;
   background: var(--color-syntax-background);
-  border: 2px dotted var(--color-main-decoration);
 }
 
 [data-page-name="blog-post"] aside :first-child {
