@@ -20,12 +20,12 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 export const light = {
   "color-selection": oklch(90, 30, 140, 75),
 
-  "color-header-text": oklch(40, 40, 140),
-  "color-header-background": oklch(90, 30, 140),
-  "color-header-button": oklch(86, 32, 140),
+  "color-header-text": oklch(30, 40, 140),
+  "color-header-background": oklch(85, 30, 140),
+  "color-header-button": oklch(80, 30, 140),
 
-  "color-footer-background": oklch(95, 20, 290),
-  "color-aside-background": oklch(95, 20, 30),
+  "color-footer-text": oklch(45, 40, 290),
+  "color-footer-background": oklch(90, 40, 290),
 
   "color-card-background": oklch(95, 20, 30),
   "color-card-hover": oklch(97, 20, 30),
@@ -51,12 +51,12 @@ export const light = {
 export const dark = {
   "color-selection": oklch(50, 20, 140, 75),
 
-  "color-header-text": oklch(96, 40, 140),
+  "color-header-text": oklch(96, 20, 140),
   "color-header-background": oklch(50, 20, 140),
-  "color-header-button": oklch(45, 22, 140),
+  "color-header-button": oklch(45, 20, 140),
 
-  "color-footer-background": oklch(34, 4, 290),
-  "color-aside-background": oklch(34, 4, 30),
+  "color-footer-text": oklch(90, 40, 290),
+  "color-footer-background": oklch(35, 10, 290),
 
   "color-card-background": oklch(34, 4, 30),
   "color-card-hover": oklch(36, 4, 30),

@@ -1193,7 +1193,17 @@ main {
   font-size: var(--font-size-small);
   font-weight: bold;
   background: var(--color-footer-background);
+  color: var(--color-footer-text);
   padding-top: 0.5rem;
+}
+
+.footer :any-link {
+  color: inherit;
+}
+
+.footer .sage-button {
+  background: var(--color-footer-text);
+  color: var(--color-footer-background);
 }
 
 /* https://css-shape.com/rounded-edge/ */
