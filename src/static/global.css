@@ -287,6 +287,7 @@ summary {
 
 .header .logo,
 .header :any-link {
+  font-weight: bold;
   color: inherit;
 }
 
@@ -349,6 +350,7 @@ main {
   flex: auto;
   display: flex;
   flex-direction: column;
+  min-height: 60vh;
 }
 
 :focus-visible {
@@ -490,13 +492,17 @@ main {
   grid-column: 1 / -1;
   display: none;
   grid-template-columns: 1fr 1fr;
-  gap: 0.5rem;
   justify-content: flex-end;
+  margin-block-start: 1rem;
+  margin-inline: -1rem;
 }
 
 .nav :any-link {
-  padding: 0.5rem 1rem;
-  background: var(--color-header-button);
+  display: flex;
+  gap: 0.5ch;
+  align-items: center;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
   color: var(--color-header-text);
   border-radius: 0.5rem;
   text-decoration-line: none;
@@ -509,7 +515,7 @@ main {
 
 @media (min-width: 800px) {
   .nav {
-    margin-left: auto;
+    /* margin-left: auto; */
   }
 
   .nav :any-link {
@@ -1201,13 +1207,13 @@ main {
 
 .footer {
   font-size: var(--font-size-small);
-  font-weight: bold;
   background: var(--color-footer-background);
   color: var(--color-footer-text);
   padding-top: 0.5rem;
 }
 
 .footer :any-link {
+  font-weight: bold;
   color: inherit;
 }
 
@@ -1254,6 +1260,30 @@ main {
   font-size: var(--font-size-small);
   font-weight: bold;
   margin-top: -0.5rem;
+}
+
+.toy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.toy-list--toy {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+}
+
+.toy-list--toy > * {
+  margin: 0;
+}
+
+.toy-list--toy time {
+  flex: auto;
+  /* font-size: var(--font-size-small); */
+  font-weight: normal;
+  margin-top: -0.5rem;
+  font-style: normal;
 }
 
 @media (prefers-reduced-motion: reduce) {
