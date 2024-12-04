@@ -44,54 +44,6 @@ export default function getConfig(config) {
     return array.slice(0, count);
   });
 
-  const prettyTagMap = new Map([
-    ["art", "Art"],
-    ["bash", "Bash"],
-    ["compilers", "Compilers"],
-    ["cooking", "Cooking"],
-    ["css", "CSS"],
-    ["design", "Design"],
-    ["draft", "Draft"],
-    ["essay", "Essay"],
-    ["feed", "Feed"],
-    ["fonts", "Fonts"],
-    ["javascript", "JavaScript"],
-    ["keyboards", "Keyboards"],
-    ["meta", "Meta"],
-    ["programming", "Programming"],
-    ["python", "Python"],
-    ["react", "React"],
-    ["recipe", "Recipe"],
-    ["tech", "Tech"],
-    ["toybox", "Toybox"],
-    ["typescript", "TypeScript"],
-    ["video-games", "Video games"],
-    ["web-components", "Web components"],
-    ["web", "Web"],
-  ]);
-
-  config.addFilter("prettyTag", function (content) {
-    if (!prettyTagMap.has(content)) {
-      throw new Error(`unknown tag: ${content}`);
-    }
-    return prettyTagMap.get(content);
-  });
-
-  // Return all the tags used in a collection
-  config.addFilter("getAllTags", function (collection) {
-    const set = new Set();
-    for (const item of collection) {
-      const tags = item.data.tags || [];
-      if (tags.includes("draft")) {
-        continue;
-      }
-      for (const tag of tags) {
-        set.add(tag);
-      }
-    }
-    return Array.from(set);
-  });
-
   function* reversed(list) {
     for (let i = list.length - 1; i >= 0; i--) {
       yield list[i];
@@ -125,21 +77,7 @@ export default function getConfig(config) {
     return Object.entries(data);
   });
 
-  config.addFilter("filterByTag", function (data, tag) {
-    return data.flatMap((p) => {
-      if (p.data?.tags?.includes(tag)) {
-        return [p];
-      }
-      return [];
-    });
-  });
-
   const blockedTags = new Set(["all", "posts"]);
-
-  config.addFilter("filterTagList", function (tags) {
-    tags = tags || [];
-    return tags.filter((tag) => !blockedTags.has(tag));
-  });
 
   // https://github.com/11ty/eleventy-base-blog/blob/main/eleventy.config.js
   return {

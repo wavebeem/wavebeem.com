@@ -513,9 +513,9 @@ main {
   text-decoration-line: underline;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 500px) {
   .nav {
-    /* margin-left: auto; */
+    margin-inline: auto 0;
   }
 
   .nav :any-link {
