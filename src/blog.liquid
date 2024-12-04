@@ -12,17 +12,6 @@ layout: "layout-base"
   to date with my posts.
 </p>
 
-<h2>Browse by tag</h2>
-
-<ul class="tag-list">
-  {% assign tags = collections.all | getAllTags | sort | filterTagList %}
-  {% for tag in tags %}
-    <li>
-      <a href="/blog/tags/{{ tag }}/" class="sage-link">{{ tag | prettyTag }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
 {% assign postsByYear = collections.posts | groupByYear %}
 {% for item in postsByYear %}
   {% assign year = item[0] %}

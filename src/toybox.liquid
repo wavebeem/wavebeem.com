@@ -19,20 +19,15 @@ layout: "layout-base"
 
 <h2>All toys</h2>
 
-<div class="post-list">
+<div class="toy-list sage-well">
   {% for post in collections.toybox reversed %}
-    <section class="post-list--post sage-well">
+    <section class="toy-list--toy">
+      <span>{% render "partials/year" date: post.date %}</span>
       <h3>
         <a class="sage-link no-underline" href="{{ post.url }}">
           {{ post.data.title }}
         </a>
       </h3>
-
-      {% render "partials/date" date: post.date %}
-
-      <p>
-        {{ post.data.description | escape }}
-      </p>
     </section>
   {% endfor %}
 </div>
