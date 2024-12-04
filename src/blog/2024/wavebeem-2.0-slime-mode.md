@@ -4,10 +4,6 @@ description:
   "With cohost.org going away, I decide to lean even harder towards working on
   my personal website. I've created a new theme, with a softer, more playful
   aesthetic than ever before. I've also created many new sections on my website."
-tags:
-  - "web"
-  - "design"
-  - "meta"
 date: "2024-10-27"
 ---
 

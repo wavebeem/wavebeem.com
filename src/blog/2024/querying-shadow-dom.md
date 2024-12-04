@@ -2,11 +2,6 @@
 title: "Querying shadow DOM"
 description:
   "Examples of how to query shadow DOM, and when you actually don't want to."
-tags:
-  - "programming"
-  - "javascript"
-  - "web"
-  - "web-components"
 date: "2024-01-27"
 ---
 

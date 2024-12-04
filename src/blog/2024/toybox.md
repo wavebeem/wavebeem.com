@@ -2,8 +2,6 @@
 title: "Introducing: The Toybox"
 description:
   "The Toybox is a new section of my site for web toys, jokes, and experiments."
-tags:
-  - "web"
 date: "2024-10-06"
 ---
 

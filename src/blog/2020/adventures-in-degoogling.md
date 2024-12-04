@@ -3,8 +3,6 @@ title: "Adventures in de-Googling"
 description:
   "My successes and failures in trying to de-emphasize Google's presence in my
   life."
-tags:
-  - "tech"
 date: "2020-11-29"
 ---
 

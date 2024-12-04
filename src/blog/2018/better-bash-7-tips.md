@@ -1,9 +1,6 @@
 ---
 title: "7 tips for better bash"
 description: "You'll be writing better bash code after following these 7 tips."
-tags:
-  - "programming"
-  - "bash"
 date: "2018-07-04"
 ---
 

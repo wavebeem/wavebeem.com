@@ -6,10 +6,6 @@ description: >-
   It's strangely difficult to make a “spoilers” element without JS, and even
   harder to do it with support for all mobile operating systems and screen
   readers.
-tags:
-  - "programming"
-  - "css"
-  - "web"
 ---
 
 ## A working example

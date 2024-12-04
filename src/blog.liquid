@@ -6,10 +6,9 @@ layout: "layout-base"
 <h1>{{ title }}</h1>
 
 <p>
-  Subscribe to my
-  <a class="sage-link" href="/feed.xml">RSS feed</a>
-  to stay up 
-  to date with my posts.
+  <a class="sage-link" href="/feed.xml">Subscribe to my RSS feed</a>
+  to stay up to date.
+  <a href="https://duckduckgo.com/?q=best+rss+feed+reader+free" class="sage-link">What is RSS?</a>
 </p>
 
 {% assign postsByYear = collections.posts | groupByYear %}
@@ -27,10 +26,10 @@ layout: "layout-base"
             {{ post.data.title | escape }}
           </a>
         </h3>
-        {% render "partials/date" date: post.date %}
         <p>
           {{ post.data.description | escape }}
         </p>
+        {% render "partials/date" date: post.date %}
       </section>
     {% endfor %}
   </div>

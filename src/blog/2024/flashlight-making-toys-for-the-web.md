@@ -3,11 +3,6 @@ title: "Flashlight: Making toys for the web"
 description:
   "I made a toy flashlight for the web. It simulates darkening the web page and
   following the cursor. It looks somewhat convincingly like a flashlight. Enjoy!"
-tags:
-  - "programming"
-  - "javascript"
-  - "web"
-  - "tech"
 date: "2024-01-24"
 ---
 

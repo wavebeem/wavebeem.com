@@ -1,8 +1,6 @@
 ---
 title: "SeaGL 2019"
 description: "Building Your own keyboard with free software."
-tags:
-  - "keyboards"
 date: "2019-11-10"
 ---
 

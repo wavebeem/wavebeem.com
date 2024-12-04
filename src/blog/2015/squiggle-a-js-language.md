@@ -2,10 +2,6 @@
 title: "Squiggle: a JS language"
 description:
   "An introduction to Squiggle, a compile-to-JS programming language I made."
-tags:
-  - "programming"
-  - "javascript"
-  - "compilers"
 date: "2015-07-01"
 ---
 

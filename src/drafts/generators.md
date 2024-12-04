@@ -1,9 +1,6 @@
 ---
 title: "Generators"
 description: "Generators are cool"
-tags:
-  - "programming"
-  - "javascript"
 ---
 
 ## The main body

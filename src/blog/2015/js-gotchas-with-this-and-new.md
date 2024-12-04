@@ -2,9 +2,6 @@
 title: "JS gotchas with this and new"
 description:
   "How JS's 'this' and 'new' work, and how to avoid issues with them."
-tags:
-  - "programming"
-  - "javascript"
 date: "2015-12-23"
 ---
 

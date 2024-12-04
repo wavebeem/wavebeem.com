@@ -5,10 +5,6 @@ description:
   "I spent an entire weekend migrating my Eleventy site to Astro—and then back
   to Eleventy! A reflection on using the right tool for the job, when many
   options are viable."
-tags:
-  - "programming"
-  - "javascript"
-  - "web"
 ---
 
 ## It's so hard to compare frameworks

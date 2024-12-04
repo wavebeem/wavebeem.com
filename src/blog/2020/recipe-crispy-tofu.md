@@ -1,9 +1,6 @@
 ---
 title: "Recipe: Crispy tofu"
 description: "How to make delicious crispy tofu at home."
-tags:
-  - "cooking"
-  - "recipe"
 date: "2020-11-02"
 ---
 

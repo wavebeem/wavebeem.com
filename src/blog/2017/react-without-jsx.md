@@ -1,10 +1,6 @@
 ---
 title: "React without JSX"
 description: "A quick overview on using React without JSX or any build tools."
-tags:
-  - "programming"
-  - "javascript"
-  - "react"
 date: "2017-08-11"
 ---
 
@@ -99,8 +95,8 @@ function TextScreen(props) {
           props.goNext();
         },
       },
-      "Next",
-    ),
+      "Next"
+    )
   );
 }
 ```

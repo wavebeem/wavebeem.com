@@ -2,9 +2,6 @@
 title: "Broken promises"
 description:
   "How to use promises effectively (written before async/await existed)"
-tags:
-  - "programming"
-  - "javascript"
 date: "2016-12-29"
 ---
 
@@ -168,8 +165,8 @@ Often you'll see `.then` chains nested, forming this "pyramid" shape:
 function chaseData(url) {
   return request(url).then((res1) =>
     request(res1.someUrl).then((res2) =>
-      request(res2.anotherUrl).then((res3) => res3.data),
-    ),
+      request(res2.anotherUrl).then((res3) => res3.data)
+    )
   );
 }
 ```

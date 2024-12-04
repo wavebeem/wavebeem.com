@@ -2,10 +2,6 @@
 title: "I made a new 88×31 site button"
 description:
   "I made a new site button GIF for folks who want to link to my website."
-tags:
-  - "art"
-  - "web"
-  - "meta"
 date: "2024-09-21"
 ---
 

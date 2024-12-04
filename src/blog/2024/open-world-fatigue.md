@@ -3,8 +3,6 @@ title: "Open world fatigue"
 description:
   "A brief reflection on the Legend of Zelda and the popularity of open world
   video games."
-tags:
-  - "video-games"
 date: "2024-10-20"
 ---
 

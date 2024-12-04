@@ -3,12 +3,6 @@ title: "10 years of React"
 description:
   "After a decade of React's influence on the front end web development space
   (and more!), how do I feel about it?"
-tags:
-  - "programming"
-  - "javascript"
-  - "react"
-  - "essay"
-  - "web"
 ---
 
 _Originally posted 2023 May 23 on Cohost._

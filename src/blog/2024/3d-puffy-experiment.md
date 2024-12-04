@@ -4,11 +4,6 @@ title: "Experiment: Puffy 3D mode"
 description:
   "Taking inspiration from Claymorphism, I made an experimental version of my
   site with a puffy 3D look."
-tags:
-  - "design"
-  - "css"
-  - "web"
-  - "meta"
 ---
 
 ## The hottest design trend from... 2 years ago

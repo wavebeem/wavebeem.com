@@ -2,10 +2,6 @@
 title: "Why I don't like useState"
 description:
   "Why useState is so hard to use correctly, and what we can do about it."
-tags:
-  - "programming"
-  - "javascript"
-  - "react"
 date: "2022-01-25"
 ---
 
@@ -194,7 +190,7 @@ function useMagicState(state) {
   // Create new proxies to the stateRef's data on update
   // so that memoized components still work correctly
   const [proxy, setProxy] = useState(() =>
-    createProxy(stateRef.current, update),
+    createProxy(stateRef.current, update)
   );
   useEffect(() => {
     setProxy(createProxy(stateRef.current, update));

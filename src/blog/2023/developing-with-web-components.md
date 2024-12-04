@@ -4,11 +4,6 @@ description:
   "Thoughts on developing with web components from scratch; no UI libraries.
   This covers custom elements and very basic use of the <template> element.
   Shadow DOM is mentioned but not used."
-tags:
-  - "programming"
-  - "javascript"
-  - "web"
-  - "web-components"
 date: "2023-11-25"
 ---
 

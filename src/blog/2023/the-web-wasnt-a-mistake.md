@@ -3,9 +3,6 @@ title: "You deserve to be happy, or: the web wasn't a mistake"
 description:
   "A discussion of why people hate JS, Electron, and the web. Also a plea about
   how excessive negativity hurts you and those around you."
-tags:
-  - "web"
-  - "essay"
 date: "2023-07-05"
 ---
 

@@ -4,11 +4,6 @@ title: "Getting weirder with fonts, and: too much of a good thing"
 description: >-
   PP Talisman from Pangram Pangram Foundry is my new heading font—or “cool font”
   as I'm calling it in the code. But I'm trying not to overuse it!
-tags:
-  - "web"
-  - "design"
-  - "meta"
-  - "fonts"
 ---
 
 ## PP Talisman

@@ -1,10 +1,6 @@
 ---
 title: "The leaning tower of Babel"
 description: "An exploration of Babel's caveats."
-tags:
-  - "programming"
-  - "javascript"
-  - "compilers"
 date: "2016-08-22"
 ---
 
@@ -264,9 +260,9 @@ var asyncAdd = (function () {
           }
         },
         _callee,
-        this,
+        this
       );
-    }),
+    })
   );
 
   return function asyncAdd() {
@@ -295,7 +291,7 @@ function _asyncToGenerator(fn) {
             },
             function (err) {
               return step("throw", err);
-            },
+            }
           );
         }
       }
@@ -330,7 +326,7 @@ function nice() {
       }
     },
     _marked[0],
-    this,
+    this
   );
 }
 

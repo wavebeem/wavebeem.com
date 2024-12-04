@@ -1,9 +1,6 @@
 ---
 title: "Recipe: Buttermilk biscuits"
 description: "Detailed instructions on how to make fluffy biscuits at home."
-tags:
-  - "cooking"
-  - "recipe"
 date: "2021-03-11"
 ---
 

@@ -1,10 +1,6 @@
 ---
 title: "Compiler code generation"
 description: "How to make code generation for a compiler."
-tags:
-  - "programming"
-  - "javascript"
-  - "compilers"
 date: "2016-12-19"
 ---
 

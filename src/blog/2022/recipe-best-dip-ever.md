@@ -1,9 +1,6 @@
 ---
 title: "Recipe: Best dip ever"
 description: "My favorite IBS-friendly dip to make at home."
-tags:
-  - "cooking"
-  - "recipe"
 date: "2022-03-20"
 ---
 

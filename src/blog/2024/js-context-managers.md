@@ -3,9 +3,6 @@ title: "JS context managers"
 description:
   "See how to adapt Python's context managers for use in JavaScript. Break free
   from clunky try...finally blocks with this one weird trick."
-tags:
-  - "javascript"
-  - "python"
 date: "2024-10-14"
 ---
 

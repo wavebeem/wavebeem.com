@@ -1,10 +1,6 @@
 ---
 title: "Making a language"
 description: "How to make a programming language from scratch in JS."
-tags:
-  - "programming"
-  - "javascript"
-  - "compilers"
 date: "2016-11-01"
 ---
 

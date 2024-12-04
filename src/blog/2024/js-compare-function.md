@@ -3,9 +3,6 @@ title: "JS compare function"
 description:
   "Exploring a small but mighty function that supercharges the JS Array sort
   method to rival Lodash's orderBy"
-tags:
-  - "programming"
-  - "javascript"
 date: "2024-04-02"
 ---
 

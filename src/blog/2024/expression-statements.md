@@ -6,9 +6,6 @@ description: >-
   My thoughts on why expression statements can be a source of bugs—especially in
   async code—and a proposal for reviving JavaScript's nearly unused void
   operator.
-tags:
-  - "programming"
-  - "javascript"
 ---
 
 ## What's an expression statement?
