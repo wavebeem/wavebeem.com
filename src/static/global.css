@@ -1280,7 +1280,6 @@ main {
 
 .toy-list--toy time {
   flex: auto;
-  /* font-size: var(--font-size-small); */
   font-weight: normal;
   margin-top: -0.5rem;
   font-style: normal;
