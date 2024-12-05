@@ -74,7 +74,7 @@ a non-starter.
 
 <aside class="infobox">
 
-## Hover styles are weird on mobile
+### Hover styles are weird on mobile
 
 I don't actually want my spoilers to show on hover (it's too easy to do on
 accident on desktop), but it's worth noting that hover is completely
@@ -102,7 +102,7 @@ can use the `:focus` selector to reveal the text.
 
 <aside class="infobox">
 
-## Only use 0 or -1 as tabindex values
+### Only use 0 or -1 as tabindex values
 
 It's not only _allowed_ but **good** to use `tabindex="0"` more than once.
 Manually controlling `tabindex` by assigning different positive numbers can make

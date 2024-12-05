@@ -17,16 +17,6 @@ const menu = [
     image: "/icons/home.webp", // 🏠
   },
   {
-    url: "/projects/",
-    title: "Projects",
-    image: "/icons/projects.webp", // 💻
-  },
-  {
-    url: "/contact/",
-    title: "Contact info",
-    image: "/icons/contact.webp", // 📬
-  },
-  {
     url: "/blog/",
     title: "Blog",
     image: "/icons/blog.webp", // ✍️
@@ -37,34 +27,29 @@ const menu = [
     image: "/icons/art.webp", // 🎨
   },
   {
+    url: "/contact/",
+    title: "Contact info",
+    image: "/icons/contact.webp", // 📬
+  },
+  {
+    url: "/projects/",
+    title: "Projects",
+    image: "/icons/projects.webp", // 💻
+  },
+  {
     url: "/resume/",
     title: "Resume",
     image: "/icons/resume.webp", // 📋
   },
   {
-    url: "/about/",
-    title: "About this site",
-    image: "/icons/about.webp", // ℹ️
-  },
-  {
-    url: "/uses/",
-    title: "Things I use",
-    image: "/icons/uses.webp", // 🧰
-  },
-  {
     url: "/links/",
-    title: "Cool links",
+    title: "Links",
     image: "/icons/links.webp", // 🔗
   },
   {
     url: "/toybox/",
     title: "Toybox",
     image: "/icons/toybox.webp", // 🧸
-  },
-  {
-    url: "/shrines/",
-    title: "Shrines",
-    image: "/icons/shrines.webp", // ⛩️
   },
 ];
 

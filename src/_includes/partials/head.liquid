@@ -1,92 +1,113 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content="{{ eleventy.generator }}" />
-<meta name="theme-color" content="{{ colors.light['color-header-background'] }}" />
+<meta
+  name="theme-color"
+  content="{{ colors.light['color-header-background'] }}"
+/>
 <meta
   name="theme-color"
   content="{{ colors.dark['color-header-background'] }}"
-  media="(prefers-color-scheme: dark)" />
+  media="(prefers-color-scheme: dark)"
+/>
 <link
   rel="preload"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/pp-talisman-bold.woff2" />
+  href="/fonts/pp-talisman-bold.woff2"
+/>
 <link
   rel="preload"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/pp-object-sans-regular.woff2" />
+  href="/fonts/pp-object-sans-regular.woff2"
+/>
 <link
   rel="preload"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/pp-object-sans-bold.woff2" />
+  href="/fonts/pp-object-sans-bold.woff2"
+/>
 <link
   rel="preload"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/pp-object-sans-bold-slanted.woff2" />
+  href="/fonts/pp-object-sans-bold-slanted.woff2"
+/>
 <link
   rel="preload"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/ultra-hi-gloss.woff2" />
+  href="/fonts/ultra-hi-gloss.woff2"
+/>
 <link
   rel="prefetch"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/jetbrains-mono-regular.woff2" />
+  href="/fonts/jetbrains-mono-regular.woff2"
+/>
 <link
   rel="prefetch"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/jetbrains-mono-bold.woff2" />
+  href="/fonts/jetbrains-mono-bold.woff2"
+/>
 <link
   rel="prefetch"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/jetbrains-mono-italic.woff2" />
+  href="/fonts/jetbrains-mono-italic.woff2"
+/>
 <link
   rel="prefetch"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/pp-object-sans-slanted.woff2" />
+  href="/fonts/pp-object-sans-slanted.woff2"
+/>
 <meta name="author" content="wavebeem" />
 <meta name="description" content="{{ description }}" />
 <link
   rel="icon"
   href="/favicon.svg?v={{ contentHashes.faviconVector }}"
-  type="image/svg+xml" />
+  type="image/svg+xml"
+/>
 <link
   rel="icon"
   sizes="32x32"
-  href="/favicon.png?v={{ contentHashes.favicon }}" />
+  href="/favicon.png?v={{ contentHashes.favicon }}"
+/>
 <link
   rel="apple-touch-icon"
   sizes="180x180"
-  href="/photo-180.webp?v={{ contentHashes.photo }}" />
+  href="/photo-180.webp?v={{ contentHashes.photo }}"
+/>
 <link
   rel="alternate"
   type="application/atom+xml"
   href="{{ origin }}/feed.xml"
-  title="wavebeem.com" />
-<meta name="og:image" content="{{ origin }}/og-image.png?v={{ contentHashes.ogImage }}" />
+  title="wavebeem.com"
+/>
+<link rel="me" href="https://toot.community/@wavebeem" />
+<meta
+  name="og:image"
+  content="{{ origin }}/og-image.png?v={{ contentHashes.ogImage }}"
+/>
 <meta name="og:image:width" content="512" />
 <meta name="og:image:height" content="256" />
 <meta name="og:title" content="{{ title | formatTitle }}" />
 <meta name="og:description" content="{{ description }}" />
 <title>{{ title | formatTitle }}</title>
-<script type="module" src="/elements/wavebeem-theme-select.mjs?v={{ contentHashes.wavebeemThemeSelect }}"></script>
+<script
+  type="module"
+  src="/elements/wavebeem-theme-select.mjs?v={{
+    contentHashes.wavebeemThemeSelect
+  }}"
+></script>
 <script
   async
   defer
   data-domain="wavebeem.com"
-  src="https://plausible.io/js/plausible.js"></script>
-<link
-  rel="stylesheet"
-  media="screen"
-  href="/main.css?t={{ dateNow }}" />
-<link
-  rel="stylesheet"
-  media="print"
-  href="/print.css?t={{ dateNow }}" />
+  src="https://plausible.io/js/plausible.js"
+></script>
+<link rel="stylesheet" media="screen" href="/main.css?t={{ dateNow }}" />
+<link rel="stylesheet" media="print" href="/print.css?t={{ dateNow }}" />
