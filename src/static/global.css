@@ -144,23 +144,23 @@ h6 {
   text-wrap: balance;
 }
 
-:is(h1, h2, h3)::before {
+:is(h1, h2)::before {
   content: ": ";
   letter-spacing: 2px;
   font-style: normal;
   font-weight: bold;
-  font-size: 1em;
-  position: relative;
-  top: calc(-1em / 12);
+  color: var(--color-main-decoration);
+}
+
+:is(h1, h2, h3, dt):has(> a)::before {
+  content: "→ ";
+  font-style: normal;
+  font-weight: bold;
   color: var(--color-main-decoration);
 }
 
 h2::before {
   content: ":: ";
-}
-
-h3::before {
-  content: "::: ";
 }
 
 h1 {
@@ -810,10 +810,6 @@ main {
   background: var(--color-card-hover);
 }
 
-[data-page-name="resume"] main dl {
-  margin-block: 0;
-}
-
 /* --- ART GALLERY --- */
 
 [data-page-name="art"] .art-container {
@@ -868,28 +864,6 @@ main {
 /* stylelint-disable-next-line no-descending-specificity */
 [data-page-name="art"] figure figcaption {
   font-size: var(--font-size-small);
-}
-
-@media (min-width: 800px) {
-  [data-page-name="resume"] main dl {
-    display: grid;
-    grid-template-columns: max-content 1fr;
-    gap: 1rem 2rem;
-  }
-}
-
-@media (max-width: 800px) {
-  [data-page-name="resume"] main dd + dt {
-    margin-top: 1rem;
-  }
-}
-
-[data-page-name="resume"] main dd {
-  margin-inline: 0;
-}
-
-[data-page-name="resume"] main dt {
-  font-weight: bold;
 }
 
 /* --- POST --- */
@@ -1109,6 +1083,22 @@ main {
 
 .token.entity {
   cursor: help;
+}
+
+.sage-dl dt {
+  font-weight: bold;
+}
+
+.sage-dl dt > .sage-link {
+  text-decoration: none;
+}
+
+.sage-dl dd {
+  margin: 0;
+}
+
+.sage-dl dd + dt {
+  margin-top: 1rem;
 }
 
 .sage-well {

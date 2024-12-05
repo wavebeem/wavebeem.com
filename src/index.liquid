@@ -15,60 +15,58 @@ pageName: "home"
     "
     src="/photo-360.webp?v={{ contentHashes.photo }}"
     width="120"
-    height="120" />
+    height="120"
+  />
 </wavebeem-easter-egg>
 
 <h1>Hello!</h1>
 
 <p>
   I'm
-  <a class="sage-link" href="/my-names/">Sage</a>
+  <a class="sage-link" href="/about/">Sage</a>
   (they/them), aka
   <q>wavebeem</q>.
 </p>
 
 <p>
-  I love video games, web development, makeup, pixel art, progressive metal, 
+  I love video games, web development, makeup, pixel art, progressive metal,
   cats, and the color green.
 </p>
 
 <p>
   I live in
-  <a class="sage-link" href="https://en.wikipedia.org/wiki/Portland,_Oregon">Portland</a>, where I enjoy gray skies, 
-  green leaves, and gentle rain.
+  <a class="sage-link" href="https://en.wikipedia.org/wiki/Portland,_Oregon"
+    >Portland</a
+  >, where I enjoy gray skies, green leaves, and gentle rain.
 </p>
 
 <div class="clearfix"></div>
 
-<h2>Take a look around</h2>
+<h2>Featured pages</h2>
 
 <div class="clicky-list">
   {% for item in menu %}
-    <a class="link-card" href="{{ item.url }}">
-      <img
-        src="{{ item.image }}"
-        width="32"
-        height="32"
-        alt="" />
-      {{ item.title }}
-    </a>
+  <a class="link-card" href="{{ item.url }}">
+    <img src="{{ item.image }}" width="32" height="32" alt="" />
+    {{ item.title }}
+  </a>
   {% endfor %}
 </div>
 
 <h2>Recent posts</h2>
 
 <div class="post-list">
-  {% assign top3 = collections.posts | reverse | take: 3 %}
-  {% for post in top3 %}
-    <section class="post-list--post sage-well">
-      <h3>
-        <a class="sage-link no-underline" href="{{ post.url }}">
-          {{ post.data.title | escape }}
-        </a>
-      </h3>
-      <p>{{ post.data.description | escape }}</p>
-      {% render "partials/date" date: post.date %}
-    </section>
+  {% assign top3 = collections.posts | reverse | take: 3 %} {% for post in top3
+  %}
+  <section class="post-list--post sage-well">
+    <h3>
+      <a class="sage-link no-underline" href="{{ post.url }}">
+        {{ post.data.title | escape }}
+      </a>
+    </h3>
+    <p>{{ post.data.description | escape }}</p>
+    {% render "partials/date" date: post.date %}
+  </section>
   {% endfor %}
 </div>
 
@@ -76,3 +74,23 @@ pageName: "home"
   <a href="/blog/" class="sage-link">All blog posts</a>
   <span aria-hidden="true">&rarr;</span>
 </p>
+
+<h2>Other pages</h2>
+
+<div class="sage-well">
+  <dl class="sage-dl">
+    <dt><a href="/about/" class="sage-link">About me</a></dt>
+    <dd>My name, pronouns, and preferred terms.</dd>
+
+    <dt><a href="/uses/" class="sage-link">Things I use</a></dt>
+    <dd>Thoughts about the hardware, software, and other tools I use.</dd>
+
+    <dt>
+      <a href="/shrines/" class="sage-link">Shrines</a> (Under Construction)
+    </dt>
+    <dd>Shrines to things I like.</dd>
+
+    <dt><a href="/credits/" class="sage-link">Credits</a></dt>
+    <dd>How this site was built.</dd>
+  </dl>
+</div>
