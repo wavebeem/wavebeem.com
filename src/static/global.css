@@ -1089,7 +1089,7 @@ main {
   font-weight: bold;
 }
 
-.sage-dl dt > .sage-link {
+.sage-dl dt > .sage-link:not(:hover) {
   text-decoration: none;
 }
 
