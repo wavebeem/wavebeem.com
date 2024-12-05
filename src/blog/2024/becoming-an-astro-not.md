@@ -85,7 +85,7 @@ websites.
 
 <aside class="infobox">
 
-## Inline JavaScript in 2024?
+### Inline JavaScript in 2024?
 
 Astro requires
 [allowing inline JavaScript](https://docs.astro.build/en/guides/troubleshooting/#refused-to-execute-inline-script).

@@ -145,14 +145,22 @@ h6 {
 }
 
 :is(h1, h2, h3)::before {
-  content: "::";
+  content: ": ";
   letter-spacing: 2px;
-  margin-inline-end: 0.5rem;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.5em;
-  /* font-family: var(--font-mono); */
+  font-size: 1em;
+  position: relative;
+  top: calc(-1em / 12);
   color: var(--color-main-decoration);
+}
+
+h2::before {
+  content: ":: ";
+}
+
+h3::before {
+  content: "::: ";
 }
 
 h1 {
@@ -174,7 +182,6 @@ h2 {
 h3 {
   font-family: var(--font-body);
   font-size: var(--font-size-h3);
-  font-style: italic;
   line-height: 1.25;
   margin-block: 4rem 1rem;
 }
@@ -1200,12 +1207,13 @@ main {
 .footer-links {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  margin-inline: -0.5rem;
 }
 
 :where(.footer-links) .sage-link {
   font-weight: normal;
   max-width: max-content;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
 }
 
 :is(.nav, .header, .footer-links) .sage-link {
