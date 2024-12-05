@@ -77,7 +77,10 @@ export default function getConfig(config) {
     return Object.entries(data);
   });
 
-  const blockedTags = new Set(["all", "posts"]);
+  config.addFilter("log", function (data) {
+    console.log(data);
+    return data;
+  });
 
   // https://github.com/11ty/eleventy-base-blog/blob/main/eleventy.config.js
   return {
