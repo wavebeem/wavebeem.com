@@ -348,12 +348,16 @@ p {
 }
 
 ul {
-  padding-left: 1rem;
+  padding-left: 3rem;
   list-style-type: disc;
 }
 
 ol {
-  padding-left: 1rem;
+  padding-left: 3rem;
+}
+
+:is(ul, ol) ::marker {
+  color: var(--color-main-decoration);
 }
 
 li:first-child > p {

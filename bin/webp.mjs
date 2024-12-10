@@ -16,6 +16,15 @@ for await (const file of new Glob("{art,blog}/**/*.{png,gif}", {})) {
   }
 }
 
+for await (const file of new Glob("{art,blog}/**/*.{jpg,jpeg}", {})) {
+  for (const [, base] of match(file, /^(.*)\.(jpg|jpeg)/)) {
+    console.log(file);
+    // Don't delete the source JPEG since we might want to re-convert the
+    // file...
+    spawnSync("magick", [file, "-resize", "800", `${base}.webp`]);
+  }
+}
+
 function* match(string, regexp) {
   const m = string.match(regexp);
   if (m) {
