@@ -5,6 +5,7 @@ import { spawnSync } from "node:child_process";
 import { unlink } from "node:fs/promises";
 import { chdir } from "node:process";
 import { Glob } from "glob";
+import { existsSync } from "node:fs";
 
 chdir("src/static");
 
@@ -18,10 +19,13 @@ for await (const file of new Glob("{art,blog}/**/*.{png,gif}", {})) {
 
 for await (const file of new Glob("{art,blog}/**/*.{jpg,jpeg}", {})) {
   for (const [, base] of match(file, /^(.*)\.(jpg|jpeg)/)) {
-    console.log(file);
-    // Don't delete the source JPEG since we might want to re-convert the
-    // file...
-    spawnSync("magick", [file, "-resize", "800", `${base}.webp`]);
+    const dest = `${base}.webp`;
+    if (!existsSync(dest)) {
+      console.log(file);
+      // Don't delete the source JPEG since we might want to re-convert the
+      // file...
+      spawnSync("magick", [file, "-resize", "800", `${base}.webp`]);
+    }
   }
 }
 

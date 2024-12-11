@@ -385,33 +385,44 @@ jargon to ask your friends for more info about mechanical keyboards.
 Thanks for reading and please consider sharing this post on social media if you
 enjoyed it.
 
-## Credits
+<div class="sage-well">
+<details>
+<summary><i>Image credits</i></summary>
 
-- **[Ducky 9008G2 - Year Of The Tiger](https://www.flickr.com/photos/asianoni/21181683774)**\
-  by [A. TSF](https://www.flickr.com/photos/asianoni/) is licensed under [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/).
+**Ducky 9008G2 - Year Of The Tiger**\
+by [A. TSF](https://www.flickr.com/photos/asianoni/21181683774) is licensed under
+[CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)
 
-- **[IBM Model M](https://commons.wikimedia.org/wiki/File:IBM_Model_M.png)**\
-  by Raymangold22 is licensed under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en).
+**IBM Model M**\
+by [Raymangold22](https://commons.wikimedia.org/wiki/File:IBM_Model_M.png) is licensed
+under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 
-- **[Das Keyboard Ultimate 4](https://www.flickr.com/photos/mccaughan/27571492442)**\
-  by [Doug McCaughan](https://www.flickr.com/photos/mccaughan/) is licensed under
-  [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+**Das Keyboard Ultimate 4**\
+by [Doug McCaughan](https://www.flickr.com/photos/mccaughan/27571492442) is licensed
+under [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)
 
-- **[MT3 /dev/tty](https://www.flickr.com/photos/pdc/28266574949)**\
-  by [Damian Cugley](https://www.flickr.com/photos/pdc/) is licensed under [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+**MT3 /dev/tty**\
+by [Damian Cugley](https://www.flickr.com/photos/pdc/28266574949) is licensed under
+[CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)
 
-- **[Pok3r keyboard with custom keycabs](https://www.flickr.com/photos/66451944@N03/42839323381)**\
-  by [Thomas Vogt](https://www.flickr.com/photos/66451944@N03/) is licensed under
-  [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
+**Pok3r keyboard with custom keycabs**\
+by [Thomas Vogt](https://www.flickr.com/photos/66451944@N03/42839323381) is licensed
+under [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/)
 
-- **[Digstar StarTop USB mechanical gaming keyboard 22](https://www.flickr.com/photos/mawari/28692415581)**\
-  by [Hideya HAMANO](https://www.flickr.com/photos/mawari/) is licensed under [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/).
+**Digstar StarTop USB mechanical gaming keyboard 22**\
+by [Hideya HAMANO](https://www.flickr.com/photos/mawari/28692415581) is licensed
+under [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)
 
-- **[Happy Hacking Keyboard Professional 2](https://commons.wikimedia.org/wiki/File:Happy_Hacking_Keyboard_Professional_2.webp)**\
-  by Aon fi is licensed under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/deed.en).
+**Happy Hacking Keyboard Professional 2**\
+by [Aon fi](https://commons.wikimedia.org/wiki/File:Happy_Hacking_Keyboard_Professional_2.webp)
+is licensed under [CC3.0](https://creativecommons.org/licenses/by/3.0/deed.en)
 
-- **[DigsRoccat Suora FX RGB Mechanical Keyboard Review](https://www.flickr.com/photos/bagogames/33836220354)**\
-  by [BagoGames](https://www.flickr.com/photos/bagogames/) is licensed under [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)
+**DigsRoccat Suora FX RGB Mechanical Keyboard Review**\
+by [BagoGames](https://www.flickr.com/photos/bagogames/33836220354) is licensed under
+[CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)
+
+</details>
+</div>
 
 [1]:
   https://www.amazon.com/Cooler-Master-MasterKeys-Tenkeyless-Mechanical/dp/B071W2697M/
