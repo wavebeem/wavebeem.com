@@ -1,52 +1,9 @@
 ---
 title: >-
-  Sorrow
+  Cory
 description: >-
-  2024 has been a bad year for me, and November was the hardest month of my
-  life. A post about the death of a close friend, the death of our family pet,
-  chronic pain, and the US presidential election.
+  A memorial post about Cory, one of my closest friends.
 ---
-
-## November
-
-Even on a good year, I don't like November. It's cold. The days are short. I've
-never really liked Thanksgiving as a holiday. I'll credit that in part to having
-divorced parents, and all the fun of being shuffled around as a shared resource,
-and never being close with extended family in general. But today's post isn't
-about my poor extended family relationships or childhood problems.
-
-## Pain
-
-November 2023 is when my chronic pain began. A year later, I don't feel
-especially closer to knowing what's wrong with me or how to fix it. I had
-anxiety so bad I had to go to urgent care and get my heart checked. It was just
-anxiety, not heart problems, thankfully.
-
-I've had surgery to attempt to alleviate my chronic nasal congestion (inferior
-turbinate reduction + frontal sinus balloon expansion), but I still struggle
-with congestion, especially in the mornings. I haven't had a fully pain free day
-since early November 2023 at best. Living life with chronic headaches has been
-extremely challenging, especially when _looking at computer screens_ (central to
-my job and my hobbies) makes it worse.
-
-The last medical advice I got was from the 2nd ENT doctor I've seen. He said I
-probably have chronic migraines, and the problem could stem from the trigeminal
-nerve. I tried gabapentin (a nerve pain drug) for a while, but it didn't fix me,
-and it was just a temporary prescription.
-
-The next step was to see a neurologist. I'm horrible at scheduling medical
-appointments, so I wasted some time before moving forward with this. And then
-when I finally got the appointment locked in, it was for a date over half a year
-from that point. I will see a neurologist 27 March 2025.
-
-Perhaps I'll write more about this in the future, especially if/when I learn
-more about my condition.
-
-## Trump
-
-I was prepared for this possibility, but of course that doesn't make it not
-hurt. I'm scared for what fresh hell our most vulnerable populations will be
-subjected to. I don't have much else to say about this right now.
 
 ## Cory
 
@@ -64,7 +21,7 @@ together. Eventually they joined a health care startup as the first two
 non-founder employees. They worked together for over 7 years. Cory was an
 amazing influence on Ash and a great friend.
 
-![](/blog/sorrow/cory/wizards.webp)
+![](/blog/cory/wizards.webp)
 
 **_Wizards_ by Ralph Bakshi, one of Cory's favorite movies.**
 
@@ -94,7 +51,7 @@ Crucible, Gambit, a few Raids, and a lot of Dungeons. Looking at Cory's account,
 he finished all 9 unique Dungeons in the game, for a total of 96 clears and 158
 hours of playtime.
 
-![](/blog/sorrow/cory/transcendent.webp)
+![](/blog/cory/transcendent.webp)
 
 **We spent countless hours playing together to become "Transcendent".**
 
@@ -112,7 +69,7 @@ spending time together as our fireteam trio just as much as I loved playing the
 game. It was truly my second place, and I was happy to be adventuring with Cory
 and shooting the breeze (and the aliens) often multiple times per week together.
 
-![](/blog/sorrow/cory/webfishing.webp)
+![](/blog/cory/webfishing.webp)
 
 **WEBFISHING was a nice relaxing break from Destiny.**
 
@@ -142,7 +99,7 @@ Unfortunately, it was delayed several months, and it only just came out. We...
 didn't get to play it with him. And we never will. I've only logged a few hours
 and I'm having a lot of fun, but I really wish Cory could try it.
 
-![](/blog/sorrow/cory/bigtime.webp)
+![](/blog/cory/bigtime.webp)
 
 **Cory's dog, Big Time**
 
@@ -151,23 +108,3 @@ Cory's dog. I'm going to miss playing games with him. I'm going to miss making
 silly jokes with him. I'm going to miss streaming on Twitch with him. I'm going
 to miss cooking with him. I'm going to miss going places with him. I'm going to
 miss him.
-
-## Curry
-
-![](/blog/sorrow/curry/2012-dec.webp)
-
-![](/blog/sorrow/curry/2013-jan.webp)
-
-![](/blog/sorrow/curry/elegant.webp)
-
-![](/blog/sorrow/curry/fireplace.webp)
-
-![](/blog/sorrow/curry/meow.webp)
-
-![](/blog/sorrow/curry/squirrel.webp)
-
-![](/blog/sorrow/curry/art.webp)
-
-![](/blog/sorrow/curry/us.webp)
-
-## Furnace

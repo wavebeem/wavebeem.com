@@ -15,12 +15,12 @@ layout: "layout-base"
           {{ post.data.title | escape }}
         </a>
       </h3>
-      {% render "partials/date" date: post.date %}
       <p>
         {{ post.data.description | escape }}
       </p>
+      {% render "partials/date" date: post.date %}
     </section>
-  {% endfor %}
+{% endfor %}
 </div>
 
 {{ content }}
