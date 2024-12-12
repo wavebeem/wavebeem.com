@@ -323,24 +323,14 @@ summary {
 }
 
 .slime {
-  height: 4rem;
+  height: 1rem;
+  margin-block-end: 3rem;
   background: var(--color-header-background);
   /* https://css-generators.com/wavy-shapes/ */
-  --mask: radial-gradient(
-        4.47rem at 50% calc(100% - 6rem),
-        #000 99%,
-        #0000 101%
-      )
-      calc(50% - 4rem) 0/8rem 100%,
-    radial-gradient(4.47rem at 50% calc(100% + 4rem), #0000 99%, #000 101%) 50%
-      calc(100% - 2rem) / 8rem 100% repeat-x;
+  --mask: linear-gradient(to top, #0000 16px, #000 0),
+    radial-gradient(16px, #000 98%, #0000) bottom/29.6px 32px;
   -webkit-mask: var(--mask);
   mask: var(--mask);
-  /* Don't let slime get in the way of clicking stuff */
-  pointer-events: none;
-  position: sticky;
-  top: 0;
-  z-index: 1;
 }
 
 p {
@@ -666,7 +656,7 @@ main {
   border-radius: 9999px;
   width: var(--avatar-size);
   height: var(--avatar-size);
-  filter: sepia(10%) hue-rotate(-30deg) brightness(90%) contrast(110%);
+  filter: brightness(90%) contrast(120%);
 }
 
 [data-page-name="home"] wavebeem-easter-egg {
