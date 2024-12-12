@@ -22,7 +22,7 @@ export const light = {
 
   "color-header-text": oklch(100, 0, 0),
   "color-header-background": oklch(64, 44, 149),
-  "color-header-button": oklch(59, 44, 149),
+  "color-header-button": oklch(54, 44, 149),
 
   "color-footer-text": oklch(30, 0, 0),
   "color-footer-background": oklch(96, 5, 290),
