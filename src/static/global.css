@@ -324,7 +324,7 @@ summary {
 
 .slime {
   height: 32px;
-  margin-block-end: 3rem;
+  margin-block-end: 2rem;
   background: var(--color-header-background);
   /* https://css-generators.com/wavy-shapes/ */
   --mask: linear-gradient(to top, #0000 32px, #000 0),
