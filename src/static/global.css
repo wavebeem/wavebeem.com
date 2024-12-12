@@ -323,12 +323,12 @@ summary {
 }
 
 .slime {
-  height: 1rem;
+  height: 32px;
   margin-block-end: 3rem;
   background: var(--color-header-background);
   /* https://css-generators.com/wavy-shapes/ */
-  --mask: linear-gradient(to top, #0000 16px, #000 0),
-    radial-gradient(16px, #000 98%, #0000) bottom/29.6px 32px;
+  --mask: linear-gradient(to top, #0000 32px, #000 0),
+    radial-gradient(32px, #000 98%, #0000) bottom/59.2px 64px;
   -webkit-mask: var(--mask);
   mask: var(--mask);
 }
@@ -1230,7 +1230,7 @@ main {
   background: var(--color-footer-background);
   clip-path: ellipse(65% 100% at 50% 100%);
   padding-top: 3rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .footer .content-column {

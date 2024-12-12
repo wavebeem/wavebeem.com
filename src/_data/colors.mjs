@@ -25,7 +25,7 @@ export const light = {
   "color-header-button": oklch(54, 44, 149),
 
   "color-footer-text": oklch(30, 0, 0),
-  "color-footer-background": oklch(96, 5, 290),
+  "color-footer-background": oklch(96, 5, 149),
 
   "color-card-background": oklch(96, 5, 290),
   "color-card-hover": oklch(98, 5, 290),
@@ -44,8 +44,8 @@ export const light = {
   "color-syntax-string": oklch(52, 100, 250),
   "color-syntax-punctuation": oklch(55, 30, 30),
 
-  "color-easter-egg-shadow": oklch(90, 0, 0),
-  "color-easter-egg-highlight": oklch(100, 0, 0, 70),
+  "color-easter-egg-shadow": oklch(90, 5, 290),
+  "color-easter-egg-highlight": oklch(100, 0, 0, 100),
 };
 
 export const dark = {
@@ -53,7 +53,7 @@ export const dark = {
 
   "color-header-text": oklch(100, 0, 0),
   "color-header-background": oklch(64, 44, 149),
-  "color-header-button": oklch(59, 44, 149),
+  "color-header-button": oklch(54, 44, 149),
 
   "color-footer-text": oklch(95, 0, 30),
   "color-footer-background": oklch(35, 5, 290),
