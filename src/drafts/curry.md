@@ -5,12 +5,15 @@ description: >-
   A memorial post about Curry, our beloved cat for the last 12 years.
 ---
 
-## Curry
-
 Back in February 2024, Curry almost died. She had stopped eating, stopped
 drinking, and stopped moving. She just sat in her favorite chair (the papasan).
 She had a routine checkup a week earlier where she looked totally fine. The vet
 diagnosed her with pancreatitis and either IBD or lymphoma, a type of cancer.
+
+![](/blog/curry/2012-dec.webp)
+
+**One of the earliest pictures we have of Curry, take a month after adopting
+her.**
 
 She had always had minor issues with vomiting, especially after meals, but she
 was an otherwise healthy cat. The vet prescribed prednisolone, a steroid, as the
@@ -19,24 +22,31 @@ to have a biopsy performed to differentiate between IBD or lymphoma---because
 it's invasive---and the treatment for both ailments is largely the same. The key
 difference is how much longer she would live depending on which it was.
 
-![](/blog/curry/2012-dec.webp)
-
-**One of the earliest pictures we have of Curry, take a month after adopting
-her.**
-
 ![](/blog/curry/2013-jan.webp)
 
 **January 2013, Curry displays her loved for sitting on people wearing denim.**
+
+Curry was a very silly and spicy cat. She wasn't mean, but she liked to play
+rough, and she wasn't one for cuddling. She did like sitting on laps, but pretty
+much only if the person was wearing jeans lol. She would often sleep on Ash,
+though. I think she was very picky about what fabric she sat on.
 
 ![](/blog/curry/high.webp)
 
 **When Curry was young and we still lived in our apartment, she would jump from
 the counter to the refrigerator and then run along the top of the cabinets.**
 
+Ash and I adopted Curry in November 2012, when she was just a year and a half.
+She had been surrendered to the Humane Society because her previous owner's
+house burned down and they couldn't take care of her any more. Her name was
+listed as "Shadow", which I had assumed was ironic.
+
 ![](/blog/curry/aliens.webp)
 
 **Curry loved to stare up at the skylight in our bedroom---presumably at her own
 reflection---but we always said she was looking up at aliens.**
+
+Well, "Shadow" was very clearly not an ironic name, but a behavioral one.
 
 ![](/blog/curry/elegant.webp)
 

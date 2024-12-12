@@ -5,8 +5,6 @@ description: >-
   A memorial post about Cory, one of my closest friends.
 ---
 
-## Cory
-
 Cory was one of my closest friends. He passed away on 6 November 2024
 (Wednesday). I learned what happened on Saturday. Another group of friends went
 to visit his house before we did. Our close friend and former roommate of many
@@ -40,7 +38,7 @@ completing our previous 3 player co-op game (the first _Remnant_ game, as I
 recall), I think I was the one who proposed, half-jokingly, what if we got Cory
 into Destiny?
 
-Well, Cory loved it. He had never played before, but he took too it quicker than
+Well, Cory loved it. He had never played before, but he took to it quicker than
 I expected, for such an obtuse and divisive game. Hell, he was playing more than
 me and Ash combined for a while. We did the whole new campaign together, but
 that was only the beginning. I've now accumulated over 3,000 hours in the game.
@@ -84,7 +82,7 @@ files we want to keep.
 I took the job of calling many of his friends to deliver the news. Each time
 felt like tearing my heart open. I'm crying again right now writing this. The
 compartmentalization of grief is truly incredible. I've been so busy with other
-things I've barely thought about this for days, but I'ma complete mess all over
+things I've barely thought about this for days, but I'm a complete mess all over
 again writing this.
 
 Cory was one of my closest friends. It's been a month and thinking about this is
