@@ -2,8 +2,8 @@
 title: >-
   Fresh new green
 description: >-
-  Exploring the thought process behind my new design. A fresh new green. And I
-  flirted with kiki before going back to bouba.
+  Exploring the process behind my fresh new green, including a design I
+  discarded and the inspiration for my new style.
 ---
 
 ## Goodbye "Slime Mode"
