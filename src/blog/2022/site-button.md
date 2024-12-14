@@ -15,7 +15,7 @@ and I've been inspired to make my own site button by some of my new friends
 there.
 
 <img
-    src="/button-old.gif"
+    src="/blog/button1/button.webp"
     title="wavebeem"
     alt="wavebeem"
     width="88"

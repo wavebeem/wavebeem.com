@@ -11,7 +11,7 @@ soon, I wanted to update my button to match my new theme. A lot of folks on the
 indie web are using site buttons, apparently!
 
 <img
-    src="/button.webp"
+    src="/blog/button2/button.webp"
     title="wavebeem"
     alt="wavebeem"
     width="88"

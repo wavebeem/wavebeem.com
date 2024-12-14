@@ -323,24 +323,14 @@ summary {
 }
 
 .slime {
-  height: 4rem;
+  height: 32px;
+  margin-block-end: 2rem;
   background: var(--color-header-background);
   /* https://css-generators.com/wavy-shapes/ */
-  --mask: radial-gradient(
-        4.47rem at 50% calc(100% - 6rem),
-        #000 99%,
-        #0000 101%
-      )
-      calc(50% - 4rem) 0/8rem 100%,
-    radial-gradient(4.47rem at 50% calc(100% + 4rem), #0000 99%, #000 101%) 50%
-      calc(100% - 2rem) / 8rem 100% repeat-x;
+  --mask: linear-gradient(to top, #0000 32px, #000 0),
+    radial-gradient(32px, #000 98%, #0000) bottom/59.2px 64px;
   -webkit-mask: var(--mask);
   mask: var(--mask);
-  /* Don't let slime get in the way of clicking stuff */
-  pointer-events: none;
-  position: sticky;
-  top: 0;
-  z-index: 1;
 }
 
 p {
@@ -387,10 +377,6 @@ main {
 
 .font-mono {
   font-family: var(--font-mono);
-}
-
-.demo-font {
-  font-size: var(--font-size-h3);
 }
 
 .font-cool {
@@ -666,7 +652,7 @@ main {
   border-radius: 9999px;
   width: var(--avatar-size);
   height: var(--avatar-size);
-  filter: sepia(10%) hue-rotate(-30deg) brightness(90%) contrast(110%);
+  filter: brightness(90%) contrast(120%);
 }
 
 [data-page-name="home"] wavebeem-easter-egg {
@@ -882,28 +868,32 @@ main {
   margin-block: 2rem;
   display: flex;
   color: inherit;
-}
 
-[data-page-name="blog-post"] hr::after {
-  font-size: 3rem;
-  content: "⋄◆⋄";
-  font-family: var(--font-mono);
-  display: block;
-  color: var(--color-main-decoration);
-  position: relative;
-  margin-inline: auto;
-  padding-inline: 0.5rem;
   /* https://www.smashingmagazine.com/2024/01/css-border-image-property/ */
   --s: 2px; /* line thickness */
   --c: var(--color-card-background); /* line color */
   --w: 100vw; /* divider width */
   --g: 0.5ch; /* content gap */
-  border-image: linear-gradient(
-      transparent calc(50% - var(--s) / 2),
-      var(--c) 0 calc(50% + var(--s) / 2),
-      transparent 0
-    )
-    0 1 / 0 var(--w) / 0 calc(var(--w) + var(--g));
+  background: linear-gradient(
+    transparent calc(50% - var(--s) / 2),
+    var(--c) 0 calc(50% + var(--s) / 2),
+    transparent 0
+  );
+}
+
+[data-page-name="blog-post"] hr::after {
+  content: "";
+  background: var(--color-main-decoration);
+  outline: 8px solid var(--color-main-background);
+
+  width: 32px; /* adjust to control the size */
+  aspect-ratio: 1;
+  border-radius: 9999px;
+
+  font-size: 3rem;
+  display: block;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
 }
 
 [data-page-name="blog-post"] figure {
@@ -987,7 +977,7 @@ main {
   margin-block: 1rem;
   padding: 1rem;
   border-radius: 1rem;
-  background: var(--color-syntax-background);
+  background: var(--color-card-background);
 }
 
 [data-page-name="blog-post"] aside :first-child {
@@ -1240,7 +1230,7 @@ main {
   background: var(--color-footer-background);
   clip-path: ellipse(65% 100% at 50% 100%);
   padding-top: 3rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .footer .content-column {

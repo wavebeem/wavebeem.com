@@ -23,12 +23,12 @@ const menu = [
   },
   {
     url: "/art/",
-    title: "Art gallery",
+    title: "Art",
     image: "/icons/art.webp", // 🎨
   },
   {
     url: "/contact/",
-    title: "Contact info",
+    title: "Contact",
     image: "/icons/contact.webp", // 📬
   },
   {
