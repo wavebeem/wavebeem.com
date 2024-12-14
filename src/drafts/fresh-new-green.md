@@ -6,7 +6,7 @@ description: >-
   flirted with kiki before going back to bouba.
 ---
 
-## Saying goodbye to "Slime Mode"
+## Goodbye "Slime Mode"
 
 The idea behind "Slime Mode" was to lean in to warm colors I introduced in my
 life (I use "Night Mode" 24/7 for warm tinting). Eventually I grew tired of the
@@ -45,6 +45,10 @@ represents the roundness of "wavebeem" or the friendliness I want to project.
 
 ## Hello "Fresh"
 
+I want to say I thought long and hard and came up with a totally original idea
+on how to resolve the gap between my "Slime" and "Cyber" designs, but it was
+inspired by something else. More on that in a moment.
+
 ![](/blog/that-green/synthesis.webp)
 
 - **Balanced:** Warm, cool, and neutral elements
@@ -66,4 +70,11 @@ without distracting too much from the green.
 
 ![](/blog/that-green/sprite-vanilla-frost.webp)
 
-**Inspiration: Sprite Vanilla Frost**
+**Sprite Vanilla Frost**
+
+## What's next
+
+I want to try my hand at some graphic design and mockups in the future. Even
+just looking at these package designs is really exciting to me, but like I've
+been saying, I need to try making more things that aren't my website in order to
+have more fun with design.
