@@ -872,28 +872,32 @@ main {
   margin-block: 2rem;
   display: flex;
   color: inherit;
-}
 
-[data-page-name="blog-post"] hr::after {
-  font-size: 3rem;
-  content: "⋄◆⋄";
-  font-family: var(--font-mono);
-  display: block;
-  color: var(--color-main-decoration);
-  position: relative;
-  margin-inline: auto;
-  padding-inline: 0.5rem;
   /* https://www.smashingmagazine.com/2024/01/css-border-image-property/ */
   --s: 2px; /* line thickness */
   --c: var(--color-card-background); /* line color */
   --w: 100vw; /* divider width */
   --g: 0.5ch; /* content gap */
-  border-image: linear-gradient(
-      transparent calc(50% - var(--s) / 2),
-      var(--c) 0 calc(50% + var(--s) / 2),
-      transparent 0
-    )
-    0 1 / 0 var(--w) / 0 calc(var(--w) + var(--g));
+  background: linear-gradient(
+    transparent calc(50% - var(--s) / 2),
+    var(--c) 0 calc(50% + var(--s) / 2),
+    transparent 0
+  );
+}
+
+[data-page-name="blog-post"] hr::after {
+  content: "";
+  background: var(--color-main-decoration);
+  outline: 8px solid var(--color-main-background);
+
+  width: 32px; /* adjust to control the size */
+  aspect-ratio: 1;
+  border-radius: 9999px;
+
+  font-size: 3rem;
+  display: block;
+  margin-inline: auto;
+  padding-inline: 0.5rem;
 }
 
 [data-page-name="blog-post"] figure {
