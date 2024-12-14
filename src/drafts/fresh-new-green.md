@@ -19,15 +19,15 @@ liked. Green has been an important color in
 
 **Slime Mode**
 
-- Warm
-- Round
-- Pastel
+- **Warm:** xxx
+- **Round:** xxx
+- **Pastel:** xxx
 
-## No love for edgy "Cyber Mode"
+## No love for edgy "Cyber Style"
 
 ![](/blog/that-green/antithesis.webp)
 
-**Cyber Mode**
+**Cyber Style**
 
 - **Cold:** Green is flanked with gray and grayer
 - **Sharp:** Strange shapes on the cards and the oddly satisfying font
@@ -37,7 +37,7 @@ liked. Green has been an important color in
 
 ![](/blog/that-green/synthesis.webp)
 
-**Synthesis: Balanced, round, bold**
+**XYZ Mode**
 
 - **Balanced:** Warm, cool, and neutral elements
 - **Round:** Mostly round, but the scalloped top gives just a hint of sharpness

@@ -379,10 +379,6 @@ main {
   font-family: var(--font-mono);
 }
 
-.demo-font {
-  font-size: var(--font-size-h3);
-}
-
 .font-cool {
   font-family: var(--font-cool);
 }
@@ -981,7 +977,7 @@ main {
   margin-block: 1rem;
   padding: 1rem;
   border-radius: 1rem;
-  background: var(--color-syntax-background);
+  background: var(--color-card-background);
 }
 
 [data-page-name="blog-post"] aside :first-child {
