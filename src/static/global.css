@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "PP Talisman";
-  src: url("/fonts/pp-talisman-bold.woff2") format("woff2");
-  font-weight: 700;
+  font-family: "Montserrat Alternates";
+  src: url("/fonts/MontserratAlternates-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
   font-display: swap;
 }
 
@@ -77,7 +77,7 @@
   --font-fallback-mono: ui-monospace, "Cascadia Code", "SFMono-Regular", "Menlo",
     "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
   --font-body: "PP Object Sans", var(--font-fallback-main);
-  --font-cool: "PP Talisman", var(--font-fallback-main);
+  --font-cool: "Montserrat Alternates", var(--font-fallback-main);
   --font-logo: "Ultra Hi-Gloss", var(--font-fallback-main);
   --font-mono: "JetBrains Mono", var(--font-fallback-mono);
 
@@ -166,7 +166,7 @@ h2::before {
 h1 {
   font-family: var(--font-cool);
   font-size: var(--font-size-h1);
-  letter-spacing: 1px;
+  letter-spacing: calc(-1rem / 32);
   line-height: 1.25;
   margin-block: 0 1rem;
 }
@@ -174,7 +174,7 @@ h1 {
 h2 {
   font-family: var(--font-cool);
   font-size: var(--font-size-h2);
-  letter-spacing: 1px;
+  letter-spacing: calc(-1rem / 32);
   line-height: 1.25;
   margin-block: 4rem 1rem;
 }
