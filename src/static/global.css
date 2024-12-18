@@ -88,8 +88,7 @@
   --font-size-small: 1rem;
   --font-size-code: 1rem;
 
-  /* More closely match the text stroke width */
-  --link-underline-thickness: 1.5px;
+  --link-underline-thickness: 1px;
 
   overflow-y: scroll;
   color-scheme: light dark;
@@ -167,6 +166,7 @@ h1 {
   font-family: var(--font-cool);
   font-size: var(--font-size-h1);
   letter-spacing: calc(-1rem / 32);
+  color: var(--color-main-heading);
   line-height: 1.25;
   margin-block: 0 1rem;
 }
@@ -174,6 +174,7 @@ h1 {
 h2 {
   font-family: var(--font-cool);
   font-size: var(--font-size-h2);
+  color: var(--color-main-heading);
   letter-spacing: calc(-1rem / 32);
   line-height: 1.25;
   margin-block: 4rem 1rem;
@@ -459,35 +460,6 @@ main {
 .sage-button:focus-visible {
   outline: 2px solid var(--color-main-link);
   outline-offset: 2px;
-}
-
-.tag-list {
-  display: flex;
-  margin-inline: 0;
-  padding-inline: 0;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.tag-list:empty {
-  display: none;
-}
-
-.tag-list li {
-  list-style-type: none;
-}
-
-.tag-list a {
-  background: var(--color-card-background);
-  color: inherit;
-  font-size: var(--font-size-small);
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
-  display: flex;
-}
-
-:where(.tag-list) .sage-link {
-  text-decoration-line: none;
 }
 
 .theme-select {
@@ -831,7 +803,8 @@ main {
   border-radius: 1rem;
   display: block;
   background: var(--color-card-background);
-  border: 0.5rem solid transparent;
+  border: 1px solid var(--color-card-border);
+  padding: 8px;
 }
 
 [data-page-name="art"] .art-container--frame figcaption {
@@ -870,8 +843,8 @@ main {
   color: inherit;
 
   /* https://www.smashingmagazine.com/2024/01/css-border-image-property/ */
-  --s: 2px; /* line thickness */
-  --c: var(--color-card-background); /* line color */
+  --s: 1px; /* line thickness */
+  --c: var(--color-card-border); /* line color */
   --w: 100vw; /* divider width */
   --g: 0.5ch; /* content gap */
   background: linear-gradient(
@@ -903,10 +876,10 @@ main {
   gap: 0.5rem;
 
   box-sizing: border-box;
-  border: 0;
-  padding: 1rem;
   border-radius: 1rem;
   background: var(--color-card-background);
+  border: 1px solid var(--color-card-border);
+  padding: 8px;
 }
 
 [data-page-name="blog-post"] figure img {
@@ -927,11 +900,15 @@ main {
   border-radius: 1rem;
   display: block;
   background: var(--color-card-background);
-  border: 0.5rem solid transparent;
+  border: 1px solid var(--color-card-border);
+  padding: 8px;
 }
 
 @media (max-width: 420px) {
   .sage-prose p > img:only-child {
+    padding-inline: 0;
+    border-inline: 0;
+    border-radius: 0;
     margin-inline: -1rem;
     width: calc(100% + 2rem);
   }
@@ -958,10 +935,10 @@ main {
 }
 
 [data-page-name="blog-post"] blockquote {
-  background: var(--color-card-background);
   margin-inline: 0;
   border-radius: 1rem;
   padding: 1rem;
+  border: 1px solid var(--color-card-border);
 }
 
 [data-page-name="blog-post"] blockquote > :first-child {
@@ -973,11 +950,10 @@ main {
 }
 
 [data-page-name="blog-post"] aside {
-  position: relative;
   margin-block: 1rem;
   padding: 1rem;
   border-radius: 1rem;
-  background: var(--color-card-background);
+  border: 1px solid var(--color-card-border);
 }
 
 [data-page-name="blog-post"] aside :first-child {
@@ -1097,10 +1073,10 @@ main {
 
 .sage-well {
   box-sizing: border-box;
-  border: 0;
   padding: 1rem;
   border-radius: 1rem;
   background: var(--color-card-background);
+  border: 1px solid var(--color-card-border);
 }
 
 .sage-well > :first-child {
@@ -1166,9 +1142,9 @@ main {
   text-decoration-thickness: var(--link-underline-thickness);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  color: var(--color-main-link);
   color: inherit;
   background: var(--color-card-background);
+  border: 1px solid var(--color-card-border);
 }
 
 .link-card > img {
@@ -1240,6 +1216,10 @@ main {
 .footer .sage-button {
   padding-block: 0.25rem;
   max-width: max-content;
+}
+
+.post {
+  margin-block-start: 4rem;
 }
 
 .post-list {

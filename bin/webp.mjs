@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-// @ts-check
-
 import { spawnSync } from "node:child_process";
 import { chdir } from "node:process";
 import { Glob } from "glob";
