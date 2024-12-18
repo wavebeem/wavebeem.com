@@ -802,6 +802,7 @@ main {
   height: auto;
   border-radius: 1rem;
   display: block;
+  background: var(--color-card-background);
   border: 1px solid var(--color-card-border);
   padding: 8px;
 }
@@ -875,8 +876,8 @@ main {
   gap: 0.5rem;
 
   box-sizing: border-box;
-  border: 0;
   border-radius: 1rem;
+  background: var(--color-card-background);
   border: 1px solid var(--color-card-border);
   padding: 8px;
 }
@@ -898,6 +899,7 @@ main {
   height: auto;
   border-radius: 1rem;
   display: block;
+  background: var(--color-card-background);
   border: 1px solid var(--color-card-border);
   padding: 8px;
 }
@@ -1071,9 +1073,9 @@ main {
 
 .sage-well {
   box-sizing: border-box;
-  border: 0;
   padding: 1rem;
   border-radius: 1rem;
+  background: var(--color-card-background);
   border: 1px solid var(--color-card-border);
 }
 
@@ -1140,7 +1142,8 @@ main {
   text-decoration-thickness: var(--link-underline-thickness);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  color: var(--color-main-link);
+  color: inherit;
+  background: var(--color-card-background);
   border: 1px solid var(--color-card-border);
 }
 
