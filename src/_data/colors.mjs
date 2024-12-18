@@ -25,14 +25,15 @@ export const light = {
   "color-header-button": oklch(54, 44, 149),
 
   "color-footer-text": oklch(30, 0, 0),
-  "color-footer-background": oklch(96, 5, 290),
+  "color-footer-background": oklch(94, 10, 149),
 
-  "color-card-background": oklch(96, 5, 83),
-  "color-card-hover": oklch(98, 5, 83),
+  "color-card-border": oklch(84, 24, 149),
+  "color-card-hover": oklch(98, 5, 149),
 
   "color-main-link": oklch(50, 50, 290),
   "color-main-background": oklch(100, 0, 0),
   "color-main-text": oklch(30, 0, 0),
+  "color-main-heading": oklch(44, 24, 149),
   "color-main-code": oklch(52, 100, 340),
   "color-main-decoration": oklch(64, 44, 149),
 
@@ -55,15 +56,16 @@ export const dark = {
   "color-header-background": oklch(59, 44, 149),
   "color-header-button": oklch(49, 44, 149),
 
-  "color-footer-text": oklch(90, 0, 0),
-  "color-footer-background": oklch(35, 0, 0),
+  "color-footer-text": oklch(100, 0, 0),
+  "color-footer-background": oklch(40, 14, 149),
 
-  "color-card-background": oklch(35, 0, 0),
-  "color-card-hover": oklch(37, 0, 0),
+  "color-card-border": oklch(50, 24, 149),
+  "color-card-hover": oklch(34, 14, 149),
 
   "color-main-link": oklch(80, 100, 290),
-  "color-main-background": oklch(30, 0, 0),
-  "color-main-text": oklch(90, 0, 0),
+  "color-main-background": oklch(30, 7, 149),
+  "color-main-text": oklch(90, 7, 149),
+  "color-main-heading": oklch(100, 0, 0),
   "color-main-code": oklch(80, 40, 340),
   "color-main-decoration": oklch(59, 44, 149),
 
