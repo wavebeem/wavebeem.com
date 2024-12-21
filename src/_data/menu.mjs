@@ -49,12 +49,16 @@ export const more = [
     title: "Toybox",
   },
   {
-    url: "/shrines/",
-    title: "Shrines",
+    url: "/uses/",
+    title: "Uses",
   },
   {
     url: "/credits/",
     title: "Credits",
+  },
+  {
+    url: "/shrines/",
+    title: "Shrines",
   },
 ];
 

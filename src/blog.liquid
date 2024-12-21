@@ -21,7 +21,7 @@ layout: "layout-base"
   <div class="post-list">
     {% for post in postList %}
       <section class="post-list--post sage-well">
-        <h3>
+        <h3 class="arrow-before">
           <a class="sage-link no-underline" href="{{ post.url }}">
             {{ post.data.title | escape }}
           </a>

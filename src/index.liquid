@@ -50,7 +50,7 @@ pageName: "home"
   {% assign top3 = collections.posts | reverse | take: 3 %} {% for post in top3
   %}
   <section class="post-list--post sage-well">
-    <h3>
+    <h3 class="arrow-before">
       <a class="sage-link no-underline" href="{{ post.url }}">
         {{ post.data.title | escape }}
       </a>
@@ -61,16 +61,15 @@ pageName: "home"
   {% endfor %}
 </div>
 
-<p class="text-right">
-  <a href="/blog/" class="sage-link">All blog posts</a>
-  <span aria-hidden="true">&rarr;</span>
+<p class="text-right arrow-after">
+  <a href="/blog/" class="sage-link no-underline"><strong>All blog posts</strong></a>
 </p>
 
-<h2>Featured pages</h2>
+<h2>Take a look around</h2>
 
 <div class="clicky-list">
   {% for item in menu.main %}
-  <div class="link-card">
+  <div class="link-card arrow-before">
     <a href="{{ item.url }}" class="sage-link no-underline"
       ><h3>{{ item.title | escape }}</h3></a
     >
@@ -78,11 +77,11 @@ pageName: "home"
   {% endfor %}
 </div>
 
-<h2>More pages</h2>
+<hr class="sage-hr" />
 
 <div class="clicky-list">
   {% for item in menu.more %}
-  <div class="link-card">
+  <div class="link-card arrow-before">
     <a href="{{ item.url }}" class="sage-link no-underline"
       ><h3>{{ item.title | escape }}</h3></a
     >

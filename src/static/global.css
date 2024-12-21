@@ -151,13 +151,19 @@ h6 {
   color: var(--color-main-decoration);
 }
 
-:where(.link-card)::before,
-:where(h1, h2, h3, dt, .sage-well):has(> a)::before {
-  content: "→ ";
+.arrow-before::before,
+.arrow-after::after {
   font-style: normal;
   font-weight: bold;
   color: var(--color-main-decoration);
-  text-decoration: none !important;
+}
+
+.arrow-before::before {
+  content: "→ ";
+}
+
+.arrow-after::after {
+  content: " →";
 }
 
 .link-card :is(h1, h2, h3) {
@@ -486,7 +492,7 @@ main {
   text-decoration-line: underline;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 500px) {
   .hamburger {
     display: none;
   }
@@ -853,6 +859,7 @@ main {
   margin-bottom: 1rem;
 }
 
+.sage-hr,
 [data-page-name="blog-post"] hr {
   border: none;
   margin-inline: 0;
@@ -872,6 +879,7 @@ main {
   );
 }
 
+.sage-hr::after,
 [data-page-name="blog-post"] hr::after {
   content: "";
   background-color: var(--color-main-decoration);
