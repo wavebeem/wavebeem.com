@@ -93,7 +93,7 @@
   overflow-y: scroll;
   color-scheme: light dark;
   scrollbar-color: var(--color-main-text) var(--color-main-background);
-  background: var(--color-main-background);
+  background-color: var(--color-main-background);
   color: var(--color-main-text);
   font-synthesis: none;
 }
@@ -151,11 +151,17 @@ h6 {
   color: var(--color-main-decoration);
 }
 
-:is(h1, h2, h3, dt):has(> a)::before {
+:where(.link-card)::before,
+:where(h1, h2, h3, dt, .sage-well):has(> a)::before {
   content: "→ ";
   font-style: normal;
   font-weight: bold;
   color: var(--color-main-decoration);
+  text-decoration: none !important;
+}
+
+.link-card :is(h1, h2, h3) {
+  margin: 0;
 }
 
 h2::before {
@@ -232,7 +238,7 @@ summary {
 
 .spoiler {
   padding-inline: 0.25ch;
-  background: var(--color-main-text);
+  background-color: var(--color-main-text);
   color: transparent;
   cursor: default;
 }
@@ -280,7 +286,7 @@ summary {
 
 .hamburger > summary {
   position: relative;
-  background: var(--color-header-button);
+  background-color: var(--color-header-button);
   padding: 0.25rem 1rem;
   border-radius: 9999px;
   font-weight: bold;
@@ -300,7 +306,7 @@ summary {
 }
 
 .header {
-  background: var(--color-header-background);
+  background-color: var(--color-header-background);
   color: var(--color-header-text);
 }
 
@@ -320,13 +326,13 @@ summary {
   justify-content: space-between;
   align-items: center;
   isolation: isolate;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
 }
 
 .slime {
   height: 32px;
   margin-block-end: 2rem;
-  background: var(--color-header-background);
+  background-color: var(--color-header-background);
   /* https://css-generators.com/wavy-shapes/ */
   --mask: linear-gradient(to top, #0000 32px, #000 0),
     radial-gradient(32px, #000 98%, #0000) bottom/59.2px 64px;
@@ -368,7 +374,7 @@ main {
 
 :focus-visible {
   outline: 2px solid;
-  outline-offset: 1px;
+  outline-offset: 2px;
   text-decoration-line: none;
 }
 
@@ -386,18 +392,6 @@ main {
 
 .grid-full {
   grid-column: 1 / -1;
-}
-
-.gap1 {
-  gap: 0.25rem;
-}
-
-.gap2 {
-  gap: 0.5rem;
-}
-
-.gap3 {
-  gap: 1rem;
 }
 
 .flex {
@@ -451,7 +445,7 @@ main {
   border: 2px solid transparent;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
-  background: var(--color-main-link);
+  background-color: var(--color-main-link);
   color: var(--color-main-background);
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
@@ -473,7 +467,6 @@ main {
   display: none;
   grid-template-columns: 1fr 1fr;
   justify-content: flex-end;
-  margin-block-start: 1rem;
   margin-inline: -1rem;
 }
 
@@ -493,13 +486,20 @@ main {
   text-decoration-line: underline;
 }
 
-@media (min-width: 500px) {
-  .nav {
-    margin-inline: auto 0;
+@media (min-width: 800px) {
+  .hamburger {
+    display: none;
   }
 
-  .nav :any-link {
-    font-size: 1.25rem;
+  .nav {
+    /* margin-inline: auto 0; */
+    /* display: grid; */
+    margin-block-start: 0;
+    /* grid-template-rows: 1fr 1fr; */
+    /* grid-template-columns: repeat(auto-fit, minmax(10ch, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 }
 
@@ -521,9 +521,27 @@ main {
   }
 }
 
+.grid2-always {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
 .clicky-list {
   display: grid;
   gap: 0.5rem;
+}
+
+.gap1 {
+  gap: 0.25rem;
+}
+
+.gap2 {
+  gap: 0.5rem;
+}
+
+.gap3 {
+  gap: 1rem;
 }
 
 @media (min-width: 500px) {
@@ -769,7 +787,7 @@ main {
 }
 
 [data-page-name="resume"] main summary:hover {
-  background: var(--color-card-hover);
+  background-color: var(--color-card-hover);
 }
 
 /* --- ART GALLERY --- */
@@ -802,7 +820,7 @@ main {
   height: auto;
   border-radius: 1rem;
   display: block;
-  background: var(--color-card-background);
+  background-color: var(--color-card-background);
   border: 1px solid var(--color-card-border);
   padding: 8px;
 }
@@ -856,7 +874,7 @@ main {
 
 [data-page-name="blog-post"] hr::after {
   content: "";
-  background: var(--color-main-decoration);
+  background-color: var(--color-main-decoration);
   outline: 8px solid var(--color-main-background);
 
   width: 32px; /* adjust to control the size */
@@ -877,7 +895,7 @@ main {
 
   box-sizing: border-box;
   border-radius: 1rem;
-  background: var(--color-card-background);
+  background-color: var(--color-card-background);
   border: 1px solid var(--color-card-border);
   padding: 8px;
 }
@@ -899,7 +917,7 @@ main {
   height: auto;
   border-radius: 1rem;
   display: block;
-  background: var(--color-card-background);
+  background-color: var(--color-card-background);
   border: 1px solid var(--color-card-border);
   padding: 8px;
 }
@@ -973,7 +991,7 @@ main {
   border-radius: 1rem;
   margin: 1rem 0;
   padding: 1rem;
-  background: var(--color-syntax-background);
+  background-color: var(--color-syntax-background);
   color: var(--color-syntax-text);
   overflow-x: auto;
 }
@@ -1075,7 +1093,7 @@ main {
   box-sizing: border-box;
   padding: 1rem;
   border-radius: 1rem;
-  background: var(--color-card-background);
+  background-color: var(--color-card-background);
   border: 1px solid var(--color-card-border);
 }
 
@@ -1131,25 +1149,20 @@ main {
 }
 
 .sage-well > details > summary:hover {
-  background: var(--color-card-hover);
+  background-color: var(--color-card-hover);
 }
 
 .link-card {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: max-content 1fr;
   gap: 0.5ch;
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  color: inherit;
-  background: var(--color-card-background);
+  color: var(--color-main-link);
+  background-color: var(--color-card-background);
   border: 1px solid var(--color-card-border);
-}
-
-.link-card > img {
-  width: 32px;
-  height: auto;
 }
 
 .logo {
@@ -1166,7 +1179,7 @@ main {
 
 .footer-links {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   margin-inline: -0.5rem;
 }
 
@@ -1186,9 +1199,15 @@ main {
 
 .footer {
   font-size: var(--font-size-small);
-  background: var(--color-footer-background);
+  background-color: var(--color-footer-background);
   color: var(--color-footer-text);
   padding-top: 0.5rem;
+}
+
+.footer h3 {
+  font-size: var(--font-size-small);
+  font-weight: normal;
+  margin-block: 1rem 1rem;
 }
 
 .footer :any-link {
@@ -1197,13 +1216,14 @@ main {
 }
 
 .footer .sage-button {
-  background: var(--color-footer-text);
+  background-color: var(--color-footer-text);
   color: var(--color-footer-background);
+  outline-color: var(--color-footer-text);
 }
 
 /* https://css-shape.com/rounded-edge/ */
 .footer-top {
-  background: var(--color-footer-background);
+  background-color: var(--color-footer-background);
   clip-path: ellipse(65% 100% at 50% 100%);
   padding-top: 3rem;
   margin-top: 3rem;
