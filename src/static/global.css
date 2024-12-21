@@ -498,11 +498,7 @@ main {
   }
 
   .nav {
-    /* margin-inline: auto 0; */
-    /* display: grid; */
     margin-block-start: 0;
-    /* grid-template-rows: 1fr 1fr; */
-    /* grid-template-columns: repeat(auto-fit, minmax(10ch, 1fr)); */
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
@@ -1162,6 +1158,8 @@ main {
 
 .link-card {
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: max-content 1fr;
   gap: 0.5ch;
   text-decoration-line: none;
