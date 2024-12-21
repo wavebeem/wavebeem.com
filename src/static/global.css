@@ -277,7 +277,8 @@ summary {
   justify-content: space-between;
   align-items: center;
   isolation: isolate;
-  padding: 0.5rem 1rem;
+  padding-block: 0.5rem 0;
+  padding-inline: 1rem;
 }
 
 .slime {
@@ -414,7 +415,6 @@ main {
 }
 
 .nav {
-  grid-column: 1 / -1;
   display: none;
   grid-template-columns: 1fr;
   justify-content: flex-end;
@@ -437,8 +437,10 @@ main {
   text-decoration-line: underline;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .nav {
+    grid-column: 1 / -1;
+
     /* https://css-generators.com/tooltip-speech-bubble/ */
     margin: 0;
     margin-left: auto;
@@ -474,6 +476,8 @@ main {
 
   .hamburger {
     margin: 0;
+    justify-self: flex-end;
+    max-width: fit-content;
   }
 
   .hamburger > summary {
@@ -522,7 +526,7 @@ main {
   }
 }
 
-@media (min-width: 501px) {
+@media (min-width: 801px) {
   .hamburger {
     display: none;
   }
@@ -602,52 +606,6 @@ main {
 
 .crime-frame > details {
   background: white;
-}
-
-/* --- LINKS --- */
-
-.site-button {
-  width: calc(2 * 88px);
-  height: auto;
-  display: flex;
-  image-rendering: pixelated;
-}
-
-.site-button--grid {
-  display: grid;
-  gap: 0.5rem;
-}
-
-@media (min-width: 400px) {
-  .site-button--grid {
-    grid-template-columns: repeat(auto-fit, calc(2 * 88px));
-    justify-content: center;
-  }
-}
-
-@media (min-width: 800px) {
-  .site-button--grid {
-    justify-content: space-between;
-  }
-}
-
-.site-button--link {
-  display: flex;
-  border-radius: 2px;
-  outline-offset: 2px;
-  outline-width: 3px;
-  align-items: flex-start;
-}
-
-.site-button--image {
-  width: 100%;
-  height: auto;
-  border-radius: 2px;
-  image-rendering: pixelated;
-}
-
-.site-button--image:hover {
-  opacity: 0.85;
 }
 
 /* --- HOME --- */
