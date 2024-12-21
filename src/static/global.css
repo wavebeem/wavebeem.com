@@ -686,7 +686,7 @@ main {
   --t: 2px;
   --k: 0.05turn;
   --transform: translate(calc(var(--t) * var(--x)), calc(var(--t) * var(--y)))
-    scale(1.1) rotateY(calc(var(--k) * var(--x)))
+    scale(1.25) rotateY(calc(var(--k) * var(--x)))
     rotateX(calc(var(--k) * var(--y)));
   display: block;
   position: relative;
