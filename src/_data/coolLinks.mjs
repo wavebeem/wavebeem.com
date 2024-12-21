@@ -9,77 +9,77 @@
 /** @type {CoolLink[]} */
 export const allLinks = [
   {
-    url: "https://maya.land/",
     title: "maya.land",
+    url: "https://maya.land/",
   },
   {
-    url: "https://spax.zone/",
     title: "spax.zone",
+    url: "https://spax.zone/",
   },
   {
-    url: "https://blog.curiousquail.com/",
     title: "quailblog",
+    url: "https://blog.curiousquail.com/",
   },
   {
-    url: "https://candiedreptile.club/bloglet/index.html",
     title: "Terrarium",
+    url: "https://candiedreptile.club/bloglet/index.html",
   },
   {
-    url: "https://algometric.pink/",
     title: "algometric.pink",
+    url: "https://algometric.pink/",
   },
   {
-    url: "https://tati.codes/",
     title: "Welcome to my garage!",
+    url: "https://tati.codes/",
   },
   {
-    url: "https://illuminesce.net/",
     title: "CJ | design & video games",
+    url: "https://illuminesce.net/",
   },
   {
-    url: "https://mabbees.neocities.org/",
     title: "mabbees",
+    url: "https://mabbees.neocities.org/",
   },
   {
-    url: "https://platinumtulip.net/",
     title: "platinumtulip | digital artist",
+    url: "https://platinumtulip.net/",
   },
   {
-    url: "https://platinumtulip.garden/",
     title: "platinumtulip | digital garden sanctuary",
+    url: "https://platinumtulip.garden/",
   },
   {
-    url: "https://moonlitdecadence.neocities.org/",
     title: "moonlit decadence",
+    url: "https://moonlitdecadence.neocities.org/",
   },
   {
-    url: "https://renkotsuban.com/",
     title: "Midnight Reading: Renkon's Personal Site",
+    url: "https://renkotsuban.com/",
   },
   {
-    url: "https://indietsushin.net/",
     title:
       "インディー通信 Indie Tsushin: Highlighting indie games and developers from Japan!",
+    url: "https://indietsushin.net/",
   },
   {
-    url: "https://cdrom.ca/",
     title: "CD-ROM Journal",
+    url: "https://cdrom.ca/",
   },
   {
-    url: "https://milliesquilly.com/",
     title: "Millie Squilly Dot Com",
+    url: "https://milliesquilly.com/",
   },
   {
+    title: "Lex Feathers",
     url: "https://lexfeathers.ca/",
-    title: "Lex Feathers - home",
   },
   {
-    url: "https://zine.milliesquilly.com/",
     title: "zine of millie",
+    url: "https://zine.milliesquilly.com/",
   },
   {
-    url: "https://froey.bearblog.dev/",
     title: "Froey",
+    url: "https://froey.bearblog.dev/",
   },
   {
     title: "Damien Erambert",
@@ -126,8 +126,8 @@ export const allLinks = [
     url: "https://frills.dev/",
   },
   {
-    url: "https://alainawastaken.neocities.org/",
     title: "ALAINA'S FUCK SPACE",
+    url: "https://alainawastaken.neocities.org/",
   },
   {
     url: "https://srxl.me/",
@@ -160,10 +160,6 @@ export const allLinks = [
   {
     title: "MADDIEBISCUITS ART",
     url: "https://madmaddiecomms.carrd.co/",
-  },
-  {
-    title: "NotDiegues - Illustration",
-    url: "https://itsnotdiegues.carrd.co/",
   },
   {
     title: "Shafer Brown Illustration",
@@ -217,6 +213,4 @@ export const allLinks = [
     title: "HJEOJEO.COM",
     url: "https://hjeojeo.com/",
   },
-];
-
-allLinks.sort((a, b) => a.title.localeCompare(b.title));
+].sort((a, b) => a.title.localeCompare(b.title));

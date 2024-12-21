@@ -262,55 +262,6 @@ summary {
   outline-offset: 2px;
 }
 
-.hamburger {
-  margin: 0;
-}
-
-.hamburger > summary {
-  list-style: none;
-  appearance: none;
-  text-align: inherit;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.hamburger summary::-webkit-details-marker {
-  display: none;
-}
-
-.hamburger > summary::after {
-  content: "";
-  display: block;
-  width: 0.75rem;
-  height: 0.5rem;
-  clip-path: polygon(50% 100%, 100% 0, 0 0);
-  background: currentColor;
-  flex: none;
-}
-
-.hamburger > summary {
-  position: relative;
-  background-color: var(--color-header-button);
-  padding: 0.25rem 1rem;
-  border-radius: 9999px;
-  font-weight: bold;
-  cursor: default;
-}
-
-.hamburger[open] > summary {
-  margin: inherit;
-}
-
-.hamburger[open] > summary::after {
-  rotate: 0.5turn;
-}
-
-.hamburger[open] ~ .nav {
-  display: grid;
-}
-
 .header {
   background-color: var(--color-header-background);
   color: var(--color-header-text);
@@ -471,7 +422,7 @@ main {
 .nav {
   grid-column: 1 / -1;
   display: none;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-content: flex-end;
   margin-inline: -1rem;
 }
@@ -492,7 +443,92 @@ main {
   text-decoration-line: underline;
 }
 
-@media (min-width: 500px) {
+@media (max-width: 500px) {
+  .nav {
+    /* https://css-generators.com/tooltip-speech-bubble/ */
+    margin: 0;
+    margin-left: auto;
+    margin-top: 0.25rem;
+    text-align: right;
+
+    /* triangle dimension */
+    --b: 16px; /* base */
+    --h: 8px; /* height */
+
+    /* triangle position (0%:left 100%:right) */
+    --p: calc(100% - (101.75px / 2));
+    --r: 0.5rem; /* the radius */
+    --c: var(--color-header-button);
+
+    padding: 0.5rem 0;
+    border-radius: min(var(--r), var(--p) - var(--b) / 2)
+      min(var(--r), 100% - var(--p) - var(--b) / 2) var(--r) var(--r) / var(--r);
+    clip-path: polygon(
+      0 0,
+      0 100%,
+      100% 100%,
+      100% 0,
+      min(100%, var(--p) + var(--b) / 2) 0,
+      var(--p) calc(-1 * var(--h)),
+      max(0%, var(--p) - var(--b) / 2) 0
+    );
+    background: var(--c);
+    border-image: conic-gradient(var(--c) 0 0) fill 0/ 0 calc(
+        100% - var(--p) - var(--b) / 2
+      ) var(--r) calc(var(--p) - var(--b) / 2) / var(--h) 0 0 0;
+  }
+
+  .hamburger {
+    margin: 0;
+  }
+
+  .hamburger > summary {
+    list-style: none;
+    appearance: none;
+    text-align: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .hamburger summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .hamburger > summary::after {
+    content: "";
+    display: block;
+    width: 0.75rem;
+    height: 0.5rem;
+    clip-path: polygon(50% 100%, 100% 0, 0 0);
+    background: currentColor;
+    flex: none;
+  }
+
+  .hamburger > summary {
+    position: relative;
+    background-color: var(--color-header-button);
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    cursor: default;
+  }
+
+  .hamburger[open] > summary {
+    margin: inherit;
+  }
+
+  .hamburger[open] > summary::after {
+    rotate: 0.5turn;
+  }
+
+  .hamburger[open] ~ .nav {
+    display: grid;
+  }
+}
+
+@media (min-width: 501px) {
   .hamburger {
     display: none;
   }
@@ -628,10 +664,14 @@ main {
 
 [data-page-name="home"] .avatar {
   --avatar-size: 120px;
+  --avatar-padding: 4px;
   display: flex;
   float: right;
   margin: 1rem;
-  margin-top: 0;
+  margin-right: 0;
+  margin-top: -2rem;
+  background-color: var(--color-main-background);
+  padding: var(--avatar-padding);
   border-radius: 9999px;
 }
 
@@ -693,10 +733,10 @@ main {
   pointer-events: none;
   content: "";
   position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
+  width: calc(100% - 2 * var(--avatar-padding));
+  height: calc(100% - 2 * var(--avatar-padding));
+  left: var(--avatar-padding);
+  top: var(--avatar-padding);
   opacity: 0;
   clip-path: circle(50%);
 }
@@ -743,12 +783,6 @@ main {
 @media (max-width: 420px) {
   [data-page-name="home"] .avatar {
     --avatar-size: 100px;
-  }
-}
-
-@media (min-width: 800px) {
-  [data-page-name="home"] .avatar {
-    --avatar-size: 180px;
   }
 }
 
@@ -960,6 +994,7 @@ main {
   margin-inline: 0;
   border-radius: 1rem;
   padding: 1rem;
+  background-color: var(--color-card-background);
   border: 1px solid var(--color-card-border);
 }
 
@@ -975,6 +1010,7 @@ main {
   margin-block: 1rem;
   padding: 1rem;
   border-radius: 1rem;
+  background-color: var(--color-card-background);
   border: 1px solid var(--color-card-border);
 }
 
@@ -995,7 +1031,8 @@ main {
   border-radius: 1rem;
   margin: 1rem 0;
   padding: 1rem;
-  background-color: var(--color-syntax-background);
+  background-color: var(--color-card-background);
+  border: 1px solid var(--color-card-border);
   color: var(--color-syntax-text);
   overflow-x: auto;
 }
@@ -1298,4 +1335,8 @@ main {
     transition: none !important;
     animation: none !important;
   }
+}
+
+.print-only {
+  display: none;
 }
