@@ -21,37 +21,28 @@ pageName: "home"
 
 <h1>Hello!</h1>
 
-<p>
-  I'm
-  <a class="sage-link" href="/about/">Sage</a>
-  (they/them), aka
-  <q>wavebeem</q>.
-</p>
+<div class="sage-well">
+  <p>
+    I'm
+    <a class="sage-link" href="/about/">Sage</a>
+    (they/them), aka
+    <q>wavebeem</q>.
+  </p>
 
-<p>
-  I love video games, web development, makeup, pixel art, progressive metal,
-  cats, and the color green.
-</p>
+  <p>
+    I love video games, web development, makeup, pixel art, progressive metal,
+    cats, and the color green.
+  </p>
 
-<p>
-  I live in
-  <a class="sage-link" href="https://en.wikipedia.org/wiki/Portland,_Oregon"
-    >Portland</a
-  >, where I enjoy gray skies, green leaves, and gentle rain.
-</p>
+  <p>
+    I live in
+    <a class="sage-link" href="https://en.wikipedia.org/wiki/Portland,_Oregon"
+      >Portland</a
+    >, where I enjoy gray skies, green leaves, and gentle rain.
+  </p>
+</div>
 
 <div class="clearfix"></div>
-
-<h2>Featured pages</h2>
-
-<div class="clicky-list">
-  {% for item in menu %}
-  <a class="link-card" href="{{ item.url }}">
-    <img src="{{ item.image }}" width="32" height="32" alt="" />
-    {{ item.title }}
-  </a>
-  {% endfor %}
-</div>
 
 <h2>Recent posts</h2>
 
@@ -59,7 +50,7 @@ pageName: "home"
   {% assign top3 = collections.posts | reverse | take: 3 %} {% for post in top3
   %}
   <section class="post-list--post sage-well">
-    <h3>
+    <h3 class="arrow-before">
       <a class="sage-link no-underline" href="{{ post.url }}">
         {{ post.data.title | escape }}
       </a>
@@ -70,27 +61,30 @@ pageName: "home"
   {% endfor %}
 </div>
 
-<p class="text-right">
-  <a href="/blog/" class="sage-link">All blog posts</a>
-  <span aria-hidden="true">&rarr;</span>
+<p class="text-right arrow-after">
+  <a href="/blog/" class="sage-link no-underline"><strong>All blog posts</strong></a>
 </p>
 
-<h2>Other pages</h2>
+<h2>Take a look around</h2>
 
-<div class="sage-well">
-  <dl class="sage-dl">
-    <dt><a href="/about/" class="sage-link">About me</a></dt>
-    <dd>My name, pronouns, and preferred terms.</dd>
+<div class="clicky-list">
+  {% for item in menu.main %}
+  <div class="link-card arrow-before">
+    <a href="{{ item.url }}" class="sage-link no-underline"
+      ><h3>{{ item.title | escape }}</h3></a
+    >
+  </div>
+  {% endfor %}
+</div>
 
-    <dt><a href="/uses/" class="sage-link">Things I use</a></dt>
-    <dd>Thoughts about the hardware, software, and other tools I use.</dd>
+<hr class="sage-hr" />
 
-    <dt>
-      <a href="/shrines/" class="sage-link">Shrines</a> (Under Construction)
-    </dt>
-    <dd>Shrines to things I like.</dd>
-
-    <dt><a href="/credits/" class="sage-link">Credits</a></dt>
-    <dd>How this site was built.</dd>
-  </dl>
+<div class="clicky-list">
+  {% for item in menu.more %}
+  <div class="link-card arrow-before">
+    <a href="{{ item.url }}" class="sage-link no-underline"
+      ><h3>{{ item.title | escape }}</h3></a
+    >
+  </div>
+  {% endfor %}
 </div>

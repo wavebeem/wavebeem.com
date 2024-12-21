@@ -1,3 +1,9 @@
+/**
+ * @license MIT
+ * @copyright Sage Fennel 2024
+ * @see https://www.wavebeem.com/
+ */
+
 const html = String.raw;
 const css = String.raw;
 

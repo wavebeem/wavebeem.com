@@ -38,7 +38,6 @@ export const light = {
   "color-main-code": oklch(52, 100, 340),
   "color-main-decoration": oklch(64, 44, 149),
 
-  "color-syntax-background": oklch(96, 5, 83),
   "color-syntax-text": oklch(20, 0, 30),
   "color-syntax-comment": oklch(55, 50, 290),
   "color-syntax-keyword": oklch(47, 100, 170),
@@ -71,7 +70,6 @@ export const dark = {
   "color-main-code": oklch(80, 40, 340),
   "color-main-decoration": oklch(54, 44, 149),
 
-  "color-syntax-background": oklch(25, 0, 0),
   "color-syntax-text": oklch(90, 0, 0),
   "color-syntax-comment": oklch(70, 10, 300),
   "color-syntax-keyword": oklch(80, 70, 170),
