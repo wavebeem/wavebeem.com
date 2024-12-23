@@ -1039,7 +1039,6 @@ main {
 
 .token.keyword {
   color: var(--color-syntax-keyword);
-  font-weight: bold;
 }
 
 .language-css .token.property,
