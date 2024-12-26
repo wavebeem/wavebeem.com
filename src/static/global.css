@@ -275,7 +275,7 @@ summary {
   display: grid;
   grid-template-columns: 1fr max-content;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   isolation: isolate;
   padding-block: 0.5rem 0;
   padding-inline: 1rem;
@@ -414,13 +414,6 @@ main {
   max-width: max-content;
 }
 
-.nav {
-  display: none;
-  grid-template-columns: 1fr;
-  justify-content: flex-end;
-  margin-inline: -1rem;
-}
-
 .nav :any-link {
   display: flex;
   gap: 0.5ch;
@@ -438,99 +431,20 @@ main {
 }
 
 @media (max-width: 800px) {
-  .nav {
-    grid-column: 1 / -1;
-
-    /* https://css-generators.com/tooltip-speech-bubble/ */
-    margin: 0;
-    margin-left: auto;
-    margin-top: 0.25rem;
-    text-align: right;
-
-    /* triangle dimension */
-    --b: 16px; /* base */
-    --h: 8px; /* height */
-
-    /* triangle position (0%:left 100%:right) */
-    --p: calc(100% - (101.75px / 2));
-    --r: 0.5rem; /* the radius */
-    --c: var(--color-header-button);
-
-    padding: 0.5rem 0;
-    border-radius: min(var(--r), var(--p) - var(--b) / 2)
-      min(var(--r), 100% - var(--p) - var(--b) / 2) var(--r) var(--r) / var(--r);
-    clip-path: polygon(
-      0 0,
-      0 100%,
-      100% 100%,
-      100% 0,
-      min(100%, var(--p) + var(--b) / 2) 0,
-      var(--p) calc(-1 * var(--h)),
-      max(0%, var(--p) - var(--b) / 2) 0
-    );
-    background: var(--c);
-    border-image: conic-gradient(var(--c) 0 0) fill 0/ 0 calc(
-        100% - var(--p) - var(--b) / 2
-      ) var(--r) calc(var(--p) - var(--b) / 2) / var(--h) 0 0 0;
-  }
-
-  .hamburger {
-    margin: 0;
-    justify-self: flex-end;
-    max-width: fit-content;
-  }
-
-  .hamburger > summary {
-    list-style: none;
-    appearance: none;
-    text-align: inherit;
+  .header .content-column {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
+    flex-direction: column;
   }
 
-  .hamburger summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .hamburger > summary::after {
-    content: "";
-    display: block;
-    width: 0.75rem;
-    height: 0.5rem;
-    clip-path: polygon(50% 100%, 100% 0, 0 0);
-    background: currentColor;
-    flex: none;
-  }
-
-  .hamburger > summary {
-    position: relative;
-    background-color: var(--color-header-button);
-    padding: 0.25rem 1rem;
-    border-radius: 9999px;
-    font-weight: bold;
-    cursor: default;
-  }
-
-  .hamburger[open] > summary {
-    margin: inherit;
-  }
-
-  .hamburger[open] > summary::after {
-    rotate: 0.5turn;
-  }
-
-  .hamburger[open] ~ .nav {
+  .nav {
+    margin-inline: -1rem;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
   }
 }
 
 @media (min-width: 801px) {
-  .hamburger {
-    display: none;
-  }
-
   .nav {
     margin-block-start: 0;
     display: flex;

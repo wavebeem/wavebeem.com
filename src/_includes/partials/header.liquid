@@ -3,16 +3,11 @@
     <div class="flex">
       <a href="/" class="logo sage-link">wavebeem</a>
     </div>
-    <details class="hamburger">
-      <summary>Menu</summary>
-    <!-- Sorry, this shouldn't be empty. This should have the <nav> inside here. There's an open Chrome bug that will let me put the <nav> back where it belongs.https://issues.chromium.org/issues/41464351?pli=1
-    -->
-    </details>
     <nav class="nav">
       {% for item in menu.main %}
-        <a href="{{ item.url }}">
-          {{ item.title }}
-        </a>
+      <a href="{{ item.url }}">
+        {{ item.title }}
+      </a>
       {% endfor %}
     </nav>
   </div>
