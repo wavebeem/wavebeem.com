@@ -1266,7 +1266,7 @@ main {
 
 .toy-list--toy {
   display: grid;
-  grid-template-columns: max-content 1fr;
+  grid-template-columns: max-content minmax(1fr, fit-content);
   gap: 1rem;
 }
 
