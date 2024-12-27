@@ -418,7 +418,7 @@ main {
   display: flex;
   gap: 0.5ch;
   align-items: center;
-  padding-block: 0.25rem;
+  padding-block: 0.5rem;
   padding-inline: 1rem;
   color: var(--color-header-text);
   border-radius: 0.5rem;
@@ -443,7 +443,6 @@ main {
   .header .content-column {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
     padding-block: 0.5rem;
   }
 
@@ -1073,7 +1072,7 @@ main {
 }
 
 .logo {
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1.5rem;
   letter-spacing: 1px;
   font-family: var(--font-logo);
