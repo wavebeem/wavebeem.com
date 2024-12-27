@@ -754,7 +754,7 @@ main {
 }
 
 .sage-hr,
-[data-page-name="blog-post"] hr {
+[data-page-name="blog-post"] main hr {
   border: none;
   margin-inline: 0;
   margin-block: 2rem;
@@ -774,7 +774,7 @@ main {
 }
 
 .sage-hr::after,
-[data-page-name="blog-post"] hr::after {
+[data-page-name="blog-post"] main hr::after {
   content: "";
   background-color: var(--color-main-decoration);
   outline: 8px solid var(--color-main-background);
