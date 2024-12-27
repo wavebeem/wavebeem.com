@@ -1,24 +1,22 @@
 <div class="footer-top"></div>
 <footer class="footer screen-only">
   <div class="content-column flex flex-column gap3">
-    <div class="grid2-always">
-      <div>
-        <h3>Featured pages</h3>
-        <nav class="footer-links">
-          {% for item in menu.main %}
-          <a href="{{ item.url }}" class="sage-link">{{ item.title }}</a>
-          {% endfor %}
-        </nav>
-      </div>
-      <div>
-        <h3>Other pages</h3>
-        <nav class="footer-links">
-          {% for item in menu.more %}
-          <a href="{{ item.url }}" class="sage-link">{{ item.title }}</a>
-          {% endfor %}
-        </nav>
-      </div>
-    </div>
+    <nav class="footer-links">
+      {% for item in menu.main %}
+      <a href="{{ item.url }}" class="sage-link">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+
+    <hr />
+
+    <nav class="footer-links">
+      {% for item in menu.more %}
+      <a href="{{ item.url }}" class="sage-link">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+
+    <hr />
+
     <wavebeem-theme-select>
       <select
         class="theme-select sage-button"
@@ -31,6 +29,15 @@
         <option value="dark">Dark</option>
       </select>
     </wavebeem-theme-select>
-    <div>&copy; {{ "now" | formatDate : "yyyy" }} Sage Fennel</div>
+
+    <hr />
+
+    <div>
+      &copy; {{ "now" | formatDate : "yyyy" }} Sage Fennel (wavebeem)<br />
+      Last updated
+      <time datetime="{{ 'now' | formatDate : 'yyyy-mm-dd' }}">{{
+        "now" | formatDate : "yyyy mmmm d"
+      }}</time>
+    </div>
   </div>
 </footer>

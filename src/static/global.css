@@ -418,10 +418,11 @@ main {
   display: flex;
   gap: 0.5ch;
   align-items: center;
-  padding-block: 0.5rem;
+  padding-block: 0.25rem;
   padding-inline: 1rem;
   color: var(--color-header-text);
   border-radius: 0.5rem;
+  border-radius: 9999px;
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
 }
@@ -430,26 +431,24 @@ main {
   text-decoration-line: underline;
 }
 
+.nav {
+  gap: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 @media (max-width: 800px) {
   .header .content-column {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
+    padding-block: 0.5rem;
   }
 
   .nav {
-    margin-inline: -1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    flex-wrap: wrap;
-  }
-}
-
-@media (min-width: 801px) {
-  .nav {
-    margin-block-start: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    margin-left: -1rem;
   }
 }
 
@@ -1074,7 +1073,7 @@ main {
 }
 
 .logo {
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 1rem;
   font-size: 1.5rem;
   letter-spacing: 1px;
   font-family: var(--font-logo);
@@ -1086,8 +1085,8 @@ main {
 }
 
 .footer-links {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-wrap: wrap;
   margin-inline: -0.5rem;
 }
 
@@ -1112,10 +1111,12 @@ main {
   padding-top: 0.5rem;
 }
 
-.footer h3 {
-  font-size: var(--font-size-small);
-  font-weight: normal;
-  margin-block: 1rem 1rem;
+.footer hr {
+  width: 100%;
+  border: 0;
+  color: inherit;
+  border-bottom: 1px dotted var(--color-main-decoration);
+  margin: 0;
 }
 
 .footer :any-link {

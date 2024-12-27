@@ -24,6 +24,10 @@ export const main = [
     url: "/art/",
     title: "Art",
   },
+];
+
+/** @type {MenuItem[]} */
+export const more = [
   {
     url: "/resume/",
     title: "Resume",
@@ -32,10 +36,6 @@ export const main = [
     url: "/links/",
     title: "Links",
   },
-];
-
-/** @type {MenuItem[]} */
-export const more = [
   {
     url: "/contact/",
     title: "Contact",
