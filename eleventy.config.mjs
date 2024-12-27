@@ -4,7 +4,7 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateformat from "dateformat";
 import markdownIt from "markdown-it";
 
-/** @typedef {import("@11ty/eleventy").UserConfig} UserConfig */
+/** @typedef {import("@11ty/eleventy").Eleventy["config"]} UserConfig */
 
 /** @param {UserConfig} config */
 export default function getConfig(config) {
@@ -25,13 +25,14 @@ export default function getConfig(config) {
   config.addPlugin(pluginRss);
 
   config.addFilter("formatDate", function (value, format) {
+    let isUTC = true;
     if (value === "now") {
       value = now;
+      isUTC = false;
     }
     if (!value) {
       throw new Error(`bad date: ${value}`);
     }
-    const isUTC = true;
     return dateformat(value, format, isUTC);
   });
 
