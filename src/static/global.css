@@ -84,6 +84,7 @@
   --font-size-h1: 3rem;
   --font-size-h2: 2rem;
   --font-size-h3: 1.5rem;
+  --font-size-header: 1.25rem;
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
   --font-size-code: 1rem;
@@ -206,6 +207,7 @@ pre {
     --font-size-h1: 2rem;
     --font-size-h2: 1.5rem;
     --font-size-h3: 1.25rem;
+    --font-size-header: 1.25rem;
     --font-size-base: 1.1rem;
     --font-size-small: 1rem;
     --font-size-code: 1rem;
@@ -259,6 +261,7 @@ summary {
 .header {
   background-color: var(--color-header-background);
   color: var(--color-header-text);
+  font-size: var(--font-size-header);
 }
 
 .header .logo,
