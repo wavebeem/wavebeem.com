@@ -23,10 +23,14 @@
   xmlns="http://www.w3.org/2005/Atom"
   xml:lang="{{ metadata.language or page.lang }}"
 >
+  {%- set icon %}/favicon.png?v={{ contentHashes.favicon }}{% endset %}
+  {%- set logo %}/og-image.png?v={{ contentHashes.ogImage }}{% endset %}
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.description }}</subtitle>
   <link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
   <link href="{{ metadata.base | addPathPrefixToFullUrl }}" />
+  <icon>{{ icon | htmlBaseUrl(metadata.base) }}</icon>
+  <logo>{{ logo | htmlBaseUrl(metadata.base) }}</logo>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ metadata.base | addPathPrefixToFullUrl }}</id>
   <author>
