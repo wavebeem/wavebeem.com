@@ -23,7 +23,7 @@
   xmlns="http://www.w3.org/2005/Atom"
   xml:lang="{{ metadata.language or page.lang }}"
 >
-  {%- set icon %}/favicon.png?v={{ contentHashes.favicon }}{% endset %}
+  {%- set icon %}/favicon.ico?v={{ contentHashes.favicon }}{% endset %}
   {%- set logo %}/og-image.png?v={{ contentHashes.ogImage }}{% endset %}
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.description }}</subtitle>
