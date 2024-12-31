@@ -278,9 +278,8 @@ summary {
   display: grid;
   grid-template-columns: 1fr max-content;
   justify-content: space-between;
-  /* align-items: center; */
   isolation: isolate;
-  padding-block: 0.5rem 0;
+  padding-block: 1rem 0.5rem;
   padding-inline: 1rem;
 }
 
