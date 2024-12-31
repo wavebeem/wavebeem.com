@@ -28,7 +28,7 @@
   <title>{{ metadata.title }}</title>
   <subtitle>{{ metadata.description }}</subtitle>
   <link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
-  <link href="{{ metadata.base | addPathPrefixToFullUrl }}" />
+  <link href="{{ metadata.base | addPathPrefixToFullUrl }}" rel="alternate" type="text/html" />
   <icon>{{ icon | htmlBaseUrl(metadata.base) }}</icon>
   <logo>{{ logo | htmlBaseUrl(metadata.base) }}</logo>
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
