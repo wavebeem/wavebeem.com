@@ -50,7 +50,7 @@ async function readInfo(filename) {
 }
 
 // Delete `.cache` dir when adding new image files locally
-async function getArtCached() {
+export default async function getArtCached() {
   const asset = new AssetCache("wavebeem_art");
   if (asset.isCacheValid("1d")) {
     return await asset.getCachedValue();
@@ -59,5 +59,3 @@ async function getArtCached() {
   await asset.save(art, "json");
   return art;
 }
-
-export default getArtCached;
