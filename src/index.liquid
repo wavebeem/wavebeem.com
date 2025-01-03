@@ -51,7 +51,7 @@ pageName: "home"
   %}
   <section class="post-list--post sage-well">
     <h3 class="arrow-before">
-      <a class="sage-link no-underline" href="{{ post.url }}">
+      <a class="sage-link" href="{{ post.url }}">
         {{ post.data.title | escape }}
       </a>
     </h3>
@@ -62,29 +62,31 @@ pageName: "home"
 </div>
 
 <p class="text-right arrow-after">
-  <a href="/blog/" class="sage-link no-underline"><strong>All blog posts</strong></a>
+  <a href="/blog/" class="sage-link"><strong>All blog posts</strong></a>
 </p>
 
 <h2>Take a look around</h2>
 
-<div class="clicky-list">
-  {% for item in menu.main %}
-  <div class="link-card arrow-before">
-    <a href="{{ item.url }}" class="sage-link no-underline"
-      ><h3>{{ item.title | escape }}</h3></a
-    >
+<div class="sage-well">
+  <div class="clicky-list">
+    {% for item in menu.main %}
+    <div class="link-card arrow-before">
+      <a href="{{ item.url }}" class="sage-link no-underline"
+        ><h3>{{ item.title | escape }}</h3></a
+      >
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>
 
-<hr class="sage-hr" />
-
-<div class="clicky-list">
-  {% for item in menu.more %}
-  <div class="link-card arrow-before">
-    <a href="{{ item.url }}" class="sage-link no-underline"
-      ><h3>{{ item.title | escape }}</h3></a
-    >
+<div class="sage-well">
+  <div class="clicky-list">
+    {% for item in menu.more %}
+    <div class="link-card arrow-before">
+      <a href="{{ item.url }}" class="sage-link no-underline"
+        ><h3>{{ item.title | escape }}</h3></a
+      >
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </div>

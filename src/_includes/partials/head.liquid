@@ -5,11 +5,6 @@
   name="theme-color"
   content="{{ colors.light['color-header-background'] }}"
 />
-<meta
-  name="theme-color"
-  content="{{ colors.dark['color-header-background'] }}"
-  media="(prefers-color-scheme: dark)"
-/>
 <link
   rel="preload"
   as="font"
@@ -86,17 +81,15 @@
   name="og:image"
   content="{{ origin }}/og-image.png?v={{ contentHashes.ogImage }}"
 />
-<meta name="og:image:width" content="512" />
-<meta name="og:image:height" content="256" />
 <meta name="og:title" content="{{ title | formatTitle }}" />
 <meta name="og:description" content="{{ description }}" />
 <title>{{ title | formatTitle }}</title>
-<script
+<!-- <script
   type="module"
   src="/elements/wavebeem-theme-select.mjs?v={{
     contentHashes.wavebeemThemeSelect
   }}"
-></script>
+></script> -->
 <script
   async
   defer
