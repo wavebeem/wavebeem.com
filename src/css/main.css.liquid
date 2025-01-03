@@ -1,0 +1,16 @@
+---
+permalink: "/main.css"
+---
+:root { {% for item in colors.light | entries %}
+  --{{ item[0] }}: {{ item[1] }};{% endfor %}
+}
+
+@media (prefers-color-scheme: dark) {
+  :root { {% for item in colors.dark | entries %}
+    --{{ item[0] }}: {{ item[1] }};{% endfor %}
+  }
+}
+
+{% include "./_fonts.css" %}
+{% include "./_global.css" %}
+{% include "./_avatar.css" %}
