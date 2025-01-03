@@ -22,8 +22,8 @@ layout: "layout-base"
 <div class="toy-list sage-well">
   {% for post in collections.toybox reversed %}
     <section class="toy-list--toy">
-      <h3 class="arrow-before">
-        <a class="sage-link no-underline" href="{{ post.url }}">
+      <h3>
+        <a class="sage-link" href="{{ post.url }}">
           {{ post.data.title }}
         </a>
       </h3>

@@ -10,8 +10,8 @@ layout: "layout-base"
 <div class="post-list">
   {% for post in collections.draft reversed %}
     <section class="post-list--post sage-well">
-      <h3 class="arrow-before">
-        <a class="sage-link no-underline" href="{{ post.url }}">
+      <h3>
+        <a class="sage-link" href="{{ post.url }}">
           {{ post.data.title | escape }}
         </a>
       </h3>
