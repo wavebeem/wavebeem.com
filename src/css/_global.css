@@ -435,88 +435,6 @@ article header p {
   clear: both;
 }
 
-/* --- RESUME --- */
-
-[data-page-name="resume"] main :is(h1, h2, h3) small {
-  font-weight: normal;
-  font-family: var(--font-body);
-}
-
-@media (max-width: 800px) {
-  [data-page-name="resume"] main small {
-    display: block;
-  }
-}
-
-[data-page-name="resume"] main .sage-well ul:last-of-type {
-  margin-bottom: 0;
-}
-
-[data-page-name="resume"] main .sage-well > details {
-  margin-block: 0;
-}
-
-[data-page-name="resume"] main ul li + li {
-  margin-top: 1rem;
-}
-
-/* --- ART GALLERY --- */
-
-[data-page-name="art"] .art-container {
-  display: grid;
-  gap: 2rem 1rem;
-  text-align: center;
-  grid-template-columns: 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-[data-page-name="art"] .art-container--frame {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-}
-
-[data-page-name="art"] .art-container--frame a {
-  font-family: var(--font-cool);
-  font-size: var(--font-size-h3);
-  font-weight: bold;
-  flex: auto;
-}
-
-/* stylelint-disable-next-line no-descending-specificity */
-[data-page-name="art"] .art-container--frame img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-  background-color: var(--color-text);
-  border: 4px solid var(--color-text);
-}
-
-[data-page-name="art"] .art-container--frame figcaption {
-  display: flex;
-  flex-direction: column;
-}
-
-[data-page-name="art"] figure {
-  margin: 1rem 0;
-  color: var(--color-text);
-}
-
-/* stylelint-disable-next-line no-descending-specificity */
-[data-page-name="art"] figure img {
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
-}
-
-/* stylelint-disable-next-line no-descending-specificity */
-[data-page-name="art"] figure figcaption {
-  font-size: var(--font-size-small);
-}
-
 /* --- POST --- */
 
 article header {
@@ -527,71 +445,6 @@ hr {
   border: 0;
   border-bottom: 2px dotted;
   color: inherit;
-}
-
-[data-page-name="blog-post"] .post-date {
-  margin-bottom: 1rem;
-}
-
-.sage-hr,
-[data-page-name="blog-post"] main hr {
-  border: none;
-  margin-inline: 0;
-  margin-block: 2rem;
-  display: flex;
-  color: inherit;
-
-  /* https://www.smashingmagazine.com/2024/01/css-border-image-property/ */
-  --s: 1px; /* line thickness */
-  --c: var(--color-card-border); /* line color */
-  --w: 100vw; /* divider width */
-  --g: 0.5ch; /* content gap */
-  background: linear-gradient(
-    transparent calc(50% - var(--s) / 2),
-    var(--c) 0 calc(50% + var(--s) / 2),
-    transparent 0
-  );
-}
-
-.sage-hr::after,
-[data-page-name="blog-post"] main hr::after {
-  content: "";
-  background-color: var(--color-main-decoration);
-  outline: 8px solid var(--color-background);
-
-  width: 32px; /* adjust to control the size */
-  aspect-ratio: 1;
-  border-radius: 9999px;
-
-  font-size: 3rem;
-  display: block;
-  margin-inline: auto;
-  padding-inline: 0.5rem;
-}
-
-[data-page-name="blog-post"] figure {
-  margin: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-
-  box-sizing: border-box;
-  border-radius: 1rem;
-  background-color: var(--color-background);
-  border: 1px solid var(--color-text);
-  padding: 8px;
-}
-
-[data-page-name="blog-post"] figure img {
-  width: 100%;
-  height: auto;
-  border-radius: 0.5rem;
-  display: block;
-}
-
-[data-page-name="blog-post"] figure figcaption {
-  font-weight: bold;
-  font-size: var(--font-size-small);
 }
 
 article figure {
@@ -634,72 +487,11 @@ article p:has(img:only-child) + p:has(> strong:only-child) {
   font-size: var(--font-size-small);
 }
 
-.sage-prose p > img:only-child {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 16px;
-  background-color: var(--color-text);
-  border: 4px solid var(--color-text);
-}
-
-@media (max-width: 420px) {
-  .sage-prose p > img:only-child {
-    padding-inline: 0;
-    border-inline: 0;
-    border-radius: 0;
-    margin-inline: -1rem;
-    width: calc(100% + 2rem);
-  }
-}
-
-/* Fake version of figure+figcaption to work around Markdown
-  not having good support for many tags */
-[data-page-name="blog-post"]
-  .sage-prose
-  p:has(> img:only-child)
-  + p:has(> strong:only-child) {
-  margin-top: -0.5rem;
-  padding-inline: 0.5rem;
-  text-align: center;
-  font-size: var(--font-size-small);
-}
-
-[data-page-name="blog-post"] .sage-prose blockquote > :first-child {
-  margin-top: 0;
-}
-
-[data-page-name="blog-post"] .sage-prose blockquote > :last-child {
-  margin-bottom: 0;
-}
-
-[data-page-name="blog-post"] blockquote {
+article blockquote,
+article aside {
   margin-inline: 0;
   padding: 0 2rem;
   border-left: 4px solid;
-}
-
-[data-page-name="blog-post"] blockquote > :first-child {
-  margin-top: 0;
-}
-
-[data-page-name="blog-post"] blockquote > :last-child {
-  margin-bottom: 0;
-}
-
-[data-page-name="blog-post"] aside {
-  /* margin-block: 1rem; */
-  /* border-radius: 1rem; */
-  padding-left: 2rem;
-  border-left: 4px solid;
-}
-
-[data-page-name="blog-post"] aside :first-child {
-  /* margin-top: 0; */
-}
-
-[data-page-name="blog-post"] aside :last-child {
-  /* margin-bottom: 0; */
 }
 
 .pixelated {
@@ -721,80 +513,6 @@ dl dd {
 
 dl dd + dt {
   margin-top: 1.5rem;
-}
-
-.sage-well {
-  box-sizing: border-box;
-  /* padding-left: 1rem;
-  border-left: 2px solid; */
-  /* border-radius: 1rem; */
-  background-color: var(--color-card-background);
-  /* padding: 1rem;
-  border: 1px solid; */
-
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px dotted;
-
-  /* margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 2px dotted; */
-}
-
-.sage-well > :first-child {
-  margin-top: 0;
-}
-
-.sage-well > :last-child {
-  margin-bottom: 0;
-}
-
-.sage-well > details {
-  margin: 0;
-}
-
-.sage-well > details > summary {
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.sage-well > details > summary::-webkit-details-marker {
-  display: none;
-}
-
-.sage-well > details > summary::after {
-  content: "";
-  display: block;
-  width: 0.75rem;
-  height: 0.5rem;
-  clip-path: polygon(50% 100%, 100% 0, 0 0);
-  background: currentColor;
-  flex: none;
-}
-
-.sage-well > details[open] > summary::after {
-  rotate: 0.5turn;
-}
-
-.sage-well > details > summary > * {
-  display: inline;
-  margin: 0;
-}
-
-.sage-well > details > :last-child {
-  margin-block-end: 0;
-}
-
-.sage-well > details > summary {
-  border-radius: 0.5rem;
-}
-
-.sage-well > details > summary:hover {
-  outline: 1px solid;
-  outline-offset: 0;
 }
 
 .link-card a {
