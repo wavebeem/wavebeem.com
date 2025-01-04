@@ -1,7 +1,6 @@
 ---
 description: "Sage's website"
 layout: "layout-base"
-pageName: "home"
 ---
 
 <script type="module" src="/elements/wavebeem-easter-egg.mjs"></script>
@@ -35,9 +34,8 @@ pageName: "home"
 
 <p>
   I live in
-  <a href="https://en.wikipedia.org/wiki/Portland,_Oregon"
-    >Portland</a
-  >, where I enjoy gray skies, green leaves, and gentle rain.
+  <a href="https://en.wikipedia.org/wiki/Portland,_Oregon">Portland</a>, where I
+  enjoy gray skies, green leaves, and gentle rain.
 </p>
 
 <div class="clearfix"></div>
@@ -45,27 +43,25 @@ pageName: "home"
 <h2>Recent posts</h2>
 
 {% assign top3 = collections.posts | reverse | take: 3 %} {% for post in top3 %}
-<section class="post-list--post">
-  <h3>
-    <a href="{{ post.url }}">
-      {{ post.data.title | escape }}
-    </a>
-  </h3>
-  <p><small>{% render "partials/date" date: post.date %}</small></p>
+<article>
+  <header>
+    <h3>
+      <a href="{{ post.url }}">
+        {{ post.data.title | escape }}
+      </a>
+    </h3>
+    <small>{% render "partials/date" date: post.date %}</small>
+  </header>
   <p>{{ post.data.description | escape }}</p>
-</section>
+</article>
 {% endfor %}
 
 <h2>Take a look around</h2>
 
 <div class="flex flex-wrap gap2">
   {% for item in menu.main %}
-  <div class="link-card">
-    <a href="{{ item.url }}">{{ item.title | escape }}</a>
-  </div>
-  {% endfor %} {% for item in menu.more %}
-  <div class="link-card">
-    <a href="{{ item.url }}">{{ item.title | escape }}</a>
-  </div>
+  <a class="button" href="{{ item.url }}">{{ item.title | escape }}</a> {%
+  endfor %} {% for item in menu.more %}
+  <a class="button" href="{{ item.url }}">{{ item.title | escape }}</a>
   {% endfor %}
 </div>

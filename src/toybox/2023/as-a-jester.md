@@ -50,6 +50,12 @@ date: "2023-09-07"
     cursor: pointer;
   }
 
+  .jester-summary,
+  .jester-summary:hover {
+    border: 0;
+    box-shadow: none;
+  }
+
   .jester-content {
     background: #440000;
     box-shadow: #220000 0px 0px 8px 4px inset;

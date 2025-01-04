@@ -21,17 +21,16 @@ export const light = {
   "color-background": oklch(95, 15, 152),
   "color-text": oklch(40, 15, 152),
 
-  "color-syntax-background": oklch(40, 25, 152),
+  "color-syntax-background": oklch(20, 0, 0),
   "color-syntax-text": oklch(90, 0, 0),
   "color-syntax-comment": oklch(70, 10, 290),
   "color-syntax-keyword": oklch(80, 70, 340),
-  "color-syntax-string": oklch(80, 50, 149),
+  "color-syntax-property": oklch(80, 70, 290),
+  "color-syntax-string": oklch(80, 50, 152),
   "color-syntax-punctuation": oklch(70, 15, 30),
 };
 
 export const dark = {
   "color-text": oklch(95, 15, 152),
   "color-background": oklch(40, 15, 152),
-
-  "color-syntax-background": oklch(30, 25, 152),
 };

@@ -1,4 +1,4 @@
-[data-page-name="home"] .avatar {
+.avatar {
   --avatar-size: 120px;
   --avatar-padding: 4px;
   display: flex;
@@ -11,12 +11,12 @@
   border-radius: 9999px;
 }
 
-[data-page-name="home"] wavebeem-easter-egg.avatar[data-state="inside"] {
+wavebeem-easter-egg.avatar[data-state="inside"] {
   background: transparent;
   border-color: transparent;
 }
 
-[data-page-name="home"] .avatar img {
+.avatar img {
   border-radius: 9999px;
   width: var(--avatar-size);
   height: var(--avatar-size);
@@ -28,7 +28,7 @@
   /* mix-blend-mode: overlay; */
 }
 
-[data-page-name="home"] wavebeem-easter-egg {
+wavebeem-easter-egg {
   --wavebeem-easter-egg--shadow-color: hsl(0 0% 0% / 50%);
   --t: 2px;
   --k: 0.05turn;
@@ -41,18 +41,18 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-page-name="home"] wavebeem-easter-egg {
+  wavebeem-easter-egg {
     --k: 0turn;
   }
 }
 
-[data-page-name="home"] wavebeem-easter-egg[data-state="outside"] img {
+wavebeem-easter-egg[data-state="outside"] img {
   transition-timing-function: ease;
   transition-duration: 500ms;
   transition-property: transform, box-shadow, outline;
 }
 
-[data-page-name="home"] wavebeem-easter-egg[data-state="inside"] img {
+wavebeem-easter-egg[data-state="inside"] img {
   pointer-events: none;
   touch-action: none;
   transform: var(--transform);
@@ -65,8 +65,8 @@
     calc(var(--k2) * var(--avatar-size) * var(--r)) #0002;
 }
 
-[data-page-name="home"] wavebeem-easter-egg::before,
-[data-page-name="home"] wavebeem-easter-egg::after {
+wavebeem-easter-egg::before,
+wavebeem-easter-egg::after {
   z-index: 10;
   transform: var(--transform);
   transition: opacity 500ms;
@@ -81,7 +81,7 @@
   clip-path: circle(50%);
 }
 
-[data-page-name="home"] wavebeem-easter-egg::before {
+wavebeem-easter-egg::before {
   mix-blend-mode: soft-light;
 
   /* https://css-pattern.com/wave-circles/ */
@@ -105,7 +105,7 @@
       0 0 / var(--s) var(--s);
 }
 
-[data-page-name="home"] wavebeem-easter-egg::after {
+wavebeem-easter-egg::after {
   mix-blend-mode: hard-light;
   background: linear-gradient(
       var(--angle),
@@ -115,13 +115,13 @@
     0 0 / 100% 100%;
 }
 
-[data-page-name="home"] wavebeem-easter-egg[data-state="inside"]::before,
-[data-page-name="home"] wavebeem-easter-egg[data-state="inside"]::after {
+wavebeem-easter-egg[data-state="inside"]::before,
+wavebeem-easter-egg[data-state="inside"]::after {
   opacity: 1;
 }
 
 @media (max-width: 420px) {
-  [data-page-name="home"] .avatar {
+  .avatar {
     --avatar-size: 100px;
   }
 }

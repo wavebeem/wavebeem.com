@@ -1,8 +1,7 @@
 ---
 title: "Links"
 description: >-
-  A collection of links to sites I have liked. Links are in alphabetical order.
-  Remind me to organize them later.
+  A collection of links to sites I have liked.
 layout: "layout-base"
 ---
 
@@ -10,19 +9,25 @@ layout: "layout-base"
 
 <p>{{ description }}</p>
 
-<div class="clicky-list">
+<h2>Uncategorized</h2>
+
+<p>Links are in alphabetical order. Remind me to organize them later.</p>
+
+<ul>
   {% for link in coolLinks.allLinks %}
-  <div class="link-card">
-    <a href="{{ link.url }}">{{ link.title }}</a>
-  </div>
+  <li>
+    <p>
+      <a href="{{ link.url }}">{{ link.title }}</a>
+    </p>
+  </li>
   {% endfor %}
-</div>
+</ul>
 
 <h2>Embed my site button</h2>
 
 <p>
   <img
-    class="site-button"
+    class="pixelated"
     src="/button.webp"
     width="88"
     height="31"
