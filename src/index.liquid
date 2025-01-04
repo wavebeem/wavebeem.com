@@ -23,7 +23,7 @@ pageName: "home"
 
 <p>
   I'm
-  <a class="sage-link" href="/about/">Sage</a>
+  <a href="/about/">Sage</a>
   (they/them), aka
   <q>wavebeem</q>.
 </p>
@@ -35,7 +35,7 @@ pageName: "home"
 
 <p>
   I live in
-  <a class="sage-link" href="https://en.wikipedia.org/wiki/Portland,_Oregon"
+  <a href="https://en.wikipedia.org/wiki/Portland,_Oregon"
     >Portland</a
   >, where I enjoy gray skies, green leaves, and gentle rain.
 </p>
@@ -47,41 +47,25 @@ pageName: "home"
 {% assign top3 = collections.posts | reverse | take: 3 %} {% for post in top3 %}
 <section class="post-list--post">
   <h3>
-    <a class="sage-link" href="{{ post.url }}">
+    <a href="{{ post.url }}">
       {{ post.data.title | escape }}
     </a>
   </h3>
+  <p><small>{% render "partials/date" date: post.date %}</small></p>
   <p>{{ post.data.description | escape }}</p>
-  {% render "partials/date" date: post.date %}
 </section>
 {% endfor %}
 
-<p class="text-right arrow-after">
-  <a href="/blog/" class="sage-link"><strong>All blog posts</strong></a>
-</p>
-
 <h2>Take a look around</h2>
 
-<div>
-  <div class="clicky-list">
-    {% for item in menu.main %}
-    <div class="link-card arrow-before">
-      <a href="{{ item.url }}" class="sage-link"
-        ><h3>{{ item.title | escape }}</h3></a
-      >
-    </div>
-    {% endfor %}
+<div class="flex flex-wrap gap2">
+  {% for item in menu.main %}
+  <div class="link-card">
+    <a href="{{ item.url }}">{{ item.title | escape }}</a>
   </div>
-</div>
-
-<div>
-  <div class="clicky-list">
-    {% for item in menu.more %}
-    <div class="link-card arrow-before">
-      <a href="{{ item.url }}" class="sage-link"
-        ><h3>{{ item.title | escape }}</h3></a
-      >
-    </div>
-    {% endfor %}
+  {% endfor %} {% for item in menu.more %}
+  <div class="link-card">
+    <a href="{{ item.url }}">{{ item.title | escape }}</a>
   </div>
+  {% endfor %}
 </div>

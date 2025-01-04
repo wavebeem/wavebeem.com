@@ -1,0 +1,85 @@
+pre[class^="language-"] {
+  border-radius: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: var(--color-syntax-background);
+  border: 1px solid var(--color-card-border);
+  color: var(--color-syntax-text);
+  overflow-x: auto;
+}
+
+/* Reset color for nested scripts */
+.token.script {
+  color: var(--color-syntax-default);
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--color-syntax-comment);
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: var(--color-syntax-punctuation);
+}
+
+.token.attr-value,
+.token.selector,
+.token.string,
+.token.char,
+.token.boolean,
+.token.number,
+.token.regex,
+/* .token.builtin, */
+.token.inserted {
+  color: var(--color-syntax-string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--color-syntax-punctuation);
+}
+
+.token.atrule,
+.token.function,
+.token.class-name {
+  color: var(--color-syntax-property);
+}
+
+.token.tag,
+.token.tag > .token.class-name {
+  color: var(--color-syntax-keyword);
+}
+
+.token.keyword {
+  color: var(--color-syntax-keyword);
+}
+
+.language-css .token.property,
+.token.attr-name,
+/* .token.property, */
+.token.variable,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.important {
+  color: var(--color-syntax-property);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}

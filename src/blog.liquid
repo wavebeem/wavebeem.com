@@ -6,33 +6,39 @@ layout: "layout-base"
 <h1>{{ title }}</h1>
 
 <p>
-  <a class="sage-link" href="/feed.xml">Subscribe to my RSS feed</a>
+  <a href="/feed.xml">Subscribe to my RSS feed</a>
   to stay up to date.
-  <a href="https://duckduckgo.com/?q=best+rss+feed+reader+free" class="sage-link">What is RSS?</a>
+  <a
+    href="https://duckduckgo.com/?q=best+rss+feed+reader+free"
+
+    >What is RSS?</a
+  >
 </p>
 
-{% assign postsByYear = collections.posts | groupByYear %}
-{% for item in postsByYear %}
-  {% assign year = item[0] %}
-  {% assign postList = item[1] %}
+{% assign postsByYear = collections.posts | groupByYear %} {% for item in
+postsByYear %} {% assign year = item[0] %} {% assign postList = item[1] %}
 
-  <h2>{{ year }}</h2>
+<h2>{{ year }}</h2>
 
-  <div class="post-list">
-    {% for post in postList %}
-      <section class="post-list--post">
-        <h3>
-          <a class="sage-link" href="{{ post.url }}">
-            {{ post.data.title | escape }}
-          </a>
-        </h3>
-        <p>
-          {{ post.data.description | escape }}
-        </p>
-        {% render "partials/date" date: post.date %}
-      </section>
-    {% endfor %}
-  </div>
+<div class="post-list">
+  {% for post in postList %}
+  <section class="post-list--post">
+    <h3>
+      <a href="{{ post.url }}">
+        {{ post.data.title | escape }}
+      </a>
+    </h3>
+    <p>
+      <small
+        ><time datetime="{{ post.date | formatDate : 'yyyy-mm-dd' }}">{{
+          post.date | formatDate : "yyyy mmm d"
+        }}</time>
+      </small>
+    </p>
+    <p>{{ post.data.description | escape }}</p>
+  </section>
+  {% endfor %}
+</div>
 {% endfor %}
 
 {{ content }}

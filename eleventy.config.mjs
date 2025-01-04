@@ -4,7 +4,7 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateformat from "dateformat";
 import markdownIt from "markdown-it";
 
-/** @typedef {import("@11ty/eleventy").Eleventy["config"]} UserConfig */
+/** @typedef {import("@11ty/eleventy").UserConfig} UserConfig */
 
 /** @param {UserConfig} config */
 export default function getConfig(config) {
@@ -14,13 +14,14 @@ export default function getConfig(config) {
     linkify: true,
     typographer: true,
   });
-
   config.setLibrary("md", markdown);
   config.addPlugin(syntaxHighlight);
   config.setLiquidOptions({
     strictFilters: true,
   });
   config.addPassthroughCopy({ "src/static": "/" });
+
+  config.addWatchTarget("./src/css/");
 
   config.addPlugin(pluginRss);
 

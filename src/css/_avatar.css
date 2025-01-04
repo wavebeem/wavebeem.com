@@ -21,7 +21,7 @@
   width: var(--avatar-size);
   height: var(--avatar-size);
 
-  filter: saturate(0.5) grayscale(1) contrast(1.1) brightness(0.9);
+  filter: grayscale(1) contrast(1.5) brightness(0.9);
   mix-blend-mode: luminosity;
   /* mix-blend-mode: hard-light; */
   /* mix-blend-mode: screen; */

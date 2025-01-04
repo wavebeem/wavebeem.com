@@ -11,7 +11,7 @@ layout: "layout-base"
 
 <p>
   Subscribe to my
-  <a class="sage-link" href="/feed.xml">RSS feed</a>
+  <a href="/feed.xml">RSS feed</a>
   to stay up
   to date with my posts.
 </p>
@@ -23,7 +23,7 @@ layout: "layout-base"
   {% for post in collections.toybox reversed %}
     <section class="toy-list--toy">
       <h3>
-        <a class="sage-link" href="{{ post.url }}">
+        <a href="{{ post.url }}">
           {{ post.data.title }}
         </a>
       </h3>

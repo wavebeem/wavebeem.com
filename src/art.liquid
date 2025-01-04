@@ -11,7 +11,7 @@ layout: "layout-base"
   {% for img in art reversed %}
     <figure class="art-container--frame">
       <a
-        class="flex sage-link"
+        class="flex "
         href="{{ img.url }}">
         <img
           src="{{ img.url }}"
@@ -21,7 +21,7 @@ layout: "layout-base"
           loading="{% if forloop.index > 4 %}lazy{% else %}eager{% endif %}" />
       </a>
       <figcaption>
-        <a class="sage-link" href="{{ img.url }}">{{ img.name }}</a>
+        <a href="{{ img.url }}">{{ img.name }}</a>
       </figcaption>
       {% render "partials/date" date: img.date %}
     </figure>
