@@ -6,7 +6,7 @@ import { existsSync } from "node:fs";
 
 chdir("src/static");
 
-for await (const file of new Glob("{art,blog}/**/*.{png,gif}", {})) {
+for await (const file of new Glob("{art,blog,shrines}/**/*.{png,gif}", {})) {
   for (const [, base] of match(file, /^(.*)\.(png|gif)/)) {
     const dest = `${base}.webp`;
     if (!existsSync(dest)) {
@@ -16,7 +16,7 @@ for await (const file of new Glob("{art,blog}/**/*.{png,gif}", {})) {
   }
 }
 
-for await (const file of new Glob("{art,blog}/**/*.{jpg,jpeg}", {})) {
+for await (const file of new Glob("{art,blog,shrines}/**/*.{jpg,jpeg}", {})) {
   for (const [, base] of match(file, /^(.*)\.(jpg|jpeg)/)) {
     const dest = `${base}.webp`;
     if (!existsSync(dest)) {
