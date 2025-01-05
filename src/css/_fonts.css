@@ -1,21 +1,19 @@
 @font-face {
   font-family: "PP Editorial New";
-  src: url("/fonts/PPEditorialNew-Bold.woff2") format("woff2");
-  font-weight: 800;
+  src: url("/fonts/PPEditorialNew-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "PP Object Sans";
   src: url("/fonts/PPObjectSans-Regular.woff2") format("woff2");
-  font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: "PP Object Sans";
   src: url("/fonts/PPObjectSans-Bold.woff2") format("woff2");
-  font-weight: 700;
+  font-weight: bold;
   font-display: swap;
 }
 
@@ -23,7 +21,6 @@
   font-family: "PP Object Sans";
   src: url("/fonts/PPObjectSans-Slanted.woff2") format("woff2");
   font-style: italic;
-  font-weight: 400;
   font-display: swap;
 }
 
@@ -31,7 +28,7 @@
   font-family: "PP Object Sans";
   src: url("/fonts/PPObjectSans-BoldSlanted.woff2") format("woff2");
   font-style: italic;
-  font-weight: 700;
+  font-weight: bold;
   font-display: swap;
 }
 
@@ -51,7 +48,7 @@
   font-family: "JetBrains Mono";
   src: url("/fonts/JetBrainsMono-Bold.woff2") format("woff2");
   font-display: swap;
-  font-weight: 700;
+  font-weight: bold;
 }
 
 @font-face {
