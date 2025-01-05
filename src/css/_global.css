@@ -31,6 +31,9 @@ body {
 }
 
 a {
+  text-decoration-thickness: var(--link-underline-thickness);
+  color: var(--color-main-link);
+  border-radius: 0.25rem;
   text-underline-offset: var(--link-underline-offset);
 }
 
@@ -259,12 +262,6 @@ article header p {
 
 .flex-wrap {
   flex-wrap: wrap;
-}
-
-a {
-  text-decoration-thickness: var(--link-underline-thickness);
-  color: var(--color-main-link);
-  border-radius: 0.25rem;
 }
 
 .button,

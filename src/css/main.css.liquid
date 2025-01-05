@@ -10,6 +10,18 @@ permalink: "/main.css"
     --{{ item[0] }}: {{ item[1] }};{% endfor %}
   }
 }
+:root[data-theme="light"] { {% for item in colors.light | entries %}
+  --{{ item[0] }}: {{ item[1] }};{% endfor %}
+}
+
+:root[data-theme="dark"] { {% for item in colors.dark | entries %}
+  --{{ item[0] }}: {{ item[1] }};{% endfor %}
+}
+
+:root[data-theme="tufte"] {
+  --color-background: #fffff8;
+  --color-text: #111111;
+}
 
 :root[data-theme="paperback-2"] {
   --color-background: #b8c2b9;
