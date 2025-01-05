@@ -1,27 +1,27 @@
 @font-face {
-  font-family: "Montserrat Alternates";
-  src: url("/fonts/MontserratAlternates-ExtraBold.woff2") format("woff2");
+  font-family: "PP Editorial New";
+  src: url("/fonts/PPEditorialNew-Bold.woff2") format("woff2");
   font-weight: 800;
   font-display: swap;
 }
 
 @font-face {
   font-family: "PP Object Sans";
-  src: url("/fonts/pp-object-sans-regular.woff2") format("woff2");
+  src: url("/fonts/PPObjectSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: "PP Object Sans";
-  src: url("/fonts/pp-object-sans-bold.woff2") format("woff2");
+  src: url("/fonts/PPObjectSans-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
   font-family: "PP Object Sans";
-  src: url("/fonts/pp-object-sans-slanted.woff2") format("woff2");
+  src: url("/fonts/PPObjectSans-Slanted.woff2") format("woff2");
   font-style: italic;
   font-weight: 400;
   font-display: swap;
@@ -29,7 +29,7 @@
 
 @font-face {
   font-family: "PP Object Sans";
-  src: url("/fonts/pp-object-sans-bold-slanted.woff2") format("woff2");
+  src: url("/fonts/PPObjectSans-BoldSlanted.woff2") format("woff2");
   font-style: italic;
   font-weight: 700;
   font-display: swap;
@@ -37,26 +37,26 @@
 
 @font-face {
   font-family: "Ultra Hi-Gloss";
-  src: url("/fonts/ultra-hi-gloss.woff2") format("woff2");
+  src: url("/fonts/UltraHi-GlossFinal-UltraBoldItalic.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("/fonts/jetbrains-mono-regular.woff2") format("woff2");
+  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("/fonts/jetbrains-mono-bold.woff2") format("woff2");
+  src: url("/fonts/JetBrainsMono-Bold.woff2") format("woff2");
   font-display: swap;
   font-weight: 700;
 }
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("/fonts/jetbrains-mono-italic.woff2") format("woff2");
+  src: url("/fonts/JetBrainsMono-Italic.woff2") format("woff2");
   font-display: swap;
   font-style: italic;
 }
