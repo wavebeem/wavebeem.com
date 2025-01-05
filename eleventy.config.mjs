@@ -25,6 +25,36 @@ export default function getConfig(config) {
 
   config.addPlugin(pluginRss);
 
+  config.addShortcode("renderThemes", function (themes) {
+    let s = "";
+    // Default theme (light mode)
+    s += `:root {\n`;
+    for (const [key, val] of Object.entries(themes.light)) {
+      s += `  --${key}: ${val};`;
+    }
+    s += `}\n`;
+    s += `\n`;
+    // Default theme (dark mode)
+    s += `@media (prefers-color-scheme: dark) {\n`;
+    s += `  :root {\n`;
+    for (const [key, val] of Object.entries(themes.dark)) {
+      s += `    --${key}: ${val};`;
+    }
+    s += `  }\n`;
+    s += `}\n`;
+    s += `\n`;
+    // Named themes
+    for (const [name, vars] of Object.entries(themes)) {
+      s += `:root[data-theme="${name}"] {\n`;
+      for (const [key, val] of Object.entries(vars)) {
+        s += `  --${key}: ${val};`;
+      }
+      s += `}\n`;
+      s += `\n`;
+    }
+    return s;
+  });
+
   config.addFilter("formatDate", function (value, format) {
     let isUTC = true;
     if (value === "now") {

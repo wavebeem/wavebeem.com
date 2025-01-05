@@ -30,7 +30,7 @@ export const light = {
   "color-syntax-punctuation": oklch(70, 15, 340),
 };
 
-export const dark = {
+export let dark = {
   "color-text": oklch(90, 15, 152),
   "color-background": oklch(40, 15, 152),
 };

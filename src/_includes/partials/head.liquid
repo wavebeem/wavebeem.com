@@ -2,7 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content="{{ eleventy.generator }}" />
 {% if theme %}
-<meta name="theme-color" content="#000000" />
+<meta name="theme-color" content="{{ themes[theme]['color-background'] }}" />
+<!-- <meta name="theme-color" content="#000000" /> -->
 {% else %}
 <meta
   name="theme-color"

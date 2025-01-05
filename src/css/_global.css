@@ -166,7 +166,7 @@ summary:focus-visible {
   padding-inline: 1rem;
 }
 
-.slime {
+.header-bottom {
   box-sizing: content-box;
   height: 52px;
   margin-block-end: 0;
@@ -182,7 +182,7 @@ summary:focus-visible {
   --c2: var(--color-text);
 }
 
-.slime {
+.header-bottom {
   /* https://css-pattern.com/overlapping-circles/ */
   --_g: var(--c1) 0% 5%, var(--c2) 8% 15%, var(--c1) 18% 25%, var(--c2) 28% 35%,
     var(--c1) 38% 45%, var(--c2) 48% 55%, var(--c1) 58% 65%, var(--c2) 68% 75%,
