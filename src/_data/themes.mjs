@@ -74,22 +74,61 @@ export const shrine_smt = {
   // Red text
   // "color-background": "#1f1214",
   // "color-text": "#f24",
+  // Red text 2
+  "color-background": "#250408",
+  "color-text": "#e85f66",
   // SMT V
   // "color-background": "#1c1e1d",
   // "color-text": "#eec39a",
   // SMT III
-  "color-background": "#2d2e3d",
-  "color-text": "#cccbfd",
+  // "color-background": "#2d2e3d",
+  // "color-text": "#cccbfd",
   // Red background
   // "color-background": "#5b1622",
   // "color-text": "#f3d6d7",
 };
 
 export const shrine_dq = {
+  // SNES
   "color-background": "#303030",
   "color-text": "#f8f8f8",
-  // "color-background": "#42281e",
-  // "color-text": "#c7c7c7",
+  // NES
   // "color-background": "#000",
   // "color-text": "#fff",
+  // Modern vibes
+  // "color-background": "#eec39a",
+  // "color-text": "#452a17",
+  // Sky vibes
+  // "color-background": oklch(98, 10, 200),
+  // "color-text": oklch(35, 80, 30),
+  // GBC vibes
+  // "color-background": "#f8f8d0",
+  // "color-text": "#4b4a28",
+  // Brand colors?
+  // "color-background": "#2c4c9c",
+  // "color-text": "#f0f0ba",
+};
+
+export const shrine_pkmn = {
+  // GBC
+  // "color-background": "#d8f8d8",
+  // "color-text": "#393939",
+  // GB
+  // "color-background": "#75a973",
+  // "color-text": "#235523",
+  // GB Pocket
+  // "color-background": "#aea691",
+  // "color-text": "#4e3f2a",
+  // Lospec GB
+  // "color-background": "#c7c6c6",
+  // "color-text": "#382843",
+  // Semi-realistic GB
+  // "color-background": "#96c170",
+  // "color-text": "#1e4634",
+  // Pokémon Super Game Boy
+  // "color-background": "#ffefff",
+  // "color-text": "#181010",
+  // Semi-realistic GBC
+  "color-background": "#dfd6c8",
+  "color-text": "#58554e",
 };

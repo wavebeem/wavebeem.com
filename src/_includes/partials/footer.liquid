@@ -1,28 +1,28 @@
 <div class="footer-top"></div>
 <footer class="footer screen-only">
   <div class="content-column">
-    <p>
-      <nav>
-        {% for item in menu.main %}
-        <a href="{{ item.url }}">{{ item.title }}</a>
-        {% endfor %}
-      </nav>
-    </p>
+    <nav>
+      {% for item in menu.main %}
+      <a href="{{ item.url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
 
-    <p>
-      <nav>
-        {% for item in menu.more %}
-        <a href="{{ item.url }}">{{ item.title }}</a>
-        {% endfor %}
-      </nav>
-    </p>
+    <br />
 
-    <p>
+    <nav>
+      {% for item in menu.more %}
+      <a href="{{ item.url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+
+    <br />
+
+    <div>
       &copy; {{ "now" | formatDate : "yyyy" }} Sage Fennel (wavebeem)<br />
       Deployed @
       <time datetime="{{ 'now' | formatDate : 'yyyy-mm-dd' }}">{{
         "now" | formatDate : "yyyy mmmm d"
       }}</time>
-    </p>
+    </div>
   </div>
 </footer>
