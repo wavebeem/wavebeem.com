@@ -1,5 +1,5 @@
 html {
-  font-family: "Helvetica", sans-serif;
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
   font-size: 12px;
   max-width: 800px;
   margin: 0 auto;
@@ -11,9 +11,8 @@ main > div {
 }
 
 .screen-only,
-footer,
-nav,
-header {
+main > footer,
+main > header {
   display: none;
 }
 
@@ -25,15 +24,6 @@ h1 {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
-}
-
-.contact-info p {
-  padding: 0;
-  margin: 0;
-}
-
-.contact-info a {
-  text-decoration: none;
 }
 
 h2,
@@ -52,8 +42,9 @@ h3 {
   margin: 1rem 0;
 }
 
+ol,
 ul {
-  padding-left: 1rem;
+  padding-left: 3rem;
 }
 
 dl {
@@ -83,24 +74,6 @@ table {
 
 thead :is(th, td) {
   border-bottom: 1px solid;
-}
-
-table th {
-  text-align: left;
-}
-
-tbody > tr > td,
-tbody > tr > th {
-  padding: 0.25rem 0;
-}
-
-tbody > tr > th {
-  padding-right: 1rem;
-}
-
-/* stylelint-disable-next-line no-duplicate-selectors */
-tbody > tr > th {
-  text-align: left;
 }
 
 :any-link {

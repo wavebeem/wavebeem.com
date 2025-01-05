@@ -5,39 +5,42 @@ description: >-
 layout: "layout-base"
 ---
 
-<h1>{{ title }}</h1>
+<article>
+  <header>
+    <h1>{{ title }}</h1>
 
-<p>{{ description }}</p>
+    <p>{{ description }}</p>
+  </header>
 
-<h2>Uncategorized</h2>
+  <h2>Uncategorized</h2>
 
-<p>Links are in alphabetical order. Remind me to organize them later.</p>
+  <p>Links are in alphabetical order. Remind me to organize them later.</p>
 
-<ul>
-  {% for link in coolLinks.allLinks %}
-  <li>
-    <p>
-      <a href="{{ link.url }}">{{ link.title }}</a>
-    </p>
-  </li>
-  {% endfor %}
-</ul>
+  <ul>
+    {% for link in coolLinks.allLinks %}
+    <li>
+      <p>
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
 
-<h2>Embed my site button</h2>
+  <h2>Embed my site button</h2>
 
-<p>
-  <img
-    class="pixelated"
-    src="/button.webp"
-    width="88"
-    height="31"
-    alt="wavebeem.com"
-    title="wavebeem.com"
-  />
-</p>
+  <p>
+    <img
+      class="pixelated"
+      src="/button.webp"
+      width="88"
+      height="31"
+      alt="wavebeem.com"
+      title="wavebeem.com"
+    />
+  </p>
 
-<div>
-  <pre>
+  <div>
+    <pre>
 &lt;a href="https://wavebeem.com"&gt;
   &lt;img
     width="88"
@@ -48,5 +51,6 @@ layout: "layout-base"
     style="image-rendering: pixelated;"
   /&gt;
 &lt;/a&gt;</pre
-  >
-</div>
+    >
+  </div>
+</article>
