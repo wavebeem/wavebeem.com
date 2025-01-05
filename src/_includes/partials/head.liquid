@@ -1,6 +1,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content="{{ eleventy.generator }}" />
+{% if theme %}
+<meta name="theme-color" content="#000000" />
+{% else %}
 <meta
   name="theme-color"
   content="{{ colors.light['color-background'] }}"
@@ -11,6 +14,7 @@
   content="{{ colors.dark['color-background'] }}"
   media="(prefers-color-scheme: dark)"
 />
+{% endif %}
 <link
   rel="preload"
   as="font"
@@ -59,8 +63,6 @@
   crossorigin="anonymous"
   href="/fonts/PPObjectSans-Slanted.woff2"
 />
-<meta name="author" content="wavebeem" />
-<meta name="description" content="{{ description }}" />
 <link
   rel="icon"
   href="/favicon.svg?v={{ contentHashes.faviconVector }}"
@@ -90,6 +92,8 @@
 <meta name="og:title" content="{{ title | formatTitle }}" />
 <meta name="og:description" content="{{ description }}" />
 <title>{{ title | formatTitle }}</title>
+<meta name="author" content="wavebeem" />
+<meta name="description" content="{{ description }}" />
 <script
   async
   defer
