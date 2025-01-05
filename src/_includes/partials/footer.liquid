@@ -2,7 +2,7 @@
 <footer class="footer screen-only">
   <div class="content-column">
     <p>
-      <nav class="footer-links">
+      <nav>
         {% for item in menu.main %}
         <a href="{{ item.url }}">{{ item.title }}</a>
         {% endfor %}
@@ -10,7 +10,7 @@
     </p>
 
     <p>
-      <nav class="footer-links">
+      <nav>
         {% for item in menu.more %}
         <a href="{{ item.url }}">{{ item.title }}</a>
         {% endfor %}

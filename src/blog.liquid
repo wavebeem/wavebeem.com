@@ -3,35 +3,39 @@ title: "Blog"
 layout: "layout-base"
 ---
 
-<h1>{{ title }}</h1>
-
-<p>
-  <a href="/feed.xml">Subscribe to my RSS feed</a>
-  to stay up to date.
-  <a href="https://duckduckgo.com/?q=best+rss+feed+reader+free">What is RSS?</a>
-</p>
-
-{% assign postsByYear = collections.posts | groupByYear %} {% for item in
-postsByYear %} {% assign year = item[0] %} {% assign postList = item[1] %}
-
-<h2>{{ year }}</h2>
-
-{% for post in postList %}
 <article>
   <header>
-    <h3>
-      <a href="{{ post.url }}">
-        {{ post.data.title | escape }}
-      </a>
-    </h3>
-    <small
-      ><time datetime="{{ post.date | formatDate : 'yyyy-mm-dd' }}">{{
-        post.date | formatDate : "yyyy mmm d"
-      }}</time>
-    </small>
-  </header>
-  <p>{{ post.data.description | escape }}</p>
-</article>
-{% endfor %} {% endfor %}
+    <h1>{{ title }}</h1>
 
-{{ content }}
+    <p>
+      <a href="/feed.xml">Subscribe to my RSS feed</a>
+      to stay up to date. You can use a free RSS reader like Feedly, Inoreader,
+      or NewsBlur.
+    </p>
+  </header>
+
+  {% assign postsByYear = collections.posts | groupByYear %} {% for item in
+  postsByYear %} {% assign year = item[0] %} {% assign postList = item[1] %}
+
+  <h2>{{ year }}</h2>
+
+  {% for post in postList %}
+  <article>
+    <header>
+      <h3>
+        <a href="{{ post.url }}">
+          {{ post.data.title | escape }}
+        </a>
+      </h3>
+      <small
+        ><time datetime="{{ post.date | formatDate : 'yyyy-mm-dd' }}">{{
+          post.date | formatDate : "yyyy mmm d"
+        }}</time>
+      </small>
+    </header>
+    <p>{{ post.data.description | escape }}</p>
+  </article>
+  {% endfor %} {% endfor %}
+
+  {{ content }}
+</article>

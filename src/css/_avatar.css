@@ -5,7 +5,7 @@
   float: right;
   margin: 1rem;
   margin-right: 0;
-  margin-top: 0rem;
+  margin-top: -2rem;
   background-color: var(--color-background);
   padding: var(--avatar-padding);
   border-radius: 9999px;
