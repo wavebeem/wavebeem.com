@@ -416,8 +416,7 @@ article p img {
   height: auto;
   display: block;
   border-radius: 8px;
-  background-color: var(--color-text);
-  border: 4px solid transparent;
+  border: 4px solid;
 }
 
 @media (max-width: 420px) {
