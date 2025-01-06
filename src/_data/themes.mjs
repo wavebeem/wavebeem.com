@@ -132,3 +132,15 @@ export const shrine_pkmn = {
   "color-background": "#dfd6c8",
   "color-text": "#58554e",
 };
+
+export const shrine_castlevania = {
+  "color-background": "#ededf3",
+  "color-text": "#78141c",
+};
+
+export const shrine_metroid = {
+  // "color-background": "#483545",
+  // "color-text": "#bbc159",
+  "color-background": "#001139",
+  "color-text": "#dfceff",
+};
