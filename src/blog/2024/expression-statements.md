@@ -25,7 +25,7 @@ like `x = 4;`, the syntax `x = 4` is actually an expression. You can write
 Expression statements exist for so we can use expressions that have side
 effects.
 
-<aside class="infobox">
+<aside>
 
 ### What's a side effect?
 
@@ -75,7 +75,7 @@ functions, we could use the existing
 [void](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void)
 operator to explicitly discard return values we don't care about:
 
-<aside class="infobox">
+<aside>
 
 ### What's the void operator?
 

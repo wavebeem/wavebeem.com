@@ -100,7 +100,7 @@ had as a kid, and I'm looking forward to fixing my mouth!
 
 My dentist also mentioned I should seek physical therapy for my mouth issues.
 
-<aside class="infobox">
+<aside>
 
 ### Tonsils
 

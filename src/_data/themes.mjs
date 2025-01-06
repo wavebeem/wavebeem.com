@@ -129,8 +129,8 @@ export const shrine_pkmn = {
   // "color-background": "#ffefff",
   // "color-text": "#181010",
   // Semi-realistic GBC
-  "color-background": "#dfd6c8",
-  "color-text": "#58554e",
+  "color-background": "#f3f1ee",
+  "color-text": "#66635c",
 };
 
 export const shrine_castlevania = {

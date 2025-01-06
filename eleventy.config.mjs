@@ -96,6 +96,10 @@ export default function getConfig(config) {
     return Array.from(map.entries());
   });
 
+  config.addFilter("fallback", function (data, other) {
+    return data || other;
+  });
+
   config.addFilter("debug", function (data) {
     console.info(data);
     return "";
