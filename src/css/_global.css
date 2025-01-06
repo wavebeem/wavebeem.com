@@ -406,8 +406,11 @@ hr::after {
   translate: -50% -50%;
 }
 
+article p:has(> img),
 article figure {
-  margin: 1.5rem 0;
+  margin-block: 1.5rem;
+  margin-inline: auto;
+  max-width: max-content;
 }
 
 article figure img,
