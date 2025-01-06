@@ -31,9 +31,9 @@ body {
 }
 
 a {
-  text-decoration-thickness: var(--link-underline-thickness);
-  color: var(--color-main-link);
+  color: inherit;
   border-radius: 0.25rem;
+  text-decoration-thickness: var(--link-underline-thickness);
   text-underline-offset: var(--link-underline-offset);
 }
 
@@ -90,8 +90,10 @@ pre {
 }
 
 :not(pre) > code {
-  border: 1px dotted;
-  padding: 0 0.25rem;
+  text-decoration-style: dotted;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-position: under;
 }
 
 details {
@@ -499,7 +501,7 @@ body > footer {
 body > footer a {
   padding: 0.5rem;
   font-weight: bold;
-  text-decoration: none;
+  text-decoration-line: none;
 }
 
 body > footer nav {

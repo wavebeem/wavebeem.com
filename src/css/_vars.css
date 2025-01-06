@@ -16,8 +16,8 @@
   --font-size-code: 1rem;
 
   --link-underline-offset: calc(1em / 8);
-  --link-underline-thickness: calc(1em / 16);
-  --link-underline-thickness-hover: calc(1em / 16 + 1px);
+  --link-underline-thickness: calc(1em / 12);
+  --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 1px);
 }
 
 @media (max-width: 800px) {
