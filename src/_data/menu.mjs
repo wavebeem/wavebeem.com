@@ -50,7 +50,7 @@ export const more = [
   },
   {
     url: "/uses/",
-    title: "Uses",
+    title: "Things I use",
   },
   {
     url: "/credits/",
@@ -59,6 +59,10 @@ export const more = [
   {
     url: "/shrines/",
     title: "Shrines",
+  },
+  {
+    url: "/past-designs/",
+    title: "Past designs",
   },
 ];
 
