@@ -1,0 +1,97 @@
+article pre {
+  border-radius: 8px;
+  margin-block: 1rem;
+  margin-inline: 0;
+  padding: 1rem;
+
+  background-color: var(--color-syntax-background);
+  color: var(--color-syntax-text);
+  scrollbar-color: var(--color-syntax-text) var(--color-syntax-background);
+  overflow-x: auto;
+}
+
+@media (max-width: 800px) {
+  article pre {
+    border-radius: 0;
+    margin-block: 1rem;
+    margin-inline: -1rem;
+    padding: 1rem;
+  }
+}
+
+/* Reset color for nested scripts */
+.token.script {
+  color: var(--color-syntax-default);
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--color-syntax-comment);
+  font-style: italic;
+}
+
+.token.punctuation {
+  color: var(--color-syntax-punctuation);
+}
+
+.token.attr-value,
+.token.selector,
+.token.string,
+.token.char,
+.token.boolean,
+.token.number,
+.token.regex,
+/* .token.builtin, */
+.token.inserted {
+  color: var(--color-syntax-string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--color-syntax-punctuation);
+}
+
+.token.atrule,
+.token.function,
+.token.class-name {
+  color: var(--color-syntax-property);
+}
+
+.token.tag,
+.token.tag > .token.class-name {
+  color: var(--color-syntax-keyword);
+}
+
+.token.keyword {
+  color: var(--color-syntax-keyword);
+  /* font-weight: bold; */
+}
+
+.language-css .token.property,
+.token.attr-name,
+/* .token.property, */
+.token.variable,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.important {
+  color: var(--color-syntax-property);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}

@@ -385,7 +385,7 @@ jargon to ask your friends for more info about mechanical keyboards.
 Thanks for reading and please consider sharing this post on social media if you
 enjoyed it.
 
-<div class="sage-well">
+<div>
 <details>
 <summary><i>Image credits</i></summary>
 

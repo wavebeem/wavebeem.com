@@ -1,30 +1,29 @@
 ---
 description: "Sage's website"
 layout: "layout-base"
-pageName: "home"
 ---
 
 <script type="module" src="/elements/wavebeem-easter-egg.mjs"></script>
 
-<wavebeem-easter-egg class="avatar">
-  <img
-    alt=""
-    srcset="
+<article>
+  <wavebeem-easter-egg class="avatar">
+    <img
+      alt=""
+      srcset="
       /photo-180.webp?v={{ contentHashes.photo }} 1x,
       /photo-360.webp?v={{ contentHashes.photo }} 2x
     "
-    src="/photo-360.webp?v={{ contentHashes.photo }}"
-    width="120"
-    height="120"
-  />
-</wavebeem-easter-egg>
+      src="/photo-360.webp?v={{ contentHashes.photo }}"
+      width="120"
+      height="120"
+    />
+  </wavebeem-easter-egg>
 
-<h1>Hello!</h1>
+  <h1>Hello!</h1>
 
-<div class="sage-well">
   <p>
     I'm
-    <a class="sage-link" href="/about/">Sage</a>
+    <a href="/about/">Sage</a>
     (they/them), aka
     <q>wavebeem</q>.
   </p>
@@ -36,55 +35,34 @@ pageName: "home"
 
   <p>
     I live in
-    <a class="sage-link" href="https://en.wikipedia.org/wiki/Portland,_Oregon"
-      >Portland</a
-    >, where I enjoy gray skies, green leaves, and gentle rain.
+    <a href="https://en.wikipedia.org/wiki/Portland,_Oregon">Portland</a>, where
+    I enjoy gray skies, green leaves, and gentle rain.
   </p>
-</div>
 
-<div class="clearfix"></div>
+  <div class="clearfix"></div>
 
-<h2>Recent posts</h2>
+  <h2>Recent posts</h2>
 
-<div class="post-list">
   {% assign top3 = collections.posts | reverse | take: 3 %} {% for post in top3
   %}
-  <section class="post-list--post sage-well">
-    <h3 class="arrow-before">
-      <a class="sage-link no-underline" href="{{ post.url }}">
-        {{ post.data.title | escape }}
-      </a>
-    </h3>
+  <article>
+    <header>
+      <h3>
+        <a href="{{ post.url }}">
+          {{ post.data.title | escape }}
+        </a>
+      </h3>
+      <small>{% render "partials/date" date: post.date %}</small>
+    </header>
     <p>{{ post.data.description | escape }}</p>
-    {% render "partials/date" date: post.date %}
-  </section>
+  </article>
   {% endfor %}
-</div>
 
-<p class="text-right arrow-after">
-  <a href="/blog/" class="sage-link no-underline"><strong>All blog posts</strong></a>
-</p>
+  <h2>Other pages</h2>
 
-<h2>Take a look around</h2>
-
-<div class="clicky-list">
-  {% for item in menu.main %}
-  <div class="link-card arrow-before">
-    <a href="{{ item.url }}" class="sage-link no-underline"
-      ><h3>{{ item.title | escape }}</h3></a
-    >
+  <div class="flex flex-wrap gap2">
+    {% for item in menu.all %}
+    <a class="button" href="{{ item.url }}">{{ item.title | escape }}</a> {%
+    endfor %}
   </div>
-  {% endfor %}
-</div>
-
-<hr class="sage-hr" />
-
-<div class="clicky-list">
-  {% for item in menu.more %}
-  <div class="link-card arrow-before">
-    <a href="{{ item.url }}" class="sage-link no-underline"
-      ><h3>{{ item.title | escape }}</h3></a
-    >
-  </div>
-  {% endfor %}
-</div>
+</article>

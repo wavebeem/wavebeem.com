@@ -15,7 +15,7 @@ you want to support dark mode, the use of
 [CSS custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)
 isn't too bad. But adding a theme selector requires... **_JavaScript_**.
 
-<aside class="infobox">
+<aside>
 
 ### Don't feel obligated to make a theme switcher
 
@@ -35,7 +35,7 @@ code is commented and less than a hundred lines.
 <script type="module" src="/elements/wavebeem-theme-select.mjs"></script>
 ```
 
-<aside class="infobox">
+<aside>
 
 ### What's an .mjs file?
 

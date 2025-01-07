@@ -1,37 +1,57 @@
 ---
 title: "Links"
 description: >-
-  A collection of links to sites I have liked. Links are in alphabetical order.
-  Remind me to organize them later.
+  A collection of links to sites I have liked.
 layout: "layout-base"
 ---
 
-<h1>{{ title }}</h1>
+<article>
+  <header>
+    <h1>{{ title }}</h1>
 
-<p>{{ description }}</p>
+    <p>{{ description }}</p>
+  </header>
 
-<div class="clicky-list">
-  {% for link in coolLinks.allLinks %}
-  <div class="link-card arrow-before">
-    <a href="{{ link.url }}" class="sage-link no-underline">{{ link.title }}</a>
-  </div>
-  {% endfor %}
-</div>
+  <h2>Uncategorized</h2>
 
-<h2>Embed my site button</h2>
+  <p>Links are in alphabetical order. Remind me to organize them later.</p>
 
-<p>
+  <ul>
+    {% for link in coolLinks.allLinks %}
+    <li>
+      <p>
+        <a href="{{ link.url }}">{{ link.title }}</a>
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h2>Embed my site button</h2>
+
+  <p>
+    I don't really like having a site button, but I made one anyway for all the
+    folks who liking collecting them for their button walls.
+  </p>
+
+  <p>
+    You're welcome to use this image, but I might update it frequently, or my
+    website's design may not reflect how this button looks.
+  </p>
+
+  <p>
+    You're allowed to hotlink the image if you'd like, the bandwidth really
+    isn't expensive.
+  </p>
+
   <img
-    class="site-button"
+    class="pixelated"
     src="/button.webp"
     width="88"
     height="31"
     alt="wavebeem.com"
     title="wavebeem.com"
   />
-</p>
 
-<div class="sage-well">
   <pre>
 &lt;a href="https://wavebeem.com"&gt;
   &lt;img
@@ -44,4 +64,4 @@ layout: "layout-base"
   /&gt;
 &lt;/a&gt;</pre
   >
-</div>
+</article>

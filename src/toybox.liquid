@@ -11,7 +11,7 @@ layout: "layout-base"
 
 <p>
   Subscribe to my
-  <a class="sage-link" href="/feed.xml">RSS feed</a>
+  <a href="/feed.xml">RSS feed</a>
   to stay up
   to date with my posts.
 </p>
@@ -19,16 +19,23 @@ layout: "layout-base"
 
 <h2>All toys</h2>
 
-<div class="toy-list sage-well">
-  {% for post in collections.toybox reversed %}
-    <section class="toy-list--toy">
-      <h3 class="arrow-before">
-        <a class="sage-link no-underline" href="{{ post.url }}">
-          {{ post.data.title }}
-        </a>
-      </h3>
-    </section>
-  {% endfor %}
-</div>
+{% for post in collections.toybox reversed %}
+<article>
+  <header>
+    <h3>
+      <a href="{{ post.url }}">
+        {{ post.data.title | escape }}
+      </a>
+    </h3>
+    <small
+      ><time datetime="{{ post.date | formatDate : 'yyyy-mm-dd' }}">{{
+        post.date | formatDate : "yyyy mmm d"
+      }}</time>
+    </small>
+  </header>
+  <p>{{ post.data.description | escape }}</p>
+</article>
+{% endfor %}
+
 
 {{ content }}

@@ -1,65 +1,69 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content="{{ eleventy.generator }}" />
+{% if theme %}
+<meta name="theme-color" content="{{ themes[theme]['color-background'] }}" />
+<!-- <meta name="theme-color" content="#000000" /> -->
+{% else %}
 <meta
   name="theme-color"
-  content="{{ colors.light['color-header-background'] }}"
+  content="{{ colors.light['color-background'] }}"
+  media="(prefers-color-scheme: light)"
 />
 <meta
   name="theme-color"
-  content="{{ colors.dark['color-header-background'] }}"
+  content="{{ colors.dark['color-background'] }}"
   media="(prefers-color-scheme: dark)"
 />
+{% endif %}
 <link
   rel="preload"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/MontserratAlternates-ExtraBold.woff2"
-/>
-<link
-  rel="preload"
-  as="font"
-  crossorigin="anonymous"
-  href="/fonts/pp-object-sans-regular.woff2"
+  href="/fonts/PPEditorialNew-Regular.woff2"
 />
 <link
   rel="preload"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/pp-object-sans-bold.woff2"
+  href="/fonts/PPObjectSans-Regular.woff2"
 />
 <link
   rel="preload"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/ultra-hi-gloss.woff2"
+  href="/fonts/PPObjectSans-Bold.woff2"
+/>
+<link
+  rel="preload"
+  as="font"
+  crossorigin="anonymous"
+  href="/fonts/UltraHi-GlossFinal-UltraBoldItalic.woff2"
 />
 <link
   rel="prefetch"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/jetbrains-mono-regular.woff2"
+  href="/fonts/JetBrainsMono-Regular.woff2"
 />
 <link
   rel="prefetch"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/jetbrains-mono-bold.woff2"
+  href="/fonts/JetBrainsMono-Bold.woff2"
 />
 <link
   rel="prefetch"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/jetbrains-mono-italic.woff2"
+  href="/fonts/JetBrainsMono-Italic.woff2"
 />
 <link
   rel="prefetch"
   as="font"
   crossorigin="anonymous"
-  href="/fonts/pp-object-sans-slanted.woff2"
+  href="/fonts/PPObjectSans-Slanted.woff2"
 />
-<meta name="author" content="wavebeem" />
-<meta name="description" content="{{ description }}" />
 <link
   rel="icon"
   href="/favicon.svg?v={{ contentHashes.faviconVector }}"
@@ -86,17 +90,11 @@
   name="og:image"
   content="{{ origin }}/og-image.png?v={{ contentHashes.ogImage }}"
 />
-<meta name="og:image:width" content="512" />
-<meta name="og:image:height" content="256" />
 <meta name="og:title" content="{{ title | formatTitle }}" />
 <meta name="og:description" content="{{ description }}" />
 <title>{{ title | formatTitle }}</title>
-<script
-  type="module"
-  src="/elements/wavebeem-theme-select.mjs?v={{
-    contentHashes.wavebeemThemeSelect
-  }}"
-></script>
+<meta name="author" content="wavebeem" />
+<meta name="description" content="{{ description }}" />
 <script
   async
   defer
@@ -104,4 +102,3 @@
   src="https://plausible.io/js/plausible.js"
 ></script>
 <link rel="stylesheet" media="screen" href="/main.css?t={{ dateNow }}" />
-<link rel="stylesheet" media="print" href="/print.css?t={{ dateNow }}" />

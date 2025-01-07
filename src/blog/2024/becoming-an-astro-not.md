@@ -83,7 +83,7 @@ I think Astro seems like a really good framework for business use cases, and
 could be a nice alternative to the recent dominance of Next.js and React-based
 websites.
 
-<aside class="infobox">
+<aside>
 
 ### Inline JavaScript in 2024?
 

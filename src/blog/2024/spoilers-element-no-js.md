@@ -72,7 +72,7 @@ This wouldn't be a huge issue, but generally Markdown puts all of your text
 content inside paragraph tags. Given that most of my blog uses Markdown, this is
 a non-starter.
 
-<aside class="infobox">
+<aside>
 
 ### Hover styles are weird on mobile
 
@@ -100,7 +100,7 @@ any element can be focused---not just normally interactive elements. These
 elements can be focused via the keyboard or by clicking/tapping them. Then we
 can use the `:focus` selector to reveal the text.
 
-<aside class="infobox">
+<aside>
 
 ### Only use 0 or -1 as tabindex values
 

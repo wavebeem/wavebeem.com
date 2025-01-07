@@ -1,40 +1,25 @@
 <div class="footer-top"></div>
 <footer class="footer screen-only">
-  <div class="content-column flex flex-column gap3">
-    <nav class="footer-links">
+  <div class="content-column">
+    <nav>
       {% for item in menu.main %}
-      <a href="{{ item.url }}" class="sage-link">{{ item.title }}</a>
+      <a href="{{ item.url }}">{{ item.title }}</a>
       {% endfor %}
     </nav>
 
-    <hr />
+    <br />
 
-    <nav class="footer-links">
+    <nav>
       {% for item in menu.more %}
-      <a href="{{ item.url }}" class="sage-link">{{ item.title }}</a>
+      <a href="{{ item.url }}">{{ item.title }}</a>
       {% endfor %}
     </nav>
 
-    <hr />
-
-    <wavebeem-theme-select>
-      <select
-        class="theme-select sage-button"
-        autocomplete="off"
-        aria-label="Select theme..."
-      >
-        <option value="" disabled selected>Select theme...</option>
-        <option value="auto">Auto</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
-    </wavebeem-theme-select>
-
-    <hr />
+    <br />
 
     <div>
       &copy; {{ "now" | formatDate : "yyyy" }} Sage Fennel (wavebeem)<br />
-      Last updated
+      Deployed @
       <time datetime="{{ 'now' | formatDate : 'yyyy-mm-dd' }}">{{
         "now" | formatDate : "yyyy mmmm d"
       }}</time>

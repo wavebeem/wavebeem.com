@@ -45,7 +45,7 @@ to do it, but the nicest way is to make a context manager using the decorator
 `@contextmanager` to wrap a Python generator function... and then use
 `try...finally` within there!
 
-<aside class="infobox">
+<aside>
 
 ### What's a generator?
 

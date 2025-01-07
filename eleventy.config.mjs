@@ -4,7 +4,7 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateformat from "dateformat";
 import markdownIt from "markdown-it";
 
-/** @typedef {import("@11ty/eleventy").Eleventy["config"]} UserConfig */
+/** @typedef {import("@11ty/eleventy").UserConfig} UserConfig */
 
 /** @param {UserConfig} config */
 export default function getConfig(config) {
@@ -14,7 +14,6 @@ export default function getConfig(config) {
     linkify: true,
     typographer: true,
   });
-
   config.setLibrary("md", markdown);
   config.addPlugin(syntaxHighlight);
   config.setLiquidOptions({
@@ -22,7 +21,39 @@ export default function getConfig(config) {
   });
   config.addPassthroughCopy({ "src/static": "/" });
 
+  config.addWatchTarget("./src/css/");
+
   config.addPlugin(pluginRss);
+
+  config.addShortcode("renderThemes", function (themes) {
+    let s = "";
+    // Default theme (light mode)
+    s += `:root {\n`;
+    for (const [key, val] of Object.entries(themes.light)) {
+      s += `  --${key}: ${val};`;
+    }
+    s += `}\n`;
+    s += `\n`;
+    // Default theme (dark mode)
+    s += `@media (prefers-color-scheme: dark) {\n`;
+    s += `  :root {\n`;
+    for (const [key, val] of Object.entries(themes.dark)) {
+      s += `    --${key}: ${val};`;
+    }
+    s += `  }\n`;
+    s += `}\n`;
+    s += `\n`;
+    // Named themes
+    for (const [name, vars] of Object.entries(themes)) {
+      s += `:root[data-theme="${name}"] {\n`;
+      for (const [key, val] of Object.entries(vars)) {
+        s += `  --${key}: ${val};`;
+      }
+      s += `}\n`;
+      s += `\n`;
+    }
+    return s;
+  });
 
   config.addFilter("formatDate", function (value, format) {
     let isUTC = true;
@@ -63,6 +94,10 @@ export default function getConfig(config) {
       group.push(page);
     }
     return Array.from(map.entries());
+  });
+
+  config.addFilter("fallback", function (data, other) {
+    return data || other;
   });
 
   config.addFilter("debug", function (data) {

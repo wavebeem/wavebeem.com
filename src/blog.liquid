@@ -3,36 +3,39 @@ title: "Blog"
 layout: "layout-base"
 ---
 
-<h1>{{ title }}</h1>
+<article>
+  <header>
+    <h1>{{ title }}</h1>
 
-<p>
-  <a class="sage-link" href="/feed.xml">Subscribe to my RSS feed</a>
-  to stay up to date.
-  <a href="https://duckduckgo.com/?q=best+rss+feed+reader+free" class="sage-link">What is RSS?</a>
-</p>
+    <p>
+      <a href="/feed.xml">Subscribe to my RSS feed</a>
+      to stay up to date. You can use a free RSS reader like Feedly, Inoreader,
+      or NewsBlur.
+    </p>
+  </header>
 
-{% assign postsByYear = collections.posts | groupByYear %}
-{% for item in postsByYear %}
-  {% assign year = item[0] %}
-  {% assign postList = item[1] %}
+  {% assign postsByYear = collections.posts | groupByYear %} {% for item in
+  postsByYear %} {% assign year = item[0] %} {% assign postList = item[1] %}
 
   <h2>{{ year }}</h2>
 
-  <div class="post-list">
-    {% for post in postList %}
-      <section class="post-list--post sage-well">
-        <h3 class="arrow-before">
-          <a class="sage-link no-underline" href="{{ post.url }}">
-            {{ post.data.title | escape }}
-          </a>
-        </h3>
-        <p>
-          {{ post.data.description | escape }}
-        </p>
-        {% render "partials/date" date: post.date %}
-      </section>
-    {% endfor %}
-  </div>
-{% endfor %}
+  {% for post in postList %}
+  <article>
+    <header>
+      <h3>
+        <a href="{{ post.url }}">
+          {{ post.data.title | escape }}
+        </a>
+      </h3>
+      <small
+        ><time datetime="{{ post.date | formatDate : 'yyyy-mm-dd' }}">{{
+          post.date | formatDate : "yyyy mmm d"
+        }}</time>
+      </small>
+    </header>
+    <p>{{ post.data.description | escape }}</p>
+  </article>
+  {% endfor %} {% endfor %}
 
-{{ content }}
+  {{ content }}
+</article>

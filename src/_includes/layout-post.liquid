@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en" data-page-name="{{ pageName }}">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     {% include 'partials/head' %}
   </head>
@@ -8,36 +8,30 @@
     <main>
       <div class="content-column">
         <article>
-          <h1>
-            {{ title }}
-          </h1>
+          <header>
+            <h1>{{ title }}</h1>
 
-          <p class="post-date date">
-            {% render "partials/date" date: page.date %}
-          </p>
+            <small> {% render "partials/date" date: page.date %} </small>
 
-          <p class="sage-well">
-            {{ description | escape }}
-          </p>
+            <p>{{ description | escape }}</p>
+          </header>
 
-          <div class="sage-prose post">
+          <div>
             {{ content }}
           </div>
         </article>
 
-        <hr/>
-
         <h2>Thanks for reading</h2>
 
         <p>
-          <a href="/contact/" class="sage-link">Let's talk</a>
-          about this post. I love making friends and chatting.
+          <a href="/contact/">Let's talk</a>
+          about this post. Email or Discord is best for me.
         </p>
 
         <p>
-          <a class="sage-link" href="/feed.xml">Subscribe to my RSS feed</a>
-          to stay up to date.
-          <a href="https://duckduckgo.com/?q=best+rss+feed+reader+free" class="sage-link">What is RSS?</a>
+          <a href="/feed.xml">Subscribe to my RSS feed</a>
+          to stay up to date. You can use a free RSS reader like Feedly,
+          Inoreader, or NewsBlur.
         </p>
       </div>
     </main>
