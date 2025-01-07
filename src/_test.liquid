@@ -87,11 +87,11 @@ description: "An example page to exercise my CSS."
       <a href="#">Portland la croix jean shorts</a>
     </h3>
     <small><time datetime="1970-01-01">1970 Jan 01</time></small>
-    <p>
-      90's neutral milk hotel keytar migas everyday carry meh Brooklyn edison
-      bulb asymmetrical portland four loko cliche forage snackwave.
-    </p>
   </header>
+  <p>
+    90's neutral milk hotel keytar migas everyday carry meh Brooklyn edison bulb
+    asymmetrical portland four loko cliche forage snackwave.
+  </p>
 </article>
 
 <article>
@@ -100,11 +100,11 @@ description: "An example page to exercise my CSS."
       <a href="#">Yes plz pop-up, tofu hoodie</a>
     </h3>
     <small><time datetime="1970-01-01">1970 Jan 01</time></small>
-    <p>
-      Bushwick bicycle rights readymade intelligentsia, before they sold out
-      ascot beard XOXO pop-up direct trade pitchfork flannel hashtag.
-    </p>
   </header>
+  <p>
+    Bushwick bicycle rights readymade intelligentsia, before they sold out ascot
+    beard XOXO pop-up direct trade pitchfork flannel hashtag.
+  </p>
 </article>
 
 <article>
@@ -113,11 +113,11 @@ description: "An example page to exercise my CSS."
       <a href="#"> Bitters 3 wolf moon truffaut umami selfies</a>
     </h3>
     <small><time datetime="1970-01-01">1970 Jan 01</time></small>
-    <p>
-      Praxis vice brunch, typewriter mumblecore jawn waistcoat polaroid bicycle
-      rights williamsburg mustache bespoke freegan knausgaard skateboard.
-    </p>
   </header>
+  <p>
+    Praxis vice brunch, typewriter mumblecore jawn waistcoat polaroid bicycle
+    rights williamsburg mustache bespoke freegan knausgaard skateboard.
+  </p>
 </article>
 
 <article>
@@ -294,6 +294,39 @@ description: "An example page to exercise my CSS."
     whatever pour-over gastropub mukbang. Air plant bushwick subway tile
     tumeric, VHS af portland Brooklyn bitters affogato.
   </p>
+</article>
+
+<article>
+  <h2>Code</h2>
+
+  <p>
+    Master cleanse heirloom hoodie, tote bag gatekeep shoreditch salvia green
+    juice DSA scenester bitters artisan small batch vinyl. Raw denim trust fund
+    man braid keffiyeh chicharrones <code>street</code> art sustainable Brooklyn
+    yuccie air plant occupy hella deep v. Glossier neutra art party blog next
+    level. Grailed neutra master <code>cleanse whatever</code>. Tattooed tumblr
+    salvia big mood kitsch, jawn tilde. Bushwick pug succulents woke marxism
+    meditation sartorial mumblecore stumptown microdosing.
+    <code>Artisan beard</code> unicorn fanny pack art party kickstarter taiyaki.
+  </p>
+
+  <!-- prettier-ignore -->
+  <div>
+  {% highlight js %}
+import { open } from "node:fs/promises";
+
+let file;
+try {
+  file = await open("file.txt", "r");
+  const text = await file.readFile("utf-8");
+  console.log(text);
+} finally {
+  if (file) {
+    await file.close();
+  }
+}
+  {% endhighlight %}
+  </div>
 </article>
 
 <article>
