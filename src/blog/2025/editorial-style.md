@@ -1,11 +1,11 @@
 ---
 date: "2025-01-06"
 title: >-
-  Editorial look & shrines progress
+  Editorial style & shrines progress
 description: >-
-  My website now features a new look: Editorial. Two color design returns, but
-  I'm aiming for something more elegant than retro. I've also started working on
-  my long awaited shrines! Contains 17 screenshots.
+  A new design era: Editorial style. Two color design returns, but I'm aiming
+  for something more elegant than retro. I've also started working on my long
+  awaited shrines! Contains 17 screenshots.
 ---
 
 ## Editorial style
@@ -100,8 +100,8 @@ helps balance the list the same way the filled in circles would in the `<ul>`.
 
 ![](/blog/editorial/07-details-2.webp)
 
-I was inspired by the simplicity of the expandable sections on chef
-[Mei Lin](https://www.meihlin.com/)'s website. A bottom border is enough to
+I was inspired by the simplicity of the expandable sections on
+[chef Mei Lin's website](https://www.meihlin.com/). A bottom border is enough to
 communicate what needs to be done here, especially when multiple details
 elements are stacked together. I think this style will also help remind me
 that's where they're best used and understood.
@@ -120,9 +120,9 @@ especially well in a monospace font since there aren't large descenders to make
 that look lopsided. Truthfully it doesn't need any, but it feels easier to read
 to me that way, and it helps emphasize the changing font.
 
-JetBrains Mono is a lovely font, but the x-height is really large, making the
-text feel "too big" next to the other font. So I scaled the size down a little
-bit, but maybe I did it too much.
+[JetBrains Mono](https://www.jetbrains.com/lp/mono/) is a lovely font, but the
+x-height is really large, making the text feel "too big" next to the other font.
+So I scaled the size down a little bit, but maybe I did it too much.
 
 For the code blocks, they are using a custom theme I made, based on my current
 VS Code theme. I no longer swap between light mode and dark mode themes for
