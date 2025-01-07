@@ -139,10 +139,12 @@ summary:focus-visible {
 }
 
 .header-top {
-  border-top: 4px solid;
-  box-shadow: 0 0.5px 0 0 var(--color-background);
+  background: var(--color-text);
+  height: 4px;
+  border-bottom: 0.5px solid var(--color-background);
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 
 .header {
@@ -211,6 +213,10 @@ ul {
 
 ol {
   padding-left: 3rem;
+}
+
+:is(ul, ol) :is(ul, ol) {
+  margin-block: 0;
 }
 
 main {
@@ -510,6 +516,7 @@ body > footer nav {
   display: flex;
   flex-wrap: wrap;
   margin-inline: -0.5rem;
+  gap: 0 1rem;
 }
 
 /* https://css-shape.com/rounded-edge/ */
