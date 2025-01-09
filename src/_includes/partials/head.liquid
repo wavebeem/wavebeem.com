@@ -2,17 +2,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="generator" content="{{ eleventy.generator }}" />
 {% if theme %}
-<meta name="theme-color" content="{{ themes[theme]['color-background'] }}" />
-<!-- <meta name="theme-color" content="#000000" /> -->
+<meta name="theme-color" content="{{ themes[theme]['color-text'] }}" />
 {% else %}
 <meta
   name="theme-color"
-  content="{{ colors.light['color-background'] }}"
+  content="{{ colors.light['color-text'] }}"
   media="(prefers-color-scheme: light)"
 />
 <meta
   name="theme-color"
-  content="{{ colors.dark['color-background'] }}"
+  content="{{ colors.dark['color-text'] }}"
   media="(prefers-color-scheme: dark)"
 />
 {% endif %}
