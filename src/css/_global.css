@@ -60,7 +60,6 @@ h6 {
 h1 {
   font-family: var(--font-cool);
   font-size: var(--font-size-h1);
-  color: var(--color-main-heading);
   line-height: 1.25;
   margin-block: 2rem 1rem;
 }
@@ -68,7 +67,6 @@ h1 {
 h2 {
   font-family: var(--font-cool);
   font-size: var(--font-size-h2);
-  color: var(--color-main-heading);
   line-height: 1.25;
   margin-block: 4rem 2rem;
   padding-bottom: 1rem;
