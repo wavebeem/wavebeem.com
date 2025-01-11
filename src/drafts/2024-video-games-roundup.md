@@ -39,7 +39,7 @@ of my favorite games of all time. She was right: I love it! Hard to say if it's
 better than the base game, but it changed everything up enough that it felt
 really fresh despite me knowing my way around the base game pretty well.
 
-## The Expanse: A Telltale Series (2023)
+### The Expanse: A Telltale Series (2023)
 
 Despite the weirdly yassified rendering of Camina Drummer, this game is pretty
 cool. The feel of moving around in space is unique, if a bit slow and strange.
@@ -131,7 +131,7 @@ anything like the first Path of Exile, it'll still be going strong 10 years
 later, so there's no rush for me to gorge myself before the game even has its
 true release date.
 
-## WEBFISHING (2024)
+### WEBFISHING (2024)
 
 This game is so cute and good. I haven't finished everything, but this is a game
 that's about the journey and hanging out with your friends.
