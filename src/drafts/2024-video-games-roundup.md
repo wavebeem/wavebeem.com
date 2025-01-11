@@ -5,7 +5,7 @@ description: >-
   My thoughts about the games I played in 2024.
 ---
 
-## Favorite games
+## Favorite
 
 ### Destiny 2: The Final Shape (2024)
 
@@ -23,7 +23,14 @@ play while still feeling successful. Good art too. Also, it's made using
 [LÖVE](https://www.love2d.org/), the 2D game engine for Lua (I've used it and
 thought it was great!).
 
-## Games I finished
+### Cobalt Core (2023)
+
+This game is super fun! I'm loving the pixel art, the music, the writing, the
+gameplay. I've been playing it "co-op" with Ash on the couch, and we discuss
+strategies out loud. I'm about halfway through with the game, and only started
+it in December.
+
+## Finished
 
 ### Castlevania: Aria of Sorrow Alter (2020)
 
@@ -94,14 +101,7 @@ stream that my new gay husband was going to feed me soup until I got strong (MAX
 STR) because playing that game without melee gets really boring. Oh, and we
 named the main character Crispin. It was a silly time.
 
-## Games I played
-
-### Cobalt Core (2023)
-
-This game is super fun! I'm loving the pixel art, the music, the writing, the
-gameplay. I've been playing it "co-op" with Ash on the couch, and we discuss
-strategies out loud. I'm about halfway through with the game, and only started
-it in December.
+## Unfinished
 
 ### UFO 50 (2024)
 
@@ -124,7 +124,7 @@ anything like the first Path of Exile, it'll still be going strong 10 years
 later, so there's no rush for me to gorge myself before the game even has its
 true release date.
 
-## Games I shelved
+## Shelved
 
 ### Helldivers 2 (2024)
 
