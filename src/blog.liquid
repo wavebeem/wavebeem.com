@@ -7,11 +7,7 @@ layout: "layout-base"
   <header>
     <h1>{{ title }}</h1>
 
-    <p>
-      <a href="/feed.xml">Subscribe to my RSS feed</a>
-      to stay up to date. You can use a free RSS reader like Feedly, Inoreader,
-      or NewsBlur.
-    </p>
+    <p><a href="/subscribe/">Subscribe</a> to stay up to date.</p>
   </header>
 
   {% assign postsByYear = collections.posts | groupByYear %} {% for item in
