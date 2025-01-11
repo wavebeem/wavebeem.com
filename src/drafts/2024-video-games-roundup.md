@@ -2,110 +2,190 @@
 title: >-
   2024 Video Games Roundup
 description: >-
-  My thoughts about the more interesting and noteworthy games I played in 2024.
+  My thoughts about the games I played in 2024.
 ---
 
-## What to expect
+## Favorite games
 
-I've never done a video games roundup post before. I'm going to present a list
-of all the games I remember playing this year (with brief notes), and then
-sections about each game I want to discuss more afterward.
+### Destiny 2: The Final Shape (2024)
 
-## The list
+--
 
-- **Finished**
+### Shin Megami Tensei V: Vengeance (2024)
 
-  - 2020 -- _Castlevania: Aria of Sorrow Alter_
+--
 
-  - 2016 -- _Titanfall 2_
+### Balatro (2024)
 
-  - 2024 -- _Momodora: Moonlit Farewell_
+Wow, this game is really fun. Incredible soundtrack. Simple concept. Base
+difficulties are easy enough that you can get your bearings and learn how to
+play while still feeling successful. Good art too. Also, it's made using
+[LÖVE](https://www.love2d.org/), the 2D game engine for Lua (I've used it and
+thought it was great!).
 
-  - 2024 -- _Balatro_
+## Games I finished
 
-  - 2024 -- _Destiny 2: The Final Shape_
+### Castlevania: Aria of Sorrow Alter (2020)
 
-  - 2024 -- _Fallen Leaf_
+I love Castlevania. My good friend Anna recommended this ROM hack to me for one
+of my favorite games of all time. She was right: I love it! Hard to say if it's
+better than the base game, but it changed everything up enough that it felt
+really fresh despite me knowing my way around the base game pretty well.
 
-  - 2024 -- _Shin Megami Tensei V: Vengeance_
+### Titanfall 2 (2016)
 
-  - 2024 -- _Dragon Quest III HD-2D Remake_
+Everyone talks about the time level, but I think the prefab home factory level
+was way cooler. Also, the level on the moving ships. Wow. These are some
+extremely memorable levels, and the robot buddy is great.
 
-  - 2006 -- _Castlevania: Portrait of Ruin_
+### Momodora: Moonlit Farewell (2024)
 
-  - 2008 -- _Castlevania: Order of Ecclesia_
+What a lovely game. I adore the previous game _Momodora: Reverie Under the
+Moonlight_. The character Pardoner Fennel from that game is one reason I chose
+Fennel as my middle name. This game is gorgeous and super fun. Glad to see rdein
+and friends make one final Momodora, and it's the most Momodora of all in so
+many ways.
 
-  - 2005 -- _Castlevania: Dawn of Sorrow_
+### Fallen Leaf (2024)
 
-  - 2014 -- _Fable Anniversary_
+Really weird but pretty cool. Tries do a lot of stuff. Not all of it works out
+well. In a lot of ways it's like classic Mega Man, but you also need to collect
+tons of characters and find lots of hidden secrets. I felt the balance was kinda
+off for some of the bosses. I liked the art and music a lot. The characters
+mostly felt worse than the main character, Leaf, though.
 
-- **Played**
+### Dragon Quest III HD-2D Remake (2024)
 
-  - 2023 -- _Cobalt Core_
+Really cute! I don't prefer "HD-2D" to just giving me the SNES or GBC sprite
+work directly, but it does have many nice QoL features added to the game. And it
+doesn't look tacky and awful like the Android ports. I think I actually
+preferred the simplicity of Dragon Quest I and II (which I played on GBC). The
+multi-classing system must've been really cool at the time, and honestly is
+still pretty good fun. I don't recommend bothering with catching all the
+monsters or taking a Monster Tamer when you play, though, unless you want to
+double or triple your playtime for very little reward.
 
-  - 2024 -- _UFO 50_
+### Castlevania: Portrait of Ruin (2006)
 
-  - 2024 -- _Path of Exile 2_
+Still a great Castlevania game. Bummer about losing Ayami Kojima's art, though.
+I wish Charlotte was more useful, it's basically a solo game as Jonathan.
 
-  - 2024 -- _Helldivers 2_
+### Castlevania: Order of Ecclesia (2008)
 
-- **Shelved**
+Holds up worse than I expected. I found the game more frustrating due to needing
+to use precisely timed two button combos to deal maximum damage against the
+game's complete health sponge cast of enemies. But hey, Castlevania where you
+get to play as a cool girl! It could be worse.
 
-  - 2024 -- _Dokimon: Quest_
+### Castlevania: Dawn of Sorrow (2005)
 
-    This game has some nice quality of life features I wish Pokémon had, but
-    otherwise it's just not super fun to me.
+Aria of Sorrow's loser brother. Despite all the similarities, this just feels so
+much worse on every axis _except_ pixel art. Whew, the sprite work is incredible
+here. In love.
 
-  - 2018 -- _Judgment_
+### Fable Anniversary (2014)
 
-    I was really digging the story in this for a while, but the actual gameplay
-    got stale to me. I think I'm done with _Ryu ga Gotoku Studios_ games for...
-    a while. I really didn't like the sidequest writing. The voice acting was
-    great. I looked up every cutscene for the end of the game, and I think the
-    twists maybe got a bit out of hand.
+This game originally came out for Fable's 10 year anniversary... and here I was
+playing it again for Fable Anniversary's 10 year anniversary lol. I played it on
+stream and had a lot of fun. Though at this point I'm more laughing _at_ the
+game than with it. My goal was to make a twink (0 STR, MAX DEX) build, and
+eventually I got gay married to the tattooist in Knothole Glade. We decided on
+stream that my new gay husband was going to feed me soup until I got strong (MAX
+STR) because playing that game without melee gets really boring. Oh, and we
+named the main character Crispin. It was a silly time.
 
-  - 2013 -- _Final Fantasy X/X-2 HD Remaster_
+## Games I played
 
-    I simply could not have fun playing this game. Supposedly it gets more
-    interested shortly after I stopped playing, but I couldn't summon the
-    willpower to keep going. I can tell there's some cool fucky story stuff
-    going on with the multiple worlds, but I'm just keeping this on the shelf.
-    I'd rather just hear a friend explain it to me some time.
+### Cobalt Core (2023)
 
-  - 2024 -- _RKGK_
+This game is super fun! I'm loving the pixel art, the music, the writing, the
+gameplay. I've been playing it "co-op" with Ash on the couch, and we discuss
+strategies out loud. I'm about halfway through with the game, and only started
+it in December.
 
-    I just didn't have fun playing this. I only logged a few hours.
+### UFO 50 (2024)
 
-  - 2022 -- _Chico and the Magic Orchards_
+I don't see this game as "shelved" because I really like it, it's just too much
+for me to consider "beating" in any meaningful sense. So far my favorite games
+are _Devilition_, because I love a puzzle/strategy game, and _Rail Heist_, which
+feels like a strategy game where you have to perfectly execute your silly ideas.
+There's some other fun games in there too, but most are a bit too old & janky
+feeling for me to want to work through. I realize this is intentional, but I
+don't have any nostalgia for 1980s video games, and I haven't really gotten into
+them later in life either.
 
-    Incredibly cute, but I didn't really like the mental math of the positioning
-    and angles necessary to beat the puzzles.
+### Path of Exile 2 (2024)
 
-  - 2024 -- _Isles of Sea and Sky_
+This is really fun so far. It's just in early access, but I can see myself
+continuing to play it. I love the co-op and just blasting and looting with
+friends. The addition of the new twin stick control scheme feels extremely
+overpowered for magic users, though. I wonder what they'll do with that. If it's
+anything like the first Path of Exile, it'll still be going strong 10 years
+later, so there's no rush for me to gorge myself before the game even has its
+true release date.
 
-    I heard "Zelda without combat" but what I actually got was "open world
-    sokoban". I found it incredibly overwhelming the way the game was massively
-    interconnected, making it unclear which rooms I should even spend my time
-    in.
+## Games I shelved
 
-  - 2023 -- _Star Ocean: The Second Story R_
+### Helldivers 2 (2024)
 
-    Killer music. Subpar English voice acting. Cliche story. Combat felt like a
-    bad version of _Tales of Symphonia_. I stopped playing after the difficulty
-    spiked in the mid-late game, leading to me being frustrated.
+A fun and silly co-op game. I always had fun playing, but never really got
+hooked. I would consider playing it again with friends, but won't be seeking it
+out.
 
-  - 2014 -- _Momodora III_
+### Dokimon: Quest (2024)
 
-    I liked _Momodora: Reverie Under the Moonlight_, _Momodora: Moonlit
-    Farewell_, and even _Momodora II_, but I didn't really like _Momodora III_.
-    It's super cute, but the levels felt a bit mean (lots of one hit kill
-    surprises), and the tiny sprites + fast button mashing attacks + tough
-    bosses was a frustrating combination to me.
+This game has some nice quality of life features I wish Pokémon had, but
+otherwise it's just not super fun to me.
 
-  - 2010 -- _Alpha Protocol_
+### Judgment (2018)
 
-    Well, I actually beat this game a few times before. I decided to stream it
-    for another playthrough this year, but I gave up without finishing it,
-    mostly because my stream attendance was really low. It's a worse game than I
-    remember, but I still think it did some interesting stuff. I'd love to see a
-    reboot of this franchise.
+I was really digging the story in this for a while, but the actual gameplay got
+stale to me. I think I'm done with _Ryu ga Gotoku Studios_ games for... a while.
+I really didn't like the sidequest writing. The voice acting was great. I looked
+up every cutscene for the end of the game, and I think the twists maybe got a
+bit out of hand.
+
+### Final Fantasy X/X-2 HD Remaster (2013)
+
+I simply could not have fun playing this game. Supposedly it gets more
+interested shortly after I stopped playing, but I couldn't summon the willpower
+to keep going. I can tell there's some cool fucky story stuff going on with the
+multiple worlds, but I'm just keeping this on the shelf. I'd rather just hear a
+friend explain it to me some time.
+
+### RKGK (2024)
+
+I just didn't have fun playing this. I only logged a few hours.
+
+### Chico and the Magic Orchards (2022)
+
+Incredibly cute, but I didn't really like the mental math of the positioning and
+angles necessary to beat the puzzles.
+
+### Isles of Sea and Sky (2024)
+
+I heard "Zelda without combat" but what I actually got was "open world sokoban".
+I found it incredibly overwhelming the way the game was massively
+interconnected, making it unclear which rooms I should even spend my time in.
+
+### Star Ocean: The Second Story R (2023)
+
+Killer music. Subpar English voice acting. Cliche story. Combat felt like a bad
+version of _Tales of Symphonia_. I stopped playing after the difficulty spiked
+in the mid-late game, leading to me being frustrated.
+
+### Momodora III (2014)
+
+I liked _Momodora: Reverie Under the Moonlight_, _Momodora: Moonlit Farewell_,
+and even _Momodora II_, but I didn't really like _Momodora III_. It's super
+cute, but the levels felt a bit mean (lots of one hit kill surprises), and the
+tiny sprites + fast button mashing attacks + tough bosses was a frustrating
+combination to me.
+
+### Alpha Protocol (2010)
+
+Well, I actually beat this game a few times before. I decided to stream it for
+another playthrough this year, but I gave up without finishing it, mostly
+because my stream attendance was really low. It's a worse game than I remember,
+but I still think it did some interesting stuff. I'd love to see a reboot of
+this franchise.
