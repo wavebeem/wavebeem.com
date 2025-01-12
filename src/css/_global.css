@@ -159,12 +159,10 @@ summary:focus-visible {
   padding-inline: 1rem;
 }
 
-.header-bottom {
+.decorative-divider {
   box-sizing: content-box;
-  height: 52px;
+  height: 32px;
   margin-block-end: 0;
-  background-color: var(--color-text);
-  color: var(--color-background);
 
   border-block: 2px solid var(--color-text);
   box-shadow: inset 0 0.5px 0 0 var(--color-background),
@@ -173,9 +171,7 @@ summary:focus-visible {
   --s: 64px; /* control the size*/
   --c1: var(--color-background);
   --c2: var(--color-text);
-}
 
-.header-bottom {
   /* https://css-pattern.com/overlapping-circles/ */
   --_g: var(--c1) 0% 5%, var(--c2) 8% 15%, var(--c1) 18% 25%, var(--c2) 28% 35%,
     var(--c1) 38% 45%, var(--c2) 48% 55%, var(--c1) 58% 65%, var(--c2) 68% 75%,
@@ -232,7 +228,6 @@ article header small {
 
 article header p {
   font-style: italic;
-  /* font-size: var(--font-size-small); */
 }
 
 :focus-visible {
@@ -267,19 +262,17 @@ button {
   justify-content: center;
   align-items: center;
   display: inline-flex;
-  font-weight: bold;
-  border: 2px solid transparent;
+  border: 2px solid;
   padding: 0.25rem 1.5rem;
   border-radius: 9999px;
-  background-color: var(--color-text);
-  color: var(--color-background);
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
 }
 
 .button:hover,
 button:hover {
-  opacity: 0.9;
+  outline: 3px solid var(--color-text);
+  outline-offset: -2px;
 }
 
 .button:focus-visible,
@@ -330,6 +323,10 @@ body > header nav {
   width: 100%;
   margin-inline: auto;
   padding: 1rem;
+}
+
+main > .content-column {
+  padding-bottom: 4rem;
 }
 
 .grid2 {
@@ -497,8 +494,6 @@ dl > dd + dt {
 
 body > footer {
   font-size: var(--font-size-small);
-  background-color: var(--color-text);
-  color: var(--color-background);
 }
 
 body > footer a {
@@ -520,10 +515,6 @@ body > footer nav {
   clip-path: ellipse(65% 100% at 50% 100%);
   padding-top: 3rem;
   margin-top: 3rem;
-}
-
-.footer .content-column {
-  padding-top: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
