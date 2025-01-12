@@ -1,8 +1,9 @@
 ---
 title: >-
-  2024 Video Games Roundup
+  Video games roundup (2024)
 description: >-
-  My thoughts about the games I played in 2024.
+  My thoughts about the games I played in 2024. Contains thoughts about 28
+  games, over 2 per month. Yeah, I'm a gamer.
 ---
 
 ## Favorite
