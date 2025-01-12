@@ -161,7 +161,7 @@ summary:focus-visible {
 
 .decorative-divider {
   box-sizing: content-box;
-  height: 32px;
+  height: 64px;
   margin-block-end: 0;
 
   border-block: 2px solid var(--color-text);
