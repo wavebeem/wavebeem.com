@@ -9,11 +9,86 @@ description: >-
 
 ### Destiny 2: The Final Shape (2024)
 
---
+Goodness gracious, _Destiny 2_. The previous expansion, _Lightfall_, was a
+letdown in a lot of ways. Though I wasn't upset for the same reason as the
+community (seriously, I only ran the _Root of Nightmares_ raid once, and I've
+retired from raiding).
+
+In contrast, _The Final Shape_ just absolutely crushes it. I think it's the best
+story campaign they've ever done, and the new _Prismatic_ subclass is extremely
+fun. I loved the writing, especially Cayde-6. I can't believe I'm saying that.
+I've pretty much hated Cayde for being an unfunny jokester since the beginning
+of Destiny 2, and was originally happy to see him killed off. His return shocked
+and upset me, but I think the circumstances were fantastic, once you get to see
+the story unfold. Even better, he has character growth during his absence. His
+death and time in the afterlife bestowed upon him a needed wisdom and
+perspective that made him a good leader. His dialogue with Crow, and the set up
+for Crow's new role, were all great.
+
+> **Crow:** "You almost sound like you're having fun."
+>
+> **Cadye-6:** \*laughs\* "Aren't you?"
+
+Also, I can't forget to mention that Lance Reddick will be dearly missed. Keith
+David did an admiral job as the new Zavala, though. I think some people had a
+hard time accepting the combination of his personality shift along with the new
+voice, but I think Bungie had been setting us up wonderfully for it.
+
+The new Pale Heart area was super fun, and I loved uncovering its secrets.
+
+Sadly, since the expansion, we've hit the second round of Bungie layoffs, and
+the game seems to be in a tailspin. The expansion didn't sell well (probably
+because of players dropping off after the last expansion), and the seasonal
+story model revamp as "Episodes" has failed to hit the mark. The game also seems
+buggier than ever before, and it just feels like they're understaffed to keep
+this decade old beast healthy and engaging.
+
+I have deeply loved this game, to the tune of thousands of hours, but I have
+decided to enter a soft hiatus. I still play on occasion when other friends are
+looking for a Grandmaster Nightfall buddy or something like that, but I wouldn't
+be surprised if by this time next year I've uninstalled it.
+
+I salute everyone who ever worked on making Destiny the weird and wonderful
+experience that it's been.
 
 ### Shin Megami Tensei V: Vengeance (2024)
 
---
+I really liked the original _Shin Megami Tensei V_, perhaps more than most. I
+saw a lot of negative things about it, particularly around the story.
+_Vengeance_ added a new story route called "Canon of Vengeance" (the old one is
+now named "Canon of Creation"). I only played the new "Canon of Vengeance" since
+it's only been a couple years since I played SMTV, and didn't need the refresher
+(it's a long game, too!).
+
+The new music absolutely whips, just like the old stuff. The new enemy faction,
+the [Qadištu](https://megamitensei.fandom.com/wiki/Qadi%C5%A1tu), are really
+cool. I lovingly call them the
+[Goth IHOP](https://knowyourmeme.com/memes/goth-ihop) sisters, and have a few
+commissioned pieces of
+[Eisheth Zenunim](https://megamitensei.fandom.com/wiki/Eisheth_Zenunim) art.
+Both routes suffer from the open world game design problem of "if you play all
+the side quests you'll probably get tired of the game before it's over", but I
+still really like them.
+
+Even as a dungeon crawling RPG fan (_Etrian Odyssey_, my beloved), I think the
+way these games approach open world exploration coupled with the incredible
+music... just absorbs me into these worlds. And more than anything I'm a sucker
+for demon fusion and press turns. These games are just super fun mechanically
+for me.
+
+The previous game had a "regular attacks only" auto battle feature, but this one
+also offers an intelligent auto battle that uses spells and targets weaknesses.
+Coupled with the increased animation speed and the pacing can feel so good in
+this game!
+
+I think the Canon of Vengeance breaks down in the 2nd half storywise just like
+the Canon of Creation, but I'm fine to overlook their weaknesses.
+
+I was disappointed that the final boss of the game was the same, but the new
+fights I took part in were all interesting! It certainly is more than just a
+DLC, but it's also not a fully new game. I happily gobbled it up, though. I just
+can't get into _Persona_ like I can the _SMT_ games I've played ("SMT4
+Apocalypse", "SMTV", and "SMTV: Vengeance").
 
 ### Balatro (2024)
 
