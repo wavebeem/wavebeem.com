@@ -184,6 +184,7 @@ summary:focus-visible {
   background-size: var(--s) var(--s);
 }
 
+blockquote,
 ul,
 ol,
 dl,
@@ -262,7 +263,7 @@ button {
   justify-content: center;
   align-items: center;
   display: inline-flex;
-  border: 2px solid;
+  border: 1px solid;
   padding: 0.25rem 1.5rem;
   border-radius: 9999px;
   text-decoration-line: none;
@@ -271,14 +272,15 @@ button {
 
 .button:hover,
 button:hover {
-  outline: 3px solid var(--color-text);
-  outline-offset: -2px;
+  outline: 2px solid var(--color-text);
+  outline-offset: -1px;
+  text-decoration-line: none;
 }
 
 .button:focus-visible,
 button:focus-visible {
-  outline: 2px solid var(--color-text);
-  outline-offset: 2px;
+  outline: 3px solid var(--color-text);
+  outline-offset: -2px;
 }
 
 body > header nav a {
@@ -313,7 +315,7 @@ body > header nav {
     padding-block: 0.5rem;
   }
 
-  body > header nav a {
+  body > header nav {
     margin-left: -1rem;
   }
 }
@@ -413,22 +415,6 @@ article p img {
   border-radius: 8px;
   padding: 2px;
   border: 2px solid;
-}
-
-@media (max-width: 420px) {
-  article p:has(> img),
-  article figure {
-    padding-inline: 0;
-  }
-
-  article figure img,
-  article p img {
-    padding-inline: 0;
-    border-inline: 0;
-    border-radius: 0;
-    margin-inline: -1rem;
-    width: calc(100% + 2rem);
-  }
 }
 
 article figure figcaption {
