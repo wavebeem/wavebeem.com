@@ -137,7 +137,6 @@ summary:focus-visible {
 }
 
 .header {
-  border-top: 4px solid;
   font-size: var(--font-size-header);
 }
 
@@ -167,7 +166,7 @@ summary:focus-visible {
   background-color: var(--color-text);
   color: var(--color-background);
 
-  border-block: 4px solid var(--color-text);
+  border-block: 2px solid var(--color-text);
   box-shadow: inset 0 0.5px 0 0 var(--color-background),
     inset 0 -0.5px 0 0 var(--color-background);
 
@@ -395,7 +394,7 @@ hr::after {
   flex: none;
   border-radius: 9999px;
   background-color: var(--color-text);
-  border: 4px solid var(--color-background);
+  border: 2px solid var(--color-background);
   position: absolute;
   left: 50%;
   top: 50%;
@@ -405,7 +404,11 @@ hr::after {
 article p:has(> img),
 article figure {
   margin-block: 1.5rem;
-  margin-inline: 0;
+  margin-inline: auto;
+  /* padding-inline: 4rem; */
+  max-width: max-content;
+  justify-self: center;
+  align-self: center;
 }
 
 article figure img,
@@ -414,10 +417,16 @@ article p img {
   height: auto;
   display: block;
   border-radius: 8px;
-  border: 4px solid;
+  padding: 2px;
+  border: 2px solid;
 }
 
 @media (max-width: 420px) {
+  article p:has(> img),
+  article figure {
+    padding-inline: 0;
+  }
+
   article figure img,
   article p img {
     padding-inline: 0;
@@ -453,7 +462,7 @@ article blockquote,
 article aside {
   margin-inline: 0;
   padding: 0rem 2rem;
-  border-left: 4px solid;
+  border-left: 2px solid;
 }
 
 .pixelated {

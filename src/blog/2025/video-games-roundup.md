@@ -10,6 +10,8 @@ description: >-
 
 ### Destiny 2: The Final Shape (2024)
 
+![](/blog/2024-games/destiny2.webp)
+
 Goodness gracious, _Destiny 2_. The previous expansion, _Lightfall_, was a
 letdown in a lot of ways. Though I wasn't upset for the same reason as the
 community (seriously, I only ran the _Root of Nightmares_ raid once, and I've
@@ -54,6 +56,8 @@ experience that it's been.
 
 ### Shin Megami Tensei V: Vengeance (2024)
 
+![](/blog/2024-games/smtvv.webp)
+
 I really liked the original _Shin Megami Tensei V_, perhaps more than most. I
 saw a lot of negative things about it, particularly around the story.
 _Vengeance_ added a new story route called "Canon of Vengeance" (the old one is
@@ -93,6 +97,8 @@ Apocalypse", "SMTV", and "SMTV: Vengeance").
 
 ### Balatro (2024)
 
+![](/blog/2024-games/balatro.webp)
+
 Wow, this game is really fun. Incredible soundtrack. Simple concept. Base
 difficulties are easy enough that you can get your bearings and learn how to
 play while still feeling successful. Good art too. Also, it's made using
@@ -100,6 +106,8 @@ play while still feeling successful. Good art too. Also, it's made using
 thought it was great!).
 
 ### Cobalt Core (2023)
+
+![](/blog/2024-games/cobalt-core.webp)
 
 This game is super fun! I'm loving the pixel art, the music, the writing, the
 gameplay. I've been playing it "co-op" with Ash on the couch, and we discuss
