@@ -405,10 +405,7 @@ article p:has(> img),
 article figure {
   margin-block: 1.5rem;
   margin-inline: auto;
-  /* padding-inline: 4rem; */
   max-width: max-content;
-  justify-self: center;
-  align-self: center;
 }
 
 article figure img,
