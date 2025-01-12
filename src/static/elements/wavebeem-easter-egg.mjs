@@ -4,11 +4,9 @@
  * @see https://www.wavebeem.com/
  */
 export class WavebeemEasterEgg extends HTMLElement {
-  abortController = new AbortController();
-
   connectedCallback() {
-    this.abortController = new AbortController();
-    const { signal } = this.abortController;
+    this.#abortController = new AbortController();
+    const { signal } = this.#abortController;
     this.dataset.state = "outside";
     this.#css("--x", "0");
     this.#css("--y", "0");
@@ -17,7 +15,7 @@ export class WavebeemEasterEgg extends HTMLElement {
     this.addEventListener(
       "pointermove",
       (event) => {
-        if (this.#prefersReducedMotion()) {
+        if (this.#shouldSkip()) {
           return;
         }
         const x = event.offsetX;
@@ -34,13 +32,16 @@ export class WavebeemEasterEgg extends HTMLElement {
         this.#css("--r", radius);
       },
       {
-        signal: this.abortController.signal,
+        signal: this.#abortController.signal,
         passive: true,
       }
     );
     this.addEventListener(
       "pointerenter",
       (event) => {
+        if (this.#shouldSkip()) {
+          return;
+        }
         this.dataset.state = "inside";
       },
       { signal }
@@ -48,6 +49,9 @@ export class WavebeemEasterEgg extends HTMLElement {
     this.addEventListener(
       "pointerleave",
       (event) => {
+        if (this.#shouldSkip()) {
+          return;
+        }
         this.dataset.state = "outside";
       },
       { signal }
@@ -55,11 +59,15 @@ export class WavebeemEasterEgg extends HTMLElement {
   }
 
   disconnectedCallback() {
-    this.abortController.abort();
+    this.#abortController.abort();
   }
 
-  #prefersReducedMotion() {
-    return matchMedia("(prefers-reduced-motion: reduce)").matches;
+  #abortController = new AbortController();
+  #prefersReducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
+  #hover = matchMedia("(hover)");
+
+  #shouldSkip() {
+    return this.#prefersReducedMotion.matches || !this.#hover.matches;
   }
 
   #clamp(x) {

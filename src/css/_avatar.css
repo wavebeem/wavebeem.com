@@ -20,12 +20,8 @@ wavebeem-easter-egg.avatar[data-state="inside"] {
   border-radius: 9999px;
   width: var(--avatar-size);
   height: var(--avatar-size);
-
   filter: grayscale(1) contrast(1.5) brightness(0.9);
   mix-blend-mode: luminosity;
-  /* mix-blend-mode: hard-light; */
-  /* mix-blend-mode: screen; */
-  /* mix-blend-mode: overlay; */
 }
 
 wavebeem-easter-egg {
@@ -33,14 +29,13 @@ wavebeem-easter-egg {
   --t: 2px;
   --k: 0.05turn;
   --transform: translate(calc(var(--t) * var(--x)), calc(var(--t) * var(--y)))
-    scale(1.25) rotateY(calc(var(--k) * var(--x)))
-    rotateX(calc(var(--k) * var(--y)));
+    rotateY(calc(var(--k) * var(--x))) rotateX(calc(var(--k) * var(--y)));
   display: block;
   position: relative;
-  touch-action: none;
+  /* touch-action: none; */
 }
 
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce), not (hover) {
   wavebeem-easter-egg {
     --k: 0turn;
   }
@@ -54,7 +49,7 @@ wavebeem-easter-egg[data-state="outside"] img {
 
 wavebeem-easter-egg[data-state="inside"] img {
   pointer-events: none;
-  touch-action: none;
+  /* touch-action: none; */
   transform: var(--transform);
   outline: 1px solid #fff8;
   outline-offset: -1px;
@@ -69,7 +64,7 @@ wavebeem-easter-egg::before,
 wavebeem-easter-egg::after {
   z-index: 10;
   transform: var(--transform);
-  transition: opacity 500ms;
+  transition: opacity 0;
   pointer-events: none;
   content: "";
   position: absolute;
@@ -118,6 +113,11 @@ wavebeem-easter-egg::after {
 wavebeem-easter-egg[data-state="inside"]::before,
 wavebeem-easter-egg[data-state="inside"]::after {
   opacity: 1;
+}
+
+wavebeem-easter-egg[data-state="outside"]::before,
+wavebeem-easter-egg[data-state="outside"]::after {
+  transition: opacity 0;
 }
 
 @media (max-width: 420px) {
