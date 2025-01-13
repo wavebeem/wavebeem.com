@@ -34,5 +34,8 @@
     "npm-check": "^6.0.1",
     "stylelint": "^16.10.0",
     "stylelint-config-recommended": "^14.0.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^6.0.0"
   }
 }

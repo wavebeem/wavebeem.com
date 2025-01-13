@@ -1,6 +1,7 @@
 // @ts-check
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import dateformat from "dateformat";
 import markdownIt from "markdown-it";
 
@@ -21,6 +22,12 @@ export default function getConfig(config) {
   });
   config.addPassthroughCopy({ "src/static": "/" });
 
+  config.addPlugin(eleventyImageTransformPlugin, {
+    sharpOptions: {
+      animated: true,
+    },
+  });
+
   config.addWatchTarget("./src/css/");
 
   config.addPlugin(pluginRss);
@@ -30,7 +37,7 @@ export default function getConfig(config) {
     // Default theme (light mode)
     s += `:root {\n`;
     for (const [key, val] of Object.entries(themes.light)) {
-      s += `  --${key}: ${val};`;
+      s += `  --${key}: ${val};\n`;
     }
     s += `}\n`;
     s += `\n`;
@@ -38,7 +45,7 @@ export default function getConfig(config) {
     s += `@media (prefers-color-scheme: dark) {\n`;
     s += `  :root {\n`;
     for (const [key, val] of Object.entries(themes.dark)) {
-      s += `    --${key}: ${val};`;
+      s += `    --${key}: ${val};\n`;
     }
     s += `  }\n`;
     s += `}\n`;
@@ -47,7 +54,7 @@ export default function getConfig(config) {
     for (const [name, vars] of Object.entries(themes)) {
       s += `:root[data-theme="${name}"] {\n`;
       for (const [key, val] of Object.entries(vars)) {
-        s += `  --${key}: ${val};`;
+        s += `  --${key}: ${val};\n`;
       }
       s += `}\n`;
       s += `\n`;
