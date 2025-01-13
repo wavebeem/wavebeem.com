@@ -15,7 +15,11 @@
   --font-size-small: 1rem;
   --font-size-code: 1rem;
 
-  --link-underline-offset: calc(1em / 8);
+  --rounded-none: 0px;
+  --rounded-small: 3px;
+  --rounded-pill: 9999px;
+
+  --link-underline-offset: calc(1em / 6);
   --link-underline-thickness: calc(1em / 12);
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 1px);
 }

@@ -31,7 +31,7 @@ export class WavebeemToyboxFlashlight extends HTMLElement {
         hsl(0 0% 100% / 30%) 30% 40%
       );
       position: fixed;
-      border-radius: 9999px;
+      border-radius: var(--rounded-pill);
       translate: -50% -50%;
       transform: translate(var(--x), var(--y));
       cursor: none;

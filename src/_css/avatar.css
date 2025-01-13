@@ -7,7 +7,7 @@ wavebeem-easter-egg {
   margin-top: -1rem;
   background-color: var(--color-background);
   padding: var(--avatar-padding);
-  border-radius: 9999px;
+  border-radius: var(--rounded-pill);
   --wavebeem-easter-egg--shadow-color: hsl(0 0% 0% / 50%);
   --t: 2px;
   --k: 0.05turn;
@@ -28,7 +28,7 @@ wavebeem-easter-egg picture {
 }
 
 wavebeem-easter-egg img {
-  border-radius: 9999px;
+  border-radius: var(--rounded-pill);
   width: var(--avatar-size);
   height: var(--avatar-size);
   filter: grayscale(1) contrast(1.5) brightness(0.9);

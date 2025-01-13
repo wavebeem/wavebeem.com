@@ -33,7 +33,7 @@ export default function getConfig(config) {
   //   },
   // });
 
-  config.addWatchTarget("./src/css/");
+  config.addWatchTarget("./src/_css/");
 
   config.addPlugin(pluginRss);
 
