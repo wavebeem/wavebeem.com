@@ -36,6 +36,7 @@
     "stylelint-config-recommended": "^14.0.1"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^6.0.0"
+    "@11ty/eleventy-img": "^6.0.0",
+    "netlify-plugin-cache": "^1.0.3"
   }
 }

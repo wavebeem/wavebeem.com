@@ -403,8 +403,8 @@ hr::after {
 article p:has(> img),
 article figure {
   margin-block: 1.5rem;
-  margin-inline: auto;
-  max-width: max-content;
+  margin-inline: 0;
+  /* max-width: max-content; */
 }
 
 article figure img,
