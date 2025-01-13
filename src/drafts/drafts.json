@@ -1,5 +1,4 @@
 {
   "layout": "layout-post",
-  "tags": ["draft"],
-  "permalink": "drafts/{{ page.fileSlug }}/"
+  "tags": ["draft"]
 }

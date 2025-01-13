@@ -1,7 +1,7 @@
 // @ts-check
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+// import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import dateformat from "dateformat";
 import markdownIt from "markdown-it";
 
@@ -21,12 +21,17 @@ export default function getConfig(config) {
     strictFilters: true,
   });
   config.addPassthroughCopy({ "src/static": "/" });
+  config.addPassthroughCopy("src/**/*.{png,jpg,jpeg,webp,svg}");
 
-  config.addPlugin(eleventyImageTransformPlugin, {
-    sharpOptions: {
-      animated: true,
-    },
-  });
+  // config.addPlugin(eleventyImageTransformPlugin, {
+  //   sharpOptions: {
+  //     animated: true,
+  //   },
+  //   sharpWebpOptions: {
+  //     quality: 100,
+  //     effort: 6,
+  //   },
+  // });
 
   config.addWatchTarget("./src/css/");
 
