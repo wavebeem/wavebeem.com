@@ -163,9 +163,6 @@ summary:focus-visible {
   box-sizing: content-box;
   height: 64px;
   margin-block-end: 0;
-  box-shadow: inset 0 0.25px 0 0 var(--color-text),
-    inset 0 -0.25px 0 0 var(--color-text);
-
   --s: 64px; /* control the size*/
   --c1: var(--color-background);
   --c2: var(--color-text);
@@ -180,6 +177,10 @@ summary:focus-visible {
     radial-gradient(50% 50%, var(--_g)) calc(var(--s) / 2) calc(var(--s) / 2)
       var(--c1);
   background-size: var(--s) var(--s);
+
+  /* Checkerboard */
+  /* background: repeating-conic-gradient(var(--c2) 0% 25%, var(--c1) 0% 50%) 50% /
+    64px 64px; */
 }
 
 blockquote,
@@ -408,6 +409,7 @@ article figure {
 
 article figure img,
 article p img {
+  margin-inline: auto;
   width: 100%;
   height: auto;
   display: block;
