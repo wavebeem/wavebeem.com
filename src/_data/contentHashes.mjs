@@ -14,6 +14,6 @@ export default {
   ),
   favicon: createContentHash("src/static/favicon.png"),
   faviconVector: createContentHash("src/static/favicon.svg"),
-  photo: createContentHash("src/static/photo.webp"),
   ogImage: createContentHash("src/static/og-image.png"),
+  appleTouchIcon: createContentHash("src/static/apple-touch-icon.png"),
 };

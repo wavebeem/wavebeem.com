@@ -14,7 +14,7 @@ still learning new things about keyboards all the time.
 
 ## Why
 
-![](/blog/keebs-101/ducky.webp)
+![](ducky.jpg)
 
 **Ducky 9008G2 - Year Of The Tiger**
 
@@ -43,7 +43,7 @@ Here are some reasons you might want to get a mechanical keyboard:
 
 ## Why not
 
-![](/blog/keebs-101/whitefox.webp)
+![](whitefox.jpg)
 
 **WhiteFox with Cherry keycaps and Filco palm rest**
 
@@ -76,7 +76,7 @@ refers to roughly 104 keys, and everything else is measured relative to that.
 Usually it's possible to type missing keys by doing key combinations on smaller
 keyboards.
 
-![](/blog/keebs-101/model-m.webp)
+![](model-m.jpg)
 
 **IBM Model M**
 
@@ -86,7 +86,7 @@ released.
 
 ## Full size form factor
 
-![](/blog/keebs-101/das-ultimate-4.webp)
+![](das-ultimate-4.jpg)
 
 **Das Keyboard Ultimate 4**
 
@@ -101,7 +101,7 @@ paragraphs).
 
 ## Tenkeyless form factor
 
-![](/blog/keebs-101/tkl.webp)
+![](tkl.jpg)
 
 **MT3 /dev/tty**
 
@@ -112,7 +112,7 @@ I think it's hard to go wrong with a TKL board since it makes few compromises.
 
 ## 75% form factor
 
-![](/blog/keebs-101/race-3.webp)
+![](race-3.jpg)
 
 **Vortex Race 3 with DSA keycaps and Filco palm rest**
 
@@ -129,7 +129,7 @@ of desk space and keeping your hand even closer to the mouse or keyboard.
 
 ## 60% form factor
 
-![](/blog/keebs-101/poker-3.webp)
+![](poker-3.jpg)
 
 **Pok3r keyboard with custom keycabs**
 
@@ -152,7 +152,7 @@ keyboards.
 
 ## Keyboard extras
 
-![](/blog/keebs-101/feet.webp)
+![](feet.jpg)
 
 **Digstar StarTop USB mechanical gaming keyboard 22**
 
@@ -162,7 +162,7 @@ angled up compared with down and you'll see how much more exhausting it is. Many
 keyboards are naturally sloped and deploying keyboard feet only makes them even
 more sloped, furthering finger fatigue.
 
-![](/blog/keebs-101/hhkb.webp)
+![](hhkb.jpg)
 
 **Happy Hacking Keyboard Professional 2**
 
@@ -172,7 +172,7 @@ you think will look nicest on your desk, but note that if the keys are mounted
 directly on metal with no plastic, you can have a slight metallic clang when
 fully pressing a key.
 
-![](/blog/keebs-101/led.webp)
+![](led.jpg)
 
 **DigsRoccat Suora FX RGB Mechanical Keyboard Review**
 
@@ -200,7 +200,7 @@ break.
 
 ## Clicky keyswitches
 
-![](/blog/keebs-101/mx-clicky.webp)
+![](mx-clicky.jpg)
 
 **Cherry MX Blue and Cherry MX Green Switches**
 
@@ -218,7 +218,7 @@ force to be pressed.
 
 ## Tactile keyswitches
 
-![](/blog/keebs-101/mx-tactile.webp)
+![](mx-tactile.jpg)
 
 **Cherry MX Brown and Cherry MX Clear Switches**
 
@@ -234,7 +234,7 @@ to be pressed. There's also the MX Clear which requires 65g.
 
 ## Linear keyswitches
 
-![](/blog/keebs-101/mx-linear.webp)
+![](mx-linear.jpg)
 
 **Cherry MX Black and Cherry MX Red Switches**
 
@@ -275,7 +275,7 @@ chart from PMK_][13] is also really useful.
 
 ## Medium profile keycaps
 
-![](/blog/keebs-101/profile-cherry.webp)
+![](profile-cherry.jpg)
 
 **WhiteFox with Cherry keycaps**
 
@@ -291,7 +291,7 @@ common than OEM.
 
 ## High profile keycaps
 
-![](/blog/keebs-101/profile-mt3.webp)
+![](profile-mt3.jpg)
 
 **Vortex Race 3 with MT3 keycaps**
 
@@ -306,7 +306,7 @@ is even more sculpted than SA.
 
 ## Low profile keycaps
 
-![](/blog/keebs-101/profile-dsa.webp)
+![](profile-dsa.jpg)
 
 **Vortex Race 3 with DSA keycaps**
 
@@ -414,7 +414,7 @@ by [Hideya HAMANO](https://www.flickr.com/photos/mawari/28692415581) is licensed
 under [CC BY-NC-ND 2.0](https://creativecommons.org/licenses/by-nc-nd/2.0/)
 
 **Happy Hacking Keyboard Professional 2**\
-by [Aon fi](https://commons.wikimedia.org/wiki/File:Happy_Hacking_Keyboard_Professional_2.webp)
+by [Aon fi](https://commons.wikimedia.org/wiki/File:Happy_Hacking_Keyboard_Professional_2.jpg)
 is licensed under [CC3.0](https://creativecommons.org/licenses/by/3.0/deed.en)
 
 **DigsRoccat Suora FX RGB Mechanical Keyboard Review**\

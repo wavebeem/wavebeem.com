@@ -6,31 +6,36 @@ import markdownIt from "markdown-it";
 
 /** @typedef {import("@11ty/eleventy").UserConfig} UserConfig */
 
-/** @param {UserConfig} config */
-export default function getConfig(config) {
+/** @param {UserConfig} eleventyConfig */
+export default function getConfig(eleventyConfig) {
   const now = new Date();
+
   const markdown = markdownIt({
     html: true,
     linkify: true,
     typographer: true,
   });
-  config.setLibrary("md", markdown);
-  config.addPlugin(syntaxHighlight);
-  config.setLiquidOptions({
+  eleventyConfig.setLibrary("md", markdown);
+
+  eleventyConfig.addPlugin(syntaxHighlight);
+
+  eleventyConfig.setLiquidOptions({
     strictFilters: true,
   });
-  config.addPassthroughCopy({ "src/static": "/" });
 
-  config.addWatchTarget("./src/css/");
+  eleventyConfig.addPassthroughCopy({ "src/static": "/" });
+  eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg,jpeg,webp,svg}");
 
-  config.addPlugin(pluginRss);
+  eleventyConfig.addWatchTarget("./src/_css/");
 
-  config.addShortcode("renderThemes", function (themes) {
+  eleventyConfig.addPlugin(pluginRss);
+
+  eleventyConfig.addShortcode("renderThemes", function (themes) {
     let s = "";
     // Default theme (light mode)
     s += `:root {\n`;
     for (const [key, val] of Object.entries(themes.light)) {
-      s += `  --${key}: ${val};`;
+      s += `  --${key}: ${val};\n`;
     }
     s += `}\n`;
     s += `\n`;
@@ -38,7 +43,7 @@ export default function getConfig(config) {
     s += `@media (prefers-color-scheme: dark) {\n`;
     s += `  :root {\n`;
     for (const [key, val] of Object.entries(themes.dark)) {
-      s += `    --${key}: ${val};`;
+      s += `    --${key}: ${val};\n`;
     }
     s += `  }\n`;
     s += `}\n`;
@@ -47,7 +52,7 @@ export default function getConfig(config) {
     for (const [name, vars] of Object.entries(themes)) {
       s += `:root[data-theme="${name}"] {\n`;
       for (const [key, val] of Object.entries(vars)) {
-        s += `  --${key}: ${val};`;
+        s += `  --${key}: ${val};\n`;
       }
       s += `}\n`;
       s += `\n`;
@@ -55,7 +60,7 @@ export default function getConfig(config) {
     return s;
   });
 
-  config.addFilter("formatDate", function (value, format) {
+  eleventyConfig.addFilter("formatDate", function (value, format) {
     let isUTC = true;
     if (value === "now") {
       value = now;
@@ -67,12 +72,12 @@ export default function getConfig(config) {
     return dateformat(value, format, isUTC);
   });
 
-  config.addFilter("formatTitle", function (value) {
+  eleventyConfig.addFilter("formatTitle", function (value) {
     const base = "wavebeem";
     return [value, base].filter((x) => x).join(" - ");
   });
 
-  config.addFilter("take", function (array, count) {
+  eleventyConfig.addFilter("take", function (array, count) {
     return array.slice(0, count);
   });
 
@@ -82,7 +87,7 @@ export default function getConfig(config) {
     }
   }
 
-  config.addFilter("groupByYear", function (collection) {
+  eleventyConfig.addFilter("groupByYear", function (collection) {
     const map = new Map();
     for (const page of reversed(collection)) {
       const year = page.date.getFullYear();
@@ -96,24 +101,24 @@ export default function getConfig(config) {
     return Array.from(map.entries());
   });
 
-  config.addFilter("fallback", function (data, other) {
+  eleventyConfig.addFilter("fallback", function (data, other) {
     return data || other;
   });
 
-  config.addFilter("debug", function (data) {
+  eleventyConfig.addFilter("debug", function (data) {
     console.info(data);
     return "";
   });
 
-  config.addFilter("sort", function (data) {
+  eleventyConfig.addFilter("sort", function (data) {
     return [...data].sort((a, b) => a.localeCompare(b));
   });
 
-  config.addFilter("entries", function (data) {
+  eleventyConfig.addFilter("entries", function (data) {
     return Object.entries(data);
   });
 
-  config.addFilter("log", function (data) {
+  eleventyConfig.addFilter("log", function (data) {
     console.log(data);
     return data;
   });

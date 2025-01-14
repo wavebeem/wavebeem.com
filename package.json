@@ -21,7 +21,7 @@
     "url": "https://github.com/wavebeem/wavebeem.com/issues"
   },
   "homepage": "https://wavebeem.com",
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-cache-assets": "^2.3.0",
     "@11ty/eleventy-plugin-rss": "^2.0.2",

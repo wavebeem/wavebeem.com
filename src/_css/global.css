@@ -1,0 +1,514 @@
+::before,
+::after,
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  overflow-y: scroll;
+  color-scheme: light dark;
+  scrollbar-color: var(--color-text) var(--color-background);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-synthesis: none;
+}
+
+body {
+  /**
+   * Setting font size on body rather than html so that 1rem can refer to the
+   * user's specified font size anywhere in my CSS, rather than 1.25 times that
+   * value; but this way most things get bumped up a little bigger, for a
+   * slightly comfier to read site (since this is a blog, after all)
+   */
+  font-size: var(--font-size-base);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+a {
+  color: inherit;
+  border-radius: var(--rounded-small);
+  text-decoration-thickness: var(--link-underline-thickness);
+  text-underline-offset: var(--link-underline-offset);
+}
+
+a:hover {
+  text-decoration-line: underline;
+  --link-underline-thickness: var(--link-underline-thickness-hover);
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+h1 {
+  font-family: var(--font-cool);
+  font-size: var(--font-size-h1);
+  line-height: 1.25;
+  margin-block: 2rem 1rem;
+}
+
+h2 {
+  font-family: var(--font-cool);
+  font-size: var(--font-size-h2);
+  line-height: 1.25;
+  margin-block: 4rem 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dotted;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  line-height: 1.25;
+  margin-block: 4rem 2rem;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+  font-size: var(--font-size-code);
+  font-variant-ligatures: none;
+  overflow-x: auto;
+}
+
+:not(pre) > code {
+  text-decoration-style: dotted;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-position: under;
+}
+
+details {
+  margin: 1rem 0;
+}
+
+summary {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  border-bottom: 1px solid;
+  padding-bottom: 0.5rem;
+}
+
+summary:hover {
+  box-shadow: 0 1px 0 0 currentColor;
+}
+
+summary:focus-visible {
+  box-shadow: none;
+  border-color: transparent;
+  border-radius: var(--rounded-small);
+}
+
+.spoiler {
+  padding-inline: 0.25ch;
+  background-color: var(--color-text);
+  color: transparent;
+  cursor: default;
+}
+
+.spoiler:hover:where(:not(:focus)) {
+  opacity: 0.8;
+}
+
+.spoiler:focus {
+  color: var(--color-background);
+}
+
+.spoiler:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+
+.header {
+  font-size: var(--font-size-header);
+}
+
+.header .logo,
+.header :any-link {
+  font-weight: bold;
+  color: inherit;
+}
+
+.header .logo {
+  margin-left: -1rem;
+}
+
+.header .content-column {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  justify-content: space-between;
+  isolation: isolate;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+}
+
+.decorative-divider {
+  box-sizing: content-box;
+  height: 64px;
+  margin-block-end: 0;
+  --s: 64px; /* control the size*/
+  --c1: var(--color-background);
+  --c2: var(--color-text);
+
+  /* https://css-pattern.com/overlapping-circles/ */
+  --_g: var(--c1) 0% 5%, var(--c2) 8% 15%, var(--c1) 18% 25%, var(--c2) 28% 35%,
+    var(--c1) 38% 45%, var(--c2) 48% 55%, var(--c1) 58% 65%, var(--c2) 68% 75%,
+    var(--c1) 78% 85%, var(--c2) 88% 95%, #0000 98%;
+  background: radial-gradient(50% 50% at 100% 0, var(--_g)),
+    radial-gradient(50% 50% at 0 100%, var(--_g)),
+    radial-gradient(50% 50%, var(--_g)),
+    radial-gradient(50% 50%, var(--_g)) calc(var(--s) / 2) calc(var(--s) / 2)
+      var(--c1);
+  background-size: var(--s) var(--s);
+
+  /* Checkerboard */
+  /* background: repeating-conic-gradient(var(--c2) 0% 25%, var(--c1) 0% 50%) 50% /
+    64px 64px; */
+}
+
+blockquote,
+ul,
+ol,
+dl,
+p {
+  margin-block: 1.5rem;
+}
+
+ul {
+  padding-left: 3rem;
+  list-style-type: disc;
+}
+
+ol {
+  padding-left: 3rem;
+}
+
+:is(ul, ol) :is(ul, ol) {
+  margin-block: 0;
+}
+
+main {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+}
+
+article header :is(h1, h2, h3) {
+  margin-bottom: 0;
+}
+
+article header > small {
+  text-transform: uppercase;
+}
+
+article header small {
+  font-style: normal;
+  font-weight: normal;
+  font-size: var(--font-size-small);
+  vertical-align: middle;
+}
+
+article header p {
+  font-style: italic;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+  text-decoration-line: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-auto {
+  flex: auto;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.button,
+button {
+  font: inherit;
+  background-color: inherit;
+  color: inherit;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  border: 1px solid;
+  padding: 0.25rem 1.5rem;
+  border-radius: var(--rounded-small);
+  text-decoration-line: none;
+  text-decoration-thickness: var(--link-underline-thickness);
+}
+
+.button:hover,
+button:hover {
+  outline: 2px solid var(--color-text);
+  outline-offset: -1px;
+  text-decoration-line: none;
+}
+
+.button:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-text);
+  outline-offset: -2px;
+}
+
+body > header nav a {
+  display: flex;
+  gap: 0.5ch;
+  align-items: center;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  color: var(--color-header-text);
+  border-radius: var(--rounded-small);
+  text-decoration-line: none;
+  text-decoration-thickness: var(--link-underline-thickness);
+}
+
+body > header nav a:hover {
+  text-decoration-line: underline;
+}
+
+body > header nav {
+  gap: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  .header .content-column {
+    display: flex;
+    flex-direction: column;
+    padding-block: 0.5rem;
+  }
+
+  body > header nav {
+    margin-left: -1rem;
+  }
+}
+
+.content-column {
+  max-width: 800px;
+  width: 100%;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+main > .content-column {
+  padding-bottom: 4rem;
+}
+
+.grid2 {
+  display: grid;
+  gap: 0 1rem;
+}
+
+@media (min-width: 800px) {
+  .grid2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.gap1 {
+  gap: 0.25rem;
+}
+
+.gap2 {
+  gap: 0.5rem;
+}
+
+.gap3 {
+  gap: 1rem;
+}
+
+/* --- TOYBOX --- */
+
+.crime-frame {
+  border-radius: var(--rounded-small);
+  overflow: hidden;
+  position: relative;
+}
+
+.crime-frame :is(details, summary) {
+  margin: unset;
+}
+
+.crime-frame > details {
+  background: white;
+}
+
+.clearfix {
+  clear: both;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: currentColor;
+  color: inherit;
+  margin-block: 3rem;
+  position: relative;
+  overflow: visible;
+  max-width: 10ch;
+  margin-inline: auto;
+}
+
+hr::after {
+  content: "";
+  width: 16px;
+  aspect-ratio: 1;
+  flex: none;
+  border-radius: var(--rounded-pill);
+  background-color: var(--color-text);
+  border: 2px solid var(--color-background);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+}
+
+article p:has(> img),
+article figure {
+  margin-block: 1.5rem;
+  margin-inline: 0;
+}
+
+article figure img,
+article p img {
+  margin-inline: auto;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--rounded-small);
+}
+
+article figure figcaption {
+  margin-top: 1rem;
+  padding-inline: 0.5rem;
+  text-align: center;
+  font-size: var(--font-size-small);
+  font-weight: bold;
+}
+
+article figure figcaption small {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: var(--font-size-small);
+}
+
+article p:has(img:only-child) + p:has(> strong:only-child) {
+  margin-top: -0.5rem;
+  padding-inline: 0.5rem;
+  text-align: center;
+  font-size: var(--font-size-small);
+}
+
+article blockquote,
+article aside {
+  margin-inline: 0;
+  padding: 0rem 2rem;
+  border-left: 2px solid;
+}
+
+.pixelated {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
+}
+
+ol > li::marker {
+  font-weight: bold;
+}
+
+dl > dt {
+  font-weight: bold;
+}
+
+dl > dd {
+  margin: 0;
+}
+
+dl > dd + dt {
+  margin-top: 1.5rem;
+}
+
+.logo {
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-family: var(--font-logo);
+  /* Prevent Safari from making this even bolder lol */
+  font-synthesis: none;
+  font-weight: normal;
+  text-decoration-line: none;
+  text-transform: uppercase;
+}
+
+body > footer {
+  font-size: var(--font-size-small);
+}
+
+body > footer a {
+  padding: 0.5rem;
+  font-weight: bold;
+  text-decoration-line: none;
+}
+
+body > footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: -0.5rem;
+  gap: 0 1rem;
+}
+
+/* https://css-shape.com/rounded-edge/ */
+.footer-top {
+  background-color: var(--color-text);
+  clip-path: ellipse(65% 100% at 50% 100%);
+  padding-top: 3rem;
+  margin-top: 3rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+.print-only {
+  display: none;
+}

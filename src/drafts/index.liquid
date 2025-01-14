@@ -1,0 +1,27 @@
+---
+title: "Drafts"
+layout: "layout-base"
+override:tags: []
+---
+
+<article>
+  <header>
+    <h1>Drafts</h1>
+    <p>A secret area for my draft posts. Please don't share these.</p>
+  </header>
+
+  <hr />
+
+  <ul>
+    {% for post in collections.draft reversed %}
+    <li>
+      <p>
+        <a href="{{ post.url }}">
+          {{ post.fileSlug | escape }}
+        </a>
+      </p>
+    </li>
+    {% endfor %}
+  </ul>
+  {{ content }}
+</article>

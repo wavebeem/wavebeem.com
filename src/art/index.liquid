@@ -1,0 +1,26 @@
+---
+title: "Art"
+description: "A gallery for my art."
+layout: "layout-base"
+---
+<article>
+  <header>
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+  </header>
+
+  <div class="grid2">
+    {% for image in art.images reversed %}
+    <figure>
+      <a href="{{ image.path }}">
+        <img src="{{ image.path }}" alt="" />
+      </a>
+      <figcaption>
+        {{ image.title }}
+        <br />
+        <small>{% render "partials/date" date: image.date %}</small>
+      </figcaption>
+    </figure>
+    {% endfor %}
+  </div>
+</article>

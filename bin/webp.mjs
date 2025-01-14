@@ -4,6 +4,9 @@ import { chdir } from "node:process";
 import { Glob } from "glob";
 import { existsSync } from "node:fs";
 
+// TODO: Update this to work with images outside the Eleventy static directory.
+// Use extname and basename to avoid globbing repeatedly.
+
 async function main([flag]) {
   chdir("src/static");
 
