@@ -21,8 +21,11 @@ export const light = {
   // "color-background": oklch(99, 10, 152),
   // "color-text": oklch(45, 100, 152),
 
-  "color-background": "#fff",
-  "color-text": oklch(50, 100, 152),
+  // "color-background": "#fff",
+  // "color-text": oklch(50, 100, 152),
+
+  "color-background": oklch(89.5, 10.5, 152),
+  "color-text": "#222",
 
   "color-syntax-background": oklch(25, 0, 340),
   "color-syntax-text": oklch(90, 0, 340),
