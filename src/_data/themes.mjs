@@ -18,8 +18,11 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 }
 
 export const light = {
-  "color-background": oklch(99, 10, 152),
-  "color-text": oklch(45, 100, 152),
+  // "color-background": oklch(99, 10, 152),
+  // "color-text": oklch(45, 100, 152),
+
+  "color-background": "#fff",
+  "color-text": oklch(50, 100, 152),
 
   "color-syntax-background": oklch(25, 0, 340),
   "color-syntax-text": oklch(90, 0, 340),
@@ -28,6 +31,22 @@ export const light = {
   "color-syntax-property": oklch(80, 70, 250),
   "color-syntax-string": oklch(80, 50, 152),
   "color-syntax-punctuation": oklch(70, 15, 340),
+};
+
+export const light2 = {
+  "color-background": "#b4ddbf",
+  "color-text": "#222",
+};
+
+export const light3 = {
+  // "color-background": "#c9e5cf",
+  "color-background": oklch(89.5, 10.5, 152),
+  "color-text": "#222",
+};
+
+export const light4 = {
+  "color-background": "#fff",
+  "color-text": oklch(50, 100, 152),
 };
 
 export const dark = {
