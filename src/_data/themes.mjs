@@ -18,8 +18,14 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 }
 
 export const light = {
-  "color-background": oklch(99, 10, 152),
-  "color-text": oklch(45, 100, 152),
+  // "color-background": oklch(99, 10, 152),
+  // "color-text": oklch(45, 100, 152),
+
+  // "color-background": "#b4ddbf",
+  // "color-text": "#222",
+
+  "color-background": oklch(90, 10, 152),
+  "color-text": oklch(25, 0, 152),
 
   "color-syntax-background": oklch(25, 0, 340),
   "color-syntax-text": oklch(90, 0, 340),
@@ -31,8 +37,11 @@ export const light = {
 };
 
 export const dark = {
-  "color-text": oklch(90, 15, 152),
-  "color-background": oklch(40, 15, 152),
+  "color-text": oklch(100, 0, 152),
+  "color-background": oklch(40, 10, 152),
+
+  // "color-text": oklch(90, 15, 152),
+  // "color-background": oklch(40, 15, 152),
 };
 
 export const tufte = {

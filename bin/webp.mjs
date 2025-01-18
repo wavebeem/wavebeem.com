@@ -8,9 +8,9 @@ import { existsSync } from "node:fs";
 // Use extname and basename to avoid globbing repeatedly.
 
 async function main([flag]) {
-  chdir("src/static");
+  chdir("src");
 
-  const globDirs = ["art", "blog", "shrines", "design-history"];
+  const globDirs = ["past-designs", "blog", "drafts"];
   const globRoots = "{" + globDirs.join(",") + "}";
 
   for await (const file of new Glob(`${globRoots}/**/*.{png,gif}`, {})) {

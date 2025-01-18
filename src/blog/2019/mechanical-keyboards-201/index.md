@@ -349,11 +349,11 @@ have dedicated arrow keys, so you will need to program your keyboard to have
 arrow keys in a different way (many people use the Function key with WASD or
 IJKL).
 
-![](ansi60.png)
+![](ansi60.webp)
 
 **ANSI (US) 60% layout**
 
-![](iso60.png)
+![](iso60.webp)
 
 **ISO (European) 60% layout**
 
@@ -363,11 +363,11 @@ keys, so you have to hold down a function key in order to type those. This is my
 personal favorite kind, but be advised it will take a few weeks to get back up
 to good typing speed if you need to type a lot symbols or numbers.
 
-![](jd40.png)
+![](jd40.webp)
 
 **JD40 40% layout**
 
-![](zlant.png)
+![](zlant.webp)
 
 **Zlant 40% layout**
 
@@ -375,7 +375,7 @@ Ortholinear keyboards make the rows of keys all line up to form a perfect grid,
 instead of the jagged edge you see on most keyboards. There's no research
 showing if this has any benefits, but I personally think it's more comfortable.
 
-![](planck.png)
+![](planck.webp)
 
 **Planck 40% ortholinear layout**
 
@@ -383,11 +383,11 @@ Split keyboards are great for maintaining good posture and a healthy shoulder
 spread through your work day. They are harder to build, and there are few
 options, but many people never go back once trying them.
 
-![](ergodox.png)
+![](ergodox.webp)
 
 **Ergodox split layout**
 
-![](letssplit.png)
+![](letssplit.webp)
 
 **Let's Split split layout**
 

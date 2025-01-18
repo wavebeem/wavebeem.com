@@ -1,6 +1,7 @@
 wavebeem-easter-egg {
   --avatar-size: 180px;
   --avatar-padding: 0px;
+  --avatar-blend-mode: multiply;
   float: right;
   margin: 1rem;
   margin-right: 0;
@@ -18,6 +19,12 @@ wavebeem-easter-egg {
   /* touch-action: none; */
 }
 
+@media (prefers-color-scheme: dark) {
+  wavebeem-easter-egg {
+    --avatar-blend-mode: screen;
+  }
+}
+
 wavebeem-easter-egg[data-state="inside"] {
   background: transparent;
   border-color: transparent;
@@ -32,7 +39,7 @@ wavebeem-easter-egg img {
   width: var(--avatar-size);
   height: var(--avatar-size);
   filter: grayscale(1) contrast(1.5) brightness(0.9);
-  mix-blend-mode: luminosity;
+  mix-blend-mode: var(--avatar-blend-mode);
 }
 
 @media (prefers-reduced-motion: reduce), not (hover) {

@@ -1,4 +1,5 @@
 ---
+date: "2025-01-11"
 title: >-
   Video games roundup (2024)
 description: >-
