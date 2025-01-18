@@ -96,24 +96,40 @@ pre {
 
 details {
   margin: 1rem 0;
+  border-bottom: 1px solid;
+}
+
+details + details {
+  margin-top: -1rem;
 }
 
 summary {
   -webkit-user-select: none;
   user-select: none;
   cursor: default;
-  border-bottom: 1px solid;
-  padding-bottom: 0.5rem;
+  padding-block: 1rem;
 }
 
 summary:hover {
-  box-shadow: 0 1px 0 0 currentColor;
+  border-radius: var(--rounded-small);
+  box-shadow: 0 0 0 2px currentColor;
+}
+
+summary:active {
+  outline-offset: -1px;
+  outline: 3px solid;
+  border-radius: var(--rounded-small);
 }
 
 summary:focus-visible {
   box-shadow: none;
-  border-color: transparent;
+  outline-offset: 0px;
+  outline-width: 3px;
   border-radius: var(--rounded-small);
+}
+
+details[open] > summary {
+  margin-bottom: -1rem;
 }
 
 .spoiler {
@@ -180,7 +196,8 @@ summary:focus-visible {
 
   /* Checkerboard */
   /* background: repeating-conic-gradient(var(--c2) 0% 25%, var(--c1) 0% 50%) 50% /
-    64px 64px; */
+    64px 64px;
+  border-block: 4px solid; */
 }
 
 blockquote,
@@ -231,7 +248,7 @@ article header p {
 }
 
 :focus-visible {
-  outline: 2px solid currentColor;
+  outline: 3px solid currentColor;
   outline-offset: 2px;
   text-decoration-line: none;
 }
@@ -279,10 +296,16 @@ button:hover {
   text-decoration-line: none;
 }
 
+.button:active,
+button:active {
+  outline: 3px solid var(--color-text);
+  outline-offset: -2px;
+}
+
 .button:focus-visible,
 button:focus-visible {
   outline: 3px solid var(--color-text);
-  outline-offset: -2px;
+  outline-offset: -1px;
 }
 
 body > header nav a {
