@@ -111,14 +111,11 @@ summary {
 }
 
 summary:hover {
-  border-radius: var(--rounded-small);
-  box-shadow: 0 0 0 2px currentColor;
+  box-shadow: 0 2px 0 0 currentColor;
 }
 
 summary:active {
-  outline-offset: -1px;
-  outline: 3px solid;
-  border-radius: var(--rounded-small);
+  box-shadow: 0 3px 0 0 currentColor;
 }
 
 summary:focus-visible {
