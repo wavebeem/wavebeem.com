@@ -20,7 +20,7 @@
   --rounded-pill: 9999px;
 
   --link-underline-offset: calc(1em / 6);
-  --link-underline-thickness: calc(1em / 12);
+  --link-underline-thickness: 1.5px;
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 1px);
 }
 
