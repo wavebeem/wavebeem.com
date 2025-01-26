@@ -419,19 +419,21 @@ hr::after {
   translate: -50% -50%;
 }
 
+article p:has(> video),
 article p:has(> img),
 article figure {
   margin-block: 1.5rem;
   margin-inline: 0;
 }
 
+article p video,
 article figure img,
 article p img {
   margin-inline: auto;
   width: 100%;
   height: auto;
   display: block;
-  border-radius: var(--rounded-small);
+  border-radius: var(--rounded-large);
 }
 
 article figure figcaption {
@@ -448,6 +450,7 @@ article figure figcaption small {
   font-size: var(--font-size-small);
 }
 
+article p:has(video:only-child) + p:has(> strong:only-child),
 article p:has(img:only-child) + p:has(> strong:only-child) {
   margin-top: -0.5rem;
   padding-inline: 0.5rem;

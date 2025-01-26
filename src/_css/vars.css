@@ -17,6 +17,7 @@
 
   --rounded-none: 0px;
   --rounded-small: 3px;
+  --rounded-large: 16px;
   --rounded-pill: 9999px;
 
   --link-underline-offset: calc(1em / 6);
