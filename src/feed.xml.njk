@@ -36,10 +36,10 @@
   {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.base)}}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
-    <link href="{{ absolutePostUrl }}" />
+    <link href="{{ absolutePostUrl }}" rel="alternate" />
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.content }}</content>
+    <summary>{{ post.data.description }}</summary>
   </entry>
   {%- endfor %}
 </feed>
