@@ -18,7 +18,27 @@ async function main([flag]) {
       const dest = `${base}.webp`;
       if (flag === "force" || !existsSync(dest)) {
         console.log(file);
-        spawnSync("magick", [file, "-quality", "100", dest]);
+        if (base.endsWith(".vg")) {
+          spawnSync("magick", [
+            file,
+            "-resize",
+            "768x432>",
+            "-quality",
+            "80",
+            dest,
+          ]);
+        } else if (base.endsWith(".pxl")) {
+          spawnSync("magick", [
+            file,
+            "-resize",
+            "768x432>",
+            "-quality",
+            "100",
+            dest,
+          ]);
+        } else {
+          spawnSync("magick", [file, "-quality", "100", dest]);
+        }
       }
     }
   }
