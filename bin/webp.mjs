@@ -22,7 +22,7 @@ async function main([flag]) {
           spawnSync("magick", [
             file,
             "-resize",
-            "768x432>",
+            "1280x720>",
             "-quality",
             "80",
             dest,
@@ -31,7 +31,7 @@ async function main([flag]) {
           spawnSync("magick", [
             file,
             "-resize",
-            "768x432>",
+            "1280x720>",
             "-quality",
             "100",
             dest,
