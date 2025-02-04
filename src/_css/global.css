@@ -207,6 +207,11 @@ p {
   margin-block: 1.5rem;
 }
 
+p,
+blockquote {
+  max-width: 60ch;
+}
+
 ul {
   padding-left: 3rem;
   list-style-type: disc;
@@ -340,7 +345,7 @@ body > header nav {
 }
 
 .content-column {
-  max-width: 800px;
+  max-width: 1024px;
   width: 100%;
   margin-inline: auto;
   padding: 1rem;
@@ -438,8 +443,6 @@ article p img {
 
 article figure figcaption {
   margin-top: 1rem;
-  padding-inline: 0.5rem;
-  text-align: center;
   font-size: var(--font-size-small);
   font-weight: bold;
 }
@@ -453,8 +456,6 @@ article figure figcaption small {
 article p:has(video:only-child) + p:has(> strong:only-child),
 article p:has(img:only-child) + p:has(> strong:only-child) {
   margin-top: -0.5rem;
-  padding-inline: 0.5rem;
-  text-align: center;
   font-size: var(--font-size-small);
 }
 

@@ -1,7 +1,7 @@
 ---
 date: "2025-01-25"
 title: >-
-  Review: Goodboy Galaxy (2023)
+  Review: Goodboy Galaxy (2024)
 description: >-
   This game is extremely cute and oozing with style, but I also got a little
   annoyed in the home stretch
