@@ -34,7 +34,7 @@ frame-ancestors
 """
 
 [[redirects]]
-from = "http://mockbrian.com/*"
+from = "https://mockbrian.com/*"
 to = "https://www.wavebeem.com/:splat"
 status = 307
 force = true
@@ -42,12 +42,6 @@ force = true
 [[redirects]]
 from = "https://www.mockbrian.com/*"
 to = "https://www.wavebeem.com/:splat"
-status = 307
-force = true
-
-[[redirects]]
-from = "http://blog.mockbrian.com/*"
-to = "https://www.wavebeem.com/blog/:splat"
 status = 307
 force = true
 
