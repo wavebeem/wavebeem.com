@@ -1,4 +1,5 @@
 ---
+date: "2025-02-03"
 title: >-
   Review: Cobalt Core (2023)
 description: >-
@@ -27,7 +28,9 @@ the NVIDIA Control Panel to set a framerate limit lol.
 <video src="./gameplay.mp4" width="1280" height="720" controls preload></video>
 
 **A short gameplay example. I wasn't trying very hard, I just wanted to go fast.
-Love the music.**
+Love the music. Also, for some reason, the cursor is really laggy. Seems like an
+issue with Steam video recording. I was having problems using Windows Game Bar,
+my normal method for screenshots and clips.**
 
 I've been told this game is pretty heavily inspired by Slay the Spire (yeah, I
 still haven't played it... it's on sale and I just bought it, ok?). You build a
@@ -63,11 +66,11 @@ endear me to the characters when I wasn't getting more direct story moments
 
 **Riggs has the best writing and is my favorite character in the game**
 
-The game tells the story of a crew of 3 furries trapped in a time loop. You
-don't get a lot of details at first, but you unlock moore of the story as you
-complete loops and unlock memories. Sometimes memories carry over between loops,
-which can get funny. One character frequently meets an alternative version of
-themselves, which is one of my favorite story aspects of the game.
+The game tells the story of a space ship crew of furries trapped in a time loop.
+You don't get a lot of details at first, but you unlock moore of the story as
+you complete loops and unlock memories. Sometimes memories carry over between
+loops, which can get funny. One character frequently meets an alternative
+version of themselves, which is one of my favorite story aspects of the game.
 
 ![](./isaac.pxl.webp)
 
@@ -114,8 +117,8 @@ unique "battle" mechanic**
 ## Replay value
 
 I'm not in the mood for it, but the game has "daily challenges". I can see these
-being a fanastic way to keep the game fresh. If I wasn't rushing off to play new
-games, I might give it a shot.
+being a fanastic way to keep the game fresh. If I wasn't rushing off to play
+other games, I might give it a shot.
 
 ## Conclusion
 

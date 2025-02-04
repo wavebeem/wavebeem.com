@@ -39,7 +39,11 @@
     <link href="{{ absolutePostUrl }}" rel="alternate" />
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <summary>{{ post.data.description }}</summary>
+    <summary>
+      {{ post.data.description }}
+
+      [Read more...]
+    </summary>
   </entry>
   {%- endfor %}
 </feed>
