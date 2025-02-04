@@ -40,9 +40,7 @@
     <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <summary>
-      {{ post.data.description }}
-
-      [Read more...]
+      Description: {{ post.data.description }} [...]
     </summary>
   </entry>
   {%- endfor %}
