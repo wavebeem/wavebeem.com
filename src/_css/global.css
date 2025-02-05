@@ -209,7 +209,8 @@ p {
 
 p,
 blockquote {
-  max-width: 60ch;
+  /* Roughly 50 or 60 characters wide */
+  max-width: 800px;
 }
 
 ul {
@@ -345,7 +346,7 @@ body > header nav {
 }
 
 .content-column {
-  max-width: 1024px;
+  max-width: 800px;
   width: 100%;
   margin-inline: auto;
   padding: 1rem;
@@ -381,7 +382,7 @@ main > .content-column {
 /* --- TOYBOX --- */
 
 .crime-frame {
-  border-radius: var(--rounded-small);
+  border-radius: var(--rounded-large);
   overflow: hidden;
   position: relative;
 }
@@ -434,11 +435,17 @@ article figure {
 article p video,
 article figure img,
 article p img {
-  margin-inline: auto;
-  width: 100%;
+  /* margin-inline: auto; */
+  /* width: 800px; */
+  max-width: 100%;
   height: auto;
+  /* max-height: 50vh; */
   display: block;
   border-radius: var(--rounded-large);
+}
+
+article .grid2 figure img {
+  width: 100%;
 }
 
 article figure figcaption {
@@ -453,8 +460,13 @@ article figure figcaption small {
   font-size: var(--font-size-small);
 }
 
-article p:has(video:only-child) + p:has(> strong:only-child),
-article p:has(img:only-child) + p:has(> strong:only-child) {
+article p:has(:is(img, video, picture):only-child) {
+  max-width: initial;
+}
+
+article
+  p:has(:is(video, img, picture):only-child)
+  + p:has(> strong:only-child) {
   margin-top: -0.5rem;
   font-size: var(--font-size-small);
 }
