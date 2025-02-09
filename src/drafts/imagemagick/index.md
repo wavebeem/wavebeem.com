@@ -76,10 +76,8 @@ magick -delay 100 sprite-1.png sprite-2.png sprite-3.png animated.webp
 
 ![](./3.webp)
 
-By default the delay is 0, and 100 means 1 second of delay. I imagine these
-units were chosen since GIF images specify their frame delays in centiseconds
-(100 centiseconds = 1 second), so 1 centisecond is the lowest delay value you
-can use there.
+By default the delay is 0, and 100 means 1 second of delay. This lines up with
+the GIF format using centiseconds as the frame delay value.
 
 ## Make a favicon.ico
 
@@ -115,11 +113,11 @@ $ magick INPUT.png -strip OUTPUT.png
 
 ## Make a script!
 
-I'll admit that these commands get a bit tedious to write these commands
-repeatedly. I think these tips are best paired with a script to process images
-for you. I usually write a bash script or Node.js script. I could write an
-entire blog post about scripting techniques, but I don't want to right now, so
-just take this example and do your own research.
+Writing these commands repeatedly can get tedious, so I think these tips are
+best paired with a script to process images for you. I usually write a bash
+script or Node.js script. I could write an entire blog post about scripting
+techniques, but I don't want to right now, so just take this example and do your
+own research.
 
 **bash**
 
