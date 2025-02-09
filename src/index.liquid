@@ -54,7 +54,7 @@ layout: "layout-base"
   <h2>Other pages</h2>
 
   <div class="flex flex-wrap gap2">
-    {% for item in menu.all %}
+    {% for item in menu.more %}
     <a class="button" href="{{ item.url }}">{{ item.title | escape }}</a> {%
     endfor %}
   </div>

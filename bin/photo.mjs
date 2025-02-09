@@ -5,7 +5,12 @@ import { chdir } from "node:process";
 async function main([flag]) {
   chdir("src");
   for (const size of [180, 360]) {
-    spawnSync("magick", ["photo.webp", "-resize", size, `photo-${size}.webp`]);
+    const x = spawnSync("magick", [
+      "photo.webp",
+      "-resize",
+      size,
+      `photo-${size}.webp`,
+    ]);
   }
 }
 

@@ -66,19 +66,21 @@ h3 {
 
 h1 {
   font-size: var(--font-size-h1);
-  margin-block: 2rem 1rem;
+  margin-block: 2rem 1.5rem;
 }
 
 h2 {
   font-size: var(--font-size-h2);
-  margin-block: 4rem 2rem;
+  margin-block: 4rem 1.5rem;
   padding-bottom: 1rem;
   border-bottom: 1px dotted;
 }
 
 h3 {
+  font-weight: bold;
+  font-family: inherit;
   font-size: var(--font-size-h3);
-  margin-block: 4rem 2rem;
+  margin-block: 4rem 1.5rem;
 }
 
 code,
@@ -193,6 +195,8 @@ details[open] > summary {
       var(--c1);
   background-size: var(--s) var(--s);
 
+  opacity: 0.75;
+
   /* Checkerboard */
   /* background: repeating-conic-gradient(var(--c2) 0% 25%, var(--c1) 0% 50%) 50% /
     64px 64px;
@@ -238,7 +242,8 @@ article header :is(h1, h2, h3) {
 }
 
 article header > small {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+  opacity: 0.75;
 }
 
 article header small {
@@ -246,6 +251,7 @@ article header small {
   font-weight: normal;
   font-size: var(--font-size-small);
   vertical-align: middle;
+  opacity: 0.75;
 }
 
 :focus-visible {
@@ -432,9 +438,7 @@ article figure {
   margin-inline: 0;
 }
 
-article p video,
-article figure img,
-article p img {
+article :is(p, figure) :is(img, video) {
   /* margin-inline: auto; */
   /* width: 800px; */
   max-width: 100%;
@@ -456,8 +460,9 @@ article figure figcaption {
 
 article figure figcaption small {
   font-weight: normal;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-size: var(--font-size-small);
+  opacity: 0.75;
 }
 
 article p:has(:is(img, video, picture):only-child) {

@@ -7,8 +7,8 @@
   --font-logo: "Ultra Hi-Gloss", var(--font-fallback-main);
   --font-mono: "JetBrains Mono", var(--font-fallback-mono);
 
-  --font-size-h1: 4.5rem;
-  --font-size-h2: 3rem;
+  --font-size-h1: 4rem;
+  --font-size-h2: 2.5rem;
   --font-size-h3: 2rem;
   --font-size-header: 1.25rem;
   --font-size-base: 1.25rem;
@@ -16,7 +16,7 @@
   --font-size-code: 1rem;
 
   --rounded-none: 0px;
-  --rounded-small: 3px;
+  --rounded-small: 6px;
   --rounded-large: 16px;
   --rounded-pill: 9999px;
 

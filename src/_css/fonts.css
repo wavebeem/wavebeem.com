@@ -1,6 +1,7 @@
 @font-face {
   font-family: "PP Editorial New";
-  src: url("/fonts/PPEditorialNew-Regular.woff2") format("woff2");
+  src: url("/fonts/PPEditorialNew-Bold.woff2") format("woff2");
+  font-weight: bold;
   font-display: swap;
 }
 
