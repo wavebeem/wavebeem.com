@@ -27,7 +27,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0;
-  hyphens: auto;
 }
 
 a {
@@ -55,6 +54,7 @@ h4,
 h5,
 h6 {
   text-wrap: balance;
+  hyphens: auto;
 }
 
 h1,
