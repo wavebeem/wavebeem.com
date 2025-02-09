@@ -10,8 +10,9 @@ description: >-
 
 ## How to install ImageMagick
 
-You can look at the official documentation or run one of the following commands,
-based on your operating system.
+You can look at the
+[official documentation](https://imagemagick.org/script/download.php) or run one
+of the following commands, based on your operating system.
 
 ```sh
 # Windows
@@ -20,7 +21,8 @@ $ winget install ImageMagick.ImageMagick
 # macOS
 $ brew install imagemagick
 
-# Linnux or WSL
+# Linux (Ubuntu)
+# Windows Subsystem for Linux (Ubuntu)
 $ sudo apt install imagemagick
 ```
 
@@ -166,19 +168,25 @@ ImageMagick has an
 [absurd amount of commands](https://imagemagick.org/script/command-line-options.php).
 Here's a small sample:
 
-- `-flip` (mirror upside-down)
-- `-flop` (mirror side-to-side)
-- `-trim` (remove a solid colored border around an image)
-- `-crop` (crop the image)
-- `-append` (join two images top-to-bottom)
-- `+append` (join two images side-by-side)
+- `-flip` &rarr; mirror upside-down
 
-ImageMagick also lets you use a special filename `logo:` which is the
+- `-flop` &rarr; mirror side-to-side
+
+- `-trim` &rarr; remove a solid colored border around an image
+
+- `-crop` &rarr; crop the image
+
+- `-append` &rarr; join two images top-to-bottom
+
+- `+append` &rarr; join two images side-by-side
+
+ImageMagick also lets you use a special filename `magick:logo` which is the
 ImageMagick logo. This is useful if you want to test commands without having an
-image ready to use. There's also `rose:` for an image of a rose.
+image ready to use. There's also a few other
+[built-in images](https://imagemagick.org/script/formats.php) you can use.
 
 ```sh
-$ magick logo: -fill "#ff0000" -tint 50 red-logo.png
+$ magick magick:logo -fill "#ff0000" -tint 50 red-logo.png
 ```
 
 To open the file in your preferred image viewer:

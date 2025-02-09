@@ -1,6 +1,6 @@
 article pre {
   border-radius: var(--rounded-small);
-  margin-block: 1rem;
+  margin-block: 1.5rem;
   margin-inline: 0;
   padding: 1rem;
 
@@ -13,7 +13,6 @@ article pre {
 @media (max-width: 800px) {
   article pre {
     border-radius: var(--rounded-none);
-    margin-block: 1rem;
     margin-inline: -1rem;
     padding: 1rem;
   }
