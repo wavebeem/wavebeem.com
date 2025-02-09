@@ -243,7 +243,6 @@ article header :is(h1, h2, h3) {
 }
 
 article header > small {
-  /* text-transform: uppercase; */
   opacity: 0.75;
 }
 
@@ -461,7 +460,6 @@ article figure figcaption {
 
 article figure figcaption small {
   font-weight: normal;
-  /* text-transform: uppercase; */
   font-size: var(--font-size-small);
   opacity: 0.75;
 }
@@ -528,10 +526,10 @@ body > footer a {
 }
 
 body > footer nav {
-  display: flex;
-  flex-wrap: wrap;
   margin-inline: -0.5rem;
-  gap: 0 1rem;
+  gap: 0.5rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12ch, 1fr));
 }
 
 /* https://css-shape.com/rounded-edge/ */

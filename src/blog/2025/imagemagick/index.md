@@ -1,7 +1,7 @@
 ---
+date: "2025-02-09"
 title: >-
-  Automate image manipulation with ImageMagick
-
+  Image manipulation with ImageMagick
 description: >-
   ImageMagick is one of the best tools I've ever used for automating image
   manipulation. This post explains some of my common use cases, and links to
@@ -64,16 +64,16 @@ Even though a 200% image is two times the size of the input, if it's pixel art,
 it will barely be any larger as a WebP files. Upscaling pixel art to a large
 size tends to be one of the best ways to retain its visual clarity.
 
-## Make an animated image from multiple still images
+## Making an animated image
 
 ```sh
-magick -delay 100 sprite-1.png sprite-2.png sprite-3.png animated.gif
+magick -delay 100 f-1.png f-2.png f-3.png animated.gif
 ```
 
 WebP also supports animation:
 
 ```sh
-magick -delay 100 sprite-1.png sprite-2.png sprite-3.png animated.webp
+magick -delay 100 f-1.png f-2.png f-3.png animated.webp
 ```
 
 ![](./3.webp)
@@ -81,7 +81,7 @@ magick -delay 100 sprite-1.png sprite-2.png sprite-3.png animated.webp
 By default the delay is 0, and 100 means 1 second of delay. This lines up with
 the GIF format using centiseconds as the frame delay value.
 
-## Make a favicon.ico
+## Making a favicon.ico
 
 ```sh
 magick favicon-16.png favicon-32.png favicon-192.png favicon.ico
@@ -90,7 +90,7 @@ magick favicon-16.png favicon-32.png favicon-192.png favicon.ico
 favicon.ico is just a collection of images put in one file, and ImageMagick will
 automatically put all the images together for you.
 
-## Update image instead of making a copy
+## Updating an image instead of making a copy
 
 **Note:** Make sure to make a copy of your images before doing this, or use
 version control so you can restore changes if you mess up.
@@ -101,7 +101,7 @@ $ magick mogrify -scale '200%' *.png
 
 This replace all PNG files with an upscaled version in the current directory.
 
-## Remove image metadata
+## Removing image metadata
 
 This will remove image metadata, which can include sensitive info like GPS
 coordinates. Some images metadata is useful, though, so this isn't always an
@@ -113,7 +113,7 @@ $ magick mogrify -strip INPUT.png
 $ magick INPUT.png -strip OUTPUT.png
 ```
 
-## Make a script!
+## Making a script
 
 Writing these commands repeatedly can get tedious, so I think these tips are
 best paired with a script to process images for you. I usually write a bash
@@ -158,9 +158,8 @@ main(process.argv.slice(2));
 ```
 
 It doesn't support as many options, but if you're using JS then you might prefer
-[sharp](https://sharp.pixelplumbing.com/) since it can be installed through
-`npm` and has TypeScript definitions so you can better integrate it into your
-code.
+[sharp](https://sharp.pixelplumbing.com/) since it can be installed through npm
+and has TypeScript definitions so you can better integrate it into your code.
 
 ## The sky's the limit
 
@@ -168,17 +167,17 @@ ImageMagick has an
 [absurd amount of commands](https://imagemagick.org/script/command-line-options.php).
 Here's a small sample:
 
-- `-flip` &rarr; mirror upside-down
+- `-flip` &rarr; **mirror upside-down**
 
-- `-flop` &rarr; mirror side-to-side
+- `-flop` &rarr; **mirror side-to-side**
 
-- `-trim` &rarr; remove a solid colored border around an image
+- `-trim` &rarr; **remove a solid colored border around an image**
 
-- `-crop` &rarr; crop the image
+- `-crop` &rarr; **crop the image**
 
-- `-append` &rarr; join two images top-to-bottom
+- `-append` &rarr; **join two images top-to-bottom**
 
-- `+append` &rarr; join two images side-by-side
+- `+append` &rarr; **join two images side-by-side**
 
 ImageMagick also lets you use a special filename `magick:logo` which is the
 ImageMagick logo. This is useful if you want to test commands without having an
