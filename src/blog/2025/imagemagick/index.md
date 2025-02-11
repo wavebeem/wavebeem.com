@@ -20,11 +20,17 @@ $ winget install ImageMagick.ImageMagick
 
 # macOS
 $ brew install imagemagick
-
-# Linux (Ubuntu)
-# Windows Subsystem for Linux (Ubuntu)
-$ sudo apt install imagemagick
 ```
+
+### A note about Linux
+
+Ubuntu and Debian provide `imagemagick` packages for version 6, despite the fact
+that version 7 came out almost 10 years ago. Fedora and Arch Linux both provide
+packages for version 7.
+
+For simple commands, you can substitute `magick` with `convert` and
+`magick mogrify` with `mogrify` to convert a version 7 command to a version 6
+command, but I suggest installing an up to date version if possible.
 
 ## Creating WebP images for your website
 
@@ -46,6 +52,9 @@ Be sure to include `-quality 100` when converting PNG files that contain flat
 colors or pixel art, since the default with ImageMagick's WebP conversion is to
 use _lossy_ encoding for WebP files. You can simply omit the quality flag to get
 the default quality, or supply any number you want from 1 to 100.
+
+[WebP has a massive list of options](https://imagemagick.org/script/webp.php) in
+ImageMagick if you want even more contorl over the output.
 
 ## Upscaling pixel art
 
@@ -193,9 +202,6 @@ To open the file in your preferred image viewer:
 ```sh
 # Windows
 $ start FILENAME
-
-# Windows Subsytem for Linux
-$ start.exe FILENAME
 
 # macOS
 $ open FILENAME
