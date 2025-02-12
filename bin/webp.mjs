@@ -1,8 +1,7 @@
 #!/usr/bin/env node
-import { spawnSync } from "node:child_process";
-import { chdir } from "node:process";
 import { Glob } from "glob";
 import { existsSync } from "node:fs";
+import { run, chdir, match } from "./_util.mjs";
 
 // TODO: Update this to work with images outside the Eleventy static directory.
 // Use extname and basename to avoid globbing repeatedly.
@@ -19,25 +18,27 @@ async function main([flag]) {
       if (flag === "force" || !existsSync(dest)) {
         console.log(file);
         if (base.endsWith(".vg")) {
-          spawnSync("magick", [
+          await run(
+            "magick",
             file,
             "-resize",
             "1280x720>",
             "-quality",
             "80",
-            dest,
-          ]);
+            dest
+          );
         } else if (base.endsWith(".pxl")) {
-          spawnSync("magick", [
+          await run(
+            "magick",
             file,
             "-resize",
             "1280x720>",
             "-quality",
             "100",
-            dest,
-          ]);
+            dest
+          );
         } else {
-          spawnSync("magick", [file, "-quality", "100", dest]);
+          await run("magick", file, "-quality", "100", dest);
         }
       }
     }
@@ -48,16 +49,9 @@ async function main([flag]) {
       const dest = `${base}.webp`;
       if (flag === "force" || !existsSync(dest)) {
         console.log(file);
-        spawnSync("magick", [file, "-resize", "800>", dest]);
+        await run("magick", file, "-resize", "800>", dest);
       }
     }
-  }
-}
-
-function* match(string, regexp) {
-  const m = string.match(regexp);
-  if (m) {
-    yield m;
   }
 }
 
