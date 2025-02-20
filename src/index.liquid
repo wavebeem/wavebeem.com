@@ -50,12 +50,4 @@ layout: "layout-base"
     <p>{{ post.data.description | escape }}</p>
   </article>
   {% endfor %}
-
-  <h2>Other pages</h2>
-
-  <div class="flex flex-wrap gap2">
-    {% for item in menu.more %}
-    <a class="button" href="{{ item.url }}">{{ item.title | escape }}</a> {%
-    endfor %}
-  </div>
 </article>
