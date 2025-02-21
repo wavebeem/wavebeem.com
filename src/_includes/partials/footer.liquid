@@ -1,16 +1,9 @@
-<div class="decorative-divider"></div>
 <footer>
-  <nav>
-    {% for item in menu.all %}
-    <a href="{{ item.url }}">{{ item.title }}</a>
-    {% endfor %}
-  </nav>
-
-  <br />
-
+  <div aria-hidden="true" role="separator"></div>
   <div>
-    <small
-      >&copy; {{ "now" | formatDate : "yyyy" }} Sage Fennel</small
-    >
+    &copy; {{ "now" | formatDate : "yyyy" }} Sage Fennel
+  </div>
+  <div>
+    <a href="#" class="button"><strong>Back to top</strong></a>
   </div>
 </footer>

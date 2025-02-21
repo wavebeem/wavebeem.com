@@ -111,7 +111,7 @@ summary {
   -webkit-user-select: none;
   user-select: none;
   cursor: default;
-  padding-block: 1rem;
+  padding-block: 0.5rem;
 }
 
 summary:hover {
@@ -195,7 +195,9 @@ details[open] > summary {
       var(--c1);
   background-size: var(--s) var(--s);
 
-  opacity: 0.75;
+  opacity: 0.5;
+
+  /* background-attachment: fixed; */
 
   /* Checkerboard */
   /* background: repeating-conic-gradient(var(--c2) 0% 25%, var(--c1) 0% 50%) 50% /
@@ -209,11 +211,6 @@ ol,
 dl,
 p {
   margin-block: 1.5rem;
-}
-
-p,
-blockquote {
-  /* Roughly 50 or 60 characters wide */
   max-width: 800px;
 }
 
@@ -319,6 +316,26 @@ button:focus-visible {
   outline-offset: -1px;
 }
 
+body > footer {
+  /* text-align: center; */
+  padding: 1rem;
+  grid-area: footer;
+  font-size: var(--font-size-small);
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+body > footer > [role="separator"] {
+  /* text-align: center; */
+  /* font-weight: bold;
+  font-size: var(--font-size-h3); */
+  border-top: 2px solid;
+  width: 100%;
+  margin-block: 2rem;
+}
+
 body > header nav a {
   display: flex;
   gap: 0.5ch;
@@ -341,12 +358,6 @@ body > header nav {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-}
-
-@media (max-width: 800px) {
-  body > header nav {
-    margin-left: -1rem;
-  }
 }
 
 .grid2 {
@@ -396,7 +407,8 @@ hr {
   border: 0;
   height: 1px;
   background: currentColor;
-  margin-inline: 0;
+  max-width: 200px;
+  margin-inline: auto;
   color: inherit;
   margin-block: 3rem;
   position: relative;
@@ -501,17 +513,16 @@ dl > dd + dt {
   text-transform: uppercase;
 }
 
-body > footer {
+body > header nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   padding: 1rem;
-  font-size: var(--font-size-small);
+  gap: 0;
 }
 
-body > footer nav {
-  gap: 0rem 2rem;
-  display: grid;
-}
-
-body > footer nav a {
+body > header nav a {
   padding: 0.5rem;
   font-weight: bold;
   text-decoration-line: none;
@@ -520,7 +531,7 @@ body > footer nav a {
   padding-inline: 0;
 }
 
-body > footer nav a:hover {
+body > header nav a:hover {
   border-bottom-style: solid;
   text-decoration-line: none;
 }
@@ -528,25 +539,31 @@ body > footer nav a:hover {
 @media (min-width: 1024px) {
   body {
     display: grid;
-    grid-template-columns: 200px 64px 1fr;
-    grid-template-rows: min-content 1fr;
+    grid-template-columns: max-content 64px 1fr;
     grid-template-areas:
       "header divider main"
-      "footer divider main";
+      "header divider footer";
     max-width: 1280px;
     margin-inline: auto;
+    align-items: flex-start;
+  }
+
+  body > header {
+    position: sticky;
+    top: 0;
   }
 
   main {
     padding: 2rem;
+    grid-area: main;
+  }
+
+  body > footer {
+    padding-inline: 2rem;
   }
 
   body > header {
     grid-area: header;
-  }
-
-  body > header nav {
-    display: none;
   }
 
   body > header + .decorative-divider {
@@ -556,10 +573,6 @@ body > footer nav a:hover {
 
   body > .decorative-divider:has(+ footer) {
     display: none;
-  }
-
-  main {
-    grid-area: main;
   }
 }
 

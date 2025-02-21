@@ -1,4 +1,9 @@
 <header class="header screen-only">
   <a href="/" class="logo">wavebeem</a>
+  <nav>
+    {% for item in menu.all %}
+    <a href="{{ item.url }}">{{ item.title }}</a>
+    {% endfor %}
+  </nav>
 </header>
 <div class="decorative-divider"></div>
