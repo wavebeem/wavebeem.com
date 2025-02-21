@@ -73,7 +73,7 @@ h2 {
   font-size: var(--font-size-h2);
   margin-block: 4rem 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px dotted;
+  border-bottom: 2px solid;
 }
 
 h3 {
@@ -163,7 +163,7 @@ details[open] > summary {
 
 .logo,
 .header :any-link {
-  font-weight: bold;
+  /* font-weight: bold; */
   color: inherit;
 }
 
@@ -337,6 +337,7 @@ body > footer > [role="separator"] {
 }
 
 body > header nav a {
+  font-size: var(--font-size-small);
   display: flex;
   gap: 0.5ch;
   align-items: center;
@@ -522,9 +523,28 @@ body > header nav {
   gap: 0;
 }
 
+body > header nav dt {
+  padding: 0.5rem 0;
+  font-family: var(--font-cool);
+}
+
+body > header nav dl {
+  margin: 0;
+}
+
+body > header nav dt {
+  border-bottom: 2px solid;
+}
+
+body > header nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 body > header nav a {
   padding: 0.5rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   text-decoration-line: none;
   border-bottom: 1px dotted;
   border-radius: 0;
@@ -546,11 +566,6 @@ body > header nav a:hover {
     max-width: 1280px;
     margin-inline: auto;
     align-items: flex-start;
-  }
-
-  body > header {
-    position: sticky;
-    top: 0;
   }
 
   main {

@@ -1,9 +1,41 @@
 <header class="header screen-only">
   <a href="/" class="logo">wavebeem</a>
   <nav>
-    {% for item in menu.all %}
-    <a href="{{ item.url }}">{{ item.title }}</a>
-    {% endfor %}
+    <dl>
+      <dt>Main</dt>
+      <dd>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/art/">Art</a></li>
+        </ul>
+      </dd>
+      <dt>Other</dt>
+      <dd>
+        <ul>
+          <li><a href="/resume/">Resume</a></li>
+          <li><a href="/links/">Links</a></li>
+          <li><a href="/contact/">Contact info</a></li>
+        </ul>
+      </dd>
+      <dt>Fun</dt>
+      <dd>
+        <ul>
+          <li><a href="/projects/">Projects</a></li>
+          <li><a href="/toybox/">Toybox</a></li>
+          <li><a href="/shrines/">Shrines</a></li>
+        </ul>
+      </dd>
+      <dt>Meta</dt>
+      <dd>
+        <ul>
+          <li><a href="/uses/">Things I use</a></li>
+          <li><a href="/credits/">Credits</a></li>
+          <li><a href="/past-designs/">Past designs</a></li>
+        </ul>
+      </dd>
+    </dl>
   </nav>
 </header>
 <div class="decorative-divider"></div>
