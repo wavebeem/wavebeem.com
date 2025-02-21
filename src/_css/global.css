@@ -201,7 +201,6 @@ main {
   flex: auto;
   display: flex;
   flex-direction: column;
-  min-height: 60vh;
   padding: 2rem 1rem;
 }
 
@@ -431,6 +430,7 @@ dl > dd + dt {
   body {
     display: grid;
     grid-template-columns: max-content 64px 1fr;
+    grid-template-rows: 1fr min-content;
     grid-template-areas:
       "header divider main"
       "header divider footer";
