@@ -5,15 +5,15 @@
 
 .hamburger summary {
   font-weight: bold;
-  /* margin-right: 1rem; */
-  /* padding-block: 1rem; */
-  /* padding: 1rem; */
   list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1ch;
-  /* outline-offset: -8px; */
+}
+
+.hamburger summary::-webkit-details-marker {
+  display: none;
 }
 
 @media (max-width: 1024px) {
