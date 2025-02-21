@@ -1,35 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    {% include 'partials/head' %}
-  </head>
-  <body>
-    {% include 'partials/header' %}
-    <main>
-      <div class="content-column">
-        <article>
-          <header>
-            <h1>{{ title }}</h1>
+---
+layout: "layout-base"
+---
+<article>
+  <header>
+    <h1>{{ title }}</h1>
+    <small> {% render "partials/date" date: page.date %} </small>
+    <p>{{ description | escape }}</p>
+  </header>
 
-            <small> {% render "partials/date" date: page.date %} </small>
+  <section>
+    {{ content }}
+  </section>
+</article>
 
-            <p>{{ description | escape }}</p>
-          </header>
+<h2>Thanks for reading</h2>
 
-          <section>
-            {{ content }}
-          </section>
-        </article>
-
-        <h2>Thanks for reading</h2>
-
-        <p>
-          <a href="/contact/">Let's talk</a>
-          about this post.
-          <a href="/subscribe/">Subscribe</a> to stay up to date.
-        </p>
-      </div>
-    </main>
-    {% include 'partials/footer' %}
-  </body>
-</html>
+<p>
+  <a href="/contact/">Let's talk</a>
+  about this post.
+  <a href="/subscribe/">Subscribe</a> to stay up to date.
+</p>
