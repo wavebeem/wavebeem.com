@@ -6,6 +6,8 @@ date: "2023-09-07"
 
 <style>
   .jester-root {
+    all: initial;
+    font: inherit;
     font-size: 1.25rem;
     user-select: none;
     margin: 0 auto;

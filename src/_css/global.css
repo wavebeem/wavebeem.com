@@ -66,7 +66,7 @@ h3 {
 
 h1 {
   font-size: var(--font-size-h1);
-  margin-block: 2rem 1.5rem;
+  margin-block: 0 1.5rem;
 }
 
 h2 {
@@ -111,7 +111,7 @@ summary {
   -webkit-user-select: none;
   user-select: none;
   cursor: default;
-  padding-block: 1rem;
+  padding-block: 0.5rem;
 }
 
 summary:hover {
@@ -157,14 +157,14 @@ details[open] > summary {
   font-size: var(--font-size-header);
 }
 
-.header .logo,
-.header :any-link {
-  font-weight: bold;
-  color: inherit;
+.logo {
+  display: block;
 }
 
-.header .logo {
-  margin-left: -1rem;
+.logo,
+.header :any-link {
+  /* font-weight: bold; */
+  color: inherit;
 }
 
 .header .content-column {
@@ -195,7 +195,9 @@ details[open] > summary {
       var(--c1);
   background-size: var(--s) var(--s);
 
-  opacity: 0.75;
+  opacity: 0.5;
+
+  /* background-attachment: fixed; */
 
   /* Checkerboard */
   /* background: repeating-conic-gradient(var(--c2) 0% 25%, var(--c1) 0% 50%) 50% /
@@ -209,11 +211,6 @@ ol,
 dl,
 p {
   margin-block: 1.5rem;
-}
-
-p,
-blockquote {
-  /* Roughly 50 or 60 characters wide */
   max-width: 800px;
 }
 
@@ -235,6 +232,7 @@ main {
   display: flex;
   flex-direction: column;
   min-height: 60vh;
+  padding: 1rem;
 }
 
 article header :is(h1, h2, h3) {
@@ -279,6 +277,10 @@ article header small {
   flex-wrap: wrap;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .button,
 button {
   font: inherit;
@@ -314,7 +316,25 @@ button:focus-visible {
   outline-offset: -1px;
 }
 
+body > footer {
+  /* text-align: center; */
+  padding: 1rem;
+  grid-area: footer;
+  font-size: var(--font-size-small);
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+body > footer > [role="separator"] {
+  border-top: 4px dotted;
+  width: 100%;
+  margin-block: 2rem;
+}
+
 body > header nav a {
+  font-size: var(--font-size-small);
   display: flex;
   gap: 0.5ch;
   align-items: center;
@@ -336,29 +356,6 @@ body > header nav {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-}
-
-@media (max-width: 800px) {
-  .header .content-column {
-    display: flex;
-    flex-direction: column;
-    padding-block: 0.5rem;
-  }
-
-  body > header nav {
-    margin-left: -1rem;
-  }
-}
-
-.content-column {
-  max-width: 800px;
-  width: 100%;
-  margin-inline: auto;
-  padding: 1rem;
-}
-
-main > .content-column {
-  padding-bottom: 4rem;
 }
 
 .grid2 {
@@ -408,12 +405,12 @@ hr {
   border: 0;
   height: 1px;
   background: currentColor;
+  max-width: 200px;
+  margin-inline: auto;
   color: inherit;
   margin-block: 3rem;
   position: relative;
   overflow: visible;
-  max-width: 10ch;
-  margin-inline: auto;
 }
 
 hr::after {
@@ -503,7 +500,7 @@ dl > dd + dt {
 }
 
 .logo {
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   font-size: 1.5rem;
   letter-spacing: 1px;
   font-family: var(--font-logo);
@@ -514,29 +511,81 @@ dl > dd + dt {
   text-transform: uppercase;
 }
 
-body > footer {
-  font-size: var(--font-size-small);
+body > header nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 1rem;
+  gap: 0;
 }
 
-body > footer a {
+body > header nav dt {
+  padding: 0.5rem 0;
+  font-family: var(--font-cool);
+}
+
+body > header nav dl {
+  margin: 0;
+}
+
+body > header nav dt {
+  border-bottom: 1px dotted;
+}
+
+body > header nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+body > header nav a {
   padding: 0.5rem;
-  font-weight: bold;
+  text-decoration-line: none;
+  border-bottom: 1px dotted;
+  border-radius: 0;
+  padding-inline: 0;
+}
+
+body > header nav a:hover {
+  box-shadow: inset 0 -1px 0 0;
+  border-bottom-style: solid;
   text-decoration-line: none;
 }
 
-body > footer nav {
-  margin-inline: -0.5rem;
-  gap: 0.5rem 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12ch, 1fr));
-}
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: max-content 64px 1fr;
+    grid-template-areas:
+      "header divider main"
+      "header divider footer";
+    max-width: 1280px;
+    margin-inline: auto;
+    align-items: flex-start;
+  }
 
-/* https://css-shape.com/rounded-edge/ */
-.footer-top {
-  background-color: var(--color-text);
-  clip-path: ellipse(65% 100% at 50% 100%);
-  padding-top: 3rem;
-  margin-top: 3rem;
+  main {
+    padding: 2rem;
+    grid-area: main;
+  }
+
+  body > footer {
+    padding-inline: 2rem;
+  }
+
+  body > header {
+    grid-area: header;
+  }
+
+  body > header + .decorative-divider {
+    grid-area: divider;
+    height: 100%;
+  }
+
+  body > .decorative-divider:has(+ footer) {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
