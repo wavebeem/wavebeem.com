@@ -10,9 +10,8 @@ body > footer {
 }
 
 body > footer > [role="separator"] {
-  border-top: 4px dotted;
+  border-top: 1px dotted;
   width: 100%;
-  margin-block: 2rem;
 }
 
 @media (width >= 1024px) {

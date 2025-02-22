@@ -97,8 +97,13 @@ body > header nav dt {
 
 body > header nav ul {
   padding: 0;
+  padding-left: 1rem;
   margin: 0;
-  list-style: none;
+  list-style-type: circle;
+}
+
+body > header nav li:hover {
+  list-style-type: disc;
 }
 
 body > header nav a {
