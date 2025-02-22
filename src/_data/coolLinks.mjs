@@ -9,6 +9,10 @@
 /** @type {CoolLink[]} */
 export const allLinks = [
   {
+    title: "Oatmeal",
+    url: "https://eli.li/"
+  }
+  {
     title: "Crystal's Wobsite",
     url: "https://crystalwobsite.gay/",
   },
