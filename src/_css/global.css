@@ -154,7 +154,7 @@ main details[open] > summary {
 }
 
 .header {
-  font-size: var(--font-size-header);
+  font-size: var(--font-size-small);
 }
 
 .logo {
@@ -290,7 +290,7 @@ button:focus-visible {
   gap: 0 1rem;
 }
 
-@media (min-width: 800px) {
+@media (width >= 800px) {
   .grid2 {
     grid-template-columns: 1fr 1fr;
   }
@@ -426,7 +426,7 @@ dl > dd + dt {
   margin-top: 1.5rem;
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   body {
     display: grid;
     grid-template-columns: max-content 64px 1fr;

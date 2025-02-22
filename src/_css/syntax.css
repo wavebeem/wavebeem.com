@@ -10,7 +10,7 @@ article pre {
   overflow-x: auto;
 }
 
-@media (max-width: 800px) {
+@media (width <= 800px) {
   article pre {
     border-radius: var(--rounded-none);
     margin-inline: -1rem;

@@ -15,7 +15,7 @@ body > footer > [role="separator"] {
   margin-block: 2rem;
 }
 
-@media (min-width: 1024px) {
+@media (width >= 1024px) {
   body > footer {
     padding-inline: 2rem;
   }

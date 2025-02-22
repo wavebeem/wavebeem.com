@@ -126,7 +126,7 @@ wavebeem-easter-egg[data-state="outside"]::after {
   transition: opacity 0;
 }
 
-@media (max-width: 420px) {
+@media (width <= 800px) {
   wavebeem-easter-egg {
     --avatar-size: 100px;
   }

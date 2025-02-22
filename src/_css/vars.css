@@ -17,7 +17,6 @@
   --font-size-h1: 4rem;
   --font-size-h2: 3rem;
   --font-size-h3: 2rem;
-  --font-size-header: 1.25rem;
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
   --font-size-code: calc(0.9 * var(--font-size-base));
@@ -32,12 +31,11 @@
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 1px);
 }
 
-@media (max-width: 800px) {
+@media (width <= 800px) {
   :root {
     --font-size-h1: 2.2rem;
     --font-size-h2: 1.8rem;
     --font-size-h3: 1.4rem;
-    --font-size-header: 1.1rem;
     --font-size-base: 1.1rem;
     --font-size-small: 1rem;
   }
