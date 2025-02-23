@@ -326,28 +326,10 @@ button:focus-visible {
 
 hr {
   border: 0;
-  height: 1px;
-  background: currentColor;
-  max-width: 200px;
   margin-inline: auto;
   color: inherit;
-  margin-block: 3rem;
-  position: relative;
-  overflow: visible;
-}
-
-hr::after {
-  content: "";
-  width: 16px;
-  aspect-ratio: 1;
-  flex: none;
-  border-radius: var(--rounded-pill);
-  background-color: var(--color-text);
-  border: 2px solid var(--color-background);
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  translate: -50% -50%;
+  border-top: 1px dotted;
+  width: 100%;
 }
 
 article p:has(> video),
