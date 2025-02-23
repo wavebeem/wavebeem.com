@@ -255,9 +255,10 @@ button {
   justify-content: center;
   align-items: center;
   display: inline-flex;
-  border: 1px solid;
+  border: 2px solid;
+  font-weight: bold;
   padding: 0.25rem 1.5rem;
-  border-radius: var(--rounded-small);
+  border-radius: var(--rounded-pill);
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
 }
