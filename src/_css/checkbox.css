@@ -1,19 +1,64 @@
-label:has(input[type="checkbox"]) {
+label:has(> input[type="checkbox"]:first-child) {
   user-select: none;
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   align-items: center;
-}
 
-label input[type="checkbox"] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 1.5em;
-  height: 1.5em;
-  border: 2px solid;
-  border-radius: var(--rounded-small);
-}
+  input[type="checkbox"] {
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid;
+    margin: 0;
+    border-radius: var(--rounded-small);
 
-label input[type="checkbox"]:checked {
-  background: var(--color-text);
+    &:checked {
+      --_blur: 0.5px;
+      --_size: 2px;
+      --_start: calc(50% - 0.5 * var(--_size));
+      --_end: calc(var(--_start) + var(--_size));
+      --_bg: var(--color-background);
+      --_fg: var(--color-text);
+
+      border-color: var(--_fg);
+      background-color: var(--_bg);
+      background-image: linear-gradient(
+          45deg,
+          transparent,
+          transparent calc(var(--_start) - var(--_blur)),
+          var(--_fg) var(--_start),
+          var(--_fg) var(--_end),
+          transparent calc(var(--_end) + var(--_blur)),
+          transparent
+        ),
+        linear-gradient(
+          -45deg,
+          transparent,
+          transparent calc(var(--_start) - var(--_blur)),
+          var(--_fg) var(--_start),
+          var(--_fg) var(--_end),
+          transparent calc(var(--_end) + var(--_blur)),
+          transparent
+        );
+      box-shadow: inset 0 0 0 4px var(--_bg);
+    }
+
+    &:focus-visible {
+      outline-offset: -2px;
+      outline-width: 4px;
+    }
+  }
+
+  @media (hover) {
+    &:hover {
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      text-underline-position: under;
+
+      & input[type="checkbox"] {
+        outline: 3px solid;
+        outline-offset: -2px;
+      }
+    }
+  }
 }

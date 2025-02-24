@@ -127,7 +127,7 @@ export const shrine_pkmn = {
   // "color-text": "#181010",
   // Semi-realistic GBC
   "color-background": "#f3f1ee",
-  "color-text": "#66635c",
+  "color-text": "#4a4741",
   // "color-background": "#fff",
   // "color-text": "#000",
 };
