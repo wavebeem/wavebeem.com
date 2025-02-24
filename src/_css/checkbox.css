@@ -5,6 +5,7 @@ label:has(> input[type="checkbox"]:first-child) {
   align-items: center;
 
   input[type="checkbox"] {
+    color: inherit;
     appearance: none;
     width: 1.5rem;
     height: 1.5rem;
@@ -52,6 +53,7 @@ label:has(> input[type="checkbox"]:first-child) {
   @media (hover) {
     &:hover {
       text-decoration-line: underline;
+      text-decoration-thickness: 1px;
       text-decoration-style: dotted;
       text-underline-position: under;
 

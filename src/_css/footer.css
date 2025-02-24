@@ -1,17 +1,14 @@
 body > footer {
-  /* text-align: center; */
   padding: 1rem;
   grid-area: footer;
   font-size: var(--font-size-small);
   padding-bottom: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 body > footer > [role="separator"] {
   border-top: 1px dotted;
   width: 100%;
+  margin: 1.5rem 0;
 }
 
 @media (width >= 1024px) {
