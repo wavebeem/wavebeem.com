@@ -5,6 +5,7 @@
   "description": "wavebeem.com",
   "type": "module",
   "scripts": {
+    "webp": "node ./bin/webp.mjs",
     "start": "eleventy --serve --quiet --port=1312",
     "upgrade": "npm-check -u",
     "lint": "stylelint \"src/**/*.css\" --formatter unix",

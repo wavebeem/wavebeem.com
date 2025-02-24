@@ -38,7 +38,7 @@ async function main([flag]) {
             dest
           );
         } else if (base.endsWith(".gbc")) {
-          await run("magick", file, "-scale", "300%", "-quality", "100", dest);
+          await run("magick", file, "-scale", "400%", "-quality", "100", dest);
         } else {
           await run("magick", file, "-quality", "100", dest);
         }

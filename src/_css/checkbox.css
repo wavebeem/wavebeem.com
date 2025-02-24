@@ -1,0 +1,19 @@
+label:has(input[type="checkbox"]) {
+  user-select: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+label input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 1.5em;
+  height: 1.5em;
+  border: 2px solid;
+  border-radius: var(--rounded-small);
+}
+
+label input[type="checkbox"]:checked {
+  background: var(--color-text);
+}

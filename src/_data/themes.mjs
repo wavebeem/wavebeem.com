@@ -119,27 +119,17 @@ export const shrine_dq = {
 };
 
 export const shrine_pkmn = {
-  // GBC
-  // "color-background": "#d8f8d8",
-  // "color-text": "#393939",
-  // GB
-  // "color-background": "#75a973",
-  // "color-text": "#235523",
-  // GB Pocket
-  // "color-background": "#aea691",
-  // "color-text": "#4e3f2a",
   // Lospec GB
   // "color-background": "#c7c6c6",
   // "color-text": "#382843",
-  // Semi-realistic GB
-  // "color-background": "#96c170",
-  // "color-text": "#1e4634",
   // Pokémon Super Game Boy
   // "color-background": "#ffefff",
   // "color-text": "#181010",
   // Semi-realistic GBC
   "color-background": "#f3f1ee",
   "color-text": "#66635c",
+  // "color-background": "#fff",
+  // "color-text": "#000",
 };
 
 export const shrine_castlevania = {

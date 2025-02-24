@@ -9,6 +9,13 @@ layout: "layout-base"
 theme: "shrine_pkmn"
 ---
 
+<style>
+  :has(#gbc-filter:checked) img[src*=".gbc."] {
+    mix-blend-mode: multiply;
+    filter: saturate(0.8) hue-rotate(-2deg);
+  }
+</style>
+
 <article>
   <header>
     <h1>{{ title }}</h1>
@@ -19,23 +26,31 @@ theme: "shrine_pkmn"
   <h2>Pokémon Type Calculator</h2>
 
   <figure>
-    <img src="./img/pkmn.help-classic.webp" alt="" />
-    <figcaption>The original 2013 version of Pokémon Type Calculator</figcaption>
-  </figure>
-
-  <figure>
     <img src="./img/pkmn.help-light.webp" alt="" />
-    <figcaption>The 2025 version of Pokémon Type Calculator (light theme)</figcaption>
+    <figcaption>
+      The 2025 version of Pokémon Type Calculator (light theme)
+    </figcaption>
   </figure>
 
   <figure>
     <img src="./img/pkmn.help-dark.webp" alt="" />
-    <figcaption>The 2025 version of Pokémon Type Calculator (dark theme)</figcaption>
+    <figcaption>
+      The 2025 version of Pokémon Type Calculator (dark theme)
+    </figcaption>
   </figure>
 
   <figure>
     <img src="./img/pkmn.help-night.webp" alt="" />
-    <figcaption>The 2025 version of Pokémon Type Calculator (night theme)</figcaption>
+    <figcaption>
+      The 2025 version of Pokémon Type Calculator (night theme)
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="./img/pkmn.help-classic.webp" alt="" />
+    <figcaption>
+      The original 2013 version of Pokémon Type Calculator
+    </figcaption>
   </figure>
 
   <h2>Pokémon Blue</h2>
@@ -46,6 +61,14 @@ theme: "shrine_pkmn"
   </figure>
 
   <h2>Pokémon Crystal</h2>
+
+  <label>
+    <input id="gbc-filter" type="checkbox" autocomplete="off" checked />
+    <span
+      >Enable Game Boy Color filter for more authentic looking
+      screenshots.</span
+    >
+  </label>
 
   <figure>
     <img src="./img/title.gbc.webp" alt="" />
@@ -61,7 +84,10 @@ theme: "shrine_pkmn"
 
   <figure>
     <img src="./img/sage.gbc.webp" alt="" />
-    <figcaption>It's me, Sage.</figcaption>
+    <figcaption>
+      It's me, Sage. I think it's interesting that the text "ID No." has
+      anti-aliasing, unlike all other text on screen.
+    </figcaption>
   </figure>
 
   <figure>
@@ -86,6 +112,13 @@ theme: "shrine_pkmn"
     <img src="./img/house.gbc.webp" alt="" />
     <figcaption>
       This house with a tatami mat floor is so detailed and colorful!
+    </figcaption>
+  </figure>
+
+  <figure>
+    <img src="./img/mom.gbc.webp" alt="" />
+    <figcaption>
+      I love the retro cell phone interface for calling people.
     </figcaption>
   </figure>
 
