@@ -9,7 +9,7 @@ import { run, chdir, match } from "./_util.mjs";
 async function main([flag]) {
   chdir("src");
 
-  const globDirs = ["past-designs", "blog", "drafts"];
+  const globDirs = ["past-designs", "blog", "drafts", "shrines"];
   const globRoots = "{" + globDirs.join(",") + "}";
 
   for await (const file of new Glob(`${globRoots}/**/*.{png,gif}`, {})) {
@@ -37,6 +37,8 @@ async function main([flag]) {
             "100",
             dest
           );
+        } else if (base.endsWith(".gbc")) {
+          await run("magick", file, "-scale", "300%", "-quality", "100", dest);
         } else {
           await run("magick", file, "-quality", "100", dest);
         }

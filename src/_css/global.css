@@ -36,9 +36,11 @@ a {
   text-underline-offset: var(--link-underline-offset);
 }
 
-a:hover {
-  text-decoration-line: underline;
-  --link-underline-thickness: var(--link-underline-thickness-hover);
+@media (hover) {
+  a:hover {
+    text-decoration-line: underline;
+    --link-underline-thickness: var(--link-underline-thickness-hover);
+  }
 }
 
 input,
@@ -114,8 +116,10 @@ main summary {
   padding-block: 0.5rem;
 }
 
-main summary:hover {
-  box-shadow: 0 2px 0 0 currentColor;
+@media (hover) {
+  main summary:hover {
+    box-shadow: 0 2px 0 0 currentColor;
+  }
 }
 
 main summary:active {
@@ -140,8 +144,10 @@ main details[open] > summary {
   cursor: default;
 }
 
-.spoiler:hover:where(:not(:focus)) {
-  opacity: 0.8;
+@media (hover) {
+  .spoiler:hover:where(:not(:focus)) {
+    opacity: 0.8;
+  }
 }
 
 .spoiler:focus {
@@ -263,11 +269,13 @@ button {
   text-decoration-thickness: var(--link-underline-thickness);
 }
 
-.button:hover,
-button:hover {
-  outline: 2px solid var(--color-text);
-  outline-offset: -1px;
-  text-decoration-line: none;
+@media (hover) {
+  .button:hover,
+  button:hover {
+    outline: 2px solid var(--color-text);
+    outline-offset: -1px;
+    text-decoration-line: none;
+  }
 }
 
 .button:active,
@@ -327,6 +335,7 @@ button:focus-visible {
 
 hr {
   border: 0;
+  margin-block: 1.5rem;
   margin-inline: auto;
   color: inherit;
   border-top: 1px dotted;
@@ -348,6 +357,11 @@ article :is(p, figure) :is(img, video) {
   /* max-height: 50vh; */
   display: block;
   border-radius: var(--rounded-large);
+}
+
+article figure img[data-console="gbc"] {
+  width: calc(3 * 160px);
+  image-rendering: pixelated;
 }
 
 article .grid2 figure img {

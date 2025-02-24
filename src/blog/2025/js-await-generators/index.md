@@ -1,10 +1,18 @@
 ---
+date: "2025-02-23"
 title: >-
   Simulating JS await with generator functions
 description: >-
-  Did you know that before async/await existed in JS, we simulated it with
-  generator functions? A brief code journey demonstrating the concept.
+  Did you know that before async functions existed in JS, we simulated them with
+  generator functions? Come with me on a code journey, in which I reveal the
+  relatively short helper function that made it all possible.
 ---
+
+## Why I wrote this
+
+This post is a reflection on the relatively untapped power of generator
+functions, seen through a historical lesson about the ingenuity of JS
+programmers before async functions were in the language.
 
 ## A quick refresher on generators
 
@@ -41,14 +49,14 @@ Which prints the following numbers:
 
 ## Generators are so much more powerful
 
-Generators are like functions with a pause button, and you can send & receive
-values every time you press play. They can represent the infinite, unlike arrays
-or objects. Since there's no limit on how long they can remain paused, you can
-even use them in async scenarios.
+Generators are like functions with a pause button, and you can send/receive
+values every time you press play. They can represent infinite sequences, unlike
+arrays or objects. Since there's no limit on how long they can remain paused,
+you can even use them in async scenarios.
 
 ## Fake async functions have been possible since ES2015
 
-[Proimse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+[Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 predates ES2015 entirely, but the advent of native browser promises _and_
 generator functions let creative programmers invent `async` and `await` before
 it was added to the language in ES2017.
@@ -69,7 +77,7 @@ run(fakeAsyncFunction);
 // y { data: 'y' }
 ```
 
-The magic sauce here is the unassuming `run` function. We'll define that soon.
+The secret sauce is the unassuming `run` function. We'll define that soon.
 Notice how this looks almost exactly like using modern async functions.
 
 ```js
@@ -102,7 +110,7 @@ function load(name) {
 There's no need to call `reject` in this function, but it's meant to receieve an
 `Error` type and be used similar to `throw`.
 
-## The "magic"
+## The async generator runner
 
 Since generators return iterable iterators, you can do so much more with them
 than a `for..of` loop. Read my previous post about

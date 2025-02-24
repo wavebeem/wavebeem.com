@@ -38,7 +38,7 @@ wavebeem-easter-egg img {
   border-radius: var(--rounded-pill);
   width: var(--avatar-size);
   height: var(--avatar-size);
-  filter: grayscale(1) contrast(1.5) brightness(0.9);
+  filter: grayscale(1) contrast(1.85) brightness(0.98);
   mix-blend-mode: var(--avatar-blend-mode);
 }
 

@@ -40,8 +40,10 @@ body > header nav a {
   text-decoration-thickness: var(--link-underline-thickness);
 }
 
-body > header nav a:hover {
-  text-decoration-line: underline;
+@media (hover) {
+  body > header nav a:hover {
+    text-decoration-line: underline;
+  }
 }
 
 body > header nav {
@@ -101,8 +103,10 @@ body > header nav ul {
   list-style-type: circle;
 }
 
-body > header nav li:hover {
-  list-style-type: disc;
+@media (hover) {
+  body > header nav li:hover {
+    list-style-type: disc;
+  }
 }
 
 body > header nav a {
@@ -118,10 +122,12 @@ body > header nav a:focus-visible {
   border-radius: var(--rounded-small);
 }
 
-body > header nav a:hover {
-  box-shadow: inset 0 -1px 0 0;
-  border-bottom-style: solid;
-  text-decoration-line: none;
+@media (hover) {
+  body > header nav a:hover {
+    box-shadow: inset 0 -1px 0 0;
+    border-bottom-style: solid;
+    text-decoration-line: none;
+  }
 }
 
 .decorative-divider {
