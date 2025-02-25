@@ -25,6 +25,9 @@ export default function getConfig(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({ "src/static": "/" });
   eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg,jpeg,webp,svg,mp4}");
+  eleventyConfig.addPassthroughCopy(
+    "src/**/assets/**/*.{png,jpg,jpeg,webp,svg,mp4,css,js,mjs}"
+  );
 
   eleventyConfig.addWatchTarget("./src/_css/");
 
