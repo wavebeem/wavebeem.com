@@ -350,18 +350,10 @@ article figure {
 }
 
 article :is(p, figure) :is(img, video) {
-  /* margin-inline: auto; */
-  /* width: 800px; */
   max-width: 100%;
   height: auto;
-  /* max-height: 50vh; */
   display: block;
   border-radius: var(--rounded-large);
-}
-
-article figure img[data-console="gbc"] {
-  width: calc(3 * 160px);
-  image-rendering: pixelated;
 }
 
 article .grid2 figure img {

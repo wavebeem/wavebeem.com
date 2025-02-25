@@ -6,37 +6,36 @@ layout: "layout-base"
 override:tags: []
 ---
 
-<h1>{{ title }}</h1>
-
-<p>{{ description }}</p>
-
-<p>
-  Subscribe to my
-  <a href="/feed.xml">RSS feed</a>
-  to stay up
-  to date with my posts.
-</p>
-
-
-<h2>All toys</h2>
-
-{% for post in collections.toybox reversed %}
 <article>
   <header>
-    <h3>
-      <a href="{{ post.url }}">
-        {{ post.data.title | escape }}
-      </a>
-    </h3>
-    <small
-      ><time datetime="{{ post.date | formatDate : 'yyyy-mm-dd' }}">{{
-        post.date | formatDate : "yyyy mmmm d"
-      }}</time>
-    </small>
+    <h1>{{ title }}</h1>
+
+    <p>{{ description }}</p>
+
+    <p>
+      <a href="/feed.xml">Subscribe</a> to stay up to date.
+    </p>
   </header>
-  <p>{{ post.data.description | escape }}</p>
+
+  <h2>All toys</h2>
+
+  {% for post in collections.toybox reversed %}
+  <article>
+    <header>
+      <h3>
+        <a href="{{ post.url }}">
+          {{ post.data.title | escape }}
+        </a>
+      </h3>
+      <small
+        ><time datetime="{{ post.date | formatDate : 'yyyy-mm-dd' }}">{{
+          post.date | formatDate : "yyyy mmmm d"
+        }}</time>
+      </small>
+    </header>
+    <p>{{ post.data.description | escape }}</p>
+  </article>
+  {% endfor %}
+
+  {{ content }}
 </article>
-{% endfor %}
-
-
-{{ content }}
