@@ -1,6 +1,6 @@
 const html = String.raw;
 
-export class WavebeemVectorProjection extends HTMLElement {
+export class WavebeemFunAlgebra extends HTMLElement {
   constructor() {
     super();
     if (!this.shadowRoot) {
@@ -117,7 +117,4 @@ export class WavebeemVectorProjection extends HTMLElement {
   }
 }
 
-customElements.define(
-  "wavebeem-disjoint-graph-union",
-  WavebeemVectorProjection
-);
+customElements.define("wavebeem-fun-algebra", WavebeemFunAlgebra);

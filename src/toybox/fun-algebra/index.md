@@ -47,9 +47,9 @@ hand-draw the points and lines on to traverse the map.
 Move your mouse cursor around within the graph area to see how the lines are
 meant to connect.
 
-<wavebeem-disjoint-graph-union>
+<wavebeem-fun-algebra>
   Loading...
-</wavebeem-disjoint-graph-union>
+</wavebeem-fun-algebra>
 
 [View source](./assets/element.mjs)
 
