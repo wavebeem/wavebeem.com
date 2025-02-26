@@ -56,7 +56,7 @@ const updateState = () => {
   }
   for (const n of nodes) {
     if (n.group === -1) {
-      helper(n);
+      explore(n);
       group++;
     }
   }
@@ -64,11 +64,11 @@ const updateState = () => {
 ```
 
 ```js
-const helper = (node) => {
+const explore = (node) => {
   node.group = group;
   for (const c of connections.get(node)) {
     if (c.group === -1) {
-      helper(c);
+      explore(c);
     }
   }
 };

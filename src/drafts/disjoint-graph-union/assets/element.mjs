@@ -24,7 +24,9 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
   }
 
   connectedCallback() {
+    /** @type {HTMLCanvasElement} */
     this.canvas = this.shadowRoot.getElementById("game");
+    /** @type {CanvasRenderingContext2D} */
     this.ctx = this.canvas.getContext("2d");
 
     const xy = [
@@ -72,7 +74,9 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
       segments.push(new Segment(nodes[i], nodes[j]));
     }
 
-    const drawLine = (p1, p2) => {
+    const drawLine = (p1, p2, dt) => {
+      const k = Math.abs(Math.cos(dt / 500));
+      this.ctx.lineWidth = 4 + k;
       this.ctx.beginPath();
       this.ctx.moveTo(p1.x, p1.y);
       this.ctx.lineTo(p2.x, p2.y);
@@ -81,18 +85,24 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
 
     const TWO_PI = 2 * Math.PI;
     const radius = 10;
-    this.ctx.lineWidth = 4;
 
-    const drawPoint = (p1) => {
+    const drawPoint = (p1, dt) => {
+      const k = Math.sin(dt / 500);
       this.ctx.beginPath();
-      this.ctx.arc(p1.x, p1.y, radius, 0, TWO_PI);
+      this.ctx.arc(p1.x, p1.y, radius + k, 0, TWO_PI);
       this.ctx.fill();
     };
 
     const palette = ["Crimson", "DodgerBlue", "BlueViolet"];
+    this.ctx.shadowColor = "rgb(0 0 0 / 20%)";
 
-    const setTheme = (index) => {
+    const setTheme = (index, dt) => {
+      const k = Math.sin(dt / 500);
+      const q = Math.cos(dt / 500);
       const c = palette[index];
+      this.ctx.shadowBlur = 0;
+      this.ctx.shadowOffsetX = 2 * k;
+      this.ctx.shadowOffsetY = 2 * q;
       this.ctx.fillStyle = c;
       this.ctx.strokeStyle = c;
     };
@@ -132,35 +142,38 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
       }
       for (const n of nodes) {
         if (n.group === -1) {
-          helper(n);
+          explore(n);
           group++;
         }
       }
     };
 
-    const helper = (node) => {
+    const explore = (node) => {
       node.group = group;
       for (const c of connections.get(node)) {
         if (c.group === -1) {
-          helper(c);
+          explore(c);
         }
       }
     };
 
-    const draw = () => {
+    const draw = (dt) => {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
       updateState();
       for (const s of segments) {
-        setTheme(s.node1.group);
-        drawLine(s.node1, s.node2);
+        setTheme(s.node1.group, dt);
+        drawLine(s.node1, s.node2, dt);
       }
       for (const n of nodes) {
-        setTheme(n.group);
-        drawPoint(n);
+        setTheme(n.group, dt);
+        drawPoint(n, dt);
+      }
+      if (this.isConnected) {
+        requestAnimationFrame(draw);
       }
     };
 
-    draw();
+    requestAnimationFrame(draw);
   }
 
   disconnectedCallback() {
