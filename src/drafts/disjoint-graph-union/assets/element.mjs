@@ -105,13 +105,13 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
       }
 
       add(a, b) {
-        this.get(a).push(b);
-        this.get(b).push(a);
+        this.get(a).add(b);
+        this.get(b).add(a);
       }
 
       get(a) {
         if (!this.#map.has(a)) {
-          this.#map.set(a, []);
+          this.#map.set(a, new Set());
         }
         return this.#map.get(a);
       }
