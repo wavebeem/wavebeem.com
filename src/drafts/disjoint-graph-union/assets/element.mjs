@@ -1,6 +1,8 @@
 const html = String.raw;
 
 export class WavebeemDisjointGraphUnion extends HTMLElement {
+  abortController;
+
   constructor() {
     super();
     if (!this.shadowRoot) {
@@ -28,6 +30,29 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
     this.canvas = this.shadowRoot.getElementById("game");
     /** @type {CanvasRenderingContext2D} */
     this.ctx = this.canvas.getContext("2d");
+
+    this.abortController = new AbortController();
+    const { signal } = this.abortController;
+
+    const distance = (x1, y1, x2, y2) => {
+      return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
+    };
+
+    const onPointerStuff = (event) => {
+      // Scale mouse coordinates from DOM to canvas size
+      const x = (event.offsetX / this.canvas.clientWidth) * this.canvas.width;
+      const y = (event.offsetY / this.canvas.clientHeight) * this.canvas.height;
+      for (const n of nodes) {
+        if (distance(n.x, n.y, x, y) < radius) {
+          n.size = 1.2;
+        } else {
+          n.size = 1;
+        }
+      }
+    };
+
+    this.canvas.addEventListener("pointermove", onPointerStuff, { signal });
+    this.canvas.addEventListener("pointerdown", onPointerStuff, { signal });
 
     const xy = [
       [34, 28],
@@ -74,9 +99,8 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
       segments.push(new Segment(nodes[i], nodes[j]));
     }
 
-    const drawLine = (p1, p2, dt) => {
-      const k = Math.abs(Math.cos(dt / 500));
-      this.ctx.lineWidth = 4 + k;
+    const drawLine = (p1, p2) => {
+      this.ctx.lineWidth = 4;
       this.ctx.beginPath();
       this.ctx.moveTo(p1.x, p1.y);
       this.ctx.lineTo(p2.x, p2.y);
@@ -86,46 +110,23 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
     const TWO_PI = 2 * Math.PI;
     const radius = 10;
 
-    const drawPoint = (p1, dt) => {
-      const k = Math.sin(dt / 500);
+    const drawPoint = (p1) => {
       this.ctx.beginPath();
-      this.ctx.arc(p1.x, p1.y, radius + k, 0, TWO_PI);
+      this.ctx.arc(p1.x, p1.y, p1.size * radius, 0, TWO_PI);
       this.ctx.fill();
     };
 
     const palette = ["Crimson", "DodgerBlue", "BlueViolet"];
     this.ctx.shadowColor = "rgb(0 0 0 / 20%)";
 
-    const setTheme = (index, dt) => {
-      const k = Math.sin(dt / 500);
-      const q = Math.cos(dt / 500);
+    const setTheme = (index) => {
       const c = palette[index];
       this.ctx.shadowBlur = 0;
-      this.ctx.shadowOffsetX = 2 * k;
-      this.ctx.shadowOffsetY = 2 * q;
+      this.ctx.shadowOffsetX = 2;
+      this.ctx.shadowOffsetY = 2;
       this.ctx.fillStyle = c;
       this.ctx.strokeStyle = c;
     };
-
-    class Connections {
-      #map = new Map();
-
-      clear() {
-        this.#map.clear();
-      }
-
-      add(a, b) {
-        this.get(a).add(b);
-        this.get(b).add(a);
-      }
-
-      get(a) {
-        if (!this.#map.has(a)) {
-          this.#map.set(a, new Set());
-        }
-        return this.#map.get(a);
-      }
-    }
 
     const connections = new Connections();
     let group = 0;
@@ -168,6 +169,7 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
         setTheme(n.group, dt);
         drawPoint(n, dt);
       }
+      signal.throwIfAborted();
       if (this.isConnected) {
         requestAnimationFrame(draw);
       }
@@ -177,15 +179,38 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
   }
 
   disconnectedCallback() {
+    this.abortController.abort();
     this.shadowRoot.innerHTML = "";
   }
 }
 
+class Connections {
+  #map = new Map();
+
+  clear() {
+    this.#map.clear();
+  }
+
+  add(a, b) {
+    this.get(a).add(b);
+    this.get(b).add(a);
+  }
+
+  get(a) {
+    if (!this.#map.has(a)) {
+      this.#map.set(a, new Set());
+    }
+    return this.#map.get(a);
+  }
+}
+
 class Node {
+  /** @type {Segment[]} */
   connections = [];
   group = 0;
   x = 0;
   y = 0;
+  size = 1;
 
   constructor(x, y) {
     this.x = x;
@@ -195,9 +220,11 @@ class Node {
 
 class Segment {
   group = 0;
-  node1 = undefined;
-  node2 = undefined;
 
+  /**
+   * @param {Node} node1
+   * @param {Node} node2
+   */
   constructor(node1, node2) {
     this.node1 = node1;
     this.node2 = node2;
