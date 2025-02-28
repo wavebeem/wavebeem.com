@@ -125,15 +125,21 @@ you send
 function run(generatorFunction) {
   // Run the generator once to get its iterator.
   const iterator = generatorFunction();
+
   // Define a helper function for recursion.
   function helper(resolvedValue) {
-    // The resolved value of the previous promise. Initially it's undefined
-    // since there isn't a promise to track when you start the function.
+    // The resolved value of the previous promise.
+    // Initially it's undefined since there isn't
+    // a promise to track when you start the function.
     const { value, done } = iterator.next(resolvedValue);
-    // Iterators return `done: true` when they're done.
+
+    // Iterators return `done: true` when
+    // they're done.
     if (!done) {
-      // Convert the yielded value to a promise (in case it isn't one already),
-      // then wait for its resolved value and recurse with it.
+      // Convert the yielded value to a promise
+      // (in case it isn't one already),
+      // then wait for its resolved value and
+      // recurse with it.
       Promise.resolve(value).then(helper);
     }
   }

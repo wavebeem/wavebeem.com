@@ -27,13 +27,13 @@ export const light = {
   "color-background": oklch(90, 10, 152),
   "color-text": oklch(25, 0, 152),
 
-  "color-syntax-background": oklch(25, 0, 340),
-  "color-syntax-text": oklch(90, 0, 340),
-  "color-syntax-comment": oklch(70, 15, 290),
-  "color-syntax-keyword": oklch(80, 70, 340),
-  "color-syntax-property": oklch(80, 70, 250),
-  "color-syntax-string": oklch(80, 50, 152),
-  "color-syntax-punctuation": oklch(70, 15, 340),
+  "color-syntax-background": oklch(100, 0, 340),
+  "color-syntax-text": oklch(20, 0, 340),
+  "color-syntax-comment": oklch(52, 0, 290),
+  "color-syntax-keyword": oklch(52, 100, 340),
+  "color-syntax-property": oklch(52, 60, 250),
+  "color-syntax-string": oklch(52, 100, 152),
+  "color-syntax-punctuation": oklch(52, 30, 340),
 };
 
 export const dark = {
@@ -42,6 +42,14 @@ export const dark = {
 
   // "color-text": oklch(90, 15, 152),
   // "color-background": oklch(40, 15, 152),
+
+  "color-syntax-background": oklch(25, 0, 340),
+  "color-syntax-text": oklch(90, 0, 340),
+  "color-syntax-comment": oklch(70, 15, 290),
+  "color-syntax-keyword": oklch(80, 70, 340),
+  "color-syntax-property": oklch(80, 70, 250),
+  "color-syntax-string": oklch(80, 50, 152),
+  "color-syntax-punctuation": oklch(70, 15, 340),
 };
 
 export const tufte = {

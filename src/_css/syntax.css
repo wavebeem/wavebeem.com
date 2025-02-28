@@ -8,9 +8,10 @@ article pre {
   color: var(--color-syntax-text);
   scrollbar-color: var(--color-syntax-text) var(--color-syntax-background);
   overflow-x: auto;
+  max-width: 50rem;
 }
 
-@media (width <= 800px) {
+@media (width <= 50rem) {
   article pre {
     border-radius: var(--rounded-none);
     margin-inline: -1rem;

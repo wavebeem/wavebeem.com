@@ -38,16 +38,29 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
       return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
     };
 
+    /**
+     * @param {PointerEvent} event
+     */
     const onPointerStuff = (event) => {
       // Scale mouse coordinates from DOM to canvas size
       const x = (event.offsetX / this.canvas.clientWidth) * this.canvas.width;
       const y = (event.offsetY / this.canvas.clientHeight) * this.canvas.height;
+      let removeNode;
       for (const n of nodes) {
         if (distance(n.x, n.y, x, y) < radius) {
+          if (event.type === "pointerdown") {
+            removeNode = n;
+          }
           n.size = 1.2;
         } else {
           n.size = 1;
         }
+      }
+      if (removeNode) {
+        nodes = nodes.filter((n) => n !== removeNode);
+        segments = segments.filter(
+          (s) => !(s.node1 === removeNode || s.node2 === removeNode)
+        );
       }
     };
 
@@ -74,22 +87,27 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
       [0, 1],
       [1, 2],
       [2, 3],
+      [3, 4],
 
       [4, 5],
       [5, 6],
       [6, 7],
+      [7, 8],
 
       [8, 9],
       [9, 10],
       [10, 11],
       [11, 12],
+
+      [12, 6],
+      [9, 2],
     ];
 
     /** @type {Node[]} */
-    const nodes = [];
+    let nodes = [];
 
     /** @type {Segment[]} */
-    const segments = [];
+    let segments = [];
 
     for (const [x, y] of xy) {
       nodes.push(new Node(x, y));
@@ -116,11 +134,15 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
       this.ctx.fill();
     };
 
-    const palette = ["Crimson", "DodgerBlue", "BlueViolet"];
     this.ctx.shadowColor = "rgb(0 0 0 / 20%)";
 
+    const getColor = (n) => {
+      const step = 360 / 6;
+      return `oklch(70% 70% ${n * step})`;
+    };
+
     const setTheme = (index) => {
-      const c = palette[index];
+      const c = getColor(index);
       this.ctx.shadowBlur = 0;
       this.ctx.shadowOffsetX = 2;
       this.ctx.shadowOffsetY = 2;

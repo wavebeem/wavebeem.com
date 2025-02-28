@@ -183,7 +183,7 @@ main details[open] > summary {
 
 main :is(blockquote, ul, ol, dl, p) {
   margin-block: 1.5rem;
-  max-width: 800px;
+  max-width: 50rem;
 }
 
 main ul {
@@ -295,7 +295,7 @@ button:focus-visible {
   gap: 0 1rem;
 }
 
-@media (width >= 800px) {
+@media (width >= 50rem) {
   .grid2 {
     grid-template-columns: 1fr 1fr;
   }
@@ -386,8 +386,8 @@ article
 article blockquote,
 article aside {
   margin-inline: 0;
-  padding: 0rem 2rem;
-  border-left: 2px solid;
+  padding: 0 2rem;
+  border-left: 4px solid;
 }
 
 .pixelated {
@@ -411,15 +411,16 @@ dl > dd + dt {
   margin-top: 1.5rem;
 }
 
-@media (width >= 1024px) {
+@media (width >= 64rem) {
   body {
     display: grid;
-    grid-template-columns: max-content 64px 1fr;
+    /* Prevent grid blowout by using minmax(0, 1fr) instead of 1fr */
+    grid-template-columns: max-content 64px minmax(0, 1fr);
     grid-template-rows: 1fr min-content;
     grid-template-areas:
       "header divider main"
       "header divider footer";
-    max-width: 1280px;
+    max-width: 80rem;
     margin-inline: auto;
     align-items: flex-start;
   }
