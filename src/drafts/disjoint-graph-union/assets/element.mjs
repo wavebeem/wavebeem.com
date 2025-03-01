@@ -1,72 +1,115 @@
+// @ts-check
 const html = String.raw;
 
 export class WavebeemDisjointGraphUnion extends HTMLElement {
-  abortController;
+  /** @type {AbortController} */
+  #abortController;
+
+  #connections = new Connections();
+
+  #group = 0;
+
+  /** @type {Node[]} */
+  #nodes = [];
+
+  /** @type {Segment[]} */
+  segments = [];
+
+  /** @type {CanvasRenderingContext2D} */
+  #ctx;
+
+  #pointRadius = 10;
+
+  /** @type {HTMLCanvasElement} */
+  #canvas;
+
+  /** @type {HTMLButtonElement} */
+  #reset;
 
   constructor() {
     super();
-    if (!this.shadowRoot) {
-      this.attachShadow({ mode: "open" });
+    let shadow = this.shadowRoot;
+    if (!shadow) {
+      shadow = this.attachShadow({ mode: "open" });
     }
-    this.shadowRoot.innerHTML = html`
+    // There needs to be a better way to adopt stylesheets from the parent, wtf
+    shadow.innerHTML = html`
       <style>
-        :root {
-          display: block;
+        :host {
+          position: relative;
+          display: flex;
+          flex-flow: column;
+          align-items: flex-start;
+          background: white;
+          border-radius: 8px;
+          max-width: max-content;
         }
 
         #game {
-          background: white;
-          display: block;
           max-width: 100%;
-          border-radius: 8px;
+        }
+
+        #reset {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          margin: 0.5rem;
+          background: #333;
+          color: #fff;
+          font: inherit;
+          font-size: 12px;
+          font-weight: bold;
+          border: 0;
+          padding: 0.25rem 1rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          border-radius: 9999px;
+          border: 2px solid #fff;
+
+          &:hover {
+            border-color: transparent;
+          }
+
+          &:focus-visible {
+            outline: 2px solid #333;
+            outline-offset: 2px;
+          }
         }
       </style>
       <canvas id="game" width="400" height="400"></canvas>
+      <button id="reset">Reset</button>
     `;
   }
 
   connectedCallback() {
-    /** @type {HTMLCanvasElement} */
-    this.canvas = this.shadowRoot.getElementById("game");
-    /** @type {CanvasRenderingContext2D} */
-    this.ctx = this.canvas.getContext("2d");
+    this.#canvas = /** @type {HTMLCanvasElement} */ (this.#$("#game"));
+    this.#reset = /** @type {HTMLButtonElement} */ (this.#$("#reset"));
+    this.#ctx =
+      this.#canvas.getContext("2d") || this.#kaboom("no canvas context");
+    this.#abortController = new AbortController();
+    const { signal } = this.#abortController;
+    this.#reset.addEventListener("click", this.#resetGraph, { signal });
+    this.#canvas.addEventListener("pointermove", this.#onPointerStuff, {
+      signal,
+    });
+    this.#canvas.addEventListener("pointerdown", this.#onPointerStuff, {
+      signal,
+    });
+    this.#resetGraph();
+    this.#ctx.shadowColor = "rgb(0 0 0 / 20%)";
+    this.#connections = new Connections();
+    this.#group = 0;
+    requestAnimationFrame(this.#draw);
+  }
 
-    this.abortController = new AbortController();
-    const { signal } = this.abortController;
+  disconnectedCallback() {
+    this.#abortController.abort();
+    if (this.shadowRoot) {
+      this.shadowRoot.innerHTML = "";
+    }
+  }
 
-    const distance = (x1, y1, x2, y2) => {
-      return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
-    };
-
-    /**
-     * @param {PointerEvent} event
-     */
-    const onPointerStuff = (event) => {
-      // Scale mouse coordinates from DOM to canvas size
-      const x = (event.offsetX / this.canvas.clientWidth) * this.canvas.width;
-      const y = (event.offsetY / this.canvas.clientHeight) * this.canvas.height;
-      let removeNode;
-      for (const n of nodes) {
-        if (distance(n.x, n.y, x, y) < radius) {
-          if (event.type === "pointerdown") {
-            removeNode = n;
-          }
-          n.size = 1.2;
-        } else {
-          n.size = 1;
-        }
-      }
-      if (removeNode) {
-        nodes = nodes.filter((n) => n !== removeNode);
-        segments = segments.filter(
-          (s) => !(s.node1 === removeNode || s.node2 === removeNode)
-        );
-      }
-    };
-
-    this.canvas.addEventListener("pointermove", onPointerStuff, { signal });
-    this.canvas.addEventListener("pointerdown", onPointerStuff, { signal });
-
+  #resetGraph = () => {
     const xy = [
       [34, 28],
       [115, 25],
@@ -82,7 +125,6 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
       [179, 277],
       [252, 348],
     ];
-
     const ij = [
       [0, 1],
       [1, 2],
@@ -101,108 +143,139 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
 
       [12, 6],
       [9, 2],
+      [5, 7],
     ];
-
-    /** @type {Node[]} */
-    let nodes = [];
-
-    /** @type {Segment[]} */
-    let segments = [];
-
+    this.#nodes = [];
+    this.segments = [];
     for (const [x, y] of xy) {
-      nodes.push(new Node(x, y));
+      this.#nodes.push(new Node(x, y));
     }
-
     for (const [i, j] of ij) {
-      segments.push(new Segment(nodes[i], nodes[j]));
+      this.segments.push(new Segment(this.#nodes[i], this.#nodes[j]));
     }
+  };
 
-    const drawLine = (p1, p2) => {
-      this.ctx.lineWidth = 4;
-      this.ctx.beginPath();
-      this.ctx.moveTo(p1.x, p1.y);
-      this.ctx.lineTo(p2.x, p2.y);
-      this.ctx.stroke();
-    };
+  /**
+   * @param {Node} p1
+   * @param {Node} p2
+   */
+  #drawLine = (p1, p2) => {
+    this.#ctx.lineWidth = 4;
+    this.#ctx.beginPath();
+    this.#ctx.moveTo(p1.x, p1.y);
+    this.#ctx.lineTo(p2.x, p2.y);
+    this.#ctx.stroke();
+  };
 
+  /**
+   * @param {Node} p1
+   */
+  #drawPoint = (p1) => {
     const TWO_PI = 2 * Math.PI;
-    const radius = 10;
+    this.#ctx.beginPath();
+    this.#ctx.arc(p1.x, p1.y, p1.size * this.#pointRadius, 0, TWO_PI);
+    this.#ctx.fill();
+  };
 
-    const drawPoint = (p1) => {
-      this.ctx.beginPath();
-      this.ctx.arc(p1.x, p1.y, p1.size * radius, 0, TWO_PI);
-      this.ctx.fill();
-    };
+  /**
+   * @param {number} index
+   */
+  #setTheme = (index) => {
+    const step = 360 / 6;
+    const c = `oklch(70% 70% ${index * step})`;
+    this.#ctx.shadowBlur = 0;
+    this.#ctx.shadowOffsetX = 2;
+    this.#ctx.shadowOffsetY = 2;
+    this.#ctx.fillStyle = c;
+    this.#ctx.strokeStyle = c;
+  };
 
-    this.ctx.shadowColor = "rgb(0 0 0 / 20%)";
-
-    const getColor = (n) => {
-      const step = 360 / 6;
-      return `oklch(70% 70% ${n * step})`;
-    };
-
-    const setTheme = (index) => {
-      const c = getColor(index);
-      this.ctx.shadowBlur = 0;
-      this.ctx.shadowOffsetX = 2;
-      this.ctx.shadowOffsetY = 2;
-      this.ctx.fillStyle = c;
-      this.ctx.strokeStyle = c;
-    };
-
-    const connections = new Connections();
-    let group = 0;
-
-    const updateState = () => {
-      group = 0;
-      connections.clear();
-      for (const n of nodes) {
-        n.group = -1;
+  #updateState = () => {
+    this.#group = 0;
+    this.#connections.clear();
+    for (const n of this.#nodes) {
+      n.group = -1;
+    }
+    for (const s of this.segments) {
+      s.group = -1;
+      this.#connections.add(s.node1, s.node2);
+    }
+    for (const n of this.#nodes) {
+      if (n.group === -1) {
+        this.#explore(n);
+        this.#group++;
       }
-      for (const s of segments) {
-        s.group = -1;
-        connections.add(s.node1, s.node2);
+    }
+  };
+
+  /**
+   * @param {Node} node
+   */
+  #explore = (node) => {
+    node.group = this.#group;
+    for (const c of this.#connections.get(node)) {
+      if (c.group === -1) {
+        this.#explore(c);
       }
-      for (const n of nodes) {
-        if (n.group === -1) {
-          explore(n);
-          group++;
+    }
+  };
+
+  /**
+   * @param {PointerEvent} event
+   */
+  #onPointerStuff = (event) => {
+    // Scale mouse coordinates from DOM to canvas size
+    const x = (event.offsetX / this.#canvas.clientWidth) * this.#canvas.width;
+    const y = (event.offsetY / this.#canvas.clientHeight) * this.#canvas.height;
+    let removeNode;
+    for (const n of this.#nodes) {
+      if (distance(n.x, n.y, x, y) < this.#pointRadius) {
+        if (event.type === "pointerdown") {
+          removeNode = n;
         }
+        n.size = 1.2;
+      } else {
+        n.size = 1;
       }
-    };
+    }
+    if (removeNode) {
+      this.#nodes = this.#nodes.filter((n) => n !== removeNode);
+      this.segments = this.segments.filter(
+        (s) => !(s.node1 === removeNode || s.node2 === removeNode)
+      );
+    }
+  };
 
-    const explore = (node) => {
-      node.group = group;
-      for (const c of connections.get(node)) {
-        if (c.group === -1) {
-          explore(c);
-        }
-      }
-    };
+  #draw = () => {
+    this.#ctx.clearRect(0, 0, this.#canvas.width, this.#canvas.height);
+    this.#updateState();
+    for (const s of this.segments) {
+      this.#setTheme(s.node1.group);
+      this.#drawLine(s.node1, s.node2);
+    }
+    for (const n of this.#nodes) {
+      this.#setTheme(n.group);
+      this.#drawPoint(n);
+    }
+    this.#abortController.signal.throwIfAborted();
+    if (this.isConnected) {
+      requestAnimationFrame(this.#draw);
+    }
+  };
 
-    const draw = (dt) => {
-      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-      updateState();
-      for (const s of segments) {
-        setTheme(s.node1.group, dt);
-        drawLine(s.node1, s.node2, dt);
-      }
-      for (const n of nodes) {
-        setTheme(n.group, dt);
-        drawPoint(n, dt);
-      }
-      signal.throwIfAborted();
-      if (this.isConnected) {
-        requestAnimationFrame(draw);
-      }
-    };
-
-    requestAnimationFrame(draw);
+  /**
+   * @param {string} selector
+   */
+  #$(selector) {
+    return (
+      this.shadowRoot?.querySelector(selector) ||
+      this.#kaboom("couldn't find " + selector)
+    );
   }
 
-  disconnectedCallback() {
-    this.abortController.abort();
-    this.shadowRoot.innerHTML = "";
+  /** @returns {never} */
+  #kaboom(message) {
+    throw new Error(message);
   }
 }
 
@@ -251,6 +324,10 @@ class Segment {
     this.node1 = node1;
     this.node2 = node2;
   }
+}
+
+function distance(x1, y1, x2, y2) {
+  return Math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2);
 }
 
 customElements.define(

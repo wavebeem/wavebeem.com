@@ -15,8 +15,7 @@ I originally created this in 2019 for a graph editor project I was working on.
 **Click a node to remove it and its connections from the graph.**
 
 You can watch the graphs recolor in real time as the number of disjoint graphs
-changes. You can refresh the page to start over with the full graph, I'm too
-lazy to make a button for it right now.
+changes. Reset and try again to see a different variation.
 
 ## How it works
 
