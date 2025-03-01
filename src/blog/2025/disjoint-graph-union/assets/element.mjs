@@ -140,10 +140,6 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
       [9, 10],
       [10, 11],
       [11, 12],
-
-      [12, 6],
-      [9, 2],
-      [5, 7],
     ];
     this.#nodes = [];
     this.segments = [];
