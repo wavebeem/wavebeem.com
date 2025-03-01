@@ -38,9 +38,9 @@ command, but I suggest installing an up to date version if possible.
 magick INPUT.png -resize '128x128>' -quality 100 OUTPUT.webp
 ```
 
-![](./1a.png)
+![](./assets/1a.png)
 
-![](./1b.png)
+![](./assets/1b.png)
 
 Don't worry about the `128x128` being a square aspect ratio, ImageMagick will
 never change the aspect ratio of your image without you explicitly requesting
@@ -65,9 +65,9 @@ you'll want to use `-scale` instead of `-resize`.
 magick INPUT.png -scale '200%' -quality 100 OUTPUT.webp
 ```
 
-![](./2a.png)
+![](./assets/2a.png)
 
-![](./2b.png)
+![](./assets/2b.png)
 
 Even though a 200% image is two times the size of the input, if it's pixel art,
 it will barely be any larger as a WebP files. Upscaling pixel art to a large
@@ -85,7 +85,7 @@ WebP also supports animation:
 magick -delay 100 f-1.png f-2.png f-3.png animated.webp
 ```
 
-![](./3.webp)
+![](./assets/3.webp)
 
 By default the delay is 0, and 100 means 1 second of delay. This lines up with
 the GIF format using centiseconds as the frame delay value.
