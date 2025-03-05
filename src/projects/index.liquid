@@ -1,12 +1,14 @@
 ---
 title: "Projects"
-description: "Information about side projects I've created."
 layout: "layout-base"
 ---
 
-<h1>{{ title }}</h1>
-
-<p>{{ description }}</p>
+<article>
+  <header>
+    <h1>{{ title | escape }}</h1>
+    <p>Information about side projects I've created.</p>
+  </header>
+</article>
 
 <h2>My favorites</h2>
 

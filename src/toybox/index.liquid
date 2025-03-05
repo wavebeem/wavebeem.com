@@ -1,20 +1,18 @@
 ---
 title: "Toybox"
-description:
-  "A silly little collection of toys and jokes made specifically for the web."
 layout: "layout-base"
 override:tags: []
 ---
 
 <article>
   <header>
-    <h1>{{ title }}</h1>
-
-    <p>{{ description }}</p>
+    <h1>{{ title | escape }}</h1>
 
     <p>
-      <a href="/feed.xml">Subscribe</a> to stay up to date.
+      A silly little collection of toys and jokes made specifically for the web.
     </p>
+
+    <p><a href="/feed.xml">Subscribe</a> to stay up to date.</p>
   </header>
 
   <h2>All toys</h2>

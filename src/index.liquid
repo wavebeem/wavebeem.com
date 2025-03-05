@@ -5,7 +5,6 @@ layout: "layout-base"
 tags:
   - "nav"
 ---
-
 <script type="module" src="/elements/wavebeem-easter-egg.mjs"></script>
 
 <article>
@@ -16,41 +15,43 @@ tags:
       src="photo-360.webp"
       width="180"
       height="180"
-    />
+    >
   </wavebeem-easter-egg>
 
-  <h1>Hello!</h1>
+  <header>
+    <h1>Hello!</h1>
 
-  <p>
-    I'm
-    <a href="/about/"><strong>Sage</strong></a>
-    (they/them), aka
-    <q>wavebeem</q>.
-  </p>
+    <p>
+      I'm
+      <a href="/about/"><strong>Sage</strong></a>
+      (they/them), aka
+      <q>wavebeem</q>.
+    </p>
 
-  <p>
-    I'm a video game obsessed web developer and an official representative of
-    the color green.
-  </p>
-
-  <p>Read more <a href="/about/">about me</a>.</p>
+    <p>
+      I'm a video game obsessed web developer and an official representative of the color green. Read more
+      <a href="/about/">about me</a>.
+    </p>
+  </header>
 
   <div class="clearfix"></div>
 
   <h2>Recent posts</h2>
 
-  {% assign top3 = collections.posts | reverse | take: 3 %} {% for post in top3
-  %}
-  <article>
-    <header>
-      <h3>
-        <a href="{{ post.url }}">
-          {{ post.data.title | escape }}
-        </a>
-      </h3>
-      <small>{% render "partials/date" date: post.date %}</small>
-    </header>
-    <p>{{ post.data.description | escape }}</p>
-  </article>
+  {% assign top3 = collections.posts | reverse | take: 3 %}
+  {% for post in top3 %}
+    <article>
+      <header>
+        <h3>
+          <a href="{{ post.url }}">
+            {{ post.data.title | escape }}
+          </a>
+        </h3>
+        <small>{% render 'partials/date', date: post.date %}</small>
+      </header>
+      <p>{{ post.data.description | markdownify }}</p>
+    </article>
   {% endfor %}
 </article>
+
+<p><a href="/blog/">More blog posts</a> &rarr;</p>

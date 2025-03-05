@@ -1,7 +1,5 @@
 ---
 title: "Blog"
-description: >-
-  My blog. Posts about my life, video games, programming, and even recipes.
 layout: "layout-base"
 override:tags: []
 permalink: null
@@ -11,7 +9,12 @@ tags:
 
 <article>
   <header>
-    <h1>{{ title }}</h1>
+    <h1>{{ title | escape }}</h1>
+
+    <p>
+      Programming guides, project updates, video game reviews, life events, and
+      more.
+    </p>
 
     <p><a href="/subscribe/">Subscribe</a> to stay up to date.</p>
   </header>
@@ -35,7 +38,7 @@ tags:
         }}</time>
       </small>
     </header>
-    <p>{{ post.data.description | escape }}</p>
+    <p>{{ post.data.description | markdownify }}</p>
   </article>
   {% endfor %} {% endfor %}
 

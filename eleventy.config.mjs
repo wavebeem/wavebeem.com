@@ -26,7 +26,7 @@ export default function getConfig(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/static": "/" });
   eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg,jpeg,webp,svg,mp4}");
   eleventyConfig.addPassthroughCopy(
-    "src/**/assets/**/*.{png,jpg,jpeg,webp,svg,mp4,css,js,mjs}"
+    "src/**/assets/**/*.{png,jpg,jpeg,webp,svg,mp4,css,js,mjs}",
   );
 
   eleventyConfig.addWatchTarget("./src/_css/");
@@ -73,6 +73,11 @@ export default function getConfig(eleventyConfig) {
       throw new Error(`bad date: ${value}`);
     }
     return dateformat(value, format, isUTC);
+  });
+
+  // https://jeremias.codes/2025/02/markdown-filters-eleventy/
+  eleventyConfig.addFilter("markdownify", function markdownify(content) {
+    return markdown.renderInline(content || "");
   });
 
   eleventyConfig.addFilter("formatTitle", function (value) {

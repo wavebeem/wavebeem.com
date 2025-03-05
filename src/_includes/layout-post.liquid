@@ -3,9 +3,9 @@ layout: "layout-base"
 ---
 <article>
   <header>
-    <h1>{{ title }}</h1>
+    <h1>{{ title | escape }}</h1>
     <small> {% render "partials/date" date: page.date %} </small>
-    <p>{{ description | escape }}</p>
+    <p>{{ description | markdownify }}</p>
   </header>
 
   <section>

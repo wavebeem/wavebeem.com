@@ -1,6 +1,6 @@
 /**
  * @license MIT
- * @copyright Sage Fennel 2024
+ * @copyright wavebeem 2025
  * @see https://www.wavebeem.com/
  */
 

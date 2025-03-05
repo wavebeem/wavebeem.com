@@ -1,17 +1,17 @@
 ---
 title: >-
   Shrines
-description: >-
-  Shrines are spaces dedicated to things I love or have loved in the past. Check
-  back later as I continue to update them.
 layout: "layout-base"
 ---
 
 <article>
   <header>
-    <h1>{{ title }}</h1>
+    <h1>{{ title | escape }}</h1>
 
-    <p>{{ description }}</p>
+    <p>
+      Shrines are spaces dedicated to things I love or have loved in the past.
+      Check back later as I continue to update them.
+    </p>
 
     <p>
       Shrines contain a mixture of art, screenshots, and words written about the

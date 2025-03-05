@@ -2,9 +2,7 @@
 title: >-
   Pokémon
 description: >-
-  Pokémon is one of the most important game franchises to me. I started playing
-  Pokémon Blue on the original Game Boy as a kid, and as an adult I created
-  Pokémon Type Calculator in 2013.
+
 layout: "layout-base"
 theme: "shrine_pkmn"
 ---
@@ -18,9 +16,13 @@ theme: "shrine_pkmn"
 
 <article>
   <header>
-    <h1>{{ title }}</h1>
+    <h1>{{ title | escape }}</h1>
 
-    <p>{{ description }}</p>
+    <p>
+      Pokémon is one of the most important game franchises to me. I started
+      playing Pokémon Blue on the original Game Boy as a kid, and as an adult I
+      created Pokémon Type Calculator in 2013.
+    </p>
   </header>
 
   <h2>Pokémon Type Calculator</h2>

@@ -1,12 +1,11 @@
 ---
 title: "Art"
-description: "A gallery for my art."
 layout: "layout-base"
 ---
 <article>
   <header>
-    <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
+    <h1>{{ title | escape }}</h1>
+    <p>A gallery for my art.</p>
   </header>
 
   <div class="grid2">

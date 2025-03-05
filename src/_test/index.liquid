@@ -2,14 +2,13 @@
 layout: "layout-base"
 title: "Cray authentic taiyaki vegan"
 date: "1970-01-01"
-description: "An example page to exercise my CSS."
 ---
 
 <article>
   <header>
-    <h1>{{ title }}</h1>
+    <h1>{{ title | escape }}</h1>
     <small>{% render "partials/date" date: date %}</small>
-    <p>{{ description }}</p>
+    <p>An example page to exercise my CSS.</p>
   </header>
 
   <h2>What is this?</h2>
