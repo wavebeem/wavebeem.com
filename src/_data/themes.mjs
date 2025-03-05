@@ -77,7 +77,7 @@ export const ys_neutral_green = {
   "color-text": " #ffeaf9",
 };
 
-export const matchlatte_2 = {
+export const matchalatte_2 = {
   "color-background": "#405622",
   "color-text": " #fdfbfb",
 };
