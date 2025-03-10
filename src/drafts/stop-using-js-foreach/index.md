@@ -70,6 +70,9 @@ function find(items) {
   let ret = null;
   let done = false;
   items.forEach((x) => {
+    if (done) {
+      return;
+    }
     if (x.skip) {
       // Skip to the next `x` from `items`
       return;
@@ -118,7 +121,7 @@ million numbers using both iteration techniques.
 
 ```js
 // SETUP CODE
-return [...Array(10_000_000).keys()];
+const data = [...Array(10_000_000).keys()];
 
 // TEST 1
 let sum = 0;
@@ -198,15 +201,15 @@ you're using.
 ## React made everyone allergic to side effects
 
 Because [React](https://react.dev/) has taken over the world and React insists
-in various techniques from functional programming, we have a growing allergy to
-anything that looks like side effects in the JS community. Perhaps `.forEach`
-receives an undue reputation boost by being colocated with `.map`, `.filter`,
-and `.reduce`.
+on using various techniques from functional programming, we have a growing
+allergy to anything that looks like side effects in the JS community. Perhaps
+`.forEach` receives an undue reputation boost by being colocated with `.map`,
+`.filter`, and `.reduce`.
 
 ## Could this be related to for...in?
 
-The related `for...in` loop is a bit confusing is generally something that
-should be avoided in favor of a `for...of` loop iterating the keys of an object:
+The related `for...in` loop is a bit confusing. It should generally be avoided
+in favor of a `for...of` loop iterating the keys of an object:
 
 ```js
 for (const key in object) {
@@ -241,7 +244,7 @@ shouldn't hold back progress. Going from a perfectly consistent but old approach
 to a perfectly consistent and new approach in one single step is challenging on
 any code base of a non-trivial size.
 
-## Could this be related to Ruby's own distaste for for...in loops?
+## Could this be related to Ruby's own distaste of for...in loops?
 
 Ruby has its own `for...in` loop, but it has
 [a couple weird caveats](https://docs.ruby-lang.org/en/2.4.0/syntax/control_expressions_rdoc.html#label-for+Loop)
@@ -254,6 +257,8 @@ versus their preferred `.each` method for iteration.
 > used.
 >
 > The for loop is rarely used in modern ruby programs.
+
+The `for...in` loop in Ruby uses the `.each` method internally:
 
 ```rb
 items = nil
