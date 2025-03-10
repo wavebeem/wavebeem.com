@@ -8,9 +8,9 @@ theme: "shrine_pkmn"
 ---
 
 <style>
-  :has(#gbc-filter:checked) img[src*=".gbc."] {
-    mix-blend-mode: multiply;
-    filter: saturate(0.8) hue-rotate(-2deg);
+  :has(#gbc-filter:checked) img[src*=".gbc."]:not(:hover) {
+    opacity: 0.9;
+    filter: saturate(0.9) contrast(0.9) brightness(1.1) hue-rotate(-10deg);
   }
 </style>
 
@@ -136,6 +136,8 @@ theme: "shrine_pkmn"
     <input id="gbc-filter" type="checkbox" autocomplete="off" checked />
     <span>Game Boy Color screenshot filter</span>
   </label>
+
+  <p>You can hover the images to temporarily turn off the effect.</p>
 
   <figure>
     <img src="./img/title.gbc.webp" alt="" />
