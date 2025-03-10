@@ -1,10 +1,12 @@
 ---
+date: "2025-03-10"
 title: >-
-  Please stop using .forEach
+  In defense of the for...of loop
 description: >-
-  You must use `for...of` instead of `.forEach` if you want to use `await`,
-  `return`, or iterators. And `.forEach` offers no meaningful advantages over
-  `for...of`.
+  Despite its introduction in ES2015 and implementation in all browsers over 8.5
+  years ago, I still see `.forEach` used in favor of the modern `for...of` loop.
+  Sadly, `.forEach` is ill-suited for modern `await`-centric code, and
+  complicates control flow. It's time to revisit this commonly banned syntax.
 ---
 
 ## Async support
@@ -34,7 +36,7 @@ paths.forEach(async (p) => {
 console.log("Done");
 ```
 
-## Proper flow control
+## Flow control
 
 The `for...of` loop supports all regular flow control in JS: `continue`,
 `break`, and `return`. Let's examine this somewhat contrived function that uses
@@ -98,14 +100,10 @@ I've definitely seen people who argue against `continue`, `break`, and "early"
 absence. Not to mention it's strictly less efficient since it can't avoid
 processing the entire list.
 
-You could make the argument to use a numeric `for` loop instead, but I'd rather
-stub my toe than write one of those when I don't need to.
-
-## Support for iterators and generators
+## Iterators and generators
 
 If you're not already using generators, I think you should consider it. I've
-[written about them before](https://www.wavebeem.com/blog/2017/js-iterators/),
-and
+[written about them before](/blog/2017/js-iterators/), and
 [MDN has a nice article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
 covering them. The `.forEach` method is incapable of working with iterators, and
 must convert them to arrays first. This removes all benefits of iterators
@@ -114,7 +112,8 @@ consumption being decoupled from the collection size).
 
 ## Isn't for...of slower?
 
-Maybe, but you're not gonna notice the difference.
+Maybe, but you're not gonna notice the difference. And if you do, you should use
+a numeric `for` loop.
 
 I used [JS Benchmark](https://jsbenchmark.com/) to test the summation of 10
 million numbers using both iteration techniques.
@@ -163,6 +162,8 @@ So there's maybe something to be said here that `for...of` appears to have a
 slower iteration speed and a larger fixed overhead for each run. But I'm willing
 to bet that your time would be better spent making your React app not re-render
 hundreds of times unnecessarily, shrinking your JS bundle, or going on a walk.
+I'm not trying to trivialize performance critical JS, but I don't think most of
+us are in a position where worrying about this detail matters.
 
 Finally, the speed of both of these approaches are simply dwarfed by a standard
 numeric `for` loop. And the regular `for` loop, while clunky to write, supports
@@ -176,7 +177,7 @@ for (let i = 0; i < DATA.length; i++) {
 }
 ```
 
-## for...of has been supported for nearly a decade (ES2015)
+## for...of has been supported natively for nearly a decade
 
 [September 2016](https://caniuse.com/es6) is when the last\* browser (Safari),
 impelmented ES2015, 8.5 years ago at the time of writing.
@@ -195,18 +196,10 @@ natively supported all of these features for years, so hopefully you're not
 targeting ancient versions of JS with your Babel config or whatever compiler
 you're using.
 
-\*Technically Edge took longer, but that's the old version of Edge
-(pre-Chromium), which doesn't exist any more.
+\* _Technically Edge took longer, but that's the old version of Edge
+(pre-Chromium), which doesn't exist any more. Let's not worry about it._
 
-## React made everyone allergic to side effects
-
-Because [React](https://react.dev/) has taken over the world and React insists
-on using various techniques from functional programming, we have a growing
-allergy to anything that looks like side effects in the JS community. Perhaps
-`.forEach` receives an undue reputation boost by being colocated with `.map`,
-`.filter`, and `.reduce`.
-
-## Could this be related to for...in?
+## Confusion between for...of and for...in
 
 The related `for...in` loop is a bit confusing. It should generally be avoided
 in favor of a `for...of` loop iterating the keys of an object:
@@ -227,57 +220,40 @@ Perhaps this common wisdom of avoiding `for...in` mentally polluted people
 against wanting to use `for...of` due to confusion. Anecdotally, some people
 can't remember which is which.
 
-## Could this be related to linter rules?
+## React made everyone allergic to side effects
 
-Because non-native `for...of` is difficult to polyfill 100% correctly, I
-remember seeing some people choose to not use it at all! There were alternative
-polyfill approaches like "array-only" mode so that you could use modern syntax
-without every modern feature, but I suspect it may not have been as popular.
+Because [React](https://react.dev/) has taken over the world and React insists
+on using various techniques from functional programming, we have a growing
+allergy to anything that looks like side effects in the JS community. Perhaps
+`.forEach` receives an undue reputation boost by being colocated with `.map`,
+`.filter`, and `.reduce`. I should write about how referential transparency does
+not require a complete ban on immutability in the future.
+
+## Airbnb style guide strikes again
 
 Prebuilt ESLint rule collections can be really influential. The
 [Airbnb ESLint config package](https://www.npmjs.com/package/eslint-config-airbnb)
-gets nearly 3.5 million weekly downloads.
+gets nearly 3.5 million weekly downloads. Airbnb's style guide
+[bans the use of for...of](https://airbnb.io/javascript/#iterators--nope)
+entirely, based on a strong emphasis for non-mutative array methods and a
+distaste for compiling generators to ES5. I would love to see them revisit this
+in the future due to their influence.
 
-I've seen first-hand that companies will cling to outdated rules laid down 5+
-years ago in the name of consistency. I'm a firm believer that consistency
-shouldn't hold back progress. Going from a perfectly consistent but old approach
-to a perfectly consistent and new approach in one single step is challenging on
-any code base of a non-trivial size.
+Style guides can offer a comforting consistency to code bases, but progress
+requires inconsistency as you migrate from old to new approaches.
 
-## Could this be related to Ruby's own distaste of for...in loops?
+## Conclusion
 
-Ruby has its own `for...in` loop, but it has
-[a couple weird caveats](https://docs.ruby-lang.org/en/2.4.0/syntax/control_expressions_rdoc.html#label-for+Loop)
-versus their preferred `.each` method for iteration.
+I realize that generators were inefficient to support when targeting ES5
+environments, but now that we're 8.5 years removed from that era, I think we
+should revisit our coding practices.
 
-> The for loop is similar to using each, but does not create a new variable
-> scope.
->
-> The result value of a for loop is the value iterated over unless break is
-> used.
->
-> The for loop is rarely used in modern ruby programs.
+Hopefully the caveats I've shown make it clear that `for...of` is massively more
+powerful and easier to read than `.forEach`.
 
-The `for...in` loop in Ruby uses the `.each` method internally:
+## Further reading
 
-```rb
-items = nil
-for x in items
-  puts x
-end
-# undefined method `each' for nil:NilClass (NoMethodError)
-```
-
-```rb
-items = nil
-items.each do |x|
-  puts x
-end
-# undefined method `each' for nil:NilClass (NoMethodError)
-```
-
-Besides those caveats, it's really just syntax sugar over some methods (a common
-occurrence in Ruby). Perhaps there's a default [RubuCop](https://rubocop.org/)
-linter rule that prevents you from using `for...in`? It wouldn't be the first
-time I saw JS coding standards influenced by practices from the Ruby on Rails
-community.
+The Code Barbarian has a great article about
+[For vs forEach() vs for/in vs for/of in JavaScript](https://thecodebarbarian.com/for-vs-for-each-vs-for-in-vs-for-of-in-javascript#empty-elements)
+that you can read as well. Hat tip to them for confirming
+[my suspicion about the Airbnb style guide](https://airbnb.io/javascript/#iterators--nope).
