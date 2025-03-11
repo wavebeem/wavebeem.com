@@ -407,7 +407,7 @@ dl > dd {
   margin: 0;
 }
 
-dl > dd + dt {
+dl > :is(dd + dt, dt + dt) {
   margin-top: 1.5rem;
 }
 

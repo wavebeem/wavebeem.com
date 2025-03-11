@@ -3,6 +3,11 @@ import { Glob } from "glob";
 import { existsSync } from "node:fs";
 import { run, chdir, match } from "./_util.mjs";
 
+// Looking to generate thumbnails from videos? Make a script for that
+// eventually, yeah?
+//
+// ffmpeg -y -i INPUT.mp4 -ss 00:00:05.000 -vframes 1 INPUT.webp
+
 // TODO: Update this to work with images outside the Eleventy static directory.
 // Use extname and basename to avoid globbing repeatedly.
 
@@ -25,7 +30,7 @@ async function main([flag]) {
             "1280x720>",
             "-quality",
             "80",
-            dest
+            dest,
           );
         } else if (base.endsWith(".pxl")) {
           await run(
@@ -35,7 +40,7 @@ async function main([flag]) {
             "1280x720>",
             "-quality",
             "100",
-            dest
+            dest,
           );
         } else if (base.endsWith(".gbc")) {
           await run("magick", file, "-scale", "300%", "-quality", "100", dest);

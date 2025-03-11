@@ -4,6 +4,7 @@
  * @typedef CoolLink
  * @prop {string} url
  * @prop {string} title
+ * @prop {string} description
  */
 
 /** @type {CoolLink[]} */

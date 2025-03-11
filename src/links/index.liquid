@@ -13,15 +13,16 @@ layout: "layout-base"
 
   <p>Links are in alphabetical order. Remind me to organize them later.</p>
 
-  <ul>
+  <dl>
     {% for link in coolLinks.allLinks %}
-    <li>
-      <p>
-        <a href="{{ link.url }}">{{ link.title }}</a>
-      </p>
-    </li>
+    <dt>
+      <a href="{{ link.url }}">{{ link.title }}</a>
+    </dt>
+    <dd>
+      {{ link.description | escape }}
+    </dd>
     {% endfor %}
-  </ul>
+  </dl>
 
   <h2>Embed my site button</h2>
 
