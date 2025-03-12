@@ -112,6 +112,16 @@ consumption being decoupled from the collection size).
 
 ## Isn't for...of slower?
 
+**EDIT:** I only tested in Firefox for this section. That was a mistake. When
+testing in Edge and Safari, `for...of` was actually as fast or fast than
+`.forEach` in general. Numeric `for` still won in many tests, but I actually
+found for small iteration counts that `for...of` was winning in Edge. I will not
+pretend to be a benchmarking expert here, and benchmarking languages with JIT
+compilation and several implementations is extra tough. Thanks,
+[Tegan](https://social.vivaldi.net/@rawrmonstar/114141700781705291), for
+pointing out conflicting benchmark results. I should probably test in the most
+popular browsers when doing benchmarks. My mistake. (_2025-03-11_)
+
 Maybe, but you're not gonna notice the difference. And if you do, you should use
 a numeric `for` loop.
 
