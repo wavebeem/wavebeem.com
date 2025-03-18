@@ -238,6 +238,6 @@ interesting than any Pokémon game I've played, barring maybe Scarlet/Violet.
 
 <wavebeem-review-pokemon-crystal-sprites>
   <button type="button">
-    <img src="./assets/kris.webp" alt="" width="48" height="48" />
+    <img src="./assets/kris.webp" alt="Change image" width="48" height="48" />
   </button>
 </wavebeem-review-pokemon-crystal-sprites>

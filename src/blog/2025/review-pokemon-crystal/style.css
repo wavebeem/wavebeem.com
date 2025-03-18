@@ -7,24 +7,28 @@ wavebeem-review-pokemon-crystal-sprites {
 
   & button {
     all: inherit;
-    border-radius: 6px;
-    padding: 6px;
     display: flex;
-    background: #fff;
-    padding: 12px;
-    filter: var(--filter-gbc);
-  }
-
-  & button:hover {
-    outline: unset;
+    border-radius: 6px;
+    overflow: hidden;
     cursor:
       url("./assets/cursor.svg") 8 8,
       default;
   }
 
+  & button:hover {
+    outline: unset;
+  }
+
   & button:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 4px;
+    outline: 2px solid;
+    outline-offset: 2px;
+  }
+
+  & img {
+    box-sizing: content-box;
+    background: #fff;
+    padding: 12px;
+    filter: var(--filter-gbc);
   }
 }
 
