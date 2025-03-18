@@ -1,14 +1,18 @@
 body > footer {
-  padding: 1rem;
+  padding-inline: 1rem;
+  padding-block: 0;
   grid-area: footer;
   font-size: var(--font-size-small);
-  padding-bottom: 2rem;
 }
 
 body > footer > [role="separator"] {
   border-top: 1px dotted;
   width: 100%;
-  margin: 1.5rem 0;
+  margin-block: 1.5rem;
+}
+
+body > footer > p {
+  margin-block: 1.5rem;
 }
 
 @media (width >= 64rem) {

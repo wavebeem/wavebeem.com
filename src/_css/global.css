@@ -203,7 +203,8 @@ main {
   flex: auto;
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
+  padding-block: 2rem 0;
+  padding-inline: 1rem;
 }
 
 article header :is(h1, h2, h3) {
@@ -364,11 +365,13 @@ article figure figcaption {
   margin-top: 1rem;
   font-size: var(--font-size-small);
   font-weight: bold;
+  text-wrap: balance;
 }
 
 article figure figcaption small {
   font-weight: normal;
   font-size: var(--font-size-small);
+  text-wrap: balance;
   opacity: 0.75;
 }
 
@@ -381,6 +384,7 @@ article
   + p:has(> strong:only-child) {
   margin-top: -0.5rem;
   font-size: var(--font-size-small);
+  text-wrap: balance;
 }
 
 article blockquote,
@@ -436,6 +440,11 @@ dl > :is(dd + dt, dt + dt) {
     transition: none !important;
     animation: none !important;
   }
+}
+
+.inline-img {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .print-only {

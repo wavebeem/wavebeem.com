@@ -24,10 +24,11 @@ export default function getConfig(eleventyConfig) {
   });
 
   eleventyConfig.addPassthroughCopy({ "src/static": "/" });
-  eleventyConfig.addPassthroughCopy("src/**/*.{png,jpg,jpeg,webp,svg,mp4}");
   eleventyConfig.addPassthroughCopy(
-    "src/**/assets/**/*.{png,jpg,jpeg,webp,svg,mp4,css,js,mjs}",
+    "src/**/*.{png,jpg,jpeg,webp,svg,mp4,css,mjs}",
   );
+  eleventyConfig.addPassthroughCopy("src/**/assets/**/*");
+  eleventyConfig.addPassthroughCopy("src/**/img/**/*");
 
   eleventyConfig.addWatchTarget("./src/_css/");
 
