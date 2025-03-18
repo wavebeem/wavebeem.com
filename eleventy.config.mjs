@@ -76,6 +76,12 @@ export default function getConfig(eleventyConfig) {
     return dateformat(value, format, isUTC);
   });
 
+  eleventyConfig.addFilter("toUTC", function (date) {
+    const newDate = new Date(date);
+    newDate.setUTCHours(8, 0);
+    return newDate.toISOString();
+  });
+
   // https://jeremias.codes/2025/02/markdown-filters-eleventy/
   eleventyConfig.addFilter("markdownify", function markdownify(content) {
     return markdown.renderInline(content || "");

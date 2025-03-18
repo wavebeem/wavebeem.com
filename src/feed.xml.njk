@@ -27,7 +27,7 @@
   <subtitle>{{ metadata.description }}</subtitle>
   <link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
   <link href="{{ metadata.base | addPathPrefixToFullUrl }}" />
-  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+  <updated>{{ collections.posts | getNewestCollectionItemDate | toUTC }}</updated>
   <id>{{ metadata.base | addPathPrefixToFullUrl }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>
@@ -37,7 +37,7 @@
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}" rel="alternate" />
-    <updated>{{ post.date | dateToRfc3339 }}</updated>
+    <updated>{{ post.date | toUTC }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <summary>
       DESCRIPTION: {{ post.data.description }} [...]
