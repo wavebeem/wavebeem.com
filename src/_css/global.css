@@ -8,8 +8,8 @@
   overflow-y: scroll;
   color-scheme: light dark;
   scrollbar-color: var(--color-text) var(--color-background);
-  background-color: var(--color-background);
-  color: var(--color-text);
+  background-color: var(--color-background-green1);
+  color: #fff;
   /* overscroll-behavior: none; */
 }
 
@@ -201,10 +201,15 @@ main :is(ul, ol) :is(ul, ol) {
 
 main {
   flex: auto;
-  display: flex;
-  flex-direction: column;
-  padding-block: 2rem 0;
+  /* display: flex;
+  flex-direction: column; */
+  padding-block: 2rem 4rem;
   padding-inline: 1rem;
+
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border-top-left-radius: var(--rounded-large);
+  border-top-right-radius: var(--rounded-large);
 }
 
 article {
@@ -426,20 +431,51 @@ dl > :is(dd + dt, dt + dt) {
   body {
     display: grid;
     /* Prevent grid blowout by using minmax(0, 1fr) instead of 1fr */
-    grid-template-columns: max-content 32px minmax(0, 1fr);
+    grid-template-columns: max-content minmax(0, 1fr);
     grid-template-rows: 1fr min-content;
     grid-template-areas:
-      "header divider main"
-      "header divider footer";
+      "header main"
+      "footer main";
+    /* gap: 2rem; */
+    margin: 2rem;
+    padding: 1rem;
     /* max-width: 80rem;
     margin-inline: auto; */
-    align-items: flex-start;
+    /* align-items: flex-start; */
     align-items: stretch;
+    background: var(--color-background-green1);
+    border-radius: calc(1rem + var(--rounded-large));
   }
 
   main {
     padding-inline: 2rem;
     grid-area: main;
+    border-radius: var(--rounded-large);
+  }
+
+  :root {
+    scrollbar-color: #fff transparent;
+    --s: 64px; /* control the size*/
+    /* --c1: #eee;
+    --c2: #ddd; */
+    --c1: var(--color-background-green2);
+    --c2: var(--color-background-green1);
+    /* --c1: #666;
+    --c2: #555; */
+
+    /* https://css-pattern.com/overlapping-circles/ */
+    --_g:
+      var(--c1) 0% 5%, var(--c2) 8% 15%, var(--c1) 18% 25%, var(--c2) 28% 35%,
+      var(--c1) 38% 45%, var(--c2) 48% 55%, var(--c1) 58% 65%,
+      var(--c2) 68% 75%, var(--c1) 78% 85%, var(--c2) 88% 95%, #0000 98%;
+    background:
+      radial-gradient(50% 50% at 100% 0, var(--_g)),
+      radial-gradient(50% 50% at 0 100%, var(--_g)),
+      radial-gradient(50% 50%, var(--_g)),
+      radial-gradient(50% 50%, var(--_g)) calc(var(--s) / 2) calc(var(--s) / 2)
+        var(--c2);
+    background-size: var(--s) var(--s);
+    background-attachment: fixed;
   }
 }
 

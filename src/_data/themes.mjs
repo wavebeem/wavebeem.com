@@ -18,6 +18,9 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 }
 
 export const light = {
+  "color-background-green1": "hsl(140 50% 30%)",
+  "color-background-green2": "hsl(140 50% 35%)",
+
   "color-background": "#eee",
   "color-text": "#333",
   "color-text-small": "#666",
@@ -35,7 +38,7 @@ export const light = {
 
 export const dark = {
   "color-background": "#333",
-  "color-text": "#ccc",
+  "color-text": "#eee",
   "color-text-small": "#aaa",
   "color-divider": "#666",
   "color-link": "#6ed690",

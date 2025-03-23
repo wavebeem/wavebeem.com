@@ -1,8 +1,17 @@
 body > footer {
+  --color-background: var(--color-background-green1);
+  --color-divider: var(--color-background-green2);
+  --color-text: #fff;
+  --color-link: #fff;
+
   padding-inline: 1rem;
   padding-block: 0;
   grid-area: footer;
   font-size: var(--font-size-small);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  border-bottom-left-radius: var(--rounded-large);
+  border-bottom-right-radius: var(--rounded-large);
 }
 
 body > footer > [role="separator"] {
@@ -16,8 +25,8 @@ body > footer > p {
   margin-block: 1.5rem;
 }
 
-@media (width >= 64rem) {
+/* @media (width >= 64rem) {
   body > footer {
     padding-inline: 2rem;
   }
-}
+} */
