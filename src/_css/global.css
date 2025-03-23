@@ -28,6 +28,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0;
+  max-width: 70rem;
 }
 
 a {
@@ -437,7 +438,6 @@ dl > :is(dd + dt, dt + dt) {
       "header main"
       "footer main";
     /* gap: 2rem; */
-    margin: 2rem;
     padding: 1rem;
     /* max-width: 80rem;
     margin-inline: auto; */
@@ -454,14 +454,12 @@ dl > :is(dd + dt, dt + dt) {
   }
 
   :root {
+    padding: 2rem;
+
     scrollbar-color: #fff transparent;
     --s: 64px; /* control the size*/
-    /* --c1: #eee;
-    --c2: #ddd; */
     --c1: var(--color-background-green2);
     --c2: var(--color-background-green1);
-    /* --c1: #666;
-    --c2: #555; */
 
     /* https://css-pattern.com/overlapping-circles/ */
     --_g:
