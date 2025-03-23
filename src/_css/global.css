@@ -5,12 +5,17 @@
 }
 
 :root {
+  --color-background: var(--color-root-green1);
+  --color-text: var(--color-root-text);
+  --color-text-small: var(--color-root-text);
+  --color-divider: var(--color-root-divider);
+  --color-link: var(--color-root-text);
+
   overflow-y: scroll;
   color-scheme: light dark;
-  scrollbar-color: var(--color-text) var(--color-background);
-  background-color: var(--color-background-green1);
-  color: #fff;
-  /* overscroll-behavior: none; */
+  scrollbar-color: var(--color-main-text) var(--color-main-background);
+  background-color: var(--color-background);
+  color: var(--color-text);
 }
 
 body {
@@ -28,7 +33,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0;
-  max-width: 70rem;
+  max-width: 60rem;
 }
 
 a {
@@ -169,24 +174,6 @@ main details[open] > summary {
   outline-offset: 2px;
 }
 
-.header :any-link {
-  color: var(--color-link);
-}
-
-.logo:any-link {
-  display: block;
-  /* color: inherit; */
-}
-
-.header .content-column {
-  display: grid;
-  grid-template-columns: 1fr max-content;
-  justify-content: space-between;
-  isolation: isolate;
-  padding-block: 0.5rem;
-  padding-inline: 1rem;
-}
-
 main :is(blockquote, ul, ol, dl, p) {
   margin-block: 1.5rem;
   max-width: 50rem;
@@ -206,6 +193,12 @@ main :is(ul, ol) :is(ul, ol) {
 }
 
 main {
+  --color-background: var(--color-main-background);
+  --color-text: var(--color-main-text);
+  --color-text-small: var(--color-main-text-small);
+  --color-divider: var(--color-main-divider);
+  --color-link: var(--color-main-link);
+
   flex: auto;
   /* display: flex;
   flex-direction: column; */
@@ -445,7 +438,7 @@ dl > :is(dd + dt, dt + dt) {
     padding: 1rem;
     padding-left: 0;
     align-items: stretch;
-    /* background: var(--color-background-green1); */
+    /* background: var(--color-root-green1); */
     border-radius: var(--rounded-large);
   }
 
@@ -457,28 +450,16 @@ dl > :is(dd + dt, dt + dt) {
 
   :root {
     padding: 1.5rem;
+    scrollbar-color: var(--color-text) transparent;
 
-    scrollbar-color: #fff transparent;
-    --s: 512px; /* control the size*/
-    --c1: var(--color-background-green3);
-    --c2: var(--color-background-green4);
-    --_f: 0.5%;
-
-    /* https://css-pattern.com/overlapping-circles/ */
-    --_g:
-      var(--c1) 0% 5%, var(--c2) calc(var(--_f) + 5%) 15%,
-      var(--c1) calc(var(--_f) + 15%) 25%, var(--c2) calc(var(--_f) + 25%) 35%,
-      var(--c1) calc(var(--_f) + 35%) 45%, var(--c2) calc(var(--_f) + 45%) 55%,
-      var(--c1) calc(var(--_f) + 55%) 65%, var(--c2) calc(var(--_f) + 65%) 75%,
-      var(--c1) calc(var(--_f) + 75%) 85%, var(--c2) calc(var(--_f) + 85%) 95%,
-      #0000 calc(var(--_f) + 95%);
-    background:
-      radial-gradient(50% 50% at 100% 0, var(--_g)),
-      radial-gradient(50% 50% at 0 100%, var(--_g)),
-      radial-gradient(50% 50%, var(--_g)),
-      radial-gradient(50% 50%, var(--_g)) calc(var(--s) / 2) calc(var(--s) / 2)
-        var(--c2);
-    background-size: var(--s) var(--s);
+    --_s: 30px;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--color-root-green4) calc(0 * var(--_s)) calc(1 * var(--_s)),
+        var(--color-root-green3) calc(1 * var(--_s)) calc(3 * var(--_s)),
+        var(--color-root-green4) calc(3 * var(--_s)) calc(4 * var(--_s))
+      )
+      var(--color-root-green4);
     background-attachment: fixed;
   }
 }

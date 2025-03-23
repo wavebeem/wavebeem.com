@@ -1,7 +1,4 @@
 body > footer {
-  --color-background: var(--color-background-green1);
-  /* --color-divider: var(--color-background-green2); */
-
   display: flex;
   gap: 1rem;
   justify-content: space-between;
@@ -14,6 +11,10 @@ body > footer {
   color: var(--color-text);
   border-bottom-left-radius: var(--rounded-medium);
   border-bottom-right-radius: var(--rounded-medium);
+}
+
+body > footer a {
+  color: inherit;
 }
 
 @media (width >= 64rem) {

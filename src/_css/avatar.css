@@ -40,6 +40,7 @@ wavebeem-easter-egg img {
   height: var(--avatar-size);
   /* filter: contrast(1.1) brightness(1.1); */
   filter: grayscale(1) contrast(1.9) brightness(0.9);
+  mix-blend-mode: luminosity;
 }
 
 @media (prefers-reduced-motion: reduce), not (hover) {

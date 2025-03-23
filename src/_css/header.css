@@ -1,20 +1,19 @@
-body > nav {
-  --color-background: var(--color-background-green1);
-  /* --color-divider: var(--color-background-green2); */
-  --color-text: #fff;
-  --color-link: #fff;
+.header :any-link {
+  color: var(--color-link);
+  color: inherit;
+}
 
+.logo:any-link {
+  display: block;
+  /* color: inherit; */
+}
+
+body > nav {
   grid-area: nav;
 }
 
 body > header {
-  --color-background: var(--color-background-green1);
-  /* --color-divider: var(--color-background-green2); */
-  --color-text: #fff;
-  --color-link: #fff;
-
   color: var(--color-text);
-  border-radius: var(--rounded-medium);
 }
 
 .hamburger {
