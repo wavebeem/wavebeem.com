@@ -1,0 +1,80 @@
+body > nav a {
+  font-size: var(--font-size-small);
+  display: flex;
+  gap: 0.5ch;
+  align-items: center;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  color: var(--color-header-text);
+  border-radius: var(--rounded-small);
+  text-decoration-line: none;
+  text-decoration-thickness: var(--link-underline-thickness);
+}
+
+@media (hover) {
+  body > nav a:hover {
+    text-decoration-line: underline;
+  }
+}
+
+body > nav {
+  gap: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+body > nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  gap: 0;
+}
+
+body > nav dt {
+  padding: 0.5rem 0;
+  font-family: var(--font-cool);
+}
+
+body > nav dl {
+  margin: 0;
+}
+
+body > nav dt {
+  /* border-bottom: 1px dotted; */
+  border-bottom: 1px solid var(--color-divider);
+}
+
+body > nav ul {
+  padding: 0;
+  /* padding-left: 1rem; */
+  margin: 0;
+  list-style-type: none;
+}
+
+body > nav a {
+  padding: 0.5rem;
+  text-decoration-line: none;
+  /* border-bottom: 1px dotted; */
+  border-bottom: 1px solid var(--color-divider);
+  border-radius: 0;
+  padding-inline: 0;
+}
+
+body > nav a:focus-visible {
+  outline-offset: 2px;
+  border-radius: var(--rounded-small);
+}
+
+@media (hover) {
+  body > nav a:hover {
+    border-bottom-color: inherit;
+    box-shadow: inset 0 -1px 0 0;
+    border-bottom-style: solid;
+    text-decoration-line: none;
+  }
+}

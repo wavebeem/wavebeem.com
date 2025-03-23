@@ -20,12 +20,19 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 export const light = {
   "color-background-green1": "hsl(140 50% 30%)",
   "color-background-green2": "hsl(140 50% 35%)",
+  "color-background-green3": "hsl(140 50% 30%)",
+  "color-background-green4": "hsl(140 50% 29%)",
+  "color-background-text": "hsl(140 25% 92%)",
+  "color-background-divider": "hsl(140 25% 92% / 10%)",
 
-  "color-background": "#eee",
+  // "color-background": "#eee",
+  "color-background": "hsl(140 25% 92%)",
+  // "color-text": "hsl(140 25% 24%)",
   "color-text": "#333",
   "color-text-small": "#666",
-  "color-divider": "#ccc",
-  "color-link": "#007a3a",
+  "color-divider": "#fff2",
+  // "color-link": "hsl(140 100% 24%)",
+  "color-link": "hsl(256 56% 52%)",
 
   "color-syntax-background": "#fff",
   "color-syntax-text": oklch(20, 0, 340),
@@ -37,13 +44,15 @@ export const light = {
 };
 
 export const dark = {
-  "color-background": "#333",
-  "color-text": "#eee",
+  "color-background": "hsl(140 25% 25%)",
+  // "color-background": "#333",
+  "color-text": "#fff",
   "color-text-small": "#aaa",
-  "color-divider": "#666",
-  "color-link": "#6ed690",
+  "color-divider": "#fff2",
+  // "color-divider": "hsl(140 25% 35%)",
+  "color-link": "hsl(140 56% 64%)",
 
-  "color-syntax-background": "#222",
+  "color-syntax-background": "hsl(140 25% 20%)",
   "color-syntax-text": oklch(90, 0, 340),
   "color-syntax-comment": oklch(70, 15, 290),
   "color-syntax-keyword": oklch(80, 70, 340),

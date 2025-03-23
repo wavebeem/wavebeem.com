@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "PP Editorial New";
-  src: url("/fonts/PPEditorialNew-Bold.woff2") format("woff2");
-  font-weight: bold;
+  font-family: "Whisper";
+  src: url("/fonts/Whisper-Regular.woff2") format("woff2");
+  font-weight: normal;
   font-display: swap;
 }
 

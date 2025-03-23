@@ -1,5 +1,5 @@
 article pre {
-  border-radius: var(--rounded-large);
+  border-radius: var(--rounded-medium);
   margin-block: 1.5rem;
   margin-inline: 0;
   padding: 1rem;
