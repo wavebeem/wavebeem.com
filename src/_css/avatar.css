@@ -1,12 +1,12 @@
 wavebeem-easter-egg {
   --avatar-size: 180px;
   --avatar-padding: 0px;
-  --avatar-blend-mode: multiply;
+  /* --avatar-blend-mode: multiply; */
   float: right;
   margin: 1rem;
   margin-right: 0;
   margin-top: 0;
-  background-color: var(--color-background);
+  /* background-color: var(--color-background); */
   padding: var(--avatar-padding);
   border-radius: var(--rounded-pill);
   --wavebeem-easter-egg--shadow-color: hsl(0 0% 0% / 50%);
@@ -19,11 +19,11 @@ wavebeem-easter-egg {
   /* touch-action: none; */
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   wavebeem-easter-egg {
     --avatar-blend-mode: screen;
   }
-}
+} */
 
 wavebeem-easter-egg[data-state="inside"] {
   background: transparent;
@@ -38,8 +38,7 @@ wavebeem-easter-egg img {
   border-radius: var(--rounded-pill);
   width: var(--avatar-size);
   height: var(--avatar-size);
-  filter: grayscale(1) contrast(1.85) brightness(0.98);
-  mix-blend-mode: var(--avatar-blend-mode);
+  filter: grayscale(1) contrast(1.8) brightness(0.8);
 }
 
 @media (prefers-reduced-motion: reduce), not (hover) {
@@ -98,7 +97,8 @@ wavebeem-easter-egg::before {
     hsl(0 0% 0% / 100%),
     hsl(0 0% 0% / 0%) calc(100% * var(--r))
   );
-  background: calc(var(--s) / -4) calc(var(--s) / -4) / var(--_g),
+  background:
+    calc(var(--s) / -4) calc(var(--s) / -4) / var(--_g),
     calc(var(--s) / 4) calc(var(--s) / 4) / var(--_g),
     radial-gradient(var(--c2) 34%, var(--c1) 36% 68%, #0000 70%) 0 0 /
       calc(var(--s) / 2) calc(var(--s) / 2),

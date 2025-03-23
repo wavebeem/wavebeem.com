@@ -57,8 +57,9 @@ label:has(> input[type="checkbox"]:first-child) {
     &:hover {
       text-decoration-line: underline;
       text-decoration-thickness: 1px;
-      text-decoration-style: dotted;
+      text-decoration-style: solid;
       text-underline-position: under;
+      text-decoration-color: var(--color-divider);
 
       & input[type="checkbox"] {
         outline: 3px solid;
