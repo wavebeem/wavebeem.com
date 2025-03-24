@@ -20,10 +20,10 @@ label:has(> input[type="checkbox"]:first-child) {
       --_size: 2px;
       --_start: calc(50% - 0.5 * var(--_size));
       --_end: calc(var(--_start) + var(--_size));
-      --_bg: var(--color-background);
-      --_fg: var(--color-text);
+      --_bg: var(--color-text);
+      --_fg: var(--color-background);
 
-      border-color: var(--_fg);
+      border-color: var(--_bg);
       background-color: var(--_bg);
       background-image:
         linear-gradient(
@@ -48,8 +48,8 @@ label:has(> input[type="checkbox"]:first-child) {
     }
 
     &:focus-visible {
-      outline-offset: -2px;
-      outline-width: 4px;
+      outline-offset: 2px;
+      outline-width: 2px;
     }
   }
 
@@ -60,11 +60,6 @@ label:has(> input[type="checkbox"]:first-child) {
       text-decoration-style: solid;
       text-underline-position: under;
       text-decoration-color: var(--color-divider);
-
-      & input[type="checkbox"] {
-        outline: 3px solid;
-        outline-offset: -2px;
-      }
     }
   }
 }
