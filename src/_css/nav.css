@@ -20,7 +20,7 @@ body > nav {
 @media (width >= 64rem) {
   body > nav {
     border-radius: var(--rounded-large);
-    padding-block: 0.5rem;
+    padding-top: 0.5rem;
     box-shadow: 0 8px 16px #fff1;
   }
 }

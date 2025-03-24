@@ -22,9 +22,11 @@
   --_c2: var(--color-root-gradient2);
   --_c3: var(--color-root-gradient3);
   background:
+    url("/noisey.webp"),
     radial-gradient(at 0% 0%, var(--_c2) 0px, transparent 50%),
     radial-gradient(at 100% 100%, var(--_c3) 0px, transparent 50%),
     linear-gradient(var(--_c1) 0 100%) var(--color-root-overscroll);
+  background-blend-mode: soft-light, normal, normal, normal;
   background-attachment: fixed;
 }
 
@@ -408,7 +410,6 @@ dl > :is(dd + dt, dt + dt) {
     padding-left: 0;
     /* align-items: stretch; */
     align-items: flex-start;
-    /* background: var(--color-root-green1); */
     border-radius: var(--rounded-large);
   }
 

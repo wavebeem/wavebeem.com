@@ -8,6 +8,10 @@ body > header {
   color: var(--color-text);
 }
 
+body > header .button {
+  box-shadow: 0 8px 16px #0002;
+}
+
 .header :any-link {
   color: var(--color-link);
   color: inherit;
