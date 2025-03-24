@@ -18,14 +18,13 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 }
 
 export const light = {
-  "color-root-background": "#222",
-  "color-root-background-alpha": "#2222",
+  "color-root-background": "#333",
+  "color-root-background-alpha": "#3333",
   "color-root-overscroll": "#222",
   "color-root-gradient1": oklch(55, 30, 152),
   "color-root-gradient2": oklch(55, 30, 290),
-  "color-root-green4": "hsl(140 50% 29% / 70%)",
   "color-root-text": "#fff",
-  "color-root-divider": "#fff2",
+  "color-root-divider": "#fff3",
 
   "color-main-background": "#eee",
   "color-main-text": "#333",
@@ -33,7 +32,7 @@ export const light = {
   "color-main-divider": "#ccc",
   "color-main-link": oklch(50, 50, 290),
 
-  "color-syntax-background": "#f8f8f8",
+  "color-syntax-background": "#fff",
   "color-syntax-text": "#111",
   "color-syntax-comment": oklch(52, 0, 290),
   "color-syntax-keyword": oklch(52, 100, 340),

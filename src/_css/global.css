@@ -15,7 +15,6 @@
   overflow-y: scroll;
   color-scheme: light dark;
   scrollbar-color: var(--color-main-text) var(--color-main-background);
-  background-color: var(--color-background);
   color: var(--color-text);
   overscroll-behavior: none;
   font-synthesis: none;
@@ -23,11 +22,10 @@
   --_c1: var(--color-root-gradient1);
   --_c2: var(--color-root-gradient2);
   background:
-    url("/noisey.webp"),
+    url("/checkerboard.webp"),
     radial-gradient(at 0% 0%, var(--_c2) 0px, transparent 50%),
     radial-gradient(at 100% 100%, var(--_c2) 0px, transparent 50%),
     linear-gradient(var(--_c1) 0 100%) var(--color-root-overscroll);
-  background-blend-mode: soft-light, normal, normal, normal;
   background-attachment: fixed;
 }
 
@@ -404,7 +402,7 @@ dl > :is(dd + dt, dt + dt) {
     grid-template-areas:
       "...  header"
       "nav  main  "
-      "nav  footer";
+      "...  footer";
     gap: 1rem;
     padding: 1rem;
     padding-left: 0;
