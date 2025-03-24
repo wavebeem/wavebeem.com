@@ -59,10 +59,10 @@ wavebeem-easter-egg[data-state="inside"] img {
   outline: 1px solid #fff8;
   outline-offset: -1px;
   --k1: calc(-1 / 16);
-  --k2: calc(1 / 32);
+  --k2: calc(1 / 8);
   box-shadow: calc(var(--k1) * var(--avatar-size) * var(--x))
     calc(var(--k1) * var(--avatar-size) * var(--y))
-    calc(var(--k2) * var(--avatar-size) * var(--r)) #0002;
+    calc(var(--k2) * var(--avatar-size) * var(--r)) #0004;
 }
 
 wavebeem-easter-egg::before,
