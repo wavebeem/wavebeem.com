@@ -23,7 +23,6 @@ export const light = {
   "color-root-overscroll": "#222",
   "color-root-gradient1": oklch(55, 30, 152),
   "color-root-gradient2": oklch(55, 30, 290),
-  "color-root-gradient3": oklch(55, 30, 290),
   "color-root-green4": "hsl(140 50% 29% / 70%)",
   "color-root-text": "#fff",
   "color-root-divider": "#fff2",
