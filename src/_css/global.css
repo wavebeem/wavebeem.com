@@ -5,7 +5,7 @@
 }
 
 :root {
-  --color-background: var(--color-root-green1);
+  --color-background: var(--color-root-background);
   --color-text: var(--color-root-text);
   --color-text-small: var(--color-root-text);
   --color-divider: var(--color-root-divider);
@@ -16,17 +16,20 @@
   color-scheme: light dark;
   scrollbar-color: var(--color-main-text) var(--color-main-background);
   color: var(--color-text);
-  overscroll-behavior: none;
+  /* overscroll-behavior: none; */
   font-synthesis: none;
 
-  --_c1: var(--color-root-gradient1);
-  --_c2: var(--color-root-gradient2);
+  --root-gradient-size: 100vw;
+  --root-gradient-direction: to right;
   background:
     url("/checkerboard.webp"),
-    radial-gradient(at 0% 0%, var(--_c2) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, var(--_c2) 0px, transparent 50%),
-    linear-gradient(var(--_c1) 0 100%) var(--color-root-overscroll);
-  background-attachment: fixed;
+    repeating-linear-gradient(
+        var(--root-gradient-direction),
+        var(--color-root-gradient1) calc(0 * var(--root-gradient-size)),
+        var(--color-root-gradient2) calc(1 * var(--root-gradient-size)),
+        var(--color-root-gradient1) calc(3 * var(--root-gradient-size))
+      )
+      var(--color-root-overscroll);
 }
 
 body {
@@ -44,7 +47,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0;
-  max-width: 60rem;
 }
 
 a {
@@ -217,6 +219,9 @@ main {
   color: var(--color-text);
   text-shadow: none;
   box-shadow: 0 8px 16px #0002;
+
+  /* Expand main to height of sidebar if smaller */
+  align-self: stretch;
 }
 
 article {
@@ -399,6 +404,7 @@ dl > :is(dd + dt, dt + dt) {
     display: grid;
     /* Prevent grid blowout by using minmax(0, 1fr) instead of 1fr */
     grid-template-columns: max-content minmax(0, 1fr);
+    /* Make the nav look hierarchically below the header and footer */
     grid-template-areas:
       "...  header"
       "nav  main  "
@@ -406,9 +412,10 @@ dl > :is(dd + dt, dt + dt) {
     gap: 1rem;
     padding: 1rem;
     padding-left: 0;
-    /* align-items: stretch; */
+    /* Align the sidebar to the top, don't stretch to match the main height */
     align-items: flex-start;
     border-radius: var(--rounded-large);
+    max-width: 64rem;
   }
 
   main {
@@ -419,7 +426,9 @@ dl > :is(dd + dt, dt + dt) {
 
   :root {
     padding: 1.5rem;
-    scrollbar-color: var(--color-text) transparent;
+    scrollbar-color: var(--color-text) var(--color-root-background-alpha);
+    --root-gradient-size: 100vh;
+    --root-gradient-direction: to bottom;
   }
 }
 
