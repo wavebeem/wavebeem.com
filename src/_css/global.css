@@ -11,11 +11,21 @@
   --color-divider: var(--color-root-divider);
   --color-link: var(--color-root-text);
 
+  text-shadow: 0 0 8px #0004;
   overflow-y: scroll;
   color-scheme: light dark;
   scrollbar-color: var(--color-main-text) var(--color-main-background);
   background-color: var(--color-background);
   color: var(--color-text);
+
+  --_c1: var(--color-root-gradient1);
+  --_c2: var(--color-root-gradient2);
+  --_c3: var(--color-root-gradient3);
+  background:
+    radial-gradient(at 0% 0%, var(--_c2) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, var(--_c3) 0px, transparent 50%),
+    linear-gradient(var(--_c1) 0 100%) var(--color-root-overscroll);
+  background-attachment: fixed;
 }
 
 body {
@@ -200,15 +210,13 @@ main {
   --color-link: var(--color-main-link);
 
   flex: auto;
-  /* display: flex;
-  flex-direction: column; */
   padding-block: 1.5rem;
   padding-inline: 1rem;
 
   background-color: var(--color-background);
   color: var(--color-text);
-  /* border-radius: 1rem; */
-  /* border-radius: var(--rounded-medium); */
+  text-shadow: none;
+  box-shadow: 0 8px 16px #0002;
 }
 
 article {
@@ -259,46 +267,6 @@ article header small {
 
 .text-center {
   text-align: center;
-}
-
-.button,
-button {
-  font: inherit;
-  /* background-color: inherit;
-  color: inherit; */
-  background-color: var(--color-text);
-  color: var(--color-background);
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  display: inline-flex;
-  /* border: 2px solid; */
-  font-weight: bold;
-  padding: 0.25rem 1.5rem;
-  border-radius: var(--rounded-pill);
-  text-decoration-line: none;
-  text-decoration-thickness: var(--link-underline-thickness);
-}
-
-@media (hover) {
-  .button:hover,
-  button:hover {
-    outline: 2px solid var(--color-text);
-    outline-offset: -1px;
-    text-decoration-line: none;
-  }
-}
-
-.button:active,
-button:active {
-  outline: 3px solid var(--color-text);
-  outline-offset: -3px;
-}
-
-.button:focus-visible,
-button:focus-visible {
-  outline: 3px solid var(--color-text);
-  outline-offset: 2px;
 }
 
 .grid2 {
@@ -435,9 +403,11 @@ dl > :is(dd + dt, dt + dt) {
       "...  header"
       "nav  main  "
       "nav  footer";
+    gap: 1rem;
     padding: 1rem;
     padding-left: 0;
-    align-items: stretch;
+    /* align-items: stretch; */
+    align-items: flex-start;
     /* background: var(--color-root-green1); */
     border-radius: var(--rounded-large);
   }
@@ -451,16 +421,6 @@ dl > :is(dd + dt, dt + dt) {
   :root {
     padding: 1.5rem;
     scrollbar-color: var(--color-text) transparent;
-
-    --_s: 30px;
-    background: repeating-linear-gradient(
-        -45deg,
-        var(--color-root-green4) calc(0 * var(--_s)) calc(1 * var(--_s)),
-        var(--color-root-green3) calc(1 * var(--_s)) calc(3 * var(--_s)),
-        var(--color-root-green4) calc(3 * var(--_s)) calc(4 * var(--_s))
-      )
-      var(--color-root-green4);
-    background-attachment: fixed;
   }
 }
 

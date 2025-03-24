@@ -1,0 +1,40 @@
+.button,
+button {
+  text-shadow: none;
+  font: inherit;
+  /* background-color: inherit;
+  color: inherit; */
+  background-color: var(--color-text);
+  color: var(--color-background);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  /* border: 2px solid; */
+  font-weight: bold;
+  padding: 0.25rem 1.5rem;
+  border-radius: var(--rounded-pill);
+  text-decoration-line: none;
+  text-decoration-thickness: var(--link-underline-thickness);
+}
+
+@media (hover) {
+  .button:hover,
+  button:hover {
+    outline: 2px solid var(--color-text);
+    outline-offset: -1px;
+    text-decoration-line: none;
+  }
+}
+
+.button:active,
+button:active {
+  outline: 3px solid var(--color-text);
+  outline-offset: -3px;
+}
+
+.button:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-text);
+  outline-offset: 2px;
+}

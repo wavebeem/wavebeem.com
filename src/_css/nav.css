@@ -1,3 +1,30 @@
+body > nav {
+  --color-background: var(--color-root-background);
+  --color-text: var(--color-root-text);
+  --color-text-small: var(--color-root-text);
+  --color-divider: var(--color-root-divider);
+  --color-link: var(--color-root-text);
+
+  background: var(--color-root-background-alpha);
+  color: var(--color-text);
+  gap: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 1rem;
+  gap: 0;
+}
+
+@media (width >= 64rem) {
+  body > nav {
+    border-radius: var(--rounded-large);
+    padding-block: 0.5rem;
+    box-shadow: 0 8px 16px #fff1;
+  }
+}
+
 body > nav a {
   font-size: var(--font-size-small);
   display: flex;
@@ -15,25 +42,6 @@ body > nav a {
   body > nav a:hover {
     text-decoration-line: underline;
   }
-}
-
-body > nav {
-  color: var(--color-header-text);
-  gap: 1rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-body > nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  gap: 0;
 }
 
 body > nav dt {

@@ -1,3 +1,13 @@
+body > header {
+  --color-background: var(--color-root-background);
+  --color-text: var(--color-root-text);
+  --color-text-small: var(--color-root-text);
+  --color-divider: var(--color-root-divider);
+  --color-link: var(--color-root-text);
+
+  color: var(--color-text);
+}
+
 .header :any-link {
   color: var(--color-link);
   color: inherit;
@@ -10,10 +20,6 @@
 
 body > nav {
   grid-area: nav;
-}
-
-body > header {
-  color: var(--color-text);
 }
 
 .hamburger {
@@ -74,7 +80,6 @@ body > header {
   }
 
   .logo-container {
-    padding-left: 0;
-    padding-top: 0;
+    padding: 0;
   }
 }

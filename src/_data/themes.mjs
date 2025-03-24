@@ -18,21 +18,24 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 }
 
 export const light = {
-  "color-root-green1": "hsl(140 50% 30%)",
-  "color-root-green2": "hsl(140 50% 35%)",
-  "color-root-green3": "hsl(140 50% 30%)",
-  "color-root-green4": "hsl(140 50% 29%)",
-  "color-root-text": "hsl(140 25% 92%)",
-  "color-root-divider": "hsl(140 25% 92% / 10%)",
+  "color-root-background": "#222",
+  "color-root-background-alpha": "#2222",
+  "color-root-overscroll": "#222",
+  "color-root-gradient1": oklch(55, 30, 152),
+  "color-root-gradient2": oklch(55, 30, 290),
+  "color-root-gradient3": oklch(55, 30, 290),
+  "color-root-green4": "hsl(140 50% 29% / 70%)",
+  "color-root-text": "#fff",
+  "color-root-divider": "#fff2",
 
-  "color-main-background": "hsl(140 25% 92%)",
+  "color-main-background": "#eee",
   "color-main-text": "#333",
   "color-main-text-small": "#666",
   "color-main-divider": "#ccc",
-  "color-main-link": "hsl(256 56% 52%)",
+  "color-main-link": oklch(50, 50, 290),
 
-  "color-syntax-background": "#fff",
-  "color-syntax-text": oklch(20, 0, 340),
+  "color-syntax-background": "#f8f8f8",
+  "color-syntax-text": "#111",
   "color-syntax-comment": oklch(52, 0, 290),
   "color-syntax-keyword": oklch(52, 100, 340),
   "color-syntax-property": oklch(52, 60, 250),
@@ -41,16 +44,14 @@ export const light = {
 };
 
 export const dark = {
-  "color-main-background": "hsl(140 25% 20%)",
-  // "color-main-background": "#333",
-  "color-main-text": "#fff",
+  "color-main-background": "#333",
+  "color-main-text": "#eee",
   "color-main-text-small": "#aaa",
-  "color-main-divider": "#fff2",
-  // "color-main-divider": "hsl(140 25% 35%)",
-  "color-main-link": "hsl(140 56% 64%)",
+  "color-main-divider": "#555",
+  "color-main-link": oklch(80, 50, 290),
 
-  "color-syntax-background": "hsl(140 25% 15%)",
-  "color-syntax-text": oklch(90, 0, 340),
+  "color-syntax-background": "#2c2c2c",
+  "color-syntax-text": "#eee",
   "color-syntax-comment": oklch(70, 15, 290),
   "color-syntax-keyword": oklch(80, 70, 340),
   "color-syntax-property": oklch(80, 70, 250),
