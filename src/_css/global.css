@@ -17,6 +17,8 @@
   scrollbar-color: var(--color-main-text) var(--color-main-background);
   background-color: var(--color-background);
   color: var(--color-text);
+  overscroll-behavior: none;
+  font-synthesis: none;
 
   --_c1: var(--color-root-gradient1);
   --_c2: var(--color-root-gradient2);
@@ -75,7 +77,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-synthesis: none;
   text-wrap: balance;
 }
 
