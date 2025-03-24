@@ -21,8 +21,8 @@ export const light = {
   "color-root-background": "#333",
   "color-root-background-alpha": "#3333",
   "color-root-overscroll": "#222",
-  "color-root-gradient1": oklch(55, 30, 152),
-  "color-root-gradient2": oklch(55, 30, 290),
+  "color-root-gradient1": oklch(50, 40, 152),
+  "color-root-gradient2": oklch(50, 40, 290),
   "color-root-text": "#fff",
   "color-root-divider": "#fff3",
 

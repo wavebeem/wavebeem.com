@@ -188,7 +188,6 @@ main details[open] > summary {
 
 main :is(blockquote, ul, ol, dl, p) {
   margin-block: 1.5rem;
-  max-width: 50rem;
 }
 
 main ul {
@@ -222,10 +221,6 @@ main {
 
   /* Expand main to height of sidebar if smaller */
   align-self: stretch;
-}
-
-article {
-  max-width: 80rem;
 }
 
 article header :is(h1, h2, h3) {

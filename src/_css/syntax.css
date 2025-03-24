@@ -7,7 +7,6 @@ article pre {
   color: var(--color-syntax-text);
   scrollbar-color: var(--color-syntax-text) var(--color-syntax-background);
   overflow-x: auto;
-  max-width: 50rem;
 }
 
 @media (width <= 50rem) {
