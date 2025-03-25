@@ -19,17 +19,34 @@
   /* overscroll-behavior: none; */
   font-synthesis: none;
 
+  --root-checkerboard-size: 16px;
+  --root-checkerboard-color: rgb(0 0 0 / 3%);
+  /* --root-checkerboard-color: rgb(0 0 0 / 5%); */
   --root-gradient-size: 100vw;
   --root-gradient-direction: to right;
+  --root-checkerboard-background:
+    linear-gradient(45deg, transparent 25%, var(--root-checkerboard-color) 25%)
+      0 0 / var(--root-checkerboard-size) var(--root-checkerboard-size),
+    linear-gradient(135deg, transparent 25%, var(--root-checkerboard-color) 25%)
+      calc(var(--root-checkerboard-size) / 2) 0 / var(--root-checkerboard-size)
+      var(--root-checkerboard-size),
+    linear-gradient(45deg, var(--root-checkerboard-color) 75%, transparent 75%)
+      calc(var(--root-checkerboard-size) / 2)
+      calc(var(--root-checkerboard-size) / -2) / var(--root-checkerboard-size)
+      var(--root-checkerboard-size),
+    linear-gradient(135deg, var(--root-checkerboard-color) 75%, transparent 75%)
+      0px calc(var(--root-checkerboard-size) / 2) /
+      var(--root-checkerboard-size) var(--root-checkerboard-size);
+  --root-gradient-background: repeating-linear-gradient(
+    var(--root-gradient-direction),
+    var(--color-root-gradient1) calc(0 * var(--root-gradient-size)),
+    var(--color-root-gradient2) calc(1 * var(--root-gradient-size)),
+    var(--color-root-gradient1) calc(3 * var(--root-gradient-size))
+  );
   background:
-    url("/checkerboard.webp"),
-    repeating-linear-gradient(
-        var(--root-gradient-direction),
-        var(--color-root-gradient1) calc(0 * var(--root-gradient-size)),
-        var(--color-root-gradient2) calc(1 * var(--root-gradient-size)),
-        var(--color-root-gradient1) calc(3 * var(--root-gradient-size))
-      )
-      var(--color-root-overscroll);
+    /* url("/checkerboard.webp"), */
+    var(--root-checkerboard-background),
+    var(--root-gradient-background) var(--color-root-overscroll);
 }
 
 body {
