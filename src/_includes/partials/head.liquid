@@ -1,7 +1,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="generator" content="{{ eleventy.generator | escape }}" />
   <meta
     name="theme-color"
     content="{{ themes.light['color-root-overscroll'] | escape }}"
@@ -64,10 +63,16 @@
     sizes="32x32"
     href="/favicon.png?v={{ contentHashes.favicon }}"
   />
+  <script
+    async
+    defer
+    data-domain="wavebeem.com"
+    src="https://plausible.io/js/plausible.js"
+  ></script>
   <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="/apple-touch-icon.png?v={{ contentHashes.appleTouchIcon }}"
+    rel="stylesheet"
+    media="screen"
+    href="/main.css?t={{ dateNow | escape }}"
   />
   <link
     rel="alternate"
@@ -85,15 +90,5 @@
   <title>{{ title | formatTitle }}</title>
   <meta name="author" content="wavebeem" />
   <meta name="description" content="{{ description | escape }}" />
-  <script
-    async
-    defer
-    data-domain="wavebeem.com"
-    src="https://plausible.io/js/plausible.js"
-  ></script>
-  <link
-    rel="stylesheet"
-    media="screen"
-    href="/main.css?t={{ dateNow | escape }}"
-  />
+  <meta name="generator" content="{{ eleventy.generator | escape }}" />
 </head>
