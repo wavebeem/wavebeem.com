@@ -1,12 +1,10 @@
 wavebeem-easter-egg {
   --avatar-size: 180px;
   --avatar-padding: 0px;
-  --avatar-blend-mode: multiply;
   float: right;
   margin: 1rem;
   margin-right: 0;
   margin-top: 0;
-  background-color: var(--color-background);
   padding: var(--avatar-padding);
   border-radius: var(--rounded-pill);
   --wavebeem-easter-egg--shadow-color: hsl(0 0% 0% / 50%);
@@ -16,18 +14,19 @@ wavebeem-easter-egg {
     rotateY(calc(var(--k) * var(--x))) rotateX(calc(var(--k) * var(--y)));
   display: flex;
   position: relative;
-  /* touch-action: none; */
+  box-shadow: 0 8px 16px #0004;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (width >= 64rem) {
   wavebeem-easter-egg {
-    --avatar-blend-mode: screen;
+    margin-top: -6rem;
   }
 }
 
 wavebeem-easter-egg[data-state="inside"] {
   background: transparent;
   border-color: transparent;
+  box-shadow: none;
 }
 
 wavebeem-easter-egg picture {
@@ -38,8 +37,7 @@ wavebeem-easter-egg img {
   border-radius: var(--rounded-pill);
   width: var(--avatar-size);
   height: var(--avatar-size);
-  filter: grayscale(1) contrast(1.85) brightness(0.98);
-  mix-blend-mode: var(--avatar-blend-mode);
+  filter: grayscale(1) contrast(1.9) brightness(0.9);
 }
 
 @media (prefers-reduced-motion: reduce), not (hover) {
@@ -61,10 +59,10 @@ wavebeem-easter-egg[data-state="inside"] img {
   outline: 1px solid #fff8;
   outline-offset: -1px;
   --k1: calc(-1 / 16);
-  --k2: calc(1 / 32);
+  --k2: calc(1 / 8);
   box-shadow: calc(var(--k1) * var(--avatar-size) * var(--x))
     calc(var(--k1) * var(--avatar-size) * var(--y))
-    calc(var(--k2) * var(--avatar-size) * var(--r)) #0002;
+    calc(var(--k2) * var(--avatar-size) * var(--r)) #0004;
 }
 
 wavebeem-easter-egg::before,
@@ -83,7 +81,7 @@ wavebeem-easter-egg::after {
 }
 
 wavebeem-easter-egg::before {
-  mix-blend-mode: soft-light;
+  mix-blend-mode: hard-light;
 
   /* https://css-pattern.com/wave-circles/ */
   --s: 30px; /* control the size*/
@@ -95,10 +93,11 @@ wavebeem-easter-egg::before {
 
   mask-image: linear-gradient(
     var(--angle),
-    hsl(0 0% 0% / 100%),
+    hsl(0 0% 0% / 70%),
     hsl(0 0% 0% / 0%) calc(100% * var(--r))
   );
-  background: calc(var(--s) / -4) calc(var(--s) / -4) / var(--_g),
+  background:
+    calc(var(--s) / -4) calc(var(--s) / -4) / var(--_g),
     calc(var(--s) / 4) calc(var(--s) / 4) / var(--_g),
     radial-gradient(var(--c2) 34%, var(--c1) 36% 68%, #0000 70%) 0 0 /
       calc(var(--s) / 2) calc(var(--s) / 2),

@@ -1,19 +1,16 @@
 article pre {
-  border-radius: var(--rounded-large);
   margin-block: 1.5rem;
-  margin-inline: 0;
-  padding: 1rem;
+  margin-inline: -1.5rem;
+  padding: 1rem 1.5rem;
 
   background-color: var(--color-syntax-background);
   color: var(--color-syntax-text);
   scrollbar-color: var(--color-syntax-text) var(--color-syntax-background);
   overflow-x: auto;
-  max-width: 50rem;
 }
 
 @media (width <= 50rem) {
   article pre {
-    border-radius: var(--rounded-none);
     margin-inline: -1rem;
     padding: 1rem;
   }

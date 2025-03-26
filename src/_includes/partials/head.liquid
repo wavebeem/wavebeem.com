@@ -1,103 +1,94 @@
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="generator" content="{{ eleventy.generator | escape }}" />
-{% if theme %}
-<meta name="theme-color" content="{{ themes[theme]['color-background'] | escape }}" />
-{% else %}
-<meta
-  name="theme-color"
-  content="{{ colors.light['color-background'] | escape }}"
-  media="(prefers-color-scheme: light)"
-/>
-<meta
-  name="theme-color"
-  content="{{ colors.dark['color-background'] | escape }}"
-  media="(prefers-color-scheme: dark)"
-/>
-{% endif %}
-<link
-  rel="preload"
-  as="font"
-  crossorigin="anonymous"
-  href="/fonts/PPEditorialNew-Regular.woff2"
-/>
-<link
-  rel="preload"
-  as="font"
-  crossorigin="anonymous"
-  href="/fonts/PPObjectSans-Regular.woff2"
-/>
-<link
-  rel="preload"
-  as="font"
-  crossorigin="anonymous"
-  href="/fonts/PPObjectSans-Bold.woff2"
-/>
-<link
-  rel="preload"
-  as="font"
-  crossorigin="anonymous"
-  href="/fonts/UltraHi-GlossFinal-UltraBoldItalic.woff2"
-/>
-<link
-  rel="prefetch"
-  as="font"
-  crossorigin="anonymous"
-  href="/fonts/JetBrainsMono-Regular.woff2"
-/>
-<link
-  rel="prefetch"
-  as="font"
-  crossorigin="anonymous"
-  href="/fonts/JetBrainsMono-Bold.woff2"
-/>
-<link
-  rel="prefetch"
-  as="font"
-  crossorigin="anonymous"
-  href="/fonts/JetBrainsMono-Italic.woff2"
-/>
-<link
-  rel="prefetch"
-  as="font"
-  crossorigin="anonymous"
-  href="/fonts/PPObjectSans-Slanted.woff2"
-/>
-<link
-  rel="icon"
-  href="/favicon.svg?v={{ contentHashes.faviconVector }}"
-  type="image/svg+xml"
-/>
-<link
-  rel="icon"
-  sizes="32x32"
-  href="/favicon.png?v={{ contentHashes.favicon }}"
-/>
-<link
-  rel="apple-touch-icon"
-  sizes="180x180"
-  href="/apple-touch-icon.png?v={{ contentHashes.appleTouchIcon }}"
-/>
-<link
-  rel="alternate"
-  type="application/atom+xml"
-  href="{{ origin | escape }}/feed.xml"
-  title="wavebeem.com"
-/>
-<link rel="me" href="https://toot.community/@wavebeem" />
-<meta
-  name="og:image"
-  content="{{ origin }}/og-image.png?v={{ contentHashes.ogImage }}"
-/>
-<meta name="og:title" content="{{ title | formatTitle | escape }}" />
-<meta name="og:description" content="{{ description | escape }}" />
-<title>{{ title | formatTitle }}</title>
-<meta name="author" content="wavebeem" />
-<meta name="description" content="{{ description | escape }}" />
-<script
-  async
-  defer
-  data-domain="wavebeem.com"
-  src="https://plausible.io/js/plausible.js"
-></script>
-<link rel="stylesheet" media="screen" href="/main.css?t={{ dateNow | escape }}" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="theme-color"
+    content="{{ themes.light['color-root-overscroll'] | escape }}"
+  />
+  <link
+    rel="preload"
+    as="font"
+    crossorigin="anonymous"
+    href="/fonts/Whisper-Regular.woff2"
+  />
+  <link
+    rel="preload"
+    as="font"
+    crossorigin="anonymous"
+    href="/fonts/PPObjectSans-Regular.woff2"
+  />
+  <link
+    rel="preload"
+    as="font"
+    crossorigin="anonymous"
+    href="/fonts/PPObjectSans-Bold.woff2"
+  />
+  <link
+    rel="preload"
+    as="font"
+    crossorigin="anonymous"
+    href="/fonts/UltraHi-GlossFinal-UltraBoldItalic.woff2"
+  />
+  <link
+    rel="prefetch"
+    as="font"
+    crossorigin="anonymous"
+    href="/fonts/JetBrainsMono-Regular.woff2"
+  />
+  <link
+    rel="prefetch"
+    as="font"
+    crossorigin="anonymous"
+    href="/fonts/JetBrainsMono-Bold.woff2"
+  />
+  <link
+    rel="prefetch"
+    as="font"
+    crossorigin="anonymous"
+    href="/fonts/JetBrainsMono-Italic.woff2"
+  />
+  <link
+    rel="prefetch"
+    as="font"
+    crossorigin="anonymous"
+    href="/fonts/PPObjectSans-Slanted.woff2"
+  />
+  <link
+    rel="icon"
+    href="/favicon.svg?v={{ contentHashes.faviconVector }}"
+    type="image/svg+xml"
+  />
+  <link
+    rel="icon"
+    sizes="32x32"
+    href="/favicon.png?v={{ contentHashes.favicon }}"
+  />
+  <script
+    async
+    defer
+    data-domain="wavebeem.com"
+    src="https://plausible.io/js/plausible.js"
+  ></script>
+  <link
+    rel="stylesheet"
+    media="screen"
+    href="/main.css?t={{ dateNow | escape }}"
+  />
+  <link
+    rel="alternate"
+    type="application/atom+xml"
+    href="{{ origin | escape }}/feed.xml"
+    title="wavebeem.com"
+  />
+  <link rel="me" href="https://toot.community/@wavebeem" />
+  <meta
+    name="og:image"
+    content="{{ origin }}/og-image.png?v={{ contentHashes.ogImage }}"
+  />
+  <meta name="og:title" content="{{ title | formatTitle | escape }}" />
+  <meta name="og:description" content="{{ description | escape }}" />
+  <title>{{ title | formatTitle }}</title>
+  <meta name="author" content="wavebeem" />
+  <meta name="description" content="{{ description | escape }}" />
+  <meta name="generator" content="{{ eleventy.generator | escape }}" />
+</head>

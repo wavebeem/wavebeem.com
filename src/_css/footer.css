@@ -1,22 +1,26 @@
 body > footer {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+
   padding-inline: 1rem;
-  padding-block: 0;
+  padding-block: 1rem;
   grid-area: footer;
   font-size: var(--font-size-small);
+  color: var(--color-text);
+  border-bottom-left-radius: var(--rounded-medium);
+  border-bottom-right-radius: var(--rounded-medium);
 }
 
-body > footer > [role="separator"] {
-  border-top: 1px dotted;
-  width: 100%;
-  margin-block: 1.5rem;
-}
-
-body > footer > p {
-  margin-block: 1.5rem;
+body > footer a {
+  color: inherit;
 }
 
 @media (width >= 64rem) {
   body > footer {
-    padding-inline: 2rem;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 }

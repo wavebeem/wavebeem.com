@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "webp": "node ./bin/webp.mjs",
+    "favicon": "node ./bin/favicon.mjs",
     "start": "eleventy --serve --quiet --port=1312",
     "upgrade": "npm-check -u",
     "lint": "stylelint \"src/**/*.css\" --formatter unix",

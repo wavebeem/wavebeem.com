@@ -14,3 +14,5 @@ export async function run(cmd, ...args) {
     throw new Error(`Exit code ${result.status}: ${cmd} ${args.join(" ")}`);
   }
 }
+
+export const args = process.argv.slice(2);
