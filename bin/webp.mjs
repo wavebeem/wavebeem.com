@@ -14,7 +14,7 @@ import { run, chdir, match, args } from "./_util.mjs";
 const [flag] = args;
 chdir("src");
 
-const globDirs = ["past-designs", "blog", "drafts", "shrines"];
+const globDirs = ["past-designs", "blog", "drafts", "shrines", "projects"];
 const globRoots = "{" + globDirs.join(",") + "}";
 
 for await (const file of new Glob(`${globRoots}/**/*.{png,gif}`, {})) {
