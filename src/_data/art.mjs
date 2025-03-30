@@ -37,7 +37,8 @@ const titles = {
   "2024-04-02-orc-awooga.webp": "Orc awooga",
   "2024-05-20-bassman.webp": "Bassman",
   "2024-06-28-elephant.webp": "Elephant",
-  "2025-01-01-le-chat-noir.webp": "Le Chat Noir",
+  "2025-01-01-le-chat-noir.webp": "Le chat noir",
+  "2025-03-29-raichu-sitting.webp": "Raichu sitting",
 };
 
 export const images = Object.entries(titles).map(([filename, title]) => {
