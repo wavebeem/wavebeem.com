@@ -12,3 +12,6 @@ node_modules
 *~lock~
 *.ignored
 *:Zone.Identifier
+
+# Local Netlify folder
+.netlify
