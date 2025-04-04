@@ -8,6 +8,12 @@ layout: "layout-base"
   :where(:has(#gbc-filter:checked)) img[src*=".gbc."]:where(:not(:hover)) {
     filter: saturate(0.8) contrast(0.8) brightness(1.2) hue-rotate(-10deg);
   }
+
+  .grid16x16 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
 </style>
 
 <article>
@@ -617,5 +623,65 @@ layout: "layout-base"
       Whew! I did it. I beat the Elite Four. I've heard Kanto is mostly a cake
       walk after Johto, so I think I'll take the time to go through it.
     </figcaption>
+  </figure>
+
+  <h3>Sprite recolors</h3>
+
+  <p>
+    Like a digital coloring book, I used to love recoloring sprites ripped from
+    my favorite games. After playing Pokémon Crystal, I decided to recolor a few
+    of the 16x16 menu sprites.
+  </p>
+
+  <figure class="grid16x16">
+    <img
+      src="./assets/recolor16/bulbasaur.webp"
+      alt="bulbasaur"
+      width="48"
+      height="48"
+      loading="lazy"
+    />
+    <img
+      src="./assets/recolor16/charmander.webp"
+      alt="charmander"
+      width="48"
+      height="48"
+      loading="lazy"
+    />
+    <img
+      src="./assets/recolor16/squirtle.webp"
+      alt="squirtle"
+      width="48"
+      height="48"
+      loading="lazy"
+    />
+    <img
+      src="./assets/recolor16/pikachu.webp"
+      alt="pikachu"
+      width="48"
+      height="48"
+      loading="lazy"
+    />
+    <img
+      src="./assets/recolor16/gengar.webp"
+      alt="gengar"
+      width="48"
+      height="48"
+      loading="lazy"
+    />
+    <img
+      src="./assets/recolor16/ho-oh.webp"
+      alt="ho-oh"
+      width="48"
+      height="48"
+      loading="lazy"
+    />
+    <img
+      src="./assets/recolor16/lugia.webp"
+      alt="lugia"
+      width="48"
+      height="48"
+      loading="lazy"
+    />
   </figure>
 </article>
