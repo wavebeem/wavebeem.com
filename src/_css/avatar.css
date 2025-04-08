@@ -37,7 +37,7 @@ wavebeem-easter-egg img {
   border-radius: var(--rounded-pill);
   width: var(--avatar-size);
   height: var(--avatar-size);
-  filter: grayscale(1) contrast(1.9) brightness(0.9);
+  filter: grayscale(100%) contrast(130%) brightness(130%);
 }
 
 @media (prefers-reduced-motion: reduce), not (hover) {
