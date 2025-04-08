@@ -1,4 +1,5 @@
 {
+  "eleventyExcludeFromCollections": true,
   "layout": "layout-post",
   "tags": ["draft"],
   "draft": true

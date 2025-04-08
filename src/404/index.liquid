@@ -1,17 +1,32 @@
 ---
 title: "Page not found"
-description: "404 error"
 layout: "layout-base"
 ---
 
 <h1>Page not found</h1>
 
 <p>
-  Please
-  <a href="/contact/">contact me</a>
-  if you think I broke something on my site.
+  Sorry, it looks like I broke something on my website. Please
+  <a href="/contact/">contact me</a>.
 </p>
 
 <a class="button" href="/">
   Take me home
 </a>
+
+<p>
+  If you're feeling brave, you can try to find it yourself:
+</p>
+
+<details>
+  <summary>Show all pages...</summary>
+  <dl>
+  {%- assign sortedPosts = collections.all | sortByLocale: "url" -%}
+  {% for post in sortedPosts %}
+    <dt>{{ post.data.title | fallback: post.url | escape }}</dt>
+    <dd>
+      <a href="{{ post.url | escape }}">{{ post.url | escape }}</a>
+    </dd>
+  {%- endfor -%}
+  </dl>
+</details>

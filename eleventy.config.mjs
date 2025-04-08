@@ -4,6 +4,23 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import dateformat from "dateformat";
 import markdownIt from "markdown-it";
 
+/**
+ * Compare two values for sorting.
+ *
+ * An extremely naive implementation that really should throw exceptions based
+ * on mismatched types.
+ *
+ * @template T
+ * @param {T} a
+ * @param {T} b
+ * @returns {-1 | 0 | 1}
+ */
+function compare(a, b) {
+  if (a < b) return -1;
+  if (a > b) return 1;
+  return 0;
+}
+
 /** @typedef {import("@11ty/eleventy").UserConfig} UserConfig */
 
 /** @param {UserConfig} eleventyConfig */
@@ -120,9 +137,35 @@ export default function getConfig(eleventyConfig) {
     return data || other;
   });
 
+  eleventyConfig.addFilter("sortBy", function (data, property) {
+    return [...data].sort((a, b) => {
+      return compare(objectPathGet(a, property), objectPathGet(b, property));
+    });
+  });
+
+  function objectPathGet(obj, path) {
+    let ret = obj;
+    for (const chunk of path.split(".")) {
+      ret = ret[chunk];
+    }
+    return ret;
+  }
+
+  eleventyConfig.addFilter("sortByLocale", function (data, property) {
+    return [...data].sort((a, b) => {
+      return String(objectPathGet(a, property) || "").localeCompare(
+        objectPathGet(b, property) || "",
+      );
+    });
+  });
+
   eleventyConfig.addFilter("debug", function (data) {
     console.info(data);
     return "";
+  });
+
+  eleventyConfig.addFilter("fallback", function (data, fallback) {
+    return data || fallback;
   });
 
   eleventyConfig.addFilter("sort", function (data) {
