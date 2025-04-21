@@ -23,10 +23,12 @@ layout: "layout-base"
   <dl>
   {%- assign sortedPosts = collections.all | sortByLocale: "url" -%}
   {% for post in sortedPosts %}
+  {% unless post.data.draft %}
     <dt>{{ post.data.title | fallback: post.url | escape }}</dt>
     <dd>
       <a href="{{ post.url | escape }}">{{ post.url | escape }}</a>
     </dd>
+  {% endunless %}
   {%- endfor -%}
   </dl>
 </details>

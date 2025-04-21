@@ -21,8 +21,8 @@ export const light = {
   "color-root-background": "#333",
   "color-root-background-alpha": "#3333",
   "color-root-overscroll": "#222",
-  "color-root-gradient1": oklch(55, 45, 152),
-  "color-root-gradient2": oklch(55, 45, 290),
+  "color-root-gradient1": oklch(55, 55, 152),
+  "color-root-gradient2": oklch(55, 55, 290),
   "color-root-text": "#fff",
   "color-root-divider": "#fff3",
 
@@ -30,7 +30,7 @@ export const light = {
   "color-main-text": "#333",
   "color-main-text-small": "#666",
   "color-main-divider": "#ccc",
-  "color-main-link": oklch(50, 50, 290),
+  "color-main-link": oklch(50, 65, 290),
 
   "color-syntax-background": "#fff",
   "color-syntax-text": "#111",
@@ -46,7 +46,7 @@ export const dark = {
   "color-main-text": "#eee",
   "color-main-text-small": "#aaa",
   "color-main-divider": "#555",
-  "color-main-link": oklch(80, 50, 290),
+  "color-main-link": oklch(80, 65, 290),
 
   "color-syntax-background": "#2c2c2c",
   "color-syntax-text": "#eee",
