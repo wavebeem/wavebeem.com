@@ -1,12 +1,4 @@
 body > nav {
-  --color-background: var(--color-root-background);
-  --color-text: var(--color-root-text);
-  --color-text-small: var(--color-root-text);
-  --color-divider: var(--color-root-divider);
-  --color-link: var(--color-root-text);
-
-  background: var(--color-root-background-alpha);
-  color: var(--color-text);
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -14,9 +6,10 @@ body > nav {
   align-items: stretch;
   padding: 1.5rem;
   gap: 0;
+  background: var(--color-main-background);
   background-clip: padding-box;
-
-  backdrop-filter: blur(4px);
+  position: relative;
+  z-index: 1;
 }
 
 body > nav a {
@@ -35,6 +28,7 @@ body > nav a {
 body > nav dt {
   padding: 1rem 0;
   font-family: var(--font-cool);
+  /* color: var(--color-main-text-heading); */
 }
 
 body > nav dl {
@@ -43,7 +37,7 @@ body > nav dl {
 
 body > nav dt {
   font-size: var(--font-size-h3);
-  border-bottom: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-main-divider);
 }
 
 body > nav ul {
@@ -56,9 +50,10 @@ body > nav ul {
 body > nav a {
   padding-block: 0.5rem;
   text-decoration-line: none;
-  border-bottom: 1px solid var(--color-divider);
+  border-bottom: 1px solid var(--color-main-divider);
   border-radius: 0;
   padding-inline: 0;
+  color: var(--color-main-link);
 }
 
 body > nav a:focus-visible {
@@ -87,6 +82,5 @@ body > nav a:focus-visible {
   body > nav {
     border-radius: var(--rounded-large);
     padding-top: 0.5rem;
-    box-shadow: 0 0 8px #fff1;
   }
 }

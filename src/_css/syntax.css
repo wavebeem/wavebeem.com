@@ -1,7 +1,9 @@
 article pre {
   margin-block: 1.5rem;
-  margin-inline: -1.5rem;
-  padding: 1rem 1.5rem;
+  /* margin-inline: -1.5rem; */
+  /* padding: 1rem 1.5rem; */
+  padding: 1rem;
+  border-radius: var(--rounded-large);
 
   background-color: var(--color-syntax-background);
   color: var(--color-syntax-text);

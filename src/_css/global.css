@@ -11,7 +11,6 @@
   --color-divider: var(--color-root-divider);
   --color-link: var(--color-root-text);
 
-  text-shadow: 0 0 8px #0004;
   overflow-y: scroll;
   color-scheme: light dark;
   scrollbar-color: var(--color-main-text) var(--color-main-background);
@@ -42,6 +41,7 @@
   background:
     var(--_b1),
     var(--_b2) var(--color-root-overscroll);
+  background: var(--color-main-background);
 }
 
 body {
@@ -69,6 +69,10 @@ a {
   box-decoration-break: clone;
 }
 
+:is(h1, h2) a {
+  color: inherit;
+}
+
 @media (hover) {
   a:hover {
     text-decoration-line: underline;
@@ -82,36 +86,46 @@ button {
   font: inherit;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+:is(h1, h2, h3, h4, h5, h6) {
   text-wrap: balance;
+  /* background-color: var(--color-main-text-heading); */
+  /* text-decoration: underline;
+  text-decoration-thickness: calc(1em / 8);
+  text-underline-offset: calc(1em / 16);
+  text-decoration-color: var(--color-main-text-heading); */
+  /* color: var(--color-main-text-heading); */
+}
+
+:is(h1, h2) {
+  background-color: var(--color-main-text-heading);
+  border-image: linear-gradient(var(--color-main-text-heading) 0 100%);
+  border-image-slice: 9 fill;
+  border-image-outset: 0 100vw;
+  padding-block: 1rem;
+  font-weight: 900;
 }
 
 h1,
 h2,
 h3 {
-  font-weight: normal;
+  /* font-weight: normal; */
   line-height: 1.25;
 }
 
 h1 {
   font-size: var(--font-size-h1);
   font-family: var(--font-cool);
-  letter-spacing: -1px;
+  /* letter-spacing: -1px; */
   margin-block: 0 1.5rem;
 }
 
 h2 {
   font-size: var(--font-size-h2);
   font-family: var(--font-cool);
-  letter-spacing: -1px;
+  /* letter-spacing: -1px; */
   margin-block: 4rem 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--color-divider);
+  /* padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-divider); */
 }
 
 h3 {
@@ -228,8 +242,6 @@ main {
 
   background-color: var(--color-background);
   color: var(--color-text);
-  text-shadow: none;
-  box-shadow: 0 8px 16px #0002;
 
   /* Expand main to height of sidebar if smaller */
   align-self: stretch;
@@ -410,12 +422,12 @@ dl > :is(dd + dt, dt + dt) {
   body {
     display: grid;
     /* Prevent grid blowout by using minmax(0, 1fr) instead of 1fr */
-    grid-template-columns: max-content minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) max-content;
     /* Make the nav look hierarchically below the header and footer */
     grid-template-areas:
-      "...  header"
-      "nav  main  "
-      "...  footer";
+      "header  ..."
+      "main    nav"
+      "footer  ...";
     gap: 1rem;
     padding: 1rem;
     padding-left: 0;
