@@ -17,6 +17,11 @@ function oklch(lightness, chroma, hue, alpha = 100) {
   return color.to("srgb").toString({ format: "hex" });
 }
 
+const hue1 = 145;
+const delta = 35;
+const hue2 = hue1 + 180 - delta;
+const hue3 = hue1 + 180 + delta;
+
 export const light = {
   // "color-root-background": "#333",
   // "color-root-background-alpha": "#3333",
@@ -44,12 +49,13 @@ export const light = {
   "color-main-text": "#333",
   "color-main-text-small": "#666",
   // "color-main-text-heading": oklch(90, 55, 145),
-  "color-main-text-heading": oklch(90, 55, 145),
+  "color-main-text-heading": oklch(90, 55, hue1),
   // "color-main-text-heading": oklch(60, 55, 145),
   // "color-main-text-heading": oklch(90, 55, 25),
   "color-main-divider": "#eee",
-  "color-main-link": oklch(60, 70, 325),
-  "color-main-link": oklch(60, 90, 290),
+  "color-main-link": oklch(60, 90, hue2),
+  // "color-main-link": oklch(60, 70, 145 + 180),
+  // "color-main-link": oklch(60, 90, 145 + 180 + 35),
 
   "color-syntax-background": "#f4f4f4",
   "color-syntax-text": "#111",

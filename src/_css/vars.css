@@ -32,7 +32,7 @@
   --rounded-pill: 9999px;
 
   --link-underline-offset: calc(1em / 6);
-  --link-underline-thickness: 1.5px;
+  --link-underline-thickness: 2px;
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 1px);
 }
 

@@ -14,7 +14,7 @@ body > footer {
 }
 
 body > footer a {
-  color: inherit;
+  color: var(--color-main-link);
 }
 
 @media (width >= 64rem) {
