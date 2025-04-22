@@ -6,7 +6,7 @@ article pre {
   border-radius: var(--rounded-large);
 
   background-color: var(--color-syntax-background);
-  color: var(--color-syntax-text);
+  color: inherit;
   scrollbar-color: var(--color-syntax-text) var(--color-syntax-background);
   overflow-x: auto;
 }

@@ -53,17 +53,17 @@ export const light = {
   // "color-main-text-heading": oklch(60, 55, 145),
   // "color-main-text-heading": oklch(90, 55, 25),
   "color-main-divider": "#eee",
-  "color-main-link": oklch(60, 90, hue2),
+  "color-main-link": oklch(55, 90, hue2),
   // "color-main-link": oklch(60, 70, 145 + 180),
   // "color-main-link": oklch(60, 90, 145 + 180 + 35),
 
-  "color-syntax-background": "#f4f4f4",
-  "color-syntax-text": "#111",
-  "color-syntax-comment": oklch(52, 0, 290),
-  "color-syntax-keyword": oklch(52, 100, 340),
-  "color-syntax-property": oklch(52, 60, 250),
-  "color-syntax-string": oklch(52, 100, 152),
-  "color-syntax-punctuation": oklch(52, 30, 340),
+  "color-syntax-background": "#fff",
+  "color-syntax-text": oklch(55, 90, hue3),
+  "color-syntax-comment": oklch(52, 0, hue2),
+  "color-syntax-keyword": oklch(52, 100, hue3),
+  "color-syntax-property": oklch(52, 60, hue2),
+  "color-syntax-string": oklch(52, 100, hue1),
+  "color-syntax-punctuation": oklch(52, 30, hue3),
 };
 
 export const dark = {

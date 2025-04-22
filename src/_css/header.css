@@ -12,6 +12,23 @@ body > header .button {
   box-shadow: 0 8px 16px #0002;
 }
 
+.header {
+  --s: 50px;
+  background: var(--color-main-text-heading);
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - var(--s))); */
+  /* clip-path: circle(50% at 50% 200%);
+  padding-bottom: calc(2 * var(--s)); */
+}
+
+.header2 {
+  --s: 50px;
+  background: var(--color-main-text-heading);
+  grid-area: header2;
+  clip-path: ellipse(100% 100% at 50% -50%);
+  padding-bottom: calc(2 * var(--s));
+  margin-bottom: calc(-0.5 * var(--s));
+}
+
 .header :any-link {
   color: var(--color-link);
   color: inherit;
@@ -28,6 +45,8 @@ body > header .button {
   font-weight: normal;
   text-decoration-line: none;
   text-transform: uppercase;
+  color: var(--color-main-link);
+  color: var(--color-main-text);
 }
 
 .logo a:not(:hover) {
@@ -35,7 +54,8 @@ body > header .button {
 }
 
 .logo-dingus {
-  color: var(--color-main-text-heading);
+  color: var(--color-main-text);
+  /* color: var(--color-main-text); */
 }
 
 body > nav {

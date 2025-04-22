@@ -94,14 +94,21 @@ a {
   /* color: var(--color-main-text-heading); */
 }
 
-:is(h1, h2) {
-  padding-top: 1rem;
+:is(h1) {
+  /* padding-top: 1rem; */
   /* border-top: 4px solid var(--color-main-text-heading); */
-  background-color: var(--color-main-text-heading);
-  border-image: linear-gradient(var(--color-main-text-heading) 0 100%);
-  border-image-slice: 9 fill;
-  border-image-outset: 0 0 0 100vw;
-  padding-block: 1rem;
+  /* background-color: var(--color-main-text-heading); */
+  /* border-bottom: 4px solid; */
+  /* border-image: linear-gradient(var(--color-main-text-heading) 0 100%);
+  border-image: linear-gradient(
+    to left,
+    var(--color-main-text-heading),
+    transparent
+  ); */
+
+  /* border-image-slice: 9 fill; */
+  /* border-image-outset: 0 0 0 100vw; */
+  /* padding-block: 1rem; */
 
   /* box-shadow: inset 0 -8px 0 var(--color-main-text-heading);
   text-shadow: 0 2px 0 var(--color-main-background);
@@ -118,6 +125,32 @@ a {
   border-image-slice: 9 fill;
   border-image-outset: 0 0 0 100vw; */
   font-weight: 900;
+}
+
+:is(h2) {
+  /* text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: calc(1em / 8);
+  text-decoration-color: var(--color-main-text-heading);
+  text-underline-position: below;
+  text-underline-offset: calc(1em / 8); */
+  font-weight: 900;
+
+  border-bottom: 4px solid;
+  /* border-image: linear-gradient(var(--color-main-text-heading) 0 100%); */
+  border-image: linear-gradient(
+    to right,
+    var(--color-main-text-heading),
+    transparent
+  );
+  border-image-slice: 9;
+  /* border-image-outset: 0 0 0 100vw; */
+  padding-bottom: 0.25rem;
+}
+
+:is(h1, h2) {
+  /* padding-left: 1rem;
+  margin-left: -1rem; */
 }
 
 :is(h1, h2, h3) {
@@ -443,16 +476,17 @@ dl > :is(dd + dt, dt + dt) {
     grid-template-columns: minmax(0, 1fr) max-content;
     /* Make the nav look hierarchically below the header and footer */
     grid-template-areas:
-      "header  ..."
-      "main    nav"
-      "footer  ...";
-    gap: 1rem;
-    padding: 1rem;
-    padding-left: 0;
+      "header   header"
+      "header2  header2"
+      "main     nav"
+      "footer   footer";
+    gap: 0;
+    /* padding: 1rem;
+    padding-left: 0; */
     /* Align the sidebar to the top, don't stretch to match the main height */
     align-items: flex-start;
     border-radius: var(--rounded-large);
-    max-width: 64rem;
+    /* max-width: 64rem; */
   }
 
   main {
@@ -462,7 +496,7 @@ dl > :is(dd + dt, dt + dt) {
   }
 
   :root {
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     scrollbar-color: var(--color-text) var(--color-root-background-alpha);
     --root-gradient-size: 100vh;
     --root-gradient-direction: to bottom;
