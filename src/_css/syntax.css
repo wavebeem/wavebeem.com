@@ -9,6 +9,8 @@ article pre {
   color: inherit;
   scrollbar-color: var(--color-syntax-text) var(--color-syntax-background);
   overflow-x: auto;
+
+  border: 2px solid var(--color-main-divider);
 }
 
 @media (width <= 50rem) {

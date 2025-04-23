@@ -13,7 +13,7 @@ body > header .button {
 }
 
 .header {
-  --s: 50px;
+  --s: 200px;
   background: var(--color-main-text-heading);
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - var(--s))); */
   /* clip-path: circle(50% at 50% 200%);
@@ -23,7 +23,10 @@ body > header .button {
 .header2 {
   --s: 50px;
   background: var(--color-main-text-heading);
+  /* background: red; */
   grid-area: header2;
+  /* padding-bottom: 2rem;
+  margin-bottom: 1rem; */
   clip-path: ellipse(100% 100% at 50% -50%);
   padding-bottom: calc(2 * var(--s));
   margin-bottom: calc(-0.5 * var(--s));
@@ -58,7 +61,7 @@ body > header .button {
   /* color: var(--color-main-text); */
 }
 
-body > nav {
+.nav {
   grid-area: nav;
 }
 
@@ -79,13 +82,11 @@ body > nav {
   display: none;
 }
 
-@media (width < 64rem) {
-  body:has(> header details:not([open])) > nav {
-    display: none;
-  }
+.nav:not(:target) {
+  display: none;
 }
 
-@media (width >= 64rem) {
+@media (width >= 50rem) {
   .hamburger {
     display: none;
   }
@@ -97,9 +98,11 @@ body > nav {
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
+  max-width: 50rem;
+  margin-inline: auto;
 }
 
-@media (width >= 64rem) {
+@media (width >= 50rem) {
   body > header {
     grid-area: header;
   }
@@ -110,6 +113,8 @@ body > nav {
   }
 
   .logo-container {
-    /* padding: 0; */
+    padding: 0;
+    padding: 1rem;
+    /* margin-bottom: -2rem; */
   }
 }

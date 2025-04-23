@@ -4,6 +4,7 @@
     ui-monospace, "Cascadia Code", "SFMono-Regular", "Menlo", "Monaco",
     "Consolas", "Liberation Mono", "Courier New", monospace;
   --font-body: "PP Object Sans", var(--font-fallback-main);
+  /* TODO: Add a better heading font? */
   /* TODO: Install this as a web font */
   /* --font-cool: "Whisper", var(--font-fallback-main); */
   /* --font-cool: "Whisper", var(--font-fallback-main); */
@@ -18,7 +19,7 @@
 
    https://modern-fluid-typography.vercel.app/
   */
-  --font-size-h1: 3rem;
+  --font-size-h1: 4rem;
   --font-size-h2: 2rem;
   --font-size-h3: 1.5rem;
   --font-size-base: 1.25rem;
@@ -30,6 +31,8 @@
   --rounded-medium: 8px;
   --rounded-large: 16px;
   --rounded-pill: 9999px;
+
+  --content-width: 50rem;
 
   --link-underline-offset: calc(1em / 6);
   --link-underline-thickness: 2px;

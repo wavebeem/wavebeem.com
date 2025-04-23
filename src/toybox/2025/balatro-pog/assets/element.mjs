@@ -15,9 +15,9 @@ export class WavebeemEasterEgg extends HTMLElement {
     this.addEventListener(
       "pointermove",
       (event) => {
-        if (this.#shouldSkip()) {
-          return;
-        }
+        // if (this.#shouldSkip()) {
+        //   return;
+        // }
         const x = event.offsetX;
         const y = event.offsetY;
         const w = this.clientWidth;
@@ -34,7 +34,7 @@ export class WavebeemEasterEgg extends HTMLElement {
       {
         signal: this.#abortController.signal,
         passive: true,
-      }
+      },
     );
     this.addEventListener(
       "pointerenter",
@@ -44,7 +44,7 @@ export class WavebeemEasterEgg extends HTMLElement {
         }
         this.dataset.state = "inside";
       },
-      { signal }
+      { signal },
     );
     this.addEventListener(
       "pointerleave",
@@ -54,7 +54,7 @@ export class WavebeemEasterEgg extends HTMLElement {
         }
         this.dataset.state = "outside";
       },
-      { signal }
+      { signal },
     );
   }
 

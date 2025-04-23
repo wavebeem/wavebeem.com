@@ -191,10 +191,14 @@ pre {
 
 :not(pre) > code {
   box-decoration-break: clone;
-  background: var(--color-syntax-background);
+  /* background: var(--color-syntax-background); */
   color: var(--color-syntax-text);
-  padding: 2px 0.5ch;
-  border-radius: var(--rounded-medium);
+  /* padding: 2px 0.5ch;
+  border-radius: var(--rounded-medium); */
+}
+
+.stuff {
+  max-width: var(--content-width);
 }
 
 main details {
@@ -285,6 +289,8 @@ main {
   flex: auto;
   padding-block: 1.5rem;
   padding-inline: 1rem;
+  max-width: 50rem;
+  margin-inline: auto;
 
   background-color: var(--color-background);
   color: var(--color-text);
@@ -469,7 +475,7 @@ dl > :is(dd + dt, dt + dt) {
   margin-top: 1.5rem;
 }
 
-@media (width >= 64rem) {
+@media (width >= 50rem) {
   body {
     display: grid;
     /* Prevent grid blowout by using minmax(0, 1fr) instead of 1fr */
@@ -486,7 +492,7 @@ dl > :is(dd + dt, dt + dt) {
     /* Align the sidebar to the top, don't stretch to match the main height */
     align-items: flex-start;
     border-radius: var(--rounded-large);
-    /* max-width: 64rem; */
+    /* max-width: 50rem; */
   }
 
   main {

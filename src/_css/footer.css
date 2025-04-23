@@ -1,8 +1,8 @@
 body > footer {
   display: flex;
   gap: 1rem;
-  justify-content: space-between;
-  align-items: center;
+  /* justify-content: space-between; */
+  /* align-items: center; */
 
   padding-inline: 1rem;
   padding-block: 1rem;
@@ -11,13 +11,16 @@ body > footer {
   color: var(--color-text);
   border-bottom-left-radius: var(--rounded-medium);
   border-bottom-right-radius: var(--rounded-medium);
+
+  max-width: 50rem;
+  margin-inline: auto;
 }
 
 body > footer a {
   color: var(--color-main-link);
 }
 
-@media (width >= 64rem) {
+@media (width >= 50rem) {
   body > footer {
     padding-bottom: 0;
     padding-left: 0;
