@@ -1,7 +1,6 @@
 body > header {
   --color-background: var(--color-root-background);
   --color-text: var(--color-root-text);
-  --color-text-small: var(--color-root-text);
   --color-divider: var(--color-root-divider);
   --color-link: var(--color-root-text);
 

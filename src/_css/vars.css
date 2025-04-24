@@ -4,9 +4,7 @@
     ui-monospace, "Cascadia Code", "SFMono-Regular", "Menlo", "Monaco",
     "Consolas", "Liberation Mono", "Courier New", monospace;
   --font-body: "PP Object Sans", var(--font-fallback-main);
-  /* TODO: Install this as a web font */
-  --font-cool: "Whisper", var(--font-fallback-main);
-  /* --font-cool: "PP Editorial New", var(--font-fallback-main); */
+  --font-cool: var(--font-body);
   --font-logo: "Ultra Hi-Gloss", var(--font-fallback-main);
   --font-mono: "JetBrains Mono", var(--font-fallback-mono);
 

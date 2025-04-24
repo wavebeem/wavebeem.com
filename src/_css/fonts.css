@@ -1,11 +1,4 @@
 @font-face {
-  font-family: "Whisper";
-  src: url("/fonts/Whisper-Regular.woff2") format("woff2");
-  font-weight: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "PP Object Sans";
   src: url("/fonts/PPObjectSans-Regular.woff2") format("woff2");
   font-display: swap;
