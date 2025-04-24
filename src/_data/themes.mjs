@@ -45,7 +45,8 @@ export const light = {
   // "color-syntax-string": oklch(52, 100, 152),
   // "color-syntax-punctuation": oklch(52, 30, 340),
 
-  "color-main-background": "#fafafa",
+  "color-main-background": "#fff",
+  // "color-main-background": "#fafafa",
   "color-main-text": "#333",
   "color-main-text-small": "#666",
   // "color-main-text-heading": oklch(90, 55, 145),
@@ -57,8 +58,9 @@ export const light = {
   // "color-main-link": oklch(60, 70, 145 + 180),
   // "color-main-link": oklch(60, 90, 145 + 180 + 35),
 
-  "color-syntax-background": "#fff",
-  "color-syntax-text": oklch(55, 90, hue3),
+  // "color-syntax-background": "#eee",
+  "color-syntax-background": oklch(98, 5, hue2),
+  "color-syntax-text": oklch(50, 50, hue3),
   "color-syntax-comment": oklch(52, 0, hue2),
   "color-syntax-keyword": oklch(52, 100, hue3),
   "color-syntax-property": oklch(52, 60, hue2),

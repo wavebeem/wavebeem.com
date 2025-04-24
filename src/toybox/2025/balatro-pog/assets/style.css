@@ -1,10 +1,6 @@
 wavebeem-easter-egg {
   --avatar-size: 180px;
   --avatar-padding: 0px;
-  float: right;
-  margin: 1rem;
-  margin-right: 0;
-  margin-top: 0;
   padding: var(--avatar-padding);
   border-radius: var(--rounded-pill);
   --wavebeem-easter-egg--shadow-color: hsl(0 0% 0% / 50%);
@@ -13,8 +9,8 @@ wavebeem-easter-egg {
   --transform: translate(calc(var(--t) * var(--x)), calc(var(--t) * var(--y)))
     rotateY(calc(var(--k) * var(--x))) rotateX(calc(var(--k) * var(--y)));
   display: flex;
+  max-width: max-content;
   position: relative;
-  /* box-shadow: 0 8px 16px #0004; */
 }
 
 @media (width >= 64rem) {
@@ -123,10 +119,4 @@ wavebeem-easter-egg[data-state="inside"]::after {
 wavebeem-easter-egg[data-state="outside"]::before,
 wavebeem-easter-egg[data-state="outside"]::after {
   transition: opacity 0;
-}
-
-@media (width <= 50rem) {
-  wavebeem-easter-egg {
-    --avatar-size: 100px;
-  }
 }

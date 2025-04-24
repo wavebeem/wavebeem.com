@@ -124,7 +124,7 @@ a {
   border-image-width: 10px;
   border-image-slice: 9 fill;
   border-image-outset: 0 0 0 100vw; */
-  font-weight: 900;
+  /* font-weight: 900; */
 }
 
 :is(h2) {
@@ -134,7 +134,7 @@ a {
   text-decoration-color: var(--color-main-text-heading);
   text-underline-position: below;
   text-underline-offset: calc(1em / 8); */
-  font-weight: 900;
+  /* font-weight: 900; */
 
   border-bottom: 4px solid;
   /* border-image: linear-gradient(var(--color-main-text-heading) 0 100%); */
@@ -161,6 +161,8 @@ a {
 h1 {
   font-size: var(--font-size-h1);
   font-family: var(--font-cool);
+  font-weight: normal;
+  font-style: italic;
   /* letter-spacing: -1px; */
   margin-block: 0 1.5rem;
 }

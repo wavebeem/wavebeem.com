@@ -7,7 +7,7 @@ description: >-
 ---
 
 <script type="module" src="./assets/element.mjs"></script>
-<link rel="stylesheet" src="./assets/style.css" />
+<link rel="stylesheet" href="./assets/style.css" />
 
 <wavebeem-easter-egg>
   <img

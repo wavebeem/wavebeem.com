@@ -15,9 +15,9 @@ export class WavebeemEasterEgg extends HTMLElement {
     this.addEventListener(
       "pointermove",
       (event) => {
-        // if (this.#shouldSkip()) {
-        //   return;
-        // }
+        if (this.#shouldSkip()) {
+          return;
+        }
         const x = event.offsetX;
         const y = event.offsetY;
         const w = this.clientWidth;

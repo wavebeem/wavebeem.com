@@ -99,6 +99,7 @@ body > header .button {
   align-items: center;
   gap: 1rem;
   max-width: 50rem;
+  justify-content: center;
   margin-inline: auto;
 }
 
