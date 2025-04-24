@@ -1,7 +1,7 @@
 ---
 date: "2025-03-10"
 title: >-
-  In defense of the for...of loop
+  In defense of the “for...of” loop
 description: >-
   Despite its introduction in ES2015 and implementation in all browsers over 8.5
   years ago, I still see `.forEach` used in favor of the modern `for...of` loop.
@@ -105,7 +105,8 @@ processing the entire list.
 If you're not already using generators, I think you should consider it. I've
 [written about them before](/blog/2017/js-iterators/), and
 [MDN has a nice article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
-covering them. The `.forEach` method is incapable of working with iterators, unless you convert them to arrays first. This removes all benefits of iterators
+covering them. The `.forEach` method is incapable of working with iterators,
+unless you convert them to arrays first. This removes all benefits of iterators
 (primarily [laziness](https://en.wikipedia.org/wiki/Lazy_evaluation) and memory
 consumption being decoupled from the collection size).
 
@@ -216,9 +217,10 @@ for (const key in object) {
 }
 ```
 
-[for...in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) iterates over all enumerable properties, including those from the
-prototype chain. Given that prototype augmentation used to be more common in JS,
-this was deemed too risky and the newer
+[for...in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+iterates over all enumerable properties, including those from the prototype
+chain. Given that prototype augmentation used to be more common in JS, this was
+deemed too risky and the newer
 [Object.keys()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 method became the preferred way to get keys from an object.
 
