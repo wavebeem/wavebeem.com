@@ -22,9 +22,15 @@ description: >-
 
 ---
 
-![](./assets/title.gbc.webp)
-
-**Pokémon™ Crystal Version © 2001 GAME FREAK inc.**
+<figure>
+  <img
+    src="./assets/title.gbc.webp"
+    width="480"
+    height="432"
+    data-orientation="square"
+  />
+  <figcaption>Pokémon™ Crystal Version © 2001 GAME FREAK inc.</figcaption>
+</figure>
 
 ## Allow me to gush for a moment about the Game Boy Color
 

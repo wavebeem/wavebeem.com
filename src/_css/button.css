@@ -10,7 +10,7 @@ button {
   justify-content: center;
   align-items: center;
   display: inline-flex;
-  /* border: 2px solid; */
+  border: 2px solid transparent;
   font-weight: bold;
   padding: 0.25rem 1.5rem;
   border-radius: var(--rounded-pill);
@@ -29,8 +29,7 @@ button {
 
 .button:active,
 button:active {
-  outline: 3px solid var(--color-text);
-  outline-offset: -3px;
+  outline: none;
 }
 
 .button:focus-visible,

@@ -19,7 +19,7 @@ wavebeem-easter-egg {
 
 @media (width >= 64rem) {
   wavebeem-easter-egg {
-    margin-top: -6rem;
+    /* margin-top: -6rem; */
   }
 }
 
@@ -56,7 +56,7 @@ wavebeem-easter-egg[data-state="inside"] img {
   pointer-events: none;
   /* touch-action: none; */
   transform: var(--transform);
-  outline: 1px solid #fff8;
+  outline: 1px solid #fff2;
   outline-offset: -1px;
   --k1: calc(-1 / 16);
   --k2: calc(1 / 8);

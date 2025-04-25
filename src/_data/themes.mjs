@@ -32,7 +32,7 @@ export const light = {
   "color-main-divider": "#ccc",
   "color-main-link": oklch(50, 65, 290),
 
-  "color-syntax-background": "#fff",
+  "color-syntax-background": oklch(98, 5),
   "color-syntax-text": "#111",
   "color-syntax-comment": oklch(52, 0, 290),
   "color-syntax-keyword": oklch(52, 100, 340),
@@ -42,16 +42,15 @@ export const light = {
 };
 
 export const dark = {
-  "color-main-background": "#333",
-  "color-main-text": "#eee",
-  "color-main-divider": "#555",
-  "color-main-link": oklch(80, 65, 290),
-
-  "color-syntax-background": "#2c2c2c",
-  "color-syntax-text": "#eee",
-  "color-syntax-comment": oklch(70, 15, 290),
-  "color-syntax-keyword": oklch(80, 70, 340),
-  "color-syntax-property": oklch(80, 70, 250),
-  "color-syntax-string": oklch(80, 50, 152),
-  "color-syntax-punctuation": oklch(70, 15, 340),
+  // "color-main-background": "#333",
+  // "color-main-text": "#eee",
+  // "color-main-divider": "#555",
+  // "color-main-link": oklch(80, 65, 290),
+  // "color-syntax-background": "#2c2c2c",
+  // "color-syntax-text": "#eee",
+  // "color-syntax-comment": oklch(70, 15, 290),
+  // "color-syntax-keyword": oklch(80, 70, 340),
+  // "color-syntax-property": oklch(80, 70, 250),
+  // "color-syntax-string": oklch(80, 50, 152),
+  // "color-syntax-punctuation": oklch(70, 15, 340),
 };

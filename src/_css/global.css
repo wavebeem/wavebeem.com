@@ -5,45 +5,20 @@
 }
 
 :root {
-  --color-background: var(--color-root-background);
-  --color-text: var(--color-root-text);
-  --color-divider: var(--color-root-divider);
-  --color-link: var(--color-root-text);
-
-  text-shadow: 0 0 8px #0004;
   overflow-y: scroll;
-  color-scheme: light dark;
-  scrollbar-color: var(--color-main-text) var(--color-main-background);
-  color: var(--color-text);
+  color-scheme: light;
+  /* scrollbar-color: var(--color-main-text) var(--color-main-background); */
   /* overscroll-behavior: none; */
   font-synthesis: none;
-
-  --root-gradient-size: 100vw;
-  --root-gradient-direction: to right;
-  --_s1: 16px;
-  --_c1: #00000008;
-  --_c2: transparent;
-  --_b1:
-    linear-gradient(45deg, var(--_c2) 25%, var(--_c1) 25%) 0 0 / var(--_s1)
-      var(--_s1),
-    linear-gradient(135deg, var(--_c2) 25%, var(--_c1) 25%) calc(var(--_s1) / 2)
-      0 / var(--_s1) var(--_s1),
-    linear-gradient(45deg, var(--_c1) 75%, var(--_c2) 75%) calc(var(--_s1) / 2)
-      calc(var(--_s1) / -2) / var(--_s1) var(--_s1),
-    linear-gradient(135deg, var(--_c1) 75%, var(--_c2) 75%) 0px
-      calc(var(--_s1) / 2) / var(--_s1) var(--_s1);
-  --_b2: linear-gradient(
-    var(--root-gradient-direction),
-    var(--color-root-gradient1) calc(0 * var(--root-gradient-size)),
-    var(--color-root-gradient2) calc(1 * var(--root-gradient-size)),
-    var(--color-root-gradient3) calc(3 * var(--root-gradient-size))
-  );
-  background:
-    var(--_b1),
-    var(--_b2) var(--color-root-overscroll);
+  background: var(--color-main-background);
+  color: var(--color-main-text);
+  padding: 0;
+  margin: 0;
 }
 
 body {
+  padding: 0;
+  margin: 0;
   /**
    * Setting font size on body rather than html so that 1rem can refer to the
    * user's specified font size anywhere in my CSS, rather than 1.25 times that
@@ -53,11 +28,14 @@ body {
   font-size: var(--font-size-base);
   font-family: var(--font-body);
   line-height: 1.5;
-  margin: 0 auto;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 0;
+  min-height: 100vh;
+}
+
+main {
+  flex: auto;
 }
 
 a {
@@ -206,22 +184,9 @@ main :is(ul, ol) :is(ul, ol) {
 }
 
 main {
-  --color-background: var(--color-main-background);
-  --color-text: var(--color-main-text);
-  --color-divider: var(--color-main-divider);
-  --color-link: var(--color-main-link);
-
   flex: auto;
   padding-block: 1.5rem;
   padding-inline: 1rem;
-
-  background-color: var(--color-background);
-  color: var(--color-text);
-  text-shadow: none;
-  box-shadow: 0 8px 16px #0002;
-
-  /* Expand main to height of sidebar if smaller */
-  align-self: stretch;
 }
 
 article header :is(h1, h2, h3) {
@@ -336,21 +301,27 @@ article .grid2 figure img {
   width: 100%;
 }
 
-article figure figcaption {
-  margin-top: 1rem;
-  font-size: var(--font-size-small);
-  font-weight: bold;
-  text-wrap: balance;
+article figure > :is(img, video) {
+  margin-inline: auto;
 }
 
-article figure figcaption small {
-  font-weight: normal;
+article figure figcaption {
+  margin-top: 0.25rem;
   font-size: var(--font-size-small);
+  text-align: center;
   text-wrap: balance;
+  margin-inline: auto;
+  max-width: 40ch;
 }
 
 article p:has(:is(img, video, picture):only-child) {
   max-width: initial;
+  margin-inline: auto;
+}
+
+article p > :is(img, video, picture):only-child {
+  max-width: 100%;
+  margin-inline: auto;
 }
 
 article
@@ -358,7 +329,10 @@ article
   + p:has(> strong:only-child) {
   margin-top: -1rem;
   font-size: var(--font-size-small);
+  text-align: center;
   text-wrap: balance;
+  margin-inline: auto;
+  max-width: 40ch;
 }
 
 article p:has(:is(video, img, picture):only-child) + p > strong:only-child {
@@ -391,39 +365,6 @@ dl > dd {
 
 dl > :is(dd + dt, dt + dt) {
   margin-top: 1.5rem;
-}
-
-@media (width >= 64rem) {
-  body {
-    display: grid;
-    /* Prevent grid blowout by using minmax(0, 1fr) instead of 1fr */
-    grid-template-columns: max-content minmax(0, 1fr);
-    /* Make the nav look hierarchically below the header and footer */
-    grid-template-areas:
-      "...  header"
-      "nav  main  "
-      "...  footer";
-    gap: 1rem;
-    padding: 1rem;
-    padding-left: 0;
-    /* Align the sidebar to the top, don't stretch to match the main height */
-    align-items: flex-start;
-    border-radius: var(--rounded-large);
-    max-width: 64rem;
-  }
-
-  main {
-    padding-inline: 1.5rem;
-    grid-area: main;
-    border-radius: var(--rounded-large);
-  }
-
-  :root {
-    padding: 1.5rem;
-    scrollbar-color: var(--color-text) var(--color-root-background-alpha);
-    --root-gradient-size: 100vh;
-    --root-gradient-direction: to bottom;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
