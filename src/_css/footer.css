@@ -1,4 +1,7 @@
-body > footer {
+.footer {
+  background: var(--color-footer-background);
+  color: var(--color-footer-text);
+
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -8,10 +11,9 @@ body > footer {
   padding-block: 1rem;
   grid-area: footer;
   font-size: var(--font-size-small);
-  color: var(--color-text);
 }
 
-body > footer ul {
+.footer ul {
   font-size: var(--font-size-base);
   padding: 0;
   list-style-type: none;
@@ -21,31 +23,28 @@ body > footer ul {
   grid-template-columns: 1fr 1fr;
 }
 
-body > footer a {
+.footer a {
   display: block;
   padding: 0.5rem 0;
   text-decoration: none;
+  color: inherit;
 }
 
-body > footer li {
+.footer li {
   border-bottom: 1px solid var(--color-root-divider);
   position: relative;
 }
 
-body > footer li:has(> a:hover) {
+.footer li:has(> a:hover) {
   border-color: currentColor;
 }
 
-body > footer a {
-  color: inherit;
-}
-
-body > footer a:hover {
+.footer a:hover {
   text-decoration: none;
 }
 
 @media (width >= 64rem) {
-  body > footer {
+  .footer {
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;

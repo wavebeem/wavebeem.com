@@ -3,7 +3,7 @@
 }
 
 wavebeem-review-pokemon-crystal-sprites {
-  display: inline-flex;
+  display: flex;
 
   & button {
     all: inherit;

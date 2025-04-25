@@ -2,7 +2,7 @@ label:has(> input[type="checkbox"]:first-child) {
   user-select: none;
   display: flex;
   gap: 0.5rem;
-  align-items: center;
+  /* align-items: center; */
 
   input[type="checkbox"] {
     box-sizing: border-box;
@@ -13,6 +13,7 @@ label:has(> input[type="checkbox"]:first-child) {
     height: 1.5rem;
     border: 2px solid;
     margin: 0;
+    margin-top: 4px;
     border-radius: var(--rounded-small);
 
     &:checked {
@@ -20,8 +21,8 @@ label:has(> input[type="checkbox"]:first-child) {
       --_size: 2px;
       --_start: calc(50% - 0.5 * var(--_size));
       --_end: calc(var(--_start) + var(--_size));
-      --_bg: var(--color-text);
-      --_fg: var(--color-background);
+      --_bg: var(--color-main-text);
+      --_fg: var(--color-main-background);
 
       border-color: var(--_bg);
       background-color: var(--_bg);
@@ -55,11 +56,11 @@ label:has(> input[type="checkbox"]:first-child) {
 
   @media (hover) {
     &:hover {
-      text-decoration-line: underline;
+      /* text-decoration-line: underline;
       text-decoration-thickness: 1px;
       text-decoration-style: solid;
       text-underline-position: under;
-      text-decoration-color: var(--color-divider);
+      text-decoration-color: var(--color-divider); */
     }
   }
 }

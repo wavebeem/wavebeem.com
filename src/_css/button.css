@@ -4,8 +4,8 @@ button {
   font: inherit;
   /* background-color: inherit;
   color: inherit; */
-  background-color: var(--color-text);
-  color: var(--color-background);
+  background-color: var(--color-main-text);
+  color: var(--color-main-background);
   text-align: center;
   justify-content: center;
   align-items: center;
@@ -21,7 +21,7 @@ button {
 @media (hover) {
   .button:hover,
   button:hover {
-    outline: 2px solid var(--color-text);
+    outline: 2px solid var(--color-main-text);
     outline-offset: -1px;
     text-decoration-line: none;
   }
@@ -34,6 +34,6 @@ button:active {
 
 .button:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--color-text);
+  outline: 3px solid var(--color-main-text);
   outline-offset: 2px;
 }

@@ -27,8 +27,14 @@ export const light = {
   "color-root-text": "#fff",
   "color-root-divider": "#fff3",
 
-  "color-main-background": "#eee",
-  "color-main-text": "#333",
+  "color-header-background": oklch(65, 55, 165),
+  "color-header-text": "#fff",
+
+  "color-footer-background": oklch(95, 55, 135),
+  "color-footer-text": "#111",
+
+  "color-main-background": "#fff",
+  "color-main-text": "#111",
   "color-main-divider": "#ccc",
   "color-main-link": oklch(50, 65, 290),
 

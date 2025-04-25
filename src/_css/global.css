@@ -77,9 +77,7 @@ h2 {
   font-size: var(--font-size-h2);
   font-family: var(--font-cool);
   /* letter-spacing: -1px; */
-  margin-block: 4rem 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--color-divider);
+  margin-block: 4rem -0.5rem;
 }
 
 h3 {
@@ -146,7 +144,7 @@ main details[open] > summary {
 
 .spoiler {
   padding-inline: 0.25ch;
-  background-color: var(--color-text);
+  background-color: var(--color-main-text);
   color: transparent;
   cursor: default;
 }
@@ -158,11 +156,11 @@ main details[open] > summary {
 }
 
 .spoiler:focus {
-  color: var(--color-background);
+  color: var(--color-main-background);
 }
 
 .spoiler:focus-visible {
-  outline: 2px solid var(--color-text);
+  outline: 2px solid var(--color-main-text);
   outline-offset: 2px;
 }
 
@@ -251,22 +249,6 @@ article header small {
 
 .gap3 {
   gap: 1rem;
-}
-
-/* --- TOYBOX --- */
-
-.crime-frame {
-  border-radius: var(--rounded-medium);
-  overflow: hidden;
-  position: relative;
-}
-
-.crime-frame :is(details, summary) {
-  margin: unset;
-}
-
-.crime-frame > details {
-  background: white;
 }
 
 .clearfix {

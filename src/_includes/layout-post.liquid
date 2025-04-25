@@ -1,23 +1,24 @@
 ---
 layout: "layout-base"
 ---
-<article>
-  <header>
+<article class="post">
+  <header class="post-header">
     <h1>{{ title | escape }}</h1>
-    <small> {% render "partials/date" date: page.date %} </small>
+    <small>{% render "partials/date" date: page.date %}</small>
     <p>{{ description | markdownify }}</p>
   </header>
 
-  <section>
+  <section class="post-body">
     {{ content }}
   </section>
+
+  <footer class="post-footer">
+    <p>
+      Thanks for reading.
+      <a href="/contact/">Let's talk</a>
+      about this post.
+      <a href="/subscribe/">Subscribe</a> to stay up to date.
+    </p>
+  </footer>
 </article>
 
-<hr />
-
-<p>
-  Thanks for reading.
-  <a href="/contact/">Let's talk</a>
-  about this post.
-  <a href="/subscribe/">Subscribe</a> to stay up to date.
-</p>

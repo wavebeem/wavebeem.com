@@ -1,0 +1,17 @@
+.post-body > * {
+  max-width: var(--width-media);
+  margin-inline: auto;
+}
+
+.post-body
+  > :is(
+    div,
+    :is(p, blockquote),
+    :is(label, input, textarea, button),
+    details,
+    :is(ul, ol, dl),
+    :is(h1, h2, h3, h4, h5, h6)
+  ) {
+  max-width: var(--width-text);
+  margin-inline: auto;
+}

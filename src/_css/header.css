@@ -1,10 +1,11 @@
 body > header {
-  --color-background: var(--color-root-background);
-  --color-text: var(--color-root-text);
+  --color-main-background: var(--color-root-background);
+  --color-main-text: var(--color-root-text);
   --color-divider: var(--color-root-divider);
   --color-link: var(--color-root-text);
 
-  color: var(--color-text);
+  background: var(--color-header-background);
+  color: var(--color-header-text);
 }
 
 body > header .button {

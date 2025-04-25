@@ -15,10 +15,11 @@ description: >-
 
 <label>
   <input id="gbc-filter" type="checkbox" autocomplete="off" checked />
-  <span>Game Boy Color screenshot filter</span>
+  <div>
+    <div>Game Boy Color screenshot filter</div>
+    <div><small>You can hover the images to temporarily turn off the effect.</small></div>
+  </div>
 </label>
-
-<div><small>You can hover the images to temporarily turn off the effect.</small></div>
 
 ---
 
