@@ -4,7 +4,7 @@
   justify-content: space-between;
 
   padding-inline: 1rem;
-  padding-block: 1rem;
+  /* padding-block: 1rem; */
   grid-area: footer;
   font-size: var(--font-size-small);
 }
@@ -25,6 +25,7 @@
   margin-inline: auto;
 
   font-size: var(--font-size-base);
+  font-weight: bold;
   padding: 0;
   list-style-type: none;
   gap: 0 1rem;
@@ -41,8 +42,9 @@
 }
 
 .footer li {
-  border-bottom: 1px solid var(--color-root-divider);
-  position: relative;
+  /* border-bottom: 1px solid var(--color-root-divider); */
+  border-bottom: 1px solid transparent;
+  /* position: relative; */
 }
 
 .footer li:has(> a:hover) {

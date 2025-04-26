@@ -1,9 +1,9 @@
 .post-header {
   /* text-align: center; */
-  padding: 1rem;
-  padding-bottom: 1rem;
-  background: var(--color-footer-background);
-  color: var(--color-footer-text);
+  /* padding: 1rem;
+  padding-bottom: 1rem; */
+  /* background: var(--color-footer-background); */
+  /* color: var(--color-footer-text); */
 
   /* max-width: var(--width-media);
   margin-inline: auto; */
@@ -30,7 +30,7 @@
 }
 
 .post-header p {
-  font-size: var(--font-size-h3);
+  font-size: var(--font-size-large);
   text-align: left;
 }
 
@@ -40,7 +40,7 @@
   margin-inline: auto;
 }
 
-.post-body > :is(figure, img, video) {
+.post-body > :is(figure, img, video, p:has(img)) {
   max-width: var(--width-media);
   margin-inline: auto;
 }

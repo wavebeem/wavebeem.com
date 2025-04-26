@@ -4,7 +4,8 @@
     ui-monospace, "Cascadia Code", "SFMono-Regular", "Menlo", "Monaco",
     "Consolas", "Liberation Mono", "Courier New", monospace;
   --font-body: "PP Object Sans", var(--font-fallback-main);
-  --font-cool: var(--font-body);
+  --font-cool: "PP Talisman", var(--font-fallback-main);
+  /* --font-cool: var(--font-body); */
   --font-logo: "Ultra Hi-Gloss", var(--font-fallback-main);
   --font-mono: "JetBrains Mono", var(--font-fallback-mono);
 
@@ -15,9 +16,10 @@
 
    https://modern-fluid-typography.vercel.app/
   */
-  --font-size-h1: 3rem;
-  --font-size-h2: 1.75rem;
-  --font-size-h3: 1.5rem;
+  --font-size-h1: 4rem;
+  --font-size-h2: 2.5rem;
+  --font-size-h3: 2rem;
+  --font-size-large: 1.5rem;
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
   --font-size-code: calc(0.9 * var(--font-size-base));

@@ -69,7 +69,7 @@ a {
 :is(h2, h3)::marker {
   content: "*- ";
   font-family: var(--font-logo);
-  color: var(--color-main-link);
+  color: var(--color-main-decoration);
 }
 
 :is(h1, h2, h3) {
@@ -80,14 +80,16 @@ a {
 h1 {
   font-size: var(--font-size-h1);
   font-family: var(--font-cool);
-  /* letter-spacing: -1px; */
+  letter-spacing: calc(1em / 32);
+  word-spacing: calc(1em / 16);
   margin-block: 0 1.5rem;
 }
 
 h2 {
   font-size: var(--font-size-h2);
   font-family: var(--font-cool);
-  /* letter-spacing: -1px; */
+  letter-spacing: calc(1em / 32);
+  word-spacing: calc(1em / 16);
   margin-block: 4rem -0.5rem;
 }
 
@@ -109,8 +111,9 @@ pre {
 :not(pre) > code {
   font-size: 0.9em;
   /* color: var(--color-syntax-text); */
-  color: var(--color-main-text-heading);
+  /* color: var(--color-main-text-heading); */
   /* color: var(--color-syntax-keyword); */
+  font-weight: bold;
 }
 
 main details {
@@ -193,6 +196,7 @@ main :is(ul, ol) :is(ul, ol) {
 
 main {
   flex: auto;
+  min-height: 50vh;
 }
 
 article header :is(h1, h2, h3) {
@@ -305,8 +309,8 @@ article figure figcaption {
 }
 
 article p:has(:is(img, video, picture):only-child) {
-  max-width: initial;
-  margin-inline: auto;
+  /* max-width: initial;
+  margin-inline: auto; */
 }
 
 article p > :is(img, video, picture):only-child {

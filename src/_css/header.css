@@ -1,4 +1,4 @@
-body > header {
+.header {
   --color-main-background: var(--color-root-background);
   --color-main-text: var(--color-root-text);
   --color-divider: var(--color-root-divider);
@@ -6,7 +6,6 @@ body > header {
 
   background: var(--color-header-background);
   color: var(--color-header-text);
-  padding: 1.5rem;
 
   --root-gradient-size: 100vw;
   --root-gradient-direction: to right;
@@ -35,10 +34,26 @@ body > header {
   color: var(--color-header-text);
 
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
-body > header .button {
+.header .nav {
+  background-color: var(--color-footer-background);
+  color: var(--color-footer-text);
+}
+
+.header .nav menu {
+  padding: 0;
+}
+
+.header .nav a {
+  display: block;
+  padding: 1rem 1.5rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+.header .button {
   box-shadow: 0 8px 16px #0002;
 }
 
@@ -50,8 +65,9 @@ body > header .button {
 .header menu {
   margin: 0;
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
   list-style: none;
+  font-weight: bold;
 }
 
 .header a {
@@ -59,15 +75,15 @@ body > header .button {
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-size: var(--font-size-h2);
+  padding: 1.5rem 1.5rem;
+  font-size: var(--font-size-h3);
   letter-spacing: 1px;
   font-family: var(--font-logo);
   /* Prevent Safari from making this even bolder lol */
   font-synthesis: none;
   font-weight: normal;
   text-transform: uppercase;
-  color: var(--color-main-link);
+  color: var(--color-main-decoration);
 }
 
 .logo a {
@@ -118,11 +134,11 @@ body > nav {
 }
 
 @media (width >= 64rem) {
-  body > header {
+  .header {
     grid-area: header;
   }
 
-  body > header + .decorative-divider {
+  .header + .decorative-divider {
     grid-area: divider;
     height: 100%;
   }
