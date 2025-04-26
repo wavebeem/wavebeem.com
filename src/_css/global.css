@@ -69,6 +69,7 @@ a {
 :is(h2, h3)::marker {
   content: "*- ";
   font-family: var(--font-logo);
+  color: var(--color-main-link);
 }
 
 :is(h1, h2, h3) {
