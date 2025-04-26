@@ -238,8 +238,8 @@ If you like Pokémon and haven't played _Dragon Quest Monsters_ for the Game Boy
 Color (known as Dragon Warrior Monsters originally), I think you should give it
 a shot! Assuming you're in the mood for a Game Boy Color game.
 
-If you're looking for something more modern, you can't go wrong with Sh*in
-Megami Tensei V: Vengeance*, which is available on most modern gaming systems.
+If you're looking for something more modern, you can't go wrong with _Shin
+Megami Tensei V: Vengeance_, which is available on most modern gaming systems.
 Don't listen to the haters about its lackluster story: the writing is more
 interesting than any Pokémon game I've played, barring maybe Scarlet/Violet.
 

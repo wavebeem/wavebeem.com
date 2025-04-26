@@ -110,7 +110,7 @@ unless you convert them to arrays first. This removes all benefits of iterators
 (primarily [laziness](https://en.wikipedia.org/wiki/Lazy_evaluation) and memory
 consumption being decoupled from the collection size).
 
-## Isn't for...of slower?
+## Isn't "for...of" slower?
 
 **EDIT:** I only tested in Firefox for this section. That was a mistake. When
 testing in Edge and Safari, `for...of` was actually as fast or fast than
@@ -187,7 +187,7 @@ for (let i = 0; i < DATA.length; i++) {
 }
 ```
 
-## for...of has been supported natively for nearly a decade
+## "for...of" has been supported natively for nearly a decade
 
 [September 2016](https://caniuse.com/es6) is when the last\* browser (Safari),
 impelmented ES2015, 8.5 years ago at the time of writing.
@@ -206,7 +206,7 @@ you're using.
 \* _Technically Edge took longer, but that's the old version of Edge
 (pre-Chromium), which doesn't exist any more. Let's not worry about it._
 
-## Confusion between for...of and for...in
+## Confusion between "for...of" and "for...in"
 
 The related `for...in` loop is a bit confusing. It should generally be avoided
 in favor of a `for...of` loop iterating the keys of an object:

@@ -1,17 +1,51 @@
-.post-body > * {
+.post-header {
+  /* text-align: center; */
+  padding: 1rem;
+  padding-bottom: 1rem;
+  background: var(--color-footer-background);
+  color: var(--color-footer-text);
+
+  /* max-width: var(--width-media);
+  margin-inline: auto; */
+
+  /* border-bottom: 1px solid var(--color-main-divider); */
+
+  /* background: var(--color-header-background);
+  color: var(--color-header-text); */
+}
+
+.post-header > * {
   max-width: var(--width-media);
   margin-inline: auto;
 }
 
-.post-body
-  > :is(
-    div,
-    :is(p, blockquote),
-    :is(label, input, textarea, button),
-    details,
-    :is(ul, ol, dl),
-    :is(h1, h2, h3, h4, h5, h6)
-  ) {
+.post-header h1 {
+  margin-block: 3rem;
+}
+
+.post-header small {
+  display: block;
+  margin-top: -3rem;
+  margin-bottom: 3rem;
+}
+
+.post-header p {
+  font-size: var(--font-size-h3);
+  text-align: left;
+}
+
+.post-footer > *,
+.post-body > * {
   max-width: var(--width-text);
+  margin-inline: auto;
+}
+
+.post-body > :is(figure, img, video) {
+  max-width: var(--width-media);
+  margin-inline: auto;
+}
+
+.post-body > pre {
+  max-width: calc(var(--width-text) + 3rem);
   margin-inline: auto;
 }

@@ -1,5 +1,6 @@
 :root {
-  --filter-gbc: saturate(0.8) contrast(0.8) brightness(1.2) hue-rotate(-10deg);
+  --filter-gbc: saturate(80%) contrast(80%) brightness(120%) hue-rotate(-10deg)
+    brightness(95%);
 }
 
 wavebeem-review-pokemon-crystal-sprites {

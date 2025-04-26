@@ -39,7 +39,7 @@ main {
 }
 
 a {
-  color: var(--color-link);
+  color: var(--color-main-link);
   border-radius: var(--rounded-small);
   text-decoration-thickness: var(--link-underline-thickness);
   text-underline-offset: var(--link-underline-offset);
@@ -59,6 +59,16 @@ a {
 
 :is(h1, h2, h3, h4, h5, h6) {
   text-wrap: balance;
+  color: var(--color-main-text-heading);
+}
+
+:is(h2, h3) {
+  display: list-item;
+}
+
+:is(h2, h3)::marker {
+  content: "*- ";
+  font-family: var(--font-logo);
 }
 
 :is(h1, h2, h3) {
@@ -96,11 +106,10 @@ pre {
 }
 
 :not(pre) > code {
-  box-decoration-break: clone;
-  background: var(--color-syntax-background);
-  color: var(--color-syntax-text);
-  padding: 2px 0.5ch;
-  border-radius: var(--rounded-medium);
+  font-size: 0.9em;
+  /* color: var(--color-syntax-text); */
+  color: var(--color-main-text-heading);
+  /* color: var(--color-syntax-keyword); */
 }
 
 main details {
@@ -183,8 +192,6 @@ main :is(ul, ol) :is(ul, ol) {
 
 main {
   flex: auto;
-  padding-block: 1.5rem;
-  padding-inline: 1rem;
 }
 
 article header :is(h1, h2, h3) {
@@ -323,9 +330,9 @@ article p:has(:is(video, img, picture):only-child) + p > strong:only-child {
 
 article blockquote,
 article aside {
-  margin-inline: 0;
-  padding: 0 1.5rem;
-  border-left: 4px solid;
+  /* margin-inline: 0; */
+  padding: 0 3rem;
+  font-style: italic;
 }
 
 .pixelated {

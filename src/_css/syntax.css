@@ -65,7 +65,7 @@ article pre {
 
 .token.keyword {
   color: var(--color-syntax-keyword);
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 
 .language-css .token.property,
