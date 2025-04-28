@@ -43,6 +43,10 @@
 }
 
 .header .nav menu {
+  width: 100%;
+  margin-inline: auto;
+  max-width: calc(var(--width-content) + 3rem);
+
   padding: 0;
 }
 
@@ -126,6 +130,10 @@ body > nav {
 }
 
 .logo-container {
+  width: 100%;
+  margin-inline: auto;
+  max-width: calc(var(--width-content) + 3rem);
+
   padding: 1rem;
   display: flex;
   justify-content: space-between;

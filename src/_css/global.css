@@ -305,7 +305,6 @@ article figure figcaption {
   text-align: center;
   text-wrap: balance;
   margin-inline: auto;
-  max-width: 40ch;
 }
 
 article p:has(:is(img, video, picture):only-child) {
@@ -326,7 +325,6 @@ article
   text-align: center;
   text-wrap: balance;
   margin-inline: auto;
-  max-width: 40ch;
 }
 
 article p:has(:is(video, img, picture):only-child) + p > strong:only-child {

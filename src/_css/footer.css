@@ -21,17 +21,23 @@
 }
 
 .footer menu {
-  max-width: var(--width-text);
+  width: 100%;
   margin-inline: auto;
+  max-width: calc(var(--width-content) + 3rem);
+  padding-block: 0;
+  padding-inline: 1.5rem;
 
   font-size: var(--font-size-base);
   font-weight: bold;
-  padding: 0;
   list-style-type: none;
   gap: 0 1rem;
   flex-wrap: wrap;
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.footer > div {
+  padding: 1rem;
 }
 
 .footer a {
