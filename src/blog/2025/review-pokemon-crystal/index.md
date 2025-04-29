@@ -23,12 +23,9 @@ description: >-
 ---
 
 <figure>
-  <img
-    src="./assets/title.gbc.webp"
-    width="480"
-    height="432"
-    data-orientation="square"
-  />
+  <div class="gbc-frame">
+    <img src="./assets/title.gbc.webp" width="480" height="432" >
+  </div>
   <figcaption>Pokémon™ Crystal Version © 2001 GAME FREAK inc.</figcaption>
 </figure>
 
