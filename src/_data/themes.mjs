@@ -52,8 +52,11 @@ export const light = {
   // "color-main-link": oklch(55, 55, 345),
   // "color-main-link": oklch(52, 52, 135),
 
+  "color-media-border": oklch(95, 10, 135),
+
   // "color-syntax-background": oklch(96, 10, 165),
-  "color-syntax-background": "#f4f4f4",
+  "color-syntax-background": "#fff",
+  "color-syntax-border": oklch(95, 10, 135),
   // "color-syntax-background": "#f4f4f4",
   // "color-syntax-background": oklch(97, 0, 165),
   "color-syntax-text": "#111",

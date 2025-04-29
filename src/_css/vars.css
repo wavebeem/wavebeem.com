@@ -16,9 +16,9 @@
 
    https://modern-fluid-typography.vercel.app/
   */
-  --font-size-h1: 4rem;
-  --font-size-h2: 2.5rem;
-  --font-size-h3: 2rem;
+  --font-size-h1: 3rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
   --font-size-large: 1.5rem;
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
@@ -30,7 +30,7 @@
   --rounded-large: 16px;
   --rounded-pill: 9999px;
 
-  --width-content: 64rem;
+  --width-content: 50rem;
 
   --link-underline-offset: calc(1em / 6);
   --link-underline-thickness: 1.5px;

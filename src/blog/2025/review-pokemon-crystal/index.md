@@ -243,7 +243,7 @@ Megami Tensei V: Vengeance_, which is available on most modern gaming systems.
 Don't listen to the haters about its lackluster story: the writing is more
 interesting than any Pokémon game I've played, barring maybe Scarlet/Violet.
 
-<wavebeem-review-pokemon-crystal-sprites>
+<wavebeem-review-pokemon-crystal-sprites class="post-media">
   <button type="button">
     <img src="./assets/kris.webp" alt="Change image" width="48" height="48" />
   </button>

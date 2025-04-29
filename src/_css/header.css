@@ -40,6 +40,7 @@
 .header .nav {
   background-color: var(--color-footer-background);
   color: var(--color-footer-text);
+  border: 0.5rem solid transparent;
 }
 
 .header .nav menu {
@@ -52,9 +53,11 @@
 
 .header .nav a {
   display: block;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   color: inherit;
-  text-decoration: none;
+  text-decoration-line: none;
+  /* border-radius: 0; */
+  font-weight: bold;
 }
 
 .header .button {
@@ -71,16 +74,19 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .header a {
+  display: block;
   padding: 0.5rem;
+  padding: 0.5rem 1.5rem;
 }
 
 .logo {
-  padding: 1.5rem 1.5rem;
-  font-size: var(--font-size-h3);
+  display: flex;
+  align-items: center;
+  font-size: var(--font-size-h2);
   letter-spacing: 1px;
   font-family: var(--font-logo);
   /* Prevent Safari from making this even bolder lol */
@@ -88,6 +94,10 @@
   font-weight: normal;
   text-transform: uppercase;
   color: var(--color-main-decoration);
+}
+
+.logo span {
+  margin-left: -1rem;
 }
 
 .logo a {
@@ -134,7 +144,7 @@ body > nav {
   margin-inline: auto;
   max-width: calc(var(--width-content) + 3rem);
 
-  padding: 1rem;
+  padding: 0.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -149,9 +159,5 @@ body > nav {
   .header + .decorative-divider {
     grid-area: divider;
     height: 100%;
-  }
-
-  .logo-container {
-    padding: 0;
   }
 }

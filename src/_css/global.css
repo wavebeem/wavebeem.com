@@ -62,16 +62,6 @@ a {
   color: var(--color-main-text-heading);
 }
 
-:is(h2, h3) {
-  display: list-item;
-}
-
-:is(h2, h3)::marker {
-  content: "*- ";
-  font-family: var(--font-logo);
-  color: var(--color-main-decoration);
-}
-
 :is(h1, h2, h3) {
   /* font-weight: normal; */
   line-height: 1.25;
@@ -91,6 +81,13 @@ h2 {
   letter-spacing: calc(1em / 32);
   word-spacing: calc(1em / 16);
   margin-block: 4rem -0.5rem;
+  border-top: 4px solid;
+  border-image-source: linear-gradient(
+    to right,
+    var(--color-main-decoration),
+    transparent 50%
+  );
+  border-image-slice: 9;
 }
 
 h3 {
@@ -341,6 +338,10 @@ article aside {
 .pixelated {
   image-rendering: crisp-edges;
   image-rendering: pixelated;
+}
+
+::marker {
+  color: var(--color-main-decoration);
 }
 
 ol > li::marker {

@@ -1,13 +1,9 @@
-:root {
-  --filter-gbc: saturate(80%) contrast(80%) brightness(120%) hue-rotate(-10deg)
-    brightness(95%);
-}
-
 wavebeem-review-pokemon-crystal-sprites {
   display: flex;
+  width: max-content;
 
   & button {
-    all: inherit;
+    all: initial;
     display: flex;
     border-radius: 6px;
     overflow: hidden;
@@ -29,14 +25,5 @@ wavebeem-review-pokemon-crystal-sprites {
     box-sizing: content-box;
     background: #fff;
     padding: 12px;
-    filter: var(--filter-gbc);
-  }
-}
-
-:where(:has(#gbc-filter:checked)) {
-  img[src*=".gbc."] {
-    &:where(:not(:hover)) {
-      filter: var(--filter-gbc);
-    }
   }
 }
