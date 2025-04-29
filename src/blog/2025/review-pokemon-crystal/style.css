@@ -1,5 +1,6 @@
 :root {
-  --filter-gbc: saturate(80%) contrast(80%) brightness(120%) hue-rotate(-10deg);
+  --filter-gbc: saturate(80%) contrast(80%) brightness(120%) hue-rotate(-10deg)
+    brightness(95%);
 }
 
 wavebeem-review-pokemon-crystal-sprites {
@@ -49,43 +50,11 @@ img[src*=".gbc."] {
   --gbc-frame-size: 32px;
   display: flex;
   max-width: max-content;
-  padding: var(--gbc-frame-size);
-  background: #333;
+  padding: 4px;
+  background: #040404;
+  border: 32px solid #333;
   border-radius: 16px;
   position: relative;
-}
-
-/* TODO: Add shadow over the screen */
-
-.gbc-frame::before {
-  transition: 200ms opacity;
-  content: "";
-  position: absolute;
-  top: var(--gbc-frame-size);
-  left: var(--gbc-frame-size);
-  width: calc(100% - 2 * var(--gbc-frame-size));
-  height: calc(100% - 2 * var(--gbc-frame-size));
-  pointer-events: none;
-  box-shadow: inset 8px 8px 2px #0002;
-  z-index: 1;
-}
-
-.gbc-frame::after {
-  transition: 200ms opacity;
-  content: "";
-  position: absolute;
-  top: var(--gbc-frame-size);
-  left: var(--gbc-frame-size);
-  width: calc(100% - 2 * var(--gbc-frame-size));
-  height: calc(100% - 2 * var(--gbc-frame-size));
-  pointer-events: none;
-  background: linear-gradient(to bottom right, #fff4, #fff0);
-  z-index: 2;
-}
-
-.gbc-frame:hover::before,
-.gbc-frame:hover::after {
-  opacity: 0;
 }
 
 .gbc-frame img {
