@@ -279,6 +279,9 @@ article p:has(> img),
 article figure {
   margin-block: 1.5rem;
   margin-inline: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 article :is(p, figure) :is(img, video) {
@@ -297,11 +300,11 @@ article figure > :is(img, video) {
 }
 
 article figure figcaption {
-  margin-top: 0.25rem;
+  /* margin-top: -0.5rem; */
   font-size: var(--font-size-small);
-  text-align: center;
+  /* text-align: center; */
   text-wrap: balance;
-  margin-inline: auto;
+  /* margin-inline: auto; */
 }
 
 article p:has(:is(img, video, picture):only-child) {

@@ -176,12 +176,20 @@ parties, which makes the tactical space much more interesting.
 
 ## Catching Pokémon
 
-![](./assets/suicune1.gbc.webp)
+<figure>
+  <div class="gbc-frame">
+    <img src="./assets/suicune1.gbc.webp" width="480" height="432">
+  </div>
 
-![](./assets/suicune2.gbc.webp)
+  <div class="gbc-frame">
+    <img src="./assets/suicune2.gbc.webp" width="480" height="432">
+  </div>
 
-**I threw Pokéballs until I lost count, but my very first ball the next day
-caught Suicune.**
+  <figcaption>
+    I threw Pokéballs until I lost count,
+    but my very first ball the next day caught Suicune.
+  </figcaption>
+</figure>
 
 Catching Pokémon has got to be the system most in need of a complete overhaul.
 Unlike Pokémon stats, natures, EVs, IVs, moves, types... all the systems that
@@ -195,9 +203,12 @@ you got XP for catching Pokémon there!
 
 ## Two regions in one game?
 
-![](./assets/train.gbc.webp)
-
-**Riding the train from Kanto to Johto**
+<figure>
+  <div class="gbc-frame">
+    <img src="./assets/train.gbc.webp" width="480" height="432" >
+  </div>
+  <figcaption>Riding the train from Kanto to Johto</figcaption>
+</figure>
 
 While I appreciate the reveal of "OMG you can go back to Kanto", that part of
 the game wasn't very fun. You're wildly overleveled for most random encounters,
@@ -211,10 +222,13 @@ wasn't about to grind to make it happen.
 
 ## Did I enjoy myself?
 
-![](./assets/hall-of-fame.gbc.webp)
-
-**I beat the Elite Four after about 50 hours of gameplay. I wrapped up Kanto
-(besides Red) after 66 hours.**
+<figure>
+  <div class="gbc-frame">
+    <img src="./assets/hall-of-fame.gbc.webp" width="480" height="432" >
+  </div>
+  <figcaption>I beat the Elite Four after about 50 hours of gameplay. I wrapped up Kanto
+(besides Red) after 66 hours.</figcaption>
+</figure>
 
 This run was partially for fun and partially for research, I guess. If I hadn't
 felt like I was missing something by never having played Generation II, I'm not
