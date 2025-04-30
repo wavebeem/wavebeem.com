@@ -81,7 +81,7 @@ h2 {
   letter-spacing: calc(1em / 32);
   word-spacing: calc(1em / 16);
   margin-block: 4rem -0.5rem;
-  border-top: 4px solid;
+  border-top: 3px solid;
   border-image-source: linear-gradient(
     to right,
     var(--color-main-decoration),
@@ -269,9 +269,16 @@ hr {
   margin-block: 1.5rem;
   margin-inline: auto;
   color: inherit;
-  /* border-top: 1px dotted; */
-  border-top: 1px solid var(--color-divider);
   width: 100%;
+
+  border-top: 3px solid;
+  border-image-source: linear-gradient(
+    to right,
+    transparent,
+    var(--color-main-decoration),
+    transparent
+  );
+  border-image-slice: 9;
 }
 
 article p:has(> video),
