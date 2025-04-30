@@ -27,7 +27,6 @@ description: >-
     src="./assets/title.gbc.webp"
     width="480"
     height="432"
-    data-orientation="square"
   />
   <figcaption>Pokémon™ Crystal Version © 2001 GAME FREAK inc.</figcaption>
 </figure>
@@ -52,9 +51,14 @@ register something as movement.
 
 ## Starting my adventure
 
-![](./assets/sage.gbc.webp)
-
-**My body is ready.**
+<figure>
+  <img
+    src="./assets/sage.gbc.webp"
+    width="480"
+    height="432"
+  />
+  <figcaption>My body is ready.</figcaption>
+</figure>
 
 Crystal was the first game where you could play as a girl! How cool. The game
 got off to a good enough start for me, though it does make you wait a while
@@ -72,9 +76,14 @@ after passing them up I didn't stumble upon many Grass types for a while.
 
 ## Density and scale
 
-![](./assets/tower.gbc.webp)
-
-**This tower is absolutely gorgeous.**
+<figure>
+  <img
+    src="./assets/tower.gbc.webp"
+    width="480"
+    height="432"
+  />
+  <figcaption>This tower is absolutely gorgeous.</figcaption>
+</figure>
 
 We often take for granted how modern games are able to represent massive scale.
 Older games like this are not spacious in the least bit. These areas are tiny
@@ -87,10 +96,15 @@ mind, between memory usage and perfection.
 
 ## Grinding, balance, and party diversity
 
-![](./assets/raichu.gbc.webp)
-
-**The game taunted me with trainers using Raichu (my favorite Pokémon), but you
-can't get your own until you've nearly finished the game.**
+<figure>
+  <img
+    src="./assets/raichu.gbc.webp"
+    width="480"
+    height="432"
+  />
+  <figcaption>The game taunted me with trainers using Raichu (my favorite Pokémon), but you
+can't get your own until you've nearly finished the game.</figcaption>
+</figure>
 
 The wild Pokémon were generally 10+ levels below my party, and I didn't enjoy
 banging my head against the slow and uninteresting random battles in order to
@@ -98,19 +112,29 @@ fix that problem. I do have a tendency to skip battles too much in RPGs, but
 even when I fought every trainer here I felt like I just had enough XP to scrape
 by, nowhere near enough to level up a new monster for the next gym.
 
-![](./assets/alakazam.gbc.webp)
-
-**Alakazam is so broken in this game, I used him more than every other Pokémon.
-Also, this attack animation was extremely impressive in action.**
+<figure>
+  <img
+    src="./assets/alakazam.gbc.webp"
+    width="480"
+    height="432"
+  />
+  <figcaption>Alakazam is so broken in this game, I used him more than every other Pokémon.
+Also, this attack animation was extremely impressive in action.</figcaption>
+</figure>
 
 Psychic type was absurdly powerful in Generation I, and despite their efforts,
 feels nearly as broken in Generation II. It's not that I _wanted_ to use
 Alakazam as my main Pokémon, it just felt like I had to unless I wanted to grind
 a lot.
 
-![](./assets/trainers.gbc.webp)
-
-**Karen stood no chance against Alakazam.**
+<figure>
+  <img
+    src="./assets/trainers.gbc.webp"
+    width="480"
+    height="432"
+  />
+  <figcaption>Karen stood no chance against Alakazam.</figcaption>
+</figure>
 
 Sadly, most Gym Leaders and Elite Four members can be easily swept by one or two
 Pokémon. The 1v1 format of Pokémon battles doesn't lend itself to a lot of depth
@@ -119,10 +143,15 @@ disallow me from counter-picking against the enemy's next Pokémon), but I didn'
 really see the point. I would've just ended up chugging some potions or grinding
 to be able to tank a hit when counter picking.
 
-![](./assets/karen.gbc.webp)
-
-**Karen thinks I should win with my favorite Pokémon, but that would take far
-too much grinding...**
+<figure>
+  <img
+    src="./assets/karen.gbc.webp"
+    width="480"
+    height="432"
+  />
+  <figcaption>Karen thinks I should win with my favorite Pokémon, but that would take far
+too much grinding...</figcaption>
+</figure>
 
 Does she have any idea how hard it is to keep a balanced team up to level?
 Grinding against wild Pokémon is a terrible way to get XP, but Trainer battles
@@ -137,9 +166,14 @@ know.
 
 ## Breeding
 
-![](./assets/breeding.gbc.webp)
-
-**Love was not in the air for Ditto and Kadabra.**
+<figure>
+  <img
+    src="./assets/breeding.gbc.webp"
+    width="480"
+    height="432"
+  />
+  <figcaption>Love was not in the air for Ditto and Kadabra.</figcaption>
+</figure>
 
 Breeding is new with Generation II and is utterly bizarre. It combines the worst
 parts of grinding by forcing you to walk around endlessly. I tried in vain to
