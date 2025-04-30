@@ -1,33 +1,25 @@
 ---
 title: "Toybox"
-layout: "layout-base"
+layout: "layout-page"
 override:tags: []
 ---
 
-<article>
-  <header>
-    <h1>{{ title | escape }}</h1>
+<p>
+  A silly little collection of toys and jokes made specifically for the web.
+</p>
 
+<p><a href="/feed.xml">Subscribe</a> to stay up to date.</p>
+
+<h2>All toys</h2>
+
+<ul>
+{% for post in collections.toybox reversed %}
+  <li>
     <p>
-      A silly little collection of toys and jokes made specifically for the web.
+      <a href="{{ post.url }}">
+        {{ post.data.title | escape }}
+      </a>
     </p>
-
-    <p><a href="/feed.xml">Subscribe</a> to stay up to date.</p>
-  </header>
-
-  <h2>All toys</h2>
-
-  <ul>
-  {% for post in collections.toybox reversed %}
-    <li>
-      <p>
-        <a href="{{ post.url }}">
-          {{ post.data.title | escape }}
-        </a>
-      </p>
-    </li>
-  {% endfor %}
-  </ul>
-
-  {{ content }}
-</article>
+  </li>
+{% endfor %}
+</ul>

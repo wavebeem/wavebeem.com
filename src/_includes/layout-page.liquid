@@ -1,0 +1,15 @@
+---
+layout: "layout-base"
+---
+<article class="page">
+  <header class="page-header">
+    <h1>{{ title | escape }}</h1>
+  </header>
+
+  <section class="page-body">
+    {% if description -%}
+    <p>{{ description | markdownify }}</p>
+    {% endif %}
+    {{ content }}
+  </section>
+</article>

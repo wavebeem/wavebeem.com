@@ -14,13 +14,6 @@ wavebeem-easter-egg {
     rotateY(calc(var(--k) * var(--x))) rotateX(calc(var(--k) * var(--y)));
   display: flex;
   position: relative;
-  box-shadow: 0 8px 16px #0004;
-}
-
-@media (width >= 64rem) {
-  wavebeem-easter-egg {
-    /* margin-top: -6rem; */
-  }
 }
 
 wavebeem-easter-egg[data-state="inside"] {

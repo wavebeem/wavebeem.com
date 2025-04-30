@@ -30,7 +30,8 @@
   --rounded-large: 16px;
   --rounded-pill: 9999px;
 
-  --width-content: 50rem;
+  --width-copy: 45rem;
+  --width-heading: 70rem;
 
   --link-underline-offset: calc(1em / 6);
   --link-underline-thickness: 1px;

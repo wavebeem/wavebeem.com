@@ -1,25 +1,28 @@
 ---
 title: "Art"
-layout: "layout-base"
+layout: "layout-page"
+description: >-
+  A gallery for my art.
 ---
-<article>
-  <header>
-    <h1>{{ title | escape }}</h1>
-    <p>A gallery for my art.</p>
-  </header>
 
-  <div class="grid2">
-    {% for image in art.images reversed %}
-    <figure>
-      <a href="{{ image.path }}">
-        <img src="{{ image.path }}" alt="" />
-      </a>
-      <figcaption>
-        {{ image.title }}
-        <br />
-        <small>{% render "partials/date" date: image.date %}</small>
-      </figcaption>
-    </figure>
-    {% endfor %}
-  </div>
-</article>
+<style>
+  img {
+    /* UGH NO */
+    width: 100%;
+  }
+</style>
+
+<div class="grid2">
+  {% for image in art.images reversed %}
+  <figure>
+    <a href="{{ image.path }}">
+      <img src="{{ image.path }}" alt="" />
+    </a>
+    <figcaption>
+      {{ image.title }}
+      <br />
+      <small>{% render "partials/date" date: image.date %}</small>
+    </figcaption>
+  </figure>
+  {% endfor %}
+</div>

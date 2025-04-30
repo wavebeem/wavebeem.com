@@ -46,7 +46,7 @@
 .header .nav menu {
   width: 100%;
   margin-inline: auto;
-  max-width: calc(var(--width-content) + 3rem);
+  max-width: var(--width-heading);
 
   padding: 0;
 }
@@ -142,7 +142,7 @@ body > nav {
 .logo-container {
   width: 100%;
   margin-inline: auto;
-  max-width: calc(var(--width-content) + 3rem);
+  max-width: var(--width-heading);
 
   padding: 0.5rem 0;
   display: flex;
