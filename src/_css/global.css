@@ -288,7 +288,7 @@ article figure {
   margin-inline: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 article :is(p, figure) :is(img, video) {
@@ -307,7 +307,7 @@ article figure > :is(img, video) {
 }
 
 article figure figcaption {
-  /* margin-top: -0.5rem; */
+  margin-top: -0.5rem;
   font-size: var(--font-size-small);
   /* text-align: center; */
   text-wrap: balance;

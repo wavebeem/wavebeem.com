@@ -23,11 +23,13 @@ description: >-
 ---
 
 <figure>
-  <img
-    src="./assets/title.gbc.webp"
-    width="480"
-    height="432"
-  />
+  <div class="gbc-frame">
+    <img
+      src="./assets/title.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
   <figcaption>Pokémon™ Crystal Version © 2001 GAME FREAK inc.</figcaption>
 </figure>
 
@@ -52,11 +54,13 @@ register something as movement.
 ## Starting my adventure
 
 <figure>
-  <img
-    src="./assets/sage.gbc.webp"
-    width="480"
-    height="432"
-  />
+  <div class="gbc-frame">
+    <img
+      src="./assets/sage.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
   <figcaption>My body is ready.</figcaption>
 </figure>
 
@@ -77,11 +81,13 @@ after passing them up I didn't stumble upon many Grass types for a while.
 ## Density and scale
 
 <figure>
-  <img
-    src="./assets/tower.gbc.webp"
-    width="480"
-    height="432"
-  />
+  <div class="gbc-frame">
+    <img
+      src="./assets/tower.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
   <figcaption>This tower is absolutely gorgeous.</figcaption>
 </figure>
 
@@ -97,11 +103,13 @@ mind, between memory usage and perfection.
 ## Grinding, balance, and party diversity
 
 <figure>
-  <img
-    src="./assets/raichu.gbc.webp"
-    width="480"
-    height="432"
-  />
+  <div class="gbc-frame">
+    <img
+      src="./assets/raichu.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
   <figcaption>The game taunted me with trainers using Raichu (my favorite Pokémon), but you
 can't get your own until you've nearly finished the game.</figcaption>
 </figure>
@@ -113,11 +121,13 @@ even when I fought every trainer here I felt like I just had enough XP to scrape
 by, nowhere near enough to level up a new monster for the next gym.
 
 <figure>
-  <img
-    src="./assets/alakazam.gbc.webp"
-    width="480"
-    height="432"
-  />
+  <div class="gbc-frame">
+    <img
+      src="./assets/alakazam.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
   <figcaption>Alakazam is so broken in this game, I used him more than every other Pokémon.
 Also, this attack animation was extremely impressive in action.</figcaption>
 </figure>
@@ -128,11 +138,13 @@ Alakazam as my main Pokémon, it just felt like I had to unless I wanted to grin
 a lot.
 
 <figure>
-  <img
-    src="./assets/trainers.gbc.webp"
-    width="480"
-    height="432"
-  />
+  <div class="gbc-frame">
+    <img
+      src="./assets/trainers.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
   <figcaption>Karen stood no chance against Alakazam.</figcaption>
 </figure>
 
@@ -144,11 +156,13 @@ really see the point. I would've just ended up chugging some potions or grinding
 to be able to tank a hit when counter picking.
 
 <figure>
-  <img
-    src="./assets/karen.gbc.webp"
-    width="480"
-    height="432"
-  />
+  <div class="gbc-frame">
+    <img
+      src="./assets/karen.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
   <figcaption>Karen thinks I should win with my favorite Pokémon, but that would take far
 too much grinding...</figcaption>
 </figure>
@@ -167,11 +181,13 @@ know.
 ## Breeding
 
 <figure>
-  <img
-    src="./assets/breeding.gbc.webp"
-    width="480"
-    height="432"
-  />
+  <div class="gbc-frame">
+    <img
+      src="./assets/breeding.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
   <figcaption>Love was not in the air for Ditto and Kadabra.</figcaption>
 </figure>
 
