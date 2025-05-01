@@ -37,56 +37,10 @@
   flex-direction: column;
 }
 
-.header .nav {
-  background-color: var(--color-footer-background);
-  color: var(--color-footer-text);
-  border: 0.5rem solid transparent;
-}
-
-.header .nav menu {
-  width: 100%;
-  margin-inline: auto;
-  max-width: var(--width-heading);
-
-  padding: 0;
-}
-
-.header .nav a {
-  display: block;
-  padding: 0.5rem 1.5rem;
-  color: inherit;
-  text-decoration-line: none;
-  /* border-radius: 0; */
-  font-weight: bold;
-}
-
-.header .button {
-  box-shadow: 0 8px 16px #0002;
-}
-
-.header nav {
-  display: flex;
-  align-items: center;
-}
-
-.header menu {
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  /* font-weight: bold; */
-}
-
-.header a {
-  display: block;
-  padding: 0.5rem;
-  padding: 0.5rem 1.5rem;
-}
-
 .logo {
   display: flex;
   align-items: center;
-  font-size: var(--font-size-h2);
+  font-size: var(--font-size-h3);
   letter-spacing: 1px;
   font-family: var(--font-logo);
   /* Prevent Safari from making this even bolder lol */
@@ -144,7 +98,7 @@ body > nav {
   margin-inline: auto;
   max-width: var(--width-heading);
 
-  padding: 0.5rem 0;
+  padding: 0.5rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,0 +1,35 @@
+.nav {
+  background: var(--color-footer-background);
+  color: var(--color-footer-text);
+
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  border: 0.5rem solid transparent;
+}
+
+.nav menu {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+
+  /* font-weight: bold; */
+  width: 100%;
+  margin-inline: auto;
+  max-width: var(--width-heading);
+
+  padding: 0;
+}
+
+.nav a {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  color: inherit;
+  text-decoration-line: none;
+  /* border-radius: 0; */
+  font-weight: bold;
+}

@@ -39,7 +39,7 @@ layout: "layout-base"
 
     {% assign top3 = collections.posts | reverse | take: 3 %}
     {% for post in top3 %}
-      <article>
+      <article class="card">
         <header>
           <h3>
             <a href="{{ post.url }}">
@@ -53,5 +53,24 @@ layout: "layout-base"
     {% endfor %}
 
     <p><a href="/blog/">More blog posts</a> &rarr;</p>
+
+    <h2>Featured art</h2>
+
+    <div class="grid2">
+      <figure>
+        <img src="./art/img/2025-04-13-dedenne.webp" width="2048" height="2048" />
+      </figure>
+      <figure>
+        <img src="./art/img/2020-06-14-teeny-sanguini.webp" width="640" height="640" />
+      </figure>
+      <figure>
+        <img src="./art/img/2024-04-02-orc-awooga.webp" width="1280" height="1280" />
+      </figure>
+      <figure>
+        <img src="./art/img/2024-06-28-elephant.webp" width="800" height="800" />
+      </figure>
+    </div>
+
+    <p><a href="/art/">More art</a> &rarr;</p>
   </section>
 </article>

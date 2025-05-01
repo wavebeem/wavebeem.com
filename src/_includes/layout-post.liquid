@@ -1,20 +1,21 @@
 ---
 layout: "layout-base"
 ---
-<article class="post">
-  <header class="post-header">
+<article class="page">
+  <header class="page-header">
     <h1>{{ title | escape }}</h1>
     <small>{% render "partials/date" date: page.date %}</small>
   </header>
 
-  <section class="post-body">
+  <section class="page-body">
     {% if description -%}
     <p>{{ description | markdownify }}</p>
     {% endif %}
     {{ content }}
   </section>
 
-  <footer class="post-footer">
+  <footer class="page-footer">
+    <hr />
     <p>
       Thanks for reading.
       <a href="/contact/">Let's talk</a>

@@ -7,7 +7,7 @@
 :root {
   overflow-y: scroll;
   color-scheme: light;
-  /* scrollbar-color: var(--color-main-text) var(--color-main-background); */
+  scrollbar-color: var(--color-main-decoration) var(--color-main-background);
   /* overscroll-behavior: none; */
   font-synthesis: none;
   background: var(--color-main-background);
@@ -91,7 +91,9 @@ h2 {
 }
 
 h3 {
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-weight: normal;
+  font-style: italic;
   font-family: inherit;
   font-size: var(--font-size-h3);
   margin-block: 4rem 1.5rem;
@@ -137,8 +139,12 @@ main summary {
 
 @media (hover) {
   main summary:hover:not(:active)::marker {
-    color: inherit;
+    color: var(--color-main-text-heading);
   }
+}
+
+main summary:hover:active::marker {
+  color: var(--color-main-text);
 }
 
 main summary:focus-visible {
@@ -240,7 +246,11 @@ article header small {
 
 .grid2 {
   display: grid;
-  gap: 0 1.5rem;
+  gap: 1.5rem;
+}
+
+.grid2 > * {
+  margin: 0;
 }
 
 @media (width >= 50rem) {

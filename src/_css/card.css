@@ -1,0 +1,5 @@
+article.card {
+  padding-left: 1rem;
+  border-left: 3px solid;
+  border-image: linear-gradient(var(--color-main-decoration), transparent) 1;
+}
