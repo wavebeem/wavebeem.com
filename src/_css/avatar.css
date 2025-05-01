@@ -1,5 +1,5 @@
 wavebeem-easter-egg {
-  --avatar-size: 180px;
+  --avatar-size: 200px;
   --avatar-padding: 0px;
   float: right;
   margin: 1rem;
@@ -30,7 +30,7 @@ wavebeem-easter-egg img {
   border-radius: var(--rounded-pill);
   width: var(--avatar-size);
   height: var(--avatar-size);
-  filter: grayscale(100%) contrast(130%) brightness(130%);
+  background-color: var(--color-main-decoration);
 }
 
 @media (prefers-reduced-motion: reduce), not (hover) {
