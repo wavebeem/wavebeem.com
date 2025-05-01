@@ -52,6 +52,10 @@ date: "2023-09-07"
     cursor: pointer;
   }
 
+  .jester-summary::marker {
+    color: inherit !important;
+  }
+
   .jester-summary,
   .jester-summary:hover {
     border: 0;

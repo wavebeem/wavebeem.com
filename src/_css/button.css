@@ -1,17 +1,16 @@
 .button,
 button {
-  text-shadow: none;
   font: inherit;
-  /* background-color: inherit;
-  color: inherit; */
-  background-color: var(--color-main-text);
+  background: var(--color-main-text-heading);
   color: var(--color-main-background);
+  border: 0;
   text-align: center;
   justify-content: center;
   align-items: center;
   display: inline-flex;
-  border: 2px solid transparent;
+  /* border: 2px solid transparent; */
   font-weight: bold;
+  /* font-style: italic; */
   padding: 0.25rem 1.5rem;
   border-radius: var(--rounded-pill);
   text-decoration-line: none;
@@ -21,7 +20,7 @@ button {
 @media (hover) {
   .button:hover,
   button:hover {
-    outline: 2px solid var(--color-main-text);
+    outline: 2px solid var(--color-main-text-heading);
     outline-offset: -1px;
     text-decoration-line: none;
   }
@@ -34,6 +33,6 @@ button:active {
 
 .button:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--color-main-text);
+  outline: 3px solid var(--color-main-text-heading);
   outline-offset: 2px;
 }
