@@ -244,18 +244,24 @@ article header small {
   text-align: center;
 }
 
-.grid2 {
+.photo-grid {
   display: grid;
   gap: 1.5rem;
 }
 
-.grid2 > * {
+.photo-grid > * {
   margin: 0;
 }
 
 @media (width >= 30rem) {
-  .grid2 {
-    grid-template-columns: 1fr 1fr;
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 50rem) {
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
