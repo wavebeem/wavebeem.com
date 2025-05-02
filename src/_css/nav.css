@@ -3,9 +3,6 @@
   color: var(--color-footer-text);
 
   width: 100%;
-}
-
-.nav {
   display: flex;
   align-items: center;
   border: 0.5rem solid transparent;
@@ -17,7 +14,6 @@
   flex-wrap: wrap;
   list-style: none;
 
-  /* font-weight: bold; */
   width: 100%;
   margin-inline: auto;
   max-width: var(--width-heading);
@@ -30,6 +26,24 @@
   padding: 0.5rem 1.5rem;
   color: inherit;
   text-decoration-line: none;
-  /* border-radius: 0; */
   font-weight: bold;
+}
+
+.nav a:hover {
+  text-decoration-line: underline;
+}
+
+@media (width <= 30rem) {
+  .nav a {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .nav menu {
+    padding-inline: 0.5rem;
+    /* display: grid;
+    flex-direction: column; */
+    gap: 0.5rem 0;
+    /* font-size: var(--font-size-small); */
+    justify-content: space-between;
+  }
 }

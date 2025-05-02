@@ -80,12 +80,12 @@ h2 {
   font-family: var(--font-cool);
   letter-spacing: calc(1em / 32);
   word-spacing: calc(1em / 16);
-  margin-block: 4rem -0.5rem;
+  margin-block: 4rem 0.5rem;
   border-top: 3px solid;
   border-image-source: linear-gradient(
     to right,
     var(--color-main-decoration),
-    transparent 50%
+    transparent min(70vw, 40rem)
   );
   border-image-slice: 1;
 }

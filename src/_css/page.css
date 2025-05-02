@@ -50,11 +50,12 @@ article.page {
       border-image-source: linear-gradient(
         to right,
         var(--color-main-decoration),
-        transparent 50%
+        transparent min(70vw, 40rem)
       );
-      border-image-slice: 9;
+      border-image-slice: 1;
     }
 
+    :where(.paragraph),
     blockquote,
     ul,
     ol,

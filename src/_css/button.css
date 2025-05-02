@@ -8,10 +8,8 @@ button {
   justify-content: center;
   align-items: center;
   display: inline-flex;
-  /* border: 2px solid transparent; */
   font-weight: bold;
-  /* font-style: italic; */
-  padding: 0.25rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: var(--rounded-pill);
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);

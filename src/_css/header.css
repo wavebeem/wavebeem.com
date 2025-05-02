@@ -1,38 +1,6 @@
 .header {
-  --color-main-background: var(--color-root-background);
-  --color-main-text: var(--color-root-text);
-  --color-divider: var(--color-root-divider);
-  --color-link: var(--color-root-text);
-
   background: var(--color-header-background);
   color: var(--color-header-text);
-
-  --root-gradient-size: 100vw;
-  --root-gradient-direction: to right;
-  --_s1: 16px;
-  --_c1: #00000008;
-  --_c2: transparent;
-  --_b1:
-    linear-gradient(45deg, var(--_c2) 25%, var(--_c1) 25%) 0 0 / var(--_s1)
-      var(--_s1),
-    linear-gradient(135deg, var(--_c2) 25%, var(--_c1) 25%) calc(var(--_s1) / 2)
-      0 / var(--_s1) var(--_s1),
-    linear-gradient(45deg, var(--_c1) 75%, var(--_c2) 75%) calc(var(--_s1) / 2)
-      calc(var(--_s1) / -2) / var(--_s1) var(--_s1),
-    linear-gradient(135deg, var(--_c1) 75%, var(--_c2) 75%) 0px
-      calc(var(--_s1) / 2) / var(--_s1) var(--_s1);
-  --_b2: linear-gradient(
-    to right,
-    var(--color-root-gradient1) 0,
-    var(--color-root-gradient2) var(--root-gradient-size)
-  );
-  background:
-    var(--_b1),
-    var(--_b2) var(--color-root-overscroll);
-
-  background: var(--color-header-background);
-  color: var(--color-header-text);
-
   display: flex;
   flex-direction: column;
 }
@@ -51,13 +19,16 @@
 }
 
 .logo span {
-  margin-left: -1rem;
+  margin-left: 0.25ch;
 }
 
 .logo a {
   text-decoration-line: none;
-  /* color: var(--color-main-link); */
   color: var(--color-main-text-heading);
+}
+
+.logo a:hover {
+  text-decoration-line: underline;
 }
 
 body > nav {
