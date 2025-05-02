@@ -253,7 +253,7 @@ article header small {
   margin: 0;
 }
 
-@media (width >= 50rem) {
+@media (width >= 30rem) {
   .grid2 {
     grid-template-columns: 1fr 1fr;
   }
