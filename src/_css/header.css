@@ -16,6 +16,22 @@
   font-weight: normal;
   text-transform: uppercase;
   color: var(--color-main-decoration);
+  overflow: hidden;
+}
+
+.decoration {
+  background: var(--color-main-decoration);
+
+  overflow: hidden;
+  white-space: nowrap;
+
+  background: linear-gradient(
+    to right,
+    var(--color-main-decoration),
+    transparent
+  );
+  color: transparent;
+  background-clip: text;
 }
 
 .logo span {

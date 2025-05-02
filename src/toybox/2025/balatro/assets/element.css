@@ -1,0 +1,125 @@
+wavebeem-balatro-pog {
+  touch-action: none;
+  --avatar-size: 400px;
+  --avatar-padding: 0px;
+  isolation: isolate;
+  max-width: max-content;
+  margin-block: 1.5rem;
+  padding: var(--avatar-padding);
+  border-radius: var(--rounded-pill);
+  --t: 2px;
+  --k: 0.05turn;
+  --transform: translate(calc(var(--t) * var(--x)), calc(var(--t) * var(--y)))
+    rotateY(calc(var(--k) * var(--x))) rotateX(calc(var(--k) * var(--y)));
+  display: flex;
+  position: relative;
+}
+
+wavebeem-balatro-pog[data-state="inside"] {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+wavebeem-balatro-pog picture {
+  display: flex;
+}
+
+wavebeem-balatro-pog img {
+  touch-action: none;
+  display: flex;
+  border-radius: var(--rounded-pill);
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  background-color: var(--color-main-decoration);
+}
+
+@media (prefers-reduced-motion: reduce), not (hover) {
+  wavebeem-balatro-pog {
+    --k: 0turn;
+  }
+}
+
+wavebeem-balatro-pog[data-state="outside"] img {
+  transition-timing-function: ease;
+  transition-duration: 500ms;
+  transition-property: transform, box-shadow, outline;
+}
+
+wavebeem-balatro-pog[data-state="inside"] img {
+  pointer-events: none;
+  transform: var(--transform);
+  outline: 1px solid #fff2;
+  outline-offset: -1px;
+  --k1: calc(-1 / 16);
+  --k2: calc(1 / 8);
+  box-shadow: calc(var(--k1) * var(--avatar-size) * var(--x))
+    calc(var(--k1) * var(--avatar-size) * var(--y))
+    calc(var(--k2) * var(--avatar-size) * var(--r)) #0004;
+}
+
+wavebeem-balatro-pog::before,
+wavebeem-balatro-pog::after {
+  z-index: 10;
+  transform: var(--transform);
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  width: calc(100% - 2 * var(--avatar-padding));
+  height: calc(100% - 2 * var(--avatar-padding));
+  left: var(--avatar-padding);
+  top: var(--avatar-padding);
+  opacity: 0;
+  clip-path: circle(50%);
+}
+
+wavebeem-balatro-pog::before {
+  mix-blend-mode: hard-light;
+
+  /* https://css-pattern.com/wave-circles/ */
+  --s: 30px; /* control the size*/
+  --c1: hsl(0 0% 80%);
+  --c2: hsl(0 0% 50%);
+
+  --_g: var(--s) var(--s)
+    radial-gradient(var(--c1) 17%, var(--c2) 18% 35%, #0000 36.5%);
+
+  mask-image: linear-gradient(
+    var(--angle),
+    hsl(0 0% 0% / 70%),
+    hsl(0 0% 0% / 0%) calc(100% * var(--r))
+  );
+  background:
+    calc(var(--s) / -4) calc(var(--s) / -4) / var(--_g),
+    calc(var(--s) / 4) calc(var(--s) / 4) / var(--_g),
+    radial-gradient(var(--c2) 34%, var(--c1) 36% 68%, #0000 70%) 0 0 /
+      calc(var(--s) / 2) calc(var(--s) / 2),
+    repeating-linear-gradient(45deg, var(--c1) -12.5% 12.5%, var(--c2) 0 37.5%)
+      0 0 / var(--s) var(--s);
+}
+
+wavebeem-balatro-pog::after {
+  mix-blend-mode: hard-light;
+  background: linear-gradient(
+      var(--angle),
+      hsl(var(--angle) 100% 80% / 70%),
+      hsl(var(--angle) 100% 80% / 10%) calc(100% * var(--r))
+    )
+    0 0 / 100% 100%;
+}
+
+wavebeem-balatro-pog[data-state="inside"]::before,
+wavebeem-balatro-pog[data-state="inside"]::after {
+  opacity: 1;
+}
+
+wavebeem-balatro-pog[data-state="outside"]::before,
+wavebeem-balatro-pog[data-state="outside"]::after {
+  transition: opacity 0;
+}
+
+@media (width <= 50rem) {
+  wavebeem-balatro-pog {
+    --avatar-size: 100px;
+  }
+}
