@@ -17,8 +17,14 @@ layout: "layout-page"
 <div class="photo-grid">
   {% for image in art.images reversed %}
   <figure>
-    <a href="{{ image.path }}">
-      <img src="{{ image.path }}" alt="" />
+    <a href="{{ image.path }}" tabindex="-1">
+      <img
+        src="{{ image.path }}"
+        loading="lazy"
+        alt=""
+        width="300"
+        height="300"
+      />
     </a>
     <figcaption>
       <a href="{{ image.path }}">
