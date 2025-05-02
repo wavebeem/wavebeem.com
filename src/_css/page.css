@@ -81,6 +81,9 @@ article.page {
     blockquote,
     aside {
       padding: 0 3rem;
+    }
+
+    blockquote {
       font-style: italic;
     }
   }

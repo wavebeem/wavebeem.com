@@ -28,11 +28,11 @@ to use CSS custom properties with `@media (prefers-color-scheme: dark)`.
 ## The JS
 
 Download and install
-[wavebeem-theme-select.mjs](/elements/wavebeem-theme-select.mjs). The source
-code is commented and less than a hundred lines.
+[wavebeem-theme-select.mjs](./assets/wavebeem-theme-select.mjs). The source code
+is commented and less than a hundred lines.
 
 ```html
-<script type="module" src="/elements/wavebeem-theme-select.mjs"></script>
+<script type="module" src="./wavebeem-theme-select.mjs"></script>
 ```
 
 <aside>

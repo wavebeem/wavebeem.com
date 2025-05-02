@@ -6,11 +6,11 @@ date: "2024-01-24"
 
 <script
   type="module"
-  src="/elements/wavebeem-toybox-flashlight.mjs?t={{ dateNow }}"
+  src="./assets/wavebeem-toybox-flashlight.mjs?t={{ dateNow }}"
 ></script>
 
 <wavebeem-toybox-flashlight>
   <button class="sage-button sage-primary">Toggle flashlight mode</button>
 </wavebeem-toybox-flashlight>
 
-[View source](/elements/wavebeem-toybox-flashlight.mjs)
+[View source](./assets/wavebeem-toybox-flashlight.mjs)
