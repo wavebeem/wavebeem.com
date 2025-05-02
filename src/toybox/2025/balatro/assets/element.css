@@ -15,22 +15,40 @@ wavebeem-balatro-pog {
   position: relative;
 }
 
+wavebeem-balatro-pog [data-element="background"] {
+  z-index: 1;
+}
+wavebeem-balatro-pog [data-element="rainbow"] {
+  z-index: 2;
+}
+wavebeem-balatro-pog [data-element="shine"] {
+  z-index: 3;
+}
+wavebeem-balatro-pog [data-element="image"] {
+  z-index: 4;
+}
+
 wavebeem-balatro-pog[data-state="inside"] {
   background: transparent;
   border-color: transparent;
   box-shadow: none;
 }
 
-wavebeem-balatro-pog picture {
-  display: flex;
-}
-
 wavebeem-balatro-pog img {
+  z-index: 1;
   touch-action: none;
   display: flex;
   border-radius: var(--rounded-pill);
   width: var(--avatar-size);
   height: var(--avatar-size);
+}
+
+wavebeem-balatro-pog [data-element="background"] {
+  position: absolute;
+  inset: 0;
+  clip-path: circle(50%);
+  width: 100%;
+  height: 100%;
   background-color: var(--color-main-decoration);
 }
 
@@ -58,22 +76,23 @@ wavebeem-balatro-pog[data-state="inside"] img {
     calc(var(--k2) * var(--avatar-size) * var(--r)) #0004;
 }
 
-wavebeem-balatro-pog::before,
-wavebeem-balatro-pog::after {
-  z-index: 10;
+wavebeem-balatro-pog :not([data-element="image"]) {
   transform: var(--transform);
   pointer-events: none;
-  content: "";
-  position: absolute;
   width: calc(100% - 2 * var(--avatar-padding));
   height: calc(100% - 2 * var(--avatar-padding));
   left: var(--avatar-padding);
   top: var(--avatar-padding);
-  opacity: 0;
-  clip-path: circle(50%);
 }
 
-wavebeem-balatro-pog::before {
+wavebeem-balatro-pog [data-element="shine"],
+wavebeem-balatro-pog [data-element="rainbow"] {
+  opacity: 0;
+  clip-path: circle(50%);
+  position: absolute;
+}
+
+wavebeem-balatro-pog [data-element="shine"] {
   mix-blend-mode: hard-light;
 
   /* https://css-pattern.com/wave-circles/ */
@@ -98,7 +117,7 @@ wavebeem-balatro-pog::before {
       0 0 / var(--s) var(--s);
 }
 
-wavebeem-balatro-pog::after {
+wavebeem-balatro-pog [data-element="rainbow"] {
   mix-blend-mode: hard-light;
   background: linear-gradient(
       var(--angle),
@@ -108,13 +127,11 @@ wavebeem-balatro-pog::after {
     0 0 / 100% 100%;
 }
 
-wavebeem-balatro-pog[data-state="inside"]::before,
-wavebeem-balatro-pog[data-state="inside"]::after {
+wavebeem-balatro-pog[data-state="inside"] [data-element] {
   opacity: 1;
 }
 
-wavebeem-balatro-pog[data-state="outside"]::before,
-wavebeem-balatro-pog[data-state="outside"]::after {
+wavebeem-balatro-pog[data-state="outside"] [data-element] {
   transition: opacity 0;
 }
 

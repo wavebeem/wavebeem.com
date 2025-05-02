@@ -23,7 +23,7 @@ const titles = {
   "2021-04-26-self-portrait-refined.webp": "Self Portrait",
   "2021-09-04-ghost.webp": "Ghost",
   "2021-12-26-self-portrait.webp": "Self Portrait",
-  "2022-05-18-purple-sharks.webp": "Purple sharks",
+  "2022-05-18-purple-sharks.webp": "Purple Sharks",
   "2022-09-26-self-portrait.webp": "Self Portrait",
   "2023-02-15-sneki-snek.webp": "Sneki Snek",
   "2023-02-15-tower-slime.webp": "Tower Slime",
