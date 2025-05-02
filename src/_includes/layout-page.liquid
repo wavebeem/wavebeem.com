@@ -7,9 +7,6 @@ layout: "layout-base"
   </header>
 
   <section class="page-body">
-    {% if description -%}
-    <p>{{ description | markdownify }}</p>
-    {% endif %}
     {{ content }}
   </section>
 </article>

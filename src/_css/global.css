@@ -121,7 +121,7 @@ main details {
   border-image: linear-gradient(
       to right,
       var(--color-main-decoration),
-      transparent 50%
+      transparent min(70vw, 40rem)
     )
     1;
 }

@@ -1,8 +1,6 @@
 ---
 title: "Art"
 layout: "layout-page"
-description: >-
-  A gallery for my art.
 ---
 
 <style>
@@ -12,6 +10,10 @@ description: >-
   }
 </style>
 
+<p>I've been drawing pixel art ever since I learned you could zoom in with Microsoft Paint. I don't practice much, but I love working with pixels.</p>
+
+<hr />
+
 <div class="photo-grid">
   {% for image in art.images reversed %}
   <figure>
@@ -19,9 +21,11 @@ description: >-
       <img src="{{ image.path }}" alt="" />
     </a>
     <figcaption>
-      <strong>{{ image.title }}</strong>
+      <a href="{{ image.path }}">
+        <strong>{{ image.title }}</strong>
+      </a>
       <br />
-      <small>{% render "partials/date" date: image.date %}</small>
+      {% render "partials/date" date: image.date %}
     </figcaption>
   </figure>
   {% endfor %}
