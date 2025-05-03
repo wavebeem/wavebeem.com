@@ -64,10 +64,9 @@ export class WavebeemBalatroPog extends HTMLElement {
 
   #abortController = new AbortController();
   #prefersReducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
-  #hover = matchMedia("(hover)");
 
   #shouldSkip() {
-    return this.#prefersReducedMotion.matches || !this.#hover.matches;
+    return this.#prefersReducedMotion.matches;
   }
 
   #clamp(x) {
