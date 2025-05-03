@@ -137,6 +137,6 @@ wavebeem-balatro-pog[data-state="outside"] [data-element] {
 
 @media (width <= 50rem) {
   wavebeem-balatro-pog {
-    --avatar-size: 100px;
+    --avatar-size: 300px;
   }
 }
