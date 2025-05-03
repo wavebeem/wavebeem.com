@@ -52,7 +52,7 @@ wavebeem-balatro-pog [data-element="background"] {
   background-color: var(--color-main-decoration);
 }
 
-@media (prefers-reduced-motion: reduce), not (hover) {
+@media (prefers-reduced-motion: reduce) {
   wavebeem-balatro-pog {
     --k: 0turn;
   }
