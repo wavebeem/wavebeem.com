@@ -1,7 +1,7 @@
 ---
 date: "2025-01-06"
 title: >-
-  Editorial style & shrines progress
+  Editorial Style & Shrines Progress
 description: >-
   A new design era: Editorial style. Two color design returns, but I'm aiming
   for something more elegant than retro. I've also started working on my long

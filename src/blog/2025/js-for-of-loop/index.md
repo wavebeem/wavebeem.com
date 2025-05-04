@@ -9,7 +9,7 @@ description: >-
   complicates control flow. It's time to revisit this commonly banned syntax.
 ---
 
-## Async support
+## Async Support
 
 With the `for...of` loop, proper `async` support means that this code snippet
 will run all `fetch()` calls in sequence, _then_ log `"Done"`.
@@ -36,7 +36,7 @@ paths.forEach(async (p) => {
 console.log("Done");
 ```
 
-## Flow control
+## Flow Control
 
 The `for...of` loop supports all regular flow control in JS: `continue`,
 `break`, and `return`. Let's examine this somewhat contrived function that uses
@@ -100,7 +100,7 @@ I've definitely seen people who argue against `continue`, `break`, and "early"
 absence. Not to mention it's strictly less efficient since it can't avoid
 processing the entire list.
 
-## Iterators and generators
+## Iterators and Generators
 
 If you're not already using generators, I think you should consider it. I've
 [written about them before](/blog/2017/js-iterators/), and
@@ -110,7 +110,7 @@ unless you convert them to arrays first. This removes all benefits of iterators
 (primarily [laziness](https://en.wikipedia.org/wiki/Lazy_evaluation) and memory
 consumption being decoupled from the collection size).
 
-## Isn't "for...of" slower?
+## Isn't "for...of" Slower?
 
 **EDIT:** I only tested in Firefox for this section. That was a mistake. When
 testing in Edge and Safari, `for...of` was actually as fast or fast than
@@ -187,7 +187,7 @@ for (let i = 0; i < DATA.length; i++) {
 }
 ```
 
-## "for...of" has been supported natively for nearly a decade
+## "for...of" Has Been Supported Natively for Nearly a Decade
 
 [September 2016](https://caniuse.com/es6) is when the last\* browser (Safari),
 impelmented ES2015, 8.5 years ago at the time of writing.
@@ -206,7 +206,7 @@ you're using.
 \* _Technically Edge took longer, but that's the old version of Edge
 (pre-Chromium), which doesn't exist any more. Let's not worry about it._
 
-## Confusion between "for...of" and "for...in"
+## Confusion Between "for...of" and "for...in"
 
 The related `for...in` loop is a bit confusing. It should generally be avoided
 in favor of a `for...of` loop iterating the keys of an object:
@@ -228,7 +228,7 @@ Perhaps this common wisdom of avoiding `for...in` mentally polluted people
 against wanting to use `for...of` due to confusion. Anecdotally, some people
 can't remember which is which.
 
-## React made everyone allergic to side effects
+## React Made Everyone Allergic to Side Effects
 
 Because [React](https://react.dev/) has taken over the world and React insists
 on using various techniques from functional programming, we have a growing
@@ -237,7 +237,7 @@ allergy to anything that looks like side effects in the JS community. Perhaps
 `.filter`, and `.reduce`. I should write about how referential transparency does
 not require a complete ban on immutability in the future.
 
-## Airbnb style guide strikes again
+## Airbnb Style Guide Strikes Again
 
 Prebuilt ESLint rule collections can be really influential. The
 [Airbnb ESLint config package](https://www.npmjs.com/package/eslint-config-airbnb)
@@ -259,7 +259,7 @@ should revisit our coding practices.
 Hopefully the caveats I've shown make it clear that `for...of` is massively more
 powerful and easier to read than `.forEach`.
 
-## Further reading
+## Further Reading
 
 The Code Barbarian has a great article about
 [For vs forEach() vs for/in vs for/of in JavaScript](https://thecodebarbarian.com/for-vs-for-each-vs-for-in-vs-for-of-in-javascript#empty-elements)
