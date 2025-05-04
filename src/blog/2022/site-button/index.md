@@ -1,7 +1,7 @@
 ---
 date: "2022-09-27"
 title: >-
-  I made a Geocities site button
+  I Aade a Geocities Site Button
 description: >-
   88×31 GIFs were all the rage back on Geocities; I decided to finally make one
   for my own site.

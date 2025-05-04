@@ -1,5 +1,5 @@
 ---
-title: "10 years of themes"
+title: "10 Years of Themes"
 description:
   "An image gallery and reflection of 10 years of themes I've made for
   wavebeem.com"

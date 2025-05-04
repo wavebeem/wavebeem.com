@@ -1,5 +1,5 @@
 ---
-title: "Open world fatigue"
+title: "Open World Fatigue"
 description:
   "A brief reflection on the Legend of Zelda and the popularity of open world
   video games."

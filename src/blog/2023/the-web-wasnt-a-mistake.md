@@ -1,5 +1,5 @@
 ---
-title: "You deserve to be happy, or: the web wasn't a mistake"
+title: "You Deserve to be Happy, or: the Web Wasn't a Mistake"
 description:
   "A discussion of why people hate JS, Electron, and the web. Also a plea about
   how excessive negativity hurts you and those around you."

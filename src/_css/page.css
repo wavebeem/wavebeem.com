@@ -10,7 +10,8 @@ article.page {
     ul,
     ol,
     dl,
-    figcaption {
+    figcaption,
+    details {
       max-width: var(--width-copy);
     }
   }

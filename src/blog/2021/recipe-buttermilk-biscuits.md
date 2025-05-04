@@ -1,5 +1,5 @@
 ---
-title: "Recipe: Buttermilk biscuits"
+title: "Recipe: Buttermilk Biscuits"
 description: "Detailed instructions on how to make fluffy biscuits at home."
 date: "2021-03-11"
 ---

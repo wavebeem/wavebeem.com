@@ -1,7 +1,7 @@
 ---
 date: "2024-12-05"
 title: >-
-  Home page update
+  Home Page Update
 description: >-
   I updated my home page and added more decoration to the site. I want it to be
   easier to browse and more fun looking.

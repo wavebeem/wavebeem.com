@@ -134,7 +134,7 @@ wavebeem-balatro-pog[data-state="inside"] [data-element] {
 }
 
 wavebeem-balatro-pog[data-state="outside"] [data-element] {
-  transition: opacity 0;
+  transition: opacity 500ms;
 }
 
 @media (width <= 50rem) {
