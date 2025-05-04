@@ -184,8 +184,8 @@ main :is(blockquote, ul, ol, dl, p) {
   margin-block: 1.5rem;
 }
 
-main ul {
-  padding-left: 3rem;
+main :is(ul, ol) {
+  padding-left: var(--list-inset);
   list-style-type: disc;
 }
 
