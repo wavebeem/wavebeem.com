@@ -48,7 +48,11 @@ article.page {
       color: inherit;
       width: 100%;
 
-      border-top: 3px solid;
+      border-top: 1px solid;
+      /* border-image-source: linear-gradient(
+        to right,
+        var(--color-main-decoration) 0 100%
+      ); */
       border-image-source: linear-gradient(
         to right,
         var(--color-main-decoration),

@@ -1,5 +1,18 @@
 article.card {
+  margin-block: 1.5rem;
   padding-left: 1rem;
-  border-left: 3px solid;
-  border-image: linear-gradient(var(--color-main-decoration), transparent) 1;
+
+  border: 1px solid;
+  border-right: 0;
+  border-bottom: 0;
+  border-image: linear-gradient(
+      to bottom right,
+      var(--color-main-decoration),
+      transparent 50%
+    )
+    1;
+
+  > header > :is(h1, h2, h3) {
+    margin-top: 1rem;
+  }
 }

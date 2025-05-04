@@ -81,13 +81,12 @@ h2 {
   letter-spacing: calc(1em / 32);
   word-spacing: calc(1em / 16);
   margin-block: 2rem 0.5rem;
-  border-top: 3px solid;
-  border-image-source: linear-gradient(
-    to right,
-    var(--color-main-decoration),
-    transparent min(70vw, 40rem)
-  );
-  border-image-slice: 1;
+}
+
+h2::after {
+  content: "*-";
+  font-family: var(--font-logo);
+  color: var(--color-main-decoration);
 }
 
 h3 {

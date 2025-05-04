@@ -5,19 +5,19 @@ layout: "layout-page"
 ---
 
 <style>
-  ul[data-list-type="new"] ::marker {
+  li[data-marker="new"]::marker {
     content: "🆕 ";
   }
 
-  ul[data-list-type="regular"] ::marker {
+  li[data-marker="regular"]::marker {
     content: "⭐ ";
   }
 
-  ul[data-list-type="wip"] ::marker {
+  li[data-marker="wip"]::marker {
     content: "🚧 ";
   }
 
-  ul[data-list-type="todo"] ::marker {
+  li[data-marker="todo"]::marker {
     content: "🛑 ";
   }
 </style>
@@ -32,52 +32,48 @@ layout: "layout-page"
   topic.
 </p>
 
-<h2>Recently Updated</h2>
+<hr />
 
-<ul data-list-type="new">
-  <li>
+<ul>
+  <!-- NEW -->
+
+  <li data-marker="new">
     <p><a href="/shrines/etrian-odyssey/">Etrian Odyssey</a></p>
   </li>
-</ul>
 
-<h2>Ready for Viewing</h2>
+  <!-- Regular -->
 
-<ul data-list-type="regular">
-  <li>
+  <li data-marker="regular">
     <p><a href="/shrines/pokemon/">Pokémon</a></p>
   </li>
-</ul>
 
-<h2>Under Construction</h2>
+  <!-- WIP -->
 
-<ul data-list-type="wip">
-  <li>
+  <li data-marker="wip">
     <p><a href="/shrines/shin-megami-tensei/">Shin Megami Tensei</a></p>
   </li>
-  <li>
+  <li data-marker="wip">
     <p><a href="/shrines/dragon-quest/">Dragon Quest</a></p>
   </li>
-  <li>
+  <li data-marker="wip">
     <p><a href="/shrines/castlevania/">Castlevania</a></p>
   </li>
-  <li>
+  <li data-marker="wip">
     <p><a href="/shrines/metroid/">Metroid</a></p>
   </li>
-</ul>
 
-<h2>Maybe Some Day...</h2>
+  <!-- TODO -->
 
-<ul data-list-type="todo">
-  <li>
+  <li data-marker="todo">
     <p>Destiny</p>
   </li>
-  <li>
+  <li data-marker="todo">
     <p>Animal Crossing</p>
   </li>
-  <li>
+  <li data-marker="todo">
     <p>Fire Emblem</p>
   </li>
-  <li>
+  <li data-marker="todo">
     <p>Gnosia</p>
   </li>
 </ul>
