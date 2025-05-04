@@ -58,12 +58,12 @@ a {
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
+  /* This is totally messing up really bad in Safari */
   text-wrap: balance;
   color: var(--color-main-text-heading);
 }
 
 :is(h1, h2, h3) {
-  /* font-weight: normal; */
   line-height: 1.25;
 }
 

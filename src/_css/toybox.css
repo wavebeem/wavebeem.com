@@ -1,13 +1,10 @@
 .crime-frame {
-  border-radius: var(--rounded-medium);
   overflow: hidden;
   position: relative;
 }
 
 .crime-frame :is(details, summary) {
-  margin: unset;
-}
-
-.crime-frame > details {
-  background: white;
+  all: initial;
+  display: block;
+  font: inherit;
 }

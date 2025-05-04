@@ -35,17 +35,20 @@
   --link-underline-thickness: calc(1em / 16);
 }
 
-@media (width <= 30rem) {
+@media (width <= 35rem) {
   .nav a {
     padding: 0.5rem 0.5rem;
   }
 
   .nav menu {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
     padding-inline: 0.5rem;
+    margin-inline: auto;
     /* display: grid;
     flex-direction: column; */
-    gap: 0.5rem 0;
+    gap: 0.5rem 1rem;
     /* font-size: var(--font-size-small); */
-    justify-content: space-between;
+    font-size: var(--font-size-small);
   }
 }
