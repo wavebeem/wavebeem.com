@@ -52,32 +52,34 @@ wavebeem-balatro-pog [data-element="background"] {
   background-color: var(--color-main-decoration);
 }
 
-@media (prefers-reduced-motion: reduce), not (hover) {
+@media (prefers-reduced-motion: reduce) {
   wavebeem-balatro-pog {
     --k: 0turn;
   }
 }
 
-wavebeem-balatro-pog[data-state="outside"] img {
+wavebeem-balatro-pog[data-state="outside"]
+  :is([data-element="image"], [data-element="background"]) {
   transition-timing-function: ease;
   transition-duration: 500ms;
-  transition-property: transform, box-shadow, outline;
+  transition-property: transform, box-shadow;
 }
 
 wavebeem-balatro-pog[data-state="inside"] img {
   pointer-events: none;
   transform: var(--transform);
-  outline: 1px solid #fff2;
-  outline-offset: -1px;
-  --k1: calc(-1 / 16);
-  --k2: calc(1 / 8);
+  --k1: calc(-1 / 8);
+  --k2: calc(1 / 16);
   box-shadow: calc(var(--k1) * var(--avatar-size) * var(--x))
     calc(var(--k1) * var(--avatar-size) * var(--y))
-    calc(var(--k2) * var(--avatar-size) * var(--r)) #0004;
+    calc(var(--k2) * var(--avatar-size) * var(--r)) #0002;
+}
+
+wavebeem-balatro-pog[data-state="inside"] :not([data-element="image"]) {
+  transform: var(--transform);
 }
 
 wavebeem-balatro-pog :not([data-element="image"]) {
-  transform: var(--transform);
   pointer-events: none;
   width: calc(100% - 2 * var(--avatar-padding));
   height: calc(100% - 2 * var(--avatar-padding));
@@ -132,7 +134,7 @@ wavebeem-balatro-pog[data-state="inside"] [data-element] {
 }
 
 wavebeem-balatro-pog[data-state="outside"] [data-element] {
-  transition: opacity 0;
+  transition: opacity 500ms;
 }
 
 @media (width <= 50rem) {

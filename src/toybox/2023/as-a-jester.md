@@ -1,5 +1,5 @@
 ---
-title: "What pronouns does a jester use?"
+title: "What Pronouns Does a Jester Use?"
 description: "Press to reveal the punchline."
 date: "2023-09-07"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Making a theme selector"
+title: "Making a Theme Selector"
 description:
   "How to make a theme selector for your website, and why you might want to have
   more than one theme."

@@ -1,5 +1,5 @@
 ---
-title: "Querying shadow DOM"
+title: "Querying Shadow DOM"
 description:
   "Examples of how to query shadow DOM, and when you actually don't want to."
 date: "2024-01-27"

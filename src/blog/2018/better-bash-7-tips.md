@@ -1,5 +1,5 @@
 ---
-title: "7 tips for better bash"
+title: "7 Tips for Better Bash"
 description: "You'll be writing better bash code after following these 7 tips."
 date: "2018-07-04"
 ---

@@ -1,5 +1,5 @@
 ---
-title: "I made a new 88×31 site button"
+title: "I Made a New 88×31 Site Button"
 description:
   "I made a new site button GIF for folks who want to link to my website."
 date: "2024-09-21"
