@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="theme-color"
-    content="{{ themes.light['color-main-text-heading'] | escape }}"
+    content="{{ themes.light['color-main-background'] | escape }}"
   />
   <link
     rel="preload"
@@ -81,6 +81,7 @@
   />
   <meta name="og:title" content="{{ title | formatTitle | escape }}" />
   <meta name="og:description" content="{{ description | escape }}" />
+  <meta property="og:type" content="website">
   <meta name="description" content="{{ description | escape }}" />
   <title>{{ title | formatTitle }}</title>
   <meta name="author" content="wavebeem" />
