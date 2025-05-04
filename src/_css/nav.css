@@ -27,11 +27,12 @@
   color: inherit;
   text-decoration-line: none;
   font-style: italic;
-  /* font-weight: bold; */
 }
 
 .nav a:hover {
   text-decoration-line: underline;
+  --link-underline-offset: calc(1em / 2);
+  --link-underline-thickness: calc(1em / 16);
 }
 
 @media (width <= 30rem) {

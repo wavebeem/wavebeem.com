@@ -116,17 +116,19 @@ pre {
 
 main details {
   margin: 1.5rem 0;
-  border-bottom: 1px solid;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  padding-left: 1rem;
   border-image: linear-gradient(
-      to right,
+      to bottom right,
       var(--color-main-decoration),
-      transparent min(70vw, 40rem)
+      transparent 50%
     )
     1;
 }
 
 main details + details {
-  margin-top: -1.5rem;
+  margin-top: -1rem;
 }
 
 main summary {
