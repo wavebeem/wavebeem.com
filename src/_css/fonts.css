@@ -2,7 +2,7 @@
   font-family: "PP Talisman Narrow";
   src: url("/fonts/PPTalisman-Narrow-Bold.woff2") format("woff2");
   font-weight: bold;
-  font-display: block;
+  font-display: swap;
 }
 
 @font-face {
@@ -36,7 +36,7 @@
 @font-face {
   font-family: "Ultra Hi-Gloss";
   src: url("/fonts/UltraHi-GlossFinal-UltraBoldItalic.woff2") format("woff2");
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
