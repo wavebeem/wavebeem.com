@@ -4,7 +4,7 @@
     ui-monospace, "Cascadia Code", "SFMono-Regular", "Menlo", "Monaco",
     "Consolas", "Liberation Mono", "Courier New", monospace;
   --font-body: "PP Object Sans", var(--font-fallback-main);
-  --font-cool: "PP Talisman", var(--font-fallback-main);
+  --font-cool: "PP Talisman Narrow", var(--font-fallback-main);
   /* --font-cool: var(--font-body); */
   --font-logo: "Ultra Hi-Gloss", var(--font-fallback-main);
   --font-mono: "JetBrains Mono", var(--font-fallback-mono);

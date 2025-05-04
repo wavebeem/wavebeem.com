@@ -1,8 +1,8 @@
 @font-face {
-  font-family: "PP Talisman";
+  font-family: "PP Talisman Narrow";
   src: url("/fonts/PPTalisman-Narrow-Bold.woff2") format("woff2");
   font-weight: bold;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
