@@ -8,7 +8,7 @@ description: >-
   of "intuitive cooking".
 ---
 
-## Rice is great
+## Rice is Great
 
 Rice is one of the most popular staple foods in the world for good reason. I'll
 admit that I wasn't thrilled with it when I was younger---unless it was fried
@@ -23,7 +23,7 @@ prefer white rice for flavor. More expensive Zojirushi cookers have a "GABA
 brown" mode that makes brown rice taste a lot better. But you'll have to wait
 almost 2.5 hours for this cook mode to complete! Sheesh.
 
-## Zojirushi makes rice taste amazing
+## Zojirushi Makes Rice Taste Amazing
 
 Yeah, I've made rice by hand before, but it's never come out nearly as good as
 Zojirushi rice. I've only messed up the rice a handful of times with my
@@ -34,7 +34,7 @@ any work after it starts cooking. All you have to do is fluff the rice after
 it's done, and then it can safely sit for _the whole rest of the day_ in the
 "keep warm" mode.
 
-## Giant pancake
+## Giant Pancake
 
 After making regular pancake batter, spray the Zojirushi cooking pot with PAM
 cooking spray and turn it on regular white rice mode. The magic sensors take
@@ -42,7 +42,7 @@ care of everything from there. When it's done, you'll have one massive thick
 pancake the size of, well, a cake. You can slice it up and eat it however you
 want. Syrup is great, but I think this style pairs perfectly with jam.
 
-## Easy rice dinner
+## Easy Rice Dinner
 
 I like to cook this with basmati rice, but you can use whatever kind you like.
 After putting the rice and water in the bowl, sprinkle instant soup powder and
@@ -80,7 +80,7 @@ should store the rice separately from the soup for best results. But I often
 heat up rice and soup in the same bowl so that the rice absorbs some soup when
 reheating, which hydrates it and infuses some lovely flavor.
 
-## Boiled chicken isn't gross
+## Boiled Chicken Isn't Gross
 
 Boiling chicken might sound disgusting, but it's actually one of the easiest
 ways to cook chicken without making it tough and dry. What I like to do here is
@@ -102,7 +102,7 @@ Also, if you like BBQ pulled chicken, you can just shred the chicken with two
 forks when you're done and add sauce later. This is a great way to prep a bunch
 of chicken at once.
 
-## Why a Dutch oven instead of a Crock Pot
+## Why a Dutch Oven Instead of a Crock Pot
 
 There's nothing wrong with a Crock Pot, but it's just less versatile than having
 a Dutch oven. A Dutch oven can go inside your regular oven, it can be heated up
@@ -110,7 +110,7 @@ nice and hot to sear a roast before broiling it, and it doesn't take up counter
 space! Just put it on your stove, which is already sitting there in your
 kitchen.
 
-## Intuitive cooking
+## Intuitive Cooking
 
 I can't stand recipes. It's not that I never use them, but I feel like they
 cause me more problems than they solve. At the very least, they cause me to
@@ -132,7 +132,7 @@ saved many biscuits from a soggy fate by adding milk by eye and observing the
 dough rather than putting faith in numbers that don't reliably reproduce results
 across different climates and circumstances.
 
-## Tell me about your kitchen tips!
+## Tell Me About Your Kitchen Tips!
 
 I love cooking food, but it can get exhausting having to feed myself three times
 a day, seven days a week, 365 days a year. Send me your tips on how to make

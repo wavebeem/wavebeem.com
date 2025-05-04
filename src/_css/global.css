@@ -72,7 +72,7 @@ h1 {
   font-family: var(--font-cool);
   letter-spacing: calc(1em / 32);
   word-spacing: calc(1em / 16);
-  margin-block: 0 1.5rem;
+  margin-block: 1.5rem;
 }
 
 h2 {
@@ -80,7 +80,7 @@ h2 {
   font-family: var(--font-cool);
   letter-spacing: calc(1em / 32);
   word-spacing: calc(1em / 16);
-  margin-block: 4rem 0.5rem;
+  margin-block: 2rem 0.5rem;
   border-top: 3px solid;
   border-image-source: linear-gradient(
     to right,
@@ -96,7 +96,7 @@ h3 {
   font-style: italic;
   font-family: inherit;
   font-size: var(--font-size-h3);
-  margin-block: 4rem 1.5rem;
+  margin-block: 2rem 0.5rem;
 }
 
 code,
@@ -116,7 +116,7 @@ pre {
 }
 
 main details {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
   border-bottom: 1px solid;
   border-image: linear-gradient(
       to right,
@@ -127,7 +127,7 @@ main details {
 }
 
 main details + details {
-  margin-top: -1rem;
+  margin-top: -1.5rem;
 }
 
 main summary {
@@ -246,7 +246,7 @@ article header small {
 
 .photo-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .photo-grid > * {
