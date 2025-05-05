@@ -1,19 +1,15 @@
-article pre {
+pre:has(> code) {
   margin-block: 1.5rem;
-  margin-inline: -1.5rem;
-  padding: 1rem 1.5rem;
-
-  background-color: var(--color-syntax-background);
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-main-decoration);
+  border-image: linear-gradient(
+      transparent,
+      var(--color-main-decoration),
+      transparent
+    )
+    1;
   color: var(--color-syntax-text);
-  scrollbar-color: var(--color-syntax-text) var(--color-syntax-background);
   overflow-x: auto;
-}
-
-@media (width <= 50rem) {
-  article pre {
-    margin-inline: -1rem;
-    padding: 1rem;
-  }
 }
 
 /* Reset color for nested scripts */
@@ -66,7 +62,7 @@ article pre {
 
 .token.keyword {
   color: var(--color-syntax-keyword);
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 
 .language-css .token.property,

@@ -1,5 +1,5 @@
 ---
-title: "JS Proxy and private properties"
+title: "JS Proxy and Private Properties"
 description:
   "The default `Proxy` implementation doesn't work well with private properties,
   but we can fix this! I also explore other approaches to private data in JS."

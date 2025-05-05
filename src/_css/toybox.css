@@ -1,0 +1,10 @@
+.crime-frame {
+  overflow: hidden;
+  position: relative;
+}
+
+.crime-frame :is(details, summary) {
+  all: initial;
+  display: block;
+  font: inherit;
+}

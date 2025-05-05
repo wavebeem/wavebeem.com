@@ -1,24 +1,17 @@
 ---
 title: "Home"
-description: "Sage's website"
 layout: "layout-base"
-tags:
-  - "nav"
 ---
-<script type="module" src="/elements/wavebeem-easter-egg.mjs"></script>
-
-<article>
-  <wavebeem-easter-egg class="avatar">
-    <img
-      alt=""
-      srcset="photo-180.webp 1x, photo-360.webp 2x"
-      src="photo-360.webp"
-      width="180"
-      height="180"
-    >
-  </wavebeem-easter-egg>
-
+<article class="page">
   <header>
+    <img
+      class="avatar"
+      alt=""
+      src="photo.webp"
+      width="800"
+      height="800"
+    />
+
     <h1>Hello!</h1>
 
     <p>
@@ -32,26 +25,73 @@ tags:
       I'm a video game obsessed web developer and an official representative of the color green. Read more
       <a href="/about/">about me</a>.
     </p>
+
+    <div hidden class="clearfix"></div>
   </header>
 
-  <div class="clearfix"></div>
+  <section class="page-body">
+    <h2>Recent Posts</h2>
 
-  <h2>Recent posts</h2>
+    {% assign top3 = collections.posts | reverse | take: 3 %}
+    {% for post in top3 %}
+      <article class="card">
+        <header>
+          <h3>
+            <a href="{{ post.url }}">
+              {{ post.data.title | escape }}
+            </a>
+          </h3>
+          <small>{% render 'partials/date', date: post.date %}</small>
+        </header>
+        <p>{{ post.data.description | markdownify }}</p>
+      </article>
+    {% endfor %}
 
-  {% assign top3 = collections.posts | reverse | take: 3 %}
-  {% for post in top3 %}
-    <article>
-      <header>
-        <h3>
-          <a href="{{ post.url }}">
-            {{ post.data.title | escape }}
-          </a>
-        </h3>
-        <small>{% render 'partials/date', date: post.date %}</small>
-      </header>
-      <p>{{ post.data.description | markdownify }}</p>
-    </article>
-  {% endfor %}
+    <p><a class="button" href="/blog/">More blog posts &rarr;</a></p>
+
+    <h2>Featured Art</h2>
+
+    <div class="photo-grid paragraph">
+      <img
+        src="./art/img/2025-04-13-dedenne.webp"
+        alt="Dedenne"
+        width="2048"
+        height="2048"
+      />
+      <img
+        src="./art/img/2020-06-14-teeny-sanguini.webp"
+        alt="Teeny Sanguini"
+        width="1280"
+        height="1280"
+      />
+      <img
+        src="./art/img/2024-04-02-orc-awooga.webp"
+        alt="Orc Awooga"
+        width="1280"
+        height="1280"
+      />
+      <img
+        src="./art/img/2024-06-28-elephant.webp"
+        alt="Elephant"
+        width="800"
+        height="800"
+      />
+      <img
+        src="./art/img/2021-09-04-ghost.webp"
+        alt="Ghost"
+        width="1600"
+        height="1600"
+      />
+      <img
+        src="./art/img/2022-05-18-purple-sharks.webp"
+        alt="Purple Sharks"
+        width="1536"
+        height="1536"
+      />
+    </div>
+
+    <p>
+      <a class="button" href="/art/">More art &rarr;</a>
+    </p>
+  </section>
 </article>
-
-<p><a href="/blog/">More blog posts</a> &rarr;</p>

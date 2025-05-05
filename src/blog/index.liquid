@@ -1,30 +1,14 @@
----
-title: "Blog"
-layout: "layout-base"
-override:tags: []
-permalink: null
-tags:
-  - "nav"
----
+<p>
+  Programming guides, project updates, video game reviews, life events, and
+  more. <a href="/subscribe/">Subscribe</a> to stay up to date.
+</p>
 
-<article>
-  <header>
-    <h1>{{ title | escape }}</h1>
+{% assign postsByYear = collections.posts | groupByYear %} {% for item in
+postsByYear %} {% assign year = item[0] %} {% assign postList = item[1] %}
 
-    <p>
-      Programming guides, project updates, video game reviews, life events, and
-      more.
-    </p>
+<h2>{{ year }}</h2>
 
-    <p><a href="/subscribe/">Subscribe</a> to stay up to date.</p>
-  </header>
-
-  {% assign postsByYear = collections.posts | groupByYear %} {% for item in
-  postsByYear %} {% assign year = item[0] %} {% assign postList = item[1] %}
-
-  <h2>{{ year }}</h2>
-
-  <ul>
+<ul>
   {% for post in postList %}
   <li>
     <p>
@@ -35,8 +19,4 @@ tags:
   </li>
   {% endfor %}
   </ul>
-  {% endfor %}
-
-
-  {{ content }}
-</article>
+{% endfor %}

@@ -1,8 +1,6 @@
-<footer>
+<footer class="footer" id="footer">
+  {% render "partials/nav" %}
   <div>
-    &copy; {{ "now" | formatDate : "yyyy" }} wavebeem
-  </div>
-  <div>
-    <a href="#">Back to top</a>&nbsp;&uarr;
+    <small>&copy; 2012&ndash;{{ "now" | formatDate: "yyyy" }} wavebeem</small>
   </div>
 </footer>

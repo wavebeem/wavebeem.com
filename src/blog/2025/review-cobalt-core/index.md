@@ -1,7 +1,7 @@
 ---
 date: "2025-02-03"
 title: >-
-  Review: Cobalt Core (2023)
+  Review: Cobalt Core
 description: >-
   I loved Cobalt Core! A deckbuilding roguelike with an engaging time loop
   story, great music, gorgeous pixel art, and fun gameplay.
@@ -9,8 +9,8 @@ description: >-
 
 ## How I played it
 
-I loved playing Cobalt Core. Like Balatro, I primarily played this one "co-op"
-style on the couch with my partner, [Ash](https://ash.fish/).
+I loved playing Cobalt Core (2023). Like Balatro, I primarily played this one
+"co-op" style on the couch with my partner, [Ash](https://ash.fish/).
 
 It took us around 40 hours as recorded by Steam, but much of that time was
 discussing strategy out loud or me getting up to cook dinner and leaving the

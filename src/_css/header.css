@@ -1,31 +1,33 @@
-body > header {
-  --color-background: var(--color-root-background);
-  --color-text: var(--color-root-text);
-  --color-divider: var(--color-root-divider);
-  --color-link: var(--color-root-text);
-
-  color: var(--color-text);
-}
-
-body > header .button {
-  box-shadow: 0 8px 16px #0002;
-}
-
-.header :any-link {
-  color: var(--color-link);
-  color: inherit;
+.header {
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-size: var(--font-size-h2);
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 0.25ch;
+  align-items: center;
+  font-size: var(--font-size-logo);
   letter-spacing: 1px;
   font-family: var(--font-logo);
   /* Prevent Safari from making this even bolder lol */
   font-synthesis: none;
   font-weight: normal;
-  text-decoration-line: none;
   text-transform: uppercase;
+  color: var(--color-main-decoration);
+}
+
+.decoration {
+}
+
+.logo a {
+  text-decoration-line: none;
+  color: var(--color-main-text-heading);
+}
+
+.logo a:hover {
+  text-decoration-line: underline;
 }
 
 body > nav {
@@ -62,6 +64,10 @@ body > nav {
 }
 
 .logo-container {
+  width: 100%;
+  margin-inline: auto;
+  max-width: var(--width-heading);
+
   padding: 1rem;
   display: flex;
   justify-content: space-between;
@@ -70,16 +76,12 @@ body > nav {
 }
 
 @media (width >= 64rem) {
-  body > header {
+  .header {
     grid-area: header;
   }
 
-  body > header + .decorative-divider {
+  .header + .decorative-divider {
     grid-area: divider;
     height: 100%;
-  }
-
-  .logo-container {
-    padding: 0;
   }
 }

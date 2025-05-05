@@ -17,41 +17,21 @@ function oklch(lightness, chroma, hue, alpha = 100) {
   return color.to("srgb").toString({ format: "hex" });
 }
 
-export const light = {
-  "color-root-background": "#333",
-  "color-root-background-alpha": "#3333",
-  "color-root-overscroll": "#222",
-  "color-root-gradient1": oklch(55, 55, 152),
-  "color-root-gradient2": oklch(55, 50, 290),
-  "color-root-gradient3": oklch(45, 35, 290),
-  "color-root-text": "#fff",
-  "color-root-divider": "#fff3",
-
-  "color-main-background": "#eee",
-  "color-main-text": "#333",
+export default {
+  "color-main-background": "#fff",
+  "color-main-text-heading": oklch(52, 52, 165),
+  "color-main-text": "#111",
+  "color-main-decoration": oklch(80, 50, 135),
   "color-main-divider": "#ccc",
-  "color-main-link": oklch(50, 65, 290),
+  "color-main-link": oklch(55, 55, 290),
 
-  "color-syntax-background": "#fff",
+  "color-nav-background": oklch(52, 52, 165),
+  "color-nav-text": "#fff",
+
   "color-syntax-text": "#111",
   "color-syntax-comment": oklch(52, 0, 290),
-  "color-syntax-keyword": oklch(52, 100, 340),
+  "color-syntax-keyword": oklch(52, 100, 345),
   "color-syntax-property": oklch(52, 60, 250),
-  "color-syntax-string": oklch(52, 100, 152),
-  "color-syntax-punctuation": oklch(52, 30, 340),
-};
-
-export const dark = {
-  "color-main-background": "#333",
-  "color-main-text": "#eee",
-  "color-main-divider": "#555",
-  "color-main-link": oklch(80, 65, 290),
-
-  "color-syntax-background": "#2c2c2c",
-  "color-syntax-text": "#eee",
-  "color-syntax-comment": oklch(70, 15, 290),
-  "color-syntax-keyword": oklch(80, 70, 340),
-  "color-syntax-property": oklch(80, 70, 250),
-  "color-syntax-string": oklch(80, 50, 152),
-  "color-syntax-punctuation": oklch(70, 15, 340),
+  "color-syntax-string": oklch(52, 100, 165),
+  "color-syntax-punctuation": oklch(52, 30, 345),
 };

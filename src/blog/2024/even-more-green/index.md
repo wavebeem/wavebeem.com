@@ -1,7 +1,7 @@
 ---
 date: "2024-12-17"
 title: >-
-  Very verdant: Even more green
+  Very Verdant: Even More Green
 description: >-
   After starting Firefox and VS Code themes, I realized my website didn't have
   enough green. I massively improved dark mode, and added more green everywhere.

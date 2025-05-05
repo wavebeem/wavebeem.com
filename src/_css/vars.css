@@ -4,7 +4,8 @@
     ui-monospace, "Cascadia Code", "SFMono-Regular", "Menlo", "Monaco",
     "Consolas", "Liberation Mono", "Courier New", monospace;
   --font-body: "PP Object Sans", var(--font-fallback-main);
-  --font-cool: var(--font-body);
+  --font-cool: "PP Talisman Narrow", var(--font-fallback-main);
+  /* --font-cool: var(--font-body); */
   --font-logo: "Ultra Hi-Gloss", var(--font-fallback-main);
   --font-mono: "JetBrains Mono", var(--font-fallback-mono);
 
@@ -15,12 +16,15 @@
 
    https://modern-fluid-typography.vercel.app/
   */
-  --font-size-h1: 3rem;
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.5rem;
+  --font-size-h1: 4rem;
+  --font-size-h2: 2.5rem;
+  --font-size-h3: 2rem;
+  --font-size-logo: 2.5rem;
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
   --font-size-code: calc(0.9 * var(--font-size-base));
+
+  --list-inset: 2rem;
 
   --rounded-none: 0px;
   --rounded-small: 3px;
@@ -28,17 +32,23 @@
   --rounded-large: 16px;
   --rounded-pill: 9999px;
 
+  --width-copy: 45rem;
+  --width-heading: 70rem;
+
   --link-underline-offset: calc(1em / 6);
-  --link-underline-thickness: 1.5px;
+  --link-underline-thickness: calc(1em / 16);
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 1px);
 }
 
 @media (width <= 50rem) {
   :root {
-    --font-size-h1: 2.2rem;
-    --font-size-h2: 1.8rem;
-    --font-size-h3: 1.4rem;
-    --font-size-base: 1.1rem;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.5rem;
+    --font-size-base: 1.15rem;
+    --font-size-logo: 1.75rem;
     --font-size-small: 1rem;
+
+    --list-inset: 2rem;
   }
 }

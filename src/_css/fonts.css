@@ -1,4 +1,11 @@
 @font-face {
+  font-family: "PP Talisman Narrow";
+  src: url("/fonts/PPTalisman-Narrow-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "PP Object Sans";
   src: url("/fonts/PPObjectSans-Regular.woff2") format("woff2");
   font-display: swap;
@@ -29,7 +36,7 @@
 @font-face {
   font-family: "Ultra Hi-Gloss";
   src: url("/fonts/UltraHi-GlossFinal-UltraBoldItalic.woff2") format("woff2");
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {

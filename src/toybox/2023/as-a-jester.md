@@ -1,5 +1,5 @@
 ---
-title: "What pronouns does a jester use?"
+title: "What Pronouns Does a Jester Use?"
 description: "Press to reveal the punchline."
 date: "2023-09-07"
 ---
@@ -50,6 +50,10 @@ date: "2023-09-07"
     padding: 1rem 2rem;
     border-radius: 1rem;
     cursor: pointer;
+  }
+
+  .jester-summary::marker {
+    color: inherit !important;
   }
 
   .jester-summary,

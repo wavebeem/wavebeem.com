@@ -1,10 +1,10 @@
 ---
 date: "2025-01-25"
 title: >-
-  Review: Goodboy Galaxy (2024)
+  Review: Goodboy Galaxy
 description: >-
-  This game is extremely cute and oozing with style, but I also got a little
-  annoyed in the home stretch
+  Goodboy Galaxy (2024) is extremely cute and oozing with style, but I also got
+  a little annoyed in the home stretch
 ---
 
 ## Visuals

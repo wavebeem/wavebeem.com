@@ -1,5 +1,5 @@
 ---
-title: "Recipe: Best dip ever"
+title: "Recipe: Best Dip Ever"
 description: "My favorite IBS-friendly dip to make at home."
 date: "2022-03-20"
 ---

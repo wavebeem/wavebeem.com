@@ -1,6 +1,6 @@
 ---
 date: "2024-11-09"
-title: "Experiment: Puffy 3D mode"
+title: "Experiment: Puffy 3D Mode"
 description:
   "Taking inspiration from Claymorphism, I made an experimental version of my
   site with a puffy 3D look."

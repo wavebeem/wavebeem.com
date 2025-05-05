@@ -5,45 +5,20 @@
 }
 
 :root {
-  --color-background: var(--color-root-background);
-  --color-text: var(--color-root-text);
-  --color-divider: var(--color-root-divider);
-  --color-link: var(--color-root-text);
-
-  text-shadow: 0 0 8px #0004;
   overflow-y: scroll;
-  color-scheme: light dark;
-  scrollbar-color: var(--color-main-text) var(--color-main-background);
-  color: var(--color-text);
+  color-scheme: light;
+  scrollbar-color: var(--color-main-decoration) var(--color-main-background);
   /* overscroll-behavior: none; */
   font-synthesis: none;
-
-  --root-gradient-size: 100vw;
-  --root-gradient-direction: to right;
-  --_s1: 16px;
-  --_c1: #00000008;
-  --_c2: transparent;
-  --_b1:
-    linear-gradient(45deg, var(--_c2) 25%, var(--_c1) 25%) 0 0 / var(--_s1)
-      var(--_s1),
-    linear-gradient(135deg, var(--_c2) 25%, var(--_c1) 25%) calc(var(--_s1) / 2)
-      0 / var(--_s1) var(--_s1),
-    linear-gradient(45deg, var(--_c1) 75%, var(--_c2) 75%) calc(var(--_s1) / 2)
-      calc(var(--_s1) / -2) / var(--_s1) var(--_s1),
-    linear-gradient(135deg, var(--_c1) 75%, var(--_c2) 75%) 0px
-      calc(var(--_s1) / 2) / var(--_s1) var(--_s1);
-  --_b2: linear-gradient(
-    var(--root-gradient-direction),
-    var(--color-root-gradient1) calc(0 * var(--root-gradient-size)),
-    var(--color-root-gradient2) calc(1 * var(--root-gradient-size)),
-    var(--color-root-gradient3) calc(3 * var(--root-gradient-size))
-  );
-  background:
-    var(--_b1),
-    var(--_b2) var(--color-root-overscroll);
+  background: var(--color-main-background);
+  color: var(--color-main-text);
+  padding: 0;
+  margin: 0;
 }
 
 body {
+  padding: 0;
+  margin: 0;
   /**
    * Setting font size on body rather than html so that 1rem can refer to the
    * user's specified font size anywhere in my CSS, rather than 1.25 times that
@@ -53,15 +28,18 @@ body {
   font-size: var(--font-size-base);
   font-family: var(--font-body);
   line-height: 1.5;
-  margin: 0 auto;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 0;
+  min-height: 100vh;
+}
+
+main {
+  flex: auto;
 }
 
 a {
-  color: var(--color-link);
+  color: var(--color-main-link);
   border-radius: var(--rounded-small);
   text-decoration-thickness: var(--link-underline-thickness);
   text-underline-offset: var(--link-underline-offset);
@@ -80,35 +58,49 @@ a {
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-  text-wrap: balance;
+  color: var(--color-main-text-heading);
+}
+
+@supports (not (-apple-pay-button-style: inherit)) {
+  :is(h1, h2, h3, h4, h5, h6) {
+    /* TODO: This is totally messing up really bad in Safari. File a bug. */
+    text-wrap: balance;
+  }
 }
 
 :is(h1, h2, h3) {
-  /* font-weight: normal; */
   line-height: 1.25;
 }
 
 h1 {
   font-size: var(--font-size-h1);
   font-family: var(--font-cool);
-  /* letter-spacing: -1px; */
-  margin-block: 0 1.5rem;
+  letter-spacing: calc(1em / 32);
+  word-spacing: calc(1em / 16);
+  margin-block: 1.5rem;
 }
 
 h2 {
   font-size: var(--font-size-h2);
   font-family: var(--font-cool);
-  /* letter-spacing: -1px; */
-  margin-block: 4rem 1.5rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--color-divider);
+  letter-spacing: calc(1em / 32);
+  word-spacing: calc(1em / 16);
+  margin-block: 4rem 0.5rem;
+}
+
+h2::after {
+  content: "*-";
+  font-family: var(--font-logo);
+  color: var(--color-main-decoration);
 }
 
 h3 {
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-weight: normal;
+  font-style: italic;
   font-family: inherit;
   font-size: var(--font-size-h3);
-  margin-block: 4rem 1.5rem;
+  margin-block: 4rem 0.5rem;
 }
 
 code,
@@ -120,16 +112,24 @@ pre {
 }
 
 :not(pre) > code {
-  box-decoration-break: clone;
-  background: var(--color-syntax-background);
-  color: var(--color-syntax-text);
-  padding: 2px 0.5ch;
-  border-radius: var(--rounded-medium);
+  font-size: 0.9em;
+  /* color: var(--color-syntax-text); */
+  /* color: var(--color-main-text-heading); */
+  /* color: var(--color-syntax-keyword); */
+  font-weight: bold;
 }
 
 main details {
-  margin: 1rem 0;
-  border-bottom: 1px solid var(--color-divider);
+  margin: 1.5rem 0;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  padding-left: 1rem;
+  border-image: linear-gradient(
+      to bottom right,
+      var(--color-main-decoration),
+      transparent 50%
+    )
+    1;
 }
 
 main details + details {
@@ -144,15 +144,13 @@ main summary {
 }
 
 @media (hover) {
-  main summary:hover {
-    border-color: currentColor;
-    box-shadow: 0 2px 0 0 currentColor;
+  main summary:hover:not(:active)::marker {
+    color: var(--color-main-text-heading);
   }
 }
 
-main summary:active {
-  border-color: currentColor;
-  box-shadow: 0 3px 0 0 currentColor;
+main summary:hover:active::marker {
+  color: var(--color-main-text);
 }
 
 main summary:focus-visible {
@@ -168,7 +166,7 @@ main details[open] > summary {
 
 .spoiler {
   padding-inline: 0.25ch;
-  background-color: var(--color-text);
+  background-color: var(--color-main-text);
   color: transparent;
   cursor: default;
 }
@@ -180,11 +178,11 @@ main details[open] > summary {
 }
 
 .spoiler:focus {
-  color: var(--color-background);
+  color: var(--color-main-background);
 }
 
 .spoiler:focus-visible {
-  outline: 2px solid var(--color-text);
+  outline: 2px solid var(--color-main-text);
   outline-offset: 2px;
 }
 
@@ -192,8 +190,8 @@ main :is(blockquote, ul, ol, dl, p) {
   margin-block: 1.5rem;
 }
 
-main ul {
-  padding-left: 3rem;
+main :is(ul, ol) {
+  padding-left: var(--list-inset);
   list-style-type: disc;
 }
 
@@ -206,22 +204,9 @@ main :is(ul, ol) :is(ul, ol) {
 }
 
 main {
-  --color-background: var(--color-main-background);
-  --color-text: var(--color-main-text);
-  --color-divider: var(--color-main-divider);
-  --color-link: var(--color-main-link);
-
   flex: auto;
-  padding-block: 1.5rem;
-  padding-inline: 1rem;
-
-  background-color: var(--color-background);
-  color: var(--color-text);
-  text-shadow: none;
-  box-shadow: 0 8px 16px #0002;
-
-  /* Expand main to height of sidebar if smaller */
-  align-self: stretch;
+  min-height: 50vh;
+  padding-bottom: 3rem;
 }
 
 article header :is(h1, h2, h3) {
@@ -265,14 +250,24 @@ article header small {
   text-align: center;
 }
 
-.grid2 {
+.photo-grid {
   display: grid;
-  gap: 0 1.5rem;
+  gap: 1rem;
+}
+
+.photo-grid > * {
+  margin: 0;
+}
+
+@media (width >= 30rem) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (width >= 50rem) {
-  .grid2 {
-    grid-template-columns: 1fr 1fr;
+  .photo-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -288,93 +283,17 @@ article header small {
   gap: 1rem;
 }
 
-/* --- TOYBOX --- */
-
-.crime-frame {
-  border-radius: var(--rounded-medium);
-  overflow: hidden;
-  position: relative;
-}
-
-.crime-frame :is(details, summary) {
-  margin: unset;
-}
-
-.crime-frame > details {
-  background: white;
-}
-
 .clearfix {
   clear: both;
-}
-
-hr {
-  border: 0;
-  margin-block: 1.5rem;
-  margin-inline: auto;
-  color: inherit;
-  /* border-top: 1px dotted; */
-  border-top: 1px solid var(--color-divider);
-  width: 100%;
-}
-
-article p:has(> video),
-article p:has(> img),
-article figure {
-  margin-block: 1.5rem;
-  margin-inline: 0;
-}
-
-article :is(p, figure) :is(img, video) {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border-radius: var(--rounded-medium);
-}
-
-article .grid2 figure img {
-  width: 100%;
-}
-
-article figure figcaption {
-  margin-top: 1rem;
-  font-size: var(--font-size-small);
-  font-weight: bold;
-  text-wrap: balance;
-}
-
-article figure figcaption small {
-  font-weight: normal;
-  font-size: var(--font-size-small);
-  text-wrap: balance;
-}
-
-article p:has(:is(img, video, picture):only-child) {
-  max-width: initial;
-}
-
-article
-  p:has(:is(video, img, picture):only-child)
-  + p:has(> strong:only-child) {
-  margin-top: -1rem;
-  font-size: var(--font-size-small);
-  text-wrap: balance;
-}
-
-article p:has(:is(video, img, picture):only-child) + p > strong:only-child {
-  font-weight: normal;
-}
-
-article blockquote,
-article aside {
-  margin-inline: 0;
-  padding: 0 1.5rem;
-  border-left: 4px solid;
 }
 
 .pixelated {
   image-rendering: crisp-edges;
   image-rendering: pixelated;
+}
+
+::marker {
+  color: var(--color-main-decoration);
 }
 
 ol > li::marker {
@@ -391,39 +310,6 @@ dl > dd {
 
 dl > :is(dd + dt, dt + dt) {
   margin-top: 1.5rem;
-}
-
-@media (width >= 64rem) {
-  body {
-    display: grid;
-    /* Prevent grid blowout by using minmax(0, 1fr) instead of 1fr */
-    grid-template-columns: max-content minmax(0, 1fr);
-    /* Make the nav look hierarchically below the header and footer */
-    grid-template-areas:
-      "...  header"
-      "nav  main  "
-      "...  footer";
-    gap: 1rem;
-    padding: 1rem;
-    padding-left: 0;
-    /* Align the sidebar to the top, don't stretch to match the main height */
-    align-items: flex-start;
-    border-radius: var(--rounded-large);
-    max-width: 64rem;
-  }
-
-  main {
-    padding-inline: 1.5rem;
-    grid-area: main;
-    border-radius: var(--rounded-large);
-  }
-
-  :root {
-    padding: 1.5rem;
-    scrollbar-color: var(--color-text) var(--color-root-background-alpha);
-    --root-gradient-size: 100vh;
-    --root-gradient-direction: to bottom;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -2,6 +2,7 @@
 {
   "permalink": "/feed.xml",
   "eleventyExcludeFromCollections": true,
+  "layout": null,
   "eleventyComputed": {
     "metadata": {
       "base": "{{ origin }}"
@@ -40,7 +41,7 @@
     <updated>{{ post.date | toUTC }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <summary>
-      DESCRIPTION: {{ post.data.description }} [...]
+      {{ post.data.description }} [...]
     </summary>
   </entry>
   {%- endfor %}

@@ -1,0 +1,19 @@
+{
+  "permalink": "/feed.xml",
+  "eleventyExcludeFromCollections": true,
+  "layout": null,
+  "eleventyComputed": {
+    "metadata": {
+      "base": "{{ origin }}"
+    }
+  },
+  "metadata": {
+    "title": "wavebeem.com",
+    "description": "sage fennel's website",
+    "language": "en",
+    "author": {
+      "name": "sage fennel",
+      "email": "mail@wavebeem.com"
+    }
+  }
+}

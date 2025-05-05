@@ -1,181 +1,203 @@
----
-title: >-
-  Pokémon
-layout: "layout-base"
----
-
 <style>
-  :where(:has(#gbc-filter:checked)) img[src*=".gbc."]:where(:not(:hover)) {
-    filter: saturate(0.8) contrast(0.8) brightness(1.2) hue-rotate(-10deg);
+  :root {
+    --filter-gbc: saturate(80%) contrast(80%) brightness(120%)
+      hue-rotate(-10deg) brightness(95%);
+  }
+
+  img[src*=".gbc."] {
+    transition: 200ms filter;
+  }
+
+  :where(:has(#gbc-filter:checked)) {
+    img[src*=".gbc."] {
+      &:where(:not(:hover)) {
+        filter: var(--filter-gbc);
+      }
+    }
   }
 
   .grid16x16 {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 24px;
   }
+
+  .gbc-frame {
+    display: flex;
+    max-width: max-content;
+    padding: 4px;
+    background: #040404;
+    border: 32px solid #333;
+    border-radius: 16px;
+    position: relative;
+  }
+
+  @media (width <= 50rem) {
+    .gbc-frame {
+      border-width: 16px;
+    }
+  }
+
+  .gbc-frame img {
+    border-radius: 0;
+  }
 </style>
 
-<article>
-  <header>
-    <h1>{{ title | escape }}</h1>
+<p>
+  Pokémon is one of the most important game franchises to me. I started playing
+  Pokémon Blue on the original Game Boy as a kid, and as an adult I created
+  Pokémon Type Calculator in 2013.
+</p>
 
-    <p>
-      Pokémon is one of the most important game franchises to me. I started
-      playing Pokémon Blue on the original Game Boy as a kid, and as an adult I
-      created Pokémon Type Calculator in 2013.
-    </p>
-  </header>
+<h2>Pokémon Type Calculator</h2>
 
-  <h2>Pokémon Type Calculator</h2>
+<p>
+  The <a href="https://www.pkmn.help">Pokémon Type Calculator</a> (pkmn.help) is
+  easily my magnum opus. It receives over
+  <a href="https://plausible.io/pkmn.help">250 thousand visits per month</a>,
+  and visitors usually spend around 4 minutes per session.
+</p>
 
-  <p>
-    The <a href="https://www.pkmn.help">Pokémon Type Calculator</a> (pkmn.help)
-    is easily my magnum opus. It receives over
-    <a href="https://plausible.io/pkmn.help">250 thousand visits per month</a>,
-    and visitors usually spend around 4 minutes per session.
-  </p>
+<p>
+  What began as a personal project in 2013 when I was frustrated loading the
+  ad-riddled
+  <a href="https://bulbapedia.bulbagarden.net">Bulbapedia</a> on my budget
+  Android smartphone is now considered a pillar of the Pokémon community. And I
+  never spent a red cent on advertising it. It grew purely through search engine
+  results and word of mouth.
+</p>
 
-  <p>
-    What began as a personal project in 2013 when I was frustrated loading the
-    ad-riddled
-    <a href="https://bulbapedia.bulbagarden.net">Bulbapedia</a> on my budget
-    Android smartphone is now considered a pillar of the Pokémon community. And
-    I never spent a red cent on advertising it. It grew purely through search
-    engine results and word of mouth.
-  </p>
+<figure>
+  <img
+    src="./assets/pkmn.help-light.webp"
+    alt=""
+    width="1280"
+    height="804"
+    loading="eager"
+  />
+  <figcaption>
+    The 2025 version of Pokémon Type Calculator (light theme)
+  </figcaption>
+</figure>
 
-  <figure>
-    <img
-      src="./assets/pkmn.help-light.webp"
-      alt=""
-      width="1280"
-      height="804"
-      loading="eager"
-    />
-    <figcaption>
-      The 2025 version of Pokémon Type Calculator (light theme)
-    </figcaption>
-  </figure>
+<figure>
+  <img
+    src="./assets/pkmn.help-dark.webp"
+    alt=""
+    width="1280"
+    height="804"
+    loading="lazy"
+  />
+  <figcaption>
+    The 2025 version of Pokémon Type Calculator (dark theme)
+  </figcaption>
+</figure>
 
-  <figure>
-    <img
-      src="./assets/pkmn.help-dark.webp"
-      alt=""
-      width="1280"
-      height="804"
-      loading="lazy"
-    />
-    <figcaption>
-      The 2025 version of Pokémon Type Calculator (dark theme)
-    </figcaption>
-  </figure>
+<figure>
+  <img
+    src="./assets/pkmn.help-night.webp"
+    alt=""
+    width="1280"
+    height="804"
+    loading="lazy"
+  />
+  <figcaption>
+    The 2025 version of Pokémon Type Calculator (night theme)
+  </figcaption>
+</figure>
 
-  <figure>
-    <img
-      src="./assets/pkmn.help-night.webp"
-      alt=""
-      width="1280"
-      height="804"
-      loading="lazy"
-    />
-    <figcaption>
-      The 2025 version of Pokémon Type Calculator (night theme)
-    </figcaption>
-  </figure>
+<figure>
+  <img
+    src="./assets/pkmn.help-classic.webp"
+    alt=""
+    width="1280"
+    height="875"
+    loading="lazy"
+  />
+  <figcaption>The original 2013 version of Pokémon Type Calculator</figcaption>
+</figure>
 
-  <figure>
-    <img
-      src="./assets/pkmn.help-classic.webp"
-      alt=""
-      width="1280"
-      height="875"
-      loading="lazy"
-    />
-    <figcaption>
-      The original 2013 version of Pokémon Type Calculator
-    </figcaption>
-  </figure>
+<h2>Pokémon Blue</h2>
 
-  <h2>Pokémon Blue</h2>
+<p>
+  The first Pokémon game I ever played: Pokémon Blue. I played it on the
+  original
+  <a href="https://en.wikipedia.org/wiki/Game_Boy">Game Boy</a> (DMG-01) unit.
+  It took 4 AA batteries and the screen was barely visible unless under direct
+  sunlight, but I was enamored. I definitely spent hundreds of hours playing the
+  game.
+</p>
 
-  <p>
-    The first Pokémon game I ever played: Pokémon Blue. I played it on the
-    original
-    <a href="https://en.wikipedia.org/wiki/Game_Boy">Game Boy</a> (DMG-01) unit.
-    It took 4 AA batteries and the screen was barely visible unless under direct
-    sunlight, but I was enamored. I definitely spent hundreds of hours playing
-    the game.
-  </p>
+<p>
+  After beating the Elite Four countless times, catching most of the Pokédex,
+  and getting my core party nearly to level 100, disaster struck. It had been so
+  long since I had seen the beginning of the game, I decided to start a new game
+  just to mess around. And in a brief moment of pure muscle memory, I saved my
+  game, overwriting all of my hard earned progress. I was devastated. The whole
+  ordeal left me bitter and uninterested in starting the next Pokémon game
+  (Gold/Silver).
+</p>
 
-  <p>
-    After beating the Elite Four countless times, catching most of the Pokédex,
-    and getting my core party nearly to level 100, disaster struck. It had been
-    so long since I had seen the beginning of the game, I decided to start a new
-    game just to mess around. And in a brief moment of pure muscle memory, I
-    saved my game, overwriting all of my hard earned progress. I was devastated.
-    The whole ordeal left me bitter and uninterested in starting the next
-    Pokémon game (Gold/Silver).
-  </p>
+<p>
+  I didn't own and finish a new Pokémon game until Pokémon Platinum (2008) for
+  the Nintendo DS. I have owned and played every main line Pokémon game since
+  then. At some point I went back and played Pokémon Leaf Green, the Game Boy
+  Advance remake of Pokémon Red/Blue.
+</p>
 
-  <p>
-    I didn't own and finish a new Pokémon game until Pokémon Platinum (2008) for
-    the Nintendo DS. I have owned and played every main line Pokémon game since
-    then. At some point I went back and played Pokémon Leaf Green, the Game Boy
-    Advance remake of Pokémon Red/Blue.
-  </p>
+<figure>
+  <img
+    src="./assets/pkmn-blue.webp"
+    alt=""
+    width="800"
+    height="793"
+    loading="lazy"
+  />
+</figure>
+<p>Pokémon Blue Version for Game Boy</p>
 
-  <figure>
-    <img
-      src="./assets/pkmn-blue.webp"
-      alt=""
-      width="800"
-      height="793"
-      loading="lazy"
-    />
-  </figure>
-  <p>Pokémon Blue Version for Game Boy</p>
+<h2>Pokémon Crystal</h2>
 
-  <h2>Pokémon Crystal</h2>
+<p>
+  I ordered the
+  <a href="https://www.analogue.co/pocket">Analogue Pocket</a> in 2020, shortly
+  after I had a surging interest in playing Game Boy games. I had just finished
+  playing Dragon Quest I+II and Dragon Quest Monsters for the Game Boy Color,
+  and I was thrilled to get my fancy new backlight USB-C GB/GBC/GBA compatible
+  device. But it mostly sat in a drawer for a while.
+</p>
 
-  <p>
-    I ordered the
-    <a href="https://www.analogue.co/pocket">Analogue Pocket</a> in 2020,
-    shortly after I had a surging interest in playing Game Boy games. I had just
-    finished playing Dragon Quest I+II and Dragon Quest Monsters for the Game
-    Boy Color, and I was thrilled to get my fancy new backlight USB-C GB/GBC/GBA
-    compatible device. But it mostly sat in a drawer for a while.
-  </p>
+<p>
+  At some point my partner unearthed their old Game Boy cartridges. The save
+  batteries had died, but knowing how to solder, it's not a tough fix. I stepped
+  in and soldered new save batteries into the cartridges. Then a couple years
+  later I got the urge to play their copy of Crystal. Despite not playing
+  Gold/Silver/Crystal in their era, I was a huge Game Boy kid, so I'm enamored
+  with the graphics so far.
+</p>
 
-  <p>
-    At some point my partner unearthed their old Game Boy cartridges. The save
-    batteries had died, but knowing how to solder, it's not a tough fix. I
-    stepped in and soldered new save batteries into the cartridges. Then a
-    couple years later I got the urge to play their copy of Crystal. Despite not
-    playing Gold/Silver/Crystal in their era, I was a huge Game Boy kid, so I'm
-    enamored with the graphics so far.
-  </p>
+<p>
+  I haven't found many good sources of lossless screenshots of pixel art video
+  games online, so I wanted to create a gallery of fun images from my
+  playthrough.
+</p>
 
-  <p>
-    I haven't found many good sources of lossless screenshots of pixel art video
-    games online, so I wanted to create a gallery of fun images from my
-    playthrough.
-  </p>
+<hr />
 
-  <hr />
+<label>
+  <input id="gbc-filter" type="checkbox" autocomplete="off" checked />
+  <div>Game Boy Color screenshot filter</div>
+</label>
 
-  <label>
-    <input id="gbc-filter" type="checkbox" autocomplete="off" checked />
-    <div>Game Boy Color screenshot filter</div>
-  </label>
+<div>
+  <small>You can hover the images to temporarily turn off the effect.</small>
+</div>
 
-  <div>
-    <small>You can hover the images to temporarily turn off the effect.</small>
-  </div>
+<hr />
 
-  <hr />
-
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/title.gbc.webp"
       alt=""
@@ -183,10 +205,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Pokémon Crystal Version for Game Boy Color</p>
+  </div>
+</figure>
+<p>Pokémon Crystal Version for Game Boy Color</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/gender.gbc.webp"
       alt=""
@@ -194,12 +218,14 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    Pokémon Crystal was the first Pokémon game where you could play as a girl.
-  </p>
+  </div>
+</figure>
+<p>
+  Pokémon Crystal was the first Pokémon game where you could play as a girl.
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/sage.gbc.webp"
       alt=""
@@ -207,13 +233,15 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    It's me, Sage. I think it's interesting that the text "ID No." has
-    anti-aliasing, unlike all other text on screen.
-  </p>
+  </div>
+</figure>
+<p>
+  It's me, Sage. I think it's interesting that the text "ID No." has
+  anti-aliasing, unlike all other text on screen.
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/building.gbc.webp"
       alt=""
@@ -221,13 +249,15 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    I love the tile floor in this little outpost... whatever you call the areas
-    that section off the routes in the game.
-  </p>
+  </div>
+</figure>
+<p>
+  I love the tile floor in this little outpost... whatever you call the areas
+  that section off the routes in the game.
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/shop.gbc.webp"
       alt=""
@@ -235,10 +265,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>The shop is so well designed.</p>
+  </div>
+</figure>
+<p>The shop is so well designed.</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/rival.gbc.webp"
       alt=""
@@ -246,10 +278,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>The rival (Silver) is so gender.</p>
+  </div>
+</figure>
+<p>The rival (Silver) is so gender.</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/house.gbc.webp"
       alt=""
@@ -257,10 +291,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>This house with a tatami mat floor is so detailed and colorful!</p>
+  </div>
+</figure>
+<p>This house with a tatami mat floor is so detailed and colorful!</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/mom.gbc.webp"
       alt=""
@@ -268,10 +304,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>I love the retro cell phone interface for calling people.</p>
+  </div>
+</figure>
+<p>I love the retro cell phone interface for calling people.</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/falkner1.gbc.webp"
       alt=""
@@ -279,10 +317,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Falkner's gym</p>
+  </div>
+</figure>
+<p>Falkner's gym</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/falkner2.gbc.webp"
       alt=""
@@ -290,10 +330,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Falkner's portrait</p>
+  </div>
+</figure>
+<p>Falkner's portrait</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/bugsy.gbc.webp"
       alt=""
@@ -301,10 +343,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Between Pidgey and Quilava, Bugsy was a complete pushover.</p>
+  </div>
+</figure>
+<p>Between Pidgey and Quilava, Bugsy was a complete pushover.</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/glitch.gbc.webp"
       alt=""
@@ -312,10 +356,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Some kind of glitch...</p>
+  </div>
+</figure>
+<p>Some kind of glitch...</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/pikachu.gbc.webp"
       alt=""
@@ -323,14 +369,16 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    I'm so jealous! Raichu is my favorite Pokémon, but you can't get one (unless
-    you get extremely lucky from the egg) until well after you beat the Elite
-    Four :(
-  </p>
+  </div>
+</figure>
+<p>
+  I'm so jealous! Raichu is my favorite Pokémon, but you can't get one (unless
+  you get extremely lucky from the egg) until well after you beat the Elite Four
+  :(
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/hyuck.gbc.webp"
       alt=""
@@ -338,10 +386,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Hyuck-hyuck-hyuck!</p>
+  </div>
+</figure>
+<p>Hyuck-hyuck-hyuck!</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/suffer.gbc.webp"
       alt=""
@@ -349,10 +399,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Feeling this a lot lately.</p>
+  </div>
+</figure>
+<p>Feeling this a lot lately.</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/curse.gbc.webp"
       alt=""
@@ -360,10 +412,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Gastly using Curse</p>
+  </div>
+</figure>
+<p>Gastly using Curse</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/gambling.gbc.webp"
       alt=""
@@ -371,10 +425,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>The <q>Game Corner</q> (gambling)</p>
+  </div>
+</figure>
+<p>The <q>Game Corner</q> (gambling)</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/ball-dexterity.gbc.webp"
       alt=""
@@ -382,10 +438,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Hehehe</p>
+  </div>
+</figure>
+<p>Hehehe</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/raichu.gbc.webp"
       alt=""
@@ -393,10 +451,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>OMG it's Raichu! My favorite Pokémon.</p>
+  </div>
+</figure>
+<p>OMG it's Raichu! My favorite Pokémon.</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/vaporeon.gbc.webp"
       alt=""
@@ -404,10 +464,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Vaporeon</p>
+  </div>
+</figure>
+<p>Vaporeon</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/jolteon.gbc.webp"
       alt=""
@@ -415,10 +477,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Jolteon</p>
+  </div>
+</figure>
+<p>Jolteon</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/flareon.gbc.webp"
       alt=""
@@ -426,10 +490,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Flareon</p>
+  </div>
+</figure>
+<p>Flareon</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/espeon.gbc.webp"
       alt=""
@@ -437,10 +503,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Espeon</p>
+  </div>
+</figure>
+<p>Espeon</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/umbreon.gbc.webp"
       alt=""
@@ -448,10 +516,12 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>Umbreon</p>
+  </div>
+</figure>
+<p>Umbreon</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/suicune.gbc.webp"
       alt=""
@@ -459,14 +529,16 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    My least favorite thing in Pokémon: catching legendary/mythical Pokémon.
-    Having a 1% chance per ball and just save scumming a fight is not even
-    remotely fun.
-  </p>
+  </div>
+</figure>
+<p>
+  My least favorite thing in Pokémon: catching legendary/mythical Pokémon.
+  Having a 1% chance per ball and just save scumming a fight is not even
+  remotely fun.
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/psychic.gbc.webp"
       alt=""
@@ -474,12 +546,14 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    Some of the attack animations are really impressive for the Game Boy Color.
-  </p>
+  </div>
+</figure>
+<p>
+  Some of the attack animations are really impressive for the Game Boy Color.
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/lance.gbc.webp"
       alt=""
@@ -487,15 +561,17 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    I was pretty underleveled for the Elite Four, but by using
-    <strong>strong</strong> Pokémon instead of my favorites, I was able to win
-    without grinding. Sorry Karen, but I'm an adult with a job, I don't have
-    time to win with my favorites.
-  </p>
+  </div>
+</figure>
+<p>
+  I was pretty underleveled for the Elite Four, but by using
+  <strong>strong</strong> Pokémon instead of my favorites, I was able to win
+  without grinding. Sorry Karen, but I'm an adult with a job, I don't have time
+  to win with my favorites.
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/win0.gbc.webp"
       alt=""
@@ -503,14 +579,16 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    That's me! It took about 50 hours including some grinding I didn't really
-    need to do. Plus I left the game idle a bit while playing in docked mode
-    with my Analogue Pocket.
-  </p>
+  </div>
+</figure>
+<p>
+  That's me! It took about 50 hours including some grinding I didn't really need
+  to do. Plus I left the game idle a bit while playing in docked mode with my
+  Analogue Pocket.
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/win1.gbc.webp"
       alt=""
@@ -518,15 +596,17 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    I didn't really want to take any legendary/mythical Pokémon to the Elite
-    Four, but I didn't feel like grinding and Suicune was already at a good
-    level. So they were my backup Ice attack user for Alakazam, and I may have
-    used a Water attack once?
-  </p>
+  </div>
+</figure>
+<p>
+  I didn't really want to take any legendary/mythical Pokémon to the Elite Four,
+  but I didn't feel like grinding and Suicune was already at a good level. So
+  they were my backup Ice attack user for Alakazam, and I may have used a Water
+  attack once?
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/win2.gbc.webp"
       alt=""
@@ -534,13 +614,15 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    Golem has historically been fantastic on my team, but the Elite Four was
-    better at hitting his weaknesses. He did help out, though.
-  </p>
+  </div>
+</figure>
+<p>
+  Golem has historically been fantastic on my team, but the Elite Four was
+  better at hitting his weaknesses. He did help out, though.
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/win3.gbc.webp"
       alt=""
@@ -548,13 +630,15 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    Alakazam is absurdly good in this game. Thunder Punch, Ice Punch, and
-    Psychic made him an absolute monster.
-  </p>
+  </div>
+</figure>
+<p>
+  Alakazam is absurdly good in this game. Thunder Punch, Ice Punch, and Psychic
+  made him an absolute monster.
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/win4.gbc.webp"
       alt=""
@@ -562,16 +646,18 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    Gyarados! I feel like he was such a monster in some of the games I played,
-    but I didn't have as much luck with him here. Loading him up first with Surf
-    then with the inferior Waterfall, combined with his lackluster Special
-    Attack, made him mediocre at using his STAB for Water attacks. He mostly
-    just uses Strength and hits hard. But hey, cool free shiny Gyarados, right?
-  </p>
+  </div>
+</figure>
+<p>
+  Gyarados! I feel like he was such a monster in some of the games I played, but
+  I didn't have as much luck with him here. Loading him up first with Surf then
+  with the inferior Waterfall, combined with his lackluster Special Attack, made
+  him mediocre at using his STAB for Water attacks. He mostly just uses Strength
+  and hits hard. But hey, cool free shiny Gyarados, right?
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/win5.gbc.webp"
       alt=""
@@ -579,15 +665,16 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    Dragonair! I got the free Dratini from the dragon master guy and then gave
-    him the Exp. Share. I haven't actually used him in combat yet, but I'm
-    excited to eventually get a Dragonite, I guess. But the slow growth rate is
-    brutal.
-  </p>
+  </div>
+</figure>
+<p>
+  Dragonair! I got the free Dratini from the dragon master guy and then gave him
+  the Exp. Share. I haven't actually used him in combat yet, but I'm excited to
+  eventually get a Dragonite, I guess. But the slow growth rate is brutal.
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/win6.gbc.webp"
       alt=""
@@ -595,15 +682,17 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    My starter, Typhlosion. Not as good as I hoped, honestly. He takes way too
-    long to get any decent Fire moves. Putting Rollout on him was pretty great
-    though, since he avoids the array of Rock type weaknesses and has the HP to
-    stay alive long enough for Rollout to become a real threat.
-  </p>
+  </div>
+</figure>
+<p>
+  My starter, Typhlosion. Not as good as I hoped, honestly. He takes way too
+  long to get any decent Fire moves. Putting Rollout on him was pretty great
+  though, since he avoids the array of Rock type weaknesses and has the HP to
+  stay alive long enough for Rollout to become a real threat.
+</p>
 
-  <figure>
+<figure>
+  <div class="gbc-frame">
     <img
       src="./assets/end.gbc.webp"
       alt=""
@@ -611,69 +700,69 @@ layout: "layout-base"
       height="432"
       loading="lazy"
     />
-  </figure>
-  <p>
-    Whew! I did it. I beat the Elite Four. I've heard Kanto is mostly a cake
-    walk after Johto, so I think I'll take the time to go through it.
-  </p>
+  </div>
+</figure>
+<p>
+  Whew! I did it. I beat the Elite Four. I've heard Kanto is mostly a cake walk
+  after Johto, so I think I'll take the time to go through it.
+</p>
 
-  <h3>Sprite recolors</h3>
+<h3>Sprite recolors</h3>
 
-  <p>
-    Like a digital coloring book, I used to love recoloring sprites ripped from
-    my favorite games. After playing Pokémon Crystal, I decided to recolor a few
-    of the 16x16 menu sprites.
-  </p>
+<p>
+  Like a digital coloring book, I used to love recoloring sprites ripped from my
+  favorite games. After playing Pokémon Crystal, I decided to recolor a few of
+  the 16x16 menu sprites.
+</p>
 
-  <figure class="grid16x16">
-    <img
-      src="./assets/recolor16/bulbasaur.webp"
-      alt="bulbasaur"
-      width="64"
-      height="64"
-      loading="lazy"
-    />
-    <img
-      src="./assets/recolor16/charmander.webp"
-      alt="charmander"
-      width="64"
-      height="64"
-      loading="lazy"
-    />
-    <img
-      src="./assets/recolor16/squirtle.webp"
-      alt="squirtle"
-      width="64"
-      height="64"
-      loading="lazy"
-    />
-    <img
-      src="./assets/recolor16/pikachu.webp"
-      alt="pikachu"
-      width="64"
-      height="64"
-      loading="lazy"
-    />
-    <img
-      src="./assets/recolor16/gengar.webp"
-      alt="gengar"
-      width="64"
-      height="64"
-      loading="lazy"
-    />
-    <img
-      src="./assets/recolor16/ho-oh.webp"
-      alt="ho-oh"
-      width="64"
-      height="64"
-      loading="lazy"
-    />
-    <img
-      src="./assets/recolor16/lugia.webp"
-      alt="lugia"
-      width="64"
-      height="64"
-      loading="lazy"
-    />
-  </figure>
-</article>
+<figure class="grid16x16">
+  <img
+    src="./assets/recolor16/bulbasaur.webp"
+    alt="bulbasaur"
+    width="64"
+    height="64"
+    loading="lazy"
+  />
+  <img
+    src="./assets/recolor16/charmander.webp"
+    alt="charmander"
+    width="64"
+    height="64"
+    loading="lazy"
+  />
+  <img
+    src="./assets/recolor16/squirtle.webp"
+    alt="squirtle"
+    width="64"
+    height="64"
+    loading="lazy"
+  />
+  <img
+    src="./assets/recolor16/pikachu.webp"
+    alt="pikachu"
+    width="64"
+    height="64"
+    loading="lazy"
+  />
+  <img
+    src="./assets/recolor16/gengar.webp"
+    alt="gengar"
+    width="64"
+    height="64"
+    loading="lazy"
+  />
+  <img
+    src="./assets/recolor16/ho-oh.webp"
+    alt="ho-oh"
+    width="64"
+    height="64"
+    loading="lazy"
+  />
+  <img
+    src="./assets/recolor16/lugia.webp"
+    alt="lugia"
+    width="64"
+    height="64"
+    loading="lazy"
+  />
+</figure>

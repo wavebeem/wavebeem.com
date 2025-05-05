@@ -1,86 +1,77 @@
----
-title: >-
-  Shrines
-layout: "layout-base"
----
-
 <style>
-  ul[data-list-type="new"] ::marker {
+  li[data-marker="new"]::marker {
     content: "🆕 ";
   }
 
-  ul[data-list-type="regular"] ::marker {
+  li[data-marker="regular"]::marker {
     content: "⭐ ";
   }
 
-  ul[data-list-type="wip"] ::marker {
+  li[data-marker="wip"]::marker {
     content: "🚧 ";
   }
 
-  ul[data-list-type="todo"] ::marker {
+  li[data-marker="todo"]::marker {
     content: "🛑 ";
   }
 </style>
 
-<article>
-  <header>
-    <h1>{{ title | escape }}</h1>
+<p>
+  Shrines are spaces dedicated to things I love or have loved in the past.
+  Check back later as I continue to update them.
+</p>
 
-    <p>
-      Shrines are spaces dedicated to things I love or have loved in the past.
-      Check back later as I continue to update them.
-    </p>
+<p>
+  Shrines contain a mixture of art, screenshots, and words written about the
+  topic.
+</p>
 
-    <p>
-      Shrines contain a mixture of art, screenshots, and words written about the
-      topic.
-    </p>
-  </header>
+<hr />
 
-  <h2>Recently updated</h2>
+<ul>
+  <!-- NEW -->
 
-  <ul data-list-type="new">
-    <li>
-      <p><a href="/shrines/etrian-odyssey/">Etrian Odyssey</a></p>
-    </li>
-  </ul>
+  <li data-marker="new">
+    <p><a href="/shrines/etrian-odyssey/">Etrian Odyssey</a></p>
+  </li>
 
-  <h2>Ready for viewing</h2>
+  <!-- Regular -->
 
-  <ul data-list-type="regular">
-    <li>
-      <p><a href="/shrines/pokemon/">Pokémon</a></p>
-    </li>
-  </ul>
+  <li data-marker="regular">
+    <p><a href="/shrines/pokemon/">Pokémon</a></p>
+  </li>
 
-  <h2>Under construction</h2>
+  <!-- WIP -->
 
-  <ul data-list-type="wip">
-    <li>
-      <p><a href="/shrines/shin-megami-tensei/">Shin Megami Tensei</a></p>
-    </li>
-    <li>
-      <p><a href="/shrines/dragon-quest/">Dragon Quest</a></p>
-    </li>
-    <li>
-      <p><a href="/shrines/castlevania/">Castlevania</a></p>
-    </li>
-    <li>
-      <p><a href="/shrines/metroid/">Metroid</a></p>
-    </li>
-  </ul>
+  <li data-marker="wip">
+    <p><a href="/shrines/shin-megami-tensei/">Shin Megami Tensei</a></p>
+  </li>
+  <li data-marker="wip">
+    <p><a href="/shrines/dragon-quest/">Dragon Quest</a></p>
+  </li>
+  <li data-marker="wip">
+    <p><a href="/shrines/castlevania/">Castlevania</a></p>
+  </li>
+  <li data-marker="wip">
+    <p><a href="/shrines/metroid/">Metroid</a></p>
+  </li>
 
-  <h2>Maybe some day...</h2>
+  <!-- TODO -->
 
-  <ul data-list-type="todo">
-    <li>
-      <p>Destiny</p>
-    </li>
-    <li>
-      <p>Animal Crossing</p>
-    </li>
-    <li>
-      <p>Fire Emblem</p>
-    </li>
-  </ul>
-</article>
+  <li data-marker="todo">
+    <p>Destiny</p>
+  </li>
+  <li data-marker="todo">
+    <p>Animal Crossing</p>
+  </li>
+  <li data-marker="todo">
+    <p>Fire Emblem</p>
+  </li>
+  <li data-marker="todo">
+    <p>Gnosia</p>
+  </li>
+  <li data-marker="todo">
+    <p>Green</p>
+    <!-- https://www.color-meanings.com/shades-of-green-color-names-html-hex-rgb-codes/ -->
+  </li>
+</ul>

@@ -1,7 +1,7 @@
 ---
 date: "2025-03-01"
 title: >-
-  Enhancing the Pokédex: input lag, React, and monitor refresh rates
+  Enhancing the Pokédex: Input Lag, React, and Monitor Refresh Rates
 description: >-
   I released a large update to the Pokédex, intended to better use screen real
   estate on large displays. Read on for screenshots, the full changelog, and a

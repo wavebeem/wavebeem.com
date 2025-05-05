@@ -1,0 +1,144 @@
+wavebeem-balatro-pog {
+  touch-action: none;
+  --avatar-size: 400px;
+  --avatar-padding: 0px;
+  isolation: isolate;
+  max-width: max-content;
+  margin-block: 1.5rem;
+  padding: var(--avatar-padding);
+  border-radius: var(--rounded-pill);
+  --t: 2px;
+  --k: 0.05turn;
+  --transform: translate(calc(var(--t) * var(--x)), calc(var(--t) * var(--y)))
+    rotateY(calc(var(--k) * var(--x))) rotateX(calc(var(--k) * var(--y)));
+  display: flex;
+  position: relative;
+}
+
+wavebeem-balatro-pog [data-element="background"] {
+  z-index: 1;
+}
+wavebeem-balatro-pog [data-element="rainbow"] {
+  z-index: 2;
+}
+wavebeem-balatro-pog [data-element="shine"] {
+  z-index: 3;
+}
+wavebeem-balatro-pog [data-element="image"] {
+  z-index: 4;
+}
+
+wavebeem-balatro-pog[data-state="inside"] {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+wavebeem-balatro-pog img {
+  z-index: 1;
+  touch-action: none;
+  display: flex;
+  border-radius: var(--rounded-pill);
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+}
+
+wavebeem-balatro-pog [data-element="background"] {
+  position: absolute;
+  inset: 0;
+  clip-path: circle(50%);
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-main-decoration);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  wavebeem-balatro-pog {
+    --k: 0turn;
+  }
+}
+
+wavebeem-balatro-pog[data-state="outside"]
+  :is([data-element="image"], [data-element="background"]) {
+  transition-timing-function: ease;
+  transition-duration: 500ms;
+  transition-property: transform, box-shadow;
+}
+
+wavebeem-balatro-pog[data-state="inside"] img {
+  pointer-events: none;
+  transform: var(--transform);
+  --k1: calc(-1 / 8);
+  --k2: calc(1 / 16);
+  box-shadow: calc(var(--k1) * var(--avatar-size) * var(--x))
+    calc(var(--k1) * var(--avatar-size) * var(--y))
+    calc(var(--k2) * var(--avatar-size) * var(--r)) #0002;
+}
+
+wavebeem-balatro-pog[data-state="inside"] :not([data-element="image"]) {
+  transform: var(--transform);
+}
+
+wavebeem-balatro-pog :not([data-element="image"]) {
+  pointer-events: none;
+  width: calc(100% - 2 * var(--avatar-padding));
+  height: calc(100% - 2 * var(--avatar-padding));
+  left: var(--avatar-padding);
+  top: var(--avatar-padding);
+}
+
+wavebeem-balatro-pog [data-element="shine"],
+wavebeem-balatro-pog [data-element="rainbow"] {
+  opacity: 0;
+  clip-path: circle(50%);
+  position: absolute;
+}
+
+wavebeem-balatro-pog [data-element="shine"] {
+  mix-blend-mode: hard-light;
+
+  /* https://css-pattern.com/wave-circles/ */
+  --s: 30px; /* control the size*/
+  --c1: hsl(0 0% 80%);
+  --c2: hsl(0 0% 50%);
+
+  --_g: var(--s) var(--s)
+    radial-gradient(var(--c1) 17%, var(--c2) 18% 35%, #0000 36.5%);
+
+  mask-image: linear-gradient(
+    var(--angle),
+    hsl(0 0% 0% / 70%),
+    hsl(0 0% 0% / 0%) calc(100% * var(--r))
+  );
+  background:
+    calc(var(--s) / -4) calc(var(--s) / -4) / var(--_g),
+    calc(var(--s) / 4) calc(var(--s) / 4) / var(--_g),
+    radial-gradient(var(--c2) 34%, var(--c1) 36% 68%, #0000 70%) 0 0 /
+      calc(var(--s) / 2) calc(var(--s) / 2),
+    repeating-linear-gradient(45deg, var(--c1) -12.5% 12.5%, var(--c2) 0 37.5%)
+      0 0 / var(--s) var(--s);
+}
+
+wavebeem-balatro-pog [data-element="rainbow"] {
+  mix-blend-mode: hard-light;
+  background: linear-gradient(
+      var(--angle),
+      hsl(var(--angle) 100% 80% / 70%),
+      hsl(var(--angle) 100% 80% / 10%) calc(100% * var(--r))
+    )
+    0 0 / 100% 100%;
+}
+
+wavebeem-balatro-pog[data-state="inside"] [data-element] {
+  opacity: 1;
+}
+
+wavebeem-balatro-pog[data-state="outside"] [data-element] {
+  transition: opacity 500ms;
+}
+
+@media (width <= 50rem) {
+  wavebeem-balatro-pog {
+    --avatar-size: 300px;
+  }
+}

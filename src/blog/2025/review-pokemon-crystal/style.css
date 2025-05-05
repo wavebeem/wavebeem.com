@@ -1,12 +1,14 @@
 :root {
-  --filter-gbc: saturate(0.8) contrast(0.8) brightness(1.2) hue-rotate(-10deg);
+  --filter-gbc: saturate(80%) contrast(80%) brightness(120%) hue-rotate(-10deg)
+    brightness(95%);
 }
 
 wavebeem-review-pokemon-crystal-sprites {
-  display: inline-flex;
+  display: flex;
+  max-width: max-content;
 
   & button {
-    all: inherit;
+    all: initial;
     display: flex;
     border-radius: 6px;
     overflow: hidden;
@@ -32,10 +34,34 @@ wavebeem-review-pokemon-crystal-sprites {
   }
 }
 
+img[src*=".gbc."] {
+  transition: 200ms filter;
+}
+
 :where(:has(#gbc-filter:checked)) {
   img[src*=".gbc."] {
     &:where(:not(:hover)) {
       filter: var(--filter-gbc);
     }
   }
+}
+
+.gbc-frame {
+  display: flex;
+  max-width: max-content;
+  padding: 4px;
+  background: #040404;
+  border: 32px solid #333;
+  border-radius: 16px;
+  position: relative;
+}
+
+@media (width <= 50rem) {
+  .gbc-frame {
+    border-width: 16px;
+  }
+}
+
+.gbc-frame img {
+  border-radius: 0;
 }

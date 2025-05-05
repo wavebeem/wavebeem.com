@@ -1,25 +1,33 @@
----
-title: "Art"
-layout: "layout-base"
----
-<article>
-  <header>
-    <h1>{{ title | escape }}</h1>
-    <p>A gallery for my art.</p>
-  </header>
+<style>
+  img {
+    /* UGH NO */
+    width: 100%;
+  }
+</style>
 
-  <div class="grid2">
-    {% for image in art.images reversed %}
-    <figure>
+<p>I've been drawing pixel art ever since I learned you could zoom in with Microsoft Paint. I don't practice much, but I love working with pixels.</p>
+
+<hr />
+
+<div class="photo-grid">
+  {% for image in art.images reversed %}
+  <figure>
+    <a href="{{ image.path }}" tabindex="-1">
+      <img
+        src="{{ image.path }}"
+        loading="lazy"
+        alt=""
+        width="300"
+        height="300"
+      />
+    </a>
+    <figcaption>
       <a href="{{ image.path }}">
-        <img src="{{ image.path }}" alt="" />
+        <strong>{{ image.title }}</strong>
       </a>
-      <figcaption>
-        {{ image.title }}
-        <br />
-        <small>{% render "partials/date" date: image.date %}</small>
-      </figcaption>
-    </figure>
-    {% endfor %}
-  </div>
-</article>
+      <br />
+      {% render "partials/date" date: image.date %}
+    </figcaption>
+  </figure>
+  {% endfor %}
+</div>

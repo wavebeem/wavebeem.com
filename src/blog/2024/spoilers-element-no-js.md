@@ -1,7 +1,7 @@
 ---
 date: "2024-11-27"
 title: >-
-  Creating an HTML “spoilers” element with no JS
+  Creating an HTML “Spoilers” Element with No JS
 description: >-
   It's strangely difficult to make a “spoilers” element without JS, and even
   harder to do it with support for all mobile operating systems and screen

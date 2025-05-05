@@ -1,7 +1,7 @@
 ---
 date: "2025-02-23"
 title: >-
-  Simulating JS await with generator functions
+  Simulating JS await with Generator Functions
 description: >-
   Did you know that before async functions existed in JS, we simulated them with
   generator functions? Come with me on a code journey, in which I reveal the

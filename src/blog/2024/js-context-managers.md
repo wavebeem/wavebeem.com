@@ -1,5 +1,5 @@
 ---
-title: "JS context managers"
+title: "JS Context Managers"
 description:
   "See how to adapt Python's context managers for use in JavaScript. Break free
   from clunky try...finally blocks with this one weird trick."

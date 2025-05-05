@@ -9,24 +9,27 @@ description: >-
 ---
 
 <link rel="stylesheet" href="./style.css" />
-<script src="./main.mjs"></script>
 
----
-
-<label>
+<label class="card">
   <input id="gbc-filter" type="checkbox" autocomplete="off" checked />
-  <span>Game Boy Color screenshot filter</span>
+  <div>
+    <div>Game Boy Color screenshot filter</div>
+    <div><small>You can hover the images to temporarily turn off the effect.</small></div>
+  </div>
 </label>
 
-<div><small>You can hover the images to temporarily turn off the effect.</small></div>
+<figure>
+  <div class="gbc-frame">
+    <img
+      src="./assets/title.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
+  <figcaption>Pokémon™ Crystal Version © 2001 GAME FREAK inc.</figcaption>
+</figure>
 
----
-
-![](./assets/title.gbc.webp)
-
-**Pokémon™ Crystal Version © 2001 GAME FREAK inc.**
-
-## Allow me to gush for a moment about the Game Boy Color
+## Allow Me to Gush for a Moment About the Game Boy Color
 
 I think the Game Boy Color is the peak of video game graphics. I was a very
 impressionable age when this device was in its prime, but hear me out. The
@@ -44,11 +47,18 @@ actually present. I feel like there has to be some relation here to why film
 looks best 24 fps, even though that's barely enough fidelity for our brains to
 register something as movement.
 
-## Starting my adventure
+## Starting My Adventure
 
-![](./assets/sage.gbc.webp)
-
-**My body is ready.**
+<figure>
+  <div class="gbc-frame">
+    <img
+      src="./assets/sage.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
+  <figcaption>My body is ready.</figcaption>
+</figure>
 
 Crystal was the first game where you could play as a girl! How cool. The game
 got off to a good enough start for me, though it does make you wait a while
@@ -64,11 +74,18 @@ appeared in the wild. Pretty early on I snagged a Geodude who I used for like
 half the game. I probably should've hung onto Hopplip or Bellsprout, because
 after passing them up I didn't stumble upon many Grass types for a while.
 
-## Density and scale
+## Density and Scale
 
-![](./assets/tower.gbc.webp)
-
-**This tower is absolutely gorgeous.**
+<figure>
+  <div class="gbc-frame">
+    <img
+      src="./assets/tower.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
+  <figcaption>This tower is absolutely gorgeous.</figcaption>
+</figure>
 
 We often take for granted how modern games are able to represent massive scale.
 Older games like this are not spacious in the least bit. These areas are tiny
@@ -79,12 +96,19 @@ me to think _about a house_ rather than seeing a highly literal full 3D house on
 display. The imperfect colors around tile edges? A gorgeous compromise, in my
 mind, between memory usage and perfection.
 
-## Grinding, balance, and party diversity
+## Grinding, Balance, and Party Diversity
 
-![](./assets/raichu.gbc.webp)
-
-**The game taunted me with trainers using Raichu (my favorite Pokémon), but you
-can't get your own until you've nearly finished the game.**
+<figure>
+  <div class="gbc-frame">
+    <img
+      src="./assets/raichu.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
+  <figcaption>The game taunted me with trainers using Raichu (my favorite Pokémon), but you
+can't get your own until you've nearly finished the game.</figcaption>
+</figure>
 
 The wild Pokémon were generally 10+ levels below my party, and I didn't enjoy
 banging my head against the slow and uninteresting random battles in order to
@@ -92,19 +116,33 @@ fix that problem. I do have a tendency to skip battles too much in RPGs, but
 even when I fought every trainer here I felt like I just had enough XP to scrape
 by, nowhere near enough to level up a new monster for the next gym.
 
-![](./assets/alakazam.gbc.webp)
-
-**Alakazam is so broken in this game, I used him more than every other Pokémon.
-Also, this attack animation was extremely impressive in action.**
+<figure>
+  <div class="gbc-frame">
+    <img
+      src="./assets/alakazam.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
+  <figcaption>Alakazam is so broken in this game, I used him more than every other Pokémon.
+Also, this attack animation was extremely impressive in action.</figcaption>
+</figure>
 
 Psychic type was absurdly powerful in Generation I, and despite their efforts,
 feels nearly as broken in Generation II. It's not that I _wanted_ to use
 Alakazam as my main Pokémon, it just felt like I had to unless I wanted to grind
 a lot.
 
-![](./assets/trainers.gbc.webp)
-
-**Karen stood no chance against Alakazam.**
+<figure>
+  <div class="gbc-frame">
+    <img
+      src="./assets/trainers.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
+  <figcaption>Karen stood no chance against Alakazam.</figcaption>
+</figure>
 
 Sadly, most Gym Leaders and Elite Four members can be easily swept by one or two
 Pokémon. The 1v1 format of Pokémon battles doesn't lend itself to a lot of depth
@@ -113,10 +151,17 @@ disallow me from counter-picking against the enemy's next Pokémon), but I didn'
 really see the point. I would've just ended up chugging some potions or grinding
 to be able to tank a hit when counter picking.
 
-![](./assets/karen.gbc.webp)
-
-**Karen thinks I should win with my favorite Pokémon, but that would take far
-too much grinding...**
+<figure>
+  <div class="gbc-frame">
+    <img
+      src="./assets/karen.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
+  <figcaption>Karen thinks I should win with my favorite Pokémon, but that would take far
+too much grinding...</figcaption>
+</figure>
 
 Does she have any idea how hard it is to keep a balanced team up to level?
 Grinding against wild Pokémon is a terrible way to get XP, but Trainer battles
@@ -131,9 +176,16 @@ know.
 
 ## Breeding
 
-![](./assets/breeding.gbc.webp)
-
-**Love was not in the air for Ditto and Kadabra.**
+<figure>
+  <div class="gbc-frame">
+    <img
+      src="./assets/breeding.gbc.webp"
+      width="480"
+      height="432"
+    />
+  </div>
+  <figcaption>Love was not in the air for Ditto and Kadabra.</figcaption>
+</figure>
 
 Breeding is new with Generation II and is utterly bizarre. It combines the worst
 parts of grinding by forcing you to walk around endlessly. I tried in vain to
@@ -169,12 +221,20 @@ parties, which makes the tactical space much more interesting.
 
 ## Catching Pokémon
 
-![](./assets/suicune1.gbc.webp)
+<figure>
+  <div class="gbc-frame">
+    <img src="./assets/suicune1.gbc.webp" width="480" height="432">
+  </div>
 
-![](./assets/suicune2.gbc.webp)
+  <div class="gbc-frame">
+    <img src="./assets/suicune2.gbc.webp" width="480" height="432">
+  </div>
 
-**I threw Pokéballs until I lost count, but my very first ball the next day
-caught Suicune.**
+  <figcaption>
+    I threw Pokéballs until I lost count,
+    but my very first ball the next day caught Suicune.
+  </figcaption>
+</figure>
 
 Catching Pokémon has got to be the system most in need of a complete overhaul.
 Unlike Pokémon stats, natures, EVs, IVs, moves, types... all the systems that
@@ -186,11 +246,14 @@ action/stealth minigame most of the time. I genuinely had fun hunting down
 monsters in that game, and would catch repeats of the same guy just for fun. And
 you got XP for catching Pokémon there!
 
-## Two regions in one game?
+## Two Regions in One Game?
 
-![](./assets/train.gbc.webp)
-
-**Riding the train from Kanto to Johto**
+<figure>
+  <div class="gbc-frame">
+    <img src="./assets/train.gbc.webp" width="480" height="432" >
+  </div>
+  <figcaption>Riding the train from Kanto to Johto</figcaption>
+</figure>
 
 While I appreciate the reveal of "OMG you can go back to Kanto", that part of
 the game wasn't very fun. You're wildly overleveled for most random encounters,
@@ -202,12 +265,15 @@ like... 51 I think? a 20+ level gap is too challenging for a noob like me, even
 with me counter-picking every Pokémon specifically to take him down. And I
 wasn't about to grind to make it happen.
 
-## Did I enjoy myself?
+## Did I Enjoy Myself?
 
-![](./assets/hall-of-fame.gbc.webp)
-
-**I beat the Elite Four after about 50 hours of gameplay. I wrapped up Kanto
-(besides Red) after 66 hours.**
+<figure>
+  <div class="gbc-frame">
+    <img src="./assets/hall-of-fame.gbc.webp" width="480" height="432" >
+  </div>
+  <figcaption>I beat the Elite Four after about 50 hours of gameplay. I wrapped up Kanto
+(besides Red) after 66 hours.</figcaption>
+</figure>
 
 This run was partially for fun and partially for research, I guess. If I hadn't
 felt like I was missing something by never having played Generation II, I'm not
@@ -231,13 +297,9 @@ If you like Pokémon and haven't played _Dragon Quest Monsters_ for the Game Boy
 Color (known as Dragon Warrior Monsters originally), I think you should give it
 a shot! Assuming you're in the mood for a Game Boy Color game.
 
-If you're looking for something more modern, you can't go wrong with Sh*in
-Megami Tensei V: Vengeance*, which is available on most modern gaming systems.
+If you're looking for something more modern, you can't go wrong with _Shin
+Megami Tensei V: Vengeance_, which is available on most modern gaming systems.
 Don't listen to the haters about its lackluster story: the writing is more
 interesting than any Pokémon game I've played, barring maybe Scarlet/Violet.
 
-<wavebeem-review-pokemon-crystal-sprites>
-  <button type="button">
-    <img src="./assets/kris.webp" alt="Change image" width="48" height="48" />
-  </button>
-</wavebeem-review-pokemon-crystal-sprites>
+<img src="./assets/kris.webp" alt="Change image" width="48" height="48" />

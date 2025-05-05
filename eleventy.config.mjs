@@ -55,29 +55,10 @@ export default function getConfig(eleventyConfig) {
     let s = "";
     // Default theme (light mode)
     s += `:root {\n`;
-    for (const [key, val] of Object.entries(themes.light)) {
+    for (const [key, val] of Object.entries(themes)) {
       s += `  --${key}: ${val};\n`;
     }
     s += `}\n`;
-    s += `\n`;
-    // Default theme (dark mode)
-    s += `@media (prefers-color-scheme: dark) {\n`;
-    s += `  :root {\n`;
-    for (const [key, val] of Object.entries(themes.dark)) {
-      s += `    --${key}: ${val};\n`;
-    }
-    s += `  }\n`;
-    s += `}\n`;
-    s += `\n`;
-    // Named themes
-    for (const [name, vars] of Object.entries(themes)) {
-      s += `:root[data-theme="${name}"] {\n`;
-      for (const [key, val] of Object.entries(vars)) {
-        s += `  --${key}: ${val};\n`;
-      }
-      s += `}\n`;
-      s += `\n`;
-    }
     return s;
   });
 

@@ -1,7 +1,7 @@
 ---
 date: "2025-02-25"
 title: >-
-  I actually had to use algebra at work one time
+  I Actually Had to Use Algebra at Work One Time
 description: >-
   After trying and failing to dust off my knowledge of trigonometry, I had to
   re-learn linear equations and algebraic systems of equations in order to solve
@@ -77,7 +77,7 @@ the inverse
 const b = -1 / a;
 ```
 
-> Erm, how do I know this is true about perpendicular lines and slopes? It seems
+> Um, how do I know this is true about perpendicular lines and slopes? It seems
 > somewhat intuitive to me after the fact, but I may have found this on a
 > children's math homework website while working on the problem.
 
@@ -85,8 +85,8 @@ At this point we know the coordinates of 3 out of 4 points, and the slopes of
 both lines. So let's take inventory of the linear equations we can make from
 this. Using the
 [point-slope form](https://en.wikipedia.org/wiki/Linear_equation#Point%E2%80%93slope_form_or_Point-gradient_form):
-`y = y1 + m * (x - x1)`, where `(x1, y1)` is a known point on the line, and `m`
-is the slope.
+`y = y1 + m(x - x1)`, where `(x1, y1)` is a known point on the line, and `m` is
+the slope.
 
 A note about notation: syntax like `ax3` will represent `a * p3.x` in JS. I want
 to use shorter syntax for the algebraic component of this post.
