@@ -1,6 +1,4 @@
 .header {
-  background: var(--color-header-background);
-  color: var(--color-header-text);
   display: flex;
   flex-direction: column;
 }

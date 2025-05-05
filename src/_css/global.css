@@ -58,9 +58,14 @@ a {
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-  /* TODO: This is totally messing up really bad in Safari. File a bug. */
-  /* text-wrap: balance; */
   color: var(--color-main-text-heading);
+}
+
+@supports (not (-apple-pay-button-style: inherit)) {
+  :is(h1, h2, h3, h4, h5, h6) {
+    /* TODO: This is totally messing up really bad in Safari. File a bug. */
+    text-wrap: balance;
+  }
 }
 
 :is(h1, h2, h3) {

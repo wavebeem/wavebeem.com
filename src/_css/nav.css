@@ -1,6 +1,6 @@
 .nav {
-  background: var(--color-footer-background);
-  color: var(--color-footer-text);
+  background: var(--color-nav-background);
+  color: var(--color-nav-text);
 
   width: 100%;
   display: flex;

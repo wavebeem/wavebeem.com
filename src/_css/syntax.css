@@ -1,7 +1,6 @@
 pre:has(> code) {
   margin-block: 1.5rem;
   padding: 0 1rem;
-  background-color: var(--color-syntax-background);
   border-left: 1px solid var(--color-main-decoration);
   border-image: linear-gradient(
       transparent,
@@ -10,7 +9,6 @@ pre:has(> code) {
     )
     1;
   color: var(--color-syntax-text);
-  scrollbar-color: var(--color-syntax-text) var(--color-syntax-background);
   overflow-x: auto;
 }
 
