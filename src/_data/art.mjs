@@ -38,7 +38,7 @@ const titles = {
 };
 
 export const images = Object.entries(titles).map(([filename, title]) => {
-  const date = filename.slice(0, 10);
+  const date = filename.slice(0, "yyyy-mm-dd".length);
   const path = `img/${filename}`;
   return { path, filename, title, date };
 });

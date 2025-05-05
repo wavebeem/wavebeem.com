@@ -78,6 +78,7 @@ article.page {
     }
 
     figcaption {
+      margin-top: -0.5rem;
       font-size: var(--font-size-small);
       text-wrap: balance;
       font-style: italic;

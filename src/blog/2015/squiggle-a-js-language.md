@@ -1,5 +1,5 @@
 ---
-title: "Squiggle: a JS language"
+title: "Squiggle: a JS Language"
 description:
   "An introduction to Squiggle, a compile-to-JS programming language I made."
 date: "2015-07-01"

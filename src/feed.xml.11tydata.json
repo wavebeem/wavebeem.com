@@ -1,6 +1,7 @@
 {
   "permalink": "/feed.xml",
   "eleventyExcludeFromCollections": true,
+  "layout": null,
   "eleventyComputed": {
     "metadata": {
       "base": "{{ origin }}"

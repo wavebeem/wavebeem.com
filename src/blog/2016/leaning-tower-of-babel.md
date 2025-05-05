@@ -1,5 +1,5 @@
 ---
-title: "The leaning tower of Babel"
+title: "The Leaning Tower of Babel"
 description: "An exploration of Babel's caveats."
 date: "2016-08-22"
 ---
@@ -260,9 +260,9 @@ var asyncAdd = (function () {
           }
         },
         _callee,
-        this
+        this,
       );
-    })
+    }),
   );
 
   return function asyncAdd() {
@@ -291,7 +291,7 @@ function _asyncToGenerator(fn) {
             },
             function (err) {
               return step("throw", err);
-            }
+            },
           );
         }
       }
@@ -326,7 +326,7 @@ function nice() {
       }
     },
     _marked[0],
-    this
+    this,
   );
 }
 

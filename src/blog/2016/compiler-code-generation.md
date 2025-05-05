@@ -1,5 +1,5 @@
 ---
-title: "Compiler code generation"
+title: "Compiler Code Generation"
 description: "How to make code generation for a compiler."
 date: "2016-12-19"
 ---
