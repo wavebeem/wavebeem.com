@@ -1,6 +1,6 @@
-article.card {
+.card {
   margin-block: 1.5rem;
-  padding-left: 1rem;
+  padding: 1rem;
 
   border: 1px solid;
   border-right: 0;
@@ -13,6 +13,6 @@ article.card {
     1;
 
   > header > :is(h1, h2, h3) {
-    margin-top: 1rem;
+    margin-top: 0;
   }
 }
