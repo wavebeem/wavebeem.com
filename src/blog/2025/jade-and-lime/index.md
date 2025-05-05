@@ -71,4 +71,5 @@ now.
 }
 ```
 
-[WebKit issue tracker for text-wrap: balance](https://bugs.webkit.org/show_bug.cgi?id=249840)
+**WebKit issue:**
+[text-wrap balance doesn't work correctly with non-zero word-spacing](https://bugs.webkit.org/show_bug.cgi?id=292563)
