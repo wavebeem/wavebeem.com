@@ -7,6 +7,17 @@ layout: "layout-base"
     <small>{% render "partials/date" date: page.date %}</small>
   </header>
 
+  {% if draft %}
+  <section class="page-body">
+    <p class="card">
+      <strong>
+        This is a draft post. It isn't finished yet. Please don't share this
+        page with anyone else without my permission.
+      </strong>
+    </p>
+  </section>
+  {% endif %}
+
   <section class="page-body">
     {% if description -%}
     <p>{{ description | markdownify }}</p>

@@ -86,4 +86,7 @@
   <title>{{ title | formatTitle }}</title>
   <meta name="author" content="wavebeem" />
   <meta name="generator" content="{{ eleventy.generator | escape }}" />
+  {% if draft -%}
+  <meta name="robots" content="noindex" />
+  {% endif %}
 </head>
