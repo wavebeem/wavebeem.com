@@ -1,6 +1,11 @@
 .header {
   display: flex;
   flex-direction: column;
+
+  /* background-color: var(--color-nav-background);
+  color: var(--color-nav-text); */
+  background-color: var(--color-main-decoration);
+  color: var(--color-main-text);
 }
 
 .logo {
@@ -16,6 +21,7 @@
   font-weight: normal;
   text-transform: uppercase;
   color: var(--color-main-decoration);
+  color: var(--color-main-text);
 }
 
 .decoration {
@@ -24,6 +30,9 @@
 .logo a {
   text-decoration-line: none;
   color: var(--color-main-text-heading);
+  color: inherit;
+  color: var(--color-nav-text);
+  color: var(--color-main-text);
 }
 
 .logo a:hover {

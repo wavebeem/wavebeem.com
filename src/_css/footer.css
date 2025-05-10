@@ -5,6 +5,9 @@
 
   padding: 0;
   grid-area: footer;
+
+  background-color: var(--color-nav-background);
+  color: var(--color-nav-text);
 }
 
 .footer > * {
