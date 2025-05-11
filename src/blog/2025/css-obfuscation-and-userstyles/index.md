@@ -13,7 +13,7 @@ I was initially writing this post for the new defunct website
 [Cohost](https://cohost.org). This topic came up a _lot_ in my circles on that
 website, and I still want to publish my thoughts even though the site is gone.
 
-## What are Userstyles
+## What Are Userstyles
 
 Userstyles are CSS stylesheets supplied by the user's web browser, rather than
 the website being visited. These stylesheets are applied after the website's
