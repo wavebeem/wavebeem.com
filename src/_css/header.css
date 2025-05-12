@@ -18,7 +18,7 @@
   color: var(--color-main-decoration);
 
   background: linear-gradient(
-    to right,
+    to top left,
     var(--color-main-text-heading),
     var(--color-main-decoration)
   );
@@ -28,6 +28,7 @@
 
 .decoration {
   color: inherit;
+  /* color: var(--color-main-decoration); */
 }
 
 .logo a {

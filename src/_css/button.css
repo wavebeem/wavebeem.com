@@ -59,7 +59,7 @@ button {
 
     background: radial-gradient(
       ellipse at top left,
-      var(--color-main-background) 0 25%,
+      var(--color-main-background) 0 20%,
       var(--color-main-decoration)
     );
   }

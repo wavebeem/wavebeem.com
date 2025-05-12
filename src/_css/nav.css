@@ -43,7 +43,7 @@
 .nav a:hover {
   text-decoration-line: underline;
   --link-underline-offset: calc(1em / 2);
-  --link-underline-thickness: calc(1em / 16);
+  --link-underline-thickness: 1px;
 }
 
 @media (width <= 40rem) {
