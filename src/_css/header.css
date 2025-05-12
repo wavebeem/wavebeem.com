@@ -1,9 +1,20 @@
 .header {
   display: flex;
   flex-direction: column;
+  padding: 1rem;
+
+  background-color: var(--color-nav-background);
+  background-image: radial-gradient(
+    30% 70% at top left,
+    var(--color-main-decoration),
+    var(--color-nav-background)
+  );
+  color: var(--color-nav-text);
+  text-shadow: 0 2px 4px #0004;
 }
 
 .logo {
+  margin-bottom: 1rem;
   display: grid;
   grid-template-columns: max-content 1fr;
   column-gap: 0.25ch;
@@ -15,7 +26,7 @@
   font-synthesis: none;
   font-weight: normal;
   text-transform: uppercase;
-  color: var(--color-main-decoration);
+  /* color: var(--color-main-decoration);
 
   background: linear-gradient(
     to top left,
@@ -23,7 +34,7 @@
     var(--color-main-decoration)
   );
   color: transparent;
-  background-clip: text;
+  background-clip: text; */
 }
 
 .decoration {
@@ -32,6 +43,8 @@
 }
 
 .logo a {
+  padding-inline: 1rem;
+  margin-inline: -1rem;
   text-decoration-line: none;
   text-decoration-thickness: 1px;
   color: var(--color-main-text-heading);
@@ -40,7 +53,7 @@
 
 .logo a:hover {
   text-decoration-line: underline;
-  text-decoration-color: var(--color-main-text-heading);
+  /* text-decoration-color: var(--color-main-text-heading); */
 }
 
 body > nav {
@@ -81,7 +94,7 @@ body > nav {
   margin-inline: auto;
   max-width: var(--width-heading);
 
-  padding: 1rem;
+  /* padding: 1rem 0; */
   display: flex;
   justify-content: space-between;
   align-items: center;

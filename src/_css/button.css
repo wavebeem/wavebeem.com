@@ -13,24 +13,25 @@ button {
   align-items: center;
   display: inline-flex;
   /* font-weight: bold; */
-  font-style: italic;
+  /* font-style: italic; */
   padding: 0.5rem 1rem;
   border-radius: 0;
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
 
-  background: radial-gradient(
-    ellipse at top left,
+  background: linear-gradient(
+    to bottom right,
     var(--color-main-background) 0 10%,
     var(--color-main-decoration)
   );
 
-  /* Why an outline instead of a border? Firefox on Mac was adding a 1px gap
-   * between the background and the border for some reason. This fixes the
-   * issue.
+  /* Why an outline instead of a border? Firefox was adding a 1px gap between
+   * the background and the border for some reason. This fixes the issue. It
+   * only happens when the text is italic, too. And only with certain fonts.
    */
-  outline: 1px solid var(--color-main-button-border);
-  outline-offset: -1px;
+  /* outline: 1px solid var(--color-main-button-border);
+  outline-offset: -1px; */
+  border: 1px solid var(--color-main-button-border);
   /*
   background: linear-gradient(
     to bottom right,
@@ -59,7 +60,7 @@ button {
 
     background: radial-gradient(
       ellipse at top left,
-      var(--color-main-background) 0 20%,
+      var(--color-main-background) 0 15%,
       var(--color-main-decoration)
     );
   }

@@ -26,7 +26,8 @@ export default {
   "color-main-divider": "#ccc",
   "color-main-link": oklch(55, 55, 290),
 
-  "color-nav-highlight": oklch(77, 27, 165),
+  "color-nav-highlight": oklch(80, 50, 135),
+  "color-nav-shadow": oklch(52, 52, 165),
   "color-nav-background": oklch(52, 52, 165),
   "color-nav-text": "#fff",
 

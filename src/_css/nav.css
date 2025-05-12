@@ -1,11 +1,8 @@
 .nav {
-  background: var(--color-nav-background);
-  color: var(--color-nav-text);
-
   width: 100%;
   display: flex;
   align-items: center;
-  border: 0.5rem solid transparent;
+  /* border: 0.5rem solid transparent; */
 }
 
 .nav menu {
@@ -14,6 +11,7 @@
   flex-wrap: wrap;
   list-style: none;
   gap: 0.5rem;
+  /* gap: 1px; */
 
   width: 100%;
   margin-inline: auto;
@@ -23,6 +21,9 @@
 }
 
 .nav a {
+  background: var(--color-nav-background);
+  color: var(--color-nav-text);
+
   display: block;
   padding: 0.5rem 1rem;
   color: inherit;
@@ -31,13 +32,17 @@
 
   outline-offset: -1px;
 
+  /* box-shadow:
+    2px 2px 8px #0002,
+    inset 0 0 8px #0002; */
   border: 1px solid var(--color-nav-highlight);
-  border-image: linear-gradient(
-      to bottom right,
+  border-image: radial-gradient(
+      at top left,
       var(--color-nav-highlight),
-      transparent 50%
+      var(--color-nav-shadow) 70%
     )
     1;
+  background-clip: padding-box;
 }
 
 .nav a:hover {
