@@ -23,6 +23,7 @@
 
 .logo a {
   text-decoration-line: none;
+  text-decoration-thickness: 1px;
   color: var(--color-main-text-heading);
 }
 

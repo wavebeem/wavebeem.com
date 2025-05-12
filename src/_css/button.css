@@ -1,26 +1,66 @@
 .button,
 button {
   font: inherit;
-  background: var(--color-main-text-heading);
-  color: var(--color-main-background);
+  background-color: var(--color-main-decoration);
+  color: var(--color-main-text);
+  text-shadow: 0 1px 2px var(--color-main-background);
+  /* color: var(--color-main-background); */
+  /* background: var(--color-main-text-heading);
+  color: var(--color-main-background); */
   border: 0;
   text-align: center;
   justify-content: center;
   align-items: center;
   display: inline-flex;
   font-weight: bold;
-  padding: 0.5rem 1.5rem;
-  border-radius: var(--rounded-pill);
+  padding: 0.5rem 1rem;
+  border-radius: 0;
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
+
+  background: radial-gradient(
+    ellipse at top left,
+    var(--color-main-background) 0 10%,
+    var(--color-main-decoration)
+  );
+
+  /* Why an outline instead of a border? Firefox on Mac was adding a 1px gap
+   * between the background and the border for some reason. This fixes the
+   * issue.
+   */
+  outline: 1px solid var(--color-main-decoration);
+  outline-offset: -1px;
+  /*
+  background: linear-gradient(
+    to bottom right,
+    var(--color-main-background) 0 10%,
+    var(--color-main-decoration)
+  ); */
+  /* border-radius: 9999px; */
+
+  /* border: 1px solid var(--color-main-decoration); */
+
+  /* border: 1px solid var(--color-main-decoration);
+  border-image: linear-gradient(transparent, currentColor) 1; */
+
+  /* border: 0;
+  border-bottom: 2px solid; */
+  /* box-shadow: 2px 2px 0 0 currentColor; */
 }
 
 @media (hover) {
   .button:hover,
   button:hover {
-    outline: 2px solid var(--color-main-text-heading);
-    outline-offset: -1px;
+    /* outline: 1px solid var(--color-main-decoration);
+    outline-offset: -1px; */
     text-decoration-line: none;
+    /* outline-color: var(--color-main-text-heading); */
+
+    background: radial-gradient(
+      ellipse at top left,
+      var(--color-main-background) 0 25%,
+      var(--color-main-decoration)
+    );
   }
 }
 
@@ -31,6 +71,6 @@ button:active {
 
 .button:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--color-main-text-heading);
-  outline-offset: 2px;
+  outline: 3px solid;
+  outline-offset: -1px;
 }
