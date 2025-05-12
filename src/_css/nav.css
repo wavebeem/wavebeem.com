@@ -31,10 +31,10 @@
 
   outline-offset: -1px;
 
-  border: 1px solid var(--color-main-decoration);
+  border: 1px solid var(--color-nav-highlight);
   border-image: linear-gradient(
       to bottom right,
-      var(--color-main-decoration),
+      var(--color-nav-highlight),
       transparent 50%
     )
     1;
@@ -49,13 +49,6 @@
 @media (width <= 40rem) {
   .nav a {
     padding: 0.25rem 0.5rem;
-    border: 1px solid var(--color-main-decoration);
-    border-image: linear-gradient(
-        to bottom right,
-        var(--color-main-decoration),
-        transparent 50%
-      )
-      1;
     text-align: center;
   }
 
