@@ -16,19 +16,30 @@
   font-weight: normal;
   text-transform: uppercase;
   color: var(--color-main-decoration);
+
+  background: linear-gradient(
+    to right,
+    var(--color-main-text-heading),
+    var(--color-main-decoration)
+  );
+  color: transparent;
+  background-clip: text;
 }
 
 .decoration {
+  color: inherit;
 }
 
 .logo a {
   text-decoration-line: none;
   text-decoration-thickness: 1px;
   color: var(--color-main-text-heading);
+  color: inherit;
 }
 
 .logo a:hover {
   text-decoration-line: underline;
+  text-decoration-color: var(--color-main-text-heading);
 }
 
 body > nav {
