@@ -1,5 +1,5 @@
 label:has(> input[type="checkbox"]:first-child) {
-  --_bg: currentColor;
+  --_bg: var(--color-main-text-heading);
 
   &:has(:checked) {
     --_bg: var(--color-main-text-heading);
@@ -19,7 +19,7 @@ label:has(> input[type="checkbox"]:first-child) {
     border: 2px solid var(--_bg);
     margin: 0;
     margin-top: 4px;
-    border-radius: var(--rounded-small);
+    border-radius: 0;
 
     &:checked {
       --_blur: 0.5px;
