@@ -148,11 +148,15 @@ main summary:hover:active::marker {
   color: var(--color-main-text);
 }
 
-main summary:focus-visible {
+main details:has(> summary:focus-visible) {
   box-shadow: none;
-  outline-offset: 0px;
-  outline-width: 3px;
-  border-radius: var(--rounded-small);
+  outline: 3px solid;
+  outline-offset: -1px;
+  /* border-radius: var(--rounded-small); */
+}
+
+main details summary:focus-visible {
+  outline: none;
 }
 
 main details[open] > summary {

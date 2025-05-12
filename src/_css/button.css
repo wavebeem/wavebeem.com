@@ -3,7 +3,7 @@ button {
   font: inherit;
   background-color: var(--color-main-decoration);
   color: var(--color-main-text);
-  text-shadow: 0 1px 2px var(--color-main-background);
+  text-shadow: 0 1px 0 #fff6;
   /* color: var(--color-main-background); */
   /* background: var(--color-main-text-heading);
   color: var(--color-main-background); */
@@ -12,7 +12,8 @@ button {
   justify-content: center;
   align-items: center;
   display: inline-flex;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-style: italic;
   padding: 0.5rem 1rem;
   border-radius: 0;
   text-decoration-line: none;
@@ -28,7 +29,7 @@ button {
    * between the background and the border for some reason. This fixes the
    * issue.
    */
-  outline: 1px solid var(--color-main-decoration);
+  outline: 1px solid var(--color-main-button-border);
   outline-offset: -1px;
   /*
   background: linear-gradient(
@@ -66,7 +67,11 @@ button {
 
 .button:active,
 button:active {
-  outline-color: currentColor;
+  background: radial-gradient(
+    ellipse at top left,
+    var(--color-main-background) 0 10%,
+    var(--color-main-decoration)
+  );
 }
 
 .button:focus-visible,

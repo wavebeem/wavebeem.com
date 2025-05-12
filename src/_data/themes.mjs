@@ -20,6 +20,7 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 export default {
   "color-main-background": "#fff",
   "color-main-text-heading": oklch(52, 52, 165),
+  "color-main-button-border": oklch(65, 50, 135),
   "color-main-text": "#111",
   "color-main-decoration": oklch(80, 50, 135),
   "color-main-divider": "#ccc",
