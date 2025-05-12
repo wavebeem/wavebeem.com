@@ -3,7 +3,11 @@
   flex-direction: column;
   justify-content: space-between;
 
+  background: var(--color-footer-background);
+  color: var(--color-footer-text);
+
   padding: 0;
+  padding-top: 1rem;
   grid-area: footer;
 }
 

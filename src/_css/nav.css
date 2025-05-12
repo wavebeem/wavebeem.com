@@ -17,12 +17,12 @@
   margin-inline: auto;
   max-width: var(--width-heading);
 
-  padding: 0;
+  padding-inline: 1rem;
 }
 
 .nav a {
-  background: var(--color-nav-background);
-  color: var(--color-nav-text);
+  /* background: var(--color-header-background);
+  color: var(--color-header-text); */
 
   display: block;
   padding: 0.5rem 1rem;
@@ -35,11 +35,11 @@
   /* box-shadow:
     2px 2px 8px #0002,
     inset 0 0 8px #0002; */
-  border: 1px solid var(--color-nav-highlight);
+  border: 1px solid var(--color-header-highlight);
   border-image: radial-gradient(
       at top left,
-      var(--color-nav-highlight),
-      var(--color-nav-shadow) 70%
+      var(--color-header-highlight),
+      transparent 70%
     )
     1;
   background-clip: padding-box;

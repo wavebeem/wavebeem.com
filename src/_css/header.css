@@ -1,11 +1,10 @@
 .header {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  padding-top: 0;
+  padding-bottom: 0.5rem;
 
-  background-color: var(--color-nav-background);
-  color: var(--color-nav-text);
+  background-color: var(--color-header-background);
+  color: var(--color-header-text);
   text-shadow: 0 2px 4px #0004;
 }
 
@@ -23,10 +22,12 @@
   font-weight: normal;
   text-transform: uppercase;
   background-image: radial-gradient(
-    50% 40% at 50% 0%,
+    50% 80% at 50% 0%,
     var(--color-main-decoration),
-    var(--color-nav-background)
+    var(--color-header-background)
   );
+  padding-inline: 8rem;
+  margin-inline: -8rem;
   padding-top: 1rem;
 
   /* color: var(--color-main-decoration);
@@ -95,6 +96,7 @@ body > nav {
 .logo-container {
   width: 100%;
   margin-inline: auto;
+  padding-inline: 1rem;
   max-width: var(--width-heading);
 
   /* padding: 1rem 0; */

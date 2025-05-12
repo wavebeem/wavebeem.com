@@ -26,10 +26,19 @@ export default {
   "color-main-divider": "#ccc",
   "color-main-link": oklch(55, 55, 290),
 
-  "color-nav-highlight": oklch(80, 50, 135),
-  "color-nav-shadow": oklch(52, 52, 165),
-  "color-nav-background": oklch(52, 52, 165),
-  "color-nav-text": "#fff",
+  "color-avatar-background": oklch(95, 10, 135),
+  // "color-avatar-background": "#eee",
+
+  "color-header-highlight": oklch(80, 50, 135),
+  "color-header-shadow": oklch(52, 52, 165),
+  "color-header-background": oklch(52, 52, 165),
+  "color-header-text": "#fff",
+
+  "color-footer-background": oklch(95, 10, 135),
+  "color-footer-text": "#111",
+
+  // "color-footer-background": "#eee",
+  // "color-footer-text": "#111",
 
   "color-syntax-text": "#111",
   "color-syntax-comment": oklch(52, 0, 290),
