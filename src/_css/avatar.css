@@ -13,6 +13,7 @@
   width: var(--avatar-size);
   height: var(--avatar-size);
   background-color: var(--color-main-decoration);
+  background-color: var(--color-avatar-background);
 }
 
 @media (width <= 50rem) {
