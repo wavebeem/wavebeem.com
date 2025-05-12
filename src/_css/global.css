@@ -40,7 +40,7 @@ main {
 
 a {
   color: var(--color-main-link);
-  border-radius: var(--rounded-small);
+  /* border-radius: var(--rounded-small); */
   text-decoration-thickness: var(--link-underline-thickness);
   text-underline-offset: var(--link-underline-offset);
 }
