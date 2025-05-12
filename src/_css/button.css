@@ -29,9 +29,9 @@ button {
    * the background and the border for some reason. This fixes the issue. It
    * only happens when the text is italic, too. And only with certain fonts.
    */
-  /* outline: 1px solid var(--color-main-button-border);
-  outline-offset: -1px; */
-  border: 1px solid var(--color-main-button-border);
+  outline: 1px solid var(--color-main-button-border);
+  outline-offset: -1px;
+  /* border: 1px solid var(--color-main-button-border); */
   /*
   background: linear-gradient(
     to bottom right,
