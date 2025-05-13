@@ -85,11 +85,6 @@ export default function getConfig(eleventyConfig) {
     return markdown.renderInline(content || "");
   });
 
-  eleventyConfig.addFilter("formatTitle", function (value) {
-    const base = "wavebeem";
-    return [value, base].filter((x) => x).join(" - ");
-  });
-
   eleventyConfig.addFilter("take", function (array, count) {
     return array.slice(0, count);
   });

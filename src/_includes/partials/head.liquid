@@ -79,11 +79,11 @@
     name="og:image"
     content="{{ origin }}/og-image.png?v={{ contentHashes.ogImage }}"
   />
-  <meta name="og:title" content="{{ title | formatTitle | escape }}" />
+  <meta name="og:title" content="{{ title | escape }}" />
   <meta name="og:description" content="{{ description | escape }}" />
   <meta property="og:type" content="website">
   <meta name="description" content="{{ description | escape }}" />
-  <title>{{ title | formatTitle }}</title>
+  <title>{{ title }}</title>
   <meta name="author" content="wavebeem" />
   <meta name="generator" content="{{ eleventy.generator | escape }}" />
   {% if draft -%}
