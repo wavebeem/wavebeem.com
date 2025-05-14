@@ -5,7 +5,7 @@
 
   background-color: var(--color-header-background);
   color: var(--color-header-text);
-  text-shadow: 0 2px 4px #0004;
+  text-shadow: 0 4px 16px #0004;
 }
 
 .logo {
@@ -22,12 +22,12 @@
   font-weight: normal;
   text-transform: uppercase;
   background-image: radial-gradient(
-    50% 80% at 50% 0%,
+    50% 70% at 50% 0%,
     var(--color-main-decoration),
     var(--color-header-background)
   );
-  padding-inline: 8rem;
-  margin-inline: -8rem;
+  padding-inline: 6rem;
+  margin-inline: -6rem;
   padding-top: 1rem;
 
   /* color: var(--color-main-decoration);
