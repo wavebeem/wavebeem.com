@@ -1,7 +1,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 
   background-color: var(--color-header-background);
   color: var(--color-header-text);
