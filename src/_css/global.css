@@ -315,9 +315,13 @@ article header small {
   clear: both;
 }
 
-.pixelated {
-  image-rendering: crisp-edges;
-  image-rendering: pixelated;
+/* Non-integer display scales fuck this up. It looks like this is a violation of
+the spec, but Firefox and Chrome both do it. I haven't checked in Safari. Maybe
+I should file a bug later. */
+@media not (1dppx < resolution < 2dppx) {
+  .pixelated {
+    image-rendering: pixelated;
+  }
 }
 
 ::marker {
