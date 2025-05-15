@@ -4,11 +4,14 @@
  * @typedef CoolLink
  * @prop {string} url
  * @prop {string} title
- * @prop {string} description
  */
 
 /** @type {CoolLink[]} */
 export const allLinks = [
+  {
+    title: "Eva Decker",
+    url: "https://eva.town/"
+  },
   {
     title: "Oatmeal",
     url: "https://eli.li/",
