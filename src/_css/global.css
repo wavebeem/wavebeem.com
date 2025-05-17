@@ -355,3 +355,7 @@ dl > :is(dd + dt, dt + dt) {
 .print-only {
   display: none;
 }
+
+[data-media="print"] {
+  display: hidden;
+}

@@ -1,0 +1,16 @@
+---
+layout: "layout-base"
+---
+<article class="page">
+  <header class="page-header" data-media="screen">
+    <h1>{{ title | escape }}</h1>
+  </header>
+
+  <header hidden class="page-header" data-media="print">
+    <h1>Sage Fennel Mock</h1>
+  </header>
+
+  <section class="page-body">
+    {{ content }}
+  </section>
+</article>

@@ -1,0 +1,84 @@
+:root {
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  line-height: 1.35;
+  font-size: 12pt;
+}
+
+:any-link {
+  text-underline-offset: calc(1em / 6);
+  text-decoration-thickness: 1px;
+  color: inherit;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.5;
+  font-style: italic;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, currentColor, transparent 75%) 1;
+  padding-bottom: 2px;
+  margin-block: 1rem 0.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-style: italic;
+  margin-block: 1rem 0.5rem;
+}
+
+h3 > :any-link {
+}
+
+h3 + small {
+  margin-top: -0.5rem;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family:
+    Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+}
+
+p {
+  margin-block: 0.5rem;
+}
+
+li > p {
+  margin-block: 0.5rem;
+}
+
+.header,
+.footer {
+  display: none;
+}
+
+[data-media="screen"] {
+  display: none;
+}
+
+[data-media="print"] {
+  display: initial;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 0;
+}
+
+dt,
+dd {
+  display: inline;
+  margin: 0;
+}
+
+dd {
+  padding-left: 1rem;
+}
