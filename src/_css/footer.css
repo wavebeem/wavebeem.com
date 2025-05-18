@@ -1,4 +1,7 @@
 .footer {
+  --nav-theme-highlight: var(--color-footer-highlight);
+  --nav-theme-background: var(--color-footer-background);
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;

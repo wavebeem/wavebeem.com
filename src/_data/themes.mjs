@@ -20,11 +20,14 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 export default {
   "color-main-background": "#fff",
   "color-main-text-heading": oklch(52, 52, 165),
-  "color-main-button-border": oklch(65, 50, 135),
   "color-main-text": "#111",
   "color-main-decoration": oklch(80, 50, 135),
   "color-main-divider": "#ccc",
   "color-main-link": oklch(55, 55, 290),
+
+  "color-button-highlight": oklch(98, 20, 135),
+  "color-button-background": oklch(80, 50, 135),
+  "color-button-border": oklch(65, 50, 135),
 
   "color-avatar-background": oklch(95, 10, 135),
   // "color-avatar-background": "#eee",
@@ -34,6 +37,7 @@ export default {
   "color-header-background": oklch(52, 52, 165),
   "color-header-text": "#fff",
 
+  "color-footer-highlight": oklch(80, 50, 135),
   "color-footer-background": oklch(95, 10, 135),
   "color-footer-text": "#111",
 
