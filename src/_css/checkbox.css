@@ -1,8 +1,8 @@
 label:has(> input[type="checkbox"]:first-child) {
-  --_bg: var(--color-main-text-heading);
+  --_bg: var(--color-main-accent);
 
   &:has(:checked) {
-    --_bg: var(--color-main-text-heading);
+    --_bg: var(--color-main-accent);
   }
 
   user-select: none;

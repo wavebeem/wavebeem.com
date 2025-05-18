@@ -1,4 +1,7 @@
 .header {
+  --nav-theme-highlight: var(--color-header-highlight);
+  --nav-theme-background: var(--color-header-background);
+
   display: flex;
   flex-direction: column;
   padding-bottom: 1rem;
@@ -6,6 +9,12 @@
   background-color: var(--color-header-background);
   color: var(--color-header-text);
   text-shadow: 0 4px 16px #0004;
+
+  background-image: radial-gradient(
+    50% 100% at 50% 0%,
+    var(--color-header-highlight),
+    var(--color-header-background)
+  );
 }
 
 .logo {
@@ -21,29 +30,13 @@
   font-synthesis: none;
   font-weight: normal;
   text-transform: uppercase;
-  background-image: radial-gradient(
-    50% 70% at 50% 0%,
-    var(--color-main-decoration),
-    var(--color-header-background)
-  );
-  padding-inline: 6rem;
-  margin-inline: -6rem;
+  /* padding-inline: 6rem;
+  margin-inline: -6rem; */
   padding-top: 1rem;
-
-  /* color: var(--color-main-decoration);
-
-  background: linear-gradient(
-    to top left,
-    var(--color-main-text-heading),
-    var(--color-main-decoration)
-  );
-  color: transparent;
-  background-clip: text; */
 }
 
 .decoration {
   color: inherit;
-  /* color: var(--color-main-decoration); */
 }
 
 .logo a {
@@ -51,13 +44,12 @@
   margin-inline: -1rem;
   text-decoration-line: none;
   text-decoration-thickness: 1px;
-  color: var(--color-main-text-heading);
+  color: var(--color-main-accent);
   color: inherit;
 }
 
 .logo a:hover {
   text-decoration-line: underline;
-  /* text-decoration-color: var(--color-main-text-heading); */
 }
 
 body > nav {

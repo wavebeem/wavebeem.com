@@ -1,12 +1,9 @@
 .button,
 button {
   font: inherit;
-  background-color: var(--color-main-decoration);
+  background-color: var(--color-button-background);
   color: var(--color-main-text);
-  text-shadow: 0 1px 0 #fff6;
-  /* color: var(--color-main-background); */
-  /* background: var(--color-main-text-heading);
-  color: var(--color-main-background); */
+  text-shadow: 0 1px 4px var(--color-button-highlight);
   border: 0;
   text-align: center;
   justify-content: center;
@@ -19,49 +16,43 @@ button {
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
 
-  background: linear-gradient(
+  /* background: linear-gradient(
     to bottom right,
-    var(--color-main-background) 0 10%,
-    var(--color-main-decoration)
+    var(--color-button-highlight) 0 10%,
+    var(--color-button-background)
+  ); */
+
+  background: radial-gradient(
+    100% 100% at 50% 0%,
+    var(--color-button-highlight),
+    var(--color-button-background)
   );
 
   /* Why an outline instead of a border? Firefox was adding a 1px gap between
    * the background and the border for some reason. This fixes the issue. It
    * only happens when the text is italic, too. And only with certain fonts.
    */
-  outline: 1px solid var(--color-main-button-border);
-  outline-offset: -1px;
-  /* border: 1px solid var(--color-main-button-border); */
-  /*
-  background: linear-gradient(
-    to bottom right,
-    var(--color-main-background) 0 10%,
-    var(--color-main-decoration)
-  ); */
-  /* border-radius: 9999px; */
-
-  /* border: 1px solid var(--color-main-decoration); */
-
-  /* border: 1px solid var(--color-main-decoration);
-  border-image: linear-gradient(transparent, currentColor) 1; */
-
-  /* border: 0;
-  border-bottom: 2px solid; */
-  /* box-shadow: 2px 2px 0 0 currentColor; */
+  /* outline: 1px solid var(--color-button-border);
+  outline-offset: -1px; */
+  border: 1px solid var(--color-button-border);
+  /* outline-offset: -1px; */
 }
 
 @media (hover) {
   .button:hover,
   button:hover {
-    /* outline: 1px solid var(--color-main-decoration);
-    outline-offset: -1px; */
     text-decoration-line: none;
-    /* outline-color: var(--color-main-text-heading); */
+
+    /* background: radial-gradient(
+      ellipse at top left,
+      var(--color-button-highlight) 0 15%,
+      var(--color-button-background)
+    ); */
 
     background: radial-gradient(
-      ellipse at top left,
-      var(--color-main-background) 0 15%,
-      var(--color-main-decoration)
+      100% 100% at 50% 10%,
+      var(--color-button-highlight),
+      var(--color-button-background)
     );
   }
 }
@@ -69,9 +60,9 @@ button {
 .button:active,
 button:active {
   background: radial-gradient(
-    ellipse at top left,
-    var(--color-main-background) 0 10%,
-    var(--color-main-decoration)
+    100% 100% at 50% 0%,
+    var(--color-button-highlight),
+    var(--color-button-background)
   );
 }
 

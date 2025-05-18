@@ -57,7 +57,7 @@ a {
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-  color: var(--color-main-text-heading);
+  color: var(--color-main-accent);
   text-wrap: balance;
 }
 
@@ -114,7 +114,7 @@ pre {
 :not(pre) > code {
   font-size: 0.9em;
   /* color: var(--color-syntax-text); */
-  /* color: var(--color-main-text-heading); */
+  /* color: var(--color-main-accent); */
   /* color: var(--color-syntax-keyword); */
   font-weight: bold;
 }
@@ -145,7 +145,7 @@ main summary {
 
 @media (hover) {
   main summary:hover:not(:active)::marker {
-    color: var(--color-main-text-heading);
+    color: var(--color-main-accent);
   }
 }
 
