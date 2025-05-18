@@ -44,7 +44,7 @@
   margin-inline: -1rem;
   text-decoration-line: none;
   text-decoration-thickness: 1px;
-  color: var(--color-main-text-heading);
+  color: var(--color-main-accent);
   color: inherit;
 }
 
