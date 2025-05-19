@@ -4,7 +4,8 @@
 
   display: flex;
   flex-direction: column;
-  padding-bottom: 1rem;
+  padding-block: 2rem 1rem;
+  gap: 1rem;
 
   background-color: var(--color-header-background);
   color: var(--color-header-text);
@@ -18,7 +19,6 @@
 }
 
 .logo {
-  margin-bottom: 1rem;
   display: grid;
   grid-template-columns: max-content 1fr;
   column-gap: 0.25ch;
@@ -30,9 +30,6 @@
   font-synthesis: none;
   font-weight: normal;
   text-transform: uppercase;
-  /* padding-inline: 6rem;
-  margin-inline: -6rem; */
-  padding-top: 1rem;
 }
 
 .decoration {
@@ -43,46 +40,11 @@
   padding-inline: 1rem;
   margin-inline: -1rem;
   text-decoration-line: none;
-  text-decoration-thickness: 1px;
-  color: var(--color-main-accent);
   color: inherit;
 }
 
 .logo a:hover {
   text-decoration-line: underline;
-}
-
-body > nav {
-  grid-area: nav;
-}
-
-.hamburger {
-  list-style: none;
-  user-select: none;
-}
-
-.hamburger summary {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1ch;
-}
-
-.hamburger summary::-webkit-details-marker {
-  display: none;
-}
-
-@media (width < 64rem) {
-  body:has(> header details:not([open])) > nav {
-    display: none;
-  }
-}
-
-@media (width >= 64rem) {
-  .hamburger {
-    display: none;
-  }
 }
 
 .logo-container {
@@ -91,20 +53,13 @@ body > nav {
   padding-inline: 1rem;
   max-width: var(--width-heading);
 
-  /* padding: 1rem 0; */
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
 
-@media (width >= 64rem) {
-  .header {
-    grid-area: header;
-  }
-
-  .header + .decorative-divider {
-    grid-area: divider;
-    height: 100%;
+@media (width <= 40rem) {
+  .logo-container {
+    justify-content: center;
   }
 }

@@ -1,5 +1,7 @@
 .nav {
   width: 100%;
+  max-width: var(--width-heading);
+  margin-inline: auto;
   display: flex;
   align-items: center;
   /* border: 0.5rem solid transparent; */
@@ -38,13 +40,10 @@
 
 .nav a:hover {
   text-decoration-line: underline;
-  --link-underline-offset: calc(1em / 2);
-  --link-underline-thickness: 1px;
 }
 
 @media (width <= 40rem) {
   .nav a {
-    padding: 0.25rem 0.5rem;
     text-align: center;
   }
 
