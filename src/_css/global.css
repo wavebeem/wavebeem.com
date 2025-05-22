@@ -5,6 +5,9 @@
 }
 
 :root {
+  /* https://dbushell.com/2024/11/05/webkit-font-smoothing/ */
+  /* https://www.joshwcomeau.com/css/custom-css-reset/ */
+  -webkit-font-smoothing: antialiased;
   overflow-y: scroll;
   color-scheme: light;
   scrollbar-color: var(--color-main-decoration) var(--color-main-background);
