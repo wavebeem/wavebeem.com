@@ -48,3 +48,34 @@ function* batch(iter, size) {
   }
 }
 ```
+
+```js
+function lazyPromise(fn) {
+  let p;
+  return {
+    then(resolve, reject) {
+      if (!p) {
+        p = fn();
+      }
+      return p.then(resolve, reject);
+    },
+  };
+}
+
+const a = lazyPromise(async () => {
+  console.log("Started A");
+  return "a";
+});
+
+const b = lazyPromise(async () => {
+  console.log("Started B");
+  return "b";
+});
+
+const c = lazyPromise(async () => {
+  console.log("Started C");
+  return "c";
+});
+
+console.log(await b, await c, await b);
+```
