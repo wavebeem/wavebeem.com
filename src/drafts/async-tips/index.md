@@ -23,6 +23,8 @@ const results = await Promise.allSettled(
   }),
 );
 
+// There's also Promise.race and Promise.any
+
 // Parallel batch processing
 for (const group of batch(items, 20)) {
   await Promise.all(
@@ -78,4 +80,31 @@ const c = lazyPromise(async () => {
 });
 
 console.log(await b, await c, await b);
+```
+
+```js
+async function fetchJson(url) {
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
+}
+
+async function* getPokemonImageUrls() {
+  let url = "https://pokeapi.co/api/v2/pokemon";
+  do {
+    const page = await fetchJson(url);
+    url = page.next;
+    for (const result of page.results) {
+      const pokemon = await fetchJson(result.url);
+      const image = pokemon.sprites.back_default;
+      if (image) {
+        yield image;
+      }
+    }
+  } while (url);
+}
+
+for await (const url of getPokemonImageUrls()) {
+  console.log(url);
+}
 ```
