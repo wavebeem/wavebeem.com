@@ -1,17 +1,29 @@
 .footer {
   --nav-theme-highlight: var(--color-footer-highlight);
-  --nav-theme-background: var(--color-footer-background);
+  --nav-theme-background: transparent;
 
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  background: var(--color-footer-background);
+  background-color: var(--color-footer-background);
+  background-image: radial-gradient(
+    50% 100% at 50% 0%,
+    var(--color-footer-background),
+    var(--color-main-background)
+  );
   color: var(--color-footer-text);
+  border-top: 1px solid var(--nav-theme-highlight);
+  border-image: linear-gradient(
+      to right,
+      transparent,
+      var(--nav-theme-highlight),
+      transparent
+    )
+    1;
 
   padding: 0;
   padding-top: 1rem;
-  grid-area: footer;
 }
 
 .footer > * {
