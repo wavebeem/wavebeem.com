@@ -28,7 +28,7 @@ export default {
   "color-button-background": oklch(80, 50, 135),
   "color-button-border": oklch(65, 50, 135),
 
-  "color-avatar-background": oklch(95, 10, 135),
+  "color-avatar-background": oklch(80, 50, 135),
 
   "color-header-highlight": oklch(80, 50, 135),
   "color-header-background": oklch(52, 52, 165),

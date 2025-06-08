@@ -40,7 +40,12 @@
 }
 
 .nav a:hover {
-  text-decoration-line: underline;
+  border-image: radial-gradient(
+      at top,
+      var(--nav-theme-highlight) 50%,
+      transparent
+    )
+    1;
 }
 
 @media (width <= 40rem) {
