@@ -1,13 +1,11 @@
 pre:has(> code) {
   margin-block: 1.5rem;
   padding: 1rem;
-  border: 1px solid;
-  border-right: 0;
-  border-bottom: 0;
-  border-image: linear-gradient(
-      to bottom right,
+  border: 1px solid var(--color-main-decoration);
+  border-image: radial-gradient(
+      100% 100% at 50% 0%,
       var(--color-main-decoration),
-      transparent 50%
+      transparent
     )
     1;
   overflow-x: auto;

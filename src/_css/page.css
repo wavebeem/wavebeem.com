@@ -58,6 +58,12 @@ article.page {
         var(--color-main-decoration),
         transparent min(70vw, 40rem)
       );
+      border-image-source: linear-gradient(
+        to right,
+        transparent,
+        var(--color-main-decoration),
+        transparent
+      );
       border-image-slice: 1;
     }
 
