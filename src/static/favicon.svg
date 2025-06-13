@@ -7,7 +7,7 @@
     </g>
     <path d="M6,12l4,0l3,-2l-0,-5l-2,0l-0,4l-2,1l-0,-5l-2,0l-0,5l-2,-1l-0,-4l-2,0l-0,5l3,2Z" style="fill:#fff;fill-rule:nonzero;"/>
     <defs>
-        <radialGradient id="_Radial1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(7.34788e-16,12,-12,7.34788e-16,8,0)"><stop offset="0" style="stop-color:#81d943;stop-opacity:1"/><stop offset="1" style="stop-color:#008055;stop-opacity:1"/></radialGradient>
+        <radialGradient id="_Radial1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(9.79717e-16,16,-16,9.79717e-16,8,0)"><stop offset="0" style="stop-color:#81d943;stop-opacity:1"/><stop offset="1" style="stop-color:#008055;stop-opacity:1"/></radialGradient>
         <image id="_Image2" width="16px" height="13px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAANCAYAAACgu+4kAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAvElEQVQokZWSyQ7DIAxEX8hS9f8/ti0E6GWcTFEOqaUR4GW84IlTJv6T7kFJmIQ+kPq7Cw1oi5QJWIU7BEXoQTADDyGJPSpjeDc72yLDDGzA8yZBBzJQgiDaWIRmOiwoAbvNiyDwHkOXBoKoonrMYg67sFkl6cIeaEEQX1KAj3Qx2JCuzFk+JdqKCqoM8U27nGazZ+ANvORbryrwTOvQQpE+Wwvd1ze2MCnzMWlLUjl/5GeVXSY7naDb/ZAvj4JVxMb2fcsAAAAASUVORK5CYII="/>
     </defs>
 </svg>
