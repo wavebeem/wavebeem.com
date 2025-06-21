@@ -22,7 +22,7 @@
   --font-size-logo: 2.5rem;
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
-  --font-size-code: calc(0.9 * var(--font-size-base));
+  --font-size-code: round(calc(0.9 * var(--font-size-base)), 1px);
 
   --list-inset: 2rem;
 
@@ -42,12 +42,12 @@
 
 @media (width <= 50rem) {
   :root {
-    --font-size-h1: 2.5rem;
-    --font-size-h2: 2rem;
-    --font-size-h3: 1.5rem;
-    --font-size-base: 1.15rem;
-    --font-size-logo: 2.5rem;
-    --font-size-small: 1rem;
+    --font-size-h1: round(2.5rem, 1px);
+    --font-size-h2: round(2rem, 1px);
+    --font-size-h3: round(1.5rem, 1px);
+    --font-size-base: round(1.15rem, 1px);
+    --font-size-logo: round(2.5rem, 1px);
+    --font-size-small: round(1rem, 1px);
 
     --list-inset: 2rem;
   }
