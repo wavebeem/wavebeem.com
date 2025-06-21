@@ -1,5 +1,6 @@
 .header {
   --nav-theme-highlight: var(--color-header-highlight);
+  --nav-theme-glow: var(--color-header-glow);
   --nav-theme-background: var(--color-header-background);
 
   display: flex;

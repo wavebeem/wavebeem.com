@@ -54,6 +54,8 @@ button {
       var(--color-button-highlight),
       var(--color-button-background)
     );
+
+    box-shadow: 0 4px 8px var(--color-button-shadow);
   }
 }
 

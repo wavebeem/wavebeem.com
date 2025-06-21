@@ -25,16 +25,19 @@ export default {
   "color-main-decoration": oklch(80, 50, 135),
 
   "color-button-highlight": oklch(98, 20, 135),
+  "color-button-shadow": oklch(80, 50, 135, 50),
   "color-button-background": oklch(80, 50, 135),
   "color-button-border": oklch(65, 50, 135),
 
   "color-avatar-background": oklch(80, 50, 135),
 
   "color-header-highlight": oklch(80, 50, 135),
+  "color-header-glow": oklch(70, 50, 135),
   "color-header-background": oklch(52, 52, 165),
   "color-header-text": "#fff",
 
   "color-footer-highlight": oklch(80, 50, 135),
+  "color-footer-glow": oklch(90, 20, 135),
   "color-footer-background": oklch(95, 10, 135),
   "color-footer-text": "#111",
 

@@ -1,5 +1,6 @@
 .footer {
   --nav-theme-highlight: var(--color-footer-highlight);
+  --nav-theme-glow: var(--color-footer-glow);
   --nav-theme-background: transparent;
 
   display: flex;
