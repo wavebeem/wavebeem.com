@@ -37,9 +37,7 @@
 
   --link-underline-offset: calc(1em / 6);
   --link-underline-thickness: 1px;
-  --link-underline-thickness-hover: calc(
-    var(--link-underline-thickness) + 0.5px
-  );
+  --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 1px);
 }
 
 @media (width <= 50rem) {
