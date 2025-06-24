@@ -290,11 +290,25 @@ article header small {
   }
 }
 
-.layout-wrap {
+.layout-wrap2col {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 0.5rem;
+}
+
+@media (width <= 50rem) {
+  .layout-wrap2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width <= 30rem) {
+  .layout-wrap2col {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 
 .gap1 {
