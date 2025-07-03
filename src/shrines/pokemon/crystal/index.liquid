@@ -1,0 +1,572 @@
+<style>
+  :root {
+    --filter-gbc: saturate(80%) contrast(80%) brightness(120%)
+      hue-rotate(-10deg) brightness(95%);
+  }
+
+  img[src*=".gbc."] {
+    transition: 200ms filter;
+  }
+
+  :where(:has(#gbc-filter:checked)) {
+    img[src*=".gbc."] {
+      &:where(:not(:hover)) {
+        filter: var(--filter-gbc);
+      }
+    }
+  }
+
+  .gbc-frame {
+    display: flex;
+    max-width: max-content;
+    padding: 4px;
+    background: #040404;
+    border: 32px solid #333;
+    border-radius: 16px;
+    position: relative;
+  }
+
+  @media (width <= 50rem) {
+    .gbc-frame {
+      border-width: 16px;
+    }
+  }
+
+  .gbc-frame img {
+    border-radius: 0;
+  }
+</style>
+
+<hr />
+
+<label>
+  <input id="gbc-filter" type="checkbox" autocomplete="off" checked />
+  <div>Game Boy Color screenshot filter</div>
+</label>
+
+<div>
+  <small>You can hover the images to temporarily turn off the effect.</small>
+</div>
+
+<hr />
+
+<div class="photo-grid">
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/title.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>Pokémon Crystal Version for Game Boy Color</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/gender.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      Pokémon Crystal was the first Pokémon game where you could play as a girl.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/sage.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      It's me, Sage. I think it's interesting that the text "ID No." has
+      anti-aliasing, unlike all other text on screen.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/building.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      I love the tile floor in this little outpost... whatever you call the
+      areas that section off the routes in the game.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/shop.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>The shop is so well designed.</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/rival.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>The rival (Silver) is so gender.</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/house.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      This house with a tatami mat floor is so detailed and colorful!
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/mom.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      I love the retro cell phone interface for calling people.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/falkner1.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>Falkner's gym</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/falkner2.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>Falkner's portrait</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/bugsy.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      Between Pidgey and Quilava, Bugsy was a complete pushover.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/glitch.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>Some kind of glitch...</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/pikachu.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      I'm so jealous! Raichu is my favorite Pokémon, but you can't get one
+      (unless you get extremely lucky from the egg) until well after you beat
+      the Elite Four :(
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/hyuck.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>Hyuck-hyuck-hyuck!</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/suffer.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>Feeling this a lot lately.</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/curse.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>Gastly using Curse</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/gambling.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>The <q>Game Corner</q> (gambling)</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/ball-dexterity.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>Hehehe</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/raichu.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>OMG it's Raichu! My favorite Pokémon.</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/vaporeon.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>Vaporeon</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/jolteon.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>Jolteon</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/flareon.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>Flareon</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/espeon.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>Espeon</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/umbreon.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>Umbreon</figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/suicune.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      My least favorite thing in Pokémon: catching legendary/mythical Pokémon.
+      Having a 1% chance per ball and just save scumming a fight is not even
+      remotely fun.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/psychic.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      Some of the attack animations are really impressive for the Game Boy
+      Color.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/lance.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      I was pretty underleveled for the Elite Four, but by using
+      <strong>strong</strong> Pokémon instead of my favorites, I was able to win
+      without grinding. Sorry Karen, but I'm an adult with a job, I don't have
+      time to win with my favorites.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/win0.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      That's me! It took about 50 hours including some grinding I didn't really
+      need to do. Plus I left the game idle a bit while playing in docked mode
+      with my Analogue Pocket.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/win1.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      I didn't really want to take any legendary/mythical Pokémon to the Elite
+      Four, but I didn't feel like grinding and Suicune was already at a good
+      level. So they were my backup Ice attack user for Alakazam, and I may have
+      used a Water attack once?
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/win2.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      Golem has historically been fantastic on my team, but the Elite Four was
+      better at hitting his weaknesses. He did help out, though.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/win3.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      Alakazam is absurdly good in this game. Thunder Punch, Ice Punch, and
+      Psychic made him an absolute monster.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/win4.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      Gyarados! I feel like he was such a monster in some of the games I played,
+      but I didn't have as much luck with him here. Loading him up first with Surf
+      then with the inferior Waterfall, combined with his lackluster Special
+      Attack, made him mediocre at using his STAB for Water attacks. He mostly
+      just uses Strength and hits hard. But hey, cool free shiny Gyarados, right?
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/win5.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      Dragonair! I got the free Dratini from the dragon master guy and then gave
+      him the Exp. Share. I haven't actually used him in combat yet, but I'm
+      excited to eventually get a Dragonite, I guess. But the slow growth rate is
+      brutal.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/win6.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      My starter, Typhlosion. Not as good as I hoped, honestly. He takes way too
+      long to get any decent Fire moves. Putting Rollout on him was pretty great
+      though, since he avoids the array of Rock type weaknesses and has the HP to
+      stay alive long enough for Rollout to become a real threat.
+    </figcaption>
+  </figure>
+
+  <figure>
+    <div class="gbc-frame">
+      <img
+        src="../assets/end.gbc.webp"
+        alt=""
+        width="480"
+        height="432"
+        loading="lazy"
+      />
+    </div>
+    <figcaption>
+      Whew! I did it. I beat the Elite Four. I've heard Kanto is mostly a cake
+      walk after Johto, so I think I'll take the time to go through it.
+    </figcaption>
+  </figure>
+</div>

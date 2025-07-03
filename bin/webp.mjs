@@ -22,7 +22,7 @@ for await (const file of new Glob(`${globRoots}/**/*.{png,gif}`, {})) {
     const dest = `${base}.webp`;
     if (flag === "force" || !existsSync(dest)) {
       console.log(file);
-      if (base.endsWith(".vg")) {
+      if (base.endsWith(".vg") || base.endsWith(".lossy")) {
         await run(
           "magick",
           file,
