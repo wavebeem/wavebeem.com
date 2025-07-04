@@ -10,7 +10,11 @@
 export const allLinks = [
   {
     title: "Eva Decker",
-    url: "https://eva.town/"
+    url: "https://eva.town/",
+  },
+  {
+    title: "Evie On-line",
+    url: "https://ewie.online/",
   },
   {
     title: "Oatmeal",
