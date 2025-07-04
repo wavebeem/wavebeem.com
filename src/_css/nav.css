@@ -37,7 +37,6 @@
   border-image: radial-gradient(at top, var(--nav-theme-highlight), transparent)
     1;
   background-clip: padding-box;
-  /* transition: 100ms box-shadow; */
 }
 
 .nav a:hover {
@@ -47,7 +46,6 @@
       transparent
     )
     1;
-  /* border-image: radial-gradient(at top, var(--nav-theme-highlight)) 1; */
   box-shadow: 0 0 8px var(--nav-theme-glow);
 }
 

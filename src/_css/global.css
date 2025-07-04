@@ -127,15 +127,15 @@ main details {
   padding-inline: 1rem;
   border: 1px solid var(--color-main-decoration);
   border-image: radial-gradient(
-      100% 100% at 50% 0%,
+      50% 100% at 0% 0%,
       var(--color-main-decoration),
-      transparent
+      var(--color-main-faint)
     )
     1;
 }
 
 main details + details {
-  margin-top: -1rem;
+  margin-top: calc(-1.5rem - 1px);
 }
 
 main summary {

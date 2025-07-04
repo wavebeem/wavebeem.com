@@ -56,14 +56,14 @@ article.page {
       border-image-source: linear-gradient(
         to right,
         var(--color-main-decoration),
-        transparent min(70vw, 40rem)
+        var(--color-main-faint)
       );
-      border-image-source: linear-gradient(
+      /* border-image-source: linear-gradient(
         to right,
         transparent,
         var(--color-main-decoration),
         transparent
-      );
+      ); */
       border-image-slice: 1;
     }
 
@@ -92,7 +92,15 @@ article.page {
 
     blockquote,
     aside {
-      padding: 0 3rem;
+      padding: 0 1.5rem;
+      border: 1px solid var(--color-main-decoration);
+      border-image: radial-gradient(
+          50% 100% at 0% 0%,
+          var(--color-main-decoration),
+          var(--color-main-faint)
+        )
+        1;
+      max-width: max-content;
     }
 
     blockquote {

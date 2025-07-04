@@ -23,6 +23,7 @@ export default {
   "color-main-link": oklch(55, 55, 290),
   "color-main-accent": oklch(52, 52, 165),
   "color-main-decoration": oklch(80, 50, 135),
+  "color-main-faint": oklch(95, 10, 135),
 
   "color-button-highlight": oklch(98, 20, 135),
   "color-button-shadow": oklch(80, 50, 135, 50),

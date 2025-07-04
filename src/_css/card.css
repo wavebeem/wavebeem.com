@@ -4,13 +4,21 @@
 
   border: 1px solid var(--color-main-decoration);
   border-image: radial-gradient(
-      100% 100% at 50% 0%,
+      50% 100% at 0% 0%,
       var(--color-main-decoration),
-      transparent
+      var(--color-main-faint)
     )
     1;
 
   > header > :is(h1, h2, h3) {
     margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  + .card {
+    margin-top: calc(-1.5rem - 1px);
   }
 }
