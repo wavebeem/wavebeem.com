@@ -6,31 +6,31 @@
     content="{{ themes['color-main-background'] | escape }}"
   />
   <link
-    rel="preload"
+    rel="prefetch"
     as="font"
     crossorigin="anonymous"
     href="/fonts/PPObjectSans-Regular.woff2"
   />
   <link
-    rel="preload"
+    rel="prefetch"
     as="font"
     crossorigin="anonymous"
     href="/fonts/PPObjectSans-Bold.woff2"
   />
   <link
-    rel="preload"
+    rel="prefetch"
     as="font"
     crossorigin="anonymous"
     href="/fonts/PPObjectSans-Slanted.woff2"
   />
   <link
-    rel="preload"
+    rel="prefetch"
     as="font"
     crossorigin="anonymous"
     href="/fonts/PPObjectSans-BoldSlanted.woff2"
   />
   <link
-    rel="preload"
+    rel="prefetch"
     as="font"
     crossorigin="anonymous"
     href="/fonts/UltraHi-GlossFinal-UltraBoldItalic.woff2"
@@ -63,13 +63,6 @@
     sizes="32x32"
     href="/favicon.png?v={{ contentHashes.favicon }}"
   />
-  <script
-    async
-    defer
-    data-domain="wavebeem.com"
-    data-api="/p/api/event"
-    src="/p/js/script.js"
-  ></script>
   <link
     rel="stylesheet"
     media="screen"
@@ -96,4 +89,10 @@
   {% if draft -%}
   <meta name="robots" content="noindex" />
   {% endif %}
+  <script
+    defer
+    data-domain="wavebeem.com"
+    data-api="/p/api/event"
+    src="/p/js/script.js"
+  ></script>
 </head>

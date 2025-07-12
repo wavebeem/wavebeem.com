@@ -8,6 +8,7 @@
     "webp": "node ./bin/webp.mjs",
     "favicon": "node ./bin/favicon.mjs",
     "photo": "node ./bin/photo.mjs",
+    "dev": "npx netlify@22.2.2 dev",
     "start": "eleventy --serve --quiet --port=1312",
     "upgrade": "npm-check -u",
     "lint": "stylelint \"src/**/*.css\" --formatter unix",

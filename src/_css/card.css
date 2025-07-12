@@ -1,6 +1,6 @@
 .card {
   margin-block: 1.5rem;
-  padding: 1rem;
+  padding: 1.5rem;
 
   border: 1px solid var(--color-main-decoration);
   border-image: radial-gradient(
