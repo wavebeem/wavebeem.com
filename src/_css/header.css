@@ -1,10 +1,17 @@
 .header {
+  background: var(--color-platinum);
   background: linear-gradient(var(--color-main-background), transparent);
+  background-clip: border-box;
   position: sticky;
   top: 0;
   z-index: 1;
   width: 100%;
   pointer-events: none;
+  border-color: transparent;
+
+  &:not([data-sticky]) {
+    border-bottom: 1px solid var(--color-steel);
+  }
 }
 
 .header-content {
@@ -66,7 +73,7 @@
 
 @media (width <= 40rem) {
   .header {
-    background: linear-gradient(var(--color-main-background) 35%, transparent);
+    background: linear-gradient(var(--color-platinum) 35%, transparent);
   }
 
   .logo a {
@@ -85,6 +92,6 @@
   }
 }
 
-.fancy-divider {
+/* .fancy-divider {
   border-top: 1px solid var(--color-steel);
-}
+} */
