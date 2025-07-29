@@ -34,10 +34,10 @@ export default {
   "color-main-decoration": "var(--color-silver)",
   "color-main-faint": "var(--color-silver)",
 
-  "color-syntax-text": "var(--color--black)",
-  "color-syntax-comment": oklch(52, 0, 290),
-  "color-syntax-keyword": oklch(52, 100, 345),
-  "color-syntax-property": oklch(52, 60, 250),
-  "color-syntax-string": oklch(52, 100, 135),
+  "color-syntax-text": "var(--color-black)",
+  "color-syntax-comment": oklch(52, 30, 40),
+  "color-syntax-keyword": oklch(52, 52, 345),
+  "color-syntax-property": oklch(52, 52, 255),
+  "color-syntax-string": oklch(52, 52, 165),
   "color-syntax-punctuation": oklch(52, 30, 345),
 };

@@ -131,7 +131,6 @@ main details {
 
 main details + details {
   margin-top: calc(-1.5rem - 1px);
-  /* margin-top: calc(-1rem); */
 }
 
 main summary {

@@ -12,8 +12,9 @@
   border-radius: var(--rounded-pill);
   width: var(--avatar-size);
   height: var(--avatar-size);
-  background-color: var(--color-silver);
+  background-color: var(--color-steel);
   border: 0;
+  border: 1px solid var(--color-steel);
   border-bottom: 0;
   /* box-shadow: 4px 4px 0 0 #0002; */
   /* box-shadow: -1px -1px 0 0 var(--color-avatar-background); */

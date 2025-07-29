@@ -81,6 +81,10 @@ article.page {
       border-radius: var(--rounded-large);
       background: var(--color-white);
       max-width: max-content;
+
+      h3 {
+        margin-top: 1.5rem;
+      }
     }
 
     blockquote {
