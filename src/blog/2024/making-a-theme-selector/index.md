@@ -82,17 +82,17 @@ I highly recommend using CSS custom properties to set color variables.
 :root,
 /* Styles for after the component has loaded */
 :root[data-theme="light"] {
-  --color-main-background: #fff;
-  --color-main-text: #222;
+  --color-platinum: #fff;
+  --color-main-black: #222;
 
-  background-color: var(--color-main-background);
-  color: var(--color-main-text);
+  background-color: var(--color-platinum);
+  color: var(--color-main-black);
 }
 
 /* Styles when dark mode set by JS */
 :root[data-theme="dark"] {
-  --color-main-background: #333;
-  --color-main-text: #ccc;
+  --color-platinum: #333;
+  --color-main-black: #ccc;
 }
 ```
 
@@ -105,8 +105,8 @@ this if you don't like keeping these things synced up.
 /* Styles when dark mode is set by browser */
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-main-background: #000;
-    --color-main-text: #fff;
+    --color-platinum: #000;
+    --color-main-black: #fff;
   }
 }
 ```

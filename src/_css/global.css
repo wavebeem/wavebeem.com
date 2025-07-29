@@ -13,8 +13,8 @@
   scrollbar-color: var(--color-green) var(--color-platinum);
   /* overscroll-behavior: none; */
   font-synthesis: none;
-  background: var(--color-main-background);
-  color: var(--color-main-text);
+  background: var(--color-platinum);
+  color: var(--color-main-black);
   padding: 0;
   margin: 0;
 }
@@ -42,7 +42,7 @@ main {
 }
 
 a {
-  color: var(--color-main-link);
+  color: var(--color-green);
   /* border-radius: var(--rounded-small); */
   text-decoration-thickness: var(--link-underline-thickness);
   text-underline-offset: var(--link-underline-offset);
@@ -60,7 +60,6 @@ a {
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-  /* color: var(--color-main-accent); */
   text-wrap: balance;
 }
 
@@ -115,9 +114,6 @@ pre {
 
 :not(pre) > code {
   font-size: 0.9em;
-  /* color: var(--color-syntax-text); */
-  /* color: var(--color-main-accent); */
-  /* color: var(--color-syntax-keyword); */
   font-weight: bold;
 }
 
@@ -167,7 +163,7 @@ main details[open] > summary {
 
 .spoiler {
   padding-inline: 0.25ch;
-  background-color: var(--color-main-text);
+  background-color: var(--color-main-black);
   color: transparent;
   cursor: default;
 }
@@ -179,11 +175,11 @@ main details[open] > summary {
 }
 
 .spoiler:focus {
-  color: var(--color-main-background);
+  color: var(--color-platinum);
 }
 
 .spoiler:focus-visible {
-  outline: 2px solid var(--color-main-text);
+  outline: 2px solid var(--color-main-black);
   outline-offset: 2px;
 }
 

@@ -1,8 +1,8 @@
 label:has(> input[type="checkbox"]:first-child) {
-  --_bg: var(--color-main-accent);
+  --_bg: var(--color-green);
 
   &:has(:checked) {
-    --_bg: var(--color-main-accent);
+    --_bg: var(--color-green);
   }
 
   user-select: none;
@@ -17,16 +17,17 @@ label:has(> input[type="checkbox"]:first-child) {
     width: 1.5rem;
     height: 1.5rem;
     border: 2px solid var(--_bg);
+    background: var(--color-white);
     margin: 0;
     margin-top: 4px;
-    border-radius: 0;
+    border-radius: var(--rounded-small);
 
     &:checked {
       --_blur: 0.5px;
       --_size: 2px;
       --_start: calc(50% - 0.5 * var(--_size));
       --_end: calc(var(--_start) + var(--_size));
-      --_fg: var(--color-main-background);
+      --_fg: var(--color-white);
 
       border-color: var(--_bg);
       background-color: var(--_bg);

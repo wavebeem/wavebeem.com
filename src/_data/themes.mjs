@@ -26,18 +26,10 @@ export default {
   "color-silver": oklch(95, 10, 40),
   "color-platinum": oklch(98, 2.5, 40),
 
-  // TODO: Remove these semantic colors
-  "color-main-background": "var(--color-platinum)",
-  "color-main-text": "var(--color-black)",
-  "color-main-link": "var(--color-green)",
-  "color-main-accent": "var(--color-green)",
-  "color-main-decoration": "var(--color-silver)",
-  "color-main-faint": "var(--color-silver)",
-
-  "color-syntax-text": "var(--color-black)",
-  "color-syntax-comment": oklch(52, 30, 40),
-  "color-syntax-keyword": oklch(52, 52, 345),
-  "color-syntax-property": oklch(52, 52, 255),
-  "color-syntax-string": oklch(52, 52, 165),
-  "color-syntax-punctuation": oklch(52, 30, 345),
+  "syntax-text": "var(--color-black)",
+  "syntax-comment": oklch(52, 30, 40),
+  "syntax-keyword": oklch(52, 52, 345),
+  "syntax-property": oklch(52, 52, 255),
+  "syntax-string": oklch(52, 52, 165),
+  "syntax-punctuation": oklch(52, 30, 345),
 };

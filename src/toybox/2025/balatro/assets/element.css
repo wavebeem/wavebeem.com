@@ -41,6 +41,8 @@ wavebeem-balatro-pog img {
   border-radius: var(--rounded-pill);
   width: var(--avatar-size);
   height: var(--avatar-size);
+  border: 16px solid black;
+  box-sizing: content-box;
 }
 
 wavebeem-balatro-pog [data-element="background"] {
@@ -49,7 +51,7 @@ wavebeem-balatro-pog [data-element="background"] {
   clip-path: circle(50%);
   width: 100%;
   height: 100%;
-  background-color: var(--color-main-decoration);
+  background-color: #aaa;
 }
 
 @media (prefers-reduced-motion: reduce) {

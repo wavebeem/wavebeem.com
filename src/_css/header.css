@@ -1,5 +1,5 @@
 .header {
-  background: linear-gradient(var(--color-main-background), transparent);
+  background: linear-gradient(var(--color-platinum), transparent);
   position: sticky;
   top: 0;
   z-index: 1;
