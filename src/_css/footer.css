@@ -1,38 +1,13 @@
 .footer {
-  --nav-theme-highlight: var(--color-footer-highlight);
-  --nav-theme-glow: var(--color-footer-glow);
-  --nav-theme-background: transparent;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  background-color: var(--color-footer-background);
-  background-image: radial-gradient(
-    50% 100% at 50% 0%,
-    var(--color-footer-background),
-    var(--color-main-background)
-  );
-  color: var(--color-footer-text);
-  border-top: 1px solid var(--nav-theme-highlight);
-  border-image: linear-gradient(
-      to right,
-      transparent,
-      var(--nav-theme-highlight),
-      transparent
-    )
-    1;
+  border-top: 1px solid var(--color-steel);
 
-  padding: 0;
-  padding-top: 1rem;
+  padding: 1rem;
 }
 
 .footer > * {
   margin-inline: auto;
-}
-
-.footer > div {
-  padding: 1rem;
-  max-width: var(--width-heading);
-  width: 100%;
 }

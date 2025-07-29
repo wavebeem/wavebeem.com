@@ -10,7 +10,7 @@
   -webkit-font-smoothing: antialiased;
   overflow-y: scroll;
   color-scheme: light;
-  scrollbar-color: var(--color-main-decoration) var(--color-main-background);
+  scrollbar-color: var(--color-green) var(--color-platinum);
   /* overscroll-behavior: none; */
   font-synthesis: none;
   background: var(--color-main-background);
@@ -60,7 +60,7 @@ a {
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-  color: var(--color-main-accent);
+  /* color: var(--color-main-accent); */
   text-wrap: balance;
 }
 
@@ -91,15 +91,17 @@ h2 {
   margin-block: 4rem 0.5rem;
 }
 
-h2::after {
-  content: "*-";
-  font-family: var(--font-logo);
-  color: var(--color-main-decoration);
+h2::before {
+  font-size: smaller;
+  content: "♣️ ";
+  /* color: var(--color-green); */
+  color: transparent;
+  text-shadow: 0 0 0 var(--color-green);
 }
 
 h3 {
   /* font-weight: bold; */
-  font-weight: normal;
+  /* font-weight: normal; */
   font-style: italic;
   font-family: inherit;
   font-size: var(--font-size-h3);
@@ -125,17 +127,14 @@ pre {
 main details {
   margin: 1.5rem 0;
   padding-inline: 1rem;
-  border: 1px solid var(--color-main-decoration);
-  border-image: radial-gradient(
-      50% 100% at 0% 0%,
-      var(--color-main-decoration),
-      var(--color-main-faint)
-    )
-    1;
+  background: var(--color-white);
+  border: 1px solid var(--color-steel);
+  border-radius: var(--rounded-large);
 }
 
 main details + details {
   margin-top: calc(-1.5rem - 1px);
+  /* margin-top: calc(-1rem); */
 }
 
 main summary {
@@ -147,17 +146,17 @@ main summary {
 
 @media (hover) {
   main summary:hover:not(:active)::marker {
-    color: var(--color-main-accent);
+    color: var(--color-black);
   }
 }
 
 main summary:hover:active::marker {
-  color: var(--color-main-text);
+  color: var(--color-black);
 }
 
 main details:has(> summary:focus-visible) {
   box-shadow: none;
-  outline: 3px solid;
+  outline: 2px solid;
   outline-offset: -1px;
   /* border-radius: var(--rounded-small); */
 }
@@ -227,7 +226,8 @@ article header small {
 }
 
 :focus-visible {
-  outline: 3px solid currentColor;
+  box-shadow: 0 0 0 2px var(--color-white);
+  outline: 2px solid currentColor;
   outline-offset: 2px;
   text-decoration-line: none;
 }
@@ -338,7 +338,7 @@ I should file a bug later. */
 }
 
 ::marker {
-  color: var(--color-main-decoration);
+  color: var(--color-green);
 }
 
 ol > li::marker {

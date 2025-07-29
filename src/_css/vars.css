@@ -19,7 +19,7 @@
   --font-size-h1: 4rem;
   --font-size-h2: 2.5rem;
   --font-size-h3: 2rem;
-  --font-size-logo: 2.5rem;
+  --font-size-logo: 1.25rem;
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
   --font-size-code: round(calc(0.9 * var(--font-size-base)), 1px);
@@ -36,7 +36,7 @@
   --width-heading: 70rem;
 
   --link-underline-offset: calc(1em / 6);
-  --link-underline-thickness: 1px;
+  --link-underline-thickness: 1.5px;
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 1px);
 }
 
@@ -46,7 +46,7 @@
     --font-size-h2: round(2rem, 1px);
     --font-size-h3: round(1.5rem, 1px);
     --font-size-base: round(1.15rem, 1px);
-    --font-size-logo: round(2.5rem, 1px);
+    --font-size-logo: round(1.25rem, 1px);
     --font-size-small: round(1rem, 1px);
 
     --list-inset: 2rem;

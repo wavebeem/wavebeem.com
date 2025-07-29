@@ -2,13 +2,9 @@
   margin-block: 1.5rem;
   padding: 1.5rem;
 
-  border: 1px solid var(--color-main-decoration);
-  border-image: radial-gradient(
-      50% 100% at 0% 0%,
-      var(--color-main-decoration),
-      var(--color-main-faint)
-    )
-    1;
+  background: var(--color-white);
+  border: 1px solid var(--color-steel);
+  border-radius: var(--rounded-large);
 
   > header > :is(h1, h2, h3) {
     margin-top: 0;
@@ -19,6 +15,6 @@
   }
 
   + .card {
-    margin-top: calc(-1.5rem - 1px);
+    /* margin-top: calc(-1.5rem - 1px); */
   }
 }
