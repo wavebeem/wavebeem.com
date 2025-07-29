@@ -21,12 +21,13 @@ button {
   button:hover {
     text-decoration-line: none;
     background: var(--color-black);
+    color: var(--color-white);
   }
 }
 
 .button:active,
 button:active {
-  background: var(--color-green);
+  scale: 105%;
 }
 
 .button:focus-visible,

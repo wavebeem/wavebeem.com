@@ -74,7 +74,7 @@ the NVIDIA Control Panel settings to fix that, but it's also not something I'd
 prefer to have to do. I ended up playing most of the game on a different 60 Hz
 monitor anyway.
 
-<video src="turbo.hd.mp4" controls preload></video>
+<video src="turbo.mp4" controls preload></video>
 
 **A clip of the game running at 6x speed because of the bug with high refresh
 rate monitors.**

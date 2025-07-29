@@ -43,7 +43,7 @@ main {
 
 a {
   color: var(--color-green);
-  /* border-radius: var(--rounded-small); */
+  border-radius: var(--rounded-small);
   text-decoration-thickness: var(--link-underline-thickness);
   text-underline-offset: var(--link-underline-offset);
 }
@@ -52,6 +52,7 @@ a {
   a:hover {
     text-decoration-line: underline;
     --link-underline-thickness: var(--link-underline-thickness-hover);
+    color: var(--color-black);
   }
 }
 
@@ -88,13 +89,6 @@ h2 {
   /* https://bugs.webkit.org/show_bug.cgi?id=292563 */
   /* word-spacing: calc(1em / 16); */
   margin-block: 4rem 0.5rem;
-}
-
-h2::before {
-  font-size: smaller;
-  content: "♣️ ";
-  color: transparent;
-  text-shadow: 0 0 0 var(--color-green);
 }
 
 h3 {
@@ -204,6 +198,13 @@ main {
   flex: auto;
   min-height: 50vh;
   padding-bottom: 3rem;
+}
+
+.framed {
+  background: var(--color-white);
+  padding: 8px;
+  border-radius: var(--rounded-medium);
+  border: 1px solid var(--color-steel);
 }
 
 article header :is(h1, h2, h3) {
