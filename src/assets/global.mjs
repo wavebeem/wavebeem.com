@@ -2,29 +2,29 @@ class ShyHeader extends HTMLElement {
   #abortController = new AbortController();
   #positions = [];
 
-  /** @param {Event} event */
-  #onScroll = (event) => {
-    const root = document.documentElement;
-    this.#positions.unshift(root.scrollTop);
+  #updatePositions = () => {
+    const { scrollTop } = document.documentElement;
+    this.#positions.unshift(scrollTop);
     if (this.#positions.length > 2) {
       this.#positions.length = 2;
     }
-    if (this.#positions.length < 2) {
-      return;
-    }
-    const [a, b] = this.#positions;
+    const [a, b = 0] = this.#positions;
     this.hidden = a > b;
     if (a === 0) {
-      delete this.dataset.sticky;
+      this.dataset.atTop = "";
     } else {
-      this.dataset.sticky = "";
+      delete this.dataset.atTop;
     }
   };
 
   connectedCallback() {
     this.#abortController = new AbortController();
     const { signal } = this.#abortController;
-    addEventListener("scroll", this.#onScroll, { signal, passive: true });
+    addEventListener("scroll", this.#updatePositions, {
+      signal,
+      passive: true,
+    });
+    this.#updatePositions();
   }
 
   disconnectedCallback() {

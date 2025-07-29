@@ -1,3 +1,17 @@
+shy-header {
+  display: block;
+  transition-delay: 200ms;
+  transition-property: translate, opacity, border-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
+
+  &[hidden] {
+    opacity: 0;
+    translate: 0 -100%;
+    pointer-events: none;
+  }
+}
+
 .header {
   background: linear-gradient(var(--color-platinum), transparent);
   position: sticky;
@@ -14,7 +28,7 @@
     position: initial;
   }
 
-  &:not([data-sticky]) {
+  &[data-at-top] {
     border-bottom: 1px solid var(--color-steel);
   }
 }
