@@ -219,7 +219,7 @@ article header small {
 }
 
 :focus-visible {
-  box-shadow: 0 0 0 2px var(--color-white);
+  box-shadow: 0 0 0 2px var(--color-platinum);
   outline: 2px solid currentColor;
   outline-offset: 2px;
   text-decoration-line: none;

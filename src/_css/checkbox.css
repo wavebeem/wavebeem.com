@@ -27,8 +27,7 @@ label:has(> input[type="checkbox"]:first-child) {
       --_size: 2px;
       --_start: calc(50% - 0.5 * var(--_size));
       --_end: calc(var(--_start) + var(--_size));
-      --_fg: var(--color-white);
-
+      --_fg: var(--color-platinum);
       border-color: var(--_bg);
       background-color: var(--_bg);
       background-image:

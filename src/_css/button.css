@@ -11,7 +11,7 @@ button {
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
 
-  color: var(--color-white);
+  color: var(--color-platinum);
   background: var(--color-green);
   border: 1px solid transparent;
 }
@@ -21,7 +21,7 @@ button {
   button:hover {
     text-decoration-line: none;
     background: var(--color-black);
-    color: var(--color-white);
+    color: var(--color-platinum);
   }
 }
 
