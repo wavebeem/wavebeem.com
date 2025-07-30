@@ -14,7 +14,7 @@
   /* overscroll-behavior: none; */
   font-synthesis: none;
   background: var(--color-platinum);
-  color: var(--color-main-black);
+  color: var(--color-black);
   padding: 0;
   margin: 0;
 }
@@ -142,7 +142,7 @@ main summary:hover:active::marker {
 
 main details:has(> summary:focus-visible) {
   box-shadow: none;
-  outline: 2px solid;
+  outline: 3px solid;
   outline-offset: -1px;
   /* border-radius: var(--rounded-small); */
 }
@@ -157,7 +157,7 @@ main details[open] > summary {
 
 .spoiler {
   padding-inline: 0.25ch;
-  background-color: var(--color-main-black);
+  background-color: var(--color-black);
   color: transparent;
   cursor: default;
 }
@@ -173,7 +173,7 @@ main details[open] > summary {
 }
 
 .spoiler:focus-visible {
-  outline: 2px solid var(--color-main-black);
+  outline: 3px solid var(--color-black);
   outline-offset: 2px;
 }
 
@@ -220,7 +220,7 @@ article header small {
 
 :focus-visible {
   box-shadow: 0 0 0 2px var(--color-platinum);
-  outline: 2px solid currentColor;
+  outline: 3px solid currentColor;
   outline-offset: 2px;
   text-decoration-line: none;
 }

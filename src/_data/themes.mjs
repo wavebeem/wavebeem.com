@@ -20,7 +20,7 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 export default {
   "color-white": oklch(100, 0, 0),
   "color-green": oklch(52, 52, 165),
-  "color-black": oklch(20, 5, 40),
+  "color-black": oklch(20, 20, 40),
   "color-gray": oklch(70, 20, 40),
   "color-steel": oklch(90, 10, 40),
   "color-silver": oklch(95, 10, 40),

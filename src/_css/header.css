@@ -1,35 +1,28 @@
 shy-header {
   display: block;
-  transition-delay: 200ms;
-  transition-property: translate, opacity, border-color;
-  transition-timing-function: ease-in-out;
-  transition-duration: 200ms;
-
-  &[hidden] {
-    opacity: 0;
-    translate: 0 -100%;
-    pointer-events: none;
-  }
 }
 
 .header {
-  background: linear-gradient(var(--color-platinum), transparent);
+  box-sizing: border-box;
+  background: var(--color-platinum);
+  color: var(--color-green);
   position: sticky;
   top: 0;
   z-index: 1;
   width: 100%;
-  pointer-events: none;
-  border-color: transparent;
+  border-bottom: 1px solid var(--color-steel);
+  box-shadow: 0 1px 0 0 var(--color-platinum);
+  transition: 200ms ease-in-out translate;
+
+  &[hidden]:not(:has(:focus-visible)) {
+    translate: 0 -100%;
+  }
 
   /* Use progressive enhancement to keep a regular header at the top instead of
   the auto hide/show sticky header */
 
   &:not(:defined) {
     position: initial;
-  }
-
-  &[data-at-top] {
-    border-bottom: 1px solid var(--color-steel);
   }
 }
 
@@ -66,17 +59,9 @@ shy-header {
   margin-left: -4px;
   padding: 0 4px;
   line-height: 1;
-  font-size: calc(2rem + 6px);
+  font-size: calc(2rem + 4px);
   border-radius: var(--rounded-medium);
   text-decoration-line: none;
-  background: var(--color-platinum);
-  color: var(--color-green);
-  box-shadow:
-    0 0 4px var(--color-platinum),
-    0 0 8px var(--color-platinum),
-    0 0 12px var(--color-platinum),
-    0 0 16px var(--color-platinum),
-    0 0 20px var(--color-platinum);
 }
 
 .logo a:hover {
@@ -91,10 +76,6 @@ shy-header {
 }
 
 @media (width <= 40rem) {
-  .header {
-    background: linear-gradient(var(--color-platinum) 35%, transparent);
-  }
-
   .logo a {
     font-size: calc(2rem + 5vw);
   }

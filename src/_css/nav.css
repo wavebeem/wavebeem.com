@@ -5,9 +5,6 @@
 }
 
 .nav .button {
-  box-shadow:
-    0 0 4px var(--color-platinum),
-    0 0 8px var(--color-platinum);
   width: 100%;
   pointer-events: initial;
 }

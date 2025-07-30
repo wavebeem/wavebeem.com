@@ -1,30 +1,34 @@
-class ShyHeader extends HTMLElement {
+/**
+ * A header that hides itself based on how the user is scrolling.
+ *
+ * It sets the `hidden` DOM property, which is reflected as the `hidden` HTML
+ * attribute.
+ */
+export class ShyHeader extends HTMLElement {
   #abortController = new AbortController();
-  #positions = [];
+  #lastY = 0;
+  #lastDelta = 0;
 
-  #updatePositions = () => {
-    const { scrollTop } = document.documentElement;
-    this.#positions.unshift(scrollTop);
-    if (this.#positions.length > 2) {
-      this.#positions.length = 2;
-    }
-    const [a, b = 0] = this.#positions;
-    this.hidden = a > b;
-    if (a === 0) {
-      this.dataset.atTop = "";
-    } else {
-      delete this.dataset.atTop;
-    }
-  };
+  #onScroll() {
+    const y = document.documentElement.scrollTop;
+    const delta = this.#lastY - y;
+    // Firefox sometimes dispatches fake scroll events by small amounts in the
+    // opposite dirction from where you were just scrolling. In order to work
+    // around those, lets ensure two consecutive scrolls are in the same
+    // direction before hiding the header. This would probably also help with
+    // buggy mouse wheels too.
+    this.hidden = delta < 0 && this.#lastDelta < 0;
+    this.#lastY = y;
+    this.#lastDelta = delta;
+  }
 
   connectedCallback() {
     this.#abortController = new AbortController();
     const { signal } = this.#abortController;
-    addEventListener("scroll", this.#updatePositions, {
+    addEventListener("scroll", () => this.#onScroll(), {
       signal,
-      passive: true,
+      passive: false,
     });
-    this.#updatePositions();
   }
 
   disconnectedCallback() {
