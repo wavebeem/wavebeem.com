@@ -305,6 +305,19 @@ article header small {
   }
 }
 
+.layout-col2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (width <= 30rem) {
+  .layout-col2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
 .gap1 {
   gap: 0.25rem;
 }

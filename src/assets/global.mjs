@@ -1,10 +1,4 @@
-/**
- * A header that hides itself based on how the user is scrolling.
- *
- * It sets the `hidden` DOM property, which is reflected as the `hidden` HTML
- * attribute.
- */
-export class ShyHeader extends HTMLElement {
+export class CoolHeader extends HTMLElement {
   #abortController = new AbortController();
   #lastY = 0;
   #lastDelta = 0;
@@ -17,7 +11,8 @@ export class ShyHeader extends HTMLElement {
     // around those, lets ensure two consecutive scrolls are in the same
     // direction before hiding the header. This would probably also help with
     // buggy mouse wheels too.
-    this.hidden = delta < 0 && this.#lastDelta < 0;
+    // this.hidden =
+    //   visualViewport.scale >= 1 || (delta < 0 && this.#lastDelta < 0);
     this.#lastY = y;
     this.#lastDelta = delta;
   }
@@ -36,4 +31,4 @@ export class ShyHeader extends HTMLElement {
   }
 }
 
-customElements.define("shy-header", ShyHeader);
+customElements.define("cool-header", CoolHeader);
