@@ -31,9 +31,16 @@ ul.card {
 
   > li {
     a {
-      text-decoration-line: none;
       display: block;
       padding-block: 0.5rem;
+
+      &:not(:hover) {
+        text-decoration-line: none;
+      }
+
+      &:focus-visible {
+        outline-offset: 4px;
+      }
     }
     + li {
       border-top: 1px solid var(--color-steel);

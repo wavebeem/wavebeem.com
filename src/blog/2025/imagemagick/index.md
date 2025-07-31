@@ -38,9 +38,8 @@ command, but I suggest installing an up to date version if possible.
 magick INPUT.png -resize '128x128>' -quality 100 OUTPUT.webp
 ```
 
-![](./assets/1a.png)
-
-![](./assets/1b.png)
+<p><img class="sharp border" src="./assets/1a.png" alt="" /></p>
+<p><img class="sharp border" src="./assets/1b.png" alt="" /></p>
 
 Don't worry about the `128x128` being a square aspect ratio, ImageMagick will
 never change the aspect ratio of your image without you explicitly requesting
@@ -65,9 +64,8 @@ you'll want to use `-scale` instead of `-resize`.
 magick INPUT.png -scale '200%' -quality 100 OUTPUT.webp
 ```
 
-![](./assets/2a.png)
-
-![](./assets/2b.png)
+<p><img class="sharp" src="./assets/2a.png" alt="" /></p>
+<p><img class="sharp" src="./assets/2b.png" alt="" /></p>
 
 Even though a 200% image is two times the size of the input, if it's pixel art,
 it will barely be any larger as a WebP files. Upscaling pixel art to a large
@@ -85,7 +83,7 @@ WebP also supports animation:
 magick -delay 100 f-1.png f-2.png f-3.png animated.webp
 ```
 
-![](./assets/3.webp)
+<p><img class="sharp border" src="./assets/3.webp" alt="" /></p>
 
 By default the delay is 0, and 100 means 1 second of delay. This lines up with
 the GIF format using centiseconds as the frame delay value.
@@ -176,17 +174,18 @@ ImageMagick has an
 [absurd amount of commands](https://imagemagick.org/script/command-line-options.php).
 Here's a small sample:
 
-- `-flip` &rarr; **mirror upside-down**
+- `-flip` <span class="arrow">&rarr;</span> _mirror upside-down_
 
-- `-flop` &rarr; **mirror side-to-side**
+- `-flop` <span class="arrow">&rarr;</span> _mirror side-to-side_
 
-- `-trim` &rarr; **remove a solid colored border around an image**
+- `-trim` <span class="arrow">&rarr;</span> _remove a solid colored border
+  around an image_
 
-- `-crop` &rarr; **crop the image**
+- `-crop` <span class="arrow">&rarr;</span> _crop the image_
 
-- `-append` &rarr; **join two images top-to-bottom**
+- `-append` <span class="arrow">&rarr;</span> _join two images top-to-bottom_
 
-- `+append` &rarr; **join two images side-by-side**
+- `+append` <span class="arrow">&rarr;</span> _join two images side-by-side_
 
 ImageMagick also lets you use a special filename `magick:logo` which is the
 ImageMagick logo. This is useful if you want to test commands without having an
