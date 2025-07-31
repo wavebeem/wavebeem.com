@@ -1,9 +1,10 @@
 <header class="header">
-  <div class="logo-container">
+  <div class="header-content">
     <span class="logo">
-      <a href="/" role="presentation">wavebeem</a>
-      <!-- <span class="decoration" role="presentation">*-</span> -->
+      <a href="/" role="presentation">
+        {% render "partials/logo" %}
+      </a>
     </span>
+    {% render "partials/nav" %}
   </div>
-  {% render "partials/nav" %}
 </header>

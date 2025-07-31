@@ -11,7 +11,11 @@ description: >-
 
 ---
 
-<wavebeem-disjoint-graph-union></wavebeem-disjoint-graph-union>
+<div class="frame max-content">
+  <wavebeem-disjoint-graph-union>
+    Loading...
+  </wavebeem-disjoint-graph-union>
+</div>
 
 **Click a node to remove it and its connections from the graph.**
 

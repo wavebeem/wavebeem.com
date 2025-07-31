@@ -1,55 +1,26 @@
 .nav {
-  width: 100%;
   max-width: var(--width-heading);
-  margin-inline: auto;
   display: flex;
   align-items: center;
-  /* border: 0.5rem solid transparent; */
+}
+
+.nav .button {
+  width: 100%;
+  pointer-events: initial;
 }
 
 .nav menu {
+  font-size: var(--font-size-small);
   margin: 0;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   gap: 0.5rem;
-  /* gap: 1px; */
-
   width: 100%;
-  margin-inline: auto;
   max-width: var(--width-heading);
-
-  padding-inline: 1rem;
 }
 
-.nav a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: inherit;
-  text-decoration-line: none;
-  font-style: italic;
-  font-weight: bold;
-
-  outline-offset: -1px;
-
-  background: var(--nav-theme-background);
-  border: 1px solid var(--nav-theme-highlight);
-  border-image: radial-gradient(at top, var(--nav-theme-highlight), transparent)
-    1;
-  background-clip: padding-box;
-}
-
-.nav a:hover {
-  border-image: radial-gradient(
-      at top,
-      var(--nav-theme-highlight) 50%,
-      transparent
-    )
-    1;
-  box-shadow: 0 0 8px var(--nav-theme-glow);
-}
-
-@media (width <= 40rem) {
+@media (width <= 60rem) {
   .nav a {
     text-align: center;
   }
@@ -57,11 +28,7 @@
   .nav menu {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-inline: auto;
-    /* display: grid;
-    flex-direction: column; */
     gap: 0.5rem;
-    /* font-size: var(--font-size-small); */
-    font-size: var(--font-size-small);
+    padding: 0;
   }
 }

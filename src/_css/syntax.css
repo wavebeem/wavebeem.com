@@ -1,32 +1,27 @@
 pre:has(> code) {
+  overflow-x: auto;
   margin-block: 1.5rem;
   padding: 1rem;
-  border: 1px solid var(--color-main-decoration);
-  border-image: radial-gradient(
-      50% 100% at 0% 0%,
-      var(--color-main-decoration),
-      var(--color-main-faint)
-    )
-    1;
-  overflow-x: auto;
-  max-width: max-content;
+  border: 1px solid var(--color-steel);
+  background-color: var(--color-white);
+  border-radius: var(--rounded-large);
 }
 
 /* Reset color for nested scripts */
 .token.script {
-  color: var(--color-syntax-default);
+  color: var(--syntax-default);
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: var(--color-syntax-comment);
+  color: var(--syntax-comment);
   font-style: italic;
 }
 
 .token.punctuation {
-  color: var(--color-syntax-punctuation);
+  color: var(--syntax-punctuation);
 }
 
 .token.attr-value,
@@ -38,7 +33,7 @@ pre:has(> code) {
 .token.regex,
 /* .token.builtin, */
 .token.inserted {
-  color: var(--color-syntax-string);
+  color: var(--syntax-string);
 }
 
 .token.operator,
@@ -46,22 +41,22 @@ pre:has(> code) {
 .token.url,
 .language-css .token.string,
 .style .token.string {
-  color: var(--color-syntax-punctuation);
+  color: var(--syntax-punctuation);
 }
 
 .token.atrule,
 .token.function,
 .token.class-name {
-  color: var(--color-syntax-property);
+  color: var(--syntax-property);
 }
 
 .token.tag,
 .token.tag > .token.class-name {
-  color: var(--color-syntax-keyword);
+  color: var(--syntax-keyword);
 }
 
 .token.keyword {
-  color: var(--color-syntax-keyword);
+  color: var(--syntax-keyword);
   font-weight: bold;
 }
 
@@ -73,7 +68,7 @@ pre:has(> code) {
 .token.symbol,
 .token.deleted,
 .token.important {
-  color: var(--color-syntax-property);
+  color: var(--syntax-property);
 }
 
 .token.important,

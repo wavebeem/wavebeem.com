@@ -1,75 +1,37 @@
 .button,
 button {
   font: inherit;
-  background-color: var(--color-button-background);
-  color: var(--color-main-text);
-  text-shadow: 0 1px 4px var(--color-button-highlight);
-  border: 0;
   text-align: center;
   justify-content: center;
   align-items: center;
   display: inline-flex;
-  /* font-weight: bold; */
-  /* font-style: italic; */
-  padding: 0.5rem 1rem;
-  border-radius: 0;
+  font-weight: bold;
+  padding: 0.25rem 1rem;
+  border-radius: var(--rounded-pill);
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
 
-  /* background: linear-gradient(
-    to bottom right,
-    var(--color-button-highlight) 0 10%,
-    var(--color-button-background)
-  ); */
-
-  background: radial-gradient(
-    100% 100% at 50% 0%,
-    var(--color-button-highlight),
-    var(--color-button-background)
-  );
-
-  /* Why an outline instead of a border? Firefox was adding a 1px gap between
-   * the background and the border for some reason. This fixes the issue. It
-   * only happens when the text is italic, too. And only with certain fonts.
-   */
-  /* outline: 1px solid var(--color-button-border);
-  outline-offset: -1px; */
-  border: 1px solid var(--color-button-border);
-  /* outline-offset: -1px; */
+  color: var(--color-platinum);
+  background: var(--color-green);
+  border: 1px solid transparent;
 }
 
 @media (hover) {
   .button:hover,
   button:hover {
     text-decoration-line: none;
-
-    /* background: radial-gradient(
-      ellipse at top left,
-      var(--color-button-highlight) 0 15%,
-      var(--color-button-background)
-    ); */
-
-    background: radial-gradient(
-      100% 100% at 50% 10%,
-      var(--color-button-highlight),
-      var(--color-button-background)
-    );
-
-    box-shadow: 0 4px 8px var(--color-button-shadow);
+    background: var(--color-black);
+    color: var(--color-platinum);
   }
 }
 
 .button:active,
 button:active {
-  background: radial-gradient(
-    100% 100% at 50% 0%,
-    var(--color-button-highlight),
-    var(--color-button-background)
-  );
+  scale: 95%;
 }
 
 .button:focus-visible,
 button:focus-visible {
-  outline: 3px solid;
-  outline-offset: -1px;
+  outline: 3px solid var(--color-green);
+  outline-offset: 2px;
 }

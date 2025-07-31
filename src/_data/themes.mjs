@@ -18,34 +18,18 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 }
 
 export default {
-  "color-main-background": "#fff",
-  "color-main-text": "#111",
-  "color-main-link": oklch(55, 55, 290),
-  "color-main-accent": oklch(52, 52, 165),
-  "color-main-decoration": oklch(80, 50, 135),
-  "color-main-faint": oklch(95, 10, 135),
+  "color-white": oklch(100, 0, 0),
+  "color-green": oklch(52, 52, 165),
+  "color-black": oklch(20, 20, 40),
+  "color-gray": oklch(70, 20, 40),
+  "color-steel": oklch(90, 10, 40),
+  "color-silver": oklch(95, 10, 40),
+  "color-platinum": oklch(98, 2.5, 40),
 
-  "color-button-highlight": oklch(98, 20, 135),
-  "color-button-shadow": oklch(80, 50, 135, 50),
-  "color-button-background": oklch(80, 50, 135),
-  "color-button-border": oklch(65, 50, 135),
-
-  "color-avatar-background": oklch(80, 50, 135),
-
-  "color-header-highlight": oklch(80, 50, 135),
-  "color-header-glow": oklch(70, 50, 135),
-  "color-header-background": oklch(52, 52, 165),
-  "color-header-text": "#fff",
-
-  "color-footer-highlight": oklch(80, 50, 135),
-  "color-footer-glow": oklch(90, 20, 135),
-  "color-footer-background": oklch(95, 10, 135),
-  "color-footer-text": "#111",
-
-  "color-syntax-text": "#111",
-  "color-syntax-comment": oklch(52, 0, 290),
-  "color-syntax-keyword": oklch(52, 100, 345),
-  "color-syntax-property": oklch(52, 60, 250),
-  "color-syntax-string": oklch(52, 100, 135),
-  "color-syntax-punctuation": oklch(52, 30, 345),
+  "syntax-text": "var(--color-black)",
+  "syntax-comment": oklch(52, 30, 40),
+  "syntax-keyword": oklch(52, 52, 345),
+  "syntax-property": oklch(52, 52, 255),
+  "syntax-string": oklch(52, 52, 165),
+  "syntax-punctuation": oklch(52, 30, 345),
 };

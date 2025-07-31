@@ -2,13 +2,13 @@
   margin-block: 1.5rem;
   padding: 1.5rem;
 
-  border: 1px solid var(--color-main-decoration);
-  border-image: radial-gradient(
-      50% 100% at 0% 0%,
-      var(--color-main-decoration),
-      var(--color-main-faint)
-    )
-    1;
+  background: var(--color-white);
+  border: 1px solid var(--color-steel);
+  border-radius: var(--rounded-large);
+
+  > :first-child {
+    margin-top: 0;
+  }
 
   > header > :is(h1, h2, h3) {
     margin-top: 0;
@@ -19,6 +19,24 @@
   }
 
   + .card {
-    margin-top: calc(-1.5rem - 1px);
+    margin-top: -0.5rem;
+  }
+}
+
+ul.card {
+  display: block;
+  list-style-type: none;
+  max-width: initial;
+  padding: 0.5rem 1rem;
+
+  > li {
+    a {
+      text-decoration-line: none;
+      display: block;
+      padding-block: 0.5rem;
+    }
+    + li {
+      border-top: 1px solid var(--color-steel);
+    }
   }
 }

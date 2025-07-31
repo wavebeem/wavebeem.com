@@ -9,14 +9,12 @@
 
 <hr />
 
-<ul>
+<ul class="card">
 {% for post in collections.toybox reversed %}
   <li>
-    <p>
-      <a href="{{ post.url }}">
-        {{ post.data.title | escape }}
-      </a>
-    </p>
+    <a href="{{ post.url }}">
+      {{ post.data.title | escape }}
+    </a>
   </li>
 {% endfor %}
 </ul>
