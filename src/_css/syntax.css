@@ -1,11 +1,10 @@
 pre:has(> code) {
+  overflow-x: auto;
   margin-block: 1.5rem;
   padding: 1rem;
   border: 1px solid var(--color-steel);
   background-color: var(--color-white);
-  overflow-x: auto;
   border-radius: var(--rounded-large);
-  max-width: max-content;
 }
 
 /* Reset color for nested scripts */

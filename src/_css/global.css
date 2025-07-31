@@ -82,6 +82,16 @@ h1 {
   margin-block: 1.5rem;
 }
 
+h1::after {
+  content: " ♣️";
+  color: transparent;
+  text-shadow: 0 0 0 var(--color-green);
+  font-size: 0.5em;
+  top: -0.35em;
+  position: relative;
+  vertical-align: text-bottom;
+}
+
 h2 {
   font-size: var(--font-size-h2);
   font-family: var(--font-cool);
@@ -89,6 +99,16 @@ h2 {
   /* https://bugs.webkit.org/show_bug.cgi?id=292563 */
   /* word-spacing: calc(1em / 16); */
   margin-block: 4rem 0.5rem;
+}
+
+h2::before {
+  content: "{ ";
+  color: var(--color-green);
+}
+
+h2::after {
+  content: " }";
+  color: var(--color-green);
 }
 
 h3 {
@@ -200,11 +220,37 @@ main {
   padding-bottom: 3rem;
 }
 
-.framed {
+img,
+video {
+  border-radius: var(--rounded-large);
+}
+
+.sharp {
+  border-radius: 0;
+}
+
+.border {
+  border-radius: 0;
+  background: var(--color-white);
+  padding: 1px;
+  border: 1px solid var(--color-steel);
+}
+
+.frame {
   background: var(--color-white);
   padding: 8px;
-  border-radius: var(--rounded-medium);
+  border-radius: var(--rounded-large);
   border: 1px solid var(--color-steel);
+}
+
+.playdate {
+  filter: contrast(80%) brightness(80%);
+}
+
+.tcg {
+  /* Source from the Grand Archive index */
+  /* https://index.gatcg.com/edition/alice-golden-queen-dtr */
+  border-radius: 4.75% / 3.5%;
 }
 
 article header :is(h1, h2, h3) {
@@ -313,6 +359,26 @@ article header small {
 
 @media (width <= 30rem) {
   .layout-col2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.layout-col3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.5rem;
+}
+
+@media (width <= 50rem) {
+  .layout-col3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width <= 30rem) {
+  .layout-col3 {
     display: grid;
     grid-template-columns: 1fr;
   }
