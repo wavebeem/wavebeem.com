@@ -121,11 +121,11 @@ shingles and occasionally rolling my eyes at
 
 - **The characters are just fine.**
 
-  I just didn't get into any of the characters the same way I did in previous
-  Mass Effect games. Solas is still one of the most compelling characters,
-  though he spends nearly the entire game locked in time prison, while you're
-  forced to slog through endless side quests in hopes of chasing down the two
-  "mustache twirling supervillains", as my friend Lilah calls them.
+  I just didn't get into any of the characters the same way I did in other
+  Bioware games. Solas is still one of the most compelling characters, though he
+  spends nearly the entire game locked in time prison, while you're forced to
+  slog through endless side quests in hopes of chasing down the two "mustache
+  twirling supervillains", as my friend Lilah calls them.
 
 - **The tone is awful.**
 
