@@ -1,10 +1,16 @@
 .crime-frame {
   overflow: hidden;
   position: relative;
+  display: flex;
 }
 
 .crime-frame :is(details, summary) {
   all: initial;
   display: block;
   font: inherit;
+}
+
+.crime-frame > * {
+  max-width: initial !important;
+  width: 100% !important;
 }

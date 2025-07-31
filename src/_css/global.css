@@ -220,13 +220,11 @@ main {
   padding-bottom: 3rem;
 }
 
+canvas,
 img,
 video {
+  display: block;
   border-radius: var(--rounded-large);
-}
-
-.sharp {
-  border-radius: 0;
 }
 
 .border {
@@ -243,6 +241,10 @@ video {
   border: 1px solid var(--color-steel);
 }
 
+.sharp {
+  border-radius: 0;
+}
+
 .playdate {
   filter: contrast(80%) brightness(80%);
 }
@@ -251,6 +253,10 @@ video {
   /* Source from the Grand Archive index */
   /* https://index.gatcg.com/edition/alice-golden-queen-dtr */
   border-radius: 4.75% / 3.5%;
+}
+
+.max-content {
+  max-width: max-content;
 }
 
 article header :is(h1, h2, h3) {

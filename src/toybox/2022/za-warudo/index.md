@@ -6,7 +6,7 @@ date: "2022-11-13"
 
 Press the button for a bad time.
 
-<div class="crime-frame">
+<div class="crime-frame frame sharp">
   <details
     style="
       height: 75vh;
