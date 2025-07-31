@@ -334,7 +334,7 @@ article header small {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 @media (width <= 50rem) {
@@ -367,7 +367,7 @@ article header small {
 .layout-col3 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 @media (width <= 50rem) {
