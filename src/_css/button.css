@@ -27,7 +27,7 @@ button {
 
 .button:active,
 button:active {
-  scale: 105%;
+  scale: 95%;
 }
 
 .button:focus-visible,
