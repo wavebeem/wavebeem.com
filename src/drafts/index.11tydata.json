@@ -1,6 +1,6 @@
 {
   "title": "Drafts",
-  "layout": "layout-post",
+  "layout": "layout-page",
   "override:tags": [],
   "draft": false
 }

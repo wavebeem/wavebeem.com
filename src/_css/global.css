@@ -246,7 +246,8 @@ video {
 }
 
 .playdate {
-  filter: contrast(80%) brightness(80%);
+  filter: contrast(70%);
+  border-radius: var(--rounded-small);
 }
 
 .tcg {
