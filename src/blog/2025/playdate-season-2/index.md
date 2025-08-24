@@ -4,8 +4,8 @@ title: >-
   Review: Playdate Season 2
 description: >-
   A stationary shmup, an ancient aliens archaeology game, a supremely silly
-  point and click adventure, and a game about become an extraordinarily long dog
-  with extraordinarliy big poops, and more...
+  point and click adventure, and a game about becoming an extraordinarily long
+  dog with extraordinarliy big poops, and more...
 ---
 
 ## Overview
