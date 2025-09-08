@@ -7,11 +7,25 @@ description: >-
   ill-advised `pointer` cursor continues to be used confusingly.
 ---
 
-## Key Takeaway
+<script type="module" src="./assets/element.mjs"></script>
 
-Stop changing the CSS
-[cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor) property.
-Links are links and buttons are buttons.
+## What's the Problem?
+
+Changing the CSS
+[cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor) property is
+ugly, distracting, and causes issues determining which page elements are links.
+
+### Bad Example
+
+<div class="frame max-content">
+  <wavebeem-blog-finger-bad>Loading...</wavebeem-blog-finger-bad>
+</div>
+
+### Good Example
+
+<div class="frame max-content">
+  <wavebeem-blog-finger-good>Loading...</wavebeem-blog-finger-good>
+</div>
 
 ## What If My Users Get Confused About What They Can Click?
 
@@ -31,7 +45,7 @@ Let's start by examining familiar desktop interfaces and their hover styles.
 
 <figure>
   <img
-    src="./assets/mac-system-preferences.webp"
+    src="./assets/img/mac-system-preferences.webp"
     width="827"
     height="810"
   />
@@ -40,7 +54,7 @@ Let's start by examining familiar desktop interfaces and their hover styles.
 
 <figure>
   <img
-    src="./assets/mac-system-preferences2.webp"
+    src="./assets/img/mac-system-preferences2.webp"
     width="827"
     height="810"
   />
@@ -59,7 +73,7 @@ generally don't. I think this interface is far from a paragon of good design
 
 <figure>
   <img
-    src="./assets/google-buttons.webp"
+    src="./assets/img/google.webp"
     width="2624"
     height="1466"
   />
@@ -68,11 +82,11 @@ generally don't. I think this interface is far from a paragon of good design
 
 <figure>
   <img
-    src="./assets/google-links.webp"
+    src="./assets/img/google-links.webp"
     width="2624"
     height="1466"
   />
-  <figcaption>google.com: true links</figcaption>
+  <figcaption>google.com: links</figcaption>
 </figure>
 
 These elements are truly links. You click them, and your browser navigates to a
@@ -81,21 +95,21 @@ click + open in new tab, control-click, command-click, and long-press.
 
 <figure>
   <img
-    src="./assets/google-buttons.webp"
+    src="./assets/img/google-buttons.webp"
     width="2624"
     height="1466"
   />
-  <figcaption>google.com: true buttons</figcaption>
+  <figcaption>google.com: buttons</figcaption>
 </figure>
 
-These elements are truly buttons. Clicking them performs an action, such as
+These elements are buttons... mostly. Clicking them performs an action, such as
 submitting your search query... well, except for the microphone icon (voice
 search) and the camera icon (image search)... those just take you to new pages
-in a way that could be done with a link.
+in a way that could be done with a link. Oops!
 
 <figure>
   <img
-    src="./assets/google-failures.webp"
+    src="./assets/img/google-failures.webp"
     width="2624"
     height="1466"
   />
