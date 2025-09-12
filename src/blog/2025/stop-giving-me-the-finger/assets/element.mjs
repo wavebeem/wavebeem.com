@@ -8,10 +8,10 @@ export class WavebeemBlogFinger extends HTMLElement {
       color: black;
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
       padding: 8px;
+      gap: 8px;
       display: grid;
-      grid-template-columns: repeat(3, auto);
+      grid-template-columns: repeat(2, auto);
     }
 
     button {
@@ -34,7 +34,7 @@ export class WavebeemBlogFinger extends HTMLElement {
 
     button.bad {
       border: 1px solid transparent;
-      transition: 500ms all;
+      transition: 300ms all;
       cursor: pointer;
     }
 
@@ -86,10 +86,10 @@ export class WavebeemBlogFinger extends HTMLElement {
         ${this.styles}
       </style>
       <button class="bad primary">Primary</button>
-      <button class="bad secondary">Secondary</button>
-      <button class="bad tertiary">Tertiary</button>
       <button class="good primary">Primary</button>
+      <button class="bad secondary">Secondary</button>
       <button class="good secondary">Secondary</button>
+      <button class="bad tertiary">Tertiary</button>
       <button class="good tertiary">Tertiary</button>
     `;
   }

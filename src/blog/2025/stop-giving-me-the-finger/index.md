@@ -1,4 +1,5 @@
 ---
+date: "2025-09-11T23:29-07:00"
 title: >-
   Stop Giving Me the Finger
 description: >-
@@ -23,18 +24,17 @@ Remember: on mobile, users will never see your hover effects (e.g. color and
 cursor changes). You should be inspiring confidence in the clickability of your
 button from first glance.
 
-### Interactive demo
-
-_Try clicking these buttons, hovering them, and focusing them with Tab._
+**Interactive demo:** _Try clicking these buttons, hovering them, and focusing
+them with Tab._
 
 <figure>
   <div class="frame max-content">
     <wavebeem-blog-finger>Loading...</wavebeem-blog-finger>
   </div>
-  <figcaption>Bad examples (top) vs. good examples (bottom)</figcaption>
+  <figcaption>Bad examples (left) vs. good examples (right)</figcaption>
 </figure>
 
-The differences are subtle, but the bottom row of buttons inspires a lot more
+The differences are subtle, but the right column of buttons inspires a lot more
 confidence to me than the top, despite no pointer cursor (👆).
 
 ## When Should I Use the Pointer Cursor?
@@ -49,7 +49,8 @@ should almost never be set. If something is a link, it should use the
 
 Links should generally take you to a new page (using HTTP GET) automatically by
 virtue of their markup (`<a href="...">`). Links cause the browser's URL to
-change.
+change, and can be safely opened in a new tab (regardless of SPA vs MPA
+architecture).
 
 ### Buttons
 
@@ -57,9 +58,11 @@ Buttons may either modify the existing page (e.g. open a modal dialog) or submit
 a form. The form may result in a new page loading (typically by issuing an HTTP
 POST request).
 
-While a button could be used to call `location.href = "..."` to navigate the
-page... this isn't an ideal use of a button, since links already do this job
-better.
+While a button could be used to call `location.href = "..."` or
+`history.pushState(...)` to navigate the page... this isn't an ideal use of a
+button, since links already do this job better. It's ok to call this at the end
+of a button's handler if there's also some kind of side effect that happens
+before the navigation.
 
 ### Cards
 
@@ -73,7 +76,7 @@ a relatively positioned "hitbox" inside the main link of your card.
 
 ```html
 <div class="card">
-  <img src="..." />
+  <img src="..." alt="" />
   <a href="..." class="card-link-main">main link goes here</a>
   <footer>
     <a href="..." class="card-link-footer">author link goes here</a>
@@ -138,6 +141,7 @@ System Preferences app for a concrete example.
 
 <figure>
   <img
+    alt=""
     src="./assets/img/mac-system-preferences.webp"
     width="827"
     height="810"
@@ -147,6 +151,7 @@ System Preferences app for a concrete example.
 
 <figure>
   <img
+    alt=""
     src="./assets/img/mac-system-preferences2.webp"
     width="827"
     height="810"
@@ -162,6 +167,7 @@ change on hover.
 
 <figure>
   <img
+    alt=""
     src="./assets/img/google.webp"
     class="frame"
     width="2624"
@@ -177,6 +183,7 @@ input) uses the pointer cursor (👆).
 
 <figure>
   <img
+    alt=""
     src="./assets/img/google-links.webp"
     class="frame"
     width="2624"
@@ -193,6 +200,7 @@ click + open in new tab, control-click, command-click, and long-press.
 
 <figure>
   <img
+    alt=""
     src="./assets/img/google-buttons.webp"
     class="frame"
     width="2624"
@@ -210,6 +218,7 @@ in a way that could be done with a link. Oops!
 
 <figure>
   <img
+    alt=""
     src="./assets/img/google-failures.webp"
     class="frame"
     width="2624"
