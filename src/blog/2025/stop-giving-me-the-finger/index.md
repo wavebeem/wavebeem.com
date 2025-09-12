@@ -4,7 +4,7 @@ title: >-
   Stop Giving Me the Finger
 description: >-
   Putting the pointer cursor (👆) on every button is ugly, unnecessary, and
-  dilutes its power for signalling links.
+  dilutes its power for signaling links.
 ---
 
 <script type="module" src="./assets/element.mjs"></script>
