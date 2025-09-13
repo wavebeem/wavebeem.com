@@ -1,5 +1,5 @@
 ---
-date: "2025-09-12T20:09-07:00"
+date: "2025-09-12"
 title: "Review: Ninja Gaiden: Ragebound"
 description:
   "The Game Kitchen deserves a blue ribbon for this action platforming
@@ -36,32 +36,32 @@ Check out a gameplay video and see if it's for you. This is a new bar for action
 platformers for me.
 
 <figure>
-  <img src="./assets/eyes.vg.webp" alt="" width="1280" height="720" />
+  <img src="./assets/eyes.pxl.webp" alt="" width="1280" height="720" />
   <figcaption>An early illustration of our pretty boy hero: Kenji.</figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/jetski.vg.webp" alt="" width="1280" height="720" />
+  <img src="./assets/jetski.pxl.webp" alt="" width="1280" height="720" />
   <figcaption>There's a jet-ski level and a motorcycle level!</figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/kunai.vg.webp" alt="" width="1280" height="720" />
+  <img src="./assets/kunai.pxl.webp" alt="" width="1280" height="720" />
   <figcaption>Another stunning fullscreen illustration.</figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/slice.vg.webp" alt="" width="1280" height="720" />
+  <img src="./assets/slice.pxl.webp" alt="" width="1280" height="720" />
   <figcaption>The story isn't deep, but I like Kumori and Kenji's relationship.</figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/wink.vg.webp" alt="" width="1280" height="720" />
+  <img src="./assets/wink.pxl.webp" alt="" width="1280" height="720" />
   <figcaption>The famous Ryu Hayabusa is your mentor.</figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/zoolander.vg.webp" alt="" width="1280" height="720" />
+  <img src="./assets/zoolander.pxl.webp" alt="" width="1280" height="720" />
   <figcaption>Kenji isn't good with computers, but Kumori has his back.</figcaption>
 </figure>
 

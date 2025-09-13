@@ -1,5 +1,5 @@
 ---
-date: "2025-09-11T23:29-07:00"
+date: "2025-09-11"
 title: >-
   Stop Giving Me the Finger
 description: >-
