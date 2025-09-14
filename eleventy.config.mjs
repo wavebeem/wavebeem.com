@@ -63,10 +63,21 @@ export default function getConfig(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("formatDate", function (value, format) {
-    let isUTC = true;
+    console.log(value, format);
+    let isUTC = false;
     if (value === "now") {
       value = now;
       isUTC = false;
+    } else if (
+      value instanceof Date &&
+      value.getHours() === 0 &&
+      value.getMinutes() === 0 &&
+      value.getSeconds() === 0 &&
+      value.getMilliseconds() === 0
+    ) {
+      isUTC = true;
+    } else if (typeof value === "string") {
+      isUTC = true;
     }
     if (!value) {
       throw new Error(`bad date: ${value}`);
