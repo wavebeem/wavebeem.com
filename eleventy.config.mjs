@@ -63,7 +63,6 @@ export default function getConfig(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("formatDate", function (value, format) {
-    console.log(value, format);
     let isUTC = false;
     if (value === "now") {
       value = now;
