@@ -1,6 +1,6 @@
 ---
 date: "2025-09-12"
-title: "Review: Ninja Gaiden: Ragebound"
+title: "Review: NINJA GAIDEN: Ragebound"
 description:
   "The Game Kitchen deserves a blue ribbon for this action platforming
   masterpiece. Absolutely no fluff or filler."
@@ -9,7 +9,7 @@ description:
 ---
 
 The new
-[Ninja Gaiden: Ragebound](https://store.steampowered.com/app/2542120/NINJA_GAIDEN_Ragebound/)
+[NINJA GAIDEN: Ragebound](https://store.steampowered.com/app/2542120/NINJA_GAIDEN_Ragebound/)
 is perfection. At $25 and 12 hours, there's no chance for it to overstay its
 welcome. It's affordable and fantastic. I'd happily pay more, though. I
 seriously have no complaints.
@@ -36,32 +36,32 @@ Check out a gameplay video and see if it's for you. This is a new bar for action
 platformers for me.
 
 <figure>
-  <img src="./assets/eyes.pxl.webp" alt="" width="1280" height="720" />
+  <img loading="lazy" src="./assets/eyes.pxl.webp" alt="" width="1280" height="720" />
   <figcaption>An early illustration of our pretty boy hero: Kenji.</figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/jetski.pxl.webp" alt="" width="1280" height="720" />
+  <img loading="lazy" src="./assets/jetski.pxl.webp" alt="" width="1280" height="720" />
   <figcaption>There's a jet-ski level and a motorcycle level!</figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/kunai.pxl.webp" alt="" width="1280" height="720" />
+  <img loading="lazy" src="./assets/kunai.pxl.webp" alt="" width="1280" height="720" />
   <figcaption>Another stunning fullscreen illustration.</figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/slice.pxl.webp" alt="" width="1280" height="720" />
+  <img loading="lazy" src="./assets/slice.pxl.webp" alt="" width="1280" height="720" />
   <figcaption>The story isn't deep, but I like Kumori and Kenji's relationship.</figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/wink.pxl.webp" alt="" width="1280" height="720" />
+  <img loading="lazy" src="./assets/wink.pxl.webp" alt="" width="1280" height="720" />
   <figcaption>The famous Ryu Hayabusa is your mentor.</figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/zoolander.pxl.webp" alt="" width="1280" height="720" />
+  <img loading="lazy" src="./assets/zoolander.pxl.webp" alt="" width="1280" height="720" />
   <figcaption>Kenji isn't good with computers, but Kumori has his back.</figcaption>
 </figure>
 

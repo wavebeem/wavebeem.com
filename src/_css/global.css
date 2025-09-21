@@ -203,6 +203,9 @@ main :is(blockquote, ul, ol, dl, p) {
 
 main :is(ul, ol) {
   padding-left: var(--list-inset);
+}
+
+main ul {
   list-style-type: disc;
 }
 
@@ -427,6 +430,8 @@ I should file a bug later. */
 }
 
 ol > li::marker {
+  font-family: var(--font-mono);
+  content: counter(list-item) " ";
   font-weight: bold;
 }
 
