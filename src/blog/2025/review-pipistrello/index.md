@@ -1,5 +1,5 @@
 ---
-date: "2025-10-08"
+date: "2025-10-08T20:43-07:00"
 title: "Review: Pipistrello and the Cursed Yoyo"
 description:
   "Waiter, there's Hollow Knight in my Zelda! I at least fumbled my way through
