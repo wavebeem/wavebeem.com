@@ -1,9 +1,23 @@
 .header {
   box-sizing: border-box;
   background: var(--color-green);
-  color: var(--color-white);
-  border-bottom: 1px solid var(--color-black);
+  color: var(--color-black);
+  /* border-bottom: 1px dotted var(--color-black); */
+  --s: 16px;
+  position: relative;
+  margin-bottom: calc(2 * var(--s));
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
   width: 100%;
+  height: calc(2 * var(--s));
+  background-color: rgb(from var(--color-mint) r g b / 50%);
+  background-clip: content-box;
+  border-bottom: var(--s) solid rgb(from var(--color-mint) r g b / 20%);
 }
 
 .header-content {
@@ -33,19 +47,19 @@
 .logo a {
   color: inherit;
   pointer-events: initial;
-  border: 0;
-  margin-left: -4px;
-  padding: 0 4px;
+  margin-left: -8px;
+  padding: 8px 16px 4px 8px;
   line-height: 1;
-  font-size: calc(2rem + 4px);
   border-radius: var(--rounded-medium);
   text-decoration-line: none;
   width: 100%;
+  border: 1px dotted transparent;
+  outline-offset: -1px;
 }
 
 .logo a:hover {
-  background: var(--color-black);
-  box-shadow: 0 0 0 4px var(--color-black);
+  border-color: var(--color-black);
+  background: var(--color-honeydew);
 }
 
 .logo-container {

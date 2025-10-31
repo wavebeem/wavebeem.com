@@ -10,7 +10,7 @@
   -webkit-font-smoothing: antialiased;
   overflow-y: scroll;
   color-scheme: light;
-  scrollbar-color: var(--color-iron) var(--color-white);
+  scrollbar-color: var(--color-iron) var(--color-silver);
   /* overscroll-behavior: none; */
   font-synthesis: none;
   background: var(--color-silver);
@@ -83,7 +83,7 @@ h1 {
 }
 
 h1::after {
-  content: "\00A0♣️";
+  content: "\00A0::";
   color: transparent;
   text-shadow: 0 0 0 var(--color-green);
   font-size: 0.5em;
@@ -101,13 +101,9 @@ h2 {
   margin-block: 4rem 0.5rem;
 }
 
-h2::before {
-  content: "{ ";
-  color: var(--color-green);
-}
-
 h2::after {
-  content: " }";
+  font-size: 0.5em;
+  content: "\00A0:.";
   color: var(--color-green);
 }
 
@@ -239,7 +235,7 @@ video {
   border-radius: 0;
   background: var(--color-white);
   padding: 1px;
-  border: 1px solid var(--color-steel);
+  border: 1px solid var(--color-black);
 }
 
 .frame {

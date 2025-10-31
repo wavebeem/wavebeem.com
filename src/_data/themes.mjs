@@ -21,15 +21,12 @@ export default {
   // oklch(0.2777 0.013 298.6)
   "color-black": oklch(27, 3.25, 299),
 
-  "color-green": oklch(50, 39, 162),
-  // "color-green": oklch(74, 39, 162),
-  // "color-green": oklch(52, 52, 165),
+  "color-green": oklch(74, 38, 162),
 
-  // "color-purple": oklch(52, 52, 165),
+  "color-mint": oklch(74, 38, 162),
+  "color-honeydew": oklch(79, 38, 162),
+
   "color-purple": oklch(47, 67, 288),
-
-  // oklch(0.6958 0.1884 39.41)
-  // "color-orange": oklch(70, 47, 39),
 
   "color-iron": oklch(50, 1.75, 89),
   "color-steel": oklch(85, 1.75, 89),

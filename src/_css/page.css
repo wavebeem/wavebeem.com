@@ -48,7 +48,7 @@ article.page {
       color: inherit;
       width: 100%;
 
-      border-top: 1px solid var(--color-steel);
+      border-top: 1px dotted var(--color-black);
     }
 
     :where(.paragraph),
