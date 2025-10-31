@@ -13,7 +13,19 @@
   scrollbar-color: var(--color-iron) var(--color-silver);
   /* overscroll-behavior: none; */
   font-synthesis: none;
-  background: var(--color-silver);
+  background-color: var(--color-silver);
+  --c: rgb(from var(--color-white) r g b / 30%);
+  --s: 45%;
+  background-image:
+    radial-gradient(
+      circle at bottom,
+      var(--c) 0 var(--s),
+      transparent var(--s)
+    ),
+    radial-gradient(circle at top, var(--c) 0 var(--s), transparent var(--s));
+  background-size: 16px 16px;
+  background-position: 0 0;
+  background-repeat: repeat;
   color: var(--color-black);
   padding: 0;
   margin: 0;
@@ -327,7 +339,8 @@ article header small {
 }
 
 .photo-grid > * {
-  margin: 0;
+  margin: 0 !important;
+  max-width: initial !important;
 }
 
 @media (width >= 30rem) {
@@ -338,7 +351,7 @@ article header small {
 
 @media (width >= 50rem) {
   .photo-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

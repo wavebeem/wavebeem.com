@@ -2,22 +2,8 @@
   box-sizing: border-box;
   background: var(--color-green);
   color: var(--color-black);
-  /* border-bottom: 1px dotted var(--color-black); */
-  --s: 16px;
+  border-bottom: 1px dotted var(--color-black);
   position: relative;
-  margin-bottom: calc(2 * var(--s));
-}
-
-.header::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: calc(2 * var(--s));
-  background-color: rgb(from var(--color-mint) r g b / 50%);
-  background-clip: content-box;
-  border-bottom: var(--s) solid rgb(from var(--color-mint) r g b / 20%);
 }
 
 .header-content {
@@ -47,19 +33,18 @@
 .logo a {
   color: inherit;
   pointer-events: initial;
-  margin-left: -8px;
-  padding: 8px 16px 4px 8px;
+  padding: 0;
   line-height: 1;
   border-radius: var(--rounded-medium);
   text-decoration-line: none;
   width: 100%;
-  border: 1px dotted transparent;
-  outline-offset: -1px;
+  padding-top: 4px;
+  border-bottom: 2px solid transparent;
+  outline-offset: 4px;
 }
 
 .logo a:hover {
-  border-color: var(--color-black);
-  background: var(--color-honeydew);
+  border-bottom-color: var(--color-black);
 }
 
 .logo-container {

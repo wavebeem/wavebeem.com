@@ -72,6 +72,12 @@ article.page {
       border-top-style: dotted;
       border-left-style: dotted;
       max-width: max-content;
+
+      img,
+      video {
+        outline: 1px solid #0001;
+        outline-offset: -1px;
+      }
     }
 
     figcaption {

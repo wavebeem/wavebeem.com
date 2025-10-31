@@ -24,9 +24,6 @@ button {
   button:hover {
     text-decoration-line: none;
     background: var(--color-honeydew);
-    /* border-color: var(--color-black); */
-    /* background: var(--color-black);
-    color: var(--color-silver); */
   }
 }
 
@@ -37,6 +34,6 @@ button:active {
 
 .button:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--color-green);
-  outline-offset: 1px;
+  outline: 3px solid;
+  outline-offset: -1px;
 }
