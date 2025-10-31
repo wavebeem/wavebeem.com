@@ -18,13 +18,21 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 }
 
 export default {
-  "color-white": oklch(100, 0, 0),
-  "color-green": oklch(52, 52, 165),
   "color-black": oklch(20, 20, 40),
-  "color-gray": oklch(70, 20, 40),
-  "color-steel": oklch(90, 10, 40),
-  "color-silver": oklch(95, 10, 40),
-  "color-platinum": oklch(98, 2.5, 40),
+
+  "color-green": oklch(50, 39, 162),
+  // "color-green": oklch(74, 39, 162),
+  // "color-green": oklch(52, 52, 165),
+
+  // "color-purple": oklch(52, 52, 165),
+  "color-purple": oklch(47, 67, 288),
+
+  "color-steel": oklch(90, 1.75, 89),
+  // "color-steel": oklch(90, 10, 40),
+  "color-platinum": oklch(95, 1.75, 89),
+  // oklch(0.9583 0.007 88.64)
+  // "color-platinum": oklch(98, 2.5, 40),
+  "color-white": oklch(100, 0, 0),
 
   "syntax-text": "var(--color-black)",
   "syntax-comment": oklch(52, 30, 40),

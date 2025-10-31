@@ -27,9 +27,9 @@
   --list-inset: 2rem;
 
   --rounded-none: 0px;
-  --rounded-small: 3px;
-  --rounded-medium: 8px;
-  --rounded-large: 16px;
+  --rounded-small: 0;
+  --rounded-medium: 0;
+  --rounded-large: 0;
   --rounded-pill: 9999px;
 
   --width-copy: 45rem;
