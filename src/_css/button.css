@@ -7,13 +7,20 @@ button {
   display: inline-flex;
   font-weight: bold;
   padding: 0.25rem 1rem;
-  border-radius: var(--rounded-pill);
+  border-radius: var(--rounded-large);
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
 
-  color: var(--color-platinum);
+  text-shadow: 0 1px 0 var(--color-black);
+
+  color: var(--color-white);
+  /* text-shadow: 0 1px 0 var(--color-black); */
   background: var(--color-green);
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
+
+  border: 1px solid var(--color-black);
+  border-top-style: dotted;
+  border-left-style: dotted;
 }
 
 @media (hover) {
@@ -21,7 +28,7 @@ button {
   button:hover {
     text-decoration-line: none;
     background: var(--color-black);
-    color: var(--color-platinum);
+    color: var(--color-silver);
   }
 }
 

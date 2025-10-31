@@ -65,6 +65,12 @@ article.page {
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      background: var(--color-white);
+      padding: 8px;
+      border-radius: var(--rounded-large);
+      border: 1px solid var(--color-black);
+      border-top-style: dotted;
+      border-left-style: dotted;
     }
 
     figcaption {
@@ -77,7 +83,9 @@ article.page {
     blockquote,
     aside {
       padding: 0 1.5rem;
-      border: 1px solid var(--color-steel);
+      border: 1px solid var(--color-black);
+      border-top-style: dotted;
+      border-left-style: dotted;
       border-radius: var(--rounded-large);
       background: var(--color-white);
       max-width: max-content;

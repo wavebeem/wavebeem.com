@@ -10,11 +10,12 @@
   -webkit-font-smoothing: antialiased;
   overflow-y: scroll;
   color-scheme: light;
-  scrollbar-color: var(--color-green) var(--color-platinum);
+  scrollbar-color: var(--color-iron) transparent;
   /* overscroll-behavior: none; */
   font-synthesis: none;
-  background: var(--color-platinum);
+  background: var(--color-silver);
   color: var(--color-black);
+  text-shadow: 0 1px 0 var(--color-white);
   padding: 0;
   margin: 0;
 }
@@ -42,7 +43,7 @@ main {
 }
 
 a {
-  color: var(--color-green);
+  color: var(--color-purple);
   border-radius: var(--rounded-small);
   text-decoration-thickness: var(--link-underline-thickness);
   text-underline-offset: var(--link-underline-offset);
@@ -83,9 +84,10 @@ h1 {
 }
 
 h1::after {
-  content: " ♣️";
+  content: "\00A0♣️";
   color: transparent;
   text-shadow: 0 0 0 var(--color-green);
+  filter: drop-shadow(0 1px 0 white);
   font-size: 0.5em;
   top: -0.35em;
   position: relative;
@@ -135,8 +137,13 @@ main details {
   margin: 1.5rem 0;
   padding-inline: 1rem;
   background: var(--color-white);
-  border: 1px solid var(--color-steel);
+  border: 1px dotted var(--color-black);
+  border-right-style: solid;
   border-radius: var(--rounded-large);
+}
+
+main details:where(:last-of-type, :has(+ :not(details))) {
+  border-bottom-style: solid;
 }
 
 main details + details {
@@ -157,7 +164,7 @@ main summary {
 }
 
 main summary:hover:active::marker {
-  color: var(--color-black);
+  color: var(--color-green);
 }
 
 main details:has(> summary:focus-visible) {
@@ -189,7 +196,7 @@ main details[open] > summary {
 }
 
 .spoiler:focus {
-  color: var(--color-platinum);
+  color: var(--color-silver);
 }
 
 .spoiler:focus-visible {
@@ -241,7 +248,9 @@ video {
   background: var(--color-white);
   padding: 8px;
   border-radius: var(--rounded-large);
-  border: 1px solid var(--color-steel);
+  border: 1px solid var(--color-black);
+  border-top-style: dotted;
+  border-left-style: dotted;
 }
 
 .sharp {
@@ -275,7 +284,7 @@ article header small {
 }
 
 :focus-visible {
-  box-shadow: 0 0 0 2px var(--color-platinum);
+  box-shadow: 0 0 0 2px var(--color-silver);
   outline: 3px solid currentColor;
   outline-offset: 2px;
   text-decoration-line: none;

@@ -1,10 +1,10 @@
 .header {
   box-sizing: border-box;
-  background: var(--color-platinum);
+  background: var(--color-silver);
   color: var(--color-green);
   width: 100%;
   border-bottom: 1px solid var(--color-steel);
-  box-shadow: 0 1px 0 0 var(--color-platinum);
+  box-shadow: 0 1px 0 0 var(--color-silver);
 }
 
 .header-content {
@@ -25,6 +25,7 @@
   width: auto;
   height: calc(2rem - 6px);
   fill: currentColor;
+  filter: drop-shadow(0 1px 0 white);
 }
 
 .decoration {
@@ -32,6 +33,7 @@
 }
 
 .logo a {
+  color: inherit;
   pointer-events: initial;
   border: 0;
   margin-left: -4px;
@@ -73,7 +75,3 @@
     justify-content: space-between;
   }
 }
-
-/* .fancy-divider {
-  border-top: 1px solid var(--color-steel);
-} */

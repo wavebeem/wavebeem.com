@@ -6,7 +6,7 @@ wavebeem-balatro-pog {
   max-width: max-content;
   margin-block: 1.5rem;
   padding: var(--avatar-padding);
-  border-radius: var(--rounded-pill);
+  border-radius: 9999px;
   --t: 2px;
   --k: 0.05turn;
   --transform: translate(calc(var(--t) * var(--x)), calc(var(--t) * var(--y)))
@@ -38,7 +38,7 @@ wavebeem-balatro-pog img {
   z-index: 1;
   touch-action: none;
   display: flex;
-  border-radius: var(--rounded-pill);
+  border-radius: 9999px;
   width: var(--avatar-size);
   height: var(--avatar-size);
   border: 16px solid black;
