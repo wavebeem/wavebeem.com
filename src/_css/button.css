@@ -6,7 +6,7 @@ button {
   align-items: center;
   display: inline-flex;
   font-weight: bold;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.5rem;
   border-radius: var(--rounded-large);
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
