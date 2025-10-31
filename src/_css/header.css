@@ -1,10 +1,9 @@
 .header {
   box-sizing: border-box;
-  background: var(--color-silver);
-  color: var(--color-green);
+  background: var(--color-green);
+  color: var(--color-white);
+  border-bottom: 1px solid var(--color-black);
   width: 100%;
-  border-bottom: 1px solid var(--color-steel);
-  box-shadow: 0 1px 0 0 var(--color-silver);
 }
 
 .header-content {
@@ -45,7 +44,8 @@
 }
 
 .logo a:hover {
-  color: var(--color-black);
+  background: var(--color-black);
+  box-shadow: 0 0 0 4px var(--color-black);
 }
 
 .logo-container {

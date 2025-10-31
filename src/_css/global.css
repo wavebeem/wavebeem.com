@@ -10,7 +10,7 @@
   -webkit-font-smoothing: antialiased;
   overflow-y: scroll;
   color-scheme: light;
-  scrollbar-color: var(--color-iron) transparent;
+  scrollbar-color: var(--color-iron) var(--color-white);
   /* overscroll-behavior: none; */
   font-synthesis: none;
   background: var(--color-silver);
@@ -282,7 +282,6 @@ article header small {
 }
 
 :focus-visible {
-  box-shadow: 0 0 0 2px var(--color-silver);
   outline: 3px solid currentColor;
   outline-offset: 2px;
   text-decoration-line: none;

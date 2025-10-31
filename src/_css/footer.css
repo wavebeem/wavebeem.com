@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: space-between;
 
-  border-top: 1px solid var(--color-steel);
+  border-top: 1px dotted var(--color-black);
+  background: var(--color-steel);
 
   padding: 1rem;
 }
