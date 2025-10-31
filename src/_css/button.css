@@ -11,12 +11,8 @@ button {
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
 
-  text-shadow: 0 1px 0 var(--color-black);
-
   color: var(--color-white);
-  /* text-shadow: 0 1px 0 var(--color-black); */
   background: var(--color-green);
-  /* border: 1px solid transparent; */
 
   border: 1px solid var(--color-black);
   border-top-style: dotted;

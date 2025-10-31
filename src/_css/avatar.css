@@ -15,6 +15,8 @@
   background-color: var(--color-steel);
   border: 0;
   box-sizing: content-box;
+
+  box-shadow: 0 1px 0 var(--color-white);
 }
 
 @media (width <= 50rem) {
