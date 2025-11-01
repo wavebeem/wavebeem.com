@@ -2,7 +2,9 @@ pre:has(> code) {
   overflow-x: auto;
   margin-block: 1.5rem;
   padding: 1rem;
-  border: 1px solid var(--color-steel);
+  border: 1px solid var(--color-black);
+  border-top-style: dotted;
+  border-left-style: dotted;
   background-color: var(--color-white);
   border-radius: var(--rounded-large);
 }
