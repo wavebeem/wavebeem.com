@@ -12,7 +12,7 @@ button {
   text-decoration-thickness: var(--link-underline-thickness);
 
   color: var(--color-black);
-  background: var(--color-mint);
+  background: var(--color-green);
 
   border: 1px solid var(--color-black);
   border-top-style: dotted;
@@ -23,13 +23,18 @@ button {
   .button:hover,
   button:hover {
     text-decoration-line: none;
-    background: var(--color-honeydew);
+  }
+
+  .button:hover:where(:not(:active)),
+  button:hover:where(:not(:active)) {
+    filter: brightness(105%);
   }
 }
 
 .button:active,
 button:active {
-  scale: 95%;
+  border-style: solid;
+  filter: brightness(90%);
 }
 
 .button:focus-visible,

@@ -18,13 +18,9 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 }
 
 export default {
-  // oklch(0.2777 0.013 298.6)
   "color-black": oklch(27, 3.25, 299),
 
   "color-green": oklch(74, 38, 162),
-
-  "color-mint": oklch(74, 38, 162),
-  "color-honeydew": oklch(79, 38, 162),
 
   "color-purple": oklch(47, 67, 288),
 
