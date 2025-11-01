@@ -6,7 +6,6 @@
 
 .nav .button {
   width: 100%;
-  pointer-events: initial;
   padding: 4px 8px;
 }
 

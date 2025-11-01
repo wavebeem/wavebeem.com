@@ -16,20 +16,31 @@
   color: var(--color-black);
   padding: 0;
   margin: 0;
+  background: var(--color-silver);
+}
 
-  --c1: var(--color-silver);
-  --c2: oklch(from var(--color-silver) calc(l * 0.98) c h);
-  --s: 2px;
-  --k: calc(4 * var(--s));
-  --z: calc(var(--s) + 1px);
-  background:
-    linear-gradient(to right, transparent, var(--c1) 20% 80%, transparent),
-    radial-gradient(
-        circle at center,
-        var(--c2) 0 var(--s),
-        transparent var(--z)
-      )
-      0 0 / var(--k) var(--k) repeat var(--c1);
+@media (width >= 50rem) {
+  :root {
+    --c1: var(--color-silver);
+    --c2: oklch(from var(--color-silver) calc(l * 0.96) c h);
+    --s: 2px;
+    --k: calc(4 * var(--s));
+    --z: calc(var(--s) + 1px);
+    --w: 20%;
+    background:
+      linear-gradient(
+        to right,
+        transparent,
+        var(--c1) var(--w) calc(100% - var(--w)),
+        transparent
+      ),
+      radial-gradient(
+          circle at center,
+          var(--c2) 0 var(--s),
+          transparent var(--z)
+        )
+        0 0 / var(--k) var(--k) repeat var(--c1);
+  }
 }
 
 body {
@@ -345,6 +356,15 @@ article header small {
   max-width: initial !important;
 }
 
+img[data-aspect="square"] {
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+img[data-position="top"] {
+  object-position: 50% 0%;
+}
+
 @media (width >= 30rem) {
   .photo-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -450,6 +470,18 @@ ol > li::marker {
   font-family: var(--font-mono);
   content: counter(list-item) " ";
   font-weight: bold;
+}
+
+@media (width >= 40rem) {
+  .wide-dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 2ch;
+
+    dt {
+      margin: 0;
+    }
+  }
 }
 
 dl > dt {
