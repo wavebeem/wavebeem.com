@@ -61,6 +61,14 @@ article.page {
       margin: 1.5rem 0;
     }
 
+    ul ul {
+      margin-block: 0.5rem;
+    }
+
+    li > p {
+      margin-block: 0.5rem;
+    }
+
     figure {
       display: flex;
       flex-direction: column;
@@ -71,7 +79,7 @@ article.page {
       border: 1px solid var(--color-black);
       border-top-style: dotted;
       border-left-style: dotted;
-      max-width: max-content;
+      /* max-width: max-content; */
 
       img,
       video {
@@ -84,7 +92,11 @@ article.page {
       margin-top: -0.5rem;
       font-size: var(--font-size-small);
       text-wrap: balance;
-      font-style: italic;
+      /* font-style: italic; */
+
+      strong {
+        font-style: normal;
+      }
     }
 
     blockquote,

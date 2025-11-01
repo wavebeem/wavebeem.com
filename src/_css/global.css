@@ -133,6 +133,7 @@ pre {
   font-size: var(--font-size-code);
   font-variant-ligatures: none;
   overflow-x: auto;
+  font-style: normal;
 }
 
 :not(pre) > code {
