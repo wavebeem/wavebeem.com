@@ -23,9 +23,8 @@ export default {
   "color-green": oklch(74, 38, 162),
 
   "color-purple": oklch(47, 67, 288),
+  "color-periwinkle": oklch(85, 67, 288),
 
-  "color-iron": oklch(50, 1.75, 89),
-  "color-steel": oklch(85, 1.75, 89),
   "color-silver": oklch(95, 1.75, 89),
   "color-white": oklch(99.5, 1.75, 89),
 

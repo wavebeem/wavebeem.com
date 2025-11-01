@@ -10,7 +10,7 @@
   -webkit-font-smoothing: antialiased;
   overflow-y: scroll;
   color-scheme: light;
-  scrollbar-color: var(--color-iron) var(--color-silver);
+  scrollbar-color: var(--color-purple) var(--color-silver);
   /* overscroll-behavior: none; */
   font-synthesis: none;
   color: var(--color-black);
