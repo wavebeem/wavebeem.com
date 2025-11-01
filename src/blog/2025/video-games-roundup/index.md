@@ -36,7 +36,7 @@ for Crow's new role, were all great.
 > **Cadye-6:** \*laughs\* "Aren't you?"
 
 Also, I can't forget to mention that Lance Reddick will be dearly missed. Keith
-David did an admiral job as the new Zavala, though. I think some people had a
+David did an admirable job as the new Zavala, though. I think some people had a
 hard time accepting the combination of his personality shift along with the new
 voice, but I think Bungie had been setting us up wonderfully for it.
 
