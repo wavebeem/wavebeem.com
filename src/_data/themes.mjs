@@ -30,8 +30,8 @@ export default {
 
   "syntax-text": "var(--color-black)",
   "syntax-comment": oklch(52, 30, 40),
-  "syntax-keyword": oklch(52, 52, 345),
-  "syntax-property": oklch(52, 52, 255),
-  "syntax-string": oklch(52, 52, 165),
-  "syntax-punctuation": oklch(52, 30, 345),
+  "syntax-keyword": oklch(50, 38, 162),
+  "syntax-property": oklch(47, 67, 299),
+  "syntax-string": oklch(55, 67, 89),
+  "syntax-punctuation": oklch(57, 27, 288),
 };
