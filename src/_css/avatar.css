@@ -12,7 +12,7 @@
   border-radius: var(--rounded-pill);
   width: var(--avatar-size);
   height: var(--avatar-size);
-  background-color: var(--color-steel);
+  background-color: var(--color-periwinkle);
   border: 0;
   box-sizing: content-box;
 }

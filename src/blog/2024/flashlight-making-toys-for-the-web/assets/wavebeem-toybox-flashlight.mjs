@@ -31,7 +31,7 @@ export class WavebeemToyboxFlashlight extends HTMLElement {
         hsl(0 0% 100% / 30%) 30% 40%
       );
       position: fixed;
-      border-radius: var(--rounded-pill);
+      border-radius: 9999px;
       translate: -50% -50%;
       transform: translate(var(--x), var(--y));
       cursor: none;
@@ -62,7 +62,7 @@ export class WavebeemToyboxFlashlight extends HTMLElement {
         (event) => {
           this.#onPointerMove(event);
         },
-        { signal }
+        { signal },
       );
     }
     // Clicks inside this element toggle the flashlight
@@ -71,7 +71,7 @@ export class WavebeemToyboxFlashlight extends HTMLElement {
       (event) => {
         this.#onClick(event);
       },
-      { signal }
+      { signal },
     );
   }
 

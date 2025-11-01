@@ -11,7 +11,9 @@ description: >-
 
 ### Destiny 2: The Final Shape (2024)
 
-![](destiny2.webp)
+<figure>
+  <img src="destiny2.webp" width="1280" height="720" />
+</figure>
 
 Goodness gracious, _Destiny 2_. The previous expansion, _Lightfall_, was a
 letdown in a lot of ways. Though I wasn't upset for the same reason as the
@@ -34,7 +36,7 @@ for Crow's new role, were all great.
 > **Cadye-6:** \*laughs\* "Aren't you?"
 
 Also, I can't forget to mention that Lance Reddick will be dearly missed. Keith
-David did an admiral job as the new Zavala, though. I think some people had a
+David did an admirable job as the new Zavala, though. I think some people had a
 hard time accepting the combination of his personality shift along with the new
 voice, but I think Bungie had been setting us up wonderfully for it.
 
@@ -57,7 +59,9 @@ experience that it's been.
 
 ### Shin Megami Tensei V: Vengeance (2024)
 
-![](smtvv.webp)
+<figure>
+  <img src="smtvv.webp" width="1280" height="720" />
+</figure>
 
 I really liked the original _Shin Megami Tensei V_, perhaps more than most. I
 saw a lot of negative things about it, particularly around the story.
@@ -98,7 +102,9 @@ Apocalypse", "SMTV", and "SMTV: Vengeance").
 
 ### Balatro (2024)
 
-![](balatro.webp)
+<figure>
+  <img src="balatro.webp" width="1280" height="720" />
+</figure>
 
 Wow, this game is really fun. Incredible soundtrack. Simple concept. Base
 difficulties are easy enough that you can get your bearings and learn how to
@@ -108,7 +114,9 @@ thought it was great!).
 
 ### Cobalt Core (2023)
 
-![](cobalt-core.webp)
+<figure>
+  <img src="cobalt-core.webp" width="1280" height="720" />
+</figure>
 
 This game is super fun! I'm loving the pixel art, the music, the writing, the
 gameplay. I've been playing it "co-op" with Ash on the couch, and we discuss

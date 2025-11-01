@@ -18,7 +18,7 @@
   */
   --font-size-h1: 4rem;
   --font-size-h2: 2.5rem;
-  --font-size-h3: 2rem;
+  --font-size-h3: 1.75rem;
   --font-size-logo: 1.25rem;
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
@@ -27,9 +27,9 @@
   --list-inset: 2rem;
 
   --rounded-none: 0px;
-  --rounded-small: 3px;
-  --rounded-medium: 8px;
-  --rounded-large: 16px;
+  --rounded-small: 0;
+  --rounded-medium: 0;
+  --rounded-large: 0;
   --rounded-pill: 9999px;
 
   --width-copy: 50rem;

@@ -204,12 +204,12 @@ Chrome. It was a fun experiment, but I decided to ditch it rather than ship
 something janky.
 
 <figure>
-  <img class="frame" src="./assets/theme/float-good.webp" width="1280" height="512" />
+  <img src="./assets/theme/float-good.webp" width="1280" height="512" />
   <figcaption>Floating UI can look great with low contrast backgrounds...</figcaption>
 </figure>
 
 <figure>
-  <img class="frame" src="./assets/theme/float-bad.webp" width="1280" height="512" />
+  <img src="./assets/theme/float-bad.webp" width="1280" height="512" />
   <figcaption>...And utterly terrible with high contrast</figcaption>
 </figure>
 

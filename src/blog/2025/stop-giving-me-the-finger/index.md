@@ -169,7 +169,6 @@ change on hover.
   <img
     alt=""
     src="./assets/img/google.webp"
-    class="frame"
     width="2624"
     height="1466"
   />
@@ -185,7 +184,6 @@ input) uses the pointer cursor (👆).
   <img
     alt=""
     src="./assets/img/google-links.webp"
-    class="frame"
     width="2624"
     height="1466"
   />
@@ -202,7 +200,6 @@ click + open in new tab, control-click, command-click, and long-press.
   <img
     alt=""
     src="./assets/img/google-buttons.webp"
-    class="frame"
     width="2624"
     height="1466"
   />
@@ -220,7 +217,6 @@ in a way that could be done with a link. Oops!
   <img
     alt=""
     src="./assets/img/google-failures.webp"
-    class="frame"
     width="2624"
     height="1466"
   />

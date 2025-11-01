@@ -10,13 +10,37 @@
   -webkit-font-smoothing: antialiased;
   overflow-y: scroll;
   color-scheme: light;
-  scrollbar-color: var(--color-green) var(--color-platinum);
+  scrollbar-color: var(--color-purple) var(--color-steel);
   /* overscroll-behavior: none; */
   font-synthesis: none;
-  background: var(--color-platinum);
   color: var(--color-black);
   padding: 0;
   margin: 0;
+  background: var(--color-silver);
+}
+
+@media (width >= 50rem) {
+  :root {
+    --c1: var(--color-silver);
+    --c2: var(--color-steel);
+    --s: 2px;
+    --k: calc(4 * var(--s));
+    --z: calc(var(--s) + 1px);
+    --w: 20%;
+    background:
+      linear-gradient(
+        to right,
+        transparent,
+        var(--c1) var(--w) calc(100% - var(--w)),
+        transparent
+      ),
+      radial-gradient(
+          circle at center,
+          var(--c2) 0 var(--s),
+          transparent var(--z)
+        )
+        0 0 / var(--k) var(--k) repeat var(--c1);
+  }
 }
 
 body {
@@ -42,7 +66,7 @@ main {
 }
 
 a {
-  color: var(--color-green);
+  color: var(--color-purple);
   border-radius: var(--rounded-small);
   text-decoration-thickness: var(--link-underline-thickness);
   text-underline-offset: var(--link-underline-offset);
@@ -83,13 +107,9 @@ h1 {
 }
 
 h1::after {
-  content: " ♣️";
-  color: transparent;
-  text-shadow: 0 0 0 var(--color-green);
+  content: "\00A0::";
+  color: var(--color-green);
   font-size: 0.5em;
-  top: -0.35em;
-  position: relative;
-  vertical-align: text-bottom;
 }
 
 h2 {
@@ -101,21 +121,24 @@ h2 {
   margin-block: 4rem 0.5rem;
 }
 
-h2::before {
-  content: "{ ";
-  color: var(--color-green);
-}
-
 h2::after {
-  content: " }";
+  font-size: 0.5em;
+  content: "\00A0:.";
   color: var(--color-green);
 }
 
 h3 {
   font-style: italic;
+  font-weight: normal;
   font-family: inherit;
   font-size: var(--font-size-h3);
   margin-block: 4rem 0.5rem;
+}
+
+h3:where(:not(:has(a)))::after {
+  font-size: 0.5em;
+  content: "\00A0//";
+  color: var(--color-green);
 }
 
 code,
@@ -124,6 +147,7 @@ pre {
   font-size: var(--font-size-code);
   font-variant-ligatures: none;
   overflow-x: auto;
+  font-style: normal;
 }
 
 :not(pre) > code {
@@ -135,8 +159,13 @@ main details {
   margin: 1.5rem 0;
   padding-inline: 1rem;
   background: var(--color-white);
-  border: 1px solid var(--color-steel);
+  border: 1px dotted var(--color-black);
+  border-right-style: solid;
   border-radius: var(--rounded-large);
+}
+
+main details:where(:last-of-type, :has(+ :not(details))) {
+  border-bottom-style: solid;
 }
 
 main details + details {
@@ -157,7 +186,7 @@ main summary {
 }
 
 main summary:hover:active::marker {
-  color: var(--color-black);
+  color: var(--color-green);
 }
 
 main details:has(> summary:focus-visible) {
@@ -189,7 +218,7 @@ main details[open] > summary {
 }
 
 .spoiler:focus {
-  color: var(--color-platinum);
+  color: var(--color-silver);
 }
 
 .spoiler:focus-visible {
@@ -234,14 +263,16 @@ video {
   border-radius: 0;
   background: var(--color-white);
   padding: 1px;
-  border: 1px solid var(--color-steel);
+  border: 1px solid var(--color-black);
 }
 
 .frame {
   background: var(--color-white);
   padding: 8px;
   border-radius: var(--rounded-large);
-  border: 1px solid var(--color-steel);
+  border: 1px solid var(--color-black);
+  border-top-style: dotted;
+  border-left-style: dotted;
 }
 
 .sharp {
@@ -275,7 +306,6 @@ article header small {
 }
 
 :focus-visible {
-  box-shadow: 0 0 0 2px var(--color-platinum);
   outline: 3px solid currentColor;
   outline-offset: 2px;
   text-decoration-line: none;
@@ -325,7 +355,17 @@ article header small {
 }
 
 .photo-grid > * {
-  margin: 0;
+  margin: 0 !important;
+  max-width: initial !important;
+}
+
+img[data-aspect="square"] {
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+img[data-position="top"] {
+  object-position: 50% 0%;
 }
 
 @media (width >= 30rem) {
@@ -336,7 +376,7 @@ article header small {
 
 @media (width >= 50rem) {
   .photo-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -433,6 +473,18 @@ ol > li::marker {
   font-family: var(--font-mono);
   content: counter(list-item) " ";
   font-weight: bold;
+}
+
+@media (width >= 40rem) {
+  .wide-dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px 2ch;
+
+    dt {
+      margin: 0;
+    }
+  }
 }
 
 dl > dt {
