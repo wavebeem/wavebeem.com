@@ -4,6 +4,7 @@
   justify-content: space-between;
   border-top: 1px dotted var(--color-black);
   padding: 1rem;
+  background: var(--color-steel);
 }
 
 .footer > * {
