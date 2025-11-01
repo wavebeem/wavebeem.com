@@ -14,7 +14,13 @@
   /* overscroll-behavior: none; */
   font-synthesis: none;
   background-color: var(--color-silver);
-  --c: rgb(from var(--color-white) r g b / 30%);
+  color: var(--color-black);
+  padding: 0;
+  margin: 0;
+}
+
+:root[data-theme="dots1"] {
+  --c: oklch(from var(--color-silver) calc(l * 1.02) c h);
   --s: 45%;
   background-image:
     radial-gradient(
@@ -26,9 +32,69 @@
   background-size: 16px 16px;
   background-position: 0 0;
   background-repeat: repeat;
-  color: var(--color-black);
-  padding: 0;
-  margin: 0;
+}
+
+:root[data-theme="stripes1"] {
+  --c: oklch(from var(--color-silver) calc(l * 1.01) c h);
+  --s: 4px;
+  background-image: linear-gradient(var(--c) 0 var(--s), transparent var(--s));
+  background-size: 8px 8px;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+:root[data-theme="stripes2"] {
+  --c: oklch(from var(--color-silver) calc(l * 1.01) c h);
+  --s: 4px;
+  background-image: linear-gradient(
+    to right,
+    var(--c) 0 var(--s),
+    transparent var(--s)
+  );
+  background-size: 8px 8px;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+:root[data-theme="graph"] {
+  --s: 128px; /* control the size*/
+  --c1: oklch(from var(--color-silver) calc(l * 1.02) c h);
+  --c2: var(--color-silver);
+
+  --_g: #0000 90deg, var(--c1) 0;
+  background:
+    conic-gradient(from 90deg at 2px 2px, var(--_g)),
+    conic-gradient(from 90deg at 1px 1px, var(--_g)), var(--c2);
+  background-size:
+    var(--s) var(--s),
+    calc(var(--s) / 5) calc(var(--s) / 5);
+}
+
+:root[data-theme="lozenge"] {
+  --s: 16px; /* control the size*/
+  --c1: oklch(from var(--color-silver) calc(l * 1.01) c h);
+  --c2: var(--color-silver);
+
+  --g: #0000 45%, var(--c1) 46% 54%, #0000 55%;
+  background:
+    linear-gradient(60deg, var(--g)),
+    linear-gradient(-60deg, var(--g)) var(--c2);
+  background-size: var(--s) calc(tan(60deg) * var(--s));
+}
+
+:root[data-theme="dots2"] {
+  --c: oklch(from var(--color-silver) calc(l * 0.98) c h);
+  --s: 2px;
+  background-image:
+    radial-gradient(
+      circle at bottom,
+      var(--c) 0 var(--s),
+      transparent var(--s)
+    ),
+    radial-gradient(circle at top, var(--c) 0 var(--s), transparent var(--s));
+  background-size: 16px 16px;
+  background-position: 0 0;
+  background-repeat: repeat;
 }
 
 body {
