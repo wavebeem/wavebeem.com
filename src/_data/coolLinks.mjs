@@ -77,30 +77,30 @@ export const allLinks = [
       "インディー通信 Indie Tsushin: Highlighting indie games and developers from Japan!",
     url: "https://indietsushin.net/",
   },
-  {
-    title: "CD-ROM Journal",
-    url: "https://cdrom.ca/",
-  },
-  {
-    title: "Millie Squilly Dot Com",
-    url: "https://milliesquilly.com/",
-  },
-  {
-    title: "Lex Feathers",
-    url: "https://lexfeathers.ca/",
-  },
-  {
-    title: "zine of millie",
-    url: "https://zine.milliesquilly.com/",
-  },
+  // {
+  //   title: "CD-ROM Journal",
+  //   url: "https://cdrom.ca/",
+  // },
+  // {
+  //   title: "Millie Squilly Dot Com",
+  //   url: "https://milliesquilly.com/",
+  // },
+  // {
+  //   title: "Lex Feathers",
+  //   url: "https://lexfeathers.ca/",
+  // },
+  // {
+  //   title: "zine of millie",
+  //   url: "https://zine.milliesquilly.com/",
+  // },
   {
     title: "Froey",
     url: "https://froey.bearblog.dev/",
   },
-  {
-    title: "Damien Erambert",
-    url: "https://erambert.me/",
-  },
+  // {
+  //   title: "Damien Erambert",
+  //   url: "https://erambert.me/",
+  // },
   {
     title: "aloe dot gay",
     url: "https://aloe.gay/",
@@ -149,22 +149,22 @@ export const allLinks = [
     url: "https://srxl.me/",
     title: "welcome | srxl.me",
   },
-  {
-    title: "Dracat",
-    url: "https://drac.at/",
-  },
-  {
-    title: "Site of Jill",
-    url: "https://jillcrungus.com/",
-  },
-  {
-    title: "Josh W. Comeau",
-    url: "https://www.joshwcomeau.com/",
-  },
-  {
-    title: "anhvn",
-    url: "https://anhvn.com/",
-  },
+  // {
+  //   title: "Dracat",
+  //   url: "https://drac.at/",
+  // },
+  // {
+  //   title: "Site of Jill",
+  //   url: "https://jillcrungus.com/",
+  // },
+  // {
+  //   title: "Josh W. Comeau",
+  //   url: "https://www.joshwcomeau.com/",
+  // },
+  // {
+  //   title: "anhvn",
+  //   url: "https://anhvn.com/",
+  // },
   {
     title: "Nice Gear Games",
     url: "https://nicegear.games/",
@@ -173,22 +173,22 @@ export const allLinks = [
     title: "wow, perfect!",
     url: "https://wowperfect.net/",
   },
-  {
-    title: "MADDIEBISCUITS ART",
-    url: "https://madmaddiecomms.carrd.co/",
-  },
-  {
-    title: "Shafer Brown Illustration",
-    url: "https://www.shaferbrown.com/",
-  },
-  {
-    title: "Maddie Lim",
-    url: "https://maddie.vision/",
-  },
-  {
-    title: "2 Mello",
-    url: "https://2mello.net/",
-  },
+  // {
+  //   title: "MADDIEBISCUITS ART",
+  //   url: "https://madmaddiecomms.carrd.co/",
+  // },
+  // {
+  //   title: "Shafer Brown Illustration",
+  //   url: "https://www.shaferbrown.com/",
+  // },
+  // {
+  //   title: "Maddie Lim",
+  //   url: "https://maddie.vision/",
+  // },
+  // {
+  //   title: "2 Mello",
+  //   url: "https://2mello.net/",
+  // },
   {
     title: "jneens web site",
     url: "https://jneen.net/",
@@ -203,7 +203,7 @@ export const allLinks = [
   },
   {
     title: "AURAHACK",
-    url: "https://aurahack.jp/",
+    url: "https://aurahack.ca/",
   },
   {
     title: "goofpunk.com",
@@ -213,10 +213,10 @@ export const allLinks = [
     title: "bunp dot com",
     url: "https://bunp.neocities.org/",
   },
-  {
-    title: "sproutsnout's garden",
-    url: "https://sproutsnout.com/",
-  },
+  // {
+  //   title: "sproutsnout's garden",
+  //   url: "https://sproutsnout.com/",
+  // },
   {
     title: "meow.garden",
     url: "https://meow.garden/",

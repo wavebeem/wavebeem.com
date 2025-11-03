@@ -4,14 +4,19 @@
   box-sizing: border-box;
 }
 
+/* Scrolling offset when direct linking to an element */
+* {
+  scroll-padding-top: 1em;
+}
+
 :root {
   /* https://dbushell.com/2024/11/05/webkit-font-smoothing/ */
   /* https://www.joshwcomeau.com/css/custom-css-reset/ */
   -webkit-font-smoothing: antialiased;
+  /* Make sure scrollbars show on every page, for consistent nav bar size */
   overflow-y: scroll;
   color-scheme: light;
   scrollbar-color: var(--color-purple) var(--color-steel);
-  /* overscroll-behavior: none; */
   font-synthesis: none;
   color: var(--color-black);
   padding: 0;
@@ -22,7 +27,6 @@
 @media (width >= 60rem) {
   :root {
     --c1: var(--color-silver);
-    /* --c1: var(--color-silver); */
     --c2: var(--color-steel);
     --s: 2px;
     --k: calc(4 * var(--s));
@@ -146,6 +150,7 @@ h3 {
 }
 
 h3:where(:not(:has(a)))::after {
+  text-decoration: none;
   font-size: 0.5em;
   content: "\00A0//";
   color: var(--color-green);
