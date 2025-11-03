@@ -118,36 +118,8 @@ export const allLinks = [
     url: "https://curilagann.neocities.org/",
   },
   {
-    title: "Noctivagant",
-    url: "https://noctivagant.net/",
-  },
-  {
-    title: "easrng",
-    url: "https://easrng.net/",
-  },
-  {
-    title: "Codarobo's Webzone",
-    url: "https://codarobo.online/",
-  },
-  {
-    title: "erysdren's WWW site",
-    url: "https://erysdren.me/",
-  },
-  {
-    title: "Apple Annie’s Weblog",
-    url: "https://weblog.anniegreens.lol/",
-  },
-  {
     title: "Frills",
     url: "https://frills.dev/",
-  },
-  {
-    title: "ALAINA'S FUCK SPACE",
-    url: "https://alainawastaken.neocities.org/",
-  },
-  {
-    url: "https://srxl.me/",
-    title: "welcome | srxl.me",
   },
   // {
   //   title: "Dracat",
