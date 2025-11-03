@@ -58,9 +58,6 @@
     height: initial;
     width: 100%;
   }
-  .logo a {
-    font-size: calc(2rem + 5vw);
-  }
 
   .logo-container {
     justify-content: center;

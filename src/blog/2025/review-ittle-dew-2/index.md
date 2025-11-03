@@ -12,13 +12,15 @@ description: >-
 
 Most of the puzzles were fun and felt fair. A few puzzles felt like they
 required you to discover techniques that were completely not obvious, or
-tehcnically hard to pull off. I think accidentally performed a glitch to solve
+technically hard to pull off. I think accidentally performed a glitch to solve
 one of the puzzles (pushing a triangular block straight instead of diagonally).
 
-![](./graphics.vg.webp)
+<figure>
+  <img src="./graphics.vg.webp" alt="" width="1280" height="720" />
+</figure>
 
 I'm pretty sure I had to solve a puzzle using an advanced magic wand technique
-that wasn't demosntrated to me in the game and I only discoverd by accident
+that wasn't demonstrated to me in the game and I only discoverd by accident
 while mashing buttons.
 
 Theoretically you can do the first seven dungeons in any order, but I was happy
@@ -27,7 +29,9 @@ to take the game's suggestion on which dungeon order to use. I also skipped all
 timing-heavy in each of their first rooms, and I had already soured on the game
 a bit by the time I unlocked them.
 
-![](./raft.vg.webp)
+<figure>
+  <img src="./raft.vg.webp" alt="" width="1280" height="720" />
+</figure>
 
 ## Combat
 
@@ -37,7 +41,9 @@ that. While the game doesn't punish you especially badly for combat failure
 (respawn at the dungeon entrance, but dungeons are pretty small), you do still
 have to redo the entire fight you lost.
 
-![](./mjau.vg.webp)
+<figure>
+  <img src="./mjau.vg.webp" alt="" width="1280" height="720" />
+</figure>
 
 Also, it's possible and quite easy to accidentally walk out a door mid-combat
 and reset an entire fight when it's not a boss. This was really frustrating.
@@ -58,7 +64,9 @@ if I had tried to dodge.
 The game is almost painfully self-aware. Mostly it made me chuckle rather than
 groan. It definitely feels like a game from 2016 with this writing style, to me.
 
-![](./dialogue.vg.webp)
+<figure>
+  <img src="./dialogue.vg.webp" alt="" width="1280" height="720" />
+</figure>
 
 ## Overall
 

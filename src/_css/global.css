@@ -196,12 +196,12 @@ main summary {
 
 @media (hover) {
   main summary:hover:not(:active)::marker {
-    color: var(--color-black);
+    color: var(--color-green);
   }
 }
 
 main summary:hover:active::marker {
-  color: var(--color-green);
+  color: var(--color-black);
 }
 
 main details:has(> summary:focus-visible) {
@@ -483,9 +483,9 @@ I should file a bug later. */
   }
 }
 
-::marker {
-  color: var(--color-green);
-}
+/* ::marker {
+  color: var(--color-pink);
+} */
 
 .arrow {
   font-size: 1.25em;

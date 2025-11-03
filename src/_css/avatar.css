@@ -4,7 +4,7 @@
   float: right;
   margin: 1rem;
   margin-right: 0;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   padding: var(--avatar-padding);
   display: flex;
   position: relative;
