@@ -253,6 +253,15 @@ main ul {
   list-style-type: disc;
 }
 
+ul.inline {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
+}
+
 main ol {
   padding-left: 3rem;
 }
@@ -510,8 +519,20 @@ dl > dd {
   margin: 0;
 }
 
-dl > :is(dd + dt, dt + dt) {
+dl > dd + dd {
+  margin-top: 0.5rem;
+}
+
+dl > dd > ul {
+  margin: 0;
+}
+
+dl > dd + dt {
   margin-top: 1.5rem;
+}
+
+dt small {
+  font-weight: normal;
 }
 
 @media (prefers-reduced-motion: reduce) {

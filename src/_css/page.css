@@ -1,4 +1,4 @@
-article.page {
+article:where(.page) {
   > header,
   > section,
   > footer {
@@ -28,7 +28,7 @@ article.page {
     }
   }
 
-  > :is(section, header, footer) {
+  > :where(section, header, footer) {
     video,
     img {
       max-width: 100%;

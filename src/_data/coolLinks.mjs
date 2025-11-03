@@ -93,10 +93,10 @@ export const allLinks = [
   //   title: "zine of millie",
   //   url: "https://zine.milliesquilly.com/",
   // },
-  {
-    title: "Froey",
-    url: "https://froey.bearblog.dev/",
-  },
+  // {
+  //   title: "Froey",
+  //   url: "https://froey.bearblog.dev/",
+  // },
   // {
   //   title: "Damien Erambert",
   //   url: "https://erambert.me/",
@@ -113,14 +113,14 @@ export const allLinks = [
     title: "the melt zone",
     url: "https://meltknuckles.net/",
   },
-  {
-    title: "The web site of curilagann",
-    url: "https://curilagann.neocities.org/",
-  },
-  {
-    title: "Frills",
-    url: "https://frills.dev/",
-  },
+  // {
+  //   title: "The web site of curilagann",
+  //   url: "https://curilagann.neocities.org/",
+  // },
+  // {
+  //   title: "Frills",
+  //   url: "https://frills.dev/",
+  // },
   // {
   //   title: "Dracat",
   //   url: "https://drac.at/",
