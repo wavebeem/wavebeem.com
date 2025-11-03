@@ -19,20 +19,24 @@
   background: var(--color-silver);
 }
 
-@media (width >= 50rem) {
+@media (width >= 60rem) {
   :root {
     --c1: var(--color-silver);
+    /* --c1: var(--color-silver); */
     --c2: var(--color-steel);
     --s: 2px;
     --k: calc(4 * var(--s));
     --z: calc(var(--s) + 1px);
-    --w: 20%;
+    --w: var(--width-copy);
+    --w1: calc((100vw - var(--w)) / 2);
+    --w2: calc(var(--w1) + var(--w));
+    --o: 20vw;
     background:
       linear-gradient(
         to right,
-        transparent,
-        var(--c1) var(--w) calc(100% - var(--w)),
-        transparent
+        transparent 0 calc(var(--w1) - var(--o)),
+        var(--c1) var(--w1) var(--w2),
+        transparent calc(var(--w2) + var(--o))
       ),
       radial-gradient(
           circle at center,
@@ -78,6 +82,12 @@ a {
     --link-underline-thickness: var(--link-underline-thickness-hover);
     color: var(--color-black);
   }
+}
+
+a:active {
+  text-decoration-line: underline;
+  --link-underline-thickness: var(--link-underline-thickness-hover);
+  color: var(--color-black);
 }
 
 :is(input, select, button, textarea) {
