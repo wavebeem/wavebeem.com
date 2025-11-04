@@ -51,6 +51,10 @@
   }
 }
 
+:root[data-figure-viewer] figure img {
+  cursor: zoom-in;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -381,6 +385,10 @@ article header small {
 .photo-grid > * {
   margin: 0 !important;
   max-width: initial !important;
+}
+
+.column-span {
+  grid-column: 1 / -1;
 }
 
 img[data-aspect="square"] {
