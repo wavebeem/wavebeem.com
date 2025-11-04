@@ -29,13 +29,20 @@ const root = document.documentElement;
 // Enable JS figure image viewer
 {
   root.dataset.figureViewer = "";
-  addEventListener("click", (event) => {
+  /**
+   * @param {PointerEvent} event
+   */
+  function handler(event) {
     if (!(event.target instanceof Element)) {
       return;
     }
     const img = event.target.closest("img");
-    const figure = img.closest("figure");
-    if (!(img && figure)) {
+    const figure = img?.closest("figure");
+    const anchor = img?.closest("a");
+    if (!(img && figure && !anchor)) {
+      return;
+    }
+    if (!(event.button === 0 || event.button === 1)) {
       return;
     }
     const wantsNewTab =
@@ -46,5 +53,7 @@ const root = document.documentElement;
     } else {
       location.href = img.src;
     }
-  });
+  }
+  addEventListener("click", handler);
+  addEventListener("auxclick", handler);
 }
