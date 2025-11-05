@@ -1,7 +1,7 @@
 ---
 date: "2025-05-12"
 title: >-
-  I Need Juicier Interfaces
+  I need juicier interfaces
 description: >-
   Flat design is easier to make, but I feel like we're all malnourished from
   lack of lighting and ornamentation. I juiced up my site with more color, and

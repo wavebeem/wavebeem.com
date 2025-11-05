@@ -1,5 +1,5 @@
 ---
-title: "Recipe: Crispy Tofu"
+title: "Crispy tofu recipe"
 description: "How to make delicious crispy tofu at home."
 date: "2020-11-02"
 ---

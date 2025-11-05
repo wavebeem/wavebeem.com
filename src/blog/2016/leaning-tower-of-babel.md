@@ -1,5 +1,5 @@
 ---
-title: "The Leaning Tower of Babel"
+title: "The leaning tower of Babel"
 description: "An exploration of Babel's caveats."
 date: "2016-08-22"
 ---
@@ -34,7 +34,7 @@ acceptable in a banking app where people's money is on the line. You might
 display numbers rounded to the nearest cent, but minor errors will compound over
 time and produce problems.
 
-Babel's ES6 compatibility is like that—it's almost right. For many scenarios,
+Babel's ES6 compatibility is like that---it's almost right. For many scenarios,
 it's correct enough that you won't observe anything weird. But imagine one day
 Babel fixes its semantics, or more likely, ES6 becomes so widely supported you
 drop Babel in favor of native ES6. If you do that, your application might

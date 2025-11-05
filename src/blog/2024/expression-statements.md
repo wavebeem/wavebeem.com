@@ -1,7 +1,7 @@
 ---
 date: "2024-11-14"
 title: >-
-  Diagnosing a Common Source of Race Conditions in JS
+  Diagnosing a common source of race conditions in JS
 description: >-
   My thoughts on why expression statements can be a source of bugs—especially in
   async code—and a proposal for reviving JavaScript's nearly unused void

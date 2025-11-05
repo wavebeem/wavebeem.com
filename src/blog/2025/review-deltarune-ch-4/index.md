@@ -1,7 +1,7 @@
 ---
 date: "2025-09-14T13:09-07:00"
 title: >-
-  Review: DELTARUNE Chapter 4
+  DELTARUNE Chapter 4 cements this series as one of my favorites
 description: >-
   Now *this* is videogaming. It's fun, silly, sad, serious, and made me cry
   multiple times.

@@ -1,7 +1,7 @@
 ---
 date: "2025-03-17"
 title: >-
-  Review: Pokémon Crystal
+  I played Pokémon Crystal for the first time, 24 years after its release
 description: >-
   I just played Pokémon Crystal (2001) for the first time, despite starting with
   Pokémon Blue (1998). It looked and sounded great on the Analogue Pocket, but

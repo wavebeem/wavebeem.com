@@ -1,5 +1,6 @@
 ---
-title: "Squiggle: a JS Language"
+title:
+  "Squiggle: an immutable, value oriented, compile-to-JS programming language"
 description:
   "An introduction to Squiggle, a compile-to-JS programming language I made."
 date: "2015-07-01"

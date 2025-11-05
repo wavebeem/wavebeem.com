@@ -1,7 +1,7 @@
 ---
 date: "2025-02-15"
 title: >-
-  Review: Ittle Dew 2
+  Ittle Dew 2 failed to nail everything I love about 2D Zelda
 description: >-
   Ittle Dew 2 (2016) is an indie game clearly inspired by the 2D Legend of Zelda
   games. Frustrating combat holds it back from greatness. I loved the art and

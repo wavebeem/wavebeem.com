@@ -1,7 +1,7 @@
 ---
 date: "2025-05-04"
 title: >-
-  Theme: Jade & Lime
+  Jade & Lime: A new theme is unveiled
 description: >-
   I created a new theme to enhance the reading experience of my blog posts and
   better feature different shades of green.
@@ -20,7 +20,7 @@ and I usually end up a bit exhausted after a redesign. And even if I like it, it
 can be hard to remember that I'm just _tired_, not that I wasted my time or
 anything.
 
-![](./assets//jade-and-lime.webp)
+![](./assets/jade-and-lime.webp)
 
 ---
 

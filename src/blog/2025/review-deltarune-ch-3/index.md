@@ -1,7 +1,7 @@
 ---
 date: "2025-08-15T19:48-07:00"
 title: >-
-  Review: DELTARUNE Chapter 3
+  DELTARUNE Chapter 3 spreads its wings with increased time and budget
 description: >-
   Toby Fox and friends really outdid themselves with this one.
 ---

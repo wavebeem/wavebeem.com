@@ -1,5 +1,5 @@
 ---
-title: "Making a Language"
+title: "Making an Lisp-style programming language interpreter in JS"
 description: "How to make a programming language from scratch in JS."
 date: "2016-11-01"
 ---

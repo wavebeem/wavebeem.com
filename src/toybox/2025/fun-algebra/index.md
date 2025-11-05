@@ -1,7 +1,7 @@
 ---
 date: "2025-02-25"
 title: >-
-  I Actually Had to Use Algebra at Work One Time
+  I actually had to use algebra at work one time
 description: >-
   After trying and failing to dust off my knowledge of trigonometry, I had to
   re-learn linear equations and algebraic systems of equations in order to solve

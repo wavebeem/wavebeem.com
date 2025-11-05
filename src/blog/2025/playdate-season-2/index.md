@@ -1,7 +1,7 @@
 ---
 date: "2025-08-15T19:19-07:00"
 title: >-
-  Review: Playdate Season 2
+  Playdate Season 2 asked me to dig holes and help a dog poop
 description: >-
   A stationary shmup, an ancient aliens archaeology game, a supremely silly
   point and click adventure, and a game about becoming an extraordinarily long

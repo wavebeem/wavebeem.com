@@ -1,9 +1,9 @@
 ---
 date: "2024-11-12"
-title: "Getting Weirder with Fonts, and: Too Much of a Good Thing"
+title: "Getting weirder with fonts, and: Too much of a good thing"
 description: >-
-  PP Talisman from Pangram Pangram Foundry is my new heading font—or “cool font”
-  as I'm calling it in the code. But I'm trying not to overuse it!
+  PP Talisman from Pangram Pangram Foundry is my new heading font---or "cool
+  font" as I'm calling it in the code. But I'm trying not to overuse it!
 ---
 
 ## PP Talisman

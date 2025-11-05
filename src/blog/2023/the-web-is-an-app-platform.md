@@ -1,5 +1,5 @@
 ---
-title: "The Web is an App Platform"
+title: "The web is an app platform"
 description:
   'The web has been an app platform for most of its life. I discuss the history
   of the web and my definition of "app".'

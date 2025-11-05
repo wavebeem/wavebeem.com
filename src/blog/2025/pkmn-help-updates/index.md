@@ -1,7 +1,7 @@
 ---
 date: "2025-02-18"
 title: >-
-  Pokémon Type Calculator Updates
+  Pokémon Type Calculator updates
 description: >-
   I made a few nice updates to Pokémon Type Calculator in the last week, adding
   new features and improving clunky interfaces.

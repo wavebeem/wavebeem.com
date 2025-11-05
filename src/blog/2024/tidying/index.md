@@ -1,7 +1,7 @@
 ---
 date: "2024-12-21"
 title: >-
-  Tidying Up the Website Again
+  Tidying up the website again
 description: >-
   I took some free time to improve the desktop navigation on my website, and
   better organize information and links. Enjoy the screenshots.

@@ -1,7 +1,7 @@
 ---
 date: "2025-04-07"
 title: >-
-  Min-Maxing Dinner
+  Min-maxing dinner with my Zojirushi and Dutch oven
 description: >-
   How my Zojirushi rice cooker and my Lodge Dutch oven have helped me minimize
   effort spent on dinner while maximizing my results. And a small rant in favor

@@ -1,7 +1,7 @@
 ---
 date: "2025-02-28"
 title: >-
-  Creating a Colorized Disjoint Union of Graphs
+  Creating a colorized disjoint union of graphs
 description: >-
   I used graph traversal to implement an error detection system for a graph
   editor at a previous job.

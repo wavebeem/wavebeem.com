@@ -1,6 +1,8 @@
 ---
-title: "7 Tips for Better Bash"
-description: "You'll be writing better bash code after following these 7 tips."
+title: "7 tips for better bash"
+description:
+  "Bash is not easy or enjoyable, but it can be very useful once you understand
+  a few of its quirks"
 date: "2018-07-04"
 ---
 

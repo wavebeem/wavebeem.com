@@ -1,7 +1,7 @@
 ---
 date: "2025-02-04"
 title: >-
-  Blog Questions Challenge
+  Blog questions challenge
 description: >-
   I've been tagged to answer seven questions about my blog!
 ---

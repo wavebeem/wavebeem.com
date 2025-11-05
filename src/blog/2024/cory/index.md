@@ -1,7 +1,7 @@
 ---
 date: "2024-12-12"
 title: >-
-  Cory
+  A memorial for Cory
 description: >-
   A memorial post about Cory, one of my closest friends.
 ---

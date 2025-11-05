@@ -1,5 +1,5 @@
 ---
-title: "Mechanical Keyboards 101"
+title: "Mechanical keyboards 101: An introduction"
 description: "An introduction to the exciting world of mechanical keyboards."
 date: "2018-07-28"
 ---

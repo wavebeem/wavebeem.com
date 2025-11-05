@@ -1,6 +1,6 @@
 ---
 date: "2025-10-08T21:07-07:00"
-title: "Review: Everdeep Aurora"
+title: "Everdeep Aurora lets you explore the apocalypse as a cute kitty"
 description:
   "A cute little exploration game with no combat. Short and sweet, but also a
   bit obtuse and backtracking heavy."

@@ -1,6 +1,6 @@
 ---
 title: >-
-  Developing With Web Components
+  Developing With web components
 description: >-
   Thoughts on developing with web components from scratch; no UI libraries. This
   covers custom elements and very basic use of the `<template>` element. Shadow

@@ -1,7 +1,7 @@
 ---
 date: "2025-05-10"
 title: >-
-  CSS Obfuscation and Userstyles
+  CSS obfuscation and userstyles
 description: >-
   HTML is not an API for site visitors; do not expect stability. The days of
   userstyles are essentially over, and they're not likely to come back.

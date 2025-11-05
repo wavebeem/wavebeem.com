@@ -1,6 +1,6 @@
 ---
 date: "2025-09-12"
-title: "Review: NINJA GAIDEN: Ragebound"
+title: "NINJA GAIDEN: Ragebound sliced its way to my heart"
 description:
   "The Game Kitchen deserves a blue ribbon for this action platforming
   masterpiece. Absolutely no fluff or filler."

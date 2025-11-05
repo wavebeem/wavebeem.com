@@ -1,7 +1,7 @@
 ---
 date: "2025-06-14"
 title: >-
-  Pokémon Type Calculator UI Update
+  Pokémon Type Calculator: UI updates
 description: >-
   I overhauled the Pokémon Type Calculator UI: fixing a 12 month old bug, and
   improving contrast and readability in the design to help focus attention where

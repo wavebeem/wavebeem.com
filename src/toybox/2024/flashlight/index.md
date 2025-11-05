@@ -1,5 +1,5 @@
 ---
-title: "Flashlight"
+title: "Turning your mouse cursor into a flashlight"
 description: "Turns the lights off and navigate the page using a flashlight."
 date: "2024-01-24"
 ---

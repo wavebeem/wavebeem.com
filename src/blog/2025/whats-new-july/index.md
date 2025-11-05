@@ -1,6 +1,6 @@
 ---
 date: "2025-07-30"
-title: "What's New: July"
+title: "What's new? (July)"
 description:
   "Grand Archive TCG, Hunter × Hunter, finishing Dragon Age: The Veilguard,
   Playdate Season Two, a new site theme, and health updates."

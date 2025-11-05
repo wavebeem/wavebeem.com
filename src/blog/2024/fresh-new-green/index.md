@@ -1,7 +1,7 @@
 ---
 date: "2024-12-14"
 title: >-
-  Fresh New Green
+  Creating a fresh new green theme
 description: >-
   Exploring the process behind my fresh new green, including a design I
   discarded and the inspiration for my new style.

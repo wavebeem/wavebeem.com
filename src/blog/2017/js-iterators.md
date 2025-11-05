@@ -1,5 +1,5 @@
 ---
-title: "JavaScript Iterators and More"
+title: "Generators, iterators, and iterables in JS"
 description:
   "A comparison and overview of generators, iterators, and iterables in JS."
 date: "2017-08-27"

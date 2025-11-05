@@ -1,7 +1,7 @@
 ---
 date: "2025-03-10"
 title: >-
-  In Defense of the “for...of” Loop
+  In defense of the “for...of” Loop
 description: >-
   Despite its introduction in ES2015 and implementation in all browsers over 8.5
   years ago, I still see `.forEach` used in favor of the modern `for...of` loop.

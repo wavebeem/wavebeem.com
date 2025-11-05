@@ -1,7 +1,8 @@
 ---
-title: "Querying Shadow DOM"
+title: "How to query shadow DOM, and why you might not want to"
 description:
-  "Examples of how to query shadow DOM, and when you actually don't want to."
+  "Examples of how to query shadow DOM, and when you actually don't want to.
+  Based on real life testing with Stencil.js web components."
 date: "2024-01-27"
 ---
 

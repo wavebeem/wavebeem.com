@@ -1,7 +1,7 @@
 ---
 date: "2025-02-03"
 title: >-
-  Review: Cobalt Core
+  Cobalt Core does basically everything right
 description: >-
   I loved Cobalt Core! A deckbuilding roguelike with an engaging time loop
   story, great music, gorgeous pixel art, and fun gameplay.

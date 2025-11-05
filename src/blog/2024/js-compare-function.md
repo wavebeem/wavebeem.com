@@ -1,5 +1,5 @@
 ---
-title: "JS Compare Function"
+title: "JS compare function"
 description:
   "Exploring a small but mighty function that supercharges the JS Array sort
   method to rival Lodash's orderBy"

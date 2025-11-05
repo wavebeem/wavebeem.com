@@ -1,5 +1,5 @@
 ---
-title: "Why I Don't Like useState"
+title: "Why I don't like useState"
 description:
   "Why useState is so hard to use correctly, and what we can do about it."
 date: "2022-01-25"

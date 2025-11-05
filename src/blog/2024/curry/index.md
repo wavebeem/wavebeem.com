@@ -1,7 +1,7 @@
 ---
 date: "2024-12-30"
 title: >-
-  Curry
+  A memorial for Curry
 description: >-
   A memorial post about Curry, our beloved cat of the last 12 years.
 ---
@@ -149,11 +149,12 @@ with my Japanese friend Shuji about cats when he told me this.
 tummy and paws.**
 
 In Japanese, there's a concept of "counters", which are suffixes used with
-numbers when counting different types of things. The counter for people is 人
-(_nin_), which is read like １人 (_hitori_), ２人 (_futari_), ３人 (_san'nin_),
-４人 (_yonin_), ５人 (_gonin_), etc. For small animals the counter is 匹
-(_hiki_), which is read like １匹 (_ippiki_), ２匹 (_nihiki_), ３匹 (_sambiki_),
-４匹 (_yonhiki_), ５匹 (_gohiki_) etc.
+numbers when counting different types of things. The counter for people
+is 人 (_nin_), which is read
+like １人 (_hitori_), ２人 (_futari_), ３人 (_san'nin_), ４人 (_yonin_), ５人 (_gonin_),
+etc. For small animals the counter is 匹 (_hiki_), which is read
+like １匹 (_ippiki_), ２匹 (_nihiki_), ３匹 (_sambiki_), ４匹 (_yonhiki_), ５匹 (_gohiki_)
+etc.
 
 ![](vent.webp)
 

@@ -1,5 +1,5 @@
 ---
-title: "Mechanical Keyboards 201"
+title: "Mechanical keyboards 201: Beyond pre-built"
 description:
   "Thinking beyond pre-built gear, this guide will help prepare you to build
   your own keyboard."

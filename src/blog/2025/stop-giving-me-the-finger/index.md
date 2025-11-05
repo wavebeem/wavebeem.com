@@ -1,7 +1,7 @@
 ---
 date: "2025-09-11"
 title: >-
-  Stop Giving Me the Finger
+  Stop giving me the finger: An argument against the pointer cursor on buttons
 description: >-
   Putting the pointer cursor (👆) on every button is ugly, unnecessary, and
   dilutes its power for signaling links.

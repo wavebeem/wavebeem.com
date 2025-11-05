@@ -1,6 +1,6 @@
 ---
 date: "2025-11-01T21:48:47.458Z"
-title: "What's New: October"
+title: "What's new? (October)"
 description: "Grand Archive, Pokémon Legends Z-A, and a new site design."
 ---
 

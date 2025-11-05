@@ -1,5 +1,5 @@
 ---
-title: "Broken Promises"
+title: "Broken promises: how to use promises effectively"
 description:
   "How to use promises effectively (written before async/await existed)"
 date: "2016-12-29"

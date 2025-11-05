@@ -1,6 +1,6 @@
 ---
 date: "2025-09-20"
-title: "Review: SHINOBI: Art of Vengeance"
+title: "SHINOBI: Art of Vengeance failed to excite me"
 description:
   "An overstuffed and challenging action platformer with gorgeous hand drawn art"
 ---

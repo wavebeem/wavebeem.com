@@ -1,5 +1,5 @@
 ---
-title: "React Without JSX"
+title: "React without JSX"
 description: "A quick overview on using React without JSX or any build tools."
 date: "2017-08-11"
 ---

@@ -1,6 +1,6 @@
 ---
 date: "2025-10-08T20:43-07:00"
-title: "Review: Pipistrello and the Cursed Yoyo"
+title: "Pipistrello and the Cursed Yoyo felt like an identity crisis"
 description:
   "Waiter, there's Hollow Knight in my Zelda! I at least fumbled my way through
   using accessibility settings."

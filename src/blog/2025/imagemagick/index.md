@@ -1,7 +1,7 @@
 ---
 date: "2025-02-09"
 title: >-
-  Image Manipulation with ImageMagick
+  Automated image manipulation with ImageMagick
 description: >-
   ImageMagick is one of the best tools I've ever used for automating image
   manipulation. This post explains some of my common use cases, and links to

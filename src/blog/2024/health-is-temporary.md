@@ -1,7 +1,7 @@
 ---
 date: "2024-12-11"
 title: >-
-  Health is Temporary
+  Health is temporary
 description: >-
   After a year of chronic pain, I wish I had more relief. But I am making
   progress. I also discovered I don't even use my teeth and tongue correctly,

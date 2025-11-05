@@ -1,7 +1,7 @@
 ---
 date: "2025-01-25"
 title: >-
-  Review: Goodboy Galaxy
+  Goodboy Galaxy is an authentic GBA game, down to its faults
 description: >-
   Goodboy Galaxy (2024) is extremely cute and oozing with style, but I also got
   a little annoyed in the home stretch

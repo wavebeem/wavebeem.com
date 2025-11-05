@@ -1,7 +1,7 @@
 ---
 date: "2025-05-01"
 title: >-
-  A Balatro-style Holographic Card Hover Effect
+  A Balatro-style holographic card hover effect
 description: >-
   Balatro's hover effect on cards is the perfect example of UI juice that just
   makes you have fun without even "playing". I was inspired to do a similar

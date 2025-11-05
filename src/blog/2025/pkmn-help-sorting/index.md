@@ -1,7 +1,7 @@
 ---
 date: "2025-09-27"
 title: >-
-  Pokémon Type Calculator: Pokédex Sorting & UI Updates
+  Pokémon Type Calculator: Pokédex sorting & UI updates
 description: >-
   In addition to adding the ability to sort the Pokédex by the stat, I refined
   several aspects of the UI: most notably the type labels, space usage
