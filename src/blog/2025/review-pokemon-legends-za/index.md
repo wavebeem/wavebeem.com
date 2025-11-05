@@ -102,122 +102,122 @@ to play the sequel to the Game Boy Color game I enjoyed back in 2019.
 ## Images
 
 <figure>
-  <img src="./assets/rank-b.webp" alt="" width="1280" height="720" />
+  <img src="./assets/rank-b.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     Me climbing the ladder from Z to A!
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/sage-front.webp" alt="" width="1280" height="720" />
-  <img src="./assets/sage-back.webp" alt="" width="1280" height="720" />
+  <img src="./assets/sage-front.webp" alt="" loading="lazy" width="1280" height="720" />
+  <img src="./assets/sage-back.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     Posing for a photo shoot (night & day).
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/urbain-bump.webp" alt="" width="1280" height="720" />
+  <img src="./assets/urbain-bump.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     I can't stand Urbain at all&mdash;and for some reason everyone wants to fist bump you in this game.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/alpha-weedle.webp" alt="" width="1600" height="900" />
+  <img src="./assets/alpha-weedle.webp" alt="" loading="lazy" width="1600" height="900" />
   <figcaption>
     An Alpha Weedle from a side quest.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/art.webp" alt="" width="1280" height="720" />
+  <img src="./assets/art.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     Still from a gorgeous hand drawn cutscene about AZ.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/canari-yell.webp" alt="" width="1280" height="720" />
+  <img src="./assets/canari-yell.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     Canari, the Electric streamer... not to be confused with Iono.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/corbeau-bump.webp" alt="" width="1280" height="720" />
+  <img src="./assets/corbeau-bump.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     Corbeau really grew on me, with his <q>thief with a heart of gold</q> vibe.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/gender.webp" alt="" width="1280" height="720" />
+  <img src="./assets/gender.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     Gender/pronouns are still determined based on the hair length/side of the character picker...
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/jacinthe.webp" alt="" width="1280" height="720" />
+  <img src="./assets/jacinthe.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     Jacinthe perfectly embodies the Fairy type&mdash;cute, magical, passionate, and unpredictable.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/lebanne.webp" alt="" width="1280" height="720" />
+  <img src="./assets/lebanne.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     Lebanne's true nature on display&mdash;vicious and rowdy.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/lida-smile.webp" alt="" width="1280" height="720" />
+  <img src="./assets/lida-smile.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     Lida was my favorite Team MZ member&mdash;she has actual leadership skills and a contagious smile.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/mable-look.webp" alt="" width="1280" height="720" />
-  <img src="./assets/mable-think.webp" alt="" width="1280" height="720" />
+  <img src="./assets/mable-look.webp" alt="" loading="lazy" width="1280" height="720" />
+  <img src="./assets/mable-think.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     Mable flips the script on the typical Pokémon Professor&mdash;I love her rowdy attitude and secret past.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/mega-barbaracle.webp" alt="" width="1280" height="720" />
+  <img src="./assets/mega-barbaracle.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     Barbacle is probably my least favorite Pokémon, but the <q>biblically accurate angel</q> vibes of its new Mega Evolution really worked for me!
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/mega-starmie.webp" alt="" width="1280" height="720" />
+  <img src="./assets/mega-starmie.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     The Internet loves Mega Starmie&mdash;and so do I!
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/multiplayer.webp" alt="" width="1280" height="720" />
+  <img src="./assets/multiplayer.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     The multiplayer experience of <q>carefully taken photo</q> vs 3 guys with default avatars.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/type-combos.webp" alt="" width="1280" height="720" />
+  <img src="./assets/type-combos.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     Somebody needs to get this guy to the <a href="https://pkmn.help">Pokémon Type Calculator</a> immediately.
   </figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/arceus.webp" alt="" width="1280" height="720" />
-  <img src="./assets/arceus2.webp" alt="" width="1280" height="720" />
+  <img src="./assets/arceus.webp" alt="" loading="lazy" width="1280" height="720" />
+  <img src="./assets/arceus2.webp" alt="" loading="lazy" width="1280" height="720" />
   <figcaption>
     I miss the graphical style from Pokémon Legends: Arceus.
   </figcaption>

@@ -56,7 +56,7 @@ for await (const file of new Glob(`${globRoots}/**/*.{jpg,jpeg}`, {})) {
     const dest = `${base}.webp`;
     if (flag === "force" || !existsSync(dest)) {
       console.log(file);
-      await run("magick", file, "-resize", "1280>", dest);
+      await run("magick", file, "-resize", "1280>", "-quality", "90", dest);
     }
   }
 }
