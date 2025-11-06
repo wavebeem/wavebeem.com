@@ -7,6 +7,14 @@ description: >-
   Legends: Arceus, but I still enjoyed much of my 60 hours.
 ---
 
+---
+
+A [Potemkin village](https://en.wikipedia.org/wiki/Potemkin_village), according
+to Wikipedia:
+
+> [...] is a construction [...] to provide an external façade to a situation, to
+> make people believe that the situation is better than it actually is.
+
 ## Thoughts
 
 This game has that _Breath of the Wild_ juice: there's always _another little
@@ -67,11 +75,9 @@ to play the sequel to the Game Boy Color game I enjoyed back in 2019.
 
 - Brutally long "on rails" tutorial segment for the first few hours
 
-- Urbaine/Taunie continues the tradition of annoying and braindead ally "rivals"
+- Urbain/Taunie continues the tradition of annoying and braindead ally "rivals"
 
-- Lumiose City is flat,
-  [unconvincing](https://en.wikipedia.org/wiki/Potemkin_village), and
-  uninteresting
+- Lumiose City is flat, unconvincing, and uninteresting
 
 - You can enter almost zero of the buildings
 
