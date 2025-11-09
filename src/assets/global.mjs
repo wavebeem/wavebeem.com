@@ -69,6 +69,7 @@ const root = document.documentElement;
     dialog.textContent = "";
     dialog.append(newImg);
     history.pushState({ type: "figure-viewer.dialog-open" }, "");
+    dialog.scrollTop = 0;
     dialog.showModal();
   });
 }
