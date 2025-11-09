@@ -5,7 +5,7 @@ const root = document.documentElement;
   const url = new URL(location.href);
   const theme = url.searchParams.get("theme");
   if (theme) {
-    document.documentElement.dataset.theme = theme;
+    root.dataset.theme = theme;
   }
 }
 
@@ -29,10 +29,31 @@ const root = document.documentElement;
 // Enable JS figure image viewer
 {
   root.dataset.figureViewer = "";
-  /**
-   * @param {PointerEvent} event
-   */
-  function handler(event) {
+  const dialog = document.createElement("dialog");
+  dialog.className = "figure-viewer";
+  dialog.addEventListener("click", (event) => {
+    dialog.close();
+  });
+  dialog.addEventListener("close", (event) => {
+    if (history.state && history.state.type === "figure-viewer.dialog-open") {
+      history.back();
+    }
+    dialog.close();
+  });
+  addEventListener("popstate", (event) => {
+    if (
+      event.state &&
+      event.state.type === "figure-viewer.dialog-closed" &&
+      dialog.open
+    ) {
+      dialog.close();
+    }
+  });
+  document.body.append(dialog);
+
+  history.replaceState({ type: "figure-viewer.dialog-closed" }, "");
+
+  addEventListener("click", (event) => {
     if (!(event.target instanceof Element)) {
       return;
     }
@@ -42,18 +63,12 @@ const root = document.documentElement;
     if (!(img && figure && !anchor)) {
       return;
     }
-    if (!(event.button === 0 || event.button === 1)) {
-      return;
-    }
-    const wantsNewTab =
-      event.shiftKey || event.metaKey || event.ctrlKey || event.button === 1;
     event.preventDefault();
-    if (wantsNewTab) {
-      window.open(img.src, "_blank");
-    } else {
-      location.href = img.src;
-    }
-  }
-  addEventListener("click", handler);
-  addEventListener("auxclick", handler);
+    const newImg = img.cloneNode(true);
+    newImg.className = "";
+    dialog.textContent = "";
+    dialog.append(newImg);
+    history.pushState({ type: "figure-viewer.dialog-open" }, "");
+    dialog.showModal();
+  });
 }

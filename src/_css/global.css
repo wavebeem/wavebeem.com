@@ -491,10 +491,6 @@ I should file a bug later. */
   }
 }
 
-/* ::marker {
-  color: var(--color-pink);
-} */
-
 .arrow {
   font-size: 1.25em;
   color: var(--color-green);
