@@ -26,7 +26,7 @@ aesthetic across the app interfaces (See this
 for more).
 
 <figure>
-  <div class="photo-wrap">
+  <div class="layout-col2">
     <img src="./assets/ios6.webp" width="237" height="420" />
     <img src="./assets/ios7.webp" width="237" height="420" />
   </div>
@@ -101,7 +101,7 @@ its light onto the edges of the navigation
 </figure>
 
 <figure>
-  <div class="photo-wrap">
+  <div class="layout-col2">
     <img src="./assets/mobile1.webp" width="360" height="700" />
     <img src="./assets/mobile2.webp" width="360" height="700" />
   </div>
