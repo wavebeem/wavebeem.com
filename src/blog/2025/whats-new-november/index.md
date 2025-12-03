@@ -103,9 +103,13 @@ Oh, and our power went out _twice_. Super annoying!
 
 ## This month has been a blur
 
-I honestly can barely remember what I did this month. I mentioned last month
-that my "next" games would be NINJA GAIDEN 4 and Shin Megami Tensei IV... but I
-somehow haven't even started those.
+I honestly can barely remember what I did this month. I guess I spent a _lot_ of
+time watching Ash play
+[The Hundred Line -Last Defense Academy-](https://store.steampowered.com/app/3014080/The_Hundred_Line_Last_Defense_Academy/).
+It's still good, but boy is it massive.
+
+I mentioned last month that my "next" games would be NINJA GAIDEN 4 and Shin
+Megami Tensei IV... but I somehow haven't even started those.
 
 I did buy Kirby Air Riders, but I don't like it as much as I hoped I would.
 Maybe I'll write a review for it after I've spent more time with it.
