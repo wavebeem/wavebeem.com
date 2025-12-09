@@ -53,6 +53,12 @@
 
 :root[data-figure-viewer] figure img {
   cursor: zoom-in;
+
+  &:hover {
+    opacity: 0.9;
+    outline-color: var(--color-black);
+    outline-style: dotted;
+  }
 }
 
 body {
@@ -257,13 +263,26 @@ main ul {
   list-style-type: disc;
 }
 
-ul.inline {
+.hash-nav {
   padding: 0;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 1rem;
+  gap: 0.5rem;
+
+  a {
+    border-width: 1px;
+    border-style: dotted solid solid dotted;
+    text-decoration-line: none;
+    line-height: 1.15;
+    padding: 0 0.25rem;
+    background-color: var(--color-white);
+
+    &:focus-visible {
+      outline-offset: -1px;
+    }
+  }
 }
 
 main ol {
