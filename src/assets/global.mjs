@@ -78,16 +78,20 @@ const root = document.documentElement;
   });
 }
 
-if (0) {
+{
   const y = [];
   addEventListener(
     "scroll",
-    (event) => {
+    () => {
       y.unshift(root.scrollTop);
       y.length = Math.min(y.length, 3);
-      root.dataset.y = y.join(" ");
-      root.dataset.sticky = Boolean(y[2] < y[1] < y[0]);
-      console.log(y);
+      root.dataset.sticky =
+        // Insufficient data
+        y.length < 3 ||
+        // Near top
+        y[0] < 50 ||
+        // Scrolling up
+        (y[0] < y[1] && y[1] < y[2]);
     },
     { passive: true },
   );
