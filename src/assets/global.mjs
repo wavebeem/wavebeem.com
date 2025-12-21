@@ -84,14 +84,14 @@ const root = document.documentElement;
     "scroll",
     () => {
       y.unshift(root.scrollTop);
-      y.length = Math.min(y.length, 3);
-      root.dataset.sticky =
-        // Insufficient data
-        y.length < 3 ||
-        // Near top
-        y[0] < 50 ||
-        // Scrolling up
-        (y[0] < y[1] && y[1] < y[2]);
+      let isNearTop = y[0] < 50;
+      const maxData = 3;
+      // TODO: Require more scrolling data so it it isn't jumpy on mobile, or
+      // something...
+      y.length = Math.min(y.length, maxData);
+      let insufficientData = y.length < maxData;
+      let isScrollingUp = y[0] < y[1] && y[1] < y[2];
+      root.dataset.sticky = insufficientData || isNearTop || isScrollingUp;
     },
     { passive: true },
   );
