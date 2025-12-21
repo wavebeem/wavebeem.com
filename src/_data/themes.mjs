@@ -27,9 +27,9 @@ export default {
   "color-purple": oklch(47, 67, 288),
   "color-periwinkle": oklch(85, 67, 288),
 
-  "color-steel": oklch(91, 1.75, 89),
-  "color-silver": oklch(95, 1.75, 89),
-  "color-white": oklch(99.5, 1.75, 89),
+  "color-steel": oklch(92, 0.5, 68),
+  "color-silver": oklch(94, 0.5, 68),
+  "color-white": oklch(99.5, 0.5, 68),
 
   "syntax-text": "var(--color-black)",
   "syntax-keyword": oklch(52, 60, 260),

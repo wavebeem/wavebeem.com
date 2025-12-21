@@ -77,3 +77,18 @@ const root = document.documentElement;
     // dialog.showModal();
   });
 }
+
+if (0) {
+  const y = [];
+  addEventListener(
+    "scroll",
+    (event) => {
+      y.unshift(root.scrollTop);
+      y.length = Math.min(y.length, 3);
+      root.dataset.y = y.join(" ");
+      root.dataset.sticky = Boolean(y[2] < y[1] < y[0]);
+      console.log(y);
+    },
+    { passive: true },
+  );
+}

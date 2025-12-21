@@ -16,7 +16,7 @@
   /* Make sure scrollbars show on every page, for consistent nav bar size */
   overflow-y: scroll;
   color-scheme: light;
-  scrollbar-color: var(--color-purple) var(--color-steel);
+  scrollbar-color: var(--color-purple) transparent;
   font-synthesis: none;
   color: var(--color-black);
   padding: 0;
@@ -37,17 +37,18 @@
     --o: 20vw;
     background:
       linear-gradient(
-        to right,
-        transparent 0 calc(var(--w1) - var(--o)),
-        var(--c1) var(--w1) var(--w2),
-        transparent calc(var(--w2) + var(--o))
-      ),
+          to right,
+          transparent 0 calc(var(--w1) - var(--o)),
+          var(--c1) var(--w1) var(--w2),
+          transparent calc(var(--w2) + var(--o))
+        )
+        fixed,
       radial-gradient(
           circle at center,
           var(--c2) 0 var(--s),
           transparent var(--z)
         )
-        0 0 / var(--k) var(--k) repeat var(--c1);
+        0 0 / var(--k) var(--k) repeat var(--c1) fixed;
   }
 }
 

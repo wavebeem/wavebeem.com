@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-top: 1px dotted var(--color-black);
   padding: 1rem;
-  background: var(--color-steel);
+  margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 
 .footer > * {
   margin-inline: auto;
+  max-width: max-content;
 }

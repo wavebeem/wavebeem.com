@@ -1,9 +1,5 @@
 .header {
-  box-sizing: border-box;
-  background: var(--color-green);
-  color: var(--color-black);
-  border-bottom: 1px dotted var(--color-black);
-  position: relative;
+  background: var(--color-silver);
 }
 
 .header-content {
@@ -11,8 +7,12 @@
   flex-direction: column;
   padding: 1rem;
   gap: 1rem;
-  max-width: var(--width-heading);
-  margin-inline: auto;
+
+  box-sizing: border-box;
+  background: var(--color-green);
+  color: var(--color-black);
+
+  border-bottom: 3px solid var(--color-black);
 }
 
 .logo {
@@ -68,5 +68,27 @@
   .header-content {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  :root[data-sticky="true"] .header {
+    position: sticky;
+  }
+}
+
+@media (width >= 60rem) {
+  .header-content {
+    border: 1px solid var(--color-black);
+    border-style: dotted solid solid dotted;
+    /* box-shadow: 0 4px 0 -2px currentColor; */
+    box-shadow: 0 3px 0 -1px rgb(from var(--color-black) r g b / 20%);
+  }
+
+  .header {
+    width: 100%;
+    max-width: var(--width-heading);
+    margin-inline: auto;
+    padding-top: 1rem;
+    top: 0;
+    z-index: 1;
   }
 }
