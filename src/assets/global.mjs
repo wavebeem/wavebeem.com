@@ -78,21 +78,31 @@ const root = document.documentElement;
   });
 }
 
-{
-  const y = [];
-  addEventListener(
-    "scroll",
-    () => {
-      y.unshift(root.scrollTop);
-      let isNearTop = y[0] < 50;
-      const maxData = 3;
-      // TODO: Require more scrolling data so it it isn't jumpy on mobile, or
-      // something...
-      y.length = Math.min(y.length, maxData);
-      let insufficientData = y.length < maxData;
-      let isScrollingUp = y[0] < y[1] && y[1] < y[2];
-      root.dataset.sticky = insufficientData || isNearTop || isScrollingUp;
-    },
-    { passive: true },
-  );
-}
+// {
+//   const y = [];
+//   const header = document.querySelector("header.header");
+//   const headerHeight = header.clientHeight;
+//   addEventListener(
+//     "scroll",
+//     () => {
+//       y.unshift(root.scrollTop);
+//       const isNearTop = y[0] < headerHeight;
+//       const maxData = 3;
+//       // TODO: Require more scrolling data so it it isn't jumpy on mobile, or
+//       // something...
+//       y.length = Math.min(y.length, maxData);
+//       const insufficientData = y.length < maxData;
+//       const isScrollingUp = y
+//         .slice(0, maxData - 1)
+//         .every((_, i) => y[i] < y[i + 1]);
+//       const dy = y.at(-1) - y.at(0);
+//       const hasScrolledUpEnough = true;
+//       // const hasScrolledUpEnough = dy > 16;
+//       console.log("isScrollingUp?", isScrollingUp, y);
+//       // let isScrollingUp = y[0] < y[1] && y[1] < y[2];
+//       root.dataset.sticky =
+//         insufficientData || isNearTop || (isScrollingUp && hasScrolledUpEnough);
+//     },
+//     { passive: true },
+//   );
+// }
