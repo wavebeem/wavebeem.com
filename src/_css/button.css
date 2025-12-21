@@ -18,7 +18,7 @@ button {
   border-top-style: dotted;
   border-left-style: dotted;
 
-  box-shadow: 0 3px 0 -1px rgb(from var(--color-black) r g b / 20%);
+  /* box-shadow: 0 3px 0 -1px rgb(from var(--color-black) r g b / 20%); */
 }
 
 @media (hover) {

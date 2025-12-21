@@ -2,7 +2,7 @@
   background: var(--color-silver);
 }
 
-/* :where(:root[data-sticky]) .header {
+:where(:root[data-sticky]) .header {
   top: 0;
   position: sticky;
   z-index: 1;
@@ -12,7 +12,7 @@
 
 :root[data-sticky="false"] .header {
   translate: 0% calc(-100% - 2px);
-} */
+}
 
 @media (prefers-reduced-motion: reduce) {
   .header {
@@ -37,7 +37,7 @@
   color: var(--color-black);
 
   border-bottom: 1px solid var(--color-black);
-  box-shadow: 0 3px 0 -1px rgb(from var(--color-black) r g b / 20%);
+  /* box-shadow: 0 3px 0 -1px rgb(from var(--color-black) r g b / 20%); */
 }
 
 .logo {
