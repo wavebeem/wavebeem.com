@@ -36,8 +36,11 @@
   background: var(--color-green);
   color: var(--color-black);
 
-  border-bottom: 1px solid var(--color-black);
-  /* box-shadow: 0 3px 0 -1px rgb(from var(--color-black) r g b / 20%); */
+  border-radius: 0 0 var(--rounded-large) var(--rounded-large);
+
+  border-bottom: 1px solid var(--color-border-heavy);
+
+  /* box-shadow: 0 3px 0 -1px var(--color-border-faint); */
 }
 
 .logo {
@@ -60,7 +63,7 @@
   pointer-events: initial;
   padding: 0;
   line-height: 1;
-  border-radius: var(--rounded-medium);
+  border-radius: 0;
   text-decoration-line: none;
   width: 100%;
   padding-top: 4px;
@@ -103,9 +106,11 @@
 
 @media (width >= 60rem) {
   .header-content {
+    border-radius: var(--rounded-large);
+
     padding: 1rem;
     border: 1px solid var(--color-black);
-    border-style: dotted solid solid dotted;
+    border-color: var(--border-colors);
   }
 
   .header {

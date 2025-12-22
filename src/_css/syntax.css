@@ -3,8 +3,7 @@ pre:has(> code) {
   margin-block: 1.5rem;
   padding: 1rem;
   border: 1px solid var(--color-black);
-  border-top-style: dotted;
-  border-left-style: dotted;
+  border-color: var(--border-colors);
   background-color: var(--color-white);
   border-radius: var(--rounded-large);
 }

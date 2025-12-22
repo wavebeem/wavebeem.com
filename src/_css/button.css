@@ -6,19 +6,18 @@ button {
   align-items: center;
   display: inline-flex;
   font-weight: bold;
+  font-style: italic;
   padding: 8px 16px;
-  border-radius: var(--rounded-large);
+  border-radius: var(--rounded-medium);
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
+  line-height: 1.25;
 
   color: var(--color-black);
   background: var(--color-green);
 
   border: 1px solid var(--color-black);
-  border-top-style: dotted;
-  border-left-style: dotted;
-
-  /* box-shadow: 0 3px 0 -1px rgb(from var(--color-black) r g b / 20%); */
+  border-color: var(--border-colors);
 }
 
 @media (hover) {
@@ -30,6 +29,7 @@ button {
   .button:hover:where(:not(:active)),
   button:hover:where(:not(:active)) {
     filter: brightness(105%);
+    box-shadow: 0 3px 0 -1px var(--color-border-faint);
   }
 }
 

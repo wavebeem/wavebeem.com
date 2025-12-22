@@ -58,7 +58,7 @@ img[src*=".gbc."] {
 
 @media (width <= 50rem) {
   .gbc-frame {
-    border-width: 16px;
+    border-width: 8px;
   }
 }
 

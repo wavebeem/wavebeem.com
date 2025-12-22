@@ -48,7 +48,8 @@ article:where(.page) {
       color: inherit;
       width: 100%;
 
-      border-top: 1px dotted var(--color-black);
+      border-top: 1px solid var(--color-black);
+      border-color: var(--border-colors);
     }
 
     :where(.paragraph),
@@ -77,8 +78,8 @@ article:where(.page) {
       padding: 8px;
       border-radius: var(--rounded-large);
       border: 1px solid var(--color-black);
-      border-top-style: dotted;
-      border-left-style: dotted;
+      border-color: var(--border-colors);
+
       /* max-width: max-content; */
 
       img,
@@ -103,8 +104,7 @@ article:where(.page) {
     aside {
       padding: 0 1.5rem;
       border: 1px solid var(--color-black);
-      border-top-style: dotted;
-      border-left-style: dotted;
+      border-color: var(--border-colors);
       border-radius: var(--rounded-large);
       background: var(--color-white);
       max-width: max-content;

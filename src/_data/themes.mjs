@@ -20,6 +20,11 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 export default {
   "color-black": oklch(27, 3.25, 299),
 
+  "color-border-faint": oklch(27, 3.25, 299, 10),
+  "color-border-light": oklch(27, 3.25, 299, 20),
+  "color-border-medium": oklch(27, 3.25, 299, 40),
+  "color-border-heavy": oklch(27, 3.25, 299, 60),
+
   "color-green": oklch(74, 38, 162),
 
   "color-pink": oklch(71, 50, 345),

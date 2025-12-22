@@ -57,8 +57,7 @@
 
   &:hover {
     opacity: 0.9;
-    outline-color: var(--color-black);
-    outline-style: dotted;
+    outline-color: var(--color-border-light);
   }
 }
 
@@ -185,9 +184,13 @@ main details {
   margin: 1.5rem 0;
   padding-inline: 1rem;
   background: var(--color-white);
-  border: 1px dotted var(--color-black);
-  border-right-style: solid;
+  border: 1px solid var(--color-black);
+  border-color: var(--border-colors);
   border-radius: var(--rounded-large);
+}
+
+main details:hover {
+  z-index: 100;
 }
 
 main details:where(:last-of-type, :has(+ :not(details))) {
@@ -273,8 +276,8 @@ main ul {
   gap: 0.5rem;
 
   a {
-    border-width: 1px;
-    border-style: dotted solid solid dotted;
+    border: 1px solid var(--color-black);
+    border-color: var(--border-colors);
     text-decoration-line: none;
     line-height: 1.15;
     padding: 0 0.25rem;
@@ -304,7 +307,7 @@ canvas,
 img,
 video {
   display: block;
-  border-radius: var(--rounded-large);
+  border-radius: calc(var(--rounded-large) - 8px);
 }
 
 .border {
@@ -319,8 +322,7 @@ video {
   padding: 8px;
   border-radius: var(--rounded-large);
   border: 1px solid var(--color-black);
-  border-top-style: dotted;
-  border-left-style: dotted;
+  border-color: var(--border-colors);
 }
 
 .sharp {

@@ -5,8 +5,7 @@
   background: var(--color-white);
   border-radius: var(--rounded-large);
   border: 1px solid var(--color-black);
-  border-top-style: dotted;
-  border-left-style: dotted;
+  border-color: var(--border-colors);
 
   > :first-child {
     margin-top: 0;
@@ -47,7 +46,14 @@ ul.card {
       }
     }
     + li {
-      border-top: 1px dotted var(--color-black);
+      border-top: 1px solid var(--color-border-faint);
+      border-image: linear-gradient(
+          to right,
+          transparent 0 16px,
+          var(--color-border-faint) 0 calc(100% - 16px),
+          transparent 0
+        )
+        1;
     }
   }
 }
