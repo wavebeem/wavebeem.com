@@ -29,7 +29,7 @@
 .header-content {
   display: flex;
   flex-direction: column;
-  padding: 0.5rem;
+  padding: 1rem;
   gap: 1rem;
 
   box-sizing: border-box;
@@ -78,7 +78,7 @@
   gap: 1rem;
 }
 
-@media (width < 40rem) {
+@media (width < 35rem) {
   .logo svg {
     height: initial;
     width: 100%;
@@ -89,8 +89,9 @@
   }
 }
 
-@media (width >= 40rem) {
+@media (width >= 35rem) {
   .header-content {
+    padding: 1rem;
     flex-direction: row;
     justify-content: space-between;
   }
