@@ -29,7 +29,7 @@
 .header-content {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0.5rem;
   gap: 1rem;
 
   box-sizing: border-box;
@@ -102,6 +102,7 @@
 
 @media (width >= 60rem) {
   .header-content {
+    padding: 1rem;
     border: 1px solid var(--color-black);
     border-style: dotted solid solid dotted;
   }
