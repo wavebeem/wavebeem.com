@@ -18,24 +18,22 @@
   > :last-child {
     margin-bottom: 0;
   }
-
-  + .card {
-    /* margin-top: -0.5rem; */
-  }
 }
 
 ul.card {
+  --card-padding-x: 16px;
+  --card-padding-y: 8px;
+  --card-border-offset: 8px;
+
   display: block;
   list-style-type: none;
   max-width: initial;
-  /* padding: 0.5rem 1rem; */
   padding: 0;
 
   > li {
     a {
       display: block;
-      padding-block: 0.5rem;
-      padding: 0.5rem 1rem;
+      padding: var(--card-padding-y) var(--card-padding-x);
 
       &:not(:hover) {
         text-decoration-line: none;
@@ -49,11 +47,17 @@ ul.card {
       border-top: 1px solid var(--color-border-faint);
       border-image: linear-gradient(
           to right,
-          transparent 0 16px,
-          var(--color-border-faint) 0 calc(100% - 16px),
+          transparent 0 var(--card-border-offset),
+          var(--color-border-faint) 0 calc(100% - var(--card-border-offset)),
           transparent 0
         )
         1;
     }
   }
+}
+
+ul.card[data-size="large"] {
+  --card-padding-x: 16px;
+  --card-padding-y: 16px;
+  --card-border-offset: 8px;
 }
