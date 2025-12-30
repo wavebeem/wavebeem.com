@@ -506,10 +506,26 @@ I should file a bug later. */
   margin-inline: 0.25em;
 }
 
-ol > li::marker {
+ol > li {
+  position: relative;
+  list-style-type: none;
+}
+
+ol > li::before {
+  --size: 3ch;
+  left: calc(-1 * (var(--size) + 0.5rem));
+  width: 3ch;
+  top: 2px;
+
+  position: absolute;
+  display: inline;
+  font-size: var(--font-size-small);
   font-family: var(--font-mono);
-  content: counter(list-item) " ";
+  content: counter(list-item) "";
   font-weight: bold;
+  background: var(--color-border-faint);
+  text-align: center;
+  border-radius: var(--rounded-pill);
 }
 
 @media (width >= 40rem) {
