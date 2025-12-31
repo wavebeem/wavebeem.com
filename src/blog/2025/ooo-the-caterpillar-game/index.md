@@ -1,7 +1,7 @@
 ---
-date: "2025-12-31T05:38:22.493Z"
+date: "2025-12-31T06:04:13.022Z"
 title: "The cute caterpillar game: Öoo"
-subtitle:
+description:
   "Nama Takahashi does it again! A perfect bite-sized puzzle platformer."
 ---
 
