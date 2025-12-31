@@ -58,6 +58,11 @@ to = "/button.webp"
 status = 307
 
 [[redirects]]
+from = "/blog/2025/bonne-maman-advent-2025/"
+to = "/blog/2025/bonne-maman-advent-calendar/"
+status = 307
+
+[[redirects]]
 from = "/blog/2025/an-ode-to-zojirushi/"
 to = "/blog/2025/min-maxing-dinner/"
 status = 307
