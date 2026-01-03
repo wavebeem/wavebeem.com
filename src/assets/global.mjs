@@ -19,6 +19,7 @@ const search = new URLSearchParams(location.search);
     "wednesday",
     "thursday",
     "friday",
+    "saturday",
   ];
   const date = new Date();
   root.dataset.year = date.getFullYear();
@@ -30,30 +31,6 @@ const search = new URLSearchParams(location.search);
 // Enable JS figure image viewer
 {
   root.dataset.figureViewer = "";
-  // const dialog = document.createElement("dialog");
-  // dialog.className = "figure-viewer";
-  // dialog.addEventListener("click", (event) => {
-  //   dialog.close();
-  // });
-  // dialog.addEventListener("close", (event) => {
-  //   if (history.state && history.state.type === "figure-viewer.dialog-open") {
-  //     history.back();
-  //   }
-  //   dialog.close();
-  // });
-  // addEventListener("popstate", (event) => {
-  //   if (
-  //     event.state &&
-  //     event.state.type === "figure-viewer.dialog-closed" &&
-  //     dialog.open
-  //   ) {
-  //     dialog.close();
-  //   }
-  // });
-  // document.body.append(dialog);
-
-  // history.replaceState({ type: "figure-viewer.dialog-closed" }, "");
-
   addEventListener("click", (event) => {
     if (!(event.target instanceof Element)) {
       return;
@@ -66,16 +43,6 @@ const search = new URLSearchParams(location.search);
     }
     event.preventDefault();
     location.href = img.src;
-
-    // TODO: Figure this 💩 out eventually
-
-    // const newImg = img.cloneNode(true);
-    // newImg.className = "";
-    // dialog.textContent = "";
-    // dialog.append(newImg);
-    // history.pushState({ type: "figure-viewer.dialog-open" }, "");
-    // dialog.scrollTop = 0;
-    // dialog.showModal();
   });
 }
 
