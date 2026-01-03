@@ -36,7 +36,7 @@
   }
 
   .footer .top:hover:where(:not(:active)) {
-    filter: brightness(105%);
+    filter: brightness(102%);
     box-shadow: 0 3px 0 -1px var(--color-border-faint);
   }
 }
