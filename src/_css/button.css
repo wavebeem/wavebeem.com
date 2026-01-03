@@ -6,7 +6,7 @@ button {
   align-items: center;
   display: inline-flex;
   font-weight: bold;
-  font-style: italic;
+  /* font-style: italic; */
   padding: 8px 16px;
   border-radius: var(--rounded-medium);
   text-decoration-line: none;

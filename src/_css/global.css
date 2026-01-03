@@ -415,12 +415,6 @@ img[data-position="top"] {
   }
 }
 
-@media (width >= 50rem) {
-  .photo-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .layout-wrap2col {
   display: flex;
   flex-direction: row;
