@@ -47,9 +47,9 @@
 }
 
 .logo svg {
-  max-width: 200px;
+  max-width: 250px;
   width: auto;
-  height: calc(2rem - 6px);
+  height: 26px;
   fill: currentColor;
 }
 
@@ -74,7 +74,10 @@
     width: 100%;
     position: absolute;
     left: 0;
-    bottom: calc(-1 * var(--link-underline-offset));
+    bottom: calc(
+      -1 *
+        (var(--link-underline-offset) + var(--link-underline-thickness-hover))
+    );
     height: var(--link-underline-thickness-hover);
     background: currentColor;
   }

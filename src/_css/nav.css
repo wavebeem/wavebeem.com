@@ -27,7 +27,6 @@
 }
 
 .nav ul {
-  font-size: var(--font-size-small);
   margin: 0;
   display: flex;
   flex-wrap: wrap;
