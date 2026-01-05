@@ -58,6 +58,7 @@
 }
 
 .logo a {
+  position: relative;
   color: inherit;
   pointer-events: initial;
   padding: 0;
@@ -65,15 +66,17 @@
   width: 100%;
   display: flex;
   outline-offset: 4px;
-
-  transition-duration: 100ms;
-  transition-property: filter, translate;
 }
 
 @media (hover) {
-  .logo a:hover {
-    filter: drop-shadow(0 4px var(--color-border-light));
-    translate: 0 -1px;
+  .logo a:hover:not(:focus-visible)::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: calc(-1 * var(--link-underline-offset));
+    height: var(--link-underline-thickness-hover);
+    background: currentColor;
   }
 }
 

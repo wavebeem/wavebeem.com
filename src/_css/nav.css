@@ -47,11 +47,17 @@
 
 @media (width <= 50rem) {
   .nav .separator {
-    margin-inline: 16px;
+    margin-inline: 8px;
+  }
+
+  .nav ul,
+  .logo {
+    justify-content: center;
   }
 }
+
 @media (width > 50rem) {
   .nav .separator {
-    margin-inline: 16px;
+    margin-inline: 8px;
   }
 }
