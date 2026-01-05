@@ -1,8 +1,10 @@
 // @ts-check
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import dateformat from "dateformat";
 import markdownIt from "markdown-it";
+
+const timeZone = "America/Los_Angeles";
+const utcOffset = -8;
 
 /**
  * Compare two values for sorting.
@@ -25,8 +27,6 @@ function compare(a, b) {
 
 /** @param {UserConfig} eleventyConfig */
 export default function getConfig(eleventyConfig) {
-  const now = new Date();
-
   const markdown = markdownIt({
     html: true,
     linkify: true,
@@ -51,84 +51,122 @@ export default function getConfig(eleventyConfig) {
 
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addShortcode("renderThemes", function (themes) {
-    let s = "";
-    // Default theme (light mode)
-    s += `:root {\n`;
-    for (const [key, val] of Object.entries(themes)) {
-      s += `  --${key}: ${val};\n`;
-    }
-    s += `}\n`;
-    return s;
-  });
+  eleventyConfig.addShortcode(
+    "renderThemes",
+    function (/** @type {{ [s: string]: any; } | ArrayLike<any>} */ themes) {
+      let s = "";
+      // Default theme (light mode)
+      s += `:root {\n`;
+      for (const [key, val] of Object.entries(themes)) {
+        s += `  --${key}: ${val};\n`;
+      }
+      s += `}\n`;
+      return s;
+    },
+  );
 
-  eleventyConfig.addFilter("formatDate", function (value, format) {
-    let isUTC = false;
-    if (value === "now") {
-      value = now;
-      isUTC = false;
-    } else if (
-      value instanceof Date &&
-      value.getHours() === 0 &&
-      value.getMinutes() === 0 &&
-      value.getSeconds() === 0 &&
-      value.getMilliseconds() === 0
+  const yearFormatter = new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    timeZone,
+  });
+  const dateFormatter = new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    timeZone,
+  });
+  eleventyConfig.addFilter(
+    "formatDate",
+    function (
+      /** @type {string | number | Date} */ value,
+      /** @type {any} */ format,
     ) {
-      isUTC = true;
-    } else if (typeof value === "string") {
-      isUTC = true;
-    }
-    if (!value) {
-      throw new Error(`bad date: ${value}`);
-    }
-    return dateformat(value, format, isUTC);
-  });
+      const date = new Date(value);
+      switch (format) {
+        case "year": {
+          return yearFormatter.format(date);
+        }
+        case "iso8601": {
+          return date.toISOString();
+        }
+        default:
+        case "date": {
+          return dateFormatter.format(date);
+        }
+      }
+    },
+  );
 
-  eleventyConfig.addFilter("toUTC", function (date) {
-    const newDate = new Date(date);
-    newDate.setUTCHours(8, 0);
-    return newDate.toISOString();
-  });
+  eleventyConfig.addFilter(
+    "toISOString",
+    function (/** @type {string | number | Date} */ date) {
+      return new Date(date).toISOString();
+    },
+  );
 
   // https://jeremias.codes/2025/02/markdown-filters-eleventy/
-  eleventyConfig.addFilter("markdownify", function markdownify(content) {
-    return markdown.renderInline(content || "");
-  });
+  eleventyConfig.addFilter(
+    "markdownify",
+    function markdownify(/** @type {any} */ content) {
+      return markdown.renderInline(content || "");
+    },
+  );
 
-  eleventyConfig.addFilter("take", function (array, count) {
-    return array.slice(0, count);
-  });
+  eleventyConfig.addFilter(
+    "take",
+    function (/** @type {string | any[]} */ array, /** @type {any} */ count) {
+      return array.slice(0, count);
+    },
+  );
 
+  /**
+   * @param {string | any[]} list
+   */
   function* reversed(list) {
     for (let i = list.length - 1; i >= 0; i--) {
       yield list[i];
     }
   }
 
-  eleventyConfig.addFilter("groupByYear", function (collection) {
-    const map = new Map();
-    for (const page of reversed(collection)) {
-      const year = page.date.getFullYear();
-      let group = map.get(year);
-      if (!group) {
-        group = [];
-        map.set(year, group);
+  eleventyConfig.addFilter(
+    "groupByYear",
+    function (/** @type {string | any[]} */ collection) {
+      const map = new Map();
+      for (const page of reversed(collection)) {
+        const d = new Date(page.date);
+        d.setHours(d.getHours() + utcOffset);
+        const year = d.getFullYear();
+        let group = map.get(year);
+        if (!group) {
+          group = [];
+          map.set(year, group);
+        }
+        group.push(page);
       }
-      group.push(page);
-    }
-    return Array.from(map.entries());
-  });
+      return Array.from(map.entries());
+    },
+  );
 
-  eleventyConfig.addFilter("fallback", function (data, other) {
-    return data || other;
-  });
+  eleventyConfig.addFilter(
+    "fallback",
+    function (/** @type {any} */ data, /** @type {any} */ other) {
+      return data || other;
+    },
+  );
 
-  eleventyConfig.addFilter("sortBy", function (data, property) {
-    return [...data].sort((a, b) => {
-      return compare(objectPathGet(a, property), objectPathGet(b, property));
-    });
-  });
+  eleventyConfig.addFilter(
+    "sortBy",
+    function (/** @type {any} */ data, /** @type {any} */ property) {
+      return [...data].sort((a, b) => {
+        return compare(objectPathGet(a, property), objectPathGet(b, property));
+      });
+    },
+  );
 
+  /**
+   * @param {any} obj
+   * @param {string} path
+   */
   function objectPathGet(obj, path) {
     let ret = obj;
     for (const chunk of path.split(".")) {
@@ -137,32 +175,41 @@ export default function getConfig(eleventyConfig) {
     return ret;
   }
 
-  eleventyConfig.addFilter("sortByLocale", function (data, property) {
-    return [...data].sort((a, b) => {
-      return String(objectPathGet(a, property) || "").localeCompare(
-        objectPathGet(b, property) || "",
-      );
-    });
-  });
+  eleventyConfig.addFilter(
+    "sortByLocale",
+    function (/** @type {any} */ data, /** @type {string} */ property) {
+      return [...data].sort((a, b) => {
+        return String(objectPathGet(a, property) || "").localeCompare(
+          objectPathGet(b, property) || "",
+        );
+      });
+    },
+  );
 
-  eleventyConfig.addFilter("debug", function (data) {
+  eleventyConfig.addFilter("debug", function (/** @type {any} */ data) {
     console.info(data);
     return "";
   });
 
-  eleventyConfig.addFilter("fallback", function (data, fallback) {
-    return data || fallback;
-  });
+  eleventyConfig.addFilter(
+    "fallback",
+    function (/** @type {any} */ data, /** @type {any} */ fallback) {
+      return data || fallback;
+    },
+  );
 
-  eleventyConfig.addFilter("sort", function (data) {
+  eleventyConfig.addFilter("sort", function (/** @type {any} */ data) {
     return [...data].sort((a, b) => a.localeCompare(b));
   });
 
-  eleventyConfig.addFilter("entries", function (data) {
-    return Object.entries(data);
-  });
+  eleventyConfig.addFilter(
+    "entries",
+    function (/** @type {ArrayLike<any> | { [s: string]: any; }} */ data) {
+      return Object.entries(data);
+    },
+  );
 
-  eleventyConfig.addFilter("log", function (data) {
+  eleventyConfig.addFilter("log", function (/** @type {any} */ data) {
     console.log(data);
     return data;
   });

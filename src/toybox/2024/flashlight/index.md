@@ -6,7 +6,7 @@ date: "2024-01-24"
 
 <script
   type="module"
-  src="./assets/wavebeem-toybox-flashlight.mjs?t={{ dateNow }}"
+  src="./assets/wavebeem-toybox-flashlight.mjs"
 ></script>
 
 <wavebeem-toybox-flashlight>
