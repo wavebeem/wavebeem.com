@@ -46,7 +46,7 @@ const search = new URLSearchParams(location.search);
   });
 }
 
-if (search.has("sticky")) {
+if (search.get("sticky") === "auto") {
   const y = [];
   const header = document.querySelector("header.header");
   const headerHeight = header.clientHeight;
@@ -67,4 +67,8 @@ if (search.has("sticky")) {
     },
     { passive: true },
   );
+}
+
+if (search.get("sticky") === "fixed") {
+  root.dataset.sticky = "";
 }

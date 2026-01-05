@@ -38,20 +38,20 @@
 }
 
 .nav .separator::after {
-  /* font-style: italic; */
+  font-style: normal;
   font-weight: normal;
   content: "/";
   color: var(--color-border-light);
-  margin-inline: 2px;
+  margin-inline: 0;
 }
 
 @media (width <= 50rem) {
   .nav .separator {
-    margin-inline: 8px;
+    margin-inline: 16px;
   }
 }
 @media (width > 50rem) {
   .nav .separator {
-    margin-inline: 8px;
+    margin-inline: 16px;
   }
 }

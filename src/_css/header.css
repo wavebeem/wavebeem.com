@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  gap: 1rem;
+  gap: 8px;
 
   box-sizing: border-box;
   background: var(--color-green);
@@ -65,10 +65,16 @@
   width: 100%;
   display: flex;
   outline-offset: 4px;
+
+  transition-duration: 100ms;
+  transition-property: filter, translate;
 }
 
-.logo a:hover {
-  opacity: 0.8;
+@media (hover) {
+  .logo a:hover {
+    filter: drop-shadow(0 4px var(--color-border-light));
+    translate: 0 -1px;
+  }
 }
 
 .logo-container {
@@ -78,6 +84,10 @@
 }
 
 @media (width < 35rem) {
+  .logo a {
+    padding-block: 8px;
+  }
+
   .logo svg {
     height: initial;
     width: 100%;
