@@ -80,7 +80,7 @@ article:where(.page) {
       border: 1px solid var(--color-black);
       border-color: var(--border-colors);
 
-      /* max-width: max-content; */
+      max-width: max-content;
 
       img,
       video {
