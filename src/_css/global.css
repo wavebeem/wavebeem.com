@@ -132,7 +132,7 @@ h1 {
 
 h1::after {
   content: "\00A0::";
-  color: var(--color-green);
+  color: var(--color-greener);
   font-size: 0.5em;
 }
 
@@ -148,7 +148,7 @@ h2 {
 h2::after {
   font-size: 0.5em;
   content: "\00A0:.";
-  color: var(--color-green);
+  color: var(--color-greener);
 }
 
 h3 {
@@ -163,7 +163,7 @@ h3:where(:not(:has(a)))::after {
   text-decoration: none;
   font-size: 0.5em;
   content: "\00A0//";
-  color: var(--color-green);
+  color: var(--color-greener);
 }
 
 code,
@@ -210,7 +210,7 @@ main summary {
 
 @media (hover) {
   main summary:hover:not(:active)::marker {
-    color: var(--color-green);
+    color: var(--color-greener);
   }
 }
 
