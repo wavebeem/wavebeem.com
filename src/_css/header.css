@@ -68,19 +68,16 @@
   outline-offset: 4px;
 }
 
-@media (hover) {
-  .logo a:hover:not(:focus-visible)::after {
-    content: "";
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: calc(
-      -1 *
-        (var(--link-underline-offset) + var(--link-underline-thickness-hover))
-    );
-    height: var(--link-underline-thickness-hover);
-    background: currentColor;
-  }
+.logo a:hover:not(:focus-visible)::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: calc(
+    -1 * (var(--link-underline-offset) + var(--link-underline-thickness-hover))
+  );
+  height: var(--link-underline-thickness-hover);
+  background: currentColor;
 }
 
 .logo-container {
@@ -91,7 +88,7 @@
 
 @media (width < 35rem) {
   .logo a {
-    padding-block: 8px;
+    margin-block: 8px;
   }
 
   .logo svg {
