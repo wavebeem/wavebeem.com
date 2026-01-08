@@ -26,9 +26,9 @@ export default {
   "color-black": oklch(27, 3.25, 11),
 
   "color-border-faint": oklch(27, 3.25, 11, 10),
-  "color-border-light": oklch(27, 3.25, 11, 20),
-  "color-border-medium": oklch(27, 3.25, 11, 40),
-  "color-border-heavy": oklch(27, 3.25, 11, 60),
+  "color-border-light": oklch(27, 3.25, 11, 15),
+  "color-border-medium": oklch(27, 3.25, 11, 20),
+  "color-border-heavy": oklch(27, 3.25, 11, 40),
 
   // TODO: Use the pink anywhere?
   // TODO: Use the green more?
