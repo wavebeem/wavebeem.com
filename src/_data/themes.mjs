@@ -33,8 +33,8 @@ export default {
   // TODO: Use the pink anywhere?
   // TODO: Use the green more?
 
-  "color-green": oklch(85, 40, 142),
-  "color-greener": oklch(75, 50, 142),
+  "color-green": oklch(80, 40, 142),
+  "color-greener": oklch(70, 50, 142),
 
   "color-purple": oklch(47, 67, 288),
   "color-periwinkle": oklch(85, 67, 288),
