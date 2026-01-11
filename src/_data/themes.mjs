@@ -41,6 +41,7 @@ export default {
 
   "color-steel": oklch(92, 0.5, 11),
   "color-silver": oklch(94, 0.5, 11),
+  "color-offwhite": oklch(98.5, 0.5, 11),
   "color-white": oklch(99.5, 0.5, 11),
 
   "syntax-text": "var(--color-black)",

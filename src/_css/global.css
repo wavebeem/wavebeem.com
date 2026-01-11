@@ -26,29 +26,13 @@
 
 @media (width >= 60rem) {
   :root {
-    --c1: var(--color-silver);
-    --c2: var(--color-steel);
-    --s: 2px;
-    --k: calc(4 * var(--s));
-    --z: calc(var(--s) + 1px);
-    --w: var(--width-copy);
-    --w1: calc((100vw - var(--w)) / 2);
-    --w2: calc(var(--w1) + var(--w));
-    --o: 20vw;
-    background:
-      linear-gradient(
-          to right,
-          transparent 0 calc(var(--w1) - var(--o)),
-          var(--c1) var(--w1) var(--w2),
-          transparent calc(var(--w2) + var(--o))
-        )
-        fixed,
-      radial-gradient(
-          circle at center,
-          var(--c2) 0 var(--s),
-          transparent var(--z)
-        )
-        0 0 / var(--k) var(--k) repeat var(--c1) fixed;
+    /* Inspired by https://sethmlarson.dev/ */
+    background-color: var(--color-white);
+    background-size: 24px 24px;
+    background-image:
+      linear-gradient(to right, var(--color-offwhite) 2px, transparent 1px),
+      linear-gradient(to bottom, var(--color-offwhite) 2px, transparent 1px);
+    background-attachment: fixed;
   }
 }
 
