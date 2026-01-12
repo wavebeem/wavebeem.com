@@ -28,8 +28,9 @@ article:where(.page) {
   }
 
   /* Hack for my bad habit of using Markdown images with bold text after them as captions */
-  p:has(img) + p:has(strong) {
+  p:has(img, video) + p:has(strong) {
     margin-top: -16px;
+    line-height: 1.25;
 
     strong {
       font-weight: normal;
@@ -58,7 +59,9 @@ article:where(.page) {
       color: inherit;
       width: 100%;
 
-      border-top: 1px solid var(--color-border-medium);
+      /* border-top: 1px solid var(--color-border-medium); */
+      border-top: 2px solid var(--color-border-medium);
+      border-radius: var(--rounded-large);
     }
 
     :where(.paragraph),
@@ -107,8 +110,8 @@ article:where(.page) {
 
     blockquote,
     aside {
-      padding-left: 1.5rem;
-      border-left: 4px solid var(--color-green);
+      padding-inline: 2rem;
+      /* border-left: 4px solid var(--color-green); */
       max-width: max-content;
 
       h3 {

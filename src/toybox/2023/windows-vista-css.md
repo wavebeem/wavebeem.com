@@ -4,7 +4,7 @@ description: "Pure CSS nostalgia."
 date: "2023-10-11"
 ---
 
-<div class="crime-frame frame sharp">
+<div class="crime-frame border sharp">
   <div
     style="
       user-select: none;

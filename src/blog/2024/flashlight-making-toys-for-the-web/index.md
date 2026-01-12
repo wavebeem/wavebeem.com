@@ -21,7 +21,7 @@ entertainment.
 Today I made a flashlight you can toggle on this page.
 
 <wavebeem-toybox-flashlight>
-  <button class="sage-button sage-primary">Toggle flashlight mode</button>
+  <button>Toggle flashlight mode</button>
 </wavebeem-toybox-flashlight>
 
 [View source](./assets/wavebeem-toybox-flashlight.mjs)

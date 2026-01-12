@@ -55,7 +55,8 @@
   cursor: zoom-in;
 
   &:hover {
-    opacity: 0.9;
+    outline: 4px solid #fff8;
+    outline-offset: -8px;
   }
 }
 
@@ -263,10 +264,9 @@ video {
 }
 
 .frame {
-  background: var(--color-white);
+  background: var(--theme-card);
   padding: 8px;
   border-radius: var(--rounded-large);
-  border: 1px solid var(--color-border-light);
 }
 
 .sharp {
