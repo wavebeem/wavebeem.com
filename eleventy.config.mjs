@@ -32,6 +32,12 @@ export default function getConfig(eleventyConfig) {
     linkify: true,
     typographer: true,
   });
+  const inlineMarkdown = markdownIt({
+    html: false,
+    linkify: false,
+    typographer: true,
+  });
+
   eleventyConfig.setLibrary("md", markdown);
 
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -108,7 +114,7 @@ export default function getConfig(eleventyConfig) {
   eleventyConfig.addFilter(
     "markdownify",
     function markdownify(/** @type {any} */ content) {
-      return markdown.renderInline(content || "");
+      return inlineMarkdown.renderInline(content || "");
     },
   );
 

@@ -13,8 +13,8 @@ postsByYear %} {% assign year = item[0] %} {% assign postList = item[1] %}
 
 {% for post in postList %}
 <a class="card" href="{{ post.url }}">
-  <div class="heading">{{ post.data.title | escape }}</div>
-  <div class="description">{{ post.data.description | markdownify }}</div>
+  <span class="heading">{{ post.data.title | escape }}</span>
+  <span class="description">{{ post.data.description | markdownify }}</span>
 </a>
 {% endfor %}
 {% endfor %}
