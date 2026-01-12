@@ -24,7 +24,7 @@ export default {
   "color-border-medium": oklch(0, 0, 0, 10),
 
   "color-green": oklch(80, 40, 142),
-  "color-greener": oklch(70, 50, 142),
+  "color-greener": oklch(60, 50, 142),
 
   "color-steel": oklch(92, 0.5, 322),
   "color-silver": oklch(98, 0.5, 322),
