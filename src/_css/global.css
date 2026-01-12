@@ -55,8 +55,8 @@
   cursor: zoom-in;
 
   &:hover {
-    outline: 4px solid #fff8;
-    outline-offset: -8px;
+    outline: 1px solid #fff8;
+    outline-offset: -4px;
   }
 }
 
