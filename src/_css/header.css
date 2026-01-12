@@ -1,14 +1,6 @@
 .header {
   padding: 8px 0;
   background: var(--color-green);
-  border-bottom: 1px solid var(--color-border-light);
-  border-image: linear-gradient(
-      to right,
-      var(--color-border-light),
-      var(--color-border-medium),
-      var(--color-border-light)
-    )
-    1;
 }
 
 :where(:root[data-sticky]) .header {

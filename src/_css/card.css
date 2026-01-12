@@ -9,8 +9,6 @@ a.card {
 
   border-radius: var(--rounded-large);
   background: var(--theme-card);
-  border: 1px solid var(--color-border-light);
-  border-bottom-color: var(--color-border-medium);
 
   .heading {
     margin: 0;
@@ -46,45 +44,42 @@ a.card {
 }
 
 ul.card {
-  --card-padding-x: 0px;
+  --card-padding-x: 16px;
   --card-padding-y: 8px;
-  --card-border-offset: 0px;
 
-  display: block;
+  display: grid;
   list-style-type: none;
   max-width: initial;
   padding: 0;
+  gap: 2px;
 
-  > li {
-    border-top: 1px solid var(--color-border-medium);
-    border-image: linear-gradient(
-        to right,
-        var(--color-border-medium),
-        transparent
-      )
-      1;
+  > li a {
+    border-radius: var(--rounded-small);
+    display: block;
+    padding: var(--card-padding-y) var(--card-padding-x);
+    background: var(--theme-card);
 
-    &:last-of-type {
-      border-bottom: 1px solid var(--color-border-medium);
+    &:not(:hover) {
+      text-decoration-line: none;
     }
 
-    a {
-      display: block;
-      padding: var(--card-padding-y) var(--card-padding-x);
-
-      &:not(:hover) {
-        text-decoration-line: none;
-      }
-
-      &:focus-visible {
-        outline-offset: 0px;
-      }
+    &:focus-visible {
+      outline-offset: -3px;
     }
+  }
+
+  > li:first-of-type a {
+    border-radius: var(--rounded-large) var(--rounded-large)
+      var(--rounded-small) var(--rounded-small);
+  }
+
+  > li:last-of-type a {
+    border-radius: var(--rounded-small) var(--rounded-small)
+      var(--rounded-large) var(--rounded-large);
   }
 }
 
 ul.card[data-size="large"] {
-  --card-padding-x: 0px;
+  --card-padding-x: 16px;
   --card-padding-y: 16px;
-  --card-border-offset: 0px;
 }

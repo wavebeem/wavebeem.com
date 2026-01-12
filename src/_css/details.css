@@ -1,0 +1,49 @@
+main details {
+  display: grid;
+  margin: 1.5rem 0;
+  border-top: 1px solid var(--color-border-medium);
+}
+
+main details:hover {
+  z-index: 100;
+}
+
+main details:where(:last-of-type, :has(+ :not(details))) {
+  border-bottom: 1px solid var(--color-border-medium);
+}
+
+main details + details {
+  margin-top: calc(-1.5rem);
+}
+
+main summary {
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: default;
+  padding-block: 0.5rem;
+}
+
+@media (hover) {
+  main summary:hover:not(:active)::marker {
+    color: var(--color-greener);
+  }
+}
+
+main summary:hover:active::marker {
+  color: var(--color-black);
+}
+
+main details:has(> summary:focus-visible) {
+  box-shadow: none;
+  outline: 3px solid;
+  outline-offset: -1px;
+  /* border-radius: var(--rounded-small); */
+}
+
+main details summary:focus-visible {
+  outline: none;
+}
+
+main details[open] > summary {
+  margin-bottom: -1rem;
+}

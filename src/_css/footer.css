@@ -26,8 +26,6 @@
   border-radius: var(--rounded-small);
   font-size: var(--font-size-small);
   color: inherit;
-  border: 1px solid var(--color-border-light);
-  border-bottom-color: var(--color-border-medium);
 }
 
 @media (hover) {
@@ -37,6 +35,5 @@
 
   .footer .top:hover:where(:not(:active)) {
     filter: brightness(102%);
-    border-color: var(--color-border-medium);
   }
 }

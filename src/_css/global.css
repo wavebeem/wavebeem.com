@@ -56,7 +56,6 @@
 
   &:hover {
     opacity: 0.9;
-    outline-color: var(--color-border-medium);
   }
 }
 
@@ -177,62 +176,6 @@ pre {
   font-weight: bold;
 }
 
-main details {
-  display: grid;
-  margin: 1.5rem 0;
-  border-top: 1px solid var(--color-border-medium);
-  border-image: linear-gradient(
-      to right,
-      var(--color-border-medium),
-      transparent
-    )
-    1;
-}
-
-main details:hover {
-  z-index: 100;
-}
-
-main details:where(:last-of-type, :has(+ :not(details))) {
-  border-bottom: 1px solid var(--color-border-medium);
-}
-
-main details + details {
-  margin-top: calc(-1.5rem);
-}
-
-main summary {
-  -webkit-user-select: none;
-  user-select: none;
-  cursor: default;
-  padding-block: 0.5rem;
-}
-
-@media (hover) {
-  main summary:hover:not(:active)::marker {
-    color: var(--color-greener);
-  }
-}
-
-main summary:hover:active::marker {
-  color: var(--color-black);
-}
-
-main details:has(> summary:focus-visible) {
-  box-shadow: none;
-  outline: 3px solid;
-  outline-offset: -1px;
-  /* border-radius: var(--rounded-small); */
-}
-
-main details summary:focus-visible {
-  outline: none;
-}
-
-main details[open] > summary {
-  margin-bottom: -1rem;
-}
-
 .description {
   margin-top: 8px;
 }
@@ -280,11 +223,10 @@ main ul {
   gap: 0.5rem;
 
   a {
-    border: 1px solid var(--color-border-light);
     text-decoration-line: none;
     line-height: 1.15;
     padding: 0 0.25rem;
-    background-color: var(--color-white);
+    background-color: var(--theme-card);
 
     &:focus-visible {
       outline-offset: -1px;

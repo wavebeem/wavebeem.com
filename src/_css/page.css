@@ -80,8 +80,7 @@ article:where(.page) {
 
       img,
       video {
-        outline: 1px solid var(--color-border-light);
-        outline-offset: -1px;
+        /* Empty... */
       }
     }
 
