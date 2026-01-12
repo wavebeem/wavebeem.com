@@ -24,7 +24,17 @@ article:where(.page) {
     > small {
       display: block;
       margin-block: 0.5rem 1.5rem;
-      /* font-style: italic; */
+    }
+  }
+
+  /* Hack for my bad habit of using Markdown images with bold text after them as captions */
+  p:has(img) + p:has(strong) {
+    margin-top: -16px;
+
+    strong {
+      font-weight: normal;
+      font-style: italic;
+      font-size: var(--font-size-small);
     }
   }
 
@@ -73,14 +83,14 @@ article:where(.page) {
       display: flex;
       flex-direction: column;
       gap: 8px;
-      /* border-radius: var(--rounded-large); */
-      /* border: 1px solid var(--color-black); */
-
       max-width: max-content;
 
       img,
       video {
-        /* Empty... */
+        /* I use a lot of lazy loaded images, so let's give them a bit of a
+        background so that things look less empty when they load in while you're
+        scrolling... */
+        background: var(--theme-photo);
       }
     }
 

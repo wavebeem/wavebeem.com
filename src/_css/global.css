@@ -252,7 +252,7 @@ canvas,
 img,
 video {
   display: block;
-  border-radius: calc(var(--rounded-large) - 8px);
+  border-radius: var(--rounded-large);
 }
 
 .border {
@@ -356,27 +356,6 @@ img[data-position="top"] {
 @media (width >= 30rem) {
   .photo-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.layout-wrap2col {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-@media (width <= 50rem) {
-  .layout-wrap2col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (width <= 30rem) {
-  .layout-wrap2col {
-    display: grid;
-    grid-template-columns: 1fr;
   }
 }
 
@@ -519,4 +498,9 @@ dl > dd + dt {
 
 [data-media="print"] {
   display: hidden;
+}
+
+.page-footer--congrats {
+  margin-top: 64px;
+  margin-bottom: -16px;
 }
