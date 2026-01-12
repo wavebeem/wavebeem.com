@@ -33,6 +33,7 @@ export default {
 
   "theme-photo": oklch(96, 0.5, 322),
   "theme-card": oklch(96, 0.5, 322),
+  // "theme-card": oklch(96, 0.5, 322),
   "theme-grid-light": oklch(98, 0.5, 322),
   "theme-grid-dark": oklch(96, 0.5, 322),
   "theme-grid": oklch(96, 0.5, 322),

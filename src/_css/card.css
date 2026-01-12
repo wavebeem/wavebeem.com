@@ -13,28 +13,22 @@ a.card {
   .heading {
     margin: 0;
 
-    font-style: italic;
+    /* font-style: italic; */
     font-weight: bold;
     font-family: inherit;
     font-size: var(--font-size-h3);
     text-wrap: balance;
     line-height: 1.25;
-    text-decoration-line: underline;
+    text-decoration-line: none;
 
     color: var(--theme-link);
     border-radius: var(--rounded-small);
-    text-decoration-thickness: var(--link-underline-thickness);
     text-underline-offset: var(--link-underline-offset);
-
-    &:active {
-      text-decoration-line: underline;
-      --link-underline-thickness: var(--link-underline-thickness-hover);
-      color: var(--color-black);
-    }
   }
 
-  &:hover .heading {
-    --link-underline-thickness: var(--link-underline-thickness-hover);
+  &:where(:hover) .heading {
+    text-decoration-line: underline;
+    text-decoration-thickness: inherit;
     color: var(--color-black);
   }
 
@@ -52,6 +46,7 @@ ul.card {
   max-width: initial;
   padding: 0;
   gap: 2px;
+  /* font-weight: bold; */
 
   > li a {
     border-radius: var(--rounded-small);

@@ -20,12 +20,12 @@ main summary {
   -webkit-user-select: none;
   user-select: none;
   cursor: default;
-  padding-block: 0.5rem;
+  padding-block: 16px;
 }
 
 @media (hover) {
   main summary:hover:not(:active)::marker {
-    color: var(--color-greener);
+    color: var(--color-green);
   }
 }
 

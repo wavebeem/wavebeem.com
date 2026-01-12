@@ -129,7 +129,7 @@ h1 {
 
 h1::after {
   content: "\00A0::";
-  color: var(--color-greener);
+  color: var(--color-green);
   font-size: 0.5em;
 }
 
@@ -145,7 +145,7 @@ h2 {
 h2::after {
   font-size: 0.5em;
   content: "\00A0:.";
-  color: var(--color-greener);
+  color: var(--color-green);
 }
 
 h3 {
@@ -160,7 +160,7 @@ h3:where(:not(:has(a)))::after {
   text-decoration: none;
   font-size: 0.5em;
   content: "\00A0//";
-  color: var(--color-greener);
+  color: var(--color-green);
 }
 
 code,
