@@ -16,7 +16,7 @@
   /* Make sure scrollbars show on every page, for consistent nav bar size */
   overflow-y: scroll;
   color-scheme: light;
-  scrollbar-color: var(--color-purple) transparent;
+  scrollbar-color: var(--color-greener) transparent;
   font-synthesis: none;
   color: var(--color-black);
   padding: 0;
@@ -25,9 +25,10 @@
 }
 
 @media (width >= 60rem) {
+  /* Inspired by https://sethmlarson.dev/ */
   :root {
-    --c1: var(--color-silver);
-    --c2: var(--color-steel);
+    /* --c1: var(--color-white);
+    --c2: var(--theme-grid-dark);
     --s: 2px;
     --k: calc(4 * var(--s));
     --z: calc(var(--s) + 1px);
@@ -42,13 +43,11 @@
           var(--c1) var(--w1) var(--w2),
           transparent calc(var(--w2) + var(--o))
         )
-        fixed,
-      radial-gradient(
-          circle at center,
-          var(--c2) 0 var(--s),
-          transparent var(--z)
-        )
-        0 0 / var(--k) var(--k) repeat var(--c1) fixed;
+        no-repeat fixed,
+      linear-gradient(to right, var(--c2) 1px, transparent 1px) 0 0 / 32px 32px
+        repeat,
+      linear-gradient(to bottom, var(--c2) 1px, transparent 1px) 0 0 / 32px 32px
+        repeat; */
   }
 }
 
@@ -57,7 +56,6 @@
 
   &:hover {
     opacity: 0.9;
-    outline-color: var(--color-border-light);
   }
 }
 
@@ -84,18 +82,16 @@ main {
 }
 
 a {
-  color: var(--color-purple);
+  color: var(--theme-link);
   border-radius: var(--rounded-small);
   text-decoration-thickness: var(--link-underline-thickness);
   text-underline-offset: var(--link-underline-offset);
 }
 
-@media (hover) {
-  a:hover {
-    text-decoration-line: underline;
-    --link-underline-thickness: var(--link-underline-thickness-hover);
-    color: var(--color-black);
-  }
+a:hover {
+  text-decoration-line: underline;
+  --link-underline-thickness: var(--link-underline-thickness-hover);
+  color: var(--color-black);
 }
 
 a:active {
@@ -153,7 +149,7 @@ h2::after {
 
 h3 {
   font-style: italic;
-  font-weight: normal;
+  /* font-weight: normal; */
   font-family: inherit;
   font-size: var(--font-size-h3);
   margin-block: 4rem 0.5rem;
@@ -180,57 +176,8 @@ pre {
   font-weight: bold;
 }
 
-main details {
-  margin: 1.5rem 0;
-  padding-inline: 1rem;
-  background: var(--color-white);
-  border: 1px solid var(--color-black);
-  border-color: var(--border-colors);
-  border-radius: var(--rounded-large);
-}
-
-main details:hover {
-  z-index: 100;
-}
-
-main details:where(:last-of-type, :has(+ :not(details))) {
-  border-bottom-style: solid;
-}
-
-main details + details {
-  margin-top: calc(-1.5rem - 1px);
-}
-
-main summary {
-  -webkit-user-select: none;
-  user-select: none;
-  cursor: default;
-  padding-block: 0.5rem;
-}
-
-@media (hover) {
-  main summary:hover:not(:active)::marker {
-    color: var(--color-greener);
-  }
-}
-
-main summary:hover:active::marker {
-  color: var(--color-black);
-}
-
-main details:has(> summary:focus-visible) {
-  box-shadow: none;
-  outline: 3px solid;
-  outline-offset: -1px;
-  /* border-radius: var(--rounded-small); */
-}
-
-main details summary:focus-visible {
-  outline: none;
-}
-
-main details[open] > summary {
-  margin-bottom: -1rem;
+.description {
+  margin-top: 8px;
 }
 
 .spoiler {
@@ -276,12 +223,10 @@ main ul {
   gap: 0.5rem;
 
   a {
-    border: 1px solid var(--color-black);
-    border-color: var(--border-colors);
     text-decoration-line: none;
     line-height: 1.15;
     padding: 0 0.25rem;
-    background-color: var(--color-white);
+    background-color: var(--theme-card);
 
     &:focus-visible {
       outline-offset: -1px;
@@ -307,7 +252,7 @@ canvas,
 img,
 video {
   display: block;
-  border-radius: calc(var(--rounded-large) - 8px);
+  border-radius: var(--rounded-large);
 }
 
 .border {
@@ -321,8 +266,7 @@ video {
   background: var(--color-white);
   padding: 8px;
   border-radius: var(--rounded-large);
-  border: 1px solid var(--color-black);
-  border-color: var(--border-colors);
+  border: 1px solid var(--color-border-light);
 }
 
 .sharp {
@@ -415,27 +359,6 @@ img[data-position="top"] {
   }
 }
 
-.layout-wrap2col {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-@media (width <= 50rem) {
-  .layout-wrap2col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (width <= 30rem) {
-  .layout-wrap2col {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
-
 .layout-col2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -516,7 +439,7 @@ ol > li::before {
   font-family: var(--font-mono);
   content: counter(list-item) "";
   font-weight: bold;
-  background: var(--color-border-faint);
+  background: var(--color-steel);
   text-align: center;
   border-radius: var(--rounded-pill);
 }
@@ -531,6 +454,10 @@ ol > li::before {
       margin: 0;
     }
   }
+}
+
+li > :is(h2, h3) {
+  margin-top: 8px;
 }
 
 dl > dt {
@@ -571,4 +498,9 @@ dl > dd + dt {
 
 [data-media="print"] {
   display: hidden;
+}
+
+.page-footer--congrats {
+  margin-top: 64px;
+  margin-bottom: -16px;
 }

@@ -40,7 +40,7 @@
   font-style: normal;
   font-weight: normal;
   content: "/";
-  color: var(--color-border-light);
+  color: var(--color-border-medium);
   margin-inline: 0;
 }
 

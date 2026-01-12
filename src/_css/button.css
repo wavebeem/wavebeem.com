@@ -15,9 +15,6 @@ button {
 
   color: var(--color-black);
   background: var(--color-green);
-
-  border: 1px solid var(--color-black);
-  border-color: var(--border-colors);
 }
 
 @media (hover) {
@@ -29,13 +26,11 @@ button {
   .button:hover:where(:not(:active)),
   button:hover:where(:not(:active)) {
     filter: brightness(102%);
-    box-shadow: 0 3px 0 -1px var(--color-border-faint);
   }
 }
 
 .button:active,
 button:active {
-  border-style: solid;
   filter: brightness(90%);
 }
 

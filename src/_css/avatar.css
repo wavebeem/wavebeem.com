@@ -8,16 +8,13 @@
   padding: var(--avatar-padding);
   display: flex;
   position: relative;
+  background: var(--theme-photo);
 
   border-radius: var(--rounded-pill);
   width: var(--avatar-size);
   height: var(--avatar-size);
-  background-color: var(--color-periwinkle);
   border: 0;
   box-sizing: content-box;
-
-  outline: 1px solid #0001;
-  outline-offset: -1px;
 }
 
 @media (width <= 50rem) {
