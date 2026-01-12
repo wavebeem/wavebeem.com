@@ -46,7 +46,6 @@ ul.card {
   max-width: initial;
   padding: 0;
   gap: 2px;
-  /* font-weight: bold; */
 
   > li a {
     border-radius: var(--rounded-small);

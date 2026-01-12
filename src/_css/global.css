@@ -439,7 +439,7 @@ ol > li::before {
   font-family: var(--font-mono);
   content: counter(list-item) "";
   font-weight: bold;
-  background: var(--color-steel);
+  background: var(--theme-button);
   text-align: center;
   border-radius: var(--rounded-pill);
 }
