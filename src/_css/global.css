@@ -16,7 +16,7 @@
   /* Make sure scrollbars show on every page, for consistent nav bar size */
   overflow-y: scroll;
   color-scheme: light;
-  scrollbar-color: var(--color-purple) transparent;
+  scrollbar-color: var(--color-greener) transparent;
   font-synthesis: none;
   color: var(--color-black);
   padding: 0;
@@ -25,14 +25,29 @@
 }
 
 @media (width >= 60rem) {
+  /* Inspired by https://sethmlarson.dev/ */
   :root {
-    /* Inspired by https://sethmlarson.dev/ */
-    background-color: var(--color-white);
-    background-size: 24px 24px;
-    background-image:
-      linear-gradient(to right, var(--color-offwhite) 2px, transparent 1px),
-      linear-gradient(to bottom, var(--color-offwhite) 2px, transparent 1px);
-    background-attachment: fixed;
+    /* --c1: var(--color-white);
+    --c2: var(--theme-grid-dark);
+    --s: 2px;
+    --k: calc(4 * var(--s));
+    --z: calc(var(--s) + 1px);
+    --w: var(--width-copy);
+    --w1: calc((100vw - var(--w)) / 2);
+    --w2: calc(var(--w1) + var(--w));
+    --o: 20vw;
+    background:
+      linear-gradient(
+          to right,
+          transparent 0 calc(var(--w1) - var(--o)),
+          var(--c1) var(--w1) var(--w2),
+          transparent calc(var(--w2) + var(--o))
+        )
+        no-repeat fixed,
+      linear-gradient(to right, var(--c2) 1px, transparent 1px) 0 0 / 32px 32px
+        repeat,
+      linear-gradient(to bottom, var(--c2) 1px, transparent 1px) 0 0 / 32px 32px
+        repeat; */
   }
 }
 
@@ -41,7 +56,7 @@
 
   &:hover {
     opacity: 0.9;
-    outline-color: var(--color-border-light);
+    outline-color: var(--color-border-medium);
   }
 }
 
@@ -68,18 +83,16 @@ main {
 }
 
 a {
-  color: var(--color-purple);
+  color: var(--theme-link);
   border-radius: var(--rounded-small);
   text-decoration-thickness: var(--link-underline-thickness);
   text-underline-offset: var(--link-underline-offset);
 }
 
-@media (hover) {
-  a:hover {
-    text-decoration-line: underline;
-    --link-underline-thickness: var(--link-underline-thickness-hover);
-    color: var(--color-black);
-  }
+a:hover {
+  text-decoration-line: underline;
+  --link-underline-thickness: var(--link-underline-thickness-hover);
+  color: var(--color-black);
 }
 
 a:active {
@@ -137,7 +150,7 @@ h2::after {
 
 h3 {
   font-style: italic;
-  font-weight: normal;
+  /* font-weight: normal; */
   font-family: inherit;
   font-size: var(--font-size-h3);
   margin-block: 4rem 0.5rem;
@@ -165,12 +178,15 @@ pre {
 }
 
 main details {
+  display: grid;
   margin: 1.5rem 0;
-  padding-inline: 1rem;
-  background: var(--color-white);
-  border: 1px solid var(--color-black);
-  border-color: var(--border-colors);
-  border-radius: var(--rounded-large);
+  border-top: 1px solid var(--color-border-medium);
+  border-image: linear-gradient(
+      to right,
+      var(--color-border-medium),
+      transparent
+    )
+    1;
 }
 
 main details:hover {
@@ -178,11 +194,11 @@ main details:hover {
 }
 
 main details:where(:last-of-type, :has(+ :not(details))) {
-  border-bottom-style: solid;
+  border-bottom: 1px solid var(--color-border-medium);
 }
 
 main details + details {
-  margin-top: calc(-1.5rem - 1px);
+  margin-top: calc(-1.5rem);
 }
 
 main summary {
@@ -215,6 +231,10 @@ main details summary:focus-visible {
 
 main details[open] > summary {
   margin-bottom: -1rem;
+}
+
+.description {
+  margin-top: 8px;
 }
 
 .spoiler {
@@ -260,8 +280,7 @@ main ul {
   gap: 0.5rem;
 
   a {
-    border: 1px solid var(--color-black);
-    border-color: var(--border-colors);
+    border: 1px solid var(--color-border-light);
     text-decoration-line: none;
     line-height: 1.15;
     padding: 0 0.25rem;
@@ -305,8 +324,7 @@ video {
   background: var(--color-white);
   padding: 8px;
   border-radius: var(--rounded-large);
-  border: 1px solid var(--color-black);
-  border-color: var(--border-colors);
+  border: 1px solid var(--color-border-light);
 }
 
 .sharp {
@@ -500,7 +518,7 @@ ol > li::before {
   font-family: var(--font-mono);
   content: counter(list-item) "";
   font-weight: bold;
-  background: var(--color-border-faint);
+  background: var(--color-steel);
   text-align: center;
   border-radius: var(--rounded-pill);
 }
@@ -515,6 +533,10 @@ ol > li::before {
       margin: 0;
     }
   }
+}
+
+li > :is(h2, h3) {
+  margin-top: 8px;
 }
 
 dl > dt {

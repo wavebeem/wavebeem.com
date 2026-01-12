@@ -1,5 +1,14 @@
 .header {
-  background: var(--color-silver);
+  padding: 8px 0;
+  background: var(--color-green);
+  border-bottom: 1px solid var(--color-border-light);
+  border-image: linear-gradient(
+      to right,
+      var(--color-border-light),
+      var(--color-border-medium),
+      var(--color-border-light)
+    )
+    1;
 }
 
 :where(:root[data-sticky]) .header {
@@ -27,18 +36,17 @@
 }
 
 .header-content {
+  width: 100%;
+  max-width: var(--width-heading);
+  margin-inline: auto;
+
   display: flex;
   flex-direction: column;
   padding: 1rem;
   gap: 8px;
 
   box-sizing: border-box;
-  background: var(--color-green);
   color: var(--color-black);
-
-  border-radius: 0 0 var(--rounded-large) var(--rounded-large);
-
-  border-bottom: 1px solid var(--color-border-heavy);
 }
 
 .logo {
@@ -110,22 +118,5 @@
 
   :root[data-sticky="true"] .header {
     position: sticky;
-  }
-}
-
-@media (width >= 60rem) {
-  .header-content {
-    border-radius: var(--rounded-large);
-
-    padding: 16px;
-    border: 1px solid var(--color-black);
-    border-color: var(--border-colors);
-  }
-
-  .header {
-    width: 100%;
-    max-width: var(--width-heading);
-    margin-inline: auto;
-    padding-top: 1rem;
   }
 }

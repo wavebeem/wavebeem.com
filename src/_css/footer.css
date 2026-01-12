@@ -17,7 +17,7 @@
   text-decoration: none;
   display: inline-block;
 
-  background: var(--color-silver);
+  background: var(--theme-button);
   font-weight: bold;
 
   line-height: 1.25;
@@ -26,8 +26,8 @@
   border-radius: var(--rounded-small);
   font-size: var(--font-size-small);
   color: inherit;
-  border: 1px solid var(--color-black);
-  border-color: var(--border-colors);
+  border: 1px solid var(--color-border-light);
+  border-bottom-color: var(--color-border-medium);
 }
 
 @media (hover) {
@@ -37,6 +37,6 @@
 
   .footer .top:hover:where(:not(:active)) {
     filter: brightness(102%);
-    box-shadow: 0 3px 0 -1px var(--color-border-faint);
+    border-color: var(--color-border-medium);
   }
 }

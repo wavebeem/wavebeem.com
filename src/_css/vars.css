@@ -38,9 +38,6 @@
   --link-underline-offset: calc(1em / 6);
   --link-underline-thickness: 1px;
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 1px);
-
-  --border-colors: var(--color-border-light) var(--color-border-medium)
-    var(--color-border-heavy) var(--color-border-medium);
 }
 
 @media (width <= 50rem) {

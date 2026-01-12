@@ -4,8 +4,8 @@
       class="avatar"
       alt=""
       src="photo.webp"
-      width="800"
-      height="800"
+      width="350"
+      height="350"
     />
 
     <h1>Hello!</h1>
@@ -28,17 +28,10 @@
 
     {% assign top3 = collections.posts | reverse | take: 3 %}
     {% for post in top3 %}
-      <article class="card">
-        <header>
-          <h3>
-            <a href="{{ post.url }}">
-              {{ post.data.title | escape }}
-            </a>
-          </h3>
-          <small>{% render 'partials/date', date: post.date %}</small>
-        </header>
-        <p>{{ post.data.description | markdownify }}</p>
-      </article>
+      <a class="card" href="{{ post.url }}">
+        <div class="heading">{{ post.data.title | escape }}</div>
+        <div class="description">{{ post.data.description | markdownify }}</div>
+      </a>
     {% endfor %}
 
     <p><a class="button" href="/blog/">More blog posts &rarr;</a></p>
