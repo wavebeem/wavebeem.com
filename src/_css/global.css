@@ -149,7 +149,7 @@ h2::after {
 }
 
 h3 {
-  font-style: italic;
+  /* font-style: italic; */
   /* font-weight: normal; */
   font-family: inherit;
   font-size: var(--font-size-h3);

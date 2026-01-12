@@ -22,7 +22,7 @@
   --font-size-logo: 1.25rem;
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
-  --font-size-code: round(calc(0.9 * var(--font-size-base)), 1px);
+  --font-size-code: 1rem;
 
   --list-inset: 2rem;
 
