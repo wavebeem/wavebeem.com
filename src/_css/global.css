@@ -50,7 +50,7 @@
   }
 } */
 
-:root[data-figure-viewer] figure img {
+:root[data-figure-viewer] :is(figure, p) img {
   cursor: zoom-in;
 
   &:hover {

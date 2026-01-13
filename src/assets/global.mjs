@@ -36,9 +36,9 @@ const search = new URLSearchParams(location.search);
       return;
     }
     const img = event.target.closest("img");
-    const figure = img?.closest("figure");
+    const parent = img?.closest("figure") || img?.closest("p");
     const anchor = img?.closest("a");
-    if (!(img && figure && !anchor)) {
+    if (!(img && parent && !anchor)) {
       return;
     }
     event.preventDefault();
