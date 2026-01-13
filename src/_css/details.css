@@ -1,7 +1,7 @@
 main details {
   display: grid;
   margin: 1.5rem 0;
-  border-top: 1px solid var(--color-border-medium);
+  border-top: 1px solid var(--theme-border);
 }
 
 main details:hover {
@@ -9,7 +9,7 @@ main details:hover {
 }
 
 main details:where(:last-of-type, :has(+ :not(details))) {
-  border-bottom: 1px solid var(--color-border-medium);
+  border-bottom: 1px solid var(--theme-border);
 }
 
 main details + details {

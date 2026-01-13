@@ -17,7 +17,7 @@ export class WavebeemBlogFinger extends HTMLElement {
     button {
       --color-background: dimgray;
       --color-text: white;
-      --color-border: oklch(64% 50% 280);
+      --theme-border: oklch(64% 50% 280);
       font: inherit;
       font-family: system-ui, sans-serif;
       padding-inline: 16px;
@@ -29,7 +29,7 @@ export class WavebeemBlogFinger extends HTMLElement {
     }
 
     button.good {
-      border: 1px solid var(--color-border);
+      border: 1px solid var(--theme-border);
     }
 
     button.bad {
@@ -46,7 +46,7 @@ export class WavebeemBlogFinger extends HTMLElement {
     button.primary {
       --color-background: oklch(50% 50% 280);
       --color-text: #fff;
-      --color-border: oklch(30% 50% 280);
+      --theme-border: oklch(30% 50% 280);
 
       &:hover:not(:active) {
         --color-background: oklch(40% 50% 280);

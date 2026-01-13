@@ -18,32 +18,28 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 }
 
 export default {
-  "color-black": oklch(27, 3.25, 11),
-
-  "color-border-light": oklch(0, 0, 0, 3),
-  "color-border-medium": oklch(0, 0, 0, 10),
+  "color-black": oklch(27, 0, 0),
 
   "color-green": oklch(80, 40, 142),
-  "color-greener": oklch(60, 50, 142),
+  "color-greener": oklch(60, 40, 142),
 
-  "color-silver": oklch(98, 0.5, 322),
-  "color-offwhite": oklch(98, 0.5, 322),
-  "color-white": oklch(99.5, 0.5, 322),
+  "color-silver": oklch(98, 0, 0),
+  "color-white": oklch(99.5, 0, 0),
 
-  "theme-button": oklch(90, 0.5, 322),
-  "theme-photo": oklch(96, 0.5, 322),
-  "theme-card": oklch(96, 0.5, 322),
-  // "theme-card": oklch(96, 0.5, 322),
-  "theme-grid-light": oklch(98, 0.5, 322),
-  "theme-grid-dark": oklch(96, 0.5, 322),
-  "theme-grid": oklch(96, 0.5, 322),
-  "theme-link": oklch(50, 50, 142),
+  "theme-border": oklch(90, 0, 0),
+  "theme-button": oklch(90, 0, 0),
+  "theme-photo": oklch(96, 0, 0),
+  "theme-card": oklch(96, 0, 0),
+  "theme-grid-light": oklch(98, 0, 0),
+  "theme-grid-dark": oklch(96, 0, 0),
+  "theme-grid": oklch(96, 0, 0),
+  "theme-link": oklch(50, 80, 142),
 
   "syntax-text": "var(--color-black)",
   // TODO: Improve these
   "syntax-keyword": oklch(52, 60, 260),
   "syntax-comment": oklch(50, 38, 162),
-  "syntax-property": oklch(47, 67, 345),
+  "syntax-property": oklch(47, 67, 95),
   "syntax-string": oklch(55, 67, 42),
   "syntax-punctuation": oklch(57, 27, 288),
 };
