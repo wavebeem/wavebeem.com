@@ -7,12 +7,9 @@
   <a class="button" href="/subscribe/">Subscribe</a>
 </p>
 
-<ul class="card">
 {% for post in collections.toybox reversed %}
-  <li>
-    <a href="{{ post.url }}">
-      {{ post.data.title | escape }}
-    </a>
-  </li>
+<a class="card" href="{{ post.url }}">
+  <span class="heading">{{ post.data.title | escape }}</span>
+  <span class="description">{{ post.data.description | markdownify }}</span>
+</a>
 {% endfor %}
-</ul>
