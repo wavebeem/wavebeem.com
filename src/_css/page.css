@@ -59,8 +59,8 @@ article:where(.page) {
       color: inherit;
       width: 100%;
 
-      /* border-top: 1px solid var(--color-border-medium); */
-      border-top: 2px solid var(--color-border-medium);
+      /* border-top: 1px solid var(--theme-border); */
+      border-top: 2px solid var(--theme-border);
       border-radius: var(--rounded-large);
     }
 
