@@ -28,7 +28,7 @@ export default {
 
   "color-silver": oklch(98, 0.5, 322),
   "color-offwhite": oklch(98, 0.5, 322),
-  "color-white": oklch(99.5, 0.5, 322),
+  "color-white": oklch(100, 0.5, 322),
 
   "theme-button": oklch(90, 0.5, 322),
   "theme-photo": oklch(96, 0.5, 322),

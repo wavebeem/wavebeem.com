@@ -21,13 +21,13 @@
   color: var(--color-black);
   padding: 0;
   margin: 0;
-  background: var(--color-silver);
+  background: var(--color-white);
 }
 
 @media (width >= 60rem) {
   /* Inspired by https://sethmlarson.dev/ */
   :root {
-    /* --c1: var(--color-silver);
+    /* --c1: var(--color-white);
     --c2: var(--theme-grid-dark);
     --s: 2px;
     --k: calc(4 * var(--s));
@@ -195,7 +195,7 @@ pre {
 }
 
 .spoiler:focus {
-  color: var(--color-silver);
+  color: var(--color-white);
 }
 
 .spoiler:focus-visible {
