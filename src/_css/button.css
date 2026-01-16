@@ -41,12 +41,12 @@ button:focus-visible {
 
 :is(.button, button):where([data-variant="secondary"]) {
   background: var(--theme-button);
+  color: var(--color-black);
   font-weight: bold;
 
   line-height: 1.25;
 
-  padding: 4px 8px;
+  padding: 4px 16px;
   border-radius: var(--rounded-small);
   font-size: var(--font-size-small);
-  color: inherit;
 }

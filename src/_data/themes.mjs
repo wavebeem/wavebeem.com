@@ -17,8 +17,17 @@ function oklch(lightness, chroma, hue, alpha = 100) {
   return color.to("srgb").toString({ format: "hex" });
 }
 
+const syntax = {
+  blue: "#2e5acc",
+  pink: "#b40391",
+  black: "#38383d",
+  green: "#2e7210",
+  purple: "#7b08d3",
+  navy: "#273aa7",
+};
+
 export default {
-  "color-black": oklch(27, 5, 142),
+  "color-black": oklch(25, 0, 0),
 
   "color-green": oklch(80, 40, 142),
   "color-greener": oklch(60, 40, 142),
@@ -29,17 +38,17 @@ export default {
   "theme-selection": oklch(50, 80, 142),
 
   "theme-border": oklch(90, 0, 0),
+  "theme-number": oklch(90, 0, 0),
   "theme-photo": oklch(96, 0, 0),
   "theme-code": oklch(96, 0, 0),
   "theme-button": oklch(90, 20, 142),
   "theme-card": oklch(96, 10, 142),
   "theme-link": oklch(50, 80, 142),
 
-  "syntax-text": "var(--color-black)",
-  // TODO: Improve these
-  "syntax-keyword": oklch(52, 60, 260),
-  "syntax-comment": oklch(50, 38, 162),
-  "syntax-property": oklch(47, 67, 95),
-  "syntax-string": oklch(55, 67, 42),
-  "syntax-punctuation": oklch(57, 27, 288),
+  "syntax-text": oklch(2, 0, 0),
+  "syntax-keyword": oklch(50, 57, 250),
+  "syntax-comment": oklch(50, 38, 142),
+  "syntax-property": oklch(55, 57, 322),
+  "syntax-string": oklch(55, 57, 40),
+  "syntax-punctuation": oklch(50, 50, 80),
 };

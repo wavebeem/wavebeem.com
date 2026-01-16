@@ -431,7 +431,7 @@ ol > li::before {
   font-family: var(--font-mono);
   content: counter(list-item) "";
   font-weight: bold;
-  background: var(--theme-button);
+  background: var(--theme-number);
   text-align: center;
   border-radius: var(--rounded-pill);
 }

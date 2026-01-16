@@ -110,8 +110,8 @@ article:where(.page) {
 
     blockquote,
     aside {
-      padding-inline: 2rem;
-      /* border-left: 4px solid var(--color-green); */
+      padding-inline: 1rem;
+      border-left: 4px solid var(--theme-border);
       max-width: max-content;
 
       h3 {

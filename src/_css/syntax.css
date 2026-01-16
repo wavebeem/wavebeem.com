@@ -3,6 +3,7 @@ pre:has(> code) {
   margin-block: 1.5rem;
   padding: 1rem;
   background-color: var(--theme-code);
+  color: var(--syntax-text);
   border-radius: var(--rounded-large);
 }
 
