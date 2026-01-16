@@ -35,7 +35,8 @@ export default {
   "color-silver": oklch(98, 5, 142),
   "color-white": oklch(100, 5, 142),
 
-  "theme-selection": oklch(50, 80, 142),
+  "theme-selection-bg": oklch(85, 85, 322),
+  "theme-selection-text": oklch(5, 0, 0),
 
   "theme-border": oklch(90, 0, 0),
   "theme-number": oklch(90, 0, 0),
