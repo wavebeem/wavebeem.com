@@ -38,3 +38,15 @@ button:focus-visible {
   outline: 3px solid;
   outline-offset: -1px;
 }
+
+:is(.button, button):where([data-variant="secondary"]) {
+  background: var(--theme-button);
+  font-weight: bold;
+
+  line-height: 1.25;
+
+  padding: 4px 8px;
+  border-radius: var(--rounded-small);
+  font-size: var(--font-size-small);
+  color: inherit;
+}

@@ -12,28 +12,3 @@
   margin-inline: auto;
   max-width: max-content;
 }
-
-.footer .top {
-  text-decoration: none;
-  display: inline-block;
-
-  background: var(--theme-button);
-  font-weight: bold;
-
-  line-height: 1.25;
-
-  padding: 4px 8px;
-  border-radius: var(--rounded-small);
-  font-size: var(--font-size-small);
-  color: inherit;
-}
-
-@media (hover) {
-  .footer .top:hover {
-    text-decoration-line: none;
-  }
-
-  .footer .top:hover:where(:not(:active)) {
-    filter: brightness(102%);
-  }
-}

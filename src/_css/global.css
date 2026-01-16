@@ -24,32 +24,6 @@
   background: var(--color-white);
 }
 
-/* Inspired by https://sethmlarson.dev/ */
-/* @media (width >= 60rem) {
-  :root {
-    --c1: var(--color-white);
-    --c2: var(--theme-grid-dark);
-    --s: 2px;
-    --k: calc(4 * var(--s));
-    --z: calc(var(--s) + 1px);
-    --w: var(--width-copy);
-    --w1: calc((100vw - var(--w)) / 2);
-    --w2: calc(var(--w1) + var(--w));
-    --o: 20vw;
-    background:
-      linear-gradient(
-          to right,
-          transparent 0 calc(var(--w1) - var(--o)),
-          var(--c1) var(--w1) var(--w2),
-          transparent calc(var(--w2) + var(--o))
-        )
-        no-repeat fixed,
-      linear-gradient(to right, var(--c2), transparent) 0 0 / 32px 32px repeat,
-      linear-gradient(to bottom, var(--c2) 1px, transparent 1px) 0 0 / 32px 32px
-        repeat;
-  }
-} */
-
 :root[data-figure-viewer] :is(figure, p) img {
   cursor: zoom-in;
 
@@ -75,6 +49,10 @@ body {
   flex-direction: column;
   gap: 0;
   min-height: 100vh;
+}
+::selection {
+  background-color: var(--theme-selection);
+  color: var(--color-white);
 }
 
 main {
@@ -180,6 +158,11 @@ pre {
   margin-top: 8px;
 }
 
+.post-description {
+  font-size: var(--font-size-small);
+  font-style: italic;
+}
+
 .spoiler {
   padding-inline: 0.25ch;
   background-color: var(--color-black);
@@ -226,10 +209,16 @@ main ul {
     text-decoration-line: none;
     line-height: 1.15;
     padding: 0 0.25rem;
-    background-color: var(--theme-card);
+    background-color: var(--theme-button);
+    /* font-weight: bold; */
+    color: inherit;
 
     &:focus-visible {
       outline-offset: -1px;
+    }
+
+    &:hover:where(:not(:active)) {
+      filter: brightness(102%);
     }
   }
 }
@@ -369,6 +358,10 @@ img[data-position="top"] {
     display: grid;
     grid-template-columns: 1fr;
   }
+}
+
+.layout-col2 > * {
+  margin: 0 !important;
 }
 
 .layout-col3 {

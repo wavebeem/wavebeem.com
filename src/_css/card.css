@@ -9,20 +9,14 @@ a.card {
 
   border-radius: var(--rounded-large);
   background: var(--theme-card);
+  outline-offset: 0px;
 
   .heading {
     margin: 0;
-
-    /* font-style: italic; */
     font-weight: bold;
-    font-family: inherit;
-    font-size: var(--font-size-h3);
     text-wrap: balance;
     line-height: 1.25;
-    text-decoration-line: none;
-
-    color: var(--theme-link);
-    border-radius: var(--rounded-small);
+    color: inherit;
     text-underline-offset: var(--link-underline-offset);
   }
 
@@ -34,6 +28,8 @@ a.card {
 
   .description {
     margin: 0;
+    font-style: italic;
+    font-size: var(--font-size-small);
   }
 }
 
@@ -52,6 +48,7 @@ ul.card {
     display: block;
     padding: var(--card-padding-y) var(--card-padding-x);
     background: var(--theme-card);
+    color: inherit;
 
     &:not(:hover) {
       text-decoration-line: none;

@@ -1,0 +1,47 @@
+.menu {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12ch, 1fr));
+  gap: 4px;
+}
+
+.menu-card {
+  color: inherit;
+  text-decoration-line: none;
+
+  display: grid;
+  padding: 8px;
+
+  border-radius: var(--rounded-medium);
+  background: var(--theme-card);
+  outline-offset: 0px;
+
+  text-align: center;
+
+  .heading {
+    margin: 0;
+    font-weight: bold;
+    text-wrap: balance;
+    line-height: 1.25;
+    color: inherit;
+    text-underline-offset: var(--link-underline-offset);
+  }
+
+  &:where(:hover) .heading {
+    text-decoration-line: underline;
+    text-decoration-thickness: inherit;
+    color: var(--color-black);
+  }
+
+  .description {
+    margin: 0;
+    font-style: italic;
+    font-size: var(--font-size-small);
+  }
+}
+
+@media (width <= 40rem) {
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
