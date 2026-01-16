@@ -41,6 +41,7 @@ export default {
   "theme-border": oklch(90, 0, 0),
   "theme-number": oklch(90, 0, 0),
   "theme-photo": oklch(96, 0, 0),
+  "theme-figure": oklch(98, 0, 0),
   "theme-code": oklch(96, 0, 0),
   "theme-button": oklch(90, 20, 142),
   "theme-card": oklch(96, 10, 142),
