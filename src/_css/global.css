@@ -25,7 +25,7 @@
 }
 
 :root[data-figure-viewer] :is(figure, p) img {
-  cursor: zoom-in;
+  cursor: var(--cursor-zoom-in);
 
   &:hover {
     outline: 1px solid #fff8;

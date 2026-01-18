@@ -24,6 +24,8 @@
   --font-size-small: 1rem;
   --font-size-code: 1rem;
 
+  --cursor-zoom-in: url("/cursors/zoom-in.svg") 12 12, zoom-in;
+
   --list-inset: 2rem;
 
   --rounded-xsmall: 2px;
