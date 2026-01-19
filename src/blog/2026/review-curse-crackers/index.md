@@ -59,11 +59,11 @@ levels truly tested my patience, and I didn't feel up for trying them.
   </figcaption>
 </figure>
 
-I think maybe Colorgrave (the developers) got too good at their own game while
-playtesting the Bonnie fight. Or maybe they were expecting everyone to use the
-game's not very well explained healing items. For the entire game's runtime, you
-have exactly 3 HP... and this boss, if you're not careful, will cover the entire
-screen in projectiles.
+I think maybe [Colorgrave](https://www.colorgrave.com/) got too good at their
+own game while playtesting the Bonnie fight. Or maybe they were expecting
+everyone to use the game's not very well explained healing items. For the entire
+game's runtime, you have exactly 3 HP... and this boss, if you're not careful,
+will cover the entire screen in projectiles.
 
 After tons of practice, and switching to a hyper aggressive playstyle, I was
 able to eventually eke out a victory with a single HP left. Despite being
