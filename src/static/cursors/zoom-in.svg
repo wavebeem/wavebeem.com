@@ -9,7 +9,7 @@
     stroke-linecap="round"
     stroke-linejoin="round"
 >
-    <circle cx="12" cy="12" r="12" fill="#888" fill-opacity="0.6" />
+    <circle cx="12" cy="12" r="12" fill="#444" fill-opacity="0.6" />
     <!-- https://lucide.dev/icons/plus -->
     <path d="M5 12h14" stroke="#fff" />
     <path d="M12 5v14" stroke="#fff" />
