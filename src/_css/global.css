@@ -24,13 +24,8 @@
   background: var(--color-white);
 }
 
-:root[data-figure-viewer] :is(figure, p) img {
+:where(:root[data-figure-viewer] :is(figure, p)) img {
   cursor: var(--cursor-zoom-in);
-
-  &:hover {
-    outline: 1px solid #fff8;
-    outline-offset: -4px;
-  }
 }
 
 body {
