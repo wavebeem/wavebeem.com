@@ -11,6 +11,12 @@ description:
 
 ---
 
+I just finished
+[Ninja Gaiden 4](https://store.steampowered.com/app/2627260/NINJA_GAIDEN_4/),
+and I now have four games in my review backlog. So, I'm going to start by
+reviewing
+[**Curse Crackers: For Whom the Belle Toils**](https://store.steampowered.com/app/1726760/Curse_Crackers_For_Whom_the_Belle_Toils/).
+
 Perhaps it's nostalgia and a function of my age, but I feel like the Game Boy
 Color was a peak moment in gaming history. Ignoring how hard it was to play
 anywhere that wasn't outdoors or next to a lamp, the device finally had _just
