@@ -1,33 +1,33 @@
-@font-face {
+/* @font-face {
   font-family: "PP Talisman";
   src: url("/fonts/PPTalisman-Bold.woff2") format("woff2");
   font-weight: bold;
   font-display: swap;
-}
+} */
 
 @font-face {
-  font-family: "PP Object Sans";
-  src: url("/fonts/PPObjectSans-Regular.woff2") format("woff2");
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PP Object Sans";
-  src: url("/fonts/PPObjectSans-Bold.woff2") format("woff2");
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-Extrabold.woff2") format("woff2");
   font-weight: bold;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PP Object Sans";
-  src: url("/fonts/PPObjectSans-Slanted.woff2") format("woff2");
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-Italic.woff2") format("woff2");
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PP Object Sans";
-  src: url("/fonts/PPObjectSans-BoldSlanted.woff2") format("woff2");
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-ExtraboldItalic.woff2") format("woff2");
   font-style: italic;
   font-weight: bold;
   font-display: swap;
@@ -43,28 +43,6 @@
   font-family: "Merriweather";
   src: url("/fonts/Merriweather-Bold.woff2") format("woff2");
   font-display: swap;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Merriweather";
-  src: url("/fonts/Merriweather-Bold.woff2") format("woff2");
-  font-display: swap;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Merriweather";
-  src: url("/fonts/Merriweather-Italic.woff2") format("woff2");
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Merriweather";
-  src: url("/fonts/Merriweather-BoldItalic.woff2") format("woff2");
-  font-display: swap;
-  font-style: italic;
   font-weight: bold;
 }
 

@@ -95,7 +95,8 @@ p {
 h1 {
   font-size: var(--font-size-h1);
   font-family: var(--font-cool);
-  letter-spacing: calc(1em / 32);
+  font-weight: 900;
+  /* letter-spacing: calc(1em / 32); */
   /* https://bugs.webkit.org/show_bug.cgi?id=292563 */
   /* word-spacing: calc(1em / 16); */
   margin-block: 2rem 1.5rem;
@@ -110,7 +111,7 @@ h1::after {
 h2 {
   font-size: var(--font-size-h2);
   font-family: var(--font-cool);
-  letter-spacing: calc(1em / 32);
+  /* letter-spacing: calc(1em / 32); */
   /* https://bugs.webkit.org/show_bug.cgi?id=292563 */
   /* word-spacing: calc(1em / 16); */
   margin-block: 4rem 0.5rem;
