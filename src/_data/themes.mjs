@@ -42,11 +42,11 @@ export default {
   "theme-number": oklch(90, 0, 0),
   "theme-photo": oklch(96, 0, 0),
   "theme-figure": oklch(98, 0, 0),
-  "theme-code": oklch(96, 0, 0),
   "theme-button": oklch(90, 20, 142),
   "theme-card": oklch(96, 10, 142),
   "theme-link": oklch(50, 80, 142),
 
+  "syntax-bg": oklch(96, 0, 0),
   "syntax-text": oklch(2, 0, 0),
   "syntax-keyword": oklch(50, 57, 250),
   "syntax-comment": oklch(50, 38, 142),
