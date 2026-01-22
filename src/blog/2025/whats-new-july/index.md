@@ -216,7 +216,7 @@ something janky.
 ## Playdate Season Two
 
 <figure>
-  <img class="playdate" src="./assets/playdate/clownp.webp" width="400" height="240" />
+  <img class="playdate pixelated" src="./assets/playdate/clownp.webp" width="400" height="240" />
   <figcaption>Clown pee is definitely the funniest screenshot I've taken</figcaption>
 </figure>
 

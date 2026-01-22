@@ -191,6 +191,10 @@ main ul {
   list-style-type: disc;
 }
 
+main ul ::marker {
+  /* color: var(--color-green); */
+}
+
 .hash-nav {
   padding: 0;
   list-style: none;
@@ -401,7 +405,7 @@ img[data-position="top"] {
 /* Non-integer display scales fuck this up. It looks like this is a violation of
 the spec, but Firefox and Chrome both do it. I haven't checked in Safari. Maybe
 I should file a bug later. */
-@media not (1dppx < resolution < 2dppx) {
+@media (resolution = 1dppx), (resolution = 2dppx), (resolution = 3dppx) {
   .pixelated {
     image-rendering: pixelated;
   }

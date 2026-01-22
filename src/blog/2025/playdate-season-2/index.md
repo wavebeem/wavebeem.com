@@ -18,7 +18,7 @@ when I probably would've never bought them.
 ## Dig Dig Dino!
 
 <figure>
-  <img src="./assets/dino/camp.webp" class="playdate" width="400" height="240" alt="" />
+  <img src="./assets/dino/camp.webp" class="playdate pixelated" width="400" height="240" alt="" />
 </figure>
 
 [A chill game](https://play.date/games/dig-dig-dino/) with some minor UX
@@ -40,7 +40,7 @@ so charming. It's just a good easy game!
 ## Fulcrum Defender
 
 <figure>
-  <img src="./assets/fulcrum/20.webp" class="playdate" width="400" height="240" alt="" />
+  <img src="./assets/fulcrum/20.webp" class="playdate pixelated" width="400" height="240" alt="" />
 </figure>
 
 [A relaxing shmup](https://play.date/games/fulcrum-defender/) by the creators of
@@ -59,8 +59,8 @@ I'm enjoying it a lot more now.
 ## Long Puppy
 
 <figure>
-  <img src="./assets/long/dog.webp" class="playdate" width="400" height="240" alt="" />
-  <img src="./assets/long/poop.webp" class="playdate" width="400" height="240" alt="" />
+  <img src="./assets/long/dog.webp" class="playdate pixelated" width="400" height="240" alt="" />
+  <img src="./assets/long/poop.webp" class="playdate pixelated" width="400" height="240" alt="" />
 </figure>
 
 [A super weird game](https://play.date/games/long-puppy/) that makes good use of
@@ -73,7 +73,7 @@ beating the game, but it's been a lot of fun!
 ## Chance's Lucky Escape
 
 <figure>
-  <img src="./assets/chance/jackpot.webp" class="playdate" width="400" height="240" alt="" />
+  <img src="./assets/chance/jackpot.webp" class="playdate pixelated" width="400" height="240" alt="" />
 </figure>
 
 Maybe the easiest

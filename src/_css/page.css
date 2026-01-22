@@ -111,8 +111,20 @@ article:where(.page) {
     blockquote,
     aside {
       padding-inline: 1rem;
-      border-left: 4px solid var(--theme-border);
+      border-left: 4px solid transparent;
       max-width: max-content;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 4px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--theme-border);
+        border-radius: var(--rounded-pill);
+      }
 
       h3 {
         margin-top: 1.5rem;
