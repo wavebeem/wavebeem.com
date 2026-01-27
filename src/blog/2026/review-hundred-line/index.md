@@ -29,16 +29,16 @@ consider this aspect more of a minigame to break up the storytelling. Heck, you
 can even skip most of the combat by the halfway point.
 
 Eventually you unlock a story flowchart you can hop around, Uchikoshi style, and
-that's when things really start getting interesting to me.
+that's when things really opens up.
 
-I will say that some of the routes are not very interesting to me. I won't call
-any of them trash or terrible, but I think that the goal of "100 endings" was
-overly ambitious. This game is absolutely freaking massive, and we unforutnately
-ran out of willpower before seeing all it had to offer. I think the game
-could've used a little more editing both in terms of cutting less interesting
-routes, and then actual copy editing (looooots of extra words, typos,
-grammatical mistakes---nothing too bad, and somewhat understandable given the
-absolutely massive script size).
+I will say that some of the routes didn't hold my interest. I won't call any of
+them trash or terrible, but I think that the goal of "100 endings" was overly
+ambitious. This game is absolutely freaking massive, and we unforutnately ran
+out of willpower before seeing all it had to offer. I think the game could've
+used a little more editing both in terms of cutting less interesting routes, and
+then actual copy editing (looooots of extra words, typos, grammatical
+mistakes---nothing too bad, and somewhat understandable given the absolutely
+massive script size).
 
 I don't want to spoil anything about the story for you, reader, but... I really
 grew to love Hiruko, Eito, and even Darumi. All of the characters have at least
