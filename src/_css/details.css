@@ -1,16 +1,16 @@
 main details {
   display: grid;
   margin: 1.5rem 0;
-  border-top: 1px solid var(--theme-border);
+  border-bottom: 1px solid var(--theme-border);
 }
 
 main details:hover {
   z-index: 100;
 }
 
-main details:where(:last-of-type, :has(+ :not(details))) {
+/* main details:where(:last-of-type, :has(+ :not(details))) {
   border-bottom: 1px solid var(--theme-border);
-}
+} */
 
 main details + details {
   margin-top: calc(-1.5rem);

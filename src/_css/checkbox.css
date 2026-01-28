@@ -16,7 +16,7 @@ label:has(> input[type="checkbox"]:first-child) {
     appearance: none;
     width: 1.5rem;
     height: 1.5rem;
-    border: 1px solid var(--color-black);
+    border: 2px solid var(--color-black);
     /* border: 1px solid var(--_bg); */
     background: var(--color-silver);
     background-clip: border-box;
