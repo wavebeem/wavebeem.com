@@ -1,6 +1,6 @@
 .menu {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12ch, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 4px;
 }
 
@@ -9,13 +9,13 @@
   text-decoration-line: none;
 
   display: grid;
-  padding: 8px 8px;
+  padding: 16px;
   /* font-weight: bold; */
   line-height: 1.25;
 
   border-radius: var(--rounded-medium);
   background: var(--theme-card);
-  outline-offset: 0px;
+  outline-offset: -3px;
 
   text-align: center;
 
@@ -41,9 +41,8 @@
   }
 }
 
-@media (width <= 40rem) {
-  .menu {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+@media (width >= 40rem) {
+  .menu-card {
+    font-size: var(--font-size-h3);
   }
 }
