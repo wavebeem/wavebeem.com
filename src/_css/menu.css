@@ -1,7 +1,7 @@
 .menu {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4px;
+  gap: 2px;
 }
 
 .menu-card {
@@ -13,11 +13,16 @@
   /* font-weight: bold; */
   line-height: 1.25;
 
-  border-radius: var(--rounded-medium);
+  border-radius: var(--rounded-small);
   background: var(--theme-card);
   outline-offset: -3px;
 
-  text-align: center;
+  /* text-align: center; */
+
+  &:nth-child(4n),
+  &:nth-child(4n-3) {
+    background: var(--color-silver);
+  }
 
   .heading {
     margin: 0;

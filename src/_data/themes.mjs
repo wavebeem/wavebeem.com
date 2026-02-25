@@ -47,10 +47,10 @@ export default {
   "theme-link": oklch(50, 80, 142),
 
   "syntax-bg": oklch(96, 0, 0),
-  "syntax-text": oklch(2, 0, 0),
-  "syntax-keyword": oklch(50, 57, 250),
-  "syntax-comment": oklch(50, 38, 142),
-  "syntax-property": oklch(55, 57, 322),
-  "syntax-string": oklch(55, 57, 40),
-  "syntax-punctuation": oklch(50, 50, 80),
+  "syntax-text": "#111111",
+  "syntax-keyword": "#0000ee",
+  "syntax-comment": "#007700",
+  "syntax-property": "#aa00cc",
+  "syntax-string": "#cc0000",
+  "syntax-punctuation": "#aa4400",
 };

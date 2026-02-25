@@ -52,8 +52,8 @@
   --font-fallback-sans:
     Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
   --font-serif: "Merriweather", var(--font-fallback-serif);
-  --font-sans: "PP Object Sans", var(--font-fallback-sans);
-  --font-cool: "PP Talisman", var(--font-sans);
+  --font-sans: "PP Mori", var(--font-fallback-sans);
+  --font-cool: "PP Mori", var(--font-sans);
 
   font-family: var(--font-serif);
   line-height: 1.35;
@@ -67,9 +67,9 @@
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   margin: 0;
-  font-family: var(--font-cool);
+  font-family: var(--font-serif);
 }
 
 h2 {
