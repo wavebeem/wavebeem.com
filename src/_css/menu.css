@@ -12,7 +12,6 @@
   /* font-weight: bold; */
   line-height: 1.25;
 
-  border-radius: var(--rounded-small);
   background: var(--theme-card);
   outline-offset: -3px;
 
@@ -41,9 +40,9 @@
 @media (width < 40rem) {
   .menu-card {
     /* Checkerboard colors */
-    &:nth-child(2n + 1) {
-      /* background: var(--color-silver); */
-    }
+    /* &:nth-child(2n) {
+      background: var(--color-silver);
+    } */
 
     /* Round the corners of the group extra */
     &:first-child {
@@ -60,16 +59,16 @@
 @media (width >= 40rem) {
   .menu {
     grid-template-columns: repeat(2, 1fr);
-    gap: 4px;
+    gap: 8px;
   }
 
   .menu-card {
     font-size: var(--font-size-h3);
     text-align: center;
+    border-radius: var(--rounded-medium);
 
     /* Checkerboard colors */
-    &:nth-child(4n),
-    &:nth-child(4n-3) {
+    &:is(:nth-child(4n), :nth-child(4n + 1)) {
       background: var(--color-silver);
     }
   }
