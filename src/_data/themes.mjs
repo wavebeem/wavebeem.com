@@ -27,7 +27,12 @@ const syntax = {
 };
 
 export default {
-  "color-black": oklch(25, 0, 0),
+  "color-black": oklch(0, 0, 0, 87),
+  // "color-black": oklch(25, 0, 0),
+  // Material Design text guidelines...
+  // "theme-text-high": oklch(0, 0, 0, 87),
+  // "theme-text-medium": oklch(0, 0, 0, 60),
+  // "theme-text-low": oklch(0, 0, 0, 38),
 
   "color-green": oklch(80, 40, 142),
   "color-greener": oklch(60, 40, 142),
@@ -47,7 +52,8 @@ export default {
   "theme-link": oklch(50, 80, 142),
 
   "syntax-bg": oklch(96, 0, 0),
-  "syntax-text": "#111111",
+  "syntax-text": oklch(0, 0, 0, 87),
+  // "syntax-text": "#111111",
   "syntax-keyword": "#0000ee",
   "syntax-comment": "#007700",
   "syntax-property": "#aa00cc",

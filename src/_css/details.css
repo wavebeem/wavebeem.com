@@ -23,6 +23,34 @@ main summary {
   padding-block: 16px;
 }
 
+main details {
+  summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+
+  summary::after {
+    font-size: 2rem;
+    width: 1em;
+    height: 1em;
+    border-radius: 100%;
+    line-height: 1;
+    text-align: center;
+    content: "+";
+  }
+
+  &[open] summary::after {
+    content: "\2212";
+  }
+
+  summary:hover {
+    &::after {
+      color: var(--color-green);
+    }
+  }
+}
+
 @media (hover) {
   main summary:hover:not(:active)::marker {
     color: var(--color-green);
