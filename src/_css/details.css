@@ -30,35 +30,38 @@ main details {
     gap: 16px;
   }
 
+  /* https://css-shape.com/plus/ */
   summary::after {
-    font-size: 2rem;
-    width: 1em;
-    height: 1em;
-    border-radius: 100%;
-    line-height: 1;
-    text-align: center;
-    content: "+";
+    content: "";
+    --c: var(--theme-border);
+    height: 24px;
+    aspect-ratio: 1;
+    background: radial-gradient(
+      circle at center,
+      var(--color-black) 0 calc(100% - 6px),
+      transparent 0
+    );
+    box-shadow: 0 0 0 6px inset var(--c);
+    border-image: conic-gradient(var(--c) 0 0) 50% / calc(50% - 1px);
+    clip-path: circle();
   }
 
+  /* https://css-shape.com/minus/ */
   &[open] summary::after {
-    content: "\2212";
+    border-image: conic-gradient(var(--c) 0 0) 1 / calc(50% - 1px) 2px;
   }
 
-  summary:hover {
-    &::after {
-      color: var(--color-green);
+  @media (hover) {
+    summary:hover {
+      &::after {
+        filter: brightness(95%);
+      }
     }
   }
 }
 
-@media (hover) {
-  main summary:hover:not(:active)::marker {
-    color: var(--color-green);
-  }
-}
-
-main summary:hover:active::marker {
-  color: var(--color-black);
+main summary:hover:active::after {
+  --c: var(--color-green);
 }
 
 main details:has(> summary:focus-visible) {
