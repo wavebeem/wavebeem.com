@@ -39,20 +39,23 @@
 
 @media (width < 40rem) {
   .menu-card {
-    /* Checkerboard colors */
     /* &:nth-child(2n) {
       background: var(--color-silver);
     } */
 
     /* Round the corners of the group extra */
-    &:first-child {
+    &:nth-child(1 of :not(:empty)) {
       border-top-left-radius: var(--rounded-large);
       border-top-right-radius: var(--rounded-large);
     }
-    &:last-child {
+    &:nth-last-child(1 of :not(:empty)) {
       border-bottom-right-radius: var(--rounded-large);
       border-bottom-left-radius: var(--rounded-large);
     }
+  }
+
+  .menu-card:empty {
+    display: none;
   }
 }
 
@@ -67,13 +70,27 @@
     text-align: center;
     border-radius: var(--rounded-small);
 
-    /* Checkerboard colors */
+    /* Stripe colors */
     &:is(:nth-child(4n), :nth-child(4n-1)) {
       background: var(--color-silver);
     }
+
+    /* Round the corners of the menu more */
+    &:nth-child(1) {
+      border-top-left-radius: var(--rounded-large);
+    }
+    &:nth-child(2) {
+      border-top-right-radius: var(--rounded-large);
+    }
+    &:nth-last-child(1) {
+      border-bottom-right-radius: var(--rounded-large);
+    }
+    &:nth-last-child(2) {
+      border-bottom-left-radius: var(--rounded-large);
+    }
   }
 
-  .menu-card:first-child {
+  /* .menu-card:nth-child(1) {
     border-top-left-radius: var(--rounded-large);
   }
   .menu-card:nth-child(2) {
@@ -95,5 +112,5 @@
     .menu-card:has(+ .menu-card:last-child) {
       border-bottom-left-radius: var(--rounded-large);
     }
-  }
+  } */
 }
