@@ -1,6 +1,7 @@
 .header {
   padding: 8px 0;
   background: var(--color-green);
+  border-bottom: 1px solid var(--theme-border-medium);
 }
 
 :where(:root[data-sticky]) .header {
