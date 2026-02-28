@@ -13,6 +13,7 @@ button {
   text-decoration-thickness: var(--link-underline-thickness);
   line-height: 1.25;
   border: 0;
+  border: 1px solid var(--theme-border-heavy);
 
   color: var(--color-black);
   background: var(--color-green);
