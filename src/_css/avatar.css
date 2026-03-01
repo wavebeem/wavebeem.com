@@ -15,6 +15,9 @@
   height: var(--avatar-size);
   border: 0;
   box-sizing: content-box;
+
+  outline: 1px solid var(--theme-border-medium);
+  outline-offset: -1px;
 }
 
 @media (width <= 50rem) {
