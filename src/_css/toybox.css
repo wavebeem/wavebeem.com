@@ -1,11 +1,17 @@
 .crime-frame {
+  all: revert;
   overflow: hidden;
   position: relative;
   display: flex;
+
+  ::before,
+  ::after {
+    all: revert;
+  }
 }
 
 .crime-frame :is(details, summary) {
-  all: initial;
+  all: revert;
   display: block;
   font: inherit;
 }

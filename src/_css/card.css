@@ -11,6 +11,8 @@ a.card {
   background: var(--theme-card);
   outline-offset: 0px;
 
+  border: 1px solid var(--theme-border-medium);
+
   .heading {
     margin: 0;
     font-weight: bold;
@@ -49,6 +51,7 @@ ul.card {
     padding: var(--card-padding-y) var(--card-padding-x);
     background: var(--theme-card);
     color: inherit;
+    border: 1px solid var(--theme-border-light);
 
     &:not(:hover) {
       text-decoration-line: none;

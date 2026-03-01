@@ -249,7 +249,7 @@ video {
 .border {
   border-radius: 0;
   background: var(--color-white);
-  padding: 1px;
+  /* padding: 1px; */
   border: 1px solid var(--color-black);
 }
 
@@ -257,6 +257,11 @@ video {
   background: var(--theme-card);
   padding: 8px;
   border-radius: var(--rounded-large);
+  border: 1px solid var(--theme-border-light);
+
+  & > * {
+    box-shadow: 0 0 0 1px var(--theme-border-heavy);
+  }
 }
 
 .sharp {
