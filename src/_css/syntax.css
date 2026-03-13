@@ -5,6 +5,7 @@ pre:has(> code) {
   background-color: var(--syntax-bg);
   color: var(--syntax-text);
   border-radius: var(--rounded-large);
+  border: 1px solid var(--theme-border-light);
 }
 
 /* Reset color for nested scripts */

@@ -12,6 +12,8 @@
   /* font-weight: bold; */
   line-height: 1.25;
 
+  border: 1px solid var(--theme-border-light);
+
   background: var(--theme-card);
   outline-offset: -3px;
 

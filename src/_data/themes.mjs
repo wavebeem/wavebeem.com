@@ -43,6 +43,10 @@ export default {
   "theme-selection-bg": oklch(85, 85, 322),
   "theme-selection-text": oklch(5, 0, 0),
 
+  "theme-border-light": oklch(0, 0, 0, 2.5),
+  "theme-border-medium": oklch(0, 0, 0, 5),
+  "theme-border-heavy": oklch(0, 0, 0, 10),
+
   "theme-border": oklch(90, 0, 0),
   "theme-number": oklch(90, 0, 0),
   "theme-photo": oklch(96, 0, 0),
