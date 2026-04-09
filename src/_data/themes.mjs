@@ -42,6 +42,7 @@ export default {
   "color-green": raw.green,
   "color-silver": raw.silver,
   "color-white": raw.white,
+  "color-purple": raw.purple,
 
   "theme-selection-bg": raw.peach,
   "theme-selection-text": raw.black,
