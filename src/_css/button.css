@@ -47,4 +47,8 @@ button:focus-visible {
   padding: 4px 8px;
   border-radius: var(--rounded-small);
   font-size: var(--font-size-small);
+
+  &:hover {
+    filter: brightness(106%);
+  }
 }
