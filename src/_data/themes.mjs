@@ -32,10 +32,9 @@ const raw = {
   black: "#222",
   silver: "#eef",
   ice: "#ddf",
-  mint: "#dfd",
   green: "#0f7",
   purple: "#70f",
-  pink: "#f07",
+  peach: "#fc6",
 };
 
 export default {
@@ -44,7 +43,7 @@ export default {
   "color-silver": raw.silver,
   "color-white": raw.white,
 
-  "theme-selection-bg": raw.pink,
+  "theme-selection-bg": raw.peach,
   "theme-selection-text": raw.black,
 
   "theme-scrollbar": raw.purple,
@@ -58,7 +57,7 @@ export default {
   "theme-card": raw.silver,
   "theme-link": raw.purple,
 
-  "syntax-bg": raw.silver,
+  "syntax-border": raw.ice,
   "syntax-text": raw.black,
   // "syntax-text": "#111111",
   "syntax-keyword": "#0000ee",

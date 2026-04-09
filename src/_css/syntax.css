@@ -2,9 +2,10 @@ pre:has(> code) {
   overflow-x: auto;
   margin-block: 1.5rem;
   padding: 1rem;
-  background-color: var(--syntax-bg);
+  border: 1px solid var(--syntax-border);
   color: var(--syntax-text);
   border-radius: var(--rounded-large);
+  font-weight: 500;
 }
 
 /* Reset color for nested scripts */
@@ -18,6 +19,7 @@ pre:has(> code) {
 .token.cdata {
   color: var(--syntax-comment);
   font-style: italic;
+  font-weight: 400;
 }
 
 .token.punctuation {
@@ -78,6 +80,7 @@ pre:has(> code) {
 
 .token.italic {
   font-style: italic;
+  font-weight: 400;
 }
 
 .token.entity {

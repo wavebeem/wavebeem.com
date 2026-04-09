@@ -145,7 +145,10 @@ pre {
 
 :not(pre) > code {
   font-size: 0.9em;
-  font-weight: bold;
+  font-weight: 500;
+  background: var(--theme-number);
+  border-radius: var(--rounded-medium);
+  padding: 0 4px;
 }
 
 .description {
