@@ -58,9 +58,26 @@ article:where(.page) {
       margin-inline: auto;
       color: inherit;
       width: 100%;
+      background: var(--theme-accent);
+      height: 1px;
 
-      border-top: 4px solid var(--theme-border);
-      border-radius: var(--rounded-large);
+      /* https://css-shape.com/zig-zag-line/ */
+
+      --a: 90deg; /* control the angle */
+      --s: 16px; /* size of the zig-zag */
+      --b: 4px; /* control the thickness */
+
+      height: calc(var(--b) + var(--s) / (2 * tan(var(--a) / 2)));
+      --_g: var(--s) repeat-x
+        conic-gradient(
+          from calc(var(--a) / -2) at bottom,
+          #0000,
+          #000 1deg calc(var(--a) - 1deg),
+          #0000 var(--a)
+        );
+      mask:
+        50% calc(-1 * var(--b)) / var(--_g) exclude,
+        50% / var(--_g);
     }
 
     :where(.paragraph),
@@ -84,15 +101,18 @@ article:where(.page) {
     figure {
       display: flex;
       flex-direction: column;
-      gap: 8px;
       max-width: max-content;
+      gap: 8px;
+      padding: 8px;
+      border: 1px solid var(--theme-figure);
+      border-radius: var(--rounded-large);
 
       img,
       video {
         /* I use a lot of lazy loaded images, so let's give them a bit of a
         background so that things look less empty when they load in while you're
         scrolling... */
-        background: var(--theme-figure);
+        background: var(--theme-image);
       }
     }
 
@@ -121,7 +141,7 @@ article:where(.page) {
         position: absolute;
         top: 0;
         left: 0;
-        background: var(--theme-border);
+        background: var(--theme-accent);
         border-radius: var(--rounded-pill);
       }
 

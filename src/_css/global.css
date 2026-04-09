@@ -16,7 +16,7 @@
   /* Make sure scrollbars show on every page, for consistent nav bar size */
   overflow-y: scroll;
   color-scheme: light;
-  scrollbar-color: var(--color-greener) transparent;
+  scrollbar-color: var(--theme-scrollbar) transparent;
   font-synthesis: none;
   color: var(--color-black);
   padding: 0;
@@ -243,7 +243,7 @@ canvas,
 img,
 video {
   display: block;
-  border-radius: var(--rounded-large);
+  border-radius: var(--rounded-medium);
 }
 
 .border {

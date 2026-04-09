@@ -24,6 +24,10 @@
     text-underline-offset: var(--link-underline-offset);
   }
 
+  &:hover {
+    filter: brightness(102%);
+  }
+
   &:where(:hover) .heading {
     text-decoration-line: underline;
     text-decoration-thickness: inherit;

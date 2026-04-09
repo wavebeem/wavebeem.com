@@ -27,33 +27,39 @@ function oklch(lightness, chroma, hue, alpha = 100) {
   return color.to("srgb").toString({ format: "hex" });
 }
 
+const raw = {
+  white: "#fff",
+  black: "#222",
+  silver: "#eef",
+  ice: "#ddf",
+  mint: "#dfd",
+  green: "#0f7",
+  purple: "#70f",
+  pink: "#f07",
+};
+
 export default {
-  "color-black": oklch(0, 0, 0, 87),
-  // "color-black": oklch(25, 0, 0),
-  // Material Design text guidelines...
-  // "theme-text-high": oklch(0, 0, 0, 87),
-  // "theme-text-medium": oklch(0, 0, 0, 60),
-  // "theme-text-low": oklch(0, 0, 0, 38),
+  "color-black": raw.black,
+  "color-green": raw.green,
+  "color-silver": raw.silver,
+  "color-white": raw.white,
 
-  "color-green": oklch(80, 40, 142),
-  "color-greener": oklch(60, 40, 142),
+  "theme-selection-bg": raw.pink,
+  "theme-selection-text": raw.black,
 
-  "color-silver": oklch(98, 5, 142),
-  "color-white": oklch(100, 5, 142),
+  "theme-scrollbar": raw.purple,
+  "theme-accent": raw.green,
+  "theme-border": raw.ice,
+  "theme-number": raw.silver,
+  "theme-photo": raw.silver,
+  "theme-figure": raw.ice,
+  "theme-image": raw.ice,
+  "theme-button": raw.ice,
+  "theme-card": raw.silver,
+  "theme-link": raw.purple,
 
-  "theme-selection-bg": oklch(85, 85, 322),
-  "theme-selection-text": oklch(5, 0, 0),
-
-  "theme-border": oklch(90, 0, 0),
-  "theme-number": oklch(90, 0, 0),
-  "theme-photo": oklch(96, 0, 0),
-  "theme-figure": oklch(98, 0, 0),
-  "theme-button": oklch(90, 20, 142),
-  "theme-card": oklch(96, 10, 142),
-  "theme-link": oklch(50, 80, 142),
-
-  "syntax-bg": oklch(96, 0, 0),
-  "syntax-text": oklch(0, 0, 0, 87),
+  "syntax-bg": raw.silver,
+  "syntax-text": raw.black,
   // "syntax-text": "#111111",
   "syntax-keyword": "#0000ee",
   "syntax-comment": "#007700",

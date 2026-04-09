@@ -25,7 +25,7 @@ button:hover {
 
 .button:hover:where(:not(:active)),
 button:hover:where(:not(:active)) {
-  filter: brightness(102%);
+  filter: brightness(96%);
 }
 
 .button:active,
