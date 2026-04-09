@@ -104,7 +104,7 @@ predecessor game, Demon Turf: Color Splash, to scratch that 3D platforming itch.
 </figure>
 
 <figure>
-  <img src="./assets/assets/gear.vg.webp" alt="" />
+  <img src="./assets/gear.vg.webp" alt="" />
   <figcaption>Collecting one of the 45 gears in the game</figcaption>
 </figure>
 
