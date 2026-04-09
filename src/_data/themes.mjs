@@ -1,5 +1,15 @@
 import Color from "colorjs.io";
 
+// Should I try out some other colors eventually?
+//
+// https://color-combos.wavebeem.com/?fg=%23fff%0A%23222&bg=%23fff%0A%23222%0A%2370f%0A%230f8%0A%23eef&group_by=background
+//
+// #eef
+// #fff
+// #222
+// #70f
+// #0f8
+
 /**
  * @param {number} lightness
  * @param {number} chroma
@@ -16,15 +26,6 @@ function oklch(lightness, chroma, hue, alpha = 100) {
   color.alpha = a;
   return color.to("srgb").toString({ format: "hex" });
 }
-
-const syntax = {
-  blue: "#2e5acc",
-  pink: "#b40391",
-  black: "#38383d",
-  green: "#2e7210",
-  purple: "#7b08d3",
-  navy: "#273aa7",
-};
 
 export default {
   "color-black": oklch(0, 0, 0, 87),

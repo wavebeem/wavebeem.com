@@ -41,21 +41,16 @@
 }
 
 @font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-family: "Lilex";
+  src: url("/fonts/Lilex[wght].woff2") format("woff2");
   font-display: swap;
+  font-weight: 100 900;
 }
 
 @font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/JetBrainsMono-Bold.woff2") format("woff2");
-  font-display: swap;
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/fonts/JetBrainsMono-Italic.woff2") format("woff2");
+  font-family: "Lilex";
+  src: url("/fonts/Lilex-Italic[wght].woff2") format("woff2");
   font-display: swap;
   font-style: italic;
+  font-weight: 100 900;
 }

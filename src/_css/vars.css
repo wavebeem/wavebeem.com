@@ -3,10 +3,11 @@
   --font-fallback-mono:
     ui-monospace, "Cascadia Code", "SFMono-Regular", "Menlo", "Monaco",
     "Consolas", "Liberation Mono", "Courier New", monospace;
+  /* --font-body: "Lilex", var(--font-fallback-main); */
   --font-body: "PP Mori", var(--font-fallback-main);
   /* --font-cool: "PP Talisman Narrow", var(--font-fallback-main); */
   --font-cool: var(--font-body);
-  --font-mono: "JetBrains Mono", var(--font-fallback-mono);
+  --font-mono: "Lilex", var(--font-fallback-mono);
 
   /*
    Fluid typography seems really cool, but it also kinda looks terrible unless
@@ -18,6 +19,7 @@
   --font-size-h1: 3rem;
   --font-size-h2: 2rem;
   --font-size-h3: 1.5rem;
+  --font-size-nav: 1.25rem;
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
   --font-size-code: 1rem;
@@ -46,6 +48,7 @@
     --font-size-h2: round(2rem, 1px);
     --font-size-h3: round(1.5rem, 1px);
     --font-size-base: round(1.15rem, 1px);
+    --font-size-nav: round(1.25rem, 1px);
     --font-size-small: round(1rem, 1px);
 
     --list-inset: 2rem;

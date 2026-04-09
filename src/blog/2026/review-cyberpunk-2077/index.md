@@ -13,7 +13,7 @@ story. And it did a pretty decent job of that, but I really like what this game
 grew into better.
 
 Act 2 (17 missions) transitions the game to being about V's "condition", and
-introduces your terrorist brain pal Johnny Silverhand. This hoenstly feels like
+introduces your terrorist brain pal Johnny Silverhand. This honestly feels like
 the "real" game to me, and makes me wish Act 1 was compressed even a little bit.
 You _can_ actually choose to skip it, presumably so that you can make a new
 character who's instantly ready to take on the amazing Phantom Liberty DLC.

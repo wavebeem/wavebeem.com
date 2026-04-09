@@ -10,6 +10,7 @@
   font-weight: bold;
   /* font-style: italic; */
   padding: 8px 0;
+  font-size: var(--font-size-nav);
 }
 
 .nav a:where(:not(:hover)) {
