@@ -15,13 +15,8 @@
   background: var(--theme-card);
   outline-offset: -3px;
 
-  .heading {
-    margin: 0;
-    font-weight: bold;
-    text-wrap: balance;
-    line-height: 1.25;
-    color: inherit;
-    text-underline-offset: var(--link-underline-offset);
+  &:empty {
+    pointer-events: none;
   }
 
   &:hover {
@@ -32,6 +27,15 @@
     text-decoration-line: underline;
     text-decoration-thickness: inherit;
     color: var(--color-black);
+  }
+
+  .heading {
+    margin: 0;
+    font-weight: bold;
+    text-wrap: balance;
+    line-height: 1.25;
+    color: inherit;
+    text-underline-offset: var(--link-underline-offset);
   }
 
   .description {
@@ -47,6 +51,10 @@
       background: var(--color-silver);
     } */
 
+    &:empty {
+      display: none;
+    }
+
     /* Round the corners of the group extra */
     &:nth-child(1 of :not(:empty)) {
       border-top-left-radius: var(--rounded-large);
@@ -56,10 +64,6 @@
       border-bottom-right-radius: var(--rounded-large);
       border-bottom-left-radius: var(--rounded-large);
     }
-  }
-
-  .menu-card:empty {
-    display: none;
   }
 }
 
