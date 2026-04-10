@@ -40,6 +40,8 @@
   --link-underline-offset: calc(1em / 6);
   --link-underline-thickness: 1px;
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 0px);
+
+  --shadow-color: rgb(from var(--color-purple) r g b / 5%);
 }
 
 @media (width <= 50rem) {

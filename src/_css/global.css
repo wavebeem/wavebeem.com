@@ -101,7 +101,7 @@ h1 {
 
 h1::after {
   content: "\00A0//";
-  color: var(--color-green);
+  color: var(--theme-accent);
   font-weight: normal;
   font-size: 0.5em;
 }
@@ -116,7 +116,7 @@ h2::after {
   font-size: 0.5em;
   content: "\00A0//";
   font-weight: normal;
-  color: var(--color-green);
+  color: var(--theme-accent);
 }
 
 h3 {
@@ -131,7 +131,7 @@ h3:where(:not(:has(a)))::after {
   text-decoration: none;
   font-size: 0.5em;
   content: "\00A0//";
-  color: var(--color-green);
+  color: var(--theme-accent);
 }
 
 code,
@@ -260,6 +260,7 @@ video {
   background: var(--theme-card);
   padding: 8px;
   border-radius: var(--rounded-large);
+  border: 1px solid var(--theme-figure);
 }
 
 .sharp {

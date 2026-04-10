@@ -113,7 +113,7 @@ article:where(.page) {
         background so that things look less empty when they load in while you're
         scrolling... */
         background: var(--theme-image);
-        outline: 1px solid rgb(from var(--color-purple) r g b / 5%);
+        outline: 1px solid var(--shadow-color);
         outline-offset: -1px;
       }
     }

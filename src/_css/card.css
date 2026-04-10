@@ -11,6 +11,8 @@ a.card {
   background: var(--theme-card);
   outline-offset: 0px;
 
+  box-shadow: inset 0 0 0 1px var(--shadow-color);
+
   .heading {
     margin: 0;
     font-weight: bold;
@@ -45,7 +47,7 @@ ul.card {
   list-style-type: none;
   max-width: initial;
   padding: 0;
-  gap: 2px;
+  gap: 4px;
 
   > li a {
     border-radius: var(--rounded-small);
@@ -53,6 +55,8 @@ ul.card {
     padding: var(--card-padding-y) var(--card-padding-x);
     background: var(--theme-card);
     color: inherit;
+
+    box-shadow: inset 0 0 0 1px var(--shadow-color);
 
     &:hover {
       filter: brightness(102%);
