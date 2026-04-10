@@ -28,9 +28,9 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 }
 
 const raw = {
-  white: "#fff",
+  white: "hsl(40, 100%, 95%)",
   black: "#222",
-  silver: "#eef",
+  silver: "#fff",
   ice: "#ddf",
   green: "#0f7",
   purple: "#70f",

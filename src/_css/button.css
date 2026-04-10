@@ -13,6 +13,7 @@ button {
   text-decoration-thickness: var(--link-underline-thickness);
   line-height: 1.25;
   border: 0;
+  box-shadow: var(--shadow-medium);
 
   color: var(--color-black);
   background: var(--color-green);
@@ -21,6 +22,8 @@ button {
 .button:hover,
 button:hover {
   text-decoration-line: none;
+  translate: -1px -1px;
+  box-shadow: var(--shadow-medium-hover);
 }
 
 .button:hover:where(:not(:active)),

@@ -1,6 +1,11 @@
 .menu {
   display: grid;
   gap: 2px;
+
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--rounded-large);
+  padding: 2px;
+  background: var(--color-black);
 }
 
 .menu-card {
@@ -70,13 +75,13 @@
 @media (width >= 40rem) {
   .menu {
     grid-template-columns: repeat(2, 1fr);
-    gap: 4px;
+    /* gap: 4px; */
   }
 
   .menu-card {
     font-size: var(--font-size-h3);
     text-align: center;
-    border-radius: var(--rounded-small);
+    /* border-radius: var(--rounded-small); */
 
     /* Stripe colors */
     &:is(:nth-child(4n), :nth-child(4n-1)) {

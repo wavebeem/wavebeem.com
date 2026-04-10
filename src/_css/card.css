@@ -11,6 +11,8 @@ a.card {
   background: var(--theme-card);
   outline-offset: 0px;
 
+  box-shadow: var(--shadow-medium);
+
   .heading {
     margin: 0;
     font-weight: bold;
@@ -22,6 +24,8 @@ a.card {
 
   &:hover {
     filter: brightness(102%);
+    translate: -1px -1px;
+    box-shadow: var(--shadow-medium-hover);
   }
 
   &:where(:hover) .heading {

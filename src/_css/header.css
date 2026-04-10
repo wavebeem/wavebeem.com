@@ -1,6 +1,10 @@
 .header {
   padding: 8px 0;
   background: var(--color-green);
+  border-radius: var(--rounded-large);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  box-shadow: var(--shadow-medium);
 }
 
 :where(:root[data-sticky]) .header {
