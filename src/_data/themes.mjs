@@ -56,7 +56,7 @@ export default {
   "theme-number": "var(--color-silver)",
   "theme-photo": "var(--color-silver)",
   "theme-figure": "var(--color-ice)",
-  "theme-image": "var(--color-ice)",
+  "theme-image": "var(--color-white)",
   "theme-button": "var(--color-ice)",
   "theme-card": "var(--color-silver)",
   "theme-link": "var(--color-purple)",

@@ -106,13 +106,13 @@ article:where(.page) {
       padding: 8px;
       border: 1px solid var(--theme-figure);
       border-radius: var(--rounded-large);
+      background: var(--theme-image);
 
       img,
       video {
         /* I use a lot of lazy loaded images, so let's give them a bit of a
         background so that things look less empty when they load in while you're
         scrolling... */
-        background: var(--theme-image);
         outline: 1px solid var(--shadow-color);
         outline-offset: -1px;
       }
