@@ -27,12 +27,12 @@ button:hover {
 
 .button:hover:where(:not(:active)),
 button:hover:where(:not(:active)) {
-  filter: brightness(96%);
+  filter: brightness(112%) saturate(80%);
 }
 
 .button:active,
 button:active {
-  filter: brightness(90%);
+  filter: brightness(96%) saturate(80%);
 }
 
 .button:focus-visible,
