@@ -32,8 +32,10 @@ const raw = {
   black: "#222",
   silver: "#eef",
   ice: "#ddf",
-  green: "#0e6",
   // green: "#0f7",
+  // green: "#0e6",
+  green: "#7e7",
+  shamrock: "#5c5",
   purple: "#60e",
   peach: "#fc6",
 };
@@ -41,6 +43,7 @@ const raw = {
 export default {
   "color-black": raw.black,
   "color-green": raw.green,
+  "color-shamrock": raw.shamrock,
   "color-silver": raw.silver,
   "color-white": raw.white,
   "color-purple": raw.purple,
@@ -51,7 +54,8 @@ export default {
   "theme-selection-text": "var(--color-black)",
 
   "theme-scrollbar": "var(--color-purple)",
-  "theme-accent": "var(--color-green)",
+  "theme-bullet": "var(--color-purple)",
+  "theme-accent": "var(--color-shamrock)",
   "theme-border": "var(--color-ice)",
   "theme-number": "var(--color-silver)",
   "theme-photo": "var(--color-silver)",
@@ -60,6 +64,8 @@ export default {
   "theme-button": "var(--color-ice)",
   "theme-card": "var(--color-silver)",
   "theme-link": "var(--color-purple)",
+
+  "color-shadow": "rgb(from var(--color-purple) r g b / 5%)",
 
   "syntax-border": "var(--color-ice)",
   "syntax-text": "var(--color-black)",

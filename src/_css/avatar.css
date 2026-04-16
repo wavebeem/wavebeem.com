@@ -16,7 +16,7 @@
   border: 0;
   box-sizing: content-box;
 
-  outline: 1px solid var(--shadow-color);
+  outline: 1px solid var(--color-shadow);
   outline-offset: -1px;
 }
 

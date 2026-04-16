@@ -105,7 +105,7 @@ article:where(.page) {
       gap: 8px;
       padding: 8px;
       border: 1px solid var(--theme-figure);
-      border-radius: var(--rounded-large);
+      border-radius: var(--rounded-medium);
       background: var(--theme-image);
 
       img,
@@ -113,7 +113,7 @@ article:where(.page) {
         /* I use a lot of lazy loaded images, so let's give them a bit of a
         background so that things look less empty when they load in while you're
         scrolling... */
-        outline: 1px solid var(--shadow-color);
+        outline: 1px solid var(--color-shadow);
         outline-offset: -1px;
       }
     }

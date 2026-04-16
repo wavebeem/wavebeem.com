@@ -186,16 +186,32 @@ main :is(blockquote, ul, ol, dl, p) {
   margin-block: 1.5rem;
 }
 
-main :is(ul, ol) {
+main ul {
+  padding-left: var(--list-inset);
+
+  @media (width >= 30rem) {
+    padding-left: 0;
+  }
+}
+
+main :is(ol, ul) ul {
   padding-left: var(--list-inset);
 }
 
 main ul {
-  list-style-type: disc;
+  /* list-style-type: disc; */
+  /* list-style-type: circle; */
+  list-style-type: "→\00a0";
+  list-style-type: "–\00a0";
+  list-style-type: "*\00a0";
 }
 
 main ul ::marker {
-  /* color: var(--color-green); */
+  /* font-size: 0.5em; */
+  vertical-align: middle;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  /* color: var(--theme-bullet); */
 }
 
 .hash-nav {
@@ -230,6 +246,14 @@ main ul ::marker {
 
 main ol {
   padding-left: 3rem;
+
+  @media (width >= 60rem) {
+    padding-left: 0;
+  }
+}
+
+main :is(ol, ul) ol {
+  padding-left: 3rem;
 }
 
 main :is(ul, ol) :is(ul, ol) {
@@ -246,20 +270,20 @@ canvas,
 img,
 video {
   display: block;
-  border-radius: var(--rounded-medium);
+  border-radius: var(--rounded-small);
 }
 
 .border {
   border-radius: 0;
   background: var(--color-white);
   padding: 1px;
-  border: 1px solid var(--color-black);
+  border: 1px solid var(--theme-figure);
 }
 
 .frame {
   background: var(--theme-card);
+  border-radius: var(--rounded-small);
   padding: 8px;
-  border-radius: var(--rounded-large);
   border: 1px solid var(--theme-figure);
 }
 

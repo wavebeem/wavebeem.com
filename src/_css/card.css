@@ -11,7 +11,7 @@ a.card {
   background: var(--theme-card);
   outline-offset: 0px;
 
-  box-shadow: inset 0 0 0 1px var(--shadow-color);
+  box-shadow: inset 0 0 0 1px var(--color-shadow);
 
   .heading {
     margin: 0;
@@ -56,7 +56,7 @@ ul.card {
     background: var(--theme-card);
     color: inherit;
 
-    box-shadow: inset 0 0 0 1px var(--shadow-color);
+    box-shadow: inset 0 0 0 1px var(--color-shadow);
 
     &:hover {
       filter: brightness(102%);

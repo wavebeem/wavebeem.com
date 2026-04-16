@@ -26,7 +26,7 @@
 
   --cursor-zoom-in: url("/cursors/zoom-in.svg") 12 12, zoom-in;
 
-  --list-inset: 2rem;
+  --list-inset: 32px;
 
   --rounded-xsmall: 2px;
   --rounded-small: 4px;
@@ -40,8 +40,6 @@
   --link-underline-offset: calc(1em / 6);
   --link-underline-thickness: 1px;
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 0px);
-
-  --shadow-color: rgb(from var(--color-purple) r g b / 5%);
 }
 
 @media (width <= 50rem) {
@@ -53,6 +51,6 @@
     --font-size-nav: round(1.25rem, 1px);
     --font-size-small: round(1rem, 1px);
 
-    --list-inset: 2rem;
+    /* --list-inset: 32px; */
   }
 }

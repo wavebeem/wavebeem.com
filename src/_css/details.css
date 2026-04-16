@@ -54,6 +54,13 @@ main details {
 
   @media (hover) {
     summary:hover {
+      background-image: linear-gradient(
+        to right,
+        transparent,
+        rgb(from var(--theme-border) r g b / 15%),
+        transparent
+      );
+
       &::after {
         filter: brightness(95%);
       }
