@@ -108,6 +108,12 @@ article:where(.page) {
       border-radius: var(--rounded-medium);
       background: var(--theme-image);
 
+      @media (width <= 30rem) {
+        border-radius: 0;
+        border: 0;
+        margin-inline: -16px;
+      }
+
       img,
       video {
         /* I use a lot of lazy loaded images, so let's give them a bit of a
@@ -142,7 +148,7 @@ article:where(.page) {
         height: 100%;
         position: absolute;
         top: 0;
-        left: 0;
+        left: -4px;
         background: var(--theme-accent);
         border-radius: var(--rounded-pill);
       }

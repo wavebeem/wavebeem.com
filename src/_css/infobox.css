@@ -2,17 +2,36 @@ ul.infobox {
   display: grid;
   gap: 4px;
   background: var(--color-white);
-  border: 1px solid var(--theme-figure);
-  border-radius: var(--rounded-medium);
+  /* border: 1px solid var(--theme-figure);
+  border-radius: var(--rounded-medium); */
+  /* border-left: 4px solid var(--theme-accent); */
   list-style-type: none;
-  padding: 4px 4px;
+  padding: 0;
+  /* padding: 4px 4px; */
 
-  & > li {
-    padding-inline: 8px;
+  padding-inline: 16px;
+  border-left: 4px solid transparent;
+  max-width: max-content;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--theme-accent);
+    border-radius: var(--rounded-pill);
   }
 
-  & > li + li {
+  & > li {
     border-top: 1px solid var(--theme-figure);
     padding-top: 4px;
+  }
+
+  & > li:last-of-type {
+    border-bottom: 1px solid var(--theme-figure);
+    padding-bottom: 4px;
   }
 }

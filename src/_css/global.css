@@ -351,6 +351,7 @@ article header small {
   display: grid;
   gap: 1rem;
   justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .photo-grid > * {

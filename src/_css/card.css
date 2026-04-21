@@ -7,7 +7,7 @@ a.card {
   padding: 16px;
   gap: 8px;
 
-  border-radius: var(--rounded-large);
+  border-radius: var(--rounded-medium);
   background: var(--theme-card);
   outline-offset: 0px;
 
@@ -72,13 +72,13 @@ ul.card {
   }
 
   > li:first-of-type a {
-    border-radius: var(--rounded-large) var(--rounded-large)
+    border-radius: var(--rounded-medium) var(--rounded-medium)
       var(--rounded-small) var(--rounded-small);
   }
 
   > li:last-of-type a {
     border-radius: var(--rounded-small) var(--rounded-small)
-      var(--rounded-large) var(--rounded-large);
+      var(--rounded-medium) var(--rounded-medium);
   }
 }
 

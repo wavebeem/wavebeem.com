@@ -59,12 +59,12 @@
 
     /* Round the corners of the group extra */
     &:nth-child(1 of :not(:empty)) {
-      border-top-left-radius: var(--rounded-large);
-      border-top-right-radius: var(--rounded-large);
+      border-top-left-radius: var(--rounded-medium);
+      border-top-right-radius: var(--rounded-medium);
     }
     &:nth-last-child(1 of :not(:empty)) {
-      border-bottom-right-radius: var(--rounded-large);
-      border-bottom-left-radius: var(--rounded-large);
+      border-bottom-right-radius: var(--rounded-medium);
+      border-bottom-left-radius: var(--rounded-medium);
     }
   }
 }
@@ -87,40 +87,40 @@
 
     /* Round the corners of the menu more */
     &:nth-child(1) {
-      border-top-left-radius: var(--rounded-large);
+      border-top-left-radius: var(--rounded-medium);
     }
     &:nth-child(2) {
-      border-top-right-radius: var(--rounded-large);
+      border-top-right-radius: var(--rounded-medium);
     }
     &:nth-last-child(1) {
-      border-bottom-right-radius: var(--rounded-large);
+      border-bottom-right-radius: var(--rounded-medium);
     }
     &:nth-last-child(2) {
-      border-bottom-left-radius: var(--rounded-large);
+      border-bottom-left-radius: var(--rounded-medium);
     }
   }
 
   /* .menu-card:nth-child(1) {
-    border-top-left-radius: var(--rounded-large);
+    border-top-left-radius: var(--rounded-medium);
   }
   .menu-card:nth-child(2) {
-    border-top-right-radius: var(--rounded-large);
+    border-top-right-radius: var(--rounded-medium);
   }
   .menu:has(> .menu-card:last-child:nth-child(odd)) {
     .menu-card:has(+ .menu-card:last-child) {
-      border-bottom-right-radius: var(--rounded-large);
+      border-bottom-right-radius: var(--rounded-medium);
     }
     .menu-card:last-child {
-      border-bottom-left-radius: var(--rounded-large);
-      border-bottom-right-radius: var(--rounded-large);
+      border-bottom-left-radius: var(--rounded-medium);
+      border-bottom-right-radius: var(--rounded-medium);
     }
   }
   .menu:has(> .menu-card:last-child:nth-child(even)) {
     .menu-card:last-child {
-      border-bottom-right-radius: var(--rounded-large);
+      border-bottom-right-radius: var(--rounded-medium);
     }
     .menu-card:has(+ .menu-card:last-child) {
-      border-bottom-left-radius: var(--rounded-large);
+      border-bottom-left-radius: var(--rounded-medium);
     }
   } */
 }
