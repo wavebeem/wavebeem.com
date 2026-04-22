@@ -108,11 +108,11 @@ article:where(.page) {
       border-radius: var(--rounded-medium);
       background: var(--theme-image);
 
-      @media (width <= 30rem) {
+      /* @media (width <= 30rem) {
         border-radius: 0;
         border: 0;
         margin-inline: -16px;
-      }
+      } */
 
       img,
       video {
