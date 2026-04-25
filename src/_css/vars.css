@@ -9,6 +9,33 @@
   --font-cool: var(--font-body);
   --font-mono: "Lilex", var(--font-fallback-mono);
 
+  --image-outline: rgb(from var(--color-green) r g b / 30%);
+
+  --ui-bg-overlay-hover: radial-gradient(#fff4);
+  --ui-bg-overlay-active: radial-gradient(#0002);
+
+  --subtle-border-color-highlight: color-mix(
+    in oklab,
+    var(--color-green) 20%,
+    var(--color-white)
+  );
+  --subtle-border-color-shadow: color-mix(
+    in oklab,
+    var(--color-green) 40%,
+    var(--color-white)
+  );
+  --subtle-border-color: var(--subtle-border-color-highlight)
+    var(--subtle-border-color-shadow) var(--subtle-border-color-shadow)
+    var(--subtle-border-color-highlight);
+
+  --strong-border-color: var(--color-green);
+  --strong-box-shadow:
+    1px 1px 0 0 var(--color-green), 2px 2px 0 0 var(--color-green),
+    3px 3px 0 0 var(--color-green);
+  /* --strong-box-shadow:
+    1px 1px 0 0 var(--color-green), 2px 2px 0 0 var(--color-green),
+    3px 3px 0 0 var(--color-green), 4px 4px 0 0 var(--color-green); */
+
   /*
    Fluid typography seems really cool, but it also kinda looks terrible unless
    you're adding in `round()` to prevent fractional pixels during resizing,
@@ -38,7 +65,7 @@
   --width-heading: 50rem;
 
   --link-underline-offset: calc(1em / 6);
-  --link-underline-thickness: 1px;
+  --link-underline-thickness: 1.5px;
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 0px);
 }
 

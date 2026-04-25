@@ -12,12 +12,18 @@ button {
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
   line-height: 1.25;
-  border: 0;
+  /* border: 0; */
 
+  background: var(--color-honeydew);
   color: var(--color-black);
-  background: var(--color-green);
 
-  box-shadow: inset 0 0 0 1px var(--color-shadow);
+  /* box-shadow: inset 0 0 0 1px var(--color-shadow); */
+
+  border: 1px solid;
+  border-color: var(--strong-border-color);
+  border-top-color: rgb(from var(--strong-border-color) r g b / 60%);
+  border-left-color: rgb(from var(--strong-border-color) r g b / 60%);
+  /* box-shadow: var(--strong-box-shadow); */
 }
 
 .button:hover,
@@ -27,18 +33,19 @@ button:hover {
 
 .button:hover:where(:not(:active)),
 button:hover:where(:not(:active)) {
-  filter: brightness(112%) saturate(80%);
+  background-image: var(--ui-bg-overlay-hover);
 }
 
 .button:active,
 button:active {
-  filter: brightness(96%) saturate(80%);
+  background-image: var(--ui-bg-overlay-active);
 }
 
 .button:focus-visible,
 button:focus-visible {
   outline: 3px solid;
-  outline-offset: -1px;
+  outline-offset: 3px;
+  box-shadow: none;
 }
 
 :is(.button, button):where([data-variant="secondary"]) {
@@ -51,6 +58,10 @@ button:focus-visible {
   font-size: var(--font-size-small);
 
   &:hover {
-    filter: brightness(106%);
+    background-image: var(--ui-bg-overlay-hover);
+  }
+
+  &:active {
+    background-image: var(--ui-bg-overlay-active);
   }
 }

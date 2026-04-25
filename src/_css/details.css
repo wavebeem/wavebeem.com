@@ -69,7 +69,7 @@ main details {
 }
 
 main summary:hover:active::after {
-  --c: var(--color-green);
+  --c: var(--color-forest);
 }
 
 main details:has(> summary:focus-visible) {

@@ -16,7 +16,6 @@ export class WavebeemFunAlgebra extends HTMLElement {
           background: white;
           display: block;
           max-width: 100%;
-          border-radius: 8px;
         }
       </style>
       <canvas id="game" width="400" height="400"></canvas>

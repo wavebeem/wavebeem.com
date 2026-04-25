@@ -2,6 +2,7 @@ pre:has(> code) {
   overflow-x: auto;
   margin-block: 1.5rem;
   padding: 1rem;
+  background: var(--syntax-background);
   border: 1px solid var(--syntax-border);
   color: var(--syntax-text);
   border-radius: var(--rounded-medium);

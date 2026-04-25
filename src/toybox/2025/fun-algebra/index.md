@@ -47,7 +47,7 @@ hand-draw the points and lines on to traverse the map.
 Move your mouse cursor around within the graph area to see how the lines are
 meant to connect.
 
-<div class="frame max-content">
+<div class="border max-content">
   <wavebeem-fun-algebra>
     Loading...
   </wavebeem-fun-algebra>

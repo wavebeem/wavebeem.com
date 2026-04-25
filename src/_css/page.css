@@ -104,7 +104,8 @@ article:where(.page) {
       max-width: max-content;
       gap: 8px;
       padding: 8px;
-      border: 1px solid var(--theme-figure);
+      border: 1px solid;
+      border-color: var(--subtle-border-color);
       border-radius: var(--rounded-medium);
       background: var(--theme-image);
 
@@ -119,7 +120,7 @@ article:where(.page) {
         /* I use a lot of lazy loaded images, so let's give them a bit of a
         background so that things look less empty when they load in while you're
         scrolling... */
-        outline: 1px solid var(--color-shadow);
+        outline: 1px solid var(--image-outline);
         outline-offset: -1px;
       }
     }
