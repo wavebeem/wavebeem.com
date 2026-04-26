@@ -45,6 +45,7 @@ article:where(.page) {
       max-width: 100%;
       height: auto;
       display: block;
+      /* border-radius: var(--rounded-small); */
     }
 
     p:has(img, video) {
@@ -103,11 +104,6 @@ article:where(.page) {
       flex-direction: column;
       max-width: max-content;
       gap: 8px;
-      padding: 8px;
-      border: 1px solid;
-      border-color: var(--subtle-border-color);
-      border-radius: var(--rounded-medium);
-      background: var(--theme-image);
 
       /* @media (width <= 30rem) {
         border-radius: 0;
@@ -130,6 +126,7 @@ article:where(.page) {
       /* text-wrap: balance; */
       text-wrap: pretty;
       font-style: italic;
+      margin-top: -4px;
 
       strong {
         font-style: normal;

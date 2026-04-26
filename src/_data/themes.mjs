@@ -52,7 +52,7 @@ export default {
 
   "theme-scrollbar": "var(--color-forest)",
   "theme-bullet": "var(--color-green)",
-  "theme-accent": "var(--color-forest)",
+  "theme-accent": "var(--color-green)",
   "theme-border":
     "color-mix(in oklab, var(--color-green) 20%, var(--color-white))",
   "theme-number": "var(--color-silver)",

@@ -3,20 +3,18 @@
   --font-fallback-mono:
     ui-monospace, "Cascadia Code", "SFMono-Regular", "Menlo", "Monaco",
     "Consolas", "Liberation Mono", "Courier New", monospace;
-  /* --font-body: "Lilex", var(--font-fallback-main); */
   --font-body: "PP Mori", var(--font-fallback-main);
-  /* --font-cool: "PP Talisman Narrow", var(--font-fallback-main); */
   --font-cool: var(--font-body);
   --font-mono: "Lilex", var(--font-fallback-mono);
 
-  --image-outline: rgb(from var(--color-green) r g b / 30%);
+  --image-outline: rgb(from var(--color-black) r g b / 20%);
 
   --ui-bg-overlay-hover: radial-gradient(#fff4);
   --ui-bg-overlay-active: radial-gradient(#0002);
 
   --subtle-border-color-highlight: color-mix(
     in oklab,
-    var(--color-green) 20%,
+    var(--color-green) 30%,
     var(--color-white)
   );
   --subtle-border-color-shadow: color-mix(
@@ -59,6 +57,7 @@
   --rounded-small: 4px;
   --rounded-medium: 8px;
   --rounded-large: 16px;
+
   --rounded-pill: 9999px;
 
   --width-copy: 50rem;
