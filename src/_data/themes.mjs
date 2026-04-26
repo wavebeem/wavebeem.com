@@ -1,15 +1,5 @@
 import Color from "colorjs.io";
 
-// Should I try out some other colors eventually?
-//
-// https://color-combos.wavebeem.com/?fg=%23fff%0A%23222&bg=%23fff%0A%23222%0A%2370f%0A%230f8%0A%23eef&group_by=background
-//
-// #eef
-// #fff
-// #222
-// #70f
-// #0f8
-
 /**
  * @param {number} lightness
  * @param {number} chroma
@@ -27,52 +17,58 @@ function oklch(lightness, chroma, hue, alpha = 100) {
   return color.to("srgb").toString({ format: "hex" });
 }
 
+// https://www.colourlovers.com/palette/1608718/queen_angel
+//
+// #181a1b
+// #286757
+// #2fc723
+// #b3f200
+// #d3e0d3
+//
 const raw = {
-  white: "#fff",
-  black: "#222",
-  silver: "#eef",
-  ice: "#ddf",
-  // green: "#0f7",
-  // green: "#0e6",
-  green: "#7e7",
-  shamrock: "#5c5",
-  purple: "#60e",
-  peach: "#fc6",
+  white: "#d3e0d3",
+  black: "#181a1b",
+  silver: "#e7efe7",
+  ice: "#e7efe7",
+  green: "#286757",
+  forest: "#2fc723",
+  honeydew: "#b3f200",
+
+  peach: "#d2acfb",
 };
 
 export default {
-  "color-black": raw.black,
-  "color-green": raw.green,
-  "color-shamrock": raw.shamrock,
-  "color-silver": raw.silver,
   "color-white": raw.white,
-  "color-purple": raw.purple,
-  "color-peach": raw.peach,
+  "color-black": raw.black,
+  "color-silver": raw.silver,
   "color-ice": raw.ice,
+  "color-green": raw.green,
+  "color-forest": raw.forest,
+  "color-honeydew": raw.honeydew,
+  "color-peach": raw.peach,
 
   "theme-selection-bg": "var(--color-peach)",
   "theme-selection-text": "var(--color-black)",
 
-  "theme-scrollbar": "var(--color-purple)",
-  "theme-bullet": "var(--color-purple)",
-  "theme-accent": "var(--color-shamrock)",
-  "theme-border": "var(--color-ice)",
+  "theme-scrollbar": "var(--color-forest)",
+  "theme-bullet": "var(--color-green)",
+  "theme-accent": "var(--color-green)",
+  "theme-border":
+    "color-mix(in oklab, var(--color-green) 20%, var(--color-white))",
   "theme-number": "var(--color-silver)",
-  "theme-photo": "var(--color-silver)",
+  "theme-photo": "var(--color-ice)",
   "theme-figure": "var(--color-ice)",
-  "theme-image": "var(--color-white)",
+  "theme-image": "var(--color-ice)",
   "theme-button": "var(--color-ice)",
   "theme-card": "var(--color-silver)",
-  "theme-link": "var(--color-purple)",
+  "theme-link": "var(--color-green)",
 
-  "color-shadow": "rgb(from var(--color-purple) r g b / 5%)",
-
-  "syntax-border": "var(--color-ice)",
-  "syntax-text": "var(--color-black)",
-  // "syntax-text": "#111111",
-  "syntax-keyword": "#0000ee",
-  "syntax-comment": "#007700",
-  "syntax-property": "#aa00cc",
-  "syntax-string": "#cc0000",
-  "syntax-punctuation": "#aa4400",
+  "syntax-background": "var(--color-black)",
+  "syntax-border": "var(--color-black)",
+  "syntax-text": "var(--color-white)",
+  "syntax-keyword": "#ffffff",
+  "syntax-comment": "#bd85f9",
+  "syntax-property": "#b3f200",
+  "syntax-string": "#00cc9c",
+  "syntax-punctuation": "#d2acfb",
 };

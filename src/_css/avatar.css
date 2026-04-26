@@ -1,4 +1,6 @@
-.avatar {
+.avatar-wrapper {
+  background: var(--color-forest);
+
   --avatar-size: 200px;
   --avatar-padding: 0px;
   float: right;
@@ -8,16 +10,26 @@
   padding: var(--avatar-padding);
   display: flex;
   position: relative;
-  background: var(--theme-photo);
 
   border-radius: var(--rounded-pill);
+  /* border: 1px solid;
+  border-color: var(--subtle-border-color); */
+
+  outline: 1px solid var(--image-outline);
+  outline-offset: -1px;
+}
+
+.avatar {
+  /* background: var(--theme-photo); */
+  border-radius: inherit;
+
   width: var(--avatar-size);
   height: var(--avatar-size);
-  border: 0;
+  /* border: 0; */
   box-sizing: content-box;
 
-  outline: 1px solid var(--color-shadow);
-  outline-offset: -1px;
+  /* outline: 1px solid var(--color-shadow);
+  outline-offset: -1px; */
 }
 
 @media (width <= 50rem) {

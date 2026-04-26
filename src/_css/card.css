@@ -9,9 +9,12 @@ a.card {
 
   border-radius: var(--rounded-medium);
   background: var(--theme-card);
-  outline-offset: 0px;
+  outline-offset: -1px;
 
-  box-shadow: inset 0 0 0 1px var(--color-shadow);
+  /* box-shadow: inset 0 0 0 1px var(--color-shadow); */
+
+  border: 1px solid;
+  border-color: var(--subtle-border-color);
 
   .heading {
     margin: 0;
@@ -23,7 +26,7 @@ a.card {
   }
 
   &:hover {
-    filter: brightness(102%);
+    background-image: var(--ui-bg-overlay-hover);
   }
 
   &:where(:hover) .heading {
@@ -47,19 +50,27 @@ ul.card {
   list-style-type: none;
   max-width: initial;
   padding: 0;
-  gap: 4px;
+  gap: 1px;
+
+  background: var(--color-white);
+  color: inherit;
+  border: 1px solid;
+  border-color: var(--subtle-border-color);
+  border-radius: var(--rounded-medium);
 
   > li a {
-    border-radius: var(--rounded-small);
+    border-radius: 0;
     display: block;
     padding: var(--card-padding-y) var(--card-padding-x);
     background: var(--theme-card);
     color: inherit;
 
-    box-shadow: inset 0 0 0 1px var(--color-shadow);
+    /* box-shadow: inset 0 0 0 1px var(--color-shadow); */
+    /* border: 1px solid;
+    border-color: var(--subtle-border-color); */
 
     &:hover {
-      filter: brightness(102%);
+      background-image: var(--ui-bg-overlay-hover);
     }
 
     &:not(:hover) {
@@ -67,18 +78,16 @@ ul.card {
     }
 
     &:focus-visible {
-      outline-offset: -3px;
+      outline-offset: -2px;
     }
   }
 
   > li:first-of-type a {
-    border-radius: var(--rounded-medium) var(--rounded-medium)
-      var(--rounded-small) var(--rounded-small);
+    border-radius: var(--rounded-medium) var(--rounded-medium) 0 0;
   }
 
   > li:last-of-type a {
-    border-radius: var(--rounded-small) var(--rounded-small)
-      var(--rounded-medium) var(--rounded-medium);
+    border-radius: 0 0 var(--rounded-medium) var(--rounded-medium);
   }
 }
 

@@ -41,7 +41,6 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
           flex-flow: column;
           align-items: flex-start;
           background: white;
-          border-radius: 8px;
           max-width: max-content;
         }
 
@@ -237,7 +236,7 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
     if (removeNode) {
       this.#nodes = this.#nodes.filter((n) => n !== removeNode);
       this.segments = this.segments.filter(
-        (s) => !(s.node1 === removeNode || s.node2 === removeNode)
+        (s) => !(s.node1 === removeNode || s.node2 === removeNode),
       );
     }
   };
@@ -328,5 +327,5 @@ function distance(x1, y1, x2, y2) {
 
 customElements.define(
   "wavebeem-disjoint-graph-union",
-  WavebeemDisjointGraphUnion
+  WavebeemDisjointGraphUnion,
 );

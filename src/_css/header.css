@@ -1,7 +1,8 @@
 .header {
   padding: 8px 0;
   background: var(--color-green);
-  box-shadow: inset 0 0 0 1px var(--color-shadow);
+  color: var(--color-honeydew);
+  /* box-shadow: inset 0 0 0 1px var(--color-shadow); */
 }
 
 :where(:root[data-sticky]) .header {
@@ -39,7 +40,6 @@
   gap: 8px;
 
   box-sizing: border-box;
-  color: var(--color-black);
 }
 
 .logo {

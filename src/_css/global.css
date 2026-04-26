@@ -147,7 +147,7 @@ pre {
   font-size: 0.9em;
   font-weight: 500;
   background: var(--theme-number);
-  border-radius: var(--rounded-medium);
+  border-radius: var(--rounded-small);
   padding: 0 4px;
 }
 
@@ -211,7 +211,7 @@ main ul ::marker {
   vertical-align: middle;
   font-family: var(--font-mono);
   font-weight: 500;
-  /* color: var(--theme-bullet); */
+  color: var(--theme-bullet);
 }
 
 .hash-nav {
@@ -233,13 +233,15 @@ main ul ::marker {
     background-color: var(--theme-button);
     /* font-weight: bold; */
     color: inherit;
+    border: 1px solid;
+    border-color: var(--subtle-border-color);
 
     &:focus-visible {
       outline-offset: -1px;
     }
 
     &:hover:where(:not(:active)) {
-      filter: brightness(102%);
+      background-image: var(--ui-bg-overlay-hover);
     }
   }
 }
@@ -270,21 +272,23 @@ canvas,
 img,
 video {
   display: block;
-  border-radius: var(--rounded-small);
+  /* border-radius: var(--rounded-medium); */
 }
 
 .border {
-  border-radius: 0;
   background: var(--color-white);
-  padding: 1px;
-  border: 1px solid var(--theme-figure);
+  border-radius: 0;
+  /* padding: 1px; */
+  border: 1px solid var(--strong-border-color);
+  box-shadow: var(--strong-box-shadow);
 }
 
 .frame {
   background: var(--theme-card);
-  border-radius: var(--rounded-small);
-  padding: 8px;
-  border: 1px solid var(--theme-figure);
+  border-radius: 0;
+  /* padding: 1px; */
+  border: 1px solid var(--strong-border-color);
+  box-shadow: var(--strong-box-shadow);
 }
 
 .sharp {

@@ -45,6 +45,7 @@ article:where(.page) {
       max-width: 100%;
       height: auto;
       display: block;
+      /* border-radius: var(--rounded-small); */
     }
 
     p:has(img, video) {
@@ -103,10 +104,6 @@ article:where(.page) {
       flex-direction: column;
       max-width: max-content;
       gap: 8px;
-      padding: 8px;
-      border: 1px solid var(--theme-figure);
-      border-radius: var(--rounded-medium);
-      background: var(--theme-image);
 
       /* @media (width <= 30rem) {
         border-radius: 0;
@@ -119,7 +116,7 @@ article:where(.page) {
         /* I use a lot of lazy loaded images, so let's give them a bit of a
         background so that things look less empty when they load in while you're
         scrolling... */
-        outline: 1px solid var(--color-shadow);
+        outline: 1px solid var(--image-outline);
         outline-offset: -1px;
       }
     }
@@ -129,6 +126,7 @@ article:where(.page) {
       /* text-wrap: balance; */
       text-wrap: pretty;
       font-style: italic;
+      margin-top: -4px;
 
       strong {
         font-style: normal;
