@@ -101,7 +101,7 @@ h1 {
 
 h1::after {
   content: "\00A0//";
-  color: var(--theme-accent);
+  color: var(--theme-accent2);
   font-weight: normal;
   font-size: 0.5em;
 }
@@ -116,7 +116,7 @@ h2::after {
   font-size: 0.5em;
   content: "\00A0//";
   font-weight: normal;
-  color: var(--theme-accent);
+  color: var(--theme-accent2);
 }
 
 h3 {
@@ -131,7 +131,7 @@ h3:where(:not(:has(a)))::after {
   text-decoration: none;
   font-size: 0.5em;
   content: "\00A0//";
-  color: var(--theme-accent);
+  color: var(--theme-accent2);
 }
 
 code,
@@ -231,10 +231,7 @@ main ul ::marker {
     line-height: 1.15;
     padding: 2px 4px;
     background-color: var(--theme-button);
-    /* font-weight: bold; */
     color: inherit;
-    border: 1px solid;
-    border-color: var(--subtle-border-color);
 
     &:focus-visible {
       outline-offset: -1px;
@@ -275,20 +272,12 @@ video {
   /* border-radius: var(--rounded-medium); */
 }
 
-.border {
-  background: var(--color-white);
-  border-radius: 0;
-  /* padding: 1px; */
-  border: 1px solid var(--strong-border-color);
-  box-shadow: var(--strong-box-shadow);
-}
-
+.border,
 .frame {
   background: var(--theme-card);
   border-radius: 0;
-  /* padding: 1px; */
-  border: 1px solid var(--strong-border-color);
-  box-shadow: var(--strong-box-shadow);
+  padding: 1px;
+  border: 1px solid var(--color-black);
 }
 
 .sharp {

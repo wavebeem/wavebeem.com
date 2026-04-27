@@ -11,11 +11,6 @@ a.card {
   background: var(--theme-card);
   outline-offset: -1px;
 
-  /* box-shadow: inset 0 0 0 1px var(--color-shadow); */
-
-  border: 1px solid;
-  border-color: var(--subtle-border-color);
-
   .heading {
     margin: 0;
     font-weight: bold;
@@ -54,8 +49,6 @@ ul.card {
 
   background: var(--color-white);
   color: inherit;
-  border: 1px solid;
-  border-color: var(--subtle-border-color);
   border-radius: var(--rounded-medium);
 
   > li a {
@@ -64,10 +57,6 @@ ul.card {
     padding: var(--card-padding-y) var(--card-padding-x);
     background: var(--theme-card);
     color: inherit;
-
-    /* box-shadow: inset 0 0 0 1px var(--color-shadow); */
-    /* border: 1px solid;
-    border-color: var(--subtle-border-color); */
 
     &:hover {
       background-image: var(--ui-bg-overlay-hover);

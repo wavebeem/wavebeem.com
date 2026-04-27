@@ -34,7 +34,7 @@ const raw = {
   forest: "#2fc723",
   honeydew: "#b3f200",
 
-  peach: "#d2acfb",
+  lavender: "#d2acfb",
 };
 
 export default {
@@ -45,16 +45,19 @@ export default {
   "color-green": raw.green,
   "color-forest": raw.forest,
   "color-honeydew": raw.honeydew,
-  "color-peach": raw.peach,
+  "color-lavender": raw.lavender,
 
-  "theme-selection-bg": "var(--color-peach)",
+  "theme-selection-bg": "var(--color-lavender)",
   "theme-selection-text": "var(--color-black)",
 
   "theme-scrollbar": "var(--color-forest)",
-  "theme-bullet": "var(--color-green)",
+  "theme-bullet": "var(--color-black)",
   "theme-accent": "var(--color-green)",
+  "theme-accent2": "var(--color-forest)",
   "theme-border":
     "color-mix(in oklab, var(--color-green) 20%, var(--color-white))",
+  "theme-border2":
+    "color-mix(in oklab, var(--color-green) 40%, var(--color-white))",
   "theme-number": "var(--color-silver)",
   "theme-photo": "var(--color-ice)",
   "theme-figure": "var(--color-ice)",

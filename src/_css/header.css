@@ -83,7 +83,7 @@
 
 .logo-container {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 1rem;
 }
 
@@ -98,7 +98,7 @@
   }
 
   .logo-container {
-    justify-content: center;
+    /* justify-content: center; */
   }
 }
 

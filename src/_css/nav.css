@@ -1,7 +1,7 @@
 .nav {
   max-width: var(--width-heading);
   display: flex;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .nav a {
@@ -52,7 +52,7 @@
 
   .nav ul,
   .logo {
-    justify-content: center;
+    /* justify-content: center; */
   }
 }
 
