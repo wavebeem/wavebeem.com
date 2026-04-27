@@ -12,11 +12,6 @@
   position: relative;
 
   border-radius: var(--rounded-pill);
-  /* border: 1px solid;
-  border-color: var(--subtle-border-color); */
-
-  outline: 1px solid var(--image-outline);
-  outline-offset: -1px;
 }
 
 .avatar {

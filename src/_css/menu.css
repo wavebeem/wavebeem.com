@@ -2,11 +2,8 @@
   display: grid;
   gap: 1px;
 
-  /* background: var(--subtle-border-color-highlight); */
   background: var(--color-white);
   color: inherit;
-  border: 1px solid;
-  border-color: var(--subtle-border-color);
 
   border-radius: var(--rounded-medium);
 }
