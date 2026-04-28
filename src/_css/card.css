@@ -11,6 +11,8 @@ a.card {
   background: var(--theme-card);
   outline-offset: -1px;
 
+  box-shadow: var(--shadow1);
+
   .heading {
     margin: 0;
     font-weight: bold;
@@ -50,6 +52,8 @@ ul.card {
   background: var(--color-white);
   color: inherit;
   border-radius: var(--rounded-medium);
+
+  box-shadow: var(--shadow1);
 
   > li a {
     border-radius: 0;

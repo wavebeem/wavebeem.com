@@ -6,28 +6,28 @@ ul.infobox {
   padding: 0;
 
   padding-inline: 16px;
-  border-left: 4px solid transparent;
-  max-width: max-content;
+  /*! border-left: 4px solid transparent; */
+  /* max-width: max-content; */
   position: relative;
 
-  &::after {
-    content: "";
-    width: 4px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: var(--theme-accent2);
-    border-radius: var(--rounded-pill);
+  background: var(--theme-box);
+  border-radius: var(--rounded-large);
+  box-shadow: var(--shadow-inset1);
+
+  a {
+    color: inherit;
   }
 
-  & > li {
+  > li {
+    padding-top: 8px;
     border-top: 1px solid var(--theme-border);
-    padding-top: 4px;
   }
 
-  & > li:last-of-type {
-    border-bottom: 1px solid var(--theme-border);
-    padding-bottom: 4px;
+  > li:first-of-type {
+    border-top: 0;
+  }
+
+  > li:last-of-type {
+    padding-bottom: 8px;
   }
 }

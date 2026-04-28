@@ -18,6 +18,7 @@ button {
   color: var(--color-honeydew);
 
   border: 1px solid transparent;
+  box-shadow: var(--shadow1);
 }
 
 .button:hover,

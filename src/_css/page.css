@@ -110,9 +110,11 @@ article:where(.page) {
         /* I use a lot of lazy loaded images, so let's give them a bit of a
         background so that things look less empty when they load in while you're
         scrolling... */
-        outline: 1px solid var(--image-outline);
+        /* outline: 1px solid var(--image-outline); */
         outline-offset: -1px;
         background: var(--theme-image);
+        box-shadow: var(--shadow1);
+        border-radius: var(--rounded-small);
       }
     }
 

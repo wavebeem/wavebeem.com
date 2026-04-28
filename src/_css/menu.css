@@ -6,6 +6,7 @@
   color: inherit;
 
   border-radius: var(--rounded-medium);
+  box-shadow: var(--shadow1);
 }
 
 .menu-card {
