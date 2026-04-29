@@ -2,7 +2,8 @@
   padding: 8px 0;
   background: var(--color-green);
   color: var(--color-honeydew);
-  box-shadow: var(--shadow1);
+  box-shadow: var(--shadow2);
+  margin-bottom: 16px;
 }
 
 :where(:root[data-sticky]) .header {
@@ -37,7 +38,7 @@
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
+  align-items: stretch;
   padding: 1rem;
   gap: 8px;
 
@@ -50,7 +51,7 @@
 }
 
 .logo svg {
-  max-width: 250px;
+  /* max-width: 250px; */
   width: auto;
   height: 26px;
   fill: currentColor;

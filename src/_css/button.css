@@ -18,7 +18,7 @@ button {
   color: var(--color-honeydew);
 
   border: 1px solid transparent;
-  box-shadow: var(--shadow1);
+  box-shadow: var(--shadow2);
 }
 
 .button:hover,
@@ -53,6 +53,7 @@ button:focus-visible {
   border-radius: var(--rounded-small);
   font-size: var(--font-size-small);
   border-color: var(--theme-border2);
+  box-shadow: var(--shadow1);
 
   &:hover {
     background-image: var(--ui-bg-overlay-hover);
