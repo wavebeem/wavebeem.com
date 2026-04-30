@@ -107,14 +107,17 @@ article:where(.page) {
 
       img,
       video {
-        /* I use a lot of lazy loaded images, so let's give them a bit of a
-        background so that things look less empty when they load in while you're
-        scrolling... */
         /* outline: 1px solid var(--image-outline); */
         outline-offset: -1px;
-        background: var(--theme-image);
-        box-shadow: var(--shadow1);
-        border-radius: var(--rounded-small);
+        /* border-radius: var(--rounded-small); */
+
+        &:where(:not([data-background="transparent"])) {
+          background: var(--theme-image);
+          /* I use a lot of lazy loaded images, so let's give them a bit of a
+          background so that things look less empty when they load in while you're
+          scrolling... */
+          box-shadow: var(--shadow1);
+        }
       }
     }
 

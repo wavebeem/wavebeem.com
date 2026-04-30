@@ -49,9 +49,6 @@ button:focus-visible {
   color: var(--color-green);
   font-weight: bold;
   line-height: 1.25;
-  padding: 4px 8px;
-  border-radius: var(--rounded-small);
-  font-size: var(--font-size-small);
   border-color: var(--theme-border2);
   box-shadow: var(--shadow1);
 
@@ -63,4 +60,10 @@ button:focus-visible {
   &:active {
     background-image: var(--ui-bg-overlay-active);
   }
+}
+
+:is(.button, button):where([data-size="small"]) {
+  padding: 4px 8px;
+  border-radius: var(--rounded-small);
+  font-size: var(--font-size-small);
 }

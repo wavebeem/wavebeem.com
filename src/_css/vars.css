@@ -8,7 +8,9 @@
   --font-mono: "Lilex", var(--font-fallback-mono);
 
   /* --image-outline: rgb(from var(--color-black) r g b / 10%); */
-  --image-outline: #fff;
+  --image-outline: rgb(from var(--color-green) r g b / 30%);
+  /* --image-outline: rgb(from currentColor r g b / 20%); */
+  /* --image-outline: #fff; */
 
   /* --shadow1:
     0 1px 2px var(--theme-shadow), 0 2px 4px var(--theme-shadow),
@@ -59,7 +61,7 @@
 
   --cursor-zoom-in: url("/cursors/zoom-in.svg") 12 12, zoom-in;
 
-  --list-inset: 32px;
+  --list-inset: 24px;
 
   --rounded-xsmall: 2px;
   --rounded-small: 4px;

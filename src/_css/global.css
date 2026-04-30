@@ -189,9 +189,9 @@ main :is(blockquote, ul, ol, dl, p) {
 main ul {
   padding-left: var(--list-inset);
 
-  @media (width >= 30rem) {
+  /* @media (width >= 30rem) {
     padding-left: 0;
-  }
+  } */
 }
 
 main :is(ol, ul) ul {
@@ -201,8 +201,8 @@ main :is(ol, ul) ul {
 main ul {
   /* list-style-type: disc; */
   /* list-style-type: circle; */
-  list-style-type: "→\00a0";
   list-style-type: "–\00a0";
+  list-style-type: "→\00a0";
   list-style-type: "*\00a0";
 }
 
@@ -232,6 +232,7 @@ main ul ::marker {
     padding: 2px 4px;
     background-color: var(--theme-button);
     color: inherit;
+    box-shadow: var(--shadow1);
 
     &:focus-visible {
       outline-offset: -1px;

@@ -1,5 +1,4 @@
 .header {
-  padding: 8px 0;
   background: var(--color-green);
   color: var(--color-honeydew);
   box-shadow: var(--shadow2);
@@ -91,6 +90,10 @@
 }
 
 @media (width < 35rem) {
+  .header {
+    padding: 16px 0;
+  }
+
   .logo a {
     margin-block: 8px;
   }
@@ -102,6 +105,10 @@
 
   .logo-container {
     /* justify-content: center; */
+  }
+
+  .header-content {
+    gap: 16px;
   }
 }
 
