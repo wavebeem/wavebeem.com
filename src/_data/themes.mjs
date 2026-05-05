@@ -20,26 +20,29 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 export default {
   "color-white": "#fff",
   "color-black": "#111",
-  "color-green": "LightGreen",
-  "color-darkGreen": "oklch(from var(--color-green) calc(l * 0.85) 50% h)",
+  "color-green1": "LightGreen",
+  "color-green2":
+    "oklch(from var(--color-green1) calc(l * 0.95) calc(c * 1.10) h)",
+  "color-green3":
+    "oklch(from var(--color-green1) calc(l * 0.85) calc(c * 1.33) h)",
   "color-purple": "BlueViolet",
 
   "theme-selection-bg": "var(--color-black)",
   "theme-selection-text": "var(--color-white)",
 
   "theme-header": "var(--color-white)",
-  "theme-shadow": "var(--color-darkGreen)",
-  "theme-page-bg": "var(--color-green)",
+  "theme-infobox": "var(--color-green2)",
+  "theme-shadow": "var(--color-green3)",
+  "theme-page-bg": "var(--color-green1)",
   "theme-page-text": "var(--color-black)",
   "theme-scrollbar": "var(--color-black)",
   "theme-bullet": "var(--color-black)",
   "theme-accent": "var(--color-purple)",
   "theme-accent2": "var(--color-purple)",
-  "theme-border":
-    "color-mix(in oklab, var(--color-green) 20%, var(--color-white))",
-  "theme-number": "var(--color-darkGreen)",
-  "theme-photo": "var(--color-darkGreen)",
-  "theme-image": "var(--color-darkGreen)",
+  "theme-border": "var(--color-green3)",
+  "theme-number": "var(--color-green3)",
+  "theme-photo": "var(--color-green3)",
+  "theme-image": "var(--color-green3)",
   "theme-box": "var(--color-white)",
   "theme-button-bg": "var(--color-black)",
   "theme-button-text": "var(--color-white)",

@@ -10,9 +10,9 @@ ul.infobox {
   /* max-width: max-content; */
   position: relative;
 
-  background: var(--theme-box);
-  border-radius: var(--rounded-large);
-  box-shadow: var(--shadow-inset1);
+  background: var(--theme-infobox);
+  border-radius: 0;
+  /* box-shadow: var(--shadow-inset1); */
 
   a {
     color: inherit;
