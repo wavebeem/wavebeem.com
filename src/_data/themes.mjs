@@ -24,8 +24,8 @@ export default {
   // "color-green1": "#caf59f",
   // "color-green1": "GreenYellow",
   // "color-green1": "LightGreen",
-  "color-green2": oklch(88, 20, 150),
-  "color-green3": oklch(82, 30, 150),
+  "color-green2": oklch(88, 25, 150),
+  "color-green3": oklch(82, 25, 150),
   // "color-green2":
   //   "oklch(from var(--color-green1) calc(l * 0.95) calc(c * 1.10) calc(h + 10))",
   // "color-green3":
@@ -35,7 +35,8 @@ export default {
   "theme-selection-bg": "var(--color-black)",
   "theme-selection-text": "var(--color-white)",
 
-  "theme-header": "var(--color-white)",
+  "theme-header-bg": "var(--color-black)",
+  "theme-header-text": "var(--color-white)",
   "theme-text": "var(--color-black)",
   "theme-infobox": "var(--color-green2)",
   "theme-code": "var(--color-green2)",

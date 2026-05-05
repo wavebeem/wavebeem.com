@@ -1,8 +1,10 @@
 .header {
-  background: var(--theme-header);
-  border-bottom: 2px solid;
+  background: var(--theme-header-bg);
+  color: var(--theme-header-text);
+  /* border-bottom: 2px solid; */
   box-shadow: var(--shadow2);
   margin-bottom: 16px;
+  padding: 8px 0;
 }
 
 :where(:root[data-sticky]) .header {
@@ -91,7 +93,7 @@
 
 @media (width < 35rem) {
   .header {
-    padding: 16px 0;
+    padding: 8px 0;
   }
 
   .logo a {
