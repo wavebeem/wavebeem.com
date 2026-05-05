@@ -22,6 +22,7 @@ export default {
   "color-black": "#111",
   "color-green1": oklch(94, 10, 140),
   "color-green1b": oklch(92.5, 12.5, 140),
+  // "color-green1b": oklch(92.5, 12.5, 140),
   // "color-green1": "#caf59f",
   // "color-green1": "GreenYellow",
   // "color-green1": "LightGreen",
