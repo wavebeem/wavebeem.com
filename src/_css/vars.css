@@ -56,6 +56,8 @@
 
   --width-copy: 50rem;
   --width-heading: 50rem;
+  /* --width-copy: 50rem;
+  --width-heading: 50rem; */
 
   --link-underline-offset: calc(1em / 8);
   --link-underline-thickness: 2px;

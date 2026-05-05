@@ -24,6 +24,25 @@
   color: var(--theme-page-text);
 }
 
+/* https://css-pattern.com/wave-circles/ */
+
+:root {
+  --s: 128px; /* control the size*/
+  --c1: var(--theme-page-bg);
+  --c2: var(--theme-page-alt);
+
+  --_g: var(--s) var(--s)
+    radial-gradient(var(--c1) 17%, var(--c2) 18% 35%, #0000 36.5%);
+  background:
+    calc(var(--s) / -4) calc(var(--s) / -4) / var(--_g),
+    calc(var(--s) / 4) calc(var(--s) / 4) / var(--_g),
+    radial-gradient(var(--c2) 34%, var(--c1) 36% 68%, #0000 70%) 0 0 /
+      calc(var(--s) / 2) calc(var(--s) / 2),
+    repeating-linear-gradient(45deg, var(--c1) -12.5% 12.5%, var(--c2) 0 37.5%)
+      0 0 / var(--s) var(--s);
+  background-color: var(--theme-page-bg);
+}
+
 :where(:root[data-figure-viewer] :is(figure, p)) img {
   cursor: var(--cursor-zoom-in);
 }
