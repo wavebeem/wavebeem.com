@@ -62,10 +62,12 @@
   --link-underline-offset: calc(1em / 8);
   --link-underline-thickness: 2px;
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 0px);
-}
 
-@media (width <= 50rem) {
-  :root {
+  @media (resolution >= 1.5dppx) {
+    --link-underline-thickness: 1.5px;
+  }
+
+  @media (width <= 50rem) {
     --font-size-h1: round(2.5rem, 1px);
     --font-size-h2: round(2rem, 1px);
     --font-size-h3: round(1.5rem, 1px);
