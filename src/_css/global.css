@@ -18,10 +18,10 @@
   color-scheme: light;
   scrollbar-color: var(--theme-scrollbar) transparent;
   font-synthesis: none;
-  color: var(--color-black);
   padding: 0;
   margin: 0;
-  background: var(--color-white);
+  background: var(--theme-page-bg);
+  color: var(--theme-page-text);
 }
 
 :where(:root[data-figure-viewer] :is(figure, p)) img {

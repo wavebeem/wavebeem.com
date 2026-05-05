@@ -1,6 +1,6 @@
 .header {
-  background: var(--color-green);
-  color: var(--color-honeydew);
+  background: var(--theme-header);
+  border-bottom: 2px solid;
   box-shadow: var(--shadow2);
   margin-bottom: 16px;
 }

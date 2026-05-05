@@ -8,17 +8,17 @@ button {
   font-weight: bold;
   /* font-style: italic; */
   padding: 8px 16px;
-  border-radius: var(--rounded-medium);
+  border-radius: 0;
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
   line-height: 1.25;
   /* border: 0; */
 
-  background: var(--color-green);
-  color: var(--color-honeydew);
+  background: var(--theme-button-bg);
+  color: var(--theme-button-text);
 
-  border: 1px solid transparent;
-  box-shadow: var(--shadow2);
+  border: 2px solid transparent;
+  box-shadow: var(--shadow1);
 }
 
 .button:hover,
@@ -64,6 +64,6 @@ button:focus-visible {
 
 :is(.button, button):where([data-size="small"]) {
   padding: 4px 8px;
-  border-radius: var(--rounded-small);
+  border-radius: 0;
   font-size: var(--font-size-small);
 }

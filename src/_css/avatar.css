@@ -1,5 +1,5 @@
 .avatar-wrapper {
-  background: var(--color-forest);
+  background: var(--theme-image);
 
   --avatar-size: 200px;
   --avatar-padding: 0px;
@@ -12,8 +12,6 @@
   position: relative;
 
   border-radius: var(--rounded-pill);
-
-  box-shadow: var(--shadow1);
 
   /* outline: 1px solid var(--image-outline);
   outline-offset: -1px; */

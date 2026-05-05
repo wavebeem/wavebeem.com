@@ -17,56 +17,34 @@ function oklch(lightness, chroma, hue, alpha = 100) {
   return color.to("srgb").toString({ format: "hex" });
 }
 
-// https://www.colourlovers.com/palette/1608718/queen_angel
-//
-// #181a1b
-// #286757
-// #2fc723
-// #b3f200
-// #d3e0d3
-//
-const raw = {
-  white: "#d3e0d3",
-  black: "#181a1b",
-  silver: "#e7efe7",
-  ice: "#e7efe7",
-  green: "#286757",
-  forest: "#2fc723",
-  honeydew: "#b3f200",
-
-  lavender: "#d2acfb",
-};
-
 export default {
-  "color-white": raw.white,
-  "color-black": raw.black,
-  "color-silver": raw.silver,
-  "color-ice": raw.ice,
-  "color-green": raw.green,
-  "color-forest": raw.forest,
-  "color-honeydew": raw.honeydew,
-  "color-lavender": raw.lavender,
+  "color-white": "#fff",
+  "color-black": "#111",
+  "color-green": "LightGreen",
+  "color-darkGreen": "oklch(from var(--color-green) calc(l * 0.85) 50% h)",
+  "color-purple": "BlueViolet",
 
-  "theme-selection-bg": "var(--color-lavender)",
-  "theme-selection-text": "var(--color-black)",
+  "theme-selection-bg": "var(--color-black)",
+  "theme-selection-text": "var(--color-white)",
 
-  "theme-scrollbar": "var(--color-forest)",
+  "theme-header": "var(--color-white)",
+  "theme-shadow": "var(--color-darkGreen)",
+  "theme-page-bg": "var(--color-green)",
+  "theme-page-text": "var(--color-black)",
+  "theme-scrollbar": "var(--color-black)",
   "theme-bullet": "var(--color-black)",
-  "theme-accent": "var(--color-green)",
-  "theme-accent2": "var(--color-forest)",
+  "theme-accent": "var(--color-purple)",
+  "theme-accent2": "var(--color-purple)",
   "theme-border":
     "color-mix(in oklab, var(--color-green) 20%, var(--color-white))",
-  "theme-border2":
-    "color-mix(in oklab, var(--color-green) 40%, var(--color-white))",
-  "theme-number": "var(--color-silver)",
-  "theme-photo": "var(--color-ice)",
-  "theme-figure": "var(--color-ice)",
-  "theme-image": "#fff",
-  "theme-box": "rgb(from var(--color-green) r g b / 10%)",
-  // "theme-image": "var(--color-ice)",
-  "theme-button": "var(--color-ice)",
-  "theme-card": "var(--color-silver)",
-  "theme-link": "var(--color-green)",
+  "theme-number": "var(--color-darkGreen)",
+  "theme-photo": "var(--color-darkGreen)",
+  "theme-image": "var(--color-darkGreen)",
+  "theme-box": "var(--color-white)",
+  "theme-button-bg": "var(--color-black)",
+  "theme-button-text": "var(--color-white)",
+  "theme-card": "var(--color-white)",
+  "theme-link": "var(--color-black)",
   // "theme-link": "var(--color-black)",
 
   "syntax-background": "var(--color-black)",
