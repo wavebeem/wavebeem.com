@@ -20,12 +20,12 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 export default {
   "color-white": "#fff",
   "color-black": "#111",
-  "color-green1": oklch(94, 20, 130),
+  "color-green1": oklch(94, 10, 140),
   // "color-green1": "#caf59f",
   // "color-green1": "GreenYellow",
   // "color-green1": "LightGreen",
-  "color-green2": oklch(87, 33, 140),
-  "color-green3": oklch(78, 40, 140),
+  "color-green2": oklch(88, 20, 150),
+  "color-green3": oklch(82, 30, 150),
   // "color-green2":
   //   "oklch(from var(--color-green1) calc(l * 0.95) calc(c * 1.10) calc(h + 10))",
   // "color-green3":
