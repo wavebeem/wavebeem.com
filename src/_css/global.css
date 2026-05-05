@@ -58,7 +58,7 @@ main {
 
 a {
   color: var(--theme-link);
-  border-radius: var(--rounded-small);
+  /* border-radius: var(--rounded-small); */
   text-decoration-thickness: var(--link-underline-thickness);
   text-underline-offset: var(--link-underline-offset);
 }
@@ -66,13 +66,13 @@ a {
 a:hover {
   text-decoration-line: underline;
   --link-underline-thickness: var(--link-underline-thickness-hover);
-  color: var(--color-black);
+  /* color: var(--color-black); */
 }
 
 a:active {
   text-decoration-line: underline;
   --link-underline-thickness: var(--link-underline-thickness-hover);
-  color: var(--color-black);
+  /* color: var(--color-black); */
 }
 
 :is(input, select, button, textarea) {
@@ -146,8 +146,8 @@ pre {
 :not(pre) > code {
   font-size: 0.9em;
   font-weight: 500;
-  background: var(--theme-number);
-  border-radius: var(--rounded-small);
+  background: var(--theme-code);
+  /* border-radius: var(--rounded-small); */
   padding: 0 4px;
 }
 
@@ -230,16 +230,17 @@ main ul ::marker {
     text-decoration-line: none;
     line-height: 1.15;
     padding: 2px 4px;
-    background-color: var(--theme-button);
-    color: inherit;
-    box-shadow: var(--shadow1);
+    background-color: var(--theme-infobox);
+    /* color: var(--theme-button-text); */
+    /* box-shadow: var(--shadow1); */
+    /* border-bottom: 2px solid; */
 
     &:focus-visible {
       outline-offset: -1px;
     }
 
     &:hover:where(:not(:active)) {
-      background-image: var(--ui-bg-overlay-hover);
+      /* background-image: var(--ui-bg-overlay-hover); */
     }
   }
 }
@@ -278,7 +279,8 @@ video {
   background: var(--theme-card);
   border-radius: 0;
   padding: 1px;
-  border: 1px solid var(--color-black);
+  border: 2px solid var(--theme-border);
+  box-shadow: var(--shadow1);
 }
 
 .sharp {

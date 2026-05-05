@@ -1,17 +1,17 @@
 ul.infobox {
   display: grid;
   gap: 4px;
-  background: var(--color-white);
   list-style-type: none;
   padding: 0;
 
-  padding-inline: 16px;
+  /* padding-inline: 16px; */
   /*! border-left: 4px solid transparent; */
   /* max-width: max-content; */
   position: relative;
 
   background: var(--theme-infobox);
   border-radius: 0;
+  /* border: 2px solid; */
   /* box-shadow: var(--shadow-inset1); */
 
   a {
@@ -19,8 +19,9 @@ ul.infobox {
   }
 
   > li {
+    padding-inline: 16px;
     padding-top: 8px;
-    border-top: 1px solid var(--theme-border);
+    border-top: 1px solid var(--theme-page-bg);
   }
 
   > li:first-of-type {

@@ -1,6 +1,7 @@
 main details {
   display: grid;
   margin: 1.5rem 0;
+  /* border-bottom: 1px solid var(--theme-divider); */
   border-bottom: 1px solid var(--theme-border);
 }
 
@@ -34,12 +35,12 @@ main details {
   /* https://css-shape.com/plus/ */
   summary::after {
     content: "";
-    --c: var(--theme-border);
+    --c: var(--theme-infobox);
     height: 24px;
     aspect-ratio: 1;
     background: radial-gradient(
       circle at center,
-      var(--color-black) 0 calc(100% - 6px),
+      var(--theme-text) 0 calc(100% - 6px),
       transparent 0
     );
     box-shadow: 0 0 0 6px inset var(--c);
@@ -52,12 +53,12 @@ main details {
     border-image: conic-gradient(var(--c) 0 0) 1 / calc(50% - 1px) 2px;
   }
 
-  @media (hover) {
+  /* @media (hover) {
     summary:hover {
       background-image: linear-gradient(
         to right,
         transparent,
-        rgb(from var(--theme-border) r g b / 15%),
+        rgb(from var(--theme-accent2) r g b / 15%),
         transparent
       );
 
@@ -65,11 +66,11 @@ main details {
         filter: brightness(95%);
       }
     }
-  }
+  } */
 }
 
 main summary:hover:active::after {
-  --c: var(--color-forest);
+  --c: var(--theme-accent1);
 }
 
 main details:has(> summary:focus-visible) {

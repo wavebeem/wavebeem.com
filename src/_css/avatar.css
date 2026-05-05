@@ -1,5 +1,5 @@
 .avatar-wrapper {
-  background: var(--theme-image);
+  background: var(--theme-photo);
 
   --avatar-size: 200px;
   --avatar-padding: 0px;

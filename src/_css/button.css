@@ -24,12 +24,12 @@ button {
 .button:hover,
 button:hover {
   text-decoration-line: none;
-  color: var(--color-honeydew);
+  /* color: var(--color-honeydew); */
 }
 
 .button:hover:where(:not(:active)),
 button:hover:where(:not(:active)) {
-  background-image: var(--ui-bg-overlay-active);
+  /* background-image: var(--ui-bg-overlay-active); */
 }
 
 .button:active,
@@ -39,9 +39,9 @@ button:active {
 
 .button:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--color-black);
-  outline-offset: 3px;
-  box-shadow: none;
+  outline: 2px solid var(--color-black);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--color-white);
 }
 
 :is(.button, button):where([data-variant="secondary"]) {
@@ -52,10 +52,10 @@ button:focus-visible {
   border-color: var(--theme-border2);
   box-shadow: var(--shadow1);
 
-  &:hover {
+  /* &:hover {
     background-image: var(--ui-bg-overlay-hover);
     color: var(--color-black);
-  }
+  } */
 
   &:active {
     background-image: var(--ui-bg-overlay-active);

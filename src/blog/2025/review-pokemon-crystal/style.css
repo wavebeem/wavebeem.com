@@ -27,6 +27,7 @@ wavebeem-review-pokemon-crystal-sprites {
   }
 
   & img {
+    outline: initial;
     box-sizing: content-box;
     background: #fff;
     padding: 12px;
@@ -36,6 +37,7 @@ wavebeem-review-pokemon-crystal-sprites {
 
 img[src*=".gbc."] {
   transition: 200ms filter;
+  outline: 0;
 }
 
 :where(:has(#gbc-filter:checked)) {

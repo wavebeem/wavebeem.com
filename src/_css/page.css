@@ -107,16 +107,16 @@ article:where(.page) {
 
       img,
       video {
-        /* outline: 1px solid var(--image-outline); */
-        outline-offset: -1px;
+        outline: 2px dotted var(--theme-image);
+        outline-offset: -2px;
         /* border-radius: var(--rounded-small); */
 
         &:where(:not([data-background="transparent"])) {
-          background: var(--theme-image);
+          /* background: var(--theme-image); */
           /* I use a lot of lazy loaded images, so let's give them a bit of a
           background so that things look less empty when they load in while you're
           scrolling... */
-          box-shadow: var(--shadow1);
+          /* box-shadow: var(--shadow1); */
         }
       }
     }
@@ -136,11 +136,11 @@ article:where(.page) {
     blockquote,
     aside {
       padding-inline: 1rem;
-      border-left: 4px solid transparent;
+      border-left: 4px solid var(--theme-border);
       max-width: max-content;
-      position: relative;
+      /* position: relative; */
 
-      &::after {
+      /* &::after {
         content: "";
         width: 4px;
         height: 100%;
@@ -149,7 +149,7 @@ article:where(.page) {
         left: -4px;
         background: var(--theme-accent2);
         border-radius: var(--rounded-pill);
-      }
+      } */
 
       h3 {
         margin-top: 1.5rem;

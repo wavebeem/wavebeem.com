@@ -7,7 +7,7 @@ a.card {
   padding: 16px;
   gap: 8px;
 
-  border-radius: 0;
+  /* border-radius: 0; */
   background: var(--theme-card);
   border: 2px solid;
   outline-offset: -1px;
@@ -50,15 +50,15 @@ ul.card {
   padding: 0;
   gap: 1px;
 
-  border-radius: 0;
-  background: var(--theme-card);
+  /* border-radius: 0; */
+  background: var(--theme-border);
   border: 2px solid;
   color: inherit;
 
   box-shadow: var(--shadow1);
 
   > li a {
-    border-radius: 0;
+    /* border-radius: 0; */
     display: block;
     padding: var(--card-padding-y) var(--card-padding-x);
     background: var(--theme-card);
@@ -78,11 +78,11 @@ ul.card {
   }
 
   > li:first-of-type a {
-    border-radius: var(--rounded-medium) var(--rounded-medium) 0 0;
+    /* border-radius: var(--rounded-medium) var(--rounded-medium) 0 0; */
   }
 
   > li:last-of-type a {
-    border-radius: 0 0 var(--rounded-medium) var(--rounded-medium);
+    /* border-radius: 0 0 var(--rounded-medium) var(--rounded-medium); */
   }
 }
 
