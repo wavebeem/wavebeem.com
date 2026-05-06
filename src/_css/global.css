@@ -41,7 +41,7 @@
     repeating-linear-gradient(45deg, var(--c1) -12.5% 12.5%, var(--c2) 0 37.5%)
       0 0 / var(--s) var(--s);
   background-color: var(--theme-page-bg);
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 :where(:root[data-figure-viewer] :is(figure, p)) img {
