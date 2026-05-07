@@ -62,6 +62,11 @@ article:where(.page) {
       background: var(--theme-accent2);
       height: 1px;
 
+      @media (width < 40rem) {
+        margin-inline: -16px;
+        width: calc(100% + 32px);
+      }
+
       /* https://css-shape.com/zig-zag-line/ */
 
       --a: 90deg; /* control the angle */
@@ -104,6 +109,15 @@ article:where(.page) {
       flex-direction: column;
       max-width: max-content;
       gap: 8px;
+
+      @media (width < 40rem) {
+        margin-inline: -16px;
+        width: calc(100% + 32px);
+
+        figcaption {
+          padding-inline: 16px;
+        }
+      }
 
       img,
       video {
@@ -159,5 +173,12 @@ article:where(.page) {
     blockquote {
       font-style: italic;
     }
+  }
+}
+
+:where(.page.post) {
+  p > img {
+    outline: 2px dotted var(--theme-image);
+    outline-offset: -2px;
   }
 }

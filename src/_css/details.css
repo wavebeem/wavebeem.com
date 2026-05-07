@@ -5,6 +5,10 @@ main details {
   /* border-bottom: 1px solid var(--theme-border); */
   padding-inline: 16px;
   background: var(--theme-infobox);
+
+  @media (width < 40rem) {
+    margin-inline: -16px;
+  }
 }
 
 main details:hover {
@@ -89,5 +93,7 @@ main details summary:focus-visible {
 }
 
 main details[open] > summary {
-  margin-bottom: -1rem;
+  margin-bottom: -0.5rem;
+  border-bottom: 2px dotted;
+  position: relative;
 }

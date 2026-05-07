@@ -230,7 +230,7 @@ main ul ::marker {
   /* font-size: 0.5em; */
   vertical-align: middle;
   font-family: var(--font-mono);
-  font-weight: 500;
+  font-weight: bold;
   color: var(--theme-bullet);
 }
 
@@ -272,15 +272,15 @@ main ul ::marker {
 }
 
 main ol {
-  padding-left: 3rem;
+  padding-left: 2.5rem;
 
   @media (width >= 60rem) {
-    padding-left: 0;
+    /* padding-left: 0; */
   }
 }
 
 main :is(ol, ul) ol {
-  padding-left: 3rem;
+  padding-left: 2.5rem;
 }
 
 main :is(ul, ol) :is(ul, ol) {
@@ -376,7 +376,7 @@ article header small {
 }
 
 .photo-grid > * {
-  margin: 0 !important;
+  margin-block: 0 !important;
   max-width: initial !important;
 }
 
@@ -472,9 +472,9 @@ ol > li {
 }
 
 ol > li::before {
-  --size: 3ch;
+  --size: 2rem;
   left: calc(-1 * (var(--size) + 0.5rem));
-  width: 3ch;
+  width: var(--size);
   top: 2px;
 
   position: absolute;

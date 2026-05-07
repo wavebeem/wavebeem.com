@@ -1,9 +1,15 @@
+.infobox {
+  @media (width < 40rem) {
+    margin-inline: -16px;
+  }
+}
+
 a.infobox {
   color: inherit;
   text-decoration-line: none;
 
   margin-block: 16px;
-  gap: 0px;
+  gap: 8px;
 
   outline-offset: -1px;
 
@@ -55,21 +61,28 @@ ul.infobox {
     color: inherit;
   }
 
-  &.clickable a:not(:hover) {
-    text-decoration-line: none;
+  &.clickable a {
+    display: block;
+
+    &:not(:hover) {
+      text-decoration-line: none;
+    }
   }
 
-  > li {
+  &.clickable > li a,
+  &:not(.clickable) > li {
     padding-inline: 16px;
     padding-top: 8px;
     border-top: 1px solid var(--theme-page-bg);
   }
 
-  > li:first-of-type {
+  &.clickable > li:first-of-type a,
+  &:not(.clickable) > li:first-of-type {
     border-top: 0;
   }
 
-  > li:last-of-type {
+  &.clickable > li:last-of-type a,
+  &:not(.clickable) > li:last-of-type {
     padding-bottom: 8px;
   }
 }
