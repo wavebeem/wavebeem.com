@@ -23,10 +23,6 @@ a.card {
     text-underline-offset: var(--link-underline-offset);
   }
 
-  &:hover {
-    background-image: var(--ui-bg-overlay-hover);
-  }
-
   &:where(:hover) .heading {
     text-decoration-line: underline;
     text-decoration-thickness: inherit;
@@ -37,6 +33,10 @@ a.card {
     margin: 0;
     font-style: italic;
     font-size: var(--font-size-small);
+  }
+
+  &:focus-visible {
+    box-shadow: none;
   }
 }
 

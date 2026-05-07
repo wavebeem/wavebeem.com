@@ -1,3 +1,40 @@
+a.infobox {
+  color: inherit;
+  text-decoration-line: none;
+
+  margin-block: 16px;
+  gap: 0px;
+
+  outline-offset: -1px;
+
+  padding: 16px;
+  background: var(--theme-infobox);
+  display: grid;
+
+  & + & {
+    margin-top: -15px;
+  }
+
+  .heading {
+    margin: 0;
+    font-weight: bold;
+    text-wrap: balance;
+    line-height: 1.25;
+    color: inherit;
+    text-underline-offset: var(--link-underline-offset);
+  }
+
+  .description {
+    margin: 0;
+  }
+
+  &:where(:hover) .heading {
+    text-decoration-line: underline;
+    text-decoration-thickness: inherit;
+    color: var(--color-black);
+  }
+}
+
 ul.infobox {
   display: grid;
   gap: 4px;
