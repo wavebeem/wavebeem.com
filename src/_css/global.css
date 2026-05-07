@@ -240,20 +240,26 @@ main ul ::marker {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 8px;
+  gap: 1px;
 
   li {
     display: flex;
   }
 
   a {
-    text-decoration-line: none;
+    /* border-bottom: var(--link-underline-thickness) solid; */
     line-height: 1.15;
-    padding: 2px 4px;
+    padding: 4px 16px;
+    /* padding-bottom: 6px; */
     background-color: var(--theme-infobox);
+    font-weight: bold;
     /* color: var(--theme-button-text); */
     /* box-shadow: var(--shadow1); */
     /* border-bottom: 2px solid; */
+
+    &:not(:hover) {
+      text-decoration-line: none;
+    }
 
     &:focus-visible {
       outline-offset: -1px;
@@ -309,7 +315,6 @@ video {
 
 .playdate {
   filter: contrast(70%);
-  border-radius: var(--rounded-small);
 }
 
 .tcg {
@@ -481,18 +486,6 @@ ol > li::before {
   background: var(--theme-number);
   text-align: center;
   border-radius: var(--rounded-pill);
-}
-
-@media (width >= 40rem) {
-  .wide-dl {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 8px 2ch;
-
-    dt {
-      margin: 0;
-    }
-  }
 }
 
 li > :is(h2, h3) {

@@ -51,7 +51,7 @@ ul.card {
   gap: 1px;
 
   /* border-radius: 0; */
-  background: var(--theme-border);
+  background: var(--theme-page-bg);
   border: 2px solid;
   color: inherit;
 

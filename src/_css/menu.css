@@ -2,12 +2,8 @@
   display: grid;
   gap: 1px;
 
-  background: var(--theme-border);
+  background: var(--theme-page-bg);
   color: inherit;
-
-  /* border-radius: var(--rounded-medium); */
-  box-shadow: var(--shadow1);
-  border: 2px solid;
 }
 
 .menu-card {
@@ -16,19 +12,15 @@
 
   display: grid;
   padding: 16px;
-  /* font-weight: bold; */
   line-height: 1.25;
 
-  background: var(--theme-card);
+  background: var(--theme-infobox);
   outline-offset: -2px;
-  /* border-radius: 0; */
+
+  font-size: var(--font-size-h3);
 
   &:empty {
     pointer-events: none;
-  }
-
-  &:hover {
-    filter: brightness(102%);
   }
 
   &:where(:hover) .heading {
@@ -55,78 +47,22 @@
 
 @media (width < 40rem) {
   .menu-card {
-    /* &:nth-child(2n) {
-      background: var(--color-silver);
-    } */
-
     &:empty {
       display: none;
     }
+  }
 
-    /* Round the corners of the group extra */
-    &:nth-child(1 of :not(:empty)) {
-      /* border-top-left-radius: var(--rounded-medium); */
-      /* border-top-right-radius: var(--rounded-medium); */
-    }
-    &:nth-last-child(1 of :not(:empty)) {
-      /* border-bottom-right-radius: var(--rounded-medium); */
-      /* border-bottom-left-radius: var(--rounded-medium); */
-    }
+  .menu {
+    margin-inline: -16px;
   }
 }
 
 @media (width >= 40rem) {
   .menu {
-    grid-template-columns: repeat(2, 1fr);
-    /* gap: 4px; */
-  }
-
-  .menu-card {
-    font-size: var(--font-size-h3);
-    text-align: center;
-    /* border-radius: 0; */
-
-    /* Stripe colors */
-    &:is(:nth-child(4n), :nth-child(4n-1)) {
-      /* background: var(--color-silver); */
-    }
-
-    /* Round the corners of the menu more */
-    &:nth-child(1) {
-      /* border-top-left-radius: var(--rounded-medium); */
-    }
-    &:nth-child(2) {
-      /* border-top-right-radius: var(--rounded-medium); */
-    }
-    &:nth-last-child(1) {
-      /* border-bottom-right-radius: var(--rounded-medium); */
-    }
-    &:nth-last-child(2) {
-      /* border-bottom-left-radius: var(--rounded-medium); */
+    .menu-card {
+      &:empty {
+        display: none;
+      }
     }
   }
-
-  /* .menu-card:nth-child(1) {
-    border-top-left-radius: var(--rounded-medium);
-  }
-  .menu-card:nth-child(2) {
-    border-top-right-radius: var(--rounded-medium);
-  }
-  .menu:has(> .menu-card:last-child:nth-child(odd)) {
-    .menu-card:has(+ .menu-card:last-child) {
-      border-bottom-right-radius: var(--rounded-medium);
-    }
-    .menu-card:last-child {
-      border-bottom-left-radius: var(--rounded-medium);
-      border-bottom-right-radius: var(--rounded-medium);
-    }
-  }
-  .menu:has(> .menu-card:last-child:nth-child(even)) {
-    .menu-card:last-child {
-      border-bottom-right-radius: var(--rounded-medium);
-    }
-    .menu-card:has(+ .menu-card:last-child) {
-      border-bottom-left-radius: var(--rounded-medium);
-    }
-  } */
 }

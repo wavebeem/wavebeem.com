@@ -2,7 +2,9 @@ main details {
   display: grid;
   margin: 1.5rem 0;
   /* border-bottom: 1px solid var(--theme-divider); */
-  border-bottom: 1px solid var(--theme-border);
+  /* border-bottom: 1px solid var(--theme-border); */
+  padding-inline: 16px;
+  background: var(--theme-infobox);
 }
 
 main details:hover {
@@ -14,7 +16,8 @@ main details:hover {
 } */
 
 main details + details {
-  margin-top: calc(-1.5rem);
+  margin-top: calc(-1.5rem + 1px);
+  /* margin-top: calc(-1.5rem); */
 }
 
 main summary {
@@ -35,7 +38,7 @@ main details {
   /* https://css-shape.com/plus/ */
   summary::after {
     content: "";
-    --c: var(--theme-infobox);
+    --c: var(--theme-shadow);
     height: 24px;
     aspect-ratio: 1;
     background: radial-gradient(
@@ -70,7 +73,8 @@ main details {
 }
 
 main summary:hover:active::after {
-  --c: var(--theme-accent1);
+  /* --c: var(--theme-page-alt); */
+  opacity: 0.5;
 }
 
 main details:has(> summary:focus-visible) {

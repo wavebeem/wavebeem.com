@@ -18,6 +18,10 @@ ul.infobox {
     color: inherit;
   }
 
+  &.clickable a:not(:hover) {
+    text-decoration-line: none;
+  }
+
   > li {
     padding-inline: 16px;
     padding-top: 8px;
@@ -30,5 +34,51 @@ ul.infobox {
 
   > li:last-of-type {
     padding-bottom: 8px;
+  }
+}
+
+dl.infobox {
+  background: var(--theme-page-bg);
+
+  > :is(dd, dt) {
+    background: var(--theme-infobox);
+  }
+
+  > :is(dd, dt) {
+    padding-inline: 16px;
+  }
+
+  > dt {
+    margin: 0;
+  }
+
+  > dd + dt {
+    margin-top: 1px;
+    padding-block: 16px 0;
+  }
+
+  > dt:first-child {
+    padding-block: 16px 0;
+  }
+
+  > dd {
+    padding-block: 0 16px;
+  }
+
+  > dd + dd {
+    margin-top: 0;
+  }
+
+  @media (width >= 40rem) {
+    &.wide-dl {
+      display: grid;
+      gap: 1px;
+      grid-template-columns: auto 1fr;
+
+      > :is(dd, dt) {
+        margin: 0;
+        padding: 8px 16px;
+      }
+    }
   }
 }
