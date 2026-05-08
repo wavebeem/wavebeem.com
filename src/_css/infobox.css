@@ -43,7 +43,7 @@ a.infobox {
 
 ul.infobox {
   display: grid;
-  gap: 4px;
+  gap: 1px;
   list-style-type: none;
   padding: 0;
 
@@ -52,7 +52,7 @@ ul.infobox {
   /* max-width: max-content; */
   position: relative;
 
-  background: var(--theme-infobox);
+  background: var(--theme-page-bg);
   border-radius: 0;
   /* border: 2px solid; */
   /* box-shadow: var(--shadow-inset1); */
@@ -63,6 +63,7 @@ ul.infobox {
 
   &.clickable a {
     display: block;
+    outline-offset: -3px;
 
     &:not(:hover) {
       text-decoration-line: none;
@@ -71,19 +72,8 @@ ul.infobox {
 
   &.clickable > li a,
   &:not(.clickable) > li {
-    padding-inline: 16px;
-    padding-top: 8px;
-    border-top: 1px solid var(--theme-page-bg);
-  }
-
-  &.clickable > li:first-of-type a,
-  &:not(.clickable) > li:first-of-type {
-    border-top: 0;
-  }
-
-  &.clickable > li:last-of-type a,
-  &:not(.clickable) > li:last-of-type {
-    padding-bottom: 8px;
+    padding: 8px 16px;
+    background: var(--theme-infobox);
   }
 }
 
