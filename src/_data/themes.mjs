@@ -64,7 +64,7 @@ export default {
 
   "syntax-background": "var(--color-black)",
   "syntax-border": "var(--color-black)",
-  "syntax-text": "var(--color-white)",
+  "syntax-text": "var(--color-green1)",
   "syntax-keyword": "#ffffff",
   "syntax-comment": "#bd85f9",
   "syntax-property": "#b3f200",
