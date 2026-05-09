@@ -60,6 +60,9 @@ export default {
   "theme-button-text": "var(--color-white)",
   "theme-card": "var(--color-white)",
   "theme-link": "var(--color-black)",
+  "theme-hover-light": "rgb(from var(--color-green3) r g b / 20%)",
+  "theme-hover-light-alt": "rgb(from var(--color-green3) r g b / 30%)",
+  "theme-hover-dark": "rgb(from var(--color-green1) r g b / 20%)",
   // "theme-link": "var(--color-black)",
 
   "syntax-background": "var(--color-black)",

@@ -110,7 +110,7 @@ article:where(.page) {
       max-width: max-content;
       gap: 8px;
 
-      @media (width < 40rem) {
+      @media (width < 30rem) {
         margin-inline: -16px;
         width: calc(100% + 32px);
 
@@ -124,6 +124,12 @@ article:where(.page) {
         outline: 2px dotted var(--theme-image);
         outline-offset: -2px;
         /* border-radius: var(--rounded-small); */
+
+        @media (width < 30rem) {
+          outline: 0;
+          border-block: 2px solid;
+          box-sizing: content-box;
+        }
 
         &:where(:not([data-background="transparent"])) {
           /* background: var(--theme-image); */

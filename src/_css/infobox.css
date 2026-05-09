@@ -17,6 +17,10 @@ a.infobox {
   background: var(--theme-infobox);
   display: grid;
 
+  &:hover:where(:not(:active)) {
+    background-image: radial-gradient(var(--theme-hover-light-alt));
+  }
+
   & + & {
     margin-top: -15px;
   }
@@ -74,6 +78,10 @@ ul.infobox {
   &:not(.clickable) > li {
     padding: 8px 16px;
     background: var(--theme-infobox);
+
+    &:hover:where(:not(:active)) {
+      background-image: radial-gradient(var(--theme-hover-light-alt));
+    }
   }
 }
 

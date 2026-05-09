@@ -3,8 +3,8 @@ main details {
   margin: 1.5rem 0;
   /* border-bottom: 1px solid var(--theme-divider); */
   /* border-bottom: 1px solid var(--theme-border); */
-  padding-inline: 16px;
   background: var(--theme-infobox);
+  padding-inline: 16px;
 
   @media (width < 40rem) {
     margin-inline: -16px;
@@ -29,6 +29,8 @@ main summary {
   user-select: none;
   cursor: default;
   padding-block: 16px;
+  padding-inline: 16px;
+  margin-inline: -16px;
 }
 
 main details {
@@ -60,26 +62,16 @@ main details {
     border-image: conic-gradient(var(--c) 0 0) 1 / calc(50% - 1px) 2px;
   }
 
-  /* @media (hover) {
-    summary:hover {
-      background-image: linear-gradient(
-        to right,
-        transparent,
-        rgb(from var(--theme-accent2) r g b / 15%),
-        transparent
-      );
-
-      &::after {
-        filter: brightness(95%);
-      }
+  @media (hover) {
+    summary:hover:where(:not(:active)) {
+      background-image: radial-gradient(var(--theme-hover-light-alt));
     }
-  } */
+  }
 }
 
-main summary:hover:active::after {
-  /* --c: var(--theme-page-alt); */
+/* main summary:hover:active::after {
   opacity: 0.5;
-}
+} */
 
 main details:has(> summary:focus-visible) {
   box-shadow: none;
