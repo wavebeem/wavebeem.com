@@ -18,10 +18,30 @@
   color-scheme: light;
   scrollbar-color: var(--theme-scrollbar) transparent;
   font-synthesis: none;
-  color: var(--color-black);
   padding: 0;
   margin: 0;
-  background: var(--color-white);
+  background: var(--theme-page-bg);
+  color: var(--theme-page-text);
+}
+
+/* https://css-pattern.com/wave-circles/ */
+
+:root {
+  --s: 256px; /* control the size*/
+  --c1: var(--theme-page-bg);
+  --c2: var(--theme-page-alt);
+
+  --_g: var(--s) var(--s)
+    radial-gradient(var(--c1) 17%, var(--c2) 18% 35%, #0000 36.5%);
+  background:
+    calc(var(--s) / -4) calc(var(--s) / -4) / var(--_g),
+    calc(var(--s) / 4) calc(var(--s) / 4) / var(--_g),
+    radial-gradient(var(--c2) 34%, var(--c1) 36% 68%, #0000 70%) 0 0 /
+      calc(var(--s) / 2) calc(var(--s) / 2),
+    repeating-linear-gradient(45deg, var(--c1) -12.5% 12.5%, var(--c2) 0 37.5%)
+      0 0 / var(--s) var(--s);
+  background-color: var(--theme-page-bg);
+  /* background-attachment: fixed; */
 }
 
 :where(:root[data-figure-viewer] :is(figure, p)) img {
@@ -58,7 +78,7 @@ main {
 
 a {
   color: var(--theme-link);
-  border-radius: var(--rounded-small);
+  /* border-radius: var(--rounded-small); */
   text-decoration-thickness: var(--link-underline-thickness);
   text-underline-offset: var(--link-underline-offset);
 }
@@ -66,13 +86,13 @@ a {
 a:hover {
   text-decoration-line: underline;
   --link-underline-thickness: var(--link-underline-thickness-hover);
-  color: var(--color-black);
+  /* color: var(--color-black); */
 }
 
 a:active {
   text-decoration-line: underline;
   --link-underline-thickness: var(--link-underline-thickness-hover);
-  color: var(--color-black);
+  /* color: var(--color-black); */
 }
 
 :is(input, select, button, textarea) {
@@ -146,8 +166,8 @@ pre {
 :not(pre) > code {
   font-size: 0.9em;
   font-weight: 500;
-  background: var(--theme-number);
-  border-radius: var(--rounded-small);
+  background: var(--theme-code);
+  /* border-radius: var(--rounded-small); */
   padding: 0 4px;
 }
 
@@ -210,7 +230,7 @@ main ul ::marker {
   /* font-size: 0.5em; */
   vertical-align: middle;
   font-family: var(--font-mono);
-  font-weight: 500;
+  font-weight: bold;
   color: var(--theme-bullet);
 }
 
@@ -220,40 +240,47 @@ main ul ::marker {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 8px;
+  gap: 1px;
 
   li {
     display: flex;
   }
 
   a {
-    text-decoration-line: none;
+    /* border-bottom: var(--link-underline-thickness) solid; */
     line-height: 1.15;
-    padding: 2px 4px;
-    background-color: var(--theme-button);
-    color: inherit;
-    box-shadow: var(--shadow1);
+    padding: 8px 16px;
+    /* padding-bottom: 6px; */
+    background-color: var(--theme-infobox);
+    font-weight: bold;
+    /* color: var(--theme-button-text); */
+    /* box-shadow: var(--shadow1); */
+    /* border-bottom: 2px solid; */
+
+    &:not(:hover) {
+      text-decoration-line: none;
+    }
 
     &:focus-visible {
       outline-offset: -1px;
     }
 
-    &:hover:where(:not(:active)) {
-      background-image: var(--ui-bg-overlay-hover);
+    &:where(:hover:not(:active)) {
+      background-image: radial-gradient(var(--theme-hover-light-alt));
     }
   }
 }
 
 main ol {
-  padding-left: 3rem;
+  padding-left: 2.5rem;
 
   @media (width >= 60rem) {
-    padding-left: 0;
+    /* padding-left: 0; */
   }
 }
 
 main :is(ol, ul) ol {
-  padding-left: 3rem;
+  padding-left: 2.5rem;
 }
 
 main :is(ul, ol) :is(ul, ol) {
@@ -278,7 +305,8 @@ video {
   background: var(--theme-card);
   border-radius: 0;
   padding: 1px;
-  border: 1px solid var(--color-black);
+  border: 2px solid var(--theme-border);
+  box-shadow: var(--shadow1);
 }
 
 .sharp {
@@ -287,7 +315,6 @@ video {
 
 .playdate {
   filter: contrast(70%);
-  border-radius: var(--rounded-small);
 }
 
 .tcg {
@@ -349,7 +376,7 @@ article header small {
 }
 
 .photo-grid > * {
-  margin: 0 !important;
+  margin-block: 0 !important;
   max-width: initial !important;
 }
 
@@ -445,9 +472,9 @@ ol > li {
 }
 
 ol > li::before {
-  --size: 3ch;
+  --size: 2rem;
   left: calc(-1 * (var(--size) + 0.5rem));
-  width: 3ch;
+  width: var(--size);
   top: 2px;
 
   position: absolute;
@@ -459,18 +486,6 @@ ol > li::before {
   background: var(--theme-number);
   text-align: center;
   border-radius: var(--rounded-pill);
-}
-
-@media (width >= 40rem) {
-  .wide-dl {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 8px 2ch;
-
-    dt {
-      margin: 0;
-    }
-  }
 }
 
 li > :is(h2, h3) {

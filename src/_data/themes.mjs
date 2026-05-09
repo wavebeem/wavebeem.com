@@ -17,61 +17,57 @@ function oklch(lightness, chroma, hue, alpha = 100) {
   return color.to("srgb").toString({ format: "hex" });
 }
 
-// https://www.colourlovers.com/palette/1608718/queen_angel
-//
-// #181a1b
-// #286757
-// #2fc723
-// #b3f200
-// #d3e0d3
-//
-const raw = {
-  white: "#d3e0d3",
-  black: "#181a1b",
-  silver: "#e7efe7",
-  ice: "#e7efe7",
-  green: "#286757",
-  forest: "#2fc723",
-  honeydew: "#b3f200",
-
-  lavender: "#d2acfb",
-};
-
 export default {
-  "color-white": raw.white,
-  "color-black": raw.black,
-  "color-silver": raw.silver,
-  "color-ice": raw.ice,
-  "color-green": raw.green,
-  "color-forest": raw.forest,
-  "color-honeydew": raw.honeydew,
-  "color-lavender": raw.lavender,
+  "color-white": "#fff",
+  "color-black": "#111",
+  "color-green1": oklch(94, 10, 140),
+  "color-green1b": oklch(92.5, 12.5, 140),
+  // "color-green1b": oklch(92.5, 12.5, 140),
+  // "color-green1": "#caf59f",
+  // "color-green1": "GreenYellow",
+  // "color-green1": "LightGreen",
+  "color-green2": oklch(88, 15, 150),
+  "color-green3": oklch(82, 25, 150),
+  // "color-green2":
+  //   "oklch(from var(--color-green1) calc(l * 0.95) calc(c * 1.10) calc(h + 10))",
+  // "color-green3":
+  //   "oklch(from var(--color-green1) calc(l * 0.85) calc(c * 1.33) calc(h + 10))",
+  "color-purple": "BlueViolet",
 
-  "theme-selection-bg": "var(--color-lavender)",
-  "theme-selection-text": "var(--color-black)",
+  "theme-selection-bg": "var(--color-black)",
+  "theme-selection-text": "var(--color-white)",
 
-  "theme-scrollbar": "var(--color-forest)",
+  "theme-header-bg": "var(--color-black)",
+  "theme-header-text": "var(--color-white)",
+  "theme-text": "var(--color-black)",
+  "theme-infobox": "var(--color-green2)",
+  "theme-code": "var(--color-green2)",
+  "theme-shadow": "var(--color-green3)",
+  "theme-page-bg": "var(--color-green1)",
+  "theme-page-alt": "var(--color-green1b)",
+  "theme-page-text": "var(--color-black)",
+  "theme-scrollbar": "var(--color-black)",
   "theme-bullet": "var(--color-black)",
-  "theme-accent": "var(--color-green)",
-  "theme-accent2": "var(--color-forest)",
-  "theme-border":
-    "color-mix(in oklab, var(--color-green) 20%, var(--color-white))",
-  "theme-border2":
-    "color-mix(in oklab, var(--color-green) 40%, var(--color-white))",
-  "theme-number": "var(--color-silver)",
-  "theme-photo": "var(--color-ice)",
-  "theme-figure": "var(--color-ice)",
-  "theme-image": "#fff",
-  "theme-box": "rgb(from var(--color-green) r g b / 10%)",
-  // "theme-image": "var(--color-ice)",
-  "theme-button": "var(--color-ice)",
-  "theme-card": "var(--color-silver)",
-  "theme-link": "var(--color-green)",
+  "theme-accent": "var(--color-green2)",
+  "theme-accent2": "var(--color-green3)",
+  // "theme-divider": "var(--color-green2)",
+  "theme-border": "var(--color-black)",
+  "theme-number": "var(--color-green3)",
+  "theme-photo": "var(--color-green3)",
+  "theme-image": "var(--color-black)",
+  "theme-box": "var(--color-white)",
+  "theme-button-bg": "var(--color-black)",
+  "theme-button-text": "var(--color-white)",
+  "theme-card": "var(--color-white)",
+  "theme-link": "var(--color-black)",
+  "theme-hover-light": "rgb(from var(--color-green3) r g b / 20%)",
+  "theme-hover-light-alt": "rgb(from var(--color-green3) r g b / 30%)",
+  "theme-hover-dark": "rgb(from var(--color-green3) r g b / 20%)",
   // "theme-link": "var(--color-black)",
 
   "syntax-background": "var(--color-black)",
   "syntax-border": "var(--color-black)",
-  "syntax-text": "var(--color-white)",
+  "syntax-text": "var(--color-green1)",
   "syntax-keyword": "#ffffff",
   "syntax-comment": "#bd85f9",
   "syntax-property": "#b3f200",

@@ -8,38 +8,22 @@
   --font-mono: "Lilex", var(--font-fallback-mono);
 
   /* --image-outline: rgb(from var(--color-black) r g b / 10%); */
-  --image-outline: rgb(from var(--color-green) r g b / 30%);
+  --image-outline: var(--color-black);
   /* --image-outline: rgb(from currentColor r g b / 20%); */
   /* --image-outline: #fff; */
 
   /* --shadow1:
     0 1px 2px var(--theme-shadow), 0 2px 4px var(--theme-shadow),
     0 4px 8px var(--theme-shadow); */
-  --shadow-inset1:
-    inset 0 1px 3px rgb(from var(--color-green) r g b / 12%),
-    inset 0 1px 2px rgb(from var(--color-green) r g b / 24%);
+  /* --shadow-inset1: inset 0 4px 0 var(--theme-shadow); */
   /* --shadow-inset1:
     inset 0 1px 2px var(--theme-shadow), inset 0 2px 4px var(--theme-shadow); */
 
-  /* Material Design shadows */
-  --shadow1:
-    0 1px 3px rgb(from var(--color-green) r g b / 12%),
-    0 1px 2px rgb(from var(--color-green) r g b / 24%);
-  --shadow2:
-    0 14px 28px rgb(from var(--color-green) r g b / 25%),
-    0 10px 10px rgb(from var(--color-green) r g b / 22%);
-  --shadow3:
-    0 3px 6px rgb(from var(--color-green) r g b / 16%),
-    0 3px 6px rgb(from var(--color-green) r g b / 23%);
-  --shadow4:
-    0 10px 20px rgb(from var(--color-green) r g b / 19%),
-    0 6px 6px rgb(from var(--color-green) r g b / 23%);
-  --shadow5:
-    0 14px 28px rgb(from var(--color-green) r g b / 25%),
-    0 10px 10px rgb(from var(--color-green) r g b / 22%);
-  --shadow6:
-    0 19px 38px rgb(from var(--color-green) r g b / 30%),
-    0 15px 12px rgb(from var(--color-green) r g b / 22%);
+  --shadow1: 4px 4px 0 var(--theme-shadow);
+  /* --shadow1:
+    1px 1px 0 var(--theme-shadow), 2px 2px 0 var(--theme-shadow),
+    3px 3px 0 var(--theme-shadow), 4px 4px 0 var(--theme-shadow); */
+  --shadow2: 0 4px var(--theme-shadow);
 
   --ui-bg-overlay-hover: radial-gradient(#fff4);
   --ui-bg-overlay-active: radial-gradient(#0002);
@@ -72,14 +56,18 @@
 
   --width-copy: 50rem;
   --width-heading: 50rem;
+  /* --width-copy: 50rem;
+  --width-heading: 50rem; */
 
   --link-underline-offset: calc(1em / 8);
-  --link-underline-thickness: 1.5px;
+  --link-underline-thickness: 2px;
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 0px);
-}
 
-@media (width <= 50rem) {
-  :root {
+  @media (resolution >= 1.5dppx) {
+    --link-underline-thickness: 1.5px;
+  }
+
+  @media (width <= 50rem) {
     --font-size-h1: round(2.5rem, 1px);
     --font-size-h2: round(2rem, 1px);
     --font-size-h3: round(1.5rem, 1px);

@@ -1,33 +1,132 @@
+.infobox {
+  @media (width < 40rem) {
+    margin-inline: -16px;
+  }
+}
+
+a.infobox {
+  color: inherit;
+  text-decoration-line: none;
+
+  margin-block: 16px;
+  gap: 8px;
+
+  outline-offset: -1px;
+
+  padding: 16px;
+  background: var(--theme-infobox);
+  display: grid;
+
+  &:hover:where(:not(:active)) {
+    background-image: radial-gradient(var(--theme-hover-light-alt));
+  }
+
+  & + & {
+    margin-top: -15px;
+  }
+
+  .heading {
+    margin: 0;
+    font-weight: bold;
+    text-wrap: balance;
+    line-height: 1.25;
+    color: inherit;
+    text-underline-offset: var(--link-underline-offset);
+  }
+
+  .description {
+    margin: 0;
+  }
+
+  &:where(:hover) .heading {
+    text-decoration-line: underline;
+    text-decoration-thickness: inherit;
+    color: var(--color-black);
+  }
+}
+
 ul.infobox {
   display: grid;
-  gap: 4px;
-  background: var(--color-white);
+  gap: 1px;
   list-style-type: none;
   padding: 0;
 
-  padding-inline: 16px;
+  /* padding-inline: 16px; */
   /*! border-left: 4px solid transparent; */
   /* max-width: max-content; */
   position: relative;
 
-  background: var(--theme-box);
-  border-radius: var(--rounded-large);
-  box-shadow: var(--shadow-inset1);
+  background: var(--theme-page-bg);
+  border-radius: 0;
+  /* border: 2px solid; */
+  /* box-shadow: var(--shadow-inset1); */
 
   a {
     color: inherit;
   }
 
-  > li {
-    padding-top: 8px;
-    border-top: 1px solid var(--theme-border);
+  &.clickable a {
+    display: block;
+    outline-offset: -3px;
+
+    &:not(:hover) {
+      text-decoration-line: none;
+    }
   }
 
-  > li:first-of-type {
-    border-top: 0;
+  &.clickable > li a,
+  &:not(.clickable) > li {
+    padding: 8px 16px;
+    background: var(--theme-infobox);
+
+    &:hover:where(:not(:active)) {
+      background-image: radial-gradient(var(--theme-hover-light-alt));
+    }
+  }
+}
+
+dl.infobox {
+  background: var(--theme-page-bg);
+
+  > :is(dd, dt) {
+    background: var(--theme-infobox);
   }
 
-  > li:last-of-type {
-    padding-bottom: 8px;
+  > :is(dd, dt) {
+    padding-inline: 16px;
+  }
+
+  > dt {
+    margin: 0;
+  }
+
+  > dd + dt {
+    margin-top: 1px;
+    padding-block: 16px 0;
+  }
+
+  > dt:first-child {
+    padding-block: 16px 0;
+  }
+
+  > dd {
+    padding-block: 0 16px;
+  }
+
+  > dd + dd {
+    margin-top: 0;
+  }
+
+  @media (width >= 40rem) {
+    &.wide-dl {
+      display: grid;
+      gap: 1px;
+      grid-template-columns: auto 1fr;
+
+      > :is(dd, dt) {
+        margin: 0;
+        padding: 8px 16px;
+      }
+    }
   }
 }

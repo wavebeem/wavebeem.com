@@ -8,40 +8,34 @@ button {
   font-weight: bold;
   /* font-style: italic; */
   padding: 8px 16px;
-  border-radius: var(--rounded-medium);
+  border-radius: 0;
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
   line-height: 1.25;
   /* border: 0; */
 
-  background: var(--color-green);
-  color: var(--color-honeydew);
+  background: var(--theme-button-bg);
+  color: var(--theme-button-text);
 
-  border: 1px solid transparent;
-  box-shadow: var(--shadow2);
+  border: 2px solid transparent;
+  box-shadow: var(--shadow1);
 }
 
 .button:hover,
 button:hover {
   text-decoration-line: none;
-  color: var(--color-honeydew);
 }
 
 .button:hover:where(:not(:active)),
 button:hover:where(:not(:active)) {
-  background-image: var(--ui-bg-overlay-active);
-}
-
-.button:active,
-button:active {
-  /* background-image: var(--ui-bg-overlay-active); */
+  background-image: radial-gradient(var(--theme-hover-dark));
 }
 
 .button:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--color-black);
-  outline-offset: 3px;
-  box-shadow: none;
+  outline: 2px solid var(--color-black);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--color-white);
 }
 
 :is(.button, button):where([data-variant="secondary"]) {
@@ -52,18 +46,13 @@ button:focus-visible {
   border-color: var(--theme-border2);
   box-shadow: var(--shadow1);
 
-  &:hover {
-    background-image: var(--ui-bg-overlay-hover);
-    color: var(--color-black);
-  }
-
-  &:active {
-    background-image: var(--ui-bg-overlay-active);
+  &:hover:where(:not(:active)) {
+    background-image: radial-gradient(var(--theme-hover-light));
   }
 }
 
 :is(.button, button):where([data-size="small"]) {
   padding: 4px 8px;
-  border-radius: var(--rounded-small);
+  border-radius: 0;
   font-size: var(--font-size-small);
 }

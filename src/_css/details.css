@@ -1,7 +1,14 @@
 main details {
   display: grid;
   margin: 1.5rem 0;
-  border-bottom: 1px solid var(--theme-border);
+  /* border-bottom: 1px solid var(--theme-divider); */
+  /* border-bottom: 1px solid var(--theme-border); */
+  background: var(--theme-infobox);
+  padding-inline: 16px;
+
+  @media (width < 40rem) {
+    margin-inline: -16px;
+  }
 }
 
 main details:hover {
@@ -13,7 +20,8 @@ main details:hover {
 } */
 
 main details + details {
-  margin-top: calc(-1.5rem);
+  margin-top: calc(-1.5rem + 1px);
+  /* margin-top: calc(-1.5rem); */
 }
 
 main summary {
@@ -21,6 +29,8 @@ main summary {
   user-select: none;
   cursor: default;
   padding-block: 16px;
+  padding-inline: 16px;
+  margin-inline: -16px;
 }
 
 main details {
@@ -34,12 +44,12 @@ main details {
   /* https://css-shape.com/plus/ */
   summary::after {
     content: "";
-    --c: var(--theme-border);
+    --c: var(--theme-shadow);
     height: 24px;
     aspect-ratio: 1;
     background: radial-gradient(
       circle at center,
-      var(--color-black) 0 calc(100% - 6px),
+      var(--theme-text) 0 calc(100% - 6px),
       transparent 0
     );
     box-shadow: 0 0 0 6px inset var(--c);
@@ -53,24 +63,15 @@ main details {
   }
 
   @media (hover) {
-    summary:hover {
-      background-image: linear-gradient(
-        to right,
-        transparent,
-        rgb(from var(--theme-border) r g b / 15%),
-        transparent
-      );
-
-      &::after {
-        filter: brightness(95%);
-      }
+    summary:hover:where(:not(:active)) {
+      background-image: radial-gradient(var(--theme-hover-light-alt));
     }
   }
 }
 
-main summary:hover:active::after {
-  --c: var(--color-forest);
-}
+/* main summary:hover:active::after {
+  opacity: 0.5;
+} */
 
 main details:has(> summary:focus-visible) {
   box-shadow: none;
@@ -84,5 +85,7 @@ main details summary:focus-visible {
 }
 
 main details[open] > summary {
-  margin-bottom: -1rem;
+  margin-bottom: -0.5rem;
+  border-bottom: 2px dotted;
+  position: relative;
 }

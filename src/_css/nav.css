@@ -9,7 +9,8 @@
   color: inherit;
   font-weight: bold;
   /* font-style: italic; */
-  padding: 8px 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: var(--font-size-nav);
 }
 
