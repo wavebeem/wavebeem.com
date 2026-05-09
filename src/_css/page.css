@@ -121,13 +121,16 @@ article:where(.page) {
 
       img,
       video {
-        outline: 2px dotted var(--theme-image);
+        outline: 2px dotted var(--theme-border);
         outline-offset: -2px;
+        background-color: var(--theme-page-bg);
+        background-color: var(--theme-image);
         /* border-radius: var(--rounded-small); */
 
         @media (width < 30rem) {
           outline: 0;
-          border-block: 2px solid;
+          border-block: 2px solid var(--theme-border);
+          box-shadow: var(--shadow1);
           box-sizing: content-box;
         }
 

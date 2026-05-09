@@ -54,7 +54,7 @@ export default {
   "theme-border": "var(--color-black)",
   "theme-number": "var(--color-green3)",
   "theme-photo": "var(--color-green3)",
-  "theme-image": "var(--color-black)",
+  "theme-image": "var(--color-white)",
   "theme-box": "var(--color-white)",
   "theme-button-bg": "var(--color-black)",
   "theme-button-text": "var(--color-white)",
