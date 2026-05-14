@@ -4,7 +4,7 @@
   /* border-bottom: 2px solid; */
   box-shadow: var(--shadow2);
   margin-bottom: 16px;
-  padding: 8px 0;
+  padding-block: 8px;
 }
 
 :where(:root[data-sticky]) .header {
@@ -93,7 +93,8 @@
 
 @media (width < 35rem) {
   .header {
-    padding: 8px 0;
+    padding: 0;
+    box-shadow: none;
   }
 
   .logo a {

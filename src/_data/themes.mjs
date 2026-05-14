@@ -39,6 +39,8 @@ export default {
 
   "theme-header-bg": "var(--color-black)",
   "theme-header-text": "var(--color-white)",
+  "theme-nav-bg": "var(--color-green2)",
+  "theme-nav-text": "var(--color-black)",
   "theme-text": "var(--color-black)",
   "theme-infobox": "var(--color-green2)",
   "theme-code": "var(--color-green2)",

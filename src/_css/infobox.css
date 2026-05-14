@@ -83,6 +83,16 @@ ul.infobox {
     padding: 8px 16px;
     background: var(--theme-infobox);
   }
+
+  /* li {
+    &:first-of-type a {
+      border-radius: var(--rounded-small) var(--rounded-small) 0 0;
+    }
+
+    &:last-of-type a {
+      border-radius: 0 0 var(--rounded-small) var(--rounded-small);
+    }
+  } */
 }
 
 dl.infobox {

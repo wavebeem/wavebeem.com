@@ -52,6 +52,30 @@
   margin-inline: 0;
 }
 
+@media (width <= 35rem) {
+  .nav {
+    background: var(--theme-nav-bg);
+    color: var(--theme-nav-text);
+    padding-inline: 16px;
+    margin-inline: -16px;
+    margin-bottom: -16px;
+    padding-block: 16px;
+    border-block: 1px solid var(--theme-page-bg);
+
+    a {
+      margin-inline: -16px;
+      padding-inline: 16px;
+      padding-block: 18px;
+      outline-offset: -6px;
+    }
+
+    .separator::after {
+      opacity: 1;
+      color: var(--theme-shadow);
+    }
+  }
+}
+
 @media (width <= 50rem) {
   .nav .separator {
     margin-inline: 8px;
