@@ -38,7 +38,7 @@
   padding: 0;
   justify-content: space-evenly;
   justify-content: space-between;
-  padding-right: 4px;
+  /* padding-right: 4px; */
   font-style: italic;
   text-transform: uppercase;
   /* font-family: var(--font-mono); */
@@ -60,7 +60,7 @@
     margin-inline: -16px;
     margin-bottom: -16px;
     padding-block: 16px;
-    border-block: 1px solid var(--theme-page-bg);
+    border-top: 1px solid var(--theme-page-bg);
 
     a {
       margin-inline: -16px;
@@ -68,22 +68,12 @@
       padding-block: 18px;
       outline-offset: -6px;
     }
-
-    .separator::after {
-      opacity: 1;
-      color: var(--theme-shadow);
-    }
   }
 }
 
 @media (width <= 50rem) {
   .nav .separator {
     margin-inline: 8px;
-  }
-
-  .nav ul,
-  .logo {
-    /* justify-content: center; */
   }
 }
 
