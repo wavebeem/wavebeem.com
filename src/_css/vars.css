@@ -72,7 +72,7 @@
     --font-size-h2: round(2rem, 1px);
     --font-size-h3: round(1.5rem, 1px);
     --font-size-base: round(1.15rem, 1px);
-    --font-size-nav: round(1.25rem, 1px);
+    --font-size-nav: round(1.15rem, 1px);
     --font-size-small: round(1rem, 1px);
   }
 }

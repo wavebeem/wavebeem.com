@@ -27,6 +27,10 @@ function compare(a, b) {
 
 /** @param {UserConfig} eleventyConfig */
 export default function getConfig(eleventyConfig) {
+  eleventyConfig.setServerOptions({
+    host: process.env.MY_ELEVENTY_HOST || "localhost",
+  });
+
   const markdown = markdownIt({
     html: true,
     linkify: true,

@@ -10,6 +10,7 @@
     "photo": "node ./bin/photo.mjs",
     "dev": "npx netlify@22.2.2 dev",
     "start": "cross-env TZ=UTC eleventy --serve --quiet --port=1312",
+    "start:lan": "MY_ELEVENTY_HOST=0.0.0.0 npm start",
     "upgrade": "npm-check -u",
     "lint": "stylelint \"src/**/*.css\" --formatter unix",
     "build": "eleventy"
