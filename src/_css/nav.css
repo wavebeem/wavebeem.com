@@ -56,8 +56,6 @@
   .nav {
     background: var(--theme-page-bg);
     color: var(--theme-nav-text);
-    margin-inline: -16px;
-    margin-bottom: -16px;
     border-top: 1px solid var(--theme-page-bg);
     display: flex;
 
