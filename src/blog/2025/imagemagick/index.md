@@ -53,7 +53,7 @@ use _lossy_ encoding for WebP files. You can simply omit the quality flag to get
 the default quality, or supply any number you want from 1 to 100.
 
 [WebP has a massive list of options](https://imagemagick.org/script/webp.php) in
-ImageMagick if you want even more contorl over the output.
+ImageMagick if you want even more control over the output.
 
 ## Upscaling pixel art
 
