@@ -120,6 +120,19 @@ $ magick mogrify -strip INPUT.png
 $ magick INPUT.png -strip OUTPUT.png
 ```
 
+## Converting a bunch of images at once
+
+```sh
+$ magick mogrify -path ./optimized -format webp "*.jpg"
+```
+
+`-path` sets the output folder (defaults to putting files next to the ones they
+were converted from)
+
+`-format` sets the output file format
+
+and `"*.jpg"` is a file glob (or list of files) to operate on.
+
 ## Making a script
 
 Writing these commands repeatedly can get tedious, so I think these tips are
@@ -174,18 +187,17 @@ ImageMagick has an
 [absurd amount of commands](https://imagemagick.org/script/command-line-options.php).
 Here's a small sample:
 
-- `-flip` <span class="arrow">&rarr;</span> _mirror upside-down_
+- `-flip` &rarr; _mirror upside-down_
 
-- `-flop` <span class="arrow">&rarr;</span> _mirror side-to-side_
+- `-flop` &rarr; _mirror side-to-side_
 
-- `-trim` <span class="arrow">&rarr;</span> _remove a solid colored border
-  around an image_
+- `-trim` &rarr; _remove a solid colored border around an image_
 
-- `-crop` <span class="arrow">&rarr;</span> _crop the image_
+- `-crop` &rarr; _crop the image_
 
-- `-append` <span class="arrow">&rarr;</span> _join two images top-to-bottom_
+- `-append` &rarr; _join two images top-to-bottom_
 
-- `+append` <span class="arrow">&rarr;</span> _join two images side-by-side_
+- `+append` &rarr; _join two images side-by-side_
 
 ImageMagick also lets you use a special filename `magick:logo` which is the
 ImageMagick logo. This is useful if you want to test commands without having an
