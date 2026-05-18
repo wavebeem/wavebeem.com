@@ -64,8 +64,8 @@ you'll want to use `-scale` instead of `-resize`.
 magick INPUT.png -scale '200%' -quality 100 OUTPUT.webp
 ```
 
-<p><img class="sharp" src="./assets/2a.png" alt="" /></p>
-<p><img class="sharp" src="./assets/2b.png" alt="" /></p>
+<p><img class="sharp" src="./assets/2a.png" data-background="transparent" alt="" /></p>
+<p><img class="sharp" src="./assets/2b.png" data-background="transparent" alt="" /></p>
 
 Even though a 200% image is two times the size of the input, if it's pixel art,
 it will barely be any larger as a WebP files. Upscaling pixel art to a large

@@ -186,8 +186,8 @@ article:where(.page) {
 }
 
 :where(.page.post) {
-  p > img {
-    outline: 2px dotted var(--theme-image);
+  p > img:where(:not([data-background="transparent"])) {
+    outline: 2px dotted var(--theme-border);
     outline-offset: -2px;
   }
 }
