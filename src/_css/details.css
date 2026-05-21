@@ -76,7 +76,7 @@ main details {
 main details:has(> summary:focus-visible) {
   box-shadow: none;
   outline: 3px solid;
-  outline-offset: -1px;
+  outline-offset: -3px;
   /* border-radius: var(--rounded-small); */
 }
 
