@@ -22,7 +22,7 @@ a.infobox {
   }
 
   & + & {
-    margin-top: -15px;
+    margin-top: calc(var(--infobox-gap) - 16px);
   }
 
   .heading {
@@ -43,11 +43,15 @@ a.infobox {
     text-decoration-thickness: inherit;
     color: var(--color-black);
   }
+
+  &:focus-visible {
+    outline-offset: -3px;
+  }
 }
 
 ul.infobox {
   display: grid;
-  gap: 1px;
+  gap: var(--infobox-gap);
   list-style-type: none;
   padding: 0;
 

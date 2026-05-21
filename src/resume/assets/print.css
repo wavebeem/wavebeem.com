@@ -53,7 +53,7 @@
     Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
   --font-serif: "Merriweather", var(--font-fallback-serif);
   --font-sans: "PP Mori", var(--font-fallback-sans);
-  --font-cool: "PP Mori", var(--font-sans);
+  --font-heading: "PP Mori", var(--font-sans);
 
   font-family: var(--font-serif);
   line-height: 1.35;

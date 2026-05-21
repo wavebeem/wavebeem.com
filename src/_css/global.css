@@ -114,7 +114,7 @@ p {
 
 h1 {
   font-size: var(--font-size-h1);
-  font-family: var(--font-cool);
+  font-family: var(--font-heading);
   font-weight: 900;
   margin-block: 2rem 1.5rem;
 }
@@ -128,7 +128,7 @@ h1::after {
 
 h2 {
   font-size: var(--font-size-h2);
-  font-family: var(--font-cool);
+  font-family: var(--font-heading);
   margin-block: 4rem 0.5rem;
 }
 

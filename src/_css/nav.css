@@ -56,13 +56,13 @@
   .nav {
     background: var(--theme-page-bg);
     color: var(--theme-nav-text);
-    border-top: 1px solid var(--theme-page-bg);
+    border-top: var(--infobox-gap) solid var(--theme-page-bg);
     display: flex;
 
     ul {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
+      gap: var(--infobox-gap);
     }
 
     li {
