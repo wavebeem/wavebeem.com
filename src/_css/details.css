@@ -20,7 +20,7 @@ main details:hover {
 } */
 
 main details + details {
-  margin-top: calc(-1.5rem + 1px);
+  margin-top: calc(var(--infobox-gap) - 1.5rem);
   /* margin-top: calc(-1.5rem); */
 }
 
