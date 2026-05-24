@@ -240,7 +240,7 @@ main ul ::marker {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 1px;
+  gap: var(--infobox-gap);
 
   li {
     display: flex;
@@ -262,7 +262,7 @@ main ul ::marker {
     }
 
     &:focus-visible {
-      outline-offset: -1px;
+      outline-offset: -3px;
     }
 
     &:where(:hover:not(:active)) {

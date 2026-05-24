@@ -115,7 +115,7 @@ dl.infobox {
   }
 
   > dd + dt {
-    margin-top: 1px;
+    margin-top: var(--infobox-gap);
     padding-block: 16px 0;
   }
 
@@ -134,7 +134,7 @@ dl.infobox {
   @media (width >= 40rem) {
     &.wide-dl {
       display: grid;
-      gap: 1px;
+      gap: var(--infobox-gap);
       grid-template-columns: auto 1fr;
 
       > :is(dd, dt) {

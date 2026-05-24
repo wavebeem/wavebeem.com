@@ -8,7 +8,7 @@
 </p>
 
 {% for post in collections.toybox reversed %}
-<a class="card" href="{{ post.url }}">
+<a class="infobox" href="{{ post.url }}">
   <span class="heading">{{ post.data.title | escape }}</span>
   <span class="description">{{ post.data.description | markdownify }}</span>
 </a>

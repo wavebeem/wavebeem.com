@@ -1,11 +1,7 @@
 <p>These posts aren't finished yet! Please don't share them.</p>
 
-<ul class="card">
-  {% for post in collections.draft reversed %}
-  <li>
-    <a href="{{ post.url }}">
-      {{ post.fileSlug | escape }}
-    </a>
-  </li>
-  {% endfor %}
-</ul>
+{% for post in collections.draft reversed %}
+<a class="infobox" href="{{ post.url }}">
+  {{ post.fileSlug | escape }}
+</a>
+{% endfor %}
