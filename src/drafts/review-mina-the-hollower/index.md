@@ -45,6 +45,9 @@ me declaring it a game with an identity crisis.
 The specifics of Pipistrello vs Mina are quite different, yet my Pros & Cons
 list would look very similar at a high level.
 
+It's a real shame I didn't like this game, because I loved Shovel Knight. And
+I'm not even much of a Mega Man fan.
+
 ---
 
 I'm shelving this game after 6 hours. I beat the tutorial boss three times (once
