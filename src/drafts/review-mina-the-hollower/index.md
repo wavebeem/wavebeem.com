@@ -91,6 +91,10 @@ your "souls" currency is called here) and hold them hostage, waiting for you to
 come back and kill them. Yeah, like they'll grab the bones off the ground so you
 can't just run by and get them back.
 
+Each screen is densely populated with enemies, to the point of making the pacing
+exhausting. And to make matters worse, there's no map in this game! (Aside:
+Apparently you can get a high level "island map" but that's not the same thing).
+
 Healing is probably the worst aspect of this game, though. You have "vials"
 which need to be filled with "plasma" to heal. You generate plasma primarily by
 damaging enemies. Sure, in Bloodborne you had the "rally" system where attacking
@@ -98,6 +102,14 @@ enemies could leech some of your health back, but that was _on top_ of having
 straight up healing, not instead of it. Brutal. At least you don't have to grind
 for vials in this game like Bloodborne. You do get them back every time you rest
 in your burrow (this game's "bonfire").
+
+Classic Castlevania-style subweapons exist as "sidearms" in this game, but I
+spent nearly the entire 6 hours with no sidearm because its lost upon death, and
+only found in the environment in hidden locations.
+
+Apparently the "trinkets" (equippable items, a la Hollow Knight) can make the
+game quite a lot easier, but I hadn't found any meaningful ones before I hung up
+my hat on this game.
 
 ---
 
