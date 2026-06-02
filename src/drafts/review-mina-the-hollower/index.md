@@ -111,6 +111,11 @@ Apparently the "trinkets" (equippable items, a la Hollow Knight) can make the
 game quite a lot easier, but I hadn't found any meaningful ones before I hung up
 my hat on this game.
 
+I'm also fatigued about "leveling up" as a concept in non-RPG games. Zelda and
+Metroid use carefully placed secrets to reward your curiosity with extra power.
+This game only rewards your skill in combat/persistence with additional combat
+prowess.
+
 ---
 
 I've seen a lot of people hail the extremely high amount of "modifiers" you can
