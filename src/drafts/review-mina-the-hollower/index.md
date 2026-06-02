@@ -135,3 +135,23 @@ mistakes allowed feels... hollow (haha).
 If you like this game: great! I'm happy for you. My "Dark Souls" era is
 extremely over, and I'm lamenting another game that's so lovingly crafted but
 filled with decisions I dislike.
+
+<figure>
+  <img src="./assets/party.webp" alt="" width="3840" height="2160" />
+  <figcaption>They said the name of the game!</figcaption>
+</figure>
+
+<figure>
+  <img src="./assets/boss.webp" alt="" width="3840" height="2160" />
+  <figcaption>The second boss was a skin-of-my-teeth victory.</figcaption>
+</figure>
+
+<figure>
+  <img src="./assets/nose.webp" alt="" width="3840" height="2160" />
+  <figcaption>A cute/weird guy with a tedious game mechanic.</figcaption>
+</figure>
+
+<figure>
+  <img src="./assets/giant.webp" alt="" width="3840" height="2160" />
+  <figcaption>He literally breaks a hole in his roof to wave at you.</figcaption>
+</figure>
