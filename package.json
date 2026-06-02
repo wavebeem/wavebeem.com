@@ -5,6 +5,7 @@
   "description": "wavebeem.com",
   "type": "module",
   "scripts": {
+    "new-post": "node ./bin/new-post.mjs",
     "webp": "node ./bin/webp.mjs",
     "favicon": "node ./bin/favicon.mjs",
     "photo": "node ./bin/photo.mjs",
