@@ -46,7 +46,8 @@ The specifics of Pipistrello vs Mina are quite different, yet my Pros & Cons
 list would look very similar at a high level.
 
 It's a real shame I didn't like this game, because I loved Shovel Knight. And
-I'm not even much of a Mega Man fan.
+I'm not even much of a Mega Man fan. And just like Shovel Knight, Jake Kaufman
+(virt) laid down a masterful soundtrack to enjoy.
 
 ---
 
