@@ -1,5 +1,5 @@
 ---
-draft: true
+date: "2026-06-02T23:52:54-07:00"
 title: >-
   Mina the Hollower is the Hollow Knight of Zelda (derogatory)
 description: >-
@@ -104,8 +104,8 @@ for vials in this game like Bloodborne. You do get them back every time you rest
 in your burrow (this game's "bonfire").
 
 Classic Castlevania-style subweapons exist as "sidearms" in this game, but I
-spent nearly the entire 6 hours with no sidearm because its lost upon death, and
-only found in the environment in hidden locations.
+spent nearly the entire 6 hours with no sidearm because it's lost upon death,
+and only found in the environment in hidden locations.
 
 Apparently the "trinkets" (equippable items, a la Hollow Knight) can make the
 game quite a lot easier, but I hadn't found any meaningful ones before I hung up
