@@ -1,5 +1,5 @@
 ---
-# date: "2026-05-23T22:02:56-07:00"
+date: "2026-05-23T22:02:56-07:00"
 title: >-
   MOUSE: P.I. for Hire is a gouda game
 description: >-
