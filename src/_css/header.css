@@ -95,10 +95,15 @@
   .header {
     padding: 0;
     box-shadow: none;
+    background: initial;
+    color: initial;
   }
 
   .logo {
     padding: 16px;
+    background: var(--theme-header-bg);
+    color: var(--theme-header-text);
+    border-bottom: 4px solid var(--theme-shadow);
   }
 
   .logo a {

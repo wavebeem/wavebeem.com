@@ -4,8 +4,9 @@
   justify-content: space-between;
   gap: 8px;
   padding: 1rem;
-  margin-top: 4rem;
-  margin-bottom: env(safe-area-max-inset-bottom, 1rem);
+  padding-top: 5rem;
+  padding-bottom: calc(1rem + env(safe-area-max-inset-bottom, 1rem));
+  background: linear-gradient(transparent, var(--theme-page-bg));
 }
 
 .footer > * {

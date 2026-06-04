@@ -19,7 +19,7 @@ main details {
   }
 
   @media (width < 40rem) {
-    margin-inline: -16px;
+    /* margin-inline: -16px; */
   }
 }
 
