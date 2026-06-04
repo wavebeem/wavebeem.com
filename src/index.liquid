@@ -29,7 +29,7 @@
 
     {% assign top3 = collections.posts | reverse | take: 3 %}
     {% for post in top3 %}
-      <a class="card" href="{{ post.url }}">
+      <a class="infobox" href="{{ post.url }}">
         <div class="heading">{{ post.data.title | escape }}</div>
         <div class="description">{{ post.data.description | markdownify }}</div>
       </a>

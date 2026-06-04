@@ -8,7 +8,7 @@ button {
   font-weight: bold;
   /* font-style: italic; */
   padding: 8px 16px;
-  border-radius: 0;
+  border-radius: var(--rounded-pill);
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
   line-height: 1.25;
@@ -38,21 +38,8 @@ button:focus-visible {
   box-shadow: 0 0 0 3px var(--color-white);
 }
 
-:is(.button, button):where([data-variant="secondary"]) {
-  background: var(--color-white);
-  color: var(--color-green);
-  font-weight: bold;
-  line-height: 1.25;
-  border-color: var(--theme-border2);
-  box-shadow: var(--shadow1);
-
-  &:hover:where(:not(:active)) {
-    background-image: radial-gradient(var(--theme-hover-light));
-  }
-}
-
 :is(.button, button):where([data-size="small"]) {
   padding: 4px 8px;
-  border-radius: 0;
+  border-radius: var(--rounded-pill);
   font-size: var(--font-size-small);
 }

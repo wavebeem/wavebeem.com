@@ -20,6 +20,7 @@ function oklch(lightness, chroma, hue, alpha = 100) {
 export default {
   "color-white": "#fff",
   "color-black": "#111",
+  "color-green0": oklch(96, 8, 140),
   "color-green1": oklch(94, 10, 140),
   "color-green1b": oklch(92.5, 12.5, 140),
   // "color-green1b": oklch(92.5, 12.5, 140),
@@ -32,7 +33,6 @@ export default {
   //   "oklch(from var(--color-green1) calc(l * 0.95) calc(c * 1.10) calc(h + 10))",
   // "color-green3":
   //   "oklch(from var(--color-green1) calc(l * 0.85) calc(c * 1.33) calc(h + 10))",
-  "color-purple": "BlueViolet",
 
   "theme-selection-bg": "var(--color-black)",
   "theme-selection-text": "var(--color-white)",
@@ -52,7 +52,7 @@ export default {
   "theme-bullet": "var(--color-black)",
   "theme-accent": "var(--color-green2)",
   "theme-accent2": "var(--color-green3)",
-  // "theme-divider": "var(--color-green2)",
+  "theme-divider": "var(--color-green2)",
   "theme-border": "var(--color-black)",
   "theme-number": "var(--color-green3)",
   "theme-photo": "var(--color-green3)",
@@ -60,7 +60,7 @@ export default {
   "theme-box": "var(--color-white)",
   "theme-button-bg": "var(--color-black)",
   "theme-button-text": "var(--color-white)",
-  "theme-card": "var(--color-white)",
+  "theme-card": "var(--color-green0)",
   "theme-link": "var(--color-black)",
   "theme-hover-light": "rgb(from var(--color-green3) r g b / 20%)",
   "theme-hover-light-alt": "rgb(from var(--color-green3) r g b / 30%)",

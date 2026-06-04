@@ -6,6 +6,18 @@ main details {
   background: var(--theme-infobox);
   padding-inline: 16px;
 
+  border-radius: var(--rounded-large);
+
+  :where(&) + & {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  &:has(+ &) {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
   @media (width < 40rem) {
     margin-inline: -16px;
   }
@@ -39,6 +51,23 @@ main details {
     justify-content: space-between;
     align-items: center;
     gap: 16px;
+
+    border-radius: var(--rounded-large);
+
+    :where(&) + & {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:has(+ &) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  &[open] summary {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   /* https://css-shape.com/plus/ */

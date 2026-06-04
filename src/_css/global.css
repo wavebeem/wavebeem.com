@@ -25,8 +25,8 @@
 }
 
 /* https://css-pattern.com/wave-circles/ */
-
-:root {
+/* :root, */
+:root[data-wallpaper="waves"] {
   --s: 256px; /* control the size*/
   --c1: var(--theme-page-bg);
   --c2: var(--theme-page-alt);
@@ -40,8 +40,35 @@
       calc(var(--s) / 2) calc(var(--s) / 2),
     repeating-linear-gradient(45deg, var(--c1) -12.5% 12.5%, var(--c2) 0 37.5%)
       0 0 / var(--s) var(--s);
+
   background-color: var(--theme-page-bg);
   /* background-attachment: fixed; */
+}
+
+/* :root, */
+:root[data-wallpaper="stripes"] {
+  --x: 2px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--c1) 0 var(--x),
+    var(--c2) var(--x) calc(2 * var(--x))
+  );
+  background-color: var(--theme-page-bg);
+}
+
+/* https://screenspan.net/polka/ */
+:root,
+:root[data-wallpaper="polka"] {
+  --a: 8px;
+  --b: calc(2 * var(--a));
+  background-image:
+    radial-gradient(var(--theme-page-alt) calc(30% - 0.5px), transparent 30%),
+    radial-gradient(var(--theme-page-alt) calc(30% - 0.5px), transparent 30%);
+  background-color: var(--theme-page-bg);
+  background-position:
+    0px 0px,
+    var(--a) var(--a);
+  background-size: var(--b) var(--b);
 }
 
 :where(:root[data-figure-viewer] :is(figure, p)) img {
@@ -167,7 +194,7 @@ pre {
   font-size: 0.9em;
   font-weight: 500;
   background: var(--theme-code);
-  /* border-radius: var(--rounded-small); */
+  border-radius: var(--rounded-small);
   padding: 0 4px;
 }
 
@@ -240,7 +267,8 @@ main ul ::marker {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: var(--infobox-gap);
+  gap: calc(2 * var(--infobox-gap));
+  /* gap: var(--infobox-gap); */
 
   li {
     display: flex;
@@ -249,7 +277,7 @@ main ul ::marker {
   a {
     /* border-bottom: var(--link-underline-thickness) solid; */
     line-height: 1.15;
-    padding: 8px 16px;
+    padding: 4px 8px;
     /* padding-bottom: 6px; */
     background-color: var(--theme-infobox);
     font-weight: bold;
@@ -257,12 +285,14 @@ main ul ::marker {
     /* box-shadow: var(--shadow1); */
     /* border-bottom: 2px solid; */
 
+    border-radius: var(--rounded-medium);
+
     &:not(:hover) {
       text-decoration-line: none;
     }
 
     &:focus-visible {
-      outline-offset: -3px;
+      outline-offset: -2px;
     }
 
     &:where(:hover:not(:active)) {
