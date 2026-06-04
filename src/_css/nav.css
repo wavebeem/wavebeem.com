@@ -70,6 +70,14 @@
       justify-content: center;
     }
 
+    li:first-child a {
+      border-bottom-left-radius: var(--rounded-large);
+    }
+
+    li:last-child a {
+      border-bottom-right-radius: var(--rounded-large);
+    }
+
     a {
       display: block;
       padding-block: 16px;

@@ -52,7 +52,7 @@
   }
 
   @media (width <= 50rem) {
-    --font-size-h1: round(1.75rem, 1px);
+    --font-size-h1: round(2rem, 1px);
     --font-size-h2: round(1.5rem, 1px);
     --font-size-h3: round(1.25rem, 1px);
     --font-size-base: round(1.15rem, 1px);

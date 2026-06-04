@@ -62,8 +62,8 @@
   --a: 8px;
   --b: calc(2 * var(--a));
   background-image:
-    radial-gradient(var(--theme-page-alt) calc(30% - 0.5px), transparent 30%),
-    radial-gradient(var(--theme-page-alt) calc(30% - 0.5px), transparent 30%);
+    radial-gradient(var(--theme-page-alt) calc(30% - 1px), transparent 30%),
+    radial-gradient(var(--theme-page-alt) calc(30% - 1px), transparent 30%);
   background-color: var(--theme-page-bg);
   background-position:
     0px 0px,
