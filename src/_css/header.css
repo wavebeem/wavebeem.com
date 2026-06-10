@@ -86,7 +86,7 @@
   gap: 1rem;
 }
 
-@media (width < 35rem) {
+@media (width < 40rem) {
   .header {
   }
 
@@ -102,11 +102,14 @@
 
   .logo a {
     margin-block: 8px;
+    display: flex;
+    justify-content: center;
   }
 
   .logo svg {
     height: initial;
     width: 100%;
+    max-height: 32px;
   }
 
   .logo-container {
@@ -119,26 +122,27 @@
   }
 }
 
-@media (width >= 35rem) {
+@media (width >= 40rem) {
   .header {
+    display: flex;
+    justify-content: center;
+    padding-inline: 16px;
   }
 
   .header-content {
     flex-direction: row;
     justify-content: space-between;
 
-    margin: 16px auto;
-    padding: 16px 32px;
+    margin: 16px 0;
+    padding: 24px 32px;
     border-radius: var(--rounded-pill);
-    max-width: calc(var(--width-heading) - 32px);
     /* max-width: var(--width-heading); */
+    max-width: calc(var(--width-heading) + 32px);
     width: 100%;
 
     background: var(--theme-header-bg);
     color: var(--theme-header-text);
     box-shadow: var(--shadow1);
-    margin-bottom: 16px;
-    /* padding-block: 8px; */
   }
 
   :root[data-sticky="true"] .header {
