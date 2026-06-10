@@ -9,8 +9,8 @@
   color: inherit;
   font-weight: bold;
   /* font-style: italic; */
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   font-size: var(--font-size-nav);
 }
 
@@ -54,10 +54,10 @@
 
 @media (width <= 35rem) {
   .nav {
-    background: linear-gradient(var(--theme-page-bg), transparent);
     color: var(--theme-nav-text);
     /* border-top: var(--infobox-gap) solid var(--theme-page-bg); */
     padding: 16px;
+    margin-top: -16px;
     margin-bottom: -16px;
     display: flex;
 

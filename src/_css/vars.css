@@ -9,7 +9,6 @@
 
   /* --shadow1: 4px 4px 0 var(--theme-shadow); */
   --shadow1: 0 4px 0 var(--theme-shadow);
-  --shadow2: 0 4px var(--theme-shadow);
 
   --infobox-gap: 2px;
   --card-gap: 2px;
