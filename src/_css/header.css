@@ -91,19 +91,26 @@
   }
 
   .logo {
+    margin: 0;
+    padding: 0;
+    margin: 16px;
+  }
+
+  .logo a {
     background: var(--theme-header-bg);
     color: var(--theme-header-text);
     box-shadow: var(--shadow1);
 
-    margin: 16px;
-    padding: 8px 32px;
+    padding: 24px 32px;
     border-radius: var(--rounded-pill);
-  }
 
-  .logo a {
-    margin-block: 8px;
     display: flex;
     justify-content: center;
+
+    &:focus {
+      outline-color: var(--theme-page-text);
+      box-shadow: none;
+    }
   }
 
   .logo svg {
