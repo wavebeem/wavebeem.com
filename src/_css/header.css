@@ -107,7 +107,7 @@
     display: flex;
     justify-content: center;
 
-    &:focus {
+    &:focus-visible {
       outline-color: var(--theme-page-text);
       box-shadow: none;
     }
