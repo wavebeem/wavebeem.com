@@ -5,7 +5,7 @@
     "Consolas", "Liberation Mono", "Courier New", monospace;
   --font-body: "PP Mori", var(--font-fallback-main);
   --font-heading: var(--font-body);
-  --font-mono: "Lilex", var(--font-fallback-mono);
+  --font-mono: "Iosevka Extended", var(--font-fallback-mono);
 
   /* --shadow1: 4px 4px 0 var(--theme-shadow); */
   --shadow1: 0 4px 0 var(--theme-shadow);

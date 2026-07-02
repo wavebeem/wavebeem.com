@@ -54,3 +54,27 @@
   font-style: italic;
   font-weight: 100 900;
 }
+
+@font-face {
+  font-family: "Iosevka Extended";
+  src: url("/fonts/Iosevka-Extended.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Iosevka Extended";
+  src: url("/fonts/Iosevka-ExtendedItalic.woff2") format("woff2");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Iosevka Extended";
+  src: url("/fonts/Iosevka-ExtendedBold.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
