@@ -87,13 +87,11 @@
 }
 
 @media (width < 40rem) {
-  .header {
-  }
-
   .logo {
     margin: 0;
     padding: 0;
     margin: 16px;
+    margin-top: 0;
   }
 
   .logo a {
@@ -101,8 +99,8 @@
     color: var(--theme-header-text);
     box-shadow: var(--shadow1);
 
-    padding: 24px 32px;
-    border-radius: var(--rounded-pill);
+    padding: 16px;
+    border-radius: 0 0 var(--rounded-xlarge) var(--rounded-xlarge);
 
     display: flex;
     justify-content: center;
@@ -141,11 +139,12 @@
     justify-content: space-between;
 
     margin: 16px 0;
-    padding: 24px 32px;
-    border-radius: var(--rounded-pill);
+    padding: 16px 24px;
+    border-radius: 0 0 var(--rounded-xlarge) var(--rounded-xlarge);
     /* max-width: var(--width-heading); */
     max-width: calc(var(--width-heading) + 32px);
     width: 100%;
+    margin-top: 0;
 
     background: var(--theme-header-bg);
     color: var(--theme-header-text);
