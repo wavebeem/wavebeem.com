@@ -1,6 +1,5 @@
 ---
 date: "2026-07-05T19:12:30-07:00"
-draft: true
 title: >-
   Super Mario RPG's charm and clever writing hard carry its mediocre combat and
   atrocious minigames
