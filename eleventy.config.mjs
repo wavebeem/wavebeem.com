@@ -1,4 +1,6 @@
 // @ts-check
+import "tsx/esm";
+import { render } from "preact-render-to-string";
 import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import markdownIt from "markdown-it";
@@ -43,6 +45,23 @@ export default function getConfig(eleventyConfig) {
   });
 
   eleventyConfig.setLibrary("md", markdown);
+
+  eleventyConfig.addExtension(["11ty.jsx", "11ty.ts", "11ty.tsx"], {
+    key: "11ty.js",
+    compile() {
+      /**
+       * @this {any}
+       * @param {any} data
+       */
+      return async function (data) {
+        const content = await this.defaultRenderer(data);
+        return render(content);
+      };
+    },
+  });
+
+  eleventyConfig.addTemplateFormats(["11ty.jsx", "11ty.ts", "11ty.tsx"]);
+  eleventyConfig.addWatchTarget("**/*.{ts,tsx,jsx}");
 
   eleventyConfig.addPlugin(syntaxHighlight);
 

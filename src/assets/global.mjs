@@ -1,3 +1,15 @@
+function $(selector, root = document) {
+  const element = root.querySelector(selector);
+  if (!element) {
+    throw new Error(`couldn't find ${selector}`);
+  }
+  return element;
+}
+
+function $$(selector, root = document) {
+  return root.querySelectorAll(selector);
+}
+
 const root = document.documentElement;
 const search = new URLSearchParams(location.search);
 
@@ -46,29 +58,14 @@ const search = new URLSearchParams(location.search);
   });
 }
 
-if (search.get("sticky") === "auto") {
-  const y = [];
-  const header = document.querySelector("header.header");
-  const headerHeight = header.clientHeight;
-  addEventListener(
-    "scroll",
-    () => {
-      y.unshift(root.scrollTop);
-      const isNearTop = y[0] < headerHeight;
-      const maxData = 2;
-      // TODO: Require more scrolling data so it it isn't jumpy on mobile, or
-      // something...
-      y.length = Math.min(y.length, maxData);
-      const insufficientData = y.length < maxData;
-      const isScrollingUp = y
-        .slice(0, maxData - 1)
-        .every((_, i) => y[i] < y[i + 1]);
-      root.dataset.sticky = insufficientData || isNearTop || isScrollingUp;
-    },
-    { passive: true },
-  );
-}
-
-if (search.get("sticky") === "fixed") {
-  root.dataset.sticky = "";
+for (const hamburg of $$(".hamburger")) {
+  hamburg.addEventListener("click", (event) => {
+    if (hamburg.dataset.action === "back") {
+      const url = new URL(document.referrer, "https://fake.example");
+      if (url.hostname === location.hostname) {
+        history.back();
+        event.preventDefault();
+      }
+    }
+  });
 }

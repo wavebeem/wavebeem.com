@@ -4,7 +4,7 @@ layout: "layout-base"
 <article class="page post">
   <header class="page-header">
     <h1>{{ title | escape }}</h1>
-    <small>{% render "partials/date" date: page.date %}</small>
+    <small>{% include "partials/date" date: page.date %}</small>
   </header>
 
   {% if draft %}
