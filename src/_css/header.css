@@ -108,8 +108,6 @@
 
 .nav .hamburger {
   border: 1px solid var(--theme-hover-dark);
-  /* border: 1px solid var(--theme-header-button); */
-  /* background: var(--theme-header-button); */
   border-radius: var(--rounded-large);
   stroke: currentColor;
   aspect-ratio: 1;
@@ -120,9 +118,11 @@
   align-items: center;
   display: flex;
 
-  &:hover {
-    border-color: transparent;
-    background: radial-gradient(var(--theme-hover-dark));
+  @media (hover) {
+    &:hover {
+      border-color: transparent;
+      background: var(--theme-hover-dark);
+    }
   }
 
   &:focus-visible {
