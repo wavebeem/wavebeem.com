@@ -54,7 +54,7 @@
     text-decoration-line: none;
 
     .heading {
-      text-decoration-line: underline;
+      /* text-decoration-line: underline; */
       text-decoration-thickness: inherit;
       color: var(--color-black);
     }

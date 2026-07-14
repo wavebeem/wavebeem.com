@@ -5,7 +5,7 @@
   background: var(--theme-page-bg);
   color: inherit;
 
-  > * {
+  > :is(a, *) {
     color: inherit;
     text-decoration-line: none;
 
