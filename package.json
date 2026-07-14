@@ -34,7 +34,7 @@
     "@11ty/eleventy": "3.1.6",
     "@11ty/eleventy-plugin-rss": "^2.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "5.0.2",
-    "colorjs.io": "^0.5.0",
+    "lightningcss": "^1.32.0",
     "markdown-it": "14.3.0",
     "preact": "10.29.7",
     "preact-render-to-string": "6.7.0",
@@ -42,6 +42,7 @@
     "typescript": "7.0.2"
   },
   "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
     "cross-env": "10.1.0",
     "glob": "^11.0.0",
     "npm-check": "^6.0.1",
