@@ -1,0 +1,97 @@
+/** @jsx h */
+/** @jsxFrag Fragment */
+import { h, Fragment } from "preact";
+
+export function render() {
+  return (
+    <>
+      <p>
+        Read more about this site and how it was built. Also known as a
+        colophon.{" "}
+        <a href="https://github.com/wavebeem/wavebeem.com">Source code</a>{" "}
+        available on GitHub.
+      </p>
+
+      <h2>Made with</h2>
+
+      <dl class="card">
+        <dt>
+          <a href="https://code.visualstudio.com/">Visual Studio Code</a>
+        </dt>
+        <dd>A fantastic code editor.</dd>
+
+        <dt>
+          <a href="https://www.netlify.com/">Netlify</a>
+        </dt>
+        <dd>My favorite web host.</dd>
+
+        <dt>
+          <a href="https://www.11ty.dev/">Eleventy</a>
+        </dt>
+        <dd>A slick and quick static site generator.</dd>
+
+        <dt>
+          <a href="https://github.com/wavebeem/wavebeem.com">GitHub</a>
+        </dt>
+        <dd>The ubiquitous git host.</dd>
+
+        <dt>
+          <a href="https://affinity.serif.com/en-us/designer/">
+            Affinity Designer
+          </a>
+        </dt>
+        <dd>
+          A powerful vector art editor used for my favicon and OpenGraph
+          image.
+        </dd>
+
+        <dt>
+          <a href="https://oklch.com">OKLCH Color Picker & Converter</a>
+        </dt>
+        <dd>My favorite way to choose new colors.</dd>
+      </dl>
+
+      <h2>Featuring</h2>
+
+      <dl class="card">
+        <dt>
+          <a href="https://pangrampangram.com/products/mori">PP Mori</a>
+        </dt>
+        <dd>
+          A gothic sans serif inspired by contemporary Japanese design. This
+          font family was designed by Caio Kondo for Pangram Pangram®
+          Foundry.
+        </dd>
+
+        <dt>
+          <a href="https://www.froyotam.info">Ultra Hi-Gloss</a>
+        </dt>
+        <dd>A fun and friendly font by Froyo Tam. Used for my logo.</dd>
+
+        <dt>
+          <a href="https://typeof.net/Iosevka/">Iosevka</a>
+        </dt>
+        <dd>
+          A versatile monospace font for code, from code, by Renzhi Li aka
+          be5invis.
+        </dd>
+
+        <dt>
+          <a href="https://dystthedragon.itch.io/distype">
+            Distype HyperBold
+          </a>
+        </dt>
+        <dd>
+          A chunky and cool pixel font by DystTheDragon. Used for my
+          88&times;31
+          site button.
+        </dd>
+
+        <dt>
+          <a href="https://plausible.io/">Plausible Analytics</a>
+        </dt>
+        <dd>A simple and privacy focused analytics system.</dd>
+      </dl>
+    </>
+  );
+}

@@ -1,0 +1,91 @@
+/** @jsx h */
+/** @jsxFrag Fragment */
+import { h, Fragment } from "preact";
+
+export function render() {
+  return (
+    <>
+      <p>
+        My name is Sage (they/them), but you may also know me as wavebeem.
+        I've been a professional software developer since 2012. I've loved
+        video games my whole life. I live with my wonderful partner,{" "}
+        <a href="https://ash.fish/">Ash</a>, in{" "}
+        <a href="https://en.wikipedia.org/wiki/Portland,_Oregon">Portland</a>.
+      </p>
+
+      <h2>Computers</h2>
+
+      <p>
+        I fell in love with computers thanks to{" "}
+        <a href="https://en.wikipedia.org/wiki/Microsoft_Plus!">
+          Microsoft Plus!
+        </a>
+        , an incredible customization pack for Windows 95 that helped you
+        theme your computer down to the smallest detail. Message boards and
+        the world wide wibe were a haven for a weirdo like me.
+      </p>
+
+      <p>
+        I learned how to program in high school, and I've been doing it
+        constantly ever since. After getting my degree in computer science,
+        I've been working nonstop with web technologies. I love HTML, CSS,
+        and JavaScript.
+      </p>
+
+      <h2>Video games</h2>
+
+      <p>
+        As a little baby, my grandma held me on her lap while playing Dr.
+        Mario on the NES. Is it any surprise that a few decades later I'm
+        still obsessed with video games?
+      </p>
+
+      <p>
+        My biggest love is handheld games, particularly the Nintendo Game Boy
+        systems and the original Nintendo DS. I love 2D pixel art, and I make
+        it myself from time to time. Check out my{" "}
+        <a href="/shrines/">shrines</a> for spaces dedicated to games I love.
+      </p>
+
+      <h2>Other interests</h2>
+
+      <p>
+        I've been a huge fan of metal music since I was a teen. My favorite
+        subgenre is progressive metal. I also listen to a lot of video game
+        music, and have been dabbling more in electronic music recently. My
+        favorite electronic artist is{" "}
+        <a href="https://en.wikipedia.org/wiki/Justice_(band)">Justice</a>.
+      </p>
+
+      <p>
+        I love wearing makeup, especially bold and unusual looks. I sometimes
+        make pixel <a href="/art/">art</a>. I adore cats, and as a kid my
+        favorite animal was the frog.
+      </p>
+
+      <p>I'm an official representative for the color green.</p>
+
+      <h2>Name</h2>
+
+      <p>
+        My full name is <i>Sage Fennel Mock</i>. My pronouns are{" "}
+        <i>they/them/theirs</i>. I have mixed feelings about my last name, so
+        I also sometimes go by <i>Sage Fennel</i> or <i>Sage F.M.</i>.
+      </p>
+
+      <p>
+        My legal name is available for employers and other parties on an
+        as-needed basis.
+      </p>
+
+      <h2>Preferred terms</h2>
+
+      <p>
+        I do not use honorifics such as Mr, Ms, or Mx. I tend to prefer
+        gender neutral terms. Otherwise be creative, or use a feminine term.
+        For example, I would prefer <q>Queen Sage</q> to <q>King Sage</q>,
+        but <q>Your Highness</q> is better.
+      </p>
+    </>
+  );
+}

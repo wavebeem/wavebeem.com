@@ -7,12 +7,12 @@ export function Footer({ buildDate }) {
     <footer class="footer" id="footer">
       <div>
         <small>
-          © 2012–{formatDate(buildDate.object, "year")} wavebeem
+          &copy; 2012&ndash;{formatDate(buildDate.object, "year")} wavebeem
         </small>
       </div>
       <div>
         <a href="#" class="button" data-variant="secondary" data-size="small">
-          Top ↑
+          Top &uarr;
         </a>
       </div>
     </footer>

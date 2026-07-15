@@ -36,8 +36,6 @@ export function LayoutBase({
   );
 }
 
-// Eleventy-facing entry point, reached via src/index.11tydata.json's
-// `layout: "layout-base"` (bypasses layout-page directly).
 export function render(data) {
   const { content } = data;
   return renderDocument(

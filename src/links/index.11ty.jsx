@@ -1,0 +1,382 @@
+/** @jsx h */
+/** @jsxFrag Fragment */
+import { h, Fragment } from "preact";
+
+export function render() {
+  return (
+    <>
+      <p>Links to other websites, organized by category.</p>
+
+      <p>
+        🚧&nbsp;<strong>This page is under construction.</strong> It used to
+        be one
+        giant unorganized mess. Please enjoy your visit, and don't forget to
+        come back later.
+      </p>
+
+      <nav class="hash-nav">
+        <li>
+          <a href="#featured">#featured</a>
+        </li>
+        <li>
+          <a href="#art">#art</a>
+        </li>
+        <li>
+          <a href="#music">#music</a>
+        </li>
+        <li>
+          <a href="#fonts">#fonts</a>
+        </li>
+        <li>
+          <a href="#tech">#tech</a>
+        </li>
+        <li>
+          <a href="#personal">#personal</a>
+        </li>
+        <li>
+          <a href="#me">#me</a>
+        </li>
+      </nav>
+
+      <h2 id="featured">Featured</h2>
+
+      <dl class="card">
+        <dt>
+          <a href="https://anhvn.com/">anhvn</a>
+        </dt>
+        <dd>
+          Anh is a dear friend of mine and a fabulous designer. We forged our
+          bond in the depths of Destiny 2 (which feels like a lifetime ago
+          already).
+        </dd>
+
+        <dt>
+          <a href="https://erambert.me">Damien Erambert</a>
+        </dt>
+        <dt>
+          <a href="https://damien.zone">damien's zone</a>
+        </dt>
+        <dt>
+          <a href="https://macthemes.garden">Mac Themes Garden</a>
+        </dt>
+        <dd>
+          Damien is a great friend and a talented web developer. Ask him
+          about the band Justice or anything Mac related.
+        </dd>
+      </dl>
+
+      <h2 id="art">Art</h2>
+
+      <dl class="card">
+        <dt>
+          <a href="https://2mello.net/">2 Mello</a>
+        </dt>
+        <dd>
+          2 Mello really cooked up something special in 2022 with{" "}
+          <q>this year i lose my mind</q>. Come for the JSRF-inspired
+          albums, stay for the incredible original beats and vocals.
+        </dd>
+
+        <dt>
+          <a href="https://sproutsnout.com/">sproutsnout's garden</a>
+        </dt>
+        <dd>
+          One of my favorite artists! Their adorable style speaks directly
+          to my heart, and their art adorns many of the shrines on my
+          website.
+        </dd>
+
+        <dt>
+          <a href="https://www.shaferbrown.com/">
+            Shafer Brown Illustration
+          </a>
+        </dt>
+        <dd>
+          I love Shafer's work so much that I commissioned three pieces from
+          them and have them all hanging in my office. Their lineless
+          geometric style instantly enamored me.
+        </dd>
+
+        <dt>
+          <a href="https://madmaddiecomms.carrd.co/">MADDIEBISCUITS ART</a>
+        </dt>
+        <dd>
+          Maddie makes gorgeously rendered commissions for a wide variety of
+          subjects.
+        </dd>
+
+        <dt>
+          <a href="https://aurahack.ca/">AURAHACK</a>
+        </dt>
+        <dd>
+          A freelance illustrator with some of the most memorable color work
+          I've seen. And she has very fashionable clothing for sale with her
+          designs.
+        </dd>
+
+        <dt>
+          <a href="https://www.thirdwayindustries.com">
+            Thirdway Industries
+          </a>
+        </dt>
+        <dd>
+          Gorgeous collectible card decks (standard 52) designed in Italy.
+        </dd>
+
+        <dt>
+          <a href="https://helveticablanc.com">Helvetica Blanc</a>
+        </dt>
+        <dd>
+          An artist exploring mysticism, mythopoeia, and connections between
+          art and magick in a variety of media.
+        </dd>
+
+        <dt>
+          <a href="https://curilagann.art/">
+            Curi Lagann ⚧ Artist and Animator
+          </a>
+        </dt>
+        <dd>
+          Curi Lagann, AKA HedgeMom{" "}
+          <span aria-hidden="true">(•ಲ•ʔ⋚⋚)و</span> is an artist creating
+          illustrations, concept art, and 3D works in the video games
+          industry.
+        </dd>
+
+        <dt>
+          🔞&nbsp;<a href="https://bsky.app/profile/notdiegues.bsky.social">digos</a>
+          <small>(Adults Only)</small>
+        </dt>
+        <dd>
+          Digos is a fantastic artist and an internet friend of mine. I love
+          the way they render the human form. They also have a great talent
+          for scary and spicy subject matter.
+        </dd>
+
+        <dt>
+          🔞&nbsp;<a href="https://www.oglaf.com">Oglaf</a>
+          <small>(Adults Only)</small>
+        </dt>
+        <dd>
+          My favorite webcomic, and the only one I still read weekly. Not
+          only is it sexy and funny, but it has permanently altered my
+          vocabulary.
+        </dd>
+
+        <dt>
+          🔞&nbsp;<a href="https://www.cominginhandy.com">Winton Kidd</a>
+          <small>(Adults Only)</small>
+        </dt>
+        <dd>An erotic comic artists's online store.</dd>
+      </dl>
+
+      <h2 id="fonts">Fonts</h2>
+
+      <dl class="card">
+        <dt>
+          <a href="https://pangrampangram.com">Pangram Pangram Foundry</a>
+        </dt>
+        <dd>
+          Gorgeous fonts, free to try. I use many of their fonts myself on
+          this very site.
+        </dd>
+
+        <dt>
+          <a href="https://www.arcanetype.com">Arcane Type Foundry</a>
+        </dt>
+        <dd>
+          Formerly Alanna Munro Type Foundry, this site is home to great
+          deals and flexible licensing.
+        </dd>
+
+        <dt>
+          <a href="https://djr.com">DJR | David Jonathon Ross</a>
+        </dt>
+        <dd>
+          DJR's font collection is impressive, as are the sites for each
+          font. My picks are Input for the font and Warbler for the site.
+        </dd>
+
+        <dt>
+          <a href="https://typeheist.co">TYPEHEIST Font Foundry</a>
+        </dt>
+        <dd>A one woman font foundry with affordable an interesting fonts.</dd>
+
+        <dt>
+          <a href="https://velvetyne.fr">Velvetyne</a>
+        </dt>
+        <dd>A wonderful collection of avantar garde open source fonts.</dd>
+
+        <dt>
+          <a href="https://fonts.google.com">Google Fonts</a>
+        </dt>
+        <dd>
+          It's hard to argue with free! I use Robot (Variable) on the
+          Pokémon Type Calculator.
+        </dd>
+      </dl>
+
+      <h2 id="music">Music</h2>
+
+      <dl class="card">
+        <dt>
+          <a href="https://www.youtube.com/@dreamtheaterofficial">
+            Dream Theater
+          </a>
+        </dt>
+        <dd>
+          Probably my favorite band of all time. This band is full of
+          simply <em>astonishing</em> musicians. Put on the song{" "}
+          <q>Octavarium</q> if you have 24 minutes to spare.
+        </dd>
+        <dd>
+          <ul>
+            <li>
+              <cite>Metropolis Pt. 2: Scenes from a Memory</cite>{" "}
+              <small>(1999)</small>
+            </li>
+            <li>
+              <cite>Octavarium</cite> <small>(2005)</small>
+            </li>
+            <li>
+              <cite>The Astonishing</cite> <small>(2016)</small>
+            </li>
+          </ul>
+        </dd>
+
+        <dt>
+          <a href="https://www.youtube.com/@animalsasleaders">
+            Animals as Leaders
+          </a>
+        </dt>
+        <dd>
+          Like a workout for my brain. Animals as Leaders has no vocalist or
+          bassist. Just two guitarists and a drummer playing like they're in
+          a duel with the devil. And the devil's nervous about his turn.
+        </dd>
+        <dd>
+          <ul>
+            <li>
+              <cite>The Joy of Motion</cite> <small>(2014)</small>
+            </li>
+            <li>
+              <cite>Parrhesia</cite> <small>(2022)</small>
+            </li>
+          </ul>
+        </dd>
+
+        <dt>
+          <a href="https://etjusticepourtous.bandcamp.com">Justice</a>
+        </dt>
+        <dd>
+          Probably the first electronic band I liked, and still my favorite.
+        </dd>
+        <dd>
+          <ul>
+            <li>
+              <cite>Justice</cite> <small>(2007)</small>
+            </li>
+            <li>
+              <cite>Hyperdrama</cite> <small>(2024)</small>
+            </li>
+          </ul>
+        </dd>
+
+        <dt>
+          <a href="https://ghostdata.bandcamp.com">GHOST DATA</a>
+        </dt>
+        <dd>GHOST DATA reminded me that electronic music exists and is good.</dd>
+        <dd>
+          <ul>
+            <li>
+              <cite>The Occulus Occult</cite> <small>(2016)</small>
+            </li>
+            <li>
+              <cite>Garden of Eyes</cite> <small>(2024)</small>
+            </li>
+          </ul>
+        </dd>
+      </dl>
+
+      <h2 id="tech">Tech</h2>
+
+      <dl class="card">
+        <dt>
+          <a href="https://www.joshwcomeau.com/">Josh W. Comeau</a>
+        </dt>
+        <dd>
+          My favorite web development blog. Josh makes advanced topics
+          approachable, and his interactive examples are so detailed.
+        </dd>
+      </dl>
+
+      <h2 id="personal">Personal</h2>
+
+      <dl class="card">
+        <dt>
+          <a href="https://lexfeathers.ca/">Lex Feathers</a>
+        </dt>
+        <dd>A Canadian composer, musician, and web developer.</dd>
+
+        <dt>
+          <a href="https://frills.dev/">Frills</a>
+        </dt>
+        <dd>
+          Frills is an <q>average mortal human</q> with a delightful
+          website! My favorite part is her <q>HTML named colors</q> page.
+        </dd>
+
+        <dt>
+          <a href="https://milliesquilly.com/">Millie Squilly Dot Com</a>
+        </dt>
+        <dt>
+          <a href="https://zine.milliesquilly.com/">zine of millie</a>
+        </dt>
+        <dd>A premier Decker zine creator and physical media enthusiast.</dd>
+
+        <dt>
+          <a href="https://cdrom.ca/">CD-ROM Journal</a>
+        </dt>
+        <dd>Exploring multimedia games and software of the 90s and beyond.</dd>
+
+        <dt>
+          <a href="https://drac.at/">Dracat</a>
+        </dt>
+        <dd>
+          A large catlike creature, resembling a hybrid of feline and
+          reptilian features. Known to reside on the internet.
+        </dd>
+
+        <dt>
+          <a href="https://eev.ee">fuzzy notepad</a>
+        </dt>
+        <dd>
+          Eevee is an independent artist, writer, and programmer with a
+          delightfully skeuomorphic website.
+        </dd>
+
+        <dt>
+          <a href="https://erysdren.me/">erysdren's WWW site</a>
+        </dt>
+        <dd>
+          An expert in DOS, software rendering, Quake, QuakeC, and archival.
+          Her internet presence also supports the Gopher protocol.
+        </dd>
+
+        <dt>
+          <a href="https://adelfaure.net/">
+            Adel Faure ‒ Games, music, tools, fonts, ASCII art
+          </a>
+        </dt>
+        <dd>
+          I love the cool text mode art (ASCII art) and the overall site
+          design. I recommend trying the character creator.
+        </dd>
+      </dl>
+
+      <h2 id="me">Me</h2>
+
+      Get my <a href="./me/">art assets</a> and link to my site.
+    </>
+  );
+}
