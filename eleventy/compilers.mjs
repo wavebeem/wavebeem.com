@@ -7,7 +7,7 @@ import { bundleAsync } from "lightningcss";
 export function compileJsx() {
   return async function (data) {
     const content = await this.defaultRenderer(data);
-    return render(content);
+    return typeof content === "string" ? content : render(content);
   };
 }
 
