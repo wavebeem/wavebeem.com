@@ -1,7 +1,0 @@
-<p>These posts aren't finished yet! Please don't share them.</p>
-
-{% for post in collections.draft reversed %}
-<a class="infobox" href="{{ post.url }}">
-  {{ post.fileSlug | escape }}
-</a>
-{% endfor %}
