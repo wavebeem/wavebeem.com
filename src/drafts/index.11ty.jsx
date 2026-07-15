@@ -3,7 +3,7 @@
 import { h, Fragment } from "preact";
 
 export function render(data) {
-  const posts = [...data.collections.draft].reverse();
+  const posts = data.collections.draft.toReversed();
   return (
     <>
       <p>These posts aren't finished yet! Please don't share them.</p>

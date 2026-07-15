@@ -1,10 +1,12 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { h, Fragment } from "preact";
-import { sortByLocale, fallback } from "../../eleventy/filter.mjs";
+import { compare } from "../../eleventy/filter.mjs";
 
 export function render(data) {
-  const sortedPosts = sortByLocale(data.collections.all, "url");
+  const sortedPosts = data.collections.all.toSorted((a, b) =>
+    compare(a.url, b.url),
+  );
   return (
     <>
       <p>
@@ -26,7 +28,7 @@ export function render(data) {
             .filter((post) => !post.data.draft)
             .map((post) => (
               <Fragment key={post.url}>
-                <dt>{fallback(post.data.title, post.url)}</dt>
+                <dt>{post.data.title || post.url}</dt>
                 <dd>
                   <a href={post.url}>{post.url}</a>
                 </dd>

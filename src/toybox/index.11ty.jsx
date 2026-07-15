@@ -4,7 +4,7 @@ import { h, Fragment } from "preact";
 import { markdownify } from "../../eleventy/filter.mjs";
 
 export function render(data) {
-  const posts = [...data.collections.toybox].reverse();
+  const posts = data.collections.toybox.toReversed();
   return (
     <>
       <p>

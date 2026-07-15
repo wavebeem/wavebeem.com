@@ -1,9 +1,9 @@
 /** @jsx h */
 import { h } from "preact";
-import { take, markdownify } from "../eleventy/filter.mjs";
+import { markdownify } from "../eleventy/filter.mjs";
 
 export function render(data) {
-  const top3 = take([...data.collections.posts].reverse(), 3);
+  const top3 = data.collections.posts.toReversed().slice(0, 3);
   return (
     <article class="page">
       <header>

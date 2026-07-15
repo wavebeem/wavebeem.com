@@ -4,7 +4,7 @@ import { h, Fragment } from "preact";
 import { FormattedDate } from "../_includes/components/date.jsx";
 
 export function render(data) {
-  const images = [...data.art.images].reverse();
+  const images = data.art.images.toReversed();
   return (
     <>
       <p>
