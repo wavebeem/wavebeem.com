@@ -1,4 +1,12 @@
-/* Edit these at https://oklch.com/#L,C,H (percent, 0-0.4ish, degrees) */
+/* Edit these at https://oklch.com/#L,C,H */
+/*
+ * WARNING: browsers disagree on how they clip out-of-gamut OKLCH colors down to
+ * sRGB when the display only support sRGB, so colors can look inconsistent
+ * across browsers. Probably better to switch to hex codes  with OKLCH.com links
+ * to edit the color as OKLCH and then copy it back here when done. Doesn't
+ * really feel worth setting up a system to inject OKLCH colors compiled from JS
+ * to hex codes just for one file worth of constants I don't change that much.
+ */
 :root {
   --color-white: #fff;
   --color-black: #111;
