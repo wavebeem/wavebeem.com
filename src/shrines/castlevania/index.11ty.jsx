@@ -1,0 +1,35 @@
+/** @jsx h */
+/** @jsxFrag Fragment */
+import { h, Fragment } from "preact";
+
+export function render() {
+  return (
+    <>
+      <h2>Under construction</h2>
+
+      <figure>
+        <img
+          src="./assets/cv-aos.webp"
+          alt=""
+          loading="eager"
+          width="800"
+          height="708"
+        />
+        <figcaption>Castlevania: Aria of Sorrow for Game Boy Advance</figcaption>
+      </figure>
+
+      <figure>
+        <img
+          src="./assets/what-is-a-man.webp"
+          alt=""
+          loading="lazy"
+          width="800"
+          height="600"
+        />
+        <figcaption>
+          Castlevania: Symphony of the Night for PlayStation
+        </figcaption>
+      </figure>
+    </>
+  );
+}

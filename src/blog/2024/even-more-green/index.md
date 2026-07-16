@@ -15,11 +15,11 @@ didn't have enough of it on the page. I broke free from my "no borders"
 approach, leaning on colorful green borders to lend some fun to the light mode,
 without making the backgrounds awkward.
 
-![](1-light-old.webp)
+![](assets/1-light-old.webp)
 
 **Before (Light #1)**
 
-![](1-light-new.webp)
+![](assets/1-light-new.webp)
 
 **After (Light #1)**
 
@@ -29,11 +29,11 @@ really look good on the gray background, but white text on the dark green looks
 great, I think. If you like green websites, definitely check out
 [Illuminesce](https://illuminesce.net/).
 
-![](1-dark-old.webp)
+![](assets/1-dark-old.webp)
 
 **Before (Dark #1)**
 
-![](1-dark-new.webp)
+![](assets/1-dark-new.webp)
 
 **After (Dark #1)**
 
@@ -42,11 +42,11 @@ great, I think. If you like green websites, definitely check out
 There is so much champagne on screen! It's cute, but it's _not me_. Bring the
 green!
 
-![](2-light-old.webp)
+![](assets/2-light-old.webp)
 
 **Before (Light #2)**
 
-![](2-light-new.webp)
+![](assets/2-light-new.webp)
 
 **After (Light #2)**
 
@@ -54,11 +54,11 @@ The dark gray is certainly less divisive than champagne, but it doesn't have any
 of my style _at all_. Infusing the page with a dark green background made me
 really like the dark theme again.
 
-![](2-dark-old.webp)
+![](assets/2-dark-old.webp)
 
 **Before (Dark #2)**
 
-![](2-dark-new.webp)
+![](assets/2-dark-new.webp)
 
 **After (Dark #2)**
 
@@ -68,19 +68,19 @@ This was the worst spot for me. Green is drowned out by so many other colors.
 It's all green now! Also, I think the borders make the areas of interest a bit
 more obvious on the page anyways.
 
-![](3-light-old.webp)
+![](assets/3-light-old.webp)
 
 **Before (Light #3)**
 
-![](3-light-new.webp)
+![](assets/3-light-new.webp)
 
 **After (Light #3)**
 
-![](3-dark-old.webp)
+![](assets/3-dark-old.webp)
 
 **Before (Dark #3)**
 
-![](3-dark-new.webp)
+![](assets/3-dark-new.webp)
 
 **After (Dark #3)**
 
@@ -98,6 +98,6 @@ My Firefox theme is nearly complete, though I never release those publicly
 anyway. I'm using my new Visual Studio Code theme _right now_, and plan to
 release that in the coming weeks. The fresh green is making me smile right now.
 
-![](vscode.webp)
+![](assets/vscode.webp)
 
 **WIP version of my VS Code theme**

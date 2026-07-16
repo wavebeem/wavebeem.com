@@ -10,7 +10,7 @@ Press the button for a bad time.
   <details
     style="
       height: 75vh;
-      background: url('dio-brando.webp') center center / cover;
+      background: url('assets/dio-brando.webp') center center / cover;
     "
   >
     <summary

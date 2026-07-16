@@ -1,0 +1,28 @@
+/** @jsx h */
+/** @jsxFrag Fragment */
+import { h, Fragment } from "preact";
+
+export function render() {
+  return (
+    <>
+      <p>
+        You can add my <a href="/feed.xml">RSS feed</a> to your favorite RSS
+        feed reader to stay up to date with my latest posts.
+      </p>
+
+      <p>
+        <a href="/feed.xml" class="button">
+          Get RSS feed
+        </a>
+      </p>
+
+      <p>
+        <small>
+          You can use a free RSS feed reader like Feedly, Inoreader, or
+          NewsBlur. Feed readers keep track of new posts from your favorite
+          websites.
+        </small>
+      </p>
+    </>
+  );
+}

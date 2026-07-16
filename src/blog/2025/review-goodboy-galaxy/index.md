@@ -16,14 +16,14 @@ be one of the nicest looking games on the GBA.
 My only complaint is that because everything is so large, the game feels very
 "zoomed in", which can make gameplay a bit tough.
 
-![](late-to-work.webp)
+![](assets/late-to-work.webp)
 
 ## Audio
 
 It's great! A bunch of different tunes to set the mood, and all the sound
 effects are nice too. No complaints here.
 
-![](fishing.webp)
+![](assets/fishing.webp)
 
 ## Gameplay
 
@@ -36,7 +36,7 @@ your first visit. Each time you have one of your three core powers removed
 but the wrapping levels combined with the built-in replaying meant I felt like I
 was always walking over the same areas.
 
-![](minesweeper.webp)
+![](assets/minesweeper.webp)
 
 The boss fights were not my thing. I've certainly fought many harder video game
 bosses, but these just felt claustrophobic and weirdly fast paced, for what is
@@ -47,7 +47,7 @@ terribly generous with checkpoints. Despite having a regenerating shield, this
 game has a lot of instant or near-instant deaths, which put a damper on my
 experience.
 
-![](precise.webp)
+![](assets/precise.webp)
 
 Also, there's a point where you have to have 10,000 gold in order to continue,
 which was a total slog. And a different point where you need to have 50 (well,
@@ -61,9 +61,9 @@ Everyone has the cutest dang lines, and I enjoyed the storyline completely. A
 plot point is befriending 50 of the 60-some inhabitants of the solar system, and
 I adored getting to meet every single one of them.
 
-![](capitalism.webp)
+![](assets/capitalism.webp)
 
-![](poverty.webp)
+![](assets/poverty.webp)
 
 ## Other
 
@@ -74,7 +74,7 @@ the NVIDIA Control Panel settings to fix that, but it's also not something I'd
 prefer to have to do. I ended up playing most of the game on a different 60 Hz
 monitor anyway.
 
-<video src="turbo.mp4" controls preload></video>
+<video src="assets/turbo.mp4" controls preload></video>
 
 **A clip of the game running at 6x speed because of the bug with high refresh
 rate monitors.**

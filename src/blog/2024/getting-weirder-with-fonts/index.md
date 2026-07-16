@@ -36,11 +36,11 @@ them to be easier to tell apart from each other.
 I specifically decided **not** to use my "cool" font for `<h3>` because the page
 felt "over-seasoned" with that much quirky font back to back lol.
 
-![](blog-before.webp)
+![](assets/blog-before.webp)
 
 **Before**
 
-![](blog-after.webp)
+![](assets/blog-after.webp)
 
 **After**
 
@@ -52,11 +52,11 @@ place in the middle of the page. Also, it's a color that decreases the contrast
 of the foreground, which I'm not in love with. I like dotted borders a lot, and
 this felt like a really natural place to use them again.
 
-![](info-before.webp)
+![](assets/info-before.webp)
 
 **Before**
 
-![](info-after.webp)
+![](assets/info-after.webp)
 
 **After**
 
@@ -66,11 +66,11 @@ The repeated bold headers with the same font felt completely overwhelming no
 this page. Switching up the `<h3>` font and using _italic_ text (well,
 _oblique_, really), helped break up the monotony.
 
-![](projects-before.webp)
+![](assets/projects-before.webp)
 
 **Before**
 
-![](projects-after.webp)
+![](assets/projects-after.webp)
 
 **After**
 
@@ -84,11 +84,11 @@ Apparently the `<summary>` element is seen as a button by default to assistive
 technologies, so the `<h3>` tags were being downgraded to plain text anyways...
 so for this one I just changed to using the `<i>` tag.
 
-![](uses-before.webp)
+![](assets/uses-before.webp)
 
 **Before**
 
-![](uses-after.webp)
+![](assets/uses-after.webp)
 
 **After**
 

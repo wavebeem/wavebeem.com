@@ -1,0 +1,288 @@
+/** @jsx h */
+/** @jsxFrag Fragment */
+import { h, Fragment } from "preact";
+
+export function render() {
+  return (
+    <>
+      <p>
+        A list of things I use and why I like them (or why I don't). Press
+        the name of any section to reveal my thoughts. Some sections have a
+        lot of detail, so I collapsed them all by default.
+      </p>
+
+      <h2>Hardware</h2>
+
+      <details>
+        <summary>
+          <i>Keychron Q11 keyboard</i>
+        </summary>
+        <p>
+          I use a{" "}
+          <a href="https://www.keychron.com/products/keychron-q11-qmk-custom-mechanical-keyboard">
+            Keychron Q11
+          </a>{" "}
+          75% size split mechanical keyboard.
+        </p>
+
+        <p>
+          The split form factor makes a notable difference in shoulder
+          tension based on my arm placement and the stress accumulated
+          through the day.
+        </p>
+
+        <p>
+          The board is hot swap and I'm currently using{" "}
+          <a href="https://www.keychron.com/products/kailh-box-v2-switch-set">
+            Kailh Box V2 Red
+          </a>{" "}
+          (40g) switches from Keychron. I'm a huge fan of linear switches for
+          both gaming and typing. The light weight is comfortable and
+          doesn't fatigue me after a long day.
+        </p>
+
+        <p>
+          For keycaps I have the long awaited DSA KeroKeroKeys, which are
+          extremely green and frog themed. The frog-child within me is
+          thrilled, and my green-loving side is quite happy as well. I only
+          use DSA profile keycaps because I think they're both more
+          comfortable to type on and easier to use effectively on a keyboard
+          with such a weird layout.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          <i>Pulsar X2 CrazyLight Medium wireless mouse</i>
+        </summary>
+        <p>
+          I'm a total freak about mice. I love buying and trying mice. The
+          first gaming mouse I loved was the Logitech MX518, and it's a far
+          cry from what I go for these days. I think my grip style would be
+          classified as "relaxed claw grip", because I don't like scrunching
+          up my index/middle fingers super hard near the top of the mouse,
+          but I also don't put a lot of my upper palm on the mouse. I
+          usually touch the mouse with the right side of my upper palm. I
+          like when the rear of the mouse fits snugly into the base of my
+          palm. I refuse to click the mouse wheel with my finger tip,
+          opting for hitting it with the pad of my index finger.
+        </p>
+
+        <p>
+          I find it really hard to decide which to keep using, and
+          unfortunately I go back and forth between mice a lot... But the
+          Pulsar X2 shape feels <em>really</em> good to me. I like the large
+          width, contour grooves on the buttons, and the exact curvature of
+          the rear. I can use this mouse in almost any hand position with
+          relative comfort. And I find that I do change my hand position a
+          lot, so ergonomic mice or overly small mice can feel restrictive.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          <i>LG 24G411A-B display</i>
+        </summary>
+        <p>
+          My computer display is the{" "}
+          <a href="https://www.lg.com/us/monitors/lg-24g411a-b-gaming-monitor">
+            LG 24G411A-B
+          </a>
+          . It's a 24" 1920&times;1080 120 Hz display. I got it on sale for
+          $120
+          and I'm (barely) using two of them. I like that 1920x1080 gives
+          games tons of headroom to hit the 120 Hz refresh rate. The quality
+          is of the screen feels totally fine to me. Sometimes I wish I had
+          a 27" 1440p screen for productivity, but I can't forget that the
+          DPI means everything would be 84% the size it is on my current
+          monitor. That's like 16px text turning into 13.5px.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          <i>Koss KPH40 headphones</i>
+        </summary>
+        <p>
+          I use the <a href="https://koss.com/products/kph40-utility">
+            Koss KPH40
+          </a>{" "}
+          as my all day headphone for video calls, music, and gaming. I have
+          modded them with the{" "}
+          <a href="https://www.yaxi.jp/onlineshop/">Yaxi Porta Pro earpads</a>
+          , and a 3.5mm audio cable extension.
+        </p>
+
+        <p>
+          They are lighter than a feather, never fall off, barely put any
+          pressure on my head, look nice, are durable, and sound pretty
+          good! And that's all for $40 USD on Amazon if you're lucky enough
+          to get them on sale. The replacement pads were $10 USD.
+        </p>
+
+        <p>
+          Given that they're on-ear headphones, I can hear myself perfectly
+          for work calls or voice chat while gaming. They sound incredible
+          for music! Maybe for gaming you could want a bit of high end for
+          clarity, but they're very easy listening. My only audio complaint
+          is that certain deeper frequencies when speaking can cause a
+          strange rattle in the driver that's distracting. I never notice it
+          in music though.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          <i>NZXT Player 3 (2023) gaming PC</i>
+        </summary>
+        <p>
+          A high end prebuilt gaming PC. I used to build my own PCs, but
+          these days it's not that much more money to get a good prebuilt,
+          and it saves a lot of time and headache if parts arrive
+          dead&mdash;or worse&mdash;crash your PC randomly.
+        </p>
+        <ul>
+          <li>Intel Core i7-13700KF</li>
+          <li>NVIDIA GeForce RTX 4070 Ti</li>
+          <li>32 GB RAM</li>
+        </ul>
+      </details>
+
+      <h2>Software</h2>
+
+      <details>
+        <summary>
+          <i>Visual Studio Code</i>
+        </summary>
+        <p>
+          I was an early adopter of VS Code, back when Atom was extremely
+          popular. Atom's slow performance and constantly breaking plugin
+          system made me eager to leave it. Before that I had used Sublime
+          Text, which is the gold standard for fast editors in my
+          experience. My main problem was the janky plugin system.
+        </p>
+        <p>
+          Before all of that I used vim for like 8 years, but I left it
+          behind the moment I saw multi-cursor editing in Sublime Text. I'm
+          happy to be living in the modern era now lol.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          <i>Firefox</i>
+        </summary>
+        <p>
+          Ever since Firefox showed up and introduced tabs and fast web
+          browsing, I've been a huge fan. There was a while where Firefox
+          was notably slower than Chrome, and I jumped ship. After they
+          fixed performance issues I came back. I love that they're privacy
+          focused and really care about users in a way that Google never
+          will.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          <i>Discord</i>
+        </summary>
+        <p>
+          I was an early adopter of Discord, just a few months after it was
+          released. Even back then, it was obvious that using Slack for
+          non-work chats was not a good idea. And for voice chat across
+          games, my gaming clan was using... Ventrilo, or "Vent" as everyone
+          called it. Vent had (has?) some awful Windows 95-ish interface,
+          though it did technically get the job done.
+        </p>
+        <p>
+          Discord is a lot less cool now that it's ubiquitous and
+          desperately trying to squeeze money out of its audience, but it
+          still seems like a relatively unchallenged tool for doing online
+          gaming with folks.
+        </p>
+        <p>
+          It also ends up being a de-facto global direct message app since
+          so many people have it, even if they're not gamers. Plus, the
+          emojis are super fun.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          <i>LINE</i>
+        </summary>
+        <p>
+          I started using this because of some friends who use it. Honestly
+          I kinda hate it, but it's cool that it has end-to-end encryption
+          (though it's not open source). I love the sticker packs and
+          privacy, but very few people have it, and it's kind of horrible on
+          desktop.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          <i>1Password</i>
+        </summary>
+        <p>
+          I was thrilled when 1Password went cross platform, finally
+          letting me ditch LastPass's awful user interface. I know some
+          people are upset with 1Password's rewrite as a universal app
+          using web tech rather than maintaining separate desktop apps for
+          each platform, but I think they've done a good job making it feel
+          relatively native and snappy.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          <i>Musicbee & Doppler</i>
+        </summary>
+        <p>
+          Honestly I don't really love either of these, but I need to use
+          them. I'm a sicko about buying and owning actual music files (like
+          the times of old! remember the iPod?). Sadly, music apps aren't
+          very popular any more with music streaming dominating the
+          landscape. Musicbee for Windows is obtuse but works well. Doppler
+          for Mac is pretty polished, and the only music player for Mac I
+          currently like.
+        </p>
+        <p>
+          I have a few requirements for music apps: gapless playback, and
+          the ability to browser albums by album artist. It doesn't sound
+          like much, but many players fail to have both of those features.
+          It seems a lot of players are very "playlist" and "file system"
+          focused. I usually just queue up a few albums I like, rather than
+          curating songs for a playlist I will use again.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          <i>Qobuz & Bandcamp</i>
+        </summary>
+        <p>
+          I love Bandcamp, but they don't usually have <q>big label</q>{" "}
+          music. I used to use iTunes or Amazon to purchase DRM free files
+          for those, but their UIs are increasingly shoving{" "}
+          <q>music streaming</q> down our throats. I recently discovered
+          Qobuz, which seems to do a good job of just letting you buy DRM
+          free music files in peace.
+        </p>
+      </details>
+
+      <details>
+        <summary>
+          <i>Aseprite</i>
+        </summary>
+        <p>
+          Extremely cute, snappy, and functional app for making pixel art.
+          It's so fast and easy that I actually use it for general image
+          editing too, as long as the files aren't too large. I also have
+          Affinity Designer and Affinity Photo, but I rarely use either of
+          them.
+        </p>
+      </details>
+    </>
+  );
+}

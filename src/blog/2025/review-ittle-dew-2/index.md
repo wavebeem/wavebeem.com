@@ -16,7 +16,7 @@ technically hard to pull off. I think accidentally performed a glitch to solve
 one of the puzzles (pushing a triangular block straight instead of diagonally).
 
 <figure>
-  <img src="./graphics.vg.webp" alt="" width="1280" height="720" />
+  <img src="./assets/graphics.vg.webp" alt="" width="1280" height="720" />
 </figure>
 
 I'm pretty sure I had to solve a puzzle using an advanced magic wand technique
@@ -30,7 +30,7 @@ timing-heavy in each of their first rooms, and I had already soured on the game
 a bit by the time I unlocked them.
 
 <figure>
-  <img src="./raft.vg.webp" alt="" width="1280" height="720" />
+  <img src="./assets/raft.vg.webp" alt="" width="1280" height="720" />
 </figure>
 
 ## Combat
@@ -42,7 +42,7 @@ that. While the game doesn't punish you especially badly for combat failure
 have to redo the entire fight you lost.
 
 <figure>
-  <img src="./mjau.vg.webp" alt="" width="1280" height="720" />
+  <img src="./assets/mjau.vg.webp" alt="" width="1280" height="720" />
 </figure>
 
 Also, it's possible and quite easy to accidentally walk out a door mid-combat
@@ -65,7 +65,7 @@ The game is almost painfully self-aware. Mostly it made me chuckle rather than
 groan. It definitely feels like a game from 2016 with this writing style, to me.
 
 <figure>
-  <img src="./dialogue.vg.webp" alt="" width="1280" height="720" />
+  <img src="./assets/dialogue.vg.webp" alt="" width="1280" height="720" />
 </figure>
 
 ## Overall

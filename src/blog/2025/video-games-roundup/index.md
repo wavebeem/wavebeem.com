@@ -12,7 +12,7 @@ description: >-
 ### Destiny 2: The Final Shape (2024)
 
 <figure>
-  <img src="destiny2.webp" width="1280" height="720" />
+  <img src="assets/destiny2.webp" width="1280" height="720" />
 </figure>
 
 Goodness gracious, _Destiny 2_. The previous expansion, _Lightfall_, was a
@@ -60,7 +60,7 @@ experience that it's been.
 ### Shin Megami Tensei V: Vengeance (2024)
 
 <figure>
-  <img src="smtvv.webp" width="1280" height="720" />
+  <img src="assets/smtvv.webp" width="1280" height="720" />
 </figure>
 
 I really liked the original _Shin Megami Tensei V_, perhaps more than most. I
@@ -103,7 +103,7 @@ Apocalypse", "SMTV", and "SMTV: Vengeance").
 ### Balatro (2024)
 
 <figure>
-  <img src="balatro.webp" width="1280" height="720" />
+  <img src="assets/balatro.webp" width="1280" height="720" />
 </figure>
 
 Wow, this game is really fun. Incredible soundtrack. Simple concept. Base
@@ -115,7 +115,7 @@ thought it was great!).
 ### Cobalt Core (2023)
 
 <figure>
-  <img src="cobalt-core.webp" width="1280" height="720" />
+  <img src="assets/cobalt-core.webp" width="1280" height="720" />
 </figure>
 
 This game is super fun! I'm loving the pixel art, the music, the writing, the

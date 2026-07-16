@@ -21,7 +21,7 @@ resume, but it almost looks like technical documentation for an uninteresting
 library. This establishes my love for green and my desire to have something a
 little softer than stark white.
 
-![](site2013.webp)
+![](assets/site2013.webp)
 
 **Basic resume&mdash;with two background colors**
 
@@ -34,7 +34,7 @@ lot nicer, there's a photo to welcome you and humanize me, and I put contact
 info front and center. It's a bit dense with all the sections of text and
 relying just on heading sizes to differentiate everything, but I was trying!
 
-![](site2014.webp)
+![](assets/site2014.webp)
 
 **Bootstrap&mdash;It looks like a lot of other sites from this era**
 
@@ -51,7 +51,7 @@ time.
 
 The green has shifted even bluer&mdash;maybe too blue.
 
-![](site2015.webp)
+![](assets/site2015.webp)
 
 **Cards&mdash;It's all about cards now**
 
@@ -64,7 +64,7 @@ just so weirdly columnar.
 
 The green looks really nice in this image to me.
 
-![](site2016.webp)
+![](assets/site2016.webp)
 
 **Mobile first&mdash;a simple landing page**
 
@@ -77,7 +77,7 @@ with the "chat bubble" interface at the top and my fun pixel art self portrait.
 I like that I put more content on here and it's more conversational, but it just
 doesn't have enough color for me.
 
-![](site2017.webp)
+![](assets/site2017.webp)
 
 **Material design&mdash;and a pixel art self portrait**
 
@@ -87,7 +87,7 @@ Not a huge shift, honestly. I got over the Material Design nonsense and injected
 some color back into the page. The massive commissioned portrait is fun! And I'm
 sure I was proud of the speech bubble arrow at the time haha.
 
-![](site2018.webp)
+![](assets/site2018.webp)
 
 **More green&mdash;plus a commissioned portrait**
 
@@ -113,7 +113,7 @@ to look blurry.
 
 So in many ways this feels more me, but like I lost something.
 
-![](site2020.webp)
+![](assets/site2020.webp)
 
 **[EN4](https://lospec.com/palette-list/en4) color palette&mdash;animated Dragon
 Quest Slime &amp; old timey parchment vibe**
@@ -128,7 +128,7 @@ background: this was the year I came out as nonbinary :3
 The colors are a bit more relaxed here, and it's (barely) using my
 [1bit-ui](https://1bit-ui.wavebeem.com) library.
 
-![](site2021.webp)
+![](assets/site2021.webp)
 
 **Cards again&mdash;Another self portrait**
 
@@ -140,7 +140,7 @@ I miss having a contrasting nav bar, and the
 drab with so few overall colors, but this one is finally oozing some
 personality.
 
-![](site2022.webp)
+![](assets/site2022.webp)
 
 **Mint green &amp; pink&mdash;plus it uses 2bit-ui**
 
@@ -155,7 +155,7 @@ stand out just a bit.
 
 My favorite part is the new logo font! It's Ultra Hi-Gloss by Froyo Tam.
 
-![](site2023.webp)
+![](assets/site2023.webp)
 
 **Dark purple and lime&mdash;and my matching hair!**
 
@@ -175,7 +175,7 @@ And my least favorite part is that it's just so _boxed in_. The concave cards
 look really cool, but having the whole page in a little container like that
 honestly feels suffocating!
 
-![](site2024a.webp)
+![](assets/site2024a.webp)
 
 **Dark green and lime&mdash;featuring my [candy.css](https://candy.wavebeem.com)
 library**
@@ -190,7 +190,7 @@ white mixed with gray was really killing the vibe for me.
 The nav bar kinda made me feel like the Wii UI just a little bit, which even
 though I never owned a Wii, is quite nostalgic to me.
 
-![](site2024b.webp)
+![](assets/site2024b.webp)
 
 **Windows Vista meets Nintendo Wii**
 
@@ -211,7 +211,7 @@ netpet itself as a fun decoration to the site.
 
 I'm still really proud of this design, though I've tweaked it since.
 
-![](site2024c.webp)
+![](assets/site2024c.webp)
 
 **Lavender and lime&mdash;fully custom CSS again**
 
@@ -240,6 +240,6 @@ point, or maybe add a bit more depth to the page. I definitely don't want to go
 full [neumorphism](https://en.wikipedia.org/wiki/Neumorphism) or anything, but I
 love a good subtle shadow in a UI :)
 
-![](site2024d.webp)
+![](assets/site2024d.webp)
 
 **Summer theme**

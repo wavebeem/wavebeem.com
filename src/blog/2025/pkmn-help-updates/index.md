@@ -22,11 +22,11 @@ A few things bothered me about the defense screen:
 So I consolidated the 2-3 type pickers into a single type picker and increased
 the size of the type color area without changing the overall component size.
 
-![](./defense-old.webp)
+![](./assets/defense-old.webp)
 
 **Before: The defense screen is very tall**
 
-![](./defense-new.webp)
+![](./assets/defense-new.webp)
 
 **After: The defense screen fits better without scrolling, a huge boon for
 mobile users (~44.6% of my traffic)**
@@ -43,11 +43,11 @@ So I designed a custom component `<RadioGroup>` that wraps around native
 `<label>` and `<input type="radio">` with fancy CSS to make it look really
 inviting, somewhat like an iOS settings screen.
 
-![](./settings-old.webp)
+![](./assets/settings-old.webp)
 
 **Old: Most information is hidden off screen**
 
-![](./settings-new.webp)
+![](./assets/settings-new.webp)
 
 **New: Most information is shown on one screen without clicking**
 
@@ -68,15 +68,15 @@ navigate. I had to add a few subtle background colors, but I still kept the main
 page background as pure black. Ideally the type colors would be toned down
 somewhat in this mode too, but that's something I'll think about later, if ever.
 
-![](./theme-light.webp)
+![](./assets/theme-light.webp)
 
 **Light theme**
 
-![](./theme-dark.webp)
+![](./assets/theme-dark.webp)
 
 **Dark theme**
 
-![](./theme-night.webp)
+![](./assets/theme-night.webp)
 
 **Night theme**
 
@@ -89,7 +89,7 @@ Despite its smaller population, I actually get
 [more visitors](https://plausible.io/pkmn.help) from Vietnam than Japan or even
 China!
 
-![](./pokedex-vietnamese.webp)
+![](./assets/pokedex-vietnamese.webp)
 
 **Vietnamese translations on the Pokédex page**
 

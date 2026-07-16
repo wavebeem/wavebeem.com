@@ -1,0 +1,282 @@
+/** @jsx h */
+/** @jsxFrag Fragment */
+import { h, Fragment } from "preact";
+
+export function render() {
+  return (
+    <>
+      <p>When I'm not gaming, chances are I'm making something.</p>
+
+      <h2>My finest work</h2>
+
+      <figure>
+        <img
+          loading="eager"
+          src="./img/pkmn.webp"
+          alt=""
+          width="1280"
+          height="1024"
+        />
+        <figcaption>
+          <div>
+            <strong>
+              <a href="https://www.pkmn.help">
+                PKMN.help &ndash; Pokémon Type Calculator
+              </a>
+            </strong>
+          </div>
+          <div>A Pokémon web app with thousands of monthly users.</div>
+        </figcaption>
+      </figure>
+
+      <h2>Other projects</h2>
+
+      <figure>
+        <img
+          loading="lazy"
+          src="./img/candy.webp"
+          alt=""
+          width="1280"
+          height="1024"
+        />
+        <figcaption>
+          <div>
+            <strong>
+              <a href="https://candy.wavebeem.com">candy.css</a>
+            </strong>
+          </div>
+          <div>A CSS library inspired by glossy Web 2.0 aesthetics.</div>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          loading="lazy"
+          src="./img/color-combos.webp"
+          alt=""
+          width="1280"
+          height="1024"
+        />
+        <figcaption>
+          <div>
+            <strong>
+              <a href="https://color-combos.wavebeem.com">Color Combos</a>
+            </strong>
+          </div>
+          <div>
+            A site to check contrast levels for color combinations.
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          loading="lazy"
+          src="./img/vscode.webp"
+          alt=""
+          width="1311"
+          height="816"
+        />
+        <figcaption>
+          <div>
+            <strong>
+              <a href="https://marketplace.visualstudio.com/publishers/wavebeem">
+                VS Code themes
+              </a>
+            </strong>
+          </div>
+          <div>
+            I've created over a dozen themes to suit my tastes since 2017.
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          loading="lazy"
+          src="./img/netpet.webp"
+          alt=""
+          width="1280"
+          height="1024"
+        />
+        <figcaption>
+          <div>
+            <strong>
+              <a href="https://netpet.wavebeem.com/">netpet</a>
+            </strong>
+          </div>
+          <div>
+            A Tamagotchi-like virtual pet using 100% web platform
+            technologies and no build tools.
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          loading="lazy"
+          src="./img/jpeg.webp"
+          alt=""
+          width="1024"
+          height="1833"
+        />
+        <figcaption>
+          <div>
+            <strong>
+              <a href="https://jpeg.wavebeem.com/">the jpeg zone</a>
+            </strong>
+          </div>
+          <div>
+            A website for making <q>deep fried</q> memes using extreme JPEG
+            compression.
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          loading="lazy"
+          src="./img/1bit.webp"
+          alt=""
+          width="1280"
+          height="1024"
+        />
+        <figcaption>
+          <div>
+            <strong>
+              <a href="https://1bit-ui.wavebeem.com">1bit-ui</a>
+            </strong>
+          </div>
+          <div>A CSS library inspired by monochrome displays.</div>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          loading="lazy"
+          src="./img/2bit.webp"
+          alt=""
+          width="1280"
+          height="1024"
+        />
+        <figcaption>
+          <div>
+            <strong>
+              <a href="https://2bit-ui.wavebeem.com">2bit-ui</a>
+            </strong>
+          </div>
+          <div>A CSS library inspired by the Game Boy Color.</div>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          loading="lazy"
+          src="./img/kaomoji.webp"
+          alt=""
+          width="1280"
+          height="1024"
+        />
+        <figcaption>
+          <div>
+            <strong>
+              <a href="https://kaomoji.wavebeem.com">Kaomoji Picker</a>
+            </strong>
+          </div>
+          <div>
+            A site to quickly copy kaomoji to your clipboard{" "}
+            <span aria-hidden="true">ლ(╹◡╹ლ)</span>.
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          loading="lazy"
+          src="./img/bnb.webp"
+          alt=""
+          width="1280"
+          height="1024"
+        />
+        <figcaption>
+          <div>
+            <strong>
+              <a href="https://bread-n-butter.wavebeem.com/">
+                bread-n-butter
+              </a>
+            </strong>
+          </div>
+          <div>
+            A TypeScript parser combinators library, intended as a successor
+            to parsimmon.
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          loading="lazy"
+          src="./img/codehost.webp"
+          alt=""
+          width="1280"
+          height="1024"
+        />
+        <figcaption>
+          <div>
+            <strong>
+              <a href="https://codehost.wavebeem.com/">codehost</a>
+            </strong>
+          </div>
+          <div>
+            A code syntax highlighting tool for writing blog posts with code
+            samples on <a href="https://cohost.org">cohost</a>.
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          loading="lazy"
+          src="./img/show-colors.webp"
+          alt=""
+          width="1049"
+          height="672"
+        />
+        <figcaption>
+          <div>
+            <strong>
+              <a href="https://www.npmjs.com/package/show-colors">
+                show-colors
+              </a>
+            </strong>
+          </div>
+          <div>
+            Run <code>npx show-colors</code> to use this npm package to see
+            your terminal color scheme.
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure>
+        <img
+          loading="lazy"
+          src="./img/img-cat.webp"
+          alt=""
+          width="1049"
+          height="672"
+        />
+        <figcaption>
+          <div>
+            <strong>
+              <a href="https://www.npmjs.com/package/img-cat">img-cat</a>
+            </strong>
+          </div>
+          <div>
+            Run <code>npx img-cat</code> to use this npm package to show
+            pixel art in your terminal.
+          </div>
+        </figcaption>
+      </figure>
+    </>
+  );
+}
