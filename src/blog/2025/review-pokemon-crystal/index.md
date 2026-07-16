@@ -8,7 +8,25 @@ description: >-
   the dated gameplay left me wanting more.
 ---
 
-<link rel="stylesheet" href="./style.css" />
+<style>
+  :root {
+    --filter-gbc: saturate(80%) contrast(80%) brightness(120%) hue-rotate(-10deg)
+      brightness(95%);
+  }
+
+  img[src*=".gbc."] {
+    transition: 200ms filter;
+    outline: 0;
+  }
+
+  :where(:has(#gbc-filter:checked)) {
+    img[src*=".gbc."] {
+      &:where(:not(:hover)) {
+        filter: var(--filter-gbc);
+      }
+    }
+  }
+</style>
 
 <div class="card">
   <label>

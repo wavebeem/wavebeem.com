@@ -9,7 +9,7 @@ date: "2024-10-27"
 
 ## New style: fun with pastels
 
-![](light.webp)
+![](assets/light.webp)
 
 **Theme inspiration: playful, pastel, slime.**
 
@@ -24,7 +24,7 @@ color was very fun, but it didn't feel like _me_.
 
 ## Dark mode: chocolate factory
 
-![](dark.webp)
+![](assets/dark.webp)
 
 **Dark theme inspiration: chocolate, matcha.**
 
@@ -72,7 +72,7 @@ on the _PP Agrandir_ page, and I've chosen _PP Object Sans_ for now.
 
 ## Improved blog post navigation
 
-![](blog.webp)
+![](assets/blog.webp)
 
 **My blog posts filtered by tags.**
 

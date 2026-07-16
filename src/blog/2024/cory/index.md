@@ -22,7 +22,7 @@ together. Eventually they joined a health care startup as the first two
 non-founder employees. They worked together for over 7 years. Cory was an
 amazing influence on Ash and a great friend.
 
-![](wizards.webp)
+![](assets/wizards.webp)
 
 **_Wizards_ by Ralph Bakshi, one of Cory's favorite movies.**
 
@@ -52,7 +52,7 @@ Crucible, Gambit, a few Raids, and a lot of Dungeons. Looking at Cory's account,
 he finished all 9 unique Dungeons in the game, for a total of 96 clears and 158
 hours of playtime.
 
-![](transcendent.webp)
+![](assets/transcendent.webp)
 
 **We spent countless hours playing together to become "Transcendent".**
 
@@ -70,7 +70,7 @@ spending time together as our fireteam trio just as much as I loved playing the
 game. It was truly my second place, and I was happy to be adventuring with Cory
 and shooting the breeze (and the aliens) often multiple times per week together.
 
-![](webfishing.webp)
+![](assets/webfishing.webp)
 
 **WEBFISHING was a nice relaxing break from Destiny.**
 
@@ -100,7 +100,7 @@ Unfortunately, it was delayed several months, and it only just came out. We...
 didn't get to play it with him. And we never will. I've only logged a few hours
 and I'm having a lot of fun, but I really wish Cory could try it.
 
-![](bigtime.webp)
+![](assets/bigtime.webp)
 
 **Cory's dog, Big Time**
 

@@ -1,6 +1,6 @@
 /** @jsx h */
 import { h } from "preact";
-import { markdownify } from "../eleventy/helpers.mjs";
+import { markdownify } from "#eleventy/helpers.mjs";
 
 export function render(data) {
   const top3 = data.collections.posts.toReversed().slice(0, 3);

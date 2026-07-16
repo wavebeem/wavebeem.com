@@ -28,11 +28,11 @@ Seeing this I think "this is a well established tool made by a small group of
 quirky people". It seems like a good fit for an individual web enthusiast like
 me.
 
-![](11ty-home.webp)
+![](assets/11ty-home.webp)
 
-![](11ty-home2.webp)
+![](assets/11ty-home2.webp)
 
-![](11ty-docs.webp)
+![](assets/11ty-docs.webp)
 
 **Eleventy's home page & documentation page**
 
@@ -49,11 +49,11 @@ underlined by a huge list of famous logos for some social proof.
 After that, we see a really cool hacker-esque set of code snippets about...
 building an e-commerce platform. I just want a blog with sprinkles lol.
 
-![](astro-home.webp)
+![](assets/astro-home.webp)
 
-![](astro-home2.webp)
+![](assets/astro-home2.webp)
 
-![](astro-docs.webp)
+![](assets/astro-docs.webp)
 
 **Astro's home page & documentation page**
 

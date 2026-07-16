@@ -1,7 +1,7 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { h, Fragment } from "preact";
-import { compare } from "../../eleventy/helpers.mjs";
+import { compare } from "#eleventy/helpers.mjs";
 
 export function render(data) {
   const sortedPosts = data.collections.all.toSorted((a, b) =>

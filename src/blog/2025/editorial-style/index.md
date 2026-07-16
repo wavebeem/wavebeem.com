@@ -10,7 +10,7 @@ description: >-
 
 ## Editorial style
 
-![](site2025a.webp)
+![](assets/site2025a.webp)
 
 **My new home page for 2025**
 
@@ -30,7 +30,7 @@ star of the page.
 
 ## Text
 
-![](01-headings.webp)
+![](assets/01-headings.webp)
 
 The body type is still set in
 [PP Object Sans](https://pangrampangram.com/products/object-sans) by Pangram
@@ -47,14 +47,14 @@ serif instead of sans-serif.
 
 ## Posts
 
-![](02-posts.webp)
+![](assets/02-posts.webp)
 
 My third level headings are more basic, using my body font in bold weight. Using
 the heading font here made it harder to follow the outline of the page. My
 current font sizes are 4rem for h1, 3rem for h2, 2rem for h3, and 1.25rem for
 body text (on a standard browser this will show as 64, 48, 32, and 20 pixels).
 
-![](08-hr.webp)
+![](assets/08-hr.webp)
 
 The horizontal rule was a struggle for me. I refused to use more complicated
 markup than `<hr>`, so I needed to do everything with at most three elements
@@ -64,7 +64,7 @@ printed decorations I've seen in the past (and the ease of typing it).
 
 ## Resume
 
-![](03-resume.webp)
+![](assets/03-resume.webp)
 
 This was the hardest page to design for sure. It needs to convey a lot of
 information, and it doesn't feel right to use prose instead of short text with
@@ -75,7 +75,7 @@ seems appropriate for the markup.
 
 ## Lists & links
 
-![](04-lists-1.webp)
+![](assets/04-lists-1.webp)
 
 Description lists don't get enough love! They can make more sense than headings
 in certain scenarios. Bold weight is enough to make the terms stand out well.
@@ -89,16 +89,16 @@ look nicer.
 This allowed me to make the underline thicker and a little bit lower, making it
 much easier to see. In the absence of "blue links", this really helped.
 
-![](05-lists-2.webp)
+![](assets/05-lists-2.webp)
 
 I don't remember who gave me the idea, but bolding the numbers in an `<ol>`
 helps balance the list the same way the filled in circles would in the `<ul>`.
 
 ## Details
 
-![](06-details-1.webp)
+![](assets/06-details-1.webp)
 
-![](07-details-2.webp)
+![](assets/07-details-2.webp)
 
 I was inspired by the simplicity of the expandable sections on
 [chef Mei Lin's website](https://www.meihlin.com/). A bottom border is enough to
@@ -108,7 +108,7 @@ that's where they're best used and understood.
 
 ## Code
 
-![](10-code.webp)
+![](assets/10-code.webp)
 
 Inline code is really hard to do well. I think using an alternate color is
 probably the best approach in most cases, but I set out to not do that here. I
@@ -130,7 +130,7 @@ code, opting for the consistency of a fully static theme.
 
 ## Buttons
 
-![](09-buttons.webp)
+![](assets/09-buttons.webp)
 
 I try not to use buttons much right now because they're really bold and
 attention grabbing. I may add an outlined button to my design if I start to use
@@ -144,26 +144,26 @@ matching color schemes and found some relevant images. Sadly, most video game
 screenshots are resized and mangled JPEGs online. I'll need to obtain my own
 high quality screenshots for some of these games.
 
-![](shrine-eo.webp)
+![](assets/shrine-eo.webp)
 
 **Etrian Odyssey**
 
-![](shrine-smt.webp)
+![](assets/shrine-smt.webp)
 
 **Shin Megami Tensei**
 
-![](shrine-dq.webp)
+![](assets/shrine-dq.webp)
 
 **Dragon Quest**
 
-![](shrine-pkmn.webp)
+![](assets/shrine-pkmn.webp)
 
 **Pokémon**
 
-![](shrine-cv.webp)
+![](assets/shrine-cv.webp)
 
 **Castlevania**
 
-![](shrine-metroid.webp)
+![](assets/shrine-metroid.webp)
 
 **Metroid**

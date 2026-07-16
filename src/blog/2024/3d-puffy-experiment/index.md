@@ -21,7 +21,7 @@ I can really feel things jumping off the page at me! Which also means that pages
 with fewer containers (e.g. blog posts) can feel weirdly flat compared to
 others.
 
-![](3d.webp)
+![](assets/3d.webp)
 
 **Experimental puffy 3D design**
 
@@ -30,7 +30,7 @@ appreciate that right now. The whole point of the [toybox](/toybox/) and
 [shrines](/shrines/) was to give me a place to mess around with CSS that
 _wasn't_ running the rest of my site lol.
 
-![](flat.webp)
+![](assets/flat.webp)
 
 **Current flat design**
 

@@ -1,6 +1,6 @@
 /** @jsx h */
 import { h } from "preact";
-import { formatDate } from "../../../eleventy/helpers.mjs";
+import { formatDate } from "#eleventy/helpers.mjs";
 
 export function Footer({ buildDate }) {
   return (

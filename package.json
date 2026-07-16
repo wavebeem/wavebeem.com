@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "description": "wavebeem.com",
   "type": "module",
+  "imports": {
+    "#eleventy/*": "./eleventy/*"
+  },
   "scripts": {
     "new-post": "node ./bin/new-post.mjs",
     "webp": "node ./bin/webp.mjs",

@@ -25,11 +25,11 @@ of every page.
 I'm trying to remind myself that _pages can link to other pages_, and that just
 giving people a massive list of information can be overwhelming.
 
-![](home-before.webp)
+![](assets/home-before.webp)
 
 **Home (Before)**
 
-![](home-after.webp)
+![](assets/home-after.webp)
 
 **Home (After)**
 
@@ -53,11 +53,11 @@ peoples site buttons. I think it unfairly privileges the few sites that actually
 have them. And I want to start organizing this page based on topics, rather than
 "has button" / "doesn't have button".
 
-![](links-before.webp)
+![](assets/links-before.webp)
 
 **Links (Before)**
 
-![](links-after.webp)
+![](assets/links-after.webp)
 
 **Links (After)**
 
@@ -72,11 +72,11 @@ This was just a long overdue update. Making the section headers clickable let me
 shorten the descriptions of each card. It looks prettier now due to the link
 treatments I'm using all over the site, and it should be easier to browse.
 
-![](projects-before.webp)
+![](assets/projects-before.webp)
 
 **Projects (Before)**
 
-![](projects-after.webp)
+![](assets/projects-after.webp)
 
 **Projects (After)**
 
