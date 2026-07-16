@@ -18,7 +18,6 @@ export function Head({
         content="width=device-width, initial-scale=1, viewport-fit=cover"
       />
       <meta name="theme-color" content="#111" />
-      <meta name="netlify-main-deploy-test" content="1" />
       <link
         rel="icon"
         href={`/favicon.svg?v=${contentHashes.faviconVector}`}
