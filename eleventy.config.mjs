@@ -1,8 +1,6 @@
 import "tsx/esm";
-import pluginRss from "@11ty/eleventy-plugin-rss";
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import markdownIt from "markdown-it";
-import * as filter from "./eleventy/filter.mjs";
 import { compileJsx, compileCss } from "./eleventy/compilers.mjs";
 
 export default function getConfig(eleventyConfig) {
@@ -37,10 +35,6 @@ export default function getConfig(eleventyConfig) {
 
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  eleventyConfig.setLiquidOptions({
-    strictFilters: true,
-  });
-
   eleventyConfig.addPassthroughCopy({ "src/static": "/" });
   eleventyConfig.addPassthroughCopy(
     "src/**/*.{png,jpg,jpeg,webp,svg,mp4,mjs}",
@@ -50,22 +44,6 @@ export default function getConfig(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/**/img/**/*");
 
   eleventyConfig.addWatchTarget("./src/_css/");
-
-  eleventyConfig.addPlugin(pluginRss);
-
-  eleventyConfig.addFilter("formatDate", filter.formatDate);
-  eleventyConfig.addFilter("toISOString", filter.toISOString);
-  // https://jeremias.codes/2025/02/markdown-filters-eleventy/
-  eleventyConfig.addFilter("markdownify", filter.markdownify);
-  eleventyConfig.addFilter("take", filter.take);
-  eleventyConfig.addFilter("groupByYear", filter.groupByYear);
-  eleventyConfig.addFilter("fallback", filter.fallback);
-  eleventyConfig.addFilter("sortBy", filter.sortBy);
-  eleventyConfig.addFilter("sortByLocale", filter.sortByLocale);
-  eleventyConfig.addFilter("sort", filter.sortAlpha);
-  eleventyConfig.addFilter("entries", filter.entries);
-  eleventyConfig.addFilter("debug", filter.debug);
-  eleventyConfig.addFilter("log", filter.log);
 
   // https://github.com/11ty/eleventy-base-blog/blob/main/eleventy.config.js
   return {

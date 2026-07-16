@@ -3,7 +3,7 @@ import { h } from "preact";
 import { LayoutBase } from "./layout-base.11ty.jsx";
 import { FormattedDate } from "./components/date.jsx";
 import { renderDocument } from "./render-document.mjs";
-import { markdownify } from "../../eleventy/filter.mjs";
+import { markdownify } from "../../eleventy/helpers.mjs";
 
 export function render(data) {
   const { title, description, draft, content, page } = data;

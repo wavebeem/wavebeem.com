@@ -1,7 +1,7 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { h, Fragment } from "preact";
-import { groupByYear, markdownify } from "../../eleventy/filter.mjs";
+import { groupByYear, markdownify } from "../../eleventy/helpers.mjs";
 
 export function render(data) {
   const postsByYear = groupByYear(data.collections.posts);

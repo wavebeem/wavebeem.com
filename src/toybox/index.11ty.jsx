@@ -1,7 +1,7 @@
 /** @jsx h */
 /** @jsxFrag Fragment */
 import { h, Fragment } from "preact";
-import { markdownify } from "../../eleventy/filter.mjs";
+import { markdownify } from "../../eleventy/helpers.mjs";
 
 export function render(data) {
   const posts = data.collections.toybox.toReversed();
