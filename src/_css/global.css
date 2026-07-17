@@ -15,7 +15,7 @@
   -webkit-font-smoothing: antialiased;
   /* Make sure scrollbars show on every page, for consistent nav bar size */
   overflow-y: scroll;
-  color-scheme: light;
+  color-scheme: light dark;
   scrollbar-color: var(--theme-scrollbar) transparent;
   font-synthesis: none;
   padding: 0;

@@ -17,7 +17,16 @@ export function Head({
         name="viewport"
         content="width=device-width, initial-scale=1, viewport-fit=cover"
       />
-      <meta name="theme-color" content="#111" />
+      <meta
+        name="theme-color"
+        content="#111"
+        media="(prefers-color-scheme: light)"
+      />
+      <meta
+        name="theme-color"
+        content="#b3c3b0"
+        media="(prefers-color-scheme: dark)"
+      />
       <link
         rel="icon"
         href={`/favicon.svg?v=${contentHashes.faviconVector}`}
