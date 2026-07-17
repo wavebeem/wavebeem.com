@@ -34,7 +34,7 @@
   }
 
   &:hover:where(:not(:active)) {
-    background-image: radial-gradient(var(--theme-hover-light-alt));
+    background-image: radial-gradient(var(--theme-hover-light));
   }
 
   .heading {
@@ -56,7 +56,7 @@
     .heading {
       /* text-decoration-line: underline; */
       text-decoration-thickness: inherit;
-      color: var(--color-black);
+      color: var(--theme-text);
     }
   }
 
@@ -85,7 +85,7 @@
     }
 
     &:hover:where(:not(:active)) {
-      background-image: radial-gradient(var(--theme-hover-light-alt));
+      background-image: radial-gradient(var(--theme-hover-light));
     }
   }
 

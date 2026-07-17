@@ -225,7 +225,7 @@ pre {
 }
 
 .spoiler:focus-visible {
-  outline: 3px solid var(--color-black);
+  outline: 3px solid var(--theme-text);
   outline-offset: 2px;
 }
 
@@ -296,7 +296,7 @@ main ul ::marker {
     }
 
     &:where(:hover:not(:active)) {
-      background-image: radial-gradient(var(--theme-hover-light-alt));
+      background-image: radial-gradient(var(--theme-hover-light));
     }
   }
 }

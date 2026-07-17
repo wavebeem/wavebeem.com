@@ -33,9 +33,9 @@ button:hover:where(:not(:active)) {
 
 .button:focus-visible,
 button:focus-visible {
-  outline: 3px solid var(--color-black);
+  outline: 3px solid var(--theme-text);
   outline-offset: 3px;
-  box-shadow: 0 0 0 3px var(--color-white);
+  box-shadow: 0 0 0 3px var(--theme-button-text);
 }
 
 :is(.button, button):where([data-size="small"]) {

@@ -107,7 +107,7 @@
 }
 
 .nav .hamburger {
-  border: 1px solid var(--theme-hover-dark);
+  border: 2px solid var(--theme-hover-dark);
   border-radius: var(--rounded-large);
   stroke: currentColor;
   aspect-ratio: 1;

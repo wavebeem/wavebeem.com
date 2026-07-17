@@ -9,9 +9,6 @@
 
   border-radius: var(--rounded-large);
   background: var(--theme-card);
-  /* border: var(--card-gap) solid var(--color-black); */
-  /* border: var(--card-gap) solid var(--theme-page-alt); */
-  /* border-color: var(--theme-shadow); */
   border-bottom-color: var(--theme-shadow);
   border-right-color: var(--theme-shadow);
   outline-offset: -1px;
@@ -34,7 +31,7 @@
     }
 
     li + li {
-      border-top: var(--card-gap) solid var(--theme-page-alt);
+      border-top: var(--card-gap) solid var(--theme-page-bg);
     }
   }
 
@@ -73,7 +70,7 @@
     }
 
     > dd + dt {
-      border-top: var(--card-gap) solid var(--theme-page-alt);
+      border-top: var(--card-gap) solid var(--theme-page-bg);
       padding-block: 16px 0;
     }
 
@@ -100,11 +97,11 @@
           border-radius: 0;
 
           &:not(:nth-child(1), :nth-child(2)) {
-            border-top: var(--card-gap) solid var(--theme-page-alt);
+            border-top: var(--card-gap) solid var(--theme-page-bg);
           }
 
           &:nth-child(2n) {
-            border-left: var(--card-gap) solid var(--theme-page-alt);
+            border-left: var(--card-gap) solid var(--theme-page-bg);
           }
 
           &:nth-child(1) {

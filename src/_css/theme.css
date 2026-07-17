@@ -10,41 +10,48 @@
 :root {
   --color-white: #fff;
   --color-black: #111;
-  --color-green0: oklch(98% 8% 140);
-  --color-green1: oklch(94% 10% 140);
-  --color-green1b: oklch(92.5% 12.5% 140);
-  --color-green2: oklch(88% 15% 150);
-  --color-green3: oklch(82% 25% 150);
+  --color-mint0: oklch(98% 8% 140);
+  --color-mint1: oklch(94% 10% 140);
+  --color-mint1b: oklch(92.5% 12.5% 140);
+  --color-mint2: oklch(88% 15% 150);
+  --color-mint3: oklch(82% 25% 150);
+
+  --color-offwhite: oklch(80% 8% 140);
+  --color-offblack: oklch(20% 40% 140);
+  --color-moss0: oklch(38% 8% 140);
+  --color-moss1: oklch(32% 8% 140);
+  --color-moss1b: oklch(30% 8% 140);
+  --color-moss2: oklch(28% 8% 140);
+  --color-moss3: oklch(24% 8% 140);
 
   --theme-selection-bg: var(--color-black);
   --theme-selection-text: var(--color-white);
 
   --theme-header-bg: var(--color-black);
   --theme-header-text: var(--color-white);
+  --theme-button-bg: var(--color-black);
+  --theme-button-text: var(--color-white);
   --theme-text: var(--color-black);
-  --theme-infobox: var(--color-green2);
-  --theme-code: var(--color-green2);
-  --theme-shadow: var(--color-green3);
-  --theme-page-bg: var(--color-green1);
-  --theme-page-alt: var(--color-green1b);
+  --theme-infobox: var(--color-mint2);
+  --theme-code: var(--color-mint2);
+  --theme-shadow: var(--color-mint3);
+  --theme-page-bg: var(--color-mint1);
+  --theme-page-alt: var(--color-mint1b);
   --theme-page-text: var(--color-black);
   --theme-scrollbar: var(--color-black);
   --theme-bullet: var(--color-black);
-  --theme-accent: var(--color-green2);
-  --theme-accent2: var(--color-green3);
-  --theme-divider: var(--color-green2);
+  --theme-accent: var(--color-mint2);
+  --theme-accent2: var(--color-mint3);
+  --theme-divider: var(--color-mint2);
   --theme-border: var(--color-black);
-  --theme-number: var(--color-green3);
-  --theme-photo: var(--color-green3);
+  --theme-number: var(--color-mint3);
+  --theme-photo: var(--color-mint3);
   --theme-image: var(--color-white);
   --theme-box: var(--color-white);
-  --theme-button-bg: var(--color-black);
-  --theme-button-text: var(--color-white);
-  --theme-card: var(--color-green0);
+  --theme-card: var(--color-mint0);
   --theme-link: inherit;
-  --theme-hover-light: rgb(from var(--color-green3) r g b / 20%);
-  --theme-hover-light-alt: rgb(from var(--color-green3) r g b / 30%);
-  --theme-hover-dark: rgb(from var(--color-green3) r g b / 20%);
+  --theme-hover-light: rgb(from var(--color-mint3) r g b / 30%);
+  --theme-hover-dark: rgb(from var(--color-mint3) r g b / 20%);
 
   --syntax-background: var(--color-white);
   --syntax-border: var(--color-white);
@@ -54,4 +61,47 @@
   --syntax-property: #6600aa;
   --syntax-string: #cc0000;
   --syntax-punctuation: #884400;
+
+  @media (prefers-color-scheme: dark) {
+    --theme-selection-bg: var(--color-offwhite);
+    --theme-selection-text: var(--color-moss1);
+
+    --theme-header-bg: var(--color-offwhite);
+    --theme-header-text: var(--color-offblack);
+    --theme-button-bg: var(--color-offwhite);
+    --theme-button-text: var(--color-offblack);
+
+    --theme-text: var(--color-offwhite);
+    --theme-infobox: var(--color-moss0);
+    --theme-code: var(--color-moss0);
+    --theme-shadow: var(--color-moss3);
+    --theme-page-bg: var(--color-moss1);
+    --theme-page-alt: var(--color-moss1b);
+    --theme-page-text: var(--color-offwhite);
+    --theme-scrollbar: var(--color-offwhite);
+    --theme-bullet: var(--color-offwhite);
+    --theme-accent: var(--color-moss0);
+    --theme-accent2: var(--color-moss3);
+    --theme-divider: var(--color-moss0);
+    --theme-border: var(--color-offwhite);
+    --theme-number: var(--color-moss3);
+    /* Not moss3: the avatar photo has a lot of black line-art against a
+       transparent background, so its wrapper needs a bright backdrop
+       regardless of how dark the rest of the theme is. */
+    --theme-photo: var(--color-moss0);
+    --theme-image: var(--color-moss1);
+    --theme-box: var(--color-moss2);
+    --theme-card: var(--color-moss2);
+    --theme-hover-light: rgb(from var(--color-moss3) r g b / 10%);
+    --theme-hover-dark: rgb(from var(--color-moss3) r g b / 10%);
+
+    --syntax-background: var(--color-moss0);
+    --syntax-border: var(--color-moss0);
+    --syntax-text: var(--color-offwhite);
+    --syntax-keyword: var(--color-offwhite);
+    --syntax-comment: #5fd75f;
+    --syntax-property: #c792ea;
+    --syntax-string: #ff6b6b;
+    --syntax-punctuation: #e0a458;
+  }
 }
