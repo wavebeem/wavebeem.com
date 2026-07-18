@@ -88,6 +88,14 @@ export function render() {
         </dd>
 
         <dt>
+          <a href="https://lucide.dev/license">Lucide</a>
+        </dt>
+        <dd>
+          The header's theme, menu, and close icons are from this icon set, a
+          fork of Feather Icons.
+        </dd>
+
+        <dt>
           <a href="https://plausible.io/">Plausible Analytics</a>
         </dt>
         <dd>A simple and privacy focused analytics system.</dd>

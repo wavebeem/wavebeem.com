@@ -14,6 +14,7 @@ export function LayoutBase({
   origin,
   eleventy,
   page,
+  menu,
   children,
 }) {
   return (
@@ -26,11 +27,12 @@ export function LayoutBase({
         buildDate={buildDate}
         origin={origin}
         eleventy={eleventy}
+        page={page}
       />
       <body>
-        <Header page={page} />
+        <Header page={page} menu={menu} />
         <main class="main">{children}</main>
-        <Footer buildDate={buildDate} />
+        <Footer buildDate={buildDate} menu={menu} />
       </body>
     </html>
   );

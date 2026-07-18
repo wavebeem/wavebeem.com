@@ -24,84 +24,65 @@
   --color-moss2: oklch(28% 8% 140);
   --color-moss3: oklch(24% 8% 140);
 
-  --theme-selection-bg: var(--color-black);
-  --theme-selection-text: var(--color-white);
+  --theme-selection-bg: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-selection-text: light-dark(var(--color-white), var(--color-moss1));
 
-  --theme-header-bg: var(--color-black);
-  --theme-header-text: var(--color-white);
-  --theme-button-bg: var(--color-black);
-  --theme-button-text: var(--color-white);
-  --theme-text: var(--color-black);
-  --theme-infobox: var(--color-mint2);
-  --theme-code: var(--color-mint2);
-  --theme-shadow: var(--color-mint3);
-  --theme-page-bg: var(--color-mint1);
-  --theme-page-alt: var(--color-mint1b);
-  --theme-page-text: var(--color-black);
-  --theme-scrollbar: var(--color-black);
-  --theme-bullet: var(--color-black);
-  --theme-accent: var(--color-mint2);
-  --theme-accent2: var(--color-mint3);
-  --theme-divider: var(--color-mint2);
-  --theme-border: var(--color-black);
-  --theme-number: var(--color-mint3);
-  --theme-photo: var(--color-mint3);
-  --theme-image: var(--color-white);
-  --theme-box: var(--color-white);
-  --theme-card: var(--color-mint0);
+  --theme-header-bg: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-header-text: light-dark(var(--color-white), var(--color-offblack));
+  --theme-button-bg: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-button-text: light-dark(var(--color-white), var(--color-offblack));
+  --theme-text: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-infobox: light-dark(var(--color-mint2), var(--color-moss0));
+  --theme-code: light-dark(var(--color-mint2), var(--color-moss0));
+  --theme-shadow: light-dark(var(--color-mint3), var(--color-moss3));
+  --theme-page-bg: light-dark(var(--color-mint1), var(--color-moss1));
+  --theme-page-alt: light-dark(var(--color-mint1b), var(--color-moss1b));
+  --theme-page-text: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-scrollbar: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-bullet: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-accent: light-dark(var(--color-mint2), var(--color-moss0));
+  --theme-accent2: light-dark(var(--color-mint3), var(--color-moss3));
+  --theme-divider: light-dark(var(--color-mint2), var(--color-moss0));
+  --theme-border: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-number: light-dark(var(--color-mint3), var(--color-moss3));
+  /* Not moss3 for the dark side: the avatar photo has a lot of black
+     line-art against a transparent background, so its wrapper needs a
+     bright backdrop regardless of how dark the rest of the theme is. */
+  --theme-photo: light-dark(var(--color-mint3), var(--color-moss0));
+  --theme-image: light-dark(var(--color-white), var(--color-moss1));
+  --theme-box: light-dark(var(--color-white), var(--color-moss2));
+  --theme-card: light-dark(var(--color-mint0), var(--color-moss2));
   --theme-link: inherit;
-  --theme-hover-light: rgb(from var(--color-mint3) r g b / 30%);
-  --theme-hover-dark: rgb(from var(--color-mint3) r g b / 20%);
+  /* Intentionally the same in every theme (a printed-redaction-bar look),
+     not light-dark()'d like everything else above. */
+  --theme-redact-bg: var(--color-black);
+  --theme-redact-text: var(--color-white);
+  --theme-hover-light: light-dark(
+    rgb(from var(--color-mint3) r g b / 30%),
+    rgb(from var(--color-moss3) r g b / 10%)
+  );
+  --theme-hover-dark: light-dark(
+    rgb(from var(--color-mint3) r g b / 20%),
+    rgb(from var(--color-moss3) r g b / 10%)
+  );
 
-  --syntax-background: var(--color-white);
-  --syntax-border: var(--color-white);
-  --syntax-text: var(--color-black);
-  --syntax-keyword: var(--color-black);
-  --syntax-comment: #008800;
-  --syntax-property: #6600aa;
-  --syntax-string: #cc0000;
-  --syntax-punctuation: #884400;
+  --syntax-background: light-dark(var(--color-white), var(--color-moss0));
+  --syntax-border: light-dark(var(--color-white), var(--color-moss0));
+  --syntax-text: light-dark(var(--color-black), var(--color-offwhite));
+  --syntax-keyword: light-dark(var(--color-black), var(--color-offwhite));
+  --syntax-comment: light-dark(#008800, #5fd75f);
+  --syntax-property: light-dark(#6600aa, #c792ea);
+  --syntax-string: light-dark(#cc0000, #ff6b6b);
+  --syntax-punctuation: light-dark(#884400, #e0a458);
 
-  @media (prefers-color-scheme: dark) {
-    --theme-selection-bg: var(--color-offwhite);
-    --theme-selection-text: var(--color-moss1);
+  /* color-scheme defaults to "light dark" in global.css, so light-dark()
+     above follows the OS preference with zero JS. These two overrides are
+     the only thing the manual theme selector needs to touch. */
+  &[data-theme="light"] {
+    color-scheme: light;
+  }
 
-    --theme-header-bg: var(--color-offwhite);
-    --theme-header-text: var(--color-offblack);
-    --theme-button-bg: var(--color-offwhite);
-    --theme-button-text: var(--color-offblack);
-
-    --theme-text: var(--color-offwhite);
-    --theme-infobox: var(--color-moss0);
-    --theme-code: var(--color-moss0);
-    --theme-shadow: var(--color-moss3);
-    --theme-page-bg: var(--color-moss1);
-    --theme-page-alt: var(--color-moss1b);
-    --theme-page-text: var(--color-offwhite);
-    --theme-scrollbar: var(--color-offwhite);
-    --theme-bullet: var(--color-offwhite);
-    --theme-accent: var(--color-moss0);
-    --theme-accent2: var(--color-moss3);
-    --theme-divider: var(--color-moss0);
-    --theme-border: var(--color-offwhite);
-    --theme-number: var(--color-moss3);
-    /* Not moss3: the avatar photo has a lot of black line-art against a
-       transparent background, so its wrapper needs a bright backdrop
-       regardless of how dark the rest of the theme is. */
-    --theme-photo: var(--color-moss0);
-    --theme-image: var(--color-moss1);
-    --theme-box: var(--color-moss2);
-    --theme-card: var(--color-moss2);
-    --theme-hover-light: rgb(from var(--color-moss3) r g b / 10%);
-    --theme-hover-dark: rgb(from var(--color-moss3) r g b / 10%);
-
-    --syntax-background: var(--color-moss0);
-    --syntax-border: var(--color-moss0);
-    --syntax-text: var(--color-offwhite);
-    --syntax-keyword: var(--color-offwhite);
-    --syntax-comment: #5fd75f;
-    --syntax-property: #c792ea;
-    --syntax-string: #ff6b6b;
-    --syntax-punctuation: #e0a458;
+  &[data-theme="dark"] {
+    color-scheme: dark;
   }
 }

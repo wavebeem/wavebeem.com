@@ -9,10 +9,12 @@ export function Head({
   buildDate,
   origin,
   eleventy,
+  page,
 }) {
   return (
     <head>
       <meta charset="UTF-8" />
+      <script src={`/assets/theme-init.js?v=${contentHashes.themeInit}`}></script>
       <meta
         name="viewport"
         content="width=device-width, initial-scale=1, viewport-fit=cover"
@@ -38,10 +40,18 @@ export function Head({
         href={`/favicon.png?v=${contentHashes.favicon}`}
       />
       <link
+        rel="preload"
+        as="font"
+        type="font/woff2"
+        href="/fonts/PPMori-Regular.woff2"
+        crossorigin
+      />
+      <link
         rel="stylesheet"
         media="screen"
         href={`/base.css?t=${buildDate.number}`}
       />
+      {page.url !== "/menu/" && <link rel="prefetch" href="/menu/" />}
       <link
         rel="alternate"
         type="application/atom+xml"

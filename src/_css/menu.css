@@ -10,13 +10,13 @@
     text-decoration-line: none;
 
     display: grid;
-    padding: 16px;
+    padding: 8px 16px;
     line-height: 1.25;
 
     background: var(--theme-infobox);
     outline-offset: -2px;
 
-    font-size: var(--font-size-h3);
+    font-size: var(--font-size-base);
 
     border-radius: var(--rounded-large);
 

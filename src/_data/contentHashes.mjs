@@ -12,3 +12,4 @@ export const favicon = hash("src/static/favicon.png");
 export const faviconVector = hash("src/static/favicon.svg");
 export const ogImage = hash("src/static/og-image.png");
 export const globalMjs = hash("src/assets/global.mjs");
+export const themeInit = hash("src/assets/theme-init.js");

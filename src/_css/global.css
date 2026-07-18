@@ -209,7 +209,7 @@ pre {
 
 .spoiler {
   padding-inline: 0.25ch;
-  background-color: var(--color-black);
+  background-color: var(--theme-redact-bg);
   color: transparent;
   cursor: default;
 }
@@ -221,7 +221,7 @@ pre {
 }
 
 .spoiler:focus {
-  color: var(--color-white);
+  color: var(--theme-redact-text);
 }
 
 .spoiler:focus-visible {

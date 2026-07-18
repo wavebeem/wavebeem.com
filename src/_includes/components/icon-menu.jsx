@@ -8,12 +8,17 @@ export function IconMenu() {
       width="24"
       height="24"
       viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
       role="img"
     >
       <title>Menu</title>
-      <line x1="1" y1="4" x2="23" y2="4" stroke-width="2" stroke-linecap="round" />
-      <line x1="1" y1="12" x2="23" y2="12" stroke-width="2" stroke-linecap="round" />
-      <line x1="1" y1="20" x2="23" y2="20" stroke-width="2" stroke-linecap="round" />
+      <path d="M4 5h16" />
+      <path d="M4 12h16" />
+      <path d="M4 19h16" />
     </svg>
   );
 }
