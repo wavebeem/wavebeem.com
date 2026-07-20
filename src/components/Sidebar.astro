@@ -1,0 +1,80 @@
+---
+import MenuLinks from "./MenuLinks.astro";
+import Logo from "./Logo.astro";
+import ThemeSelect from "./ThemeSelect.astro";
+import { groups } from "@/data/menu";
+---
+
+<aside class="sidebar">
+  <a href="/" role="presentation" class="sidebar-top button">
+    <Logo />
+  </a>
+  <nav aria-label="Primary">
+    <MenuLinks groups={groups} />
+  </nav>
+  <ThemeSelect />
+</aside>
+
+<style>
+  .sidebar {
+    display: none;
+
+    @media (width >= 70rem) {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      box-sizing: border-box;
+      /* Sticky, not its own scroll region (see .page-shell). Capped to
+         viewport height with its own scrollbar so a short window can't
+         strand nav items below the fold. */
+      position: sticky;
+      top: 0;
+      max-height: 100vh;
+      overflow-y: auto;
+      /* overflow-y: auto implicitly makes overflow-x auto too (per
+         spec), which shows a scrollbar from sub-pixel flex rounding.
+         Never supposed to scroll sideways. */
+      overflow-x: hidden;
+      /* Without this, scrolling past the nav's edge chains into
+         scrolling <body> underneath it. */
+      overscroll-behavior: contain;
+      padding: 24px;
+      /* Aligns with the visible top of the page title's glyphs, not
+         its taller line box; not an arbitrary round number. */
+      padding-top: calc(24px + 2px);
+      padding-right: 8px;
+      /* No panel background/shadow; separated from content by space,
+         not a color block, so nav reads as part of the page canvas.
+         .sidebar-top below is the one exception. */
+      color: var(--theme-page-text);
+    }
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    /* MenuLinks renders each group as .menu.paragraph; cancel the
+       generic paragraph margin so gap above is the only spacing. */
+    :global(.paragraph) {
+      margin-block: 0;
+    }
+  }
+
+  .sidebar-top {
+    /* `button` class supplies color/shape; this is just extra padding
+       for the logo. Centered, not left-aligned like Header.astro's
+       copy, since there's no hamburger here to balance against. */
+    padding: 16px;
+
+    /* Logo.astro injects raw SVG via set:html, so scoped styles don't
+       reach it; needs :global(). SVG has only a viewBox, no intrinsic
+       height, so height must be set explicitly. fill is currentColor
+       already, so .button's color inherits for free. */
+    :global(svg) {
+      height: 28px;
+      width: auto;
+    }
+  }
+</style>

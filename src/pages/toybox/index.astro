@@ -1,0 +1,29 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
+import { compare } from "@/lib/compare";
+import { stripIndex } from "@/lib/stripIndex";
+
+const posts = (await getCollection("toybox")).toSorted(
+  (a, b) => -compare(a.data.date.valueOf(), b.data.date.valueOf()),
+);
+---
+
+<PageLayout title="Toybox">
+  <p>
+    A silly little collection of toys and jokes made specifically for the web.
+  </p>
+
+  <p>
+    <a class="button" href="/subscribe/">Subscribe</a>
+  </p>
+
+  {
+    posts.map((post) => (
+      <a class="infobox" href={`/toybox/${stripIndex(post.id)}/`}>
+        <span class="heading">{post.data.title}</span>
+        <span class="description">{post.data.description}</span>
+      </a>
+    ))
+  }
+</PageLayout>

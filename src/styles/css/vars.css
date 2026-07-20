@@ -1,0 +1,87 @@
+:root {
+  --font-fallback-main: system-ui, sans-serif;
+  --font-fallback-mono:
+    ui-monospace, "Cascadia Code", "SFMono-Regular", "Menlo", "Monaco",
+    "Consolas", "Liberation Mono", "Courier New", monospace;
+  --font-body: "PP Mori", var(--font-fallback-main);
+  --font-heading: var(--font-body);
+  --font-mono: "Iosevka Extended", var(--font-fallback-mono);
+
+  /* --shadow1: 0 4px 8px var(--theme-shadow); */
+  /* --shadow1: none; */
+  --shadow1: 0 4px 0 var(--theme-shadow);
+  --shadow2: 0 0 0 4px var(--theme-shadow);
+
+  --infobox-gap: 2px;
+  --card-gap: 2px;
+
+  /*
+   Fluid typography seems really cool, but it also kinda looks terrible unless
+   you're adding in `round()` to prevent fractional pixels during resizing,
+   which causes jumpy text. Maybe in the future I'll play with it more...
+
+   https://modern-fluid-typography.vercel.app/
+  */
+  --font-size-h1: 3rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-nav: 1.25rem;
+  --font-size-base: 1.25rem;
+  --font-size-small: 1rem;
+  --font-size-code: 1rem;
+
+  --cursor-zoom-in: url("/cursors/zoom-in.svg") 12 12, zoom-in;
+
+  --list-inset: 24px;
+
+  --rounded-xsmall: 2px;
+  --rounded-small: 4px;
+  --rounded-medium: 8px;
+  --rounded-large: 16px;
+  --rounded-xlarge: 32px;
+
+  --rounded-pill: 9999px;
+
+  --width-copy: 50rem;
+  --width-heading: 50rem;
+
+  /* Header's rendered height (measured), so the sticky sidebar can start
+     right below the sticky header instead of overlapping it. */
+  --header-height: 72px;
+
+  /* Persistent desktop sidebar's column width. Wide enough to fit the
+     logo + theme selector row (Sidebar.astro) side by side without
+     wrapping, on top of the nav links below. */
+  --sidebar-width: 22rem;
+
+  /* Past BaseLayout.astro's large-screen bailout (125rem), .page-shell
+     caps out at this width and centers instead of letting the sidebar
+     stay pinned to the true viewport edge while content drifts away
+     from it. Grid gains a third, empty column matching --sidebar-width
+     at that breakpoint too, mirroring the real sidebar on the other
+     side — without it, the content column (the true middle one) would
+     still sit off-center within this box, just less drastically than
+     before. Sidebar + reading column + phantom sidebar-width column +
+     a little breathing room — not an exact fit, just enough that the
+     content column isn't hugging the cap edge-to-edge. */
+  --page-shell-max-width: calc(
+    var(--sidebar-width) * 2 + var(--width-heading) + 4rem
+  );
+
+  --link-underline-offset: calc(1em / 8);
+  --link-underline-thickness: 2px;
+  --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 0px);
+
+  @media (resolution >= 1.5dppx) {
+    --link-underline-thickness: 1.5px;
+  }
+
+  @media (width <= 50rem) {
+    --font-size-h1: round(2rem, 1px);
+    --font-size-h2: round(1.5rem, 1px);
+    --font-size-h3: round(1.25rem, 1px);
+    --font-size-base: round(1.15rem, 1px);
+    --font-size-nav: round(1.15rem, 1px);
+    --font-size-small: round(1rem, 1px);
+  }
+}

@@ -1,0 +1,82 @@
+---
+import { groups } from "@/data/menu";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="footer" id="footer">
+  <nav class="footer-menu" aria-label="Footer">
+    {
+      groups.map((group) => (
+        <ul>
+          {group.map((item) => (
+            <li>
+              <a href={item.url}>{item.title}</a>
+            </li>
+          ))}
+        </ul>
+      ))
+    }
+  </nav>
+  <div>
+    <small>&copy; 2012&ndash;{year} wavebeem</small>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 1rem;
+    padding-top: 5rem;
+    padding-bottom: calc(1rem + env(safe-area-max-inset-bottom, 1rem));
+  }
+
+  .footer > * {
+    margin-inline: auto;
+    max-width: max-content;
+  }
+
+  .footer-menu {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 8px 32px;
+    max-width: var(--width-heading);
+    margin-bottom: 2.5rem;
+
+    @media (width < 40rem) {
+      grid-template-columns: repeat(3, auto);
+    }
+
+    @media (width <= 21rem) {
+      grid-template-columns: 1fr;
+    }
+
+    /* Redundant with the persistent Sidebar.astro at this width. */
+    @media (width >= 70rem) {
+      display: none;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      align-content: start;
+    }
+
+    a {
+      display: block;
+      color: inherit;
+      font-size: var(--font-size-small);
+      text-decoration-line: none;
+      padding: 4px;
+
+      &:hover {
+        text-decoration-line: underline;
+      }
+    }
+  }
+</style>

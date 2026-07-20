@@ -1,56 +1,30 @@
 {
   "name": "wavebeem.com",
   "private": true,
-  "version": "1.0.0",
-  "description": "wavebeem.com",
   "type": "module",
-  "imports": {
-    "#eleventy/*": "./eleventy/*"
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22.12.0"
   },
   "scripts": {
-    "new-post": "node ./bin/new-post.mjs",
-    "webp": "node ./bin/webp.mjs",
-    "favicon": "node ./bin/favicon.mjs",
-    "photo": "node ./bin/photo.mjs",
-    "dev": "npx netlify@22.2.2 dev",
-    "start": "cross-env TZ=UTC eleventy --serve --quiet --port=1312",
-    "start:lan": "MY_ELEVENTY_HOST=0.0.0.0 npm start",
-    "upgrade": "npm-check -u",
-    "test": "npm run typecheck",
-    "typecheck": "tsc",
-    "lint": "stylelint \"src/**/*.css\" --formatter unix",
-    "prebuild": "npm run test",
-    "build": "eleventy"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "ci": "npm run format:check && npm run check && npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wavebeem/wavebeem.com.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/wavebeem/wavebeem.com/issues"
-  },
-  "homepage": "https://wavebeem.com",
   "dependencies": {
-    "@11ty/eleventy": "3.1.6",
-    "@11ty/eleventy-plugin-syntaxhighlight": "5.0.2",
-    "feed": "^6.0.0",
-    "lightningcss": "^1.32.0",
-    "markdown-it": "14.3.0",
-    "preact": "10.29.7",
-    "preact-render-to-string": "6.7.0",
-    "tsx": "4.23.0",
-    "typescript": "7.0.2"
+    "astro": "^7.1.1",
+    "vite-plugin-static-copy": "^4.1.1"
   },
   "devDependencies": {
-    "@types/markdown-it": "^14.1.2",
-    "cross-env": "10.1.0",
-    "glob": "^11.0.0",
-    "npm-check": "^6.0.1",
-    "prettier": "^3.5.3",
-    "stylelint": "^16.10.0",
-    "stylelint-config-recommended": "^14.0.1"
+    "@astrojs/check": "^0.9.9",
+    "prettier": "^3.9.5",
+    "prettier-plugin-astro": "^0.14.1",
+    "sharp": "^0.35.3",
+    "typescript": "^6.0.3"
   }
 }

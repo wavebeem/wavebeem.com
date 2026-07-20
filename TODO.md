@@ -1,11 +1,25 @@
-- Try using Eleventy Image
+# TODO
 
-  - https://www.11ty.dev/docs/plugins/image/
+## Strip large files from git history
 
-  - https://www.11ty.dev/docs/deployment/
+Multi-MB PNGs/JPEGs (e.g. `zen1.png`, `blog/2024/curry/*.jpg`). Needs
+`git filter-repo`/BFG, own PR, force-push. Make a full git backup of the repo
+before doing this, and save to Dropbox.
 
-- Put the toybox toys in the regular blog hole?
+## Audit inline HTML in markdown content
 
-- markdown-it plugin to make images be links you can click to view it bigger
+19 files use bold-paragraph-as-caption instead of `<figure>`/`<figcaption>`. Go
+through case by case. Also, we might just keep that intentionally, or switch to
+italic. It's a huge pain writing the figure markup everywhere, and it doesn't
+format well. Keeping Markdown posts simple is kind of the whole point.
 
-- Encrypt webfonts directory
+## Clean up global.css
+
+538 lines. Dead commented-out selectors, audit `data-wallpaper` variants for
+actual usage.
+
+## Bring back the image lightbox
+
+Taking the user to a new page to see images larger is a bit irritating. We can
+probably get a lightbox that works well enough for desktop and mobile. Just not
+a huge priority lol.

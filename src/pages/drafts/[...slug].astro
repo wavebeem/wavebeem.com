@@ -1,0 +1,26 @@
+---
+import PostLayout from "@/layouts/PostLayout.astro";
+import { getCollection, render } from "astro:content";
+import { stripIndex } from "@/lib/stripIndex";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("drafts");
+  return posts.map((post) => ({
+    params: { slug: stripIndex(post.id) },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const slug = stripIndex(post.id);
+---
+
+<PostLayout
+  title={post.data.title ?? slug}
+  description={post.data.description}
+  date={post.data.date}
+  draft
+>
+  <Content />
+</PostLayout>

@@ -1,0 +1,15 @@
+---
+const dateFormatter = new Intl.DateTimeFormat("en-US", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+  timeZone: "America/Los_Angeles",
+});
+
+interface Props {
+  date: Date;
+}
+const { date } = Astro.props;
+---
+
+<time datetime={date.toISOString()}>{dateFormatter.format(date)}</time>

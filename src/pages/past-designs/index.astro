@@ -1,0 +1,254 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import { groupByYear } from "@/lib/groupByYear";
+
+const designs: {
+  year: string;
+  heading?: string;
+  src: string;
+  width: number;
+  height: number;
+  caption: string;
+  note?: string;
+}[] = [
+  {
+    year: "2026",
+    heading: "Deviant Material",
+    src: "site2026b",
+    width: 1280,
+    height: 2821,
+    caption: "Deviant Material (2026)",
+  },
+  {
+    year: "2026",
+    heading: "Teal & Blurple",
+    src: "site2026a",
+    width: 2560,
+    height: 6064,
+    caption: "Teal & Blurple (2026)",
+  },
+  {
+    year: "2025",
+    heading: "Peachy",
+    src: "site2025f",
+    width: 1280,
+    height: 2097,
+    caption: "Peachy (2025)",
+  },
+  {
+    year: "2025",
+    heading: "Juicy",
+    src: "site2025e",
+    width: 1280,
+    height: 2424,
+    caption: "Juicy (2025)",
+  },
+  {
+    year: "2025",
+    heading: "wavebeem2000",
+    src: "site2025d-light",
+    width: 1280,
+    height: 1402,
+    caption: "wavebeem2000 Light (2025)",
+  },
+  {
+    year: "2025",
+    src: "site2025d-dark",
+    width: 1280,
+    height: 1402,
+    caption: "wavebeem2000 Dark (2025)",
+  },
+  {
+    year: "2025",
+    heading: "Editorial 1.2",
+    src: "site2025c-light",
+    width: 1280,
+    height: 1422,
+    caption: "Editorial 1.2 Light (2025)",
+  },
+  {
+    year: "2025",
+    src: "site2025c-dark",
+    width: 1280,
+    height: 1422,
+    caption: "Editorial 1.2 Dark (2025)",
+  },
+  {
+    year: "2025",
+    heading: "Editorial 1.1",
+    src: "site2025b-light",
+    width: 1280,
+    height: 1908,
+    caption: "Editorial 1.1 Light (2025)",
+  },
+  {
+    year: "2025",
+    src: "site2025b-dark",
+    width: 1280,
+    height: 1908,
+    caption: "Editorial 1.1 Dark (2025)",
+  },
+  {
+    year: "2025",
+    heading: "Editorial",
+    src: "site2025a",
+    width: 2560,
+    height: 3732,
+    caption: "Editorial (2025)",
+  },
+  {
+    year: "2024",
+    heading: "Fresh Green",
+    src: "site2024f",
+    width: 2560,
+    height: 4184,
+    caption: "Fresh green (2024)",
+    note: "Slime mode was super fun, but I was just tired of not having enough green on the page. This design was inspired by the Sprite Vanilla Frost soda can design.",
+  },
+  {
+    year: "2024",
+    heading: "Slime Mode",
+    src: "site2024e",
+    width: 2560,
+    height: 4664,
+    caption: "Slime mode (2024)",
+    note: "This was the final form of slime mode, my attempt at making my website feel more fun. I still really like how this theme looks, but it's just not green enough for me.",
+  },
+  {
+    year: "2024",
+    heading: "Summer Style",
+    src: "site2024d",
+    width: 1280,
+    height: 1841,
+    caption: "Summer style (2024)",
+  },
+  {
+    year: "2024",
+    heading: "Lime & Lavender",
+    src: "site2024c",
+    width: 1280,
+    height: 1841,
+    caption: "Lime & lavender (2024)",
+  },
+  {
+    year: "2024",
+    heading: "Aero",
+    src: "site2024b",
+    width: 1280,
+    height: 1290,
+    caption: "Aero (2024)",
+  },
+  {
+    year: "2024",
+    heading: "Candy Green",
+    src: "site2024a",
+    width: 1280,
+    height: 1389,
+    caption: "Candy green (2024)",
+  },
+  {
+    year: "2023",
+    src: "site2023",
+    width: 1280,
+    height: 1396,
+    caption: "Cyber purple & lime (2023)",
+  },
+  {
+    year: "2022",
+    src: "site2022",
+    width: 1280,
+    height: 1369,
+    caption: "Green & pink (2022)",
+  },
+  {
+    year: "2021",
+    src: "site2021",
+    width: 1280,
+    height: 804,
+    caption: "1bit-ui (2021)",
+  },
+  {
+    year: "2020",
+    src: "site2020",
+    width: 1280,
+    height: 800,
+    caption: "Pixel art (2020)",
+  },
+  {
+    year: "2018",
+    src: "site2018",
+    width: 1280,
+    height: 1166,
+    caption: "Big art (2018)",
+  },
+  {
+    year: "2017",
+    src: "site2017",
+    width: 1280,
+    height: 1054,
+    caption: "Chat bubble (2017)",
+  },
+  {
+    year: "2016",
+    src: "site2016",
+    width: 1280,
+    height: 917,
+    caption: "Bussiness card (2016)",
+  },
+  {
+    year: "2015",
+    src: "site2015",
+    width: 1280,
+    height: 1437,
+    caption: "Cards (2015)",
+  },
+  {
+    year: "2014",
+    src: "site2014",
+    width: 1280,
+    height: 1437,
+    caption: "Super thin font (2014)",
+  },
+  {
+    year: "2013",
+    src: "site2013",
+    width: 1280,
+    height: 1230,
+    caption: "The original (2013)",
+  },
+];
+
+const designsByYear = groupByYear(designs, (design) => design.year);
+---
+
+<PageLayout title="Past designs">
+  <p>
+    I'm notorious for redesigning my website. Rather than be ashamed of this
+    tendency, I'm trying to embrace it. Welcome to my gallery of page designs. I
+    hope you enjoy looking at them as much as I made them.
+  </p>
+
+  {
+    designsByYear.map(([year, yearDesigns]) => (
+      <>
+        <h2>{year}</h2>
+        {yearDesigns.map((design) => (
+          <>
+            {design.heading && <h3>{design.heading}</h3>}
+            <figure>
+              <img
+                loading="lazy"
+                src={`/past-designs/assets/${design.src}.webp`}
+                alt=""
+                width={design.width}
+                height={design.height}
+              />
+              <figcaption>{design.caption}</figcaption>
+            </figure>
+            {design.note && <p>{design.note}</p>}
+          </>
+        ))}
+      </>
+    ))
+  }
+</PageLayout>

@@ -1,0 +1,112 @@
+/* Edit these at https://oklch.com/#L,C,H */
+/*
+ * WARNING: browsers disagree on how they clip out-of-gamut OKLCH colors down to
+ * sRGB when the display only support sRGB, so colors can look inconsistent
+ * across browsers. Probably better to switch to hex codes  with OKLCH.com links
+ * to edit the color as OKLCH and then copy it back here when done. Doesn't
+ * really feel worth setting up a system to inject OKLCH colors compiled from JS
+ * to hex codes just for one file worth of constants I don't change that much.
+ */
+:root {
+  --color-white: #fff;
+  --color-black: #111;
+  --color-mint0: oklch(98% 8% 140);
+  --color-mint1: oklch(94% 10% 140);
+  --color-mint1b: oklch(92.5% 12.5% 140);
+  --color-mint2: oklch(88% 15% 150);
+  --color-mint3: oklch(82% 25% 150);
+
+  --color-offwhite: oklch(80% 8% 140);
+  --color-offblack: oklch(20% 40% 140);
+  --color-moss0: oklch(38% 8% 140);
+  --color-moss1: oklch(32% 8% 140);
+  --color-moss1b: oklch(31% 8% 140);
+  --color-moss2: oklch(28% 8% 140);
+  --color-moss3: oklch(24% 8% 140);
+
+  --theme-selection-bg: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-selection-text: light-dark(var(--color-white), var(--color-moss1));
+
+  --theme-header-bg: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-header-text: light-dark(var(--color-white), var(--color-offblack));
+  /* Sidebar/nav-drawer panel color — intentionally asymmetric rather
+     than a plain light-dark() swap: light mode keeps the header bar's
+     black/white, but dark mode's equivalent (offwhite) reads as a
+     distracting wall of light against the rest of a dark page, so dark
+     mode instead gets --theme-page-alt's dark-mode value (just a touch
+     darker than --theme-page-bg, not a stark inverted panel). */
+  --theme-sidebar-bg: light-dark(var(--color-black), var(--color-moss1b));
+  --theme-sidebar-text: light-dark(var(--color-white), var(--color-offwhite));
+  --theme-header-card: light-dark(
+    rgb(from var(--color-mint1) r g b / 5%),
+    rgb(from var(--color-moss1) r g b / 10%)
+  );
+  --theme-header-hover: light-dark(
+    rgb(from var(--color-mint3) r g b / 10%),
+    rgb(from var(--color-moss3) r g b / 20%)
+  );
+  --theme-sidebar-card: light-dark(
+    rgb(from var(--color-mint1) r g b / 5%),
+    rgb(from var(--color-moss0) r g b / 50%)
+  );
+  --theme-sidebar-hover: light-dark(
+    rgb(from var(--color-mint3) r g b / 10%),
+    rgb(from var(--color-moss3) r g b / 20%)
+  );
+  --theme-button-bg: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-button-text: light-dark(var(--color-white), var(--color-offblack));
+  --theme-text: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-infobox: light-dark(var(--color-mint2), var(--color-moss0));
+  --theme-code: light-dark(var(--color-mint2), var(--color-moss0));
+  --theme-shadow: light-dark(var(--color-mint3), var(--color-moss3));
+  --theme-page-bg: light-dark(var(--color-mint1), var(--color-moss1));
+  --theme-page-alt: light-dark(var(--color-mint1b), var(--color-moss1b));
+  --theme-page-text: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-scrollbar: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-bullet: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-accent: light-dark(var(--color-mint2), var(--color-moss0));
+  --theme-accent2: light-dark(var(--color-mint3), var(--color-moss3));
+  --theme-divider: light-dark(var(--color-mint2), var(--color-moss0));
+  --theme-border: light-dark(var(--color-black), var(--color-offwhite));
+  --theme-number: light-dark(var(--color-mint3), var(--color-moss3));
+  /* Not moss3 for the dark side: the avatar photo has a lot of black
+     line-art against a transparent background, so its wrapper needs a
+     bright backdrop regardless of how dark the rest of the theme is. */
+  --theme-photo: light-dark(var(--color-mint3), var(--color-moss0));
+  --theme-image: light-dark(var(--color-white), var(--color-moss1));
+  --theme-box: light-dark(var(--color-white), var(--color-moss2));
+  --theme-card: light-dark(var(--color-mint0), var(--color-moss2));
+  --theme-link: inherit;
+  /* Intentionally the same in every theme (a printed-redaction-bar look),
+     not light-dark()'d like everything else above. */
+  --theme-redact-bg: var(--color-black);
+  --theme-redact-text: var(--color-white);
+  --theme-hover-light: light-dark(
+    rgb(from var(--color-mint3) r g b / 30%),
+    rgb(from var(--color-moss3) r g b / 10%)
+  );
+  --theme-hover-dark: light-dark(
+    rgb(from var(--color-mint3) r g b / 20%),
+    rgb(from var(--color-moss3) r g b / 10%)
+  );
+
+  --syntax-background: light-dark(var(--color-white), var(--color-moss0));
+  --syntax-border: light-dark(var(--color-white), var(--color-moss0));
+  --syntax-text: light-dark(var(--color-black), var(--color-offwhite));
+  --syntax-keyword: light-dark(var(--color-black), var(--color-offwhite));
+  --syntax-comment: light-dark(#008800, #5fd75f);
+  --syntax-property: light-dark(#6600aa, #c792ea);
+  --syntax-string: light-dark(#cc0000, #ff6b6b);
+  --syntax-punctuation: light-dark(#884400, #e0a458);
+
+  /* color-scheme defaults to "light dark" in global.css, so light-dark()
+     above follows the OS preference with zero JS. These two overrides are
+     the only thing the manual theme selector needs to touch. */
+  &[data-theme="light"] {
+    color-scheme: light;
+  }
+
+  &[data-theme="dark"] {
+    color-scheme: dark;
+  }
+}
