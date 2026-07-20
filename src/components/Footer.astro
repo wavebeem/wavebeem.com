@@ -50,6 +50,10 @@ const year = new Date().getFullYear();
       grid-template-columns: repeat(3, auto);
     }
 
+    @media (width <= 21rem) {
+      grid-template-columns: 1fr;
+    }
+
     /* Redundant with the persistent Sidebar.astro at this width. */
     @media (width >= 70rem) {
       display: none;
@@ -60,14 +64,15 @@ const year = new Date().getFullYear();
       margin: 0;
       padding: 0;
       display: grid;
-      gap: 4px;
       align-content: start;
     }
 
     a {
+      display: block;
       color: inherit;
       font-size: var(--font-size-small);
       text-decoration-line: none;
+      padding: 4px;
 
       &:hover {
         text-decoration-line: underline;
