@@ -1,15 +1,10 @@
 # TODO
 
-## Browserslist / lightningcss targets
-
-Decide a real browser range instead of empty `targets: {}`. Check if dropping
-`lightningcss` entirely still works.
-
 ## Strip large files from git history
 
-Multi-MB PNGs/JPEGs (e.g. `zen1.png`, `blog/2024/curry/*.jpg`). Needs `git
-filter-repo`/BFG, own PR, force-push. Make a full git backup of the repo before
-doing this, and save to Dropbox.
+Multi-MB PNGs/JPEGs (e.g. `zen1.png`, `blog/2024/curry/*.jpg`). Needs
+`git filter-repo`/BFG, own PR, force-push. Make a full git backup of the repo
+before doing this, and save to Dropbox.
 
 ## Audit inline HTML in markdown content
 

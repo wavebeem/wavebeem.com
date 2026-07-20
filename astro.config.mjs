@@ -38,17 +38,6 @@ export default defineConfig({
     service: passthroughImageService(),
   },
   vite: {
-    css: {
-      // Needed for oklch, light-dark, nesting, @starting-style, ::picker,
-      // rgb(from ...). See ~/Desktop/plan.md for the open browser-target
-      // question.
-      transformer: "lightningcss",
-      // Empty targets = no downleveling. Vite's default target list polyfills
-      // light-dark() incorrectly.
-      lightningcss: {
-        targets: {},
-      },
-    },
     plugins: [
       viteStaticCopy({
         targets: [

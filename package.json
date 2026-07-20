@@ -13,11 +13,11 @@
     "astro": "astro",
     "check": "astro check",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "ci": "npm run format:check && npm run check && npm run build"
   },
   "dependencies": {
     "astro": "^7.1.1",
-    "lightningcss": "^1.32.0",
     "vite-plugin-static-copy": "^4.1.1"
   },
   "devDependencies": {

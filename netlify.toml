@@ -4,7 +4,7 @@ targetPort = 4321
 
 [build]
 publish = "dist"
-command = "npm run format:check && npm run check && npm run build"
+command = "npm run ci"
 
 # CSP is handled per-page by Astro itself now (astro.config.mjs
 # security.csp, rendered as a <meta http-equiv> tag with per-page
