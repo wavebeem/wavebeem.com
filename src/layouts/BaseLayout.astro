@@ -17,11 +17,12 @@ const { title, description = "" } = Astro.props;
     <Head title={title} description={description} />
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <Header />
     <div class="page-shell">
       <Sidebar />
       <div class="content">
-        <main class="main">
+        <main class="main" id="main">
           <slot />
         </main>
         <Footer />
@@ -31,6 +32,28 @@ const { title, description = "" } = Astro.props;
 </html>
 
 <style>
+  .skip-link {
+    position: absolute;
+    z-index: 100;
+    padding: 16px 32px;
+    background: var(--theme-page-bg);
+    color: var(--theme-page-text);
+    border-radius: var(--rounded-large);
+    margin: 8px;
+    translate: 0% -100%;
+    text-decoration-line: none;
+    font-weight: bold;
+
+    &:focus {
+      translate: 0%;
+      outline-offset: -6px;
+    }
+
+    @media (width < 70rem) {
+      display: none;
+    }
+  }
+
   .page-shell {
     /* Fills body's min-height: 100vh so Footer can be pushed to the
        bottom on short pages. */

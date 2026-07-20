@@ -5,7 +5,7 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="footer" id="footer">
-  <div class="footer-menu">
+  <nav class="footer-menu" aria-label="Footer">
     {
       groups.map((group) => (
         <ul>
@@ -17,7 +17,7 @@ const year = new Date().getFullYear();
         </ul>
       ))
     }
-  </div>
+  </nav>
   <div>
     <small>&copy; 2012&ndash;{year} wavebeem</small>
   </div>
