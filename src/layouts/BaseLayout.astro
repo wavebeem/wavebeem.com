@@ -1,0 +1,159 @@
+---
+import "../styles/base.css";
+import Head from "@/components/Head.astro";
+import Header from "@/components/Header.astro";
+import Sidebar from "@/components/Sidebar.astro";
+import Footer from "@/components/Footer.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = "" } = Astro.props;
+const pathname = Astro.url.pathname;
+---
+
+<html lang="en">
+  <head>
+    <Head title={title} description={description} pathname={pathname} />
+  </head>
+  <body>
+    <Header pathname={pathname} />
+    <div class="page-shell">
+      <Sidebar />
+      <div class="content">
+        <main class="main">
+          <slot />
+        </main>
+        <Footer />
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .page-shell {
+    /* Fills body's min-height: 100vh so Footer can be pushed to the
+       bottom on short pages. */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    @media (width >= 70rem) {
+      /* <body> scrolls normally at every width; no independently
+         scrolling regions. Sidebar.astro stays in view via its own
+         sticky + overflow-y instead. */
+      display: grid;
+      grid-template-columns: var(--sidebar-width) 1fr;
+      /* Row fills the grid's full height, so .content can stretch
+         into it below. */
+      grid-template-rows: 1fr;
+      /* NOTE: no column-gap is currently set here. Sidebar.astro's own
+         comment still refers to "separation via .page-shell's
+         column-gap"; check whether that's an intentional removal or
+         a leftover. */
+      /* Without this, the sidebar's grid item stretches to match
+         .content's height, leaving no room for position: sticky to
+         move within; sticky needs the item shorter than its track. */
+      align-items: start;
+    }
+
+    /* Past this width, a viewport-pinned sidebar drifts too far from
+       the (re-centering) reading column. Cap and center the whole
+       shell instead. Safe since nothing here owns its own scrollbar;
+       the real page scrollbar stays at the window edge regardless. */
+    @media (width >= 100rem) {
+      /* Empty third column matching the sidebar's width, so .content
+         is centered in the box, not just within its own track (which
+         the unbalanced sidebar column would otherwise skew). */
+      grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
+      max-width: var(--page-shell-max-width);
+      margin-inline: auto;
+    }
+  }
+
+  .content {
+    /* Fills .page-shell's height so .main below can push Footer down. */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    @media (width >= 70rem) {
+      /* Overrides .page-shell's align-items: start just for this item. */
+      align-self: stretch;
+    }
+
+    /* article margin-inline: auto (page.css) centers within .content's
+       leftover width, which sits right of true center once a sidebar's
+       involved. Left-align instead so content reads anchored to the
+       sidebar. */
+    @media (width >= 70rem) {
+      :global(article:where(.page) > :is(header, section, footer)) {
+        margin-inline: 0;
+      }
+    }
+
+    /* Past this width, staying anchored to the sidebar just grows a
+       dead zone on the right; go back to centering. */
+    @media (width >= 125rem) {
+      :global(article:where(.page) > :is(header, section, footer)) {
+        margin-inline: auto;
+      }
+    }
+
+    /* Footer.astro centers its content unconditionally; force
+       left-align at desktop widths to match .page's content above.
+       It's just a copyright line, no reason to chase the reading
+       column. */
+    @media (width >= 70rem) {
+      :global(.footer > *) {
+        margin-inline: 0;
+      }
+    }
+  }
+
+  .main {
+    /* Grows to fill .content, pushing Footer to the bottom on short
+       pages. */
+    flex: 1;
+  }
+</style>
+
+<script>
+  // Add date information to document
+  {
+    const weekdays = [
+      "sunday",
+      "monday",
+      "tuesday",
+      "wednesday",
+      "thursday",
+      "friday",
+      "saturday",
+    ];
+    const date = new Date();
+    const root = document.documentElement;
+    root.dataset.year = String(date.getFullYear());
+    root.dataset.month = String(date.getMonth() + 1);
+    root.dataset.date = String(date.getDate());
+    root.dataset.day = weekdays[date.getDay()];
+  }
+
+  // Enable JS figure image viewer
+  {
+    document.documentElement.dataset.figureViewer = "";
+    addEventListener("click", (event) => {
+      if (!(event.target instanceof Element)) {
+        return;
+      }
+      const img = event.target.closest("img");
+      const parent = img?.closest("figure") || img?.closest("p");
+      const anchor = img?.closest("a");
+      if (!(img && parent && !anchor)) {
+        return;
+      }
+      event.preventDefault();
+      location.href = img.src;
+    });
+  }
+</script>

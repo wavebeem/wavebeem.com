@@ -1,0 +1,36 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import { images as artImages } from "@/data/art";
+
+const images = artImages.toReversed();
+---
+
+<PageLayout title="Art">
+  <p>
+    I've been drawing pixel art ever since I learned you could zoom in with
+    Microsoft Paint. I don't practice much, but I love working with pixels.
+  </p>
+
+  <div class="photo-grid">
+    {
+      images.map((image) => (
+        <figure>
+          <img
+            src={image.path}
+            loading="lazy"
+            alt=""
+            width="600"
+            height="600"
+          />
+          <figcaption>
+            <a href={image.path}>
+              <strong>{image.title}</strong>
+            </a>
+            <br />
+            {image.date}
+          </figcaption>
+        </figure>
+      ))
+    }
+  </div>
+</PageLayout>

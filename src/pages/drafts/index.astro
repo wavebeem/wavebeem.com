@@ -1,0 +1,22 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+import { getCollection } from "astro:content";
+import { stripIndex } from "@/lib/stripIndex";
+
+const posts = await getCollection("drafts");
+---
+
+<PageLayout title="Drafts">
+  <p>These posts aren't finished yet! Please don't share them.</p>
+
+  {
+    posts.map((post) => {
+      const slug = stripIndex(post.id);
+      return (
+        <a class="infobox" href={`/drafts/${slug}/`}>
+          {post.data.title ?? slug}
+        </a>
+      );
+    })
+  }
+</PageLayout>

@@ -1,0 +1,145 @@
+/* @font-face {
+  font-family: "PP Talisman";
+  src: url("/fonts/PPTalisman-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-display: swap;
+} */
+
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-Extrabold.woff2") format("woff2");
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-ExtraboldItalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: bold;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("/fonts/Merriweather-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("/fonts/Merriweather-Bold.woff2") format("woff2");
+  font-display: swap;
+  font-weight: bold;
+}
+
+:root {
+  --font-fallback-serif:
+    Charter, "Bitstream Charter", "Sitka Text", Cambria, serif;
+  --font-fallback-sans:
+    Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
+  --font-serif: "Merriweather", var(--font-fallback-serif);
+  --font-sans: "PP Mori", var(--font-fallback-sans);
+  --font-heading: "PP Mori", var(--font-sans);
+
+  font-family: var(--font-serif);
+  line-height: 1.35;
+  font-size: 12pt;
+}
+
+:any-link {
+  text-underline-offset: calc(1em / 6);
+  text-decoration-thickness: 1px;
+  color: inherit;
+}
+
+h1 {
+  font-size: 2.25rem;
+  margin: 0;
+  font-family: var(--font-serif);
+}
+
+h2 {
+  font-size: 1.5;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, currentColor, transparent 75%) 1;
+  padding-bottom: 2px;
+  margin-block: 1rem 0.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: normal;
+  font-style: italic;
+  margin-block: 1rem 0.5rem;
+}
+
+h3 > :any-link {
+}
+
+h3 + small {
+  margin-top: -0.5rem;
+  display: block;
+}
+
+h2,
+h3 {
+  font-family: var(--font-sans);
+  break-after: avoid;
+}
+
+ul {
+  padding-left: 16px;
+  list-style-type: disc;
+  break-inside: avoid;
+}
+
+p {
+  margin-block: 0.5rem;
+}
+
+li > p {
+  margin-block: 0.5rem;
+}
+
+.header,
+.footer {
+  display: none;
+}
+
+[data-media="screen"] {
+  display: none;
+}
+
+[data-media="print"] {
+  display: initial;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 0;
+}
+
+dt,
+dd {
+  display: inline;
+  margin: 0;
+}
+
+dd {
+  padding-left: 1rem;
+}

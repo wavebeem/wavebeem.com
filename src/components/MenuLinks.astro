@@ -1,0 +1,19 @@
+---
+import type { MenuItem } from "@/data/menu";
+
+interface Props {
+  groups: MenuItem[][];
+  drawer?: boolean;
+}
+const { groups, drawer = false } = Astro.props;
+---
+
+{
+  groups.map((group) => (
+    <section class:list={["menu", "paragraph", { "menu-drawer": drawer }]}>
+      {group.map((item) => (
+        <a href={item.url}>{item.title}</a>
+      ))}
+    </section>
+  ))
+}

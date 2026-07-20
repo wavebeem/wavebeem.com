@@ -1,0 +1,114 @@
+.menu {
+  display: grid;
+  gap: var(--infobox-gap);
+
+  background: var(--theme-page-bg);
+  color: inherit;
+
+  > :is(a, *) {
+    color: inherit;
+    text-decoration-line: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 8px 16px;
+    line-height: 1.25;
+
+    background: var(--theme-infobox);
+    outline-offset: -2px;
+
+    font-size: var(--font-size-base);
+
+    border-radius: var(--rounded-large);
+
+    /* Only links navigate you away — a button (e.g. the theme picker
+       trigger) doesn't, so it shouldn't get an arrow implying it does. */
+    &:is(a)::after {
+      content: "\2192";
+      flex-shrink: 0;
+    }
+
+    :where(&) + & {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:has(+ &) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:empty {
+      pointer-events: none;
+    }
+
+    &:where(:hover:not(:active)) {
+      background-image: radial-gradient(var(--theme-hover-light));
+
+      .heading {
+        text-decoration-line: underline;
+        text-decoration-thickness: inherit;
+        color: var(--theme-text);
+      }
+    }
+
+    .heading {
+      margin: 0;
+      font-weight: bold;
+      text-wrap: balance;
+      line-height: 1.25;
+      color: inherit;
+      text-underline-offset: var(--link-underline-offset);
+    }
+
+    .description {
+      margin: 0;
+      font-style: italic;
+      font-size: var(--font-size-small);
+    }
+  }
+
+  @media (width < 40rem) {
+    /* margin-inline: -16px; */
+
+    > * {
+      &:empty {
+        display: none;
+      }
+    }
+  }
+
+  @media (width >= 40rem) {
+    > * {
+      &:empty {
+        display: none;
+      }
+    }
+  }
+}
+
+/* Modifier for use alongside .menu (not standalone) when the menu sits on
+   a solid panel background rather than directly on --theme-page-bg.
+   Only used by the mobile nav drawer (Header.astro's .nav-menu) — the
+   desktop sidebar (Sidebar.astro) has no panel of its own anymore (see
+   its comment), so plain .menu already looks right there. The drawer
+   still needs one: it's a modal overlay covering the page behind it,
+   so unlike the sidebar it can't just go transparent and blend in —
+   text color is deliberately NOT set here though, it inherits from
+   .nav-menu. */
+.menu-drawer {
+  /* Transparent rather than repainting --theme-page-bg over the panel's
+     own background — this only shows through the small gaps between
+     pills. */
+  background: transparent;
+
+  > :is(a, *) {
+    background: var(--theme-header-card);
+
+    &:where(:hover:not(:active)) {
+      background-image: radial-gradient(var(--theme-header-hover));
+    }
+  }
+}

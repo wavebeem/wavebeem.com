@@ -1,0 +1,300 @@
+---
+import Logo from "./Logo.astro";
+import IconMenu from "./IconMenu.astro";
+import IconClose from "./IconClose.astro";
+import ThemeSelect from "./ThemeSelect.astro";
+import MenuLinks from "./MenuLinks.astro";
+import { groups } from "@/data/menu";
+
+interface Props {
+  pathname: string;
+}
+const { pathname } = Astro.props;
+const isMenuPage = pathname === "/menu/";
+---
+
+<header class="header">
+  <div class="header-content">
+    <span class="logo">
+      <a href="/" role="presentation">
+        <Logo />
+      </a>
+    </span>
+    <nav class="nav">
+      {
+        isMenuPage ? (
+          <a href="/" class="hamburger" data-action="back">
+            <IconClose />
+          </a>
+        ) : (
+          <a href="/menu/" class="hamburger" data-action="">
+            <IconMenu />
+          </a>
+        )
+      }
+    </nav>
+  </div>
+  <dialog class="nav-menu">
+    <form method="dialog" class="nav-menu-toolbar">
+      <button type="submit" class="nav-menu-close" aria-label="Close menu">
+        <IconClose />
+      </button>
+    </form>
+    <div class="nav-menu-content">
+      <MenuLinks drawer groups={groups} />
+      <div class="paragraph">
+        <ThemeSelect drawer />
+      </div>
+    </div>
+  </dialog>
+</header>
+
+<script>
+  const navMenu = document.querySelector<HTMLDialogElement>(".nav-menu")!;
+
+  for (const hamburger of document.querySelectorAll<HTMLElement>(
+    ".hamburger",
+  )) {
+    hamburger.addEventListener("click", (event) => {
+      if (hamburger.dataset.action === "back") {
+        const url = new URL(document.referrer, "https://fake.example");
+        if (url.hostname === location.hostname) {
+          history.back();
+          event.preventDefault();
+        }
+      } else {
+        navMenu.showModal();
+        event.preventDefault();
+      }
+    });
+  }
+
+  // Close the nav menu dialog when clicking its backdrop (native <dialog>
+  // doesn't do this on its own; Escape and the in-dialog close button
+  // already work natively)
+  navMenu.addEventListener("click", (event) => {
+    if (event.target === event.currentTarget) {
+      navMenu.close();
+    }
+  });
+</script>
+
+<style>
+  :global(html):has(.nav-menu[open]) {
+    overflow: hidden;
+  }
+
+  .header {
+    background: var(--theme-header-bg);
+    color: var(--theme-header-text);
+    box-shadow: var(--shadow1);
+
+    display: flex;
+    justify-content: center;
+    padding-inline: 16px;
+
+    /* At desktop width, logo and theme selector live in Sidebar.astro
+       instead, and the hamburger is hidden below; nothing left to
+       show. */
+    @media (width >= 70rem) {
+      display: none;
+    }
+  }
+
+  .header-content {
+    width: 100%;
+    max-width: var(--width-heading);
+    margin-inline: auto;
+
+    /* Left-aligned throughout (this bar only shows below 70rem); the
+       hamburger on the right already balances the logo without
+       centering it. */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+
+    box-sizing: border-box;
+
+    padding: 16px;
+  }
+
+  .logo {
+    display: grid;
+    align-items: center;
+  }
+
+  .logo a {
+    position: relative;
+    pointer-events: initial;
+    line-height: 1;
+    width: 100%;
+    height: 24px;
+    display: flex;
+    outline-offset: 4px;
+    border-radius: var(--rounded-small);
+
+    @media (width >= 40rem) {
+      height: 32px;
+    }
+  }
+
+  .logo a:hover:not(:focus-visible)::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    left: 0;
+    background: currentColor;
+    bottom: calc(
+      -1 *
+        (var(--link-underline-offset) + var(--link-underline-thickness-hover))
+    );
+    height: var(--link-underline-thickness-hover);
+  }
+
+  @media (width < 40rem) {
+    .header {
+      padding-top: 0px;
+    }
+
+    .header-content {
+      padding: 16px 0;
+    }
+  }
+
+  .nav {
+    fill: currentColor;
+    stroke: currentColor;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nav .hamburger {
+    border: 2px solid var(--theme-hover-dark);
+    border-radius: var(--rounded-large);
+    stroke: currentColor;
+    aspect-ratio: 1;
+    height: 40px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    @media (hover) {
+      &:hover {
+        border-color: transparent;
+        background: var(--theme-hover-dark);
+      }
+    }
+
+    &:focus-visible {
+      outline-color: currentColor;
+      outline-offset: -1px;
+    }
+
+    /* Sidebar.astro replaces this at desktop width. */
+    @media (width >= 70rem) {
+      display: none;
+    }
+  }
+
+  .nav-menu {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(360px, 100%);
+    height: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--theme-sidebar-bg);
+    color: var(--theme-sidebar-text);
+    max-width: none;
+    max-height: none;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    box-shadow:
+      0 0 16px rgb(from var(--theme-shadow) r g b / 40%),
+      0 0 32px rgb(from var(--theme-shadow) r g b / 20%);
+
+    translate: 100% 0;
+    transition:
+      translate 0.25s ease,
+      overlay 0.25s ease allow-discrete,
+      display 0.25s ease allow-discrete;
+
+    &[open] {
+      translate: 0 0;
+
+      @starting-style {
+        translate: 100% 0;
+      }
+    }
+  }
+
+  .nav-menu::backdrop {
+    background: rgb(from var(--theme-sidebar-bg) r g b / 50%);
+    opacity: 0;
+    transition:
+      opacity 0.25s ease,
+      overlay 0.25s ease allow-discrete,
+      display 0.25s ease allow-discrete;
+  }
+
+  .nav-menu[open]::backdrop {
+    opacity: 1;
+  }
+
+  @starting-style {
+    .nav-menu[open]::backdrop {
+      opacity: 0;
+    }
+  }
+
+  .nav-menu-content {
+    padding: 16px;
+  }
+
+  .nav-menu-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 16px 64px;
+    margin-bottom: -64px;
+    background: linear-gradient(var(--theme-sidebar-bg), transparent);
+    pointer-events: none;
+  }
+
+  .nav-menu-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: var(--rounded-large);
+    background: var(--theme-header-card);
+    color: inherit;
+    stroke: currentColor;
+    cursor: pointer;
+    pointer-events: auto;
+    box-shadow: none;
+
+    @media (hover) {
+      &:hover {
+        background-image: radial-gradient(var(--theme-header-hover));
+      }
+    }
+
+    &:focus-visible {
+      outline-color: currentColor;
+      outline-offset: -2px;
+    }
+  }
+</style>

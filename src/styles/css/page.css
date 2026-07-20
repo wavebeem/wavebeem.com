@@ -1,0 +1,178 @@
+article:where(.page) {
+  > header,
+  > section,
+  > footer {
+    max-width: var(--width-heading);
+    margin-inline: auto;
+    padding-inline: 1rem;
+
+    p,
+    ul,
+    ol,
+    dl,
+    figcaption,
+    details {
+      max-width: var(--width-copy);
+    }
+  }
+
+  > header {
+    > h1 {
+      margin-block: 2rem 1.5rem;
+    }
+
+    > small {
+      display: block;
+      margin-block: 0.5rem 1.5rem;
+    }
+  }
+
+  /* Hack for my bad habit of using Markdown images with bold text after them as captions */
+  p:has(img, video) + p:has(strong) {
+    margin-top: -16px;
+    line-height: 1.25;
+
+    strong {
+      font-weight: normal;
+      font-style: italic;
+      font-size: var(--font-size-small);
+    }
+  }
+
+  > :where(section, header, footer) {
+    video,
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      /* border-radius: var(--rounded-small); */
+    }
+
+    p:has(img, video) {
+      max-width: var(--width-heading);
+      display: flex;
+    }
+
+    hr {
+      border: 0;
+      margin-block: 1.5rem;
+      margin-inline: 0;
+      /* margin-inline: auto; */
+      color: inherit;
+      width: 100%;
+      max-width: var(--width-copy);
+      background: var(--theme-accent2);
+      height: 1px;
+
+      @media (width < 40rem) {
+        margin-inline: -16px;
+        width: calc(100% + 32px);
+      }
+
+      /* https://css-shape.com/zig-zag-line/ */
+
+      --a: 90deg; /* control the angle */
+      --s: 16px; /* size of the zig-zag */
+      --b: 4px; /* control the thickness */
+
+      height: calc(var(--b) + var(--s) / (2 * tan(var(--a) / 2)));
+      --_g: var(--s) repeat-x
+        conic-gradient(
+          from calc(var(--a) / -2) at bottom,
+          #0000,
+          #000 1deg calc(var(--a) - 1deg),
+          #0000 var(--a)
+        );
+      mask:
+        50% calc(-1 * var(--b)) / var(--_g) exclude,
+        50% / var(--_g);
+    }
+
+    :where(.paragraph),
+    blockquote,
+    ul,
+    ol,
+    dl,
+    p,
+    figure {
+      margin: 1.5rem 0;
+    }
+
+    ul ul {
+      margin-block: 0.5rem;
+    }
+
+    li > p {
+      margin-block: 0.5rem;
+    }
+
+    figure {
+      display: flex;
+      flex-direction: column;
+      max-width: max-content;
+      gap: 8px;
+
+      img,
+      video {
+        outline: 2px dotted var(--theme-border);
+        outline-offset: -2px;
+
+        &:where(:not([data-background="transparent"])) {
+          background-color: var(--theme-image);
+          /* background: var(--theme-image); */
+          /* I use a lot of lazy loaded images, so let's give them a bit of a
+          background so that things look less empty when they load in while you're
+          scrolling... */
+          /* box-shadow: var(--shadow1); */
+          border-radius: var(--rounded-large);
+        }
+      }
+    }
+
+    figcaption {
+      font-size: var(--font-size-small);
+      /* text-wrap: balance; */
+      text-wrap: pretty;
+      font-style: italic;
+      margin-top: -4px;
+
+      strong {
+        font-style: normal;
+      }
+    }
+
+    blockquote,
+    aside {
+      padding-inline: 1rem;
+      border-left: 4px solid transparent;
+      max-width: max-content;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 4px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -4px;
+        background: var(--theme-accent2);
+        border-radius: var(--rounded-pill);
+      }
+
+      h3 {
+        margin-top: 1.5rem;
+      }
+    }
+
+    blockquote {
+      font-style: italic;
+    }
+  }
+}
+
+:where(.page.post) {
+  p > img:where(:not([data-background="transparent"])) {
+    outline: 2px dotted var(--theme-border);
+    outline-offset: -2px;
+  }
+}
