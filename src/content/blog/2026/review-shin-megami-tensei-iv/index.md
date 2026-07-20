@@ -52,8 +52,8 @@ in right.
   <img
     src="./assets/mascot.webp"
     alt=""
-    width="400"
-    height="240"
+    width="1200"
+    height="720"
     style="width: 800px;"
     class="pixelated"
   />
@@ -64,8 +64,8 @@ in right.
   <img
     src="./assets/hee-ho.webp"
     alt=""
-    width="400"
-    height="240"
+    width="1200"
+    height="720"
     style="width: 800px;"
     class="pixelated"
   />
@@ -76,8 +76,8 @@ in right.
   <img
     src="./assets/mastema.webp"
     alt=""
-    width="400"
-    height="240"
+    width="1200"
+    height="720"
     style="width: 800px;"
     class="pixelated"
   />
@@ -88,8 +88,8 @@ in right.
   <img
     src="./assets/shinjuku.webp"
     alt=""
-    width="400"
-    height="240"
+    width="1200"
+    height="720"
     style="width: 800px;"
     class="pixelated"
   />

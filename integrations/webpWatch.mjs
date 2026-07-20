@@ -22,6 +22,9 @@ const folderSettings = {
   vg: { quality: 80, maxWidth: 1280, maxHeight: 720 },
   pxl: { lossless: true, maxWidth: 1280, maxHeight: 720 },
   gbc: { lossless: true, upscale: 3 },
+  "3ds": { lossless: true, upscale: 3 },
+  playdate: { lossless: true, upscale: 3 },
+  bigshot: { quality: 90, maxWidth: 1280 },
 };
 const jpegSettings = { quality: 90, maxWidth: 1280 };
 
@@ -30,7 +33,11 @@ const convertibleExtensions = new Set([".png", ".jpg", ".jpeg"]);
 
 // Paths (relative to project root) allowed to stay large after conversion. Add
 // an entry here if warnIfLarge flags one you've deliberately accepted.
-const sizeExceptions = new Set();
+const sizeExceptions = new Set([
+  "src/content/blog/2025/css-obfuscation-and-userstyles/assets/bigshot/zen3.webp",
+  "src/content/blog/2024/curry/assets/silly-face.webp",
+  "src/content/blog/2024/curry/assets/the-pose.webp",
+]);
 
 // A raw/ folder (anywhere in the path, any depth) is never touched. For
 // images that must stay in their original format, e.g. a post that shows

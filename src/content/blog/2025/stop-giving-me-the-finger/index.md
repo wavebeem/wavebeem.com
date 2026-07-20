@@ -143,8 +143,8 @@ System Preferences app for a concrete example.
   <img
     alt=""
     src="./assets/img/mac-system-preferences.webp"
-    width="827"
-    height="810"
+    width="1280"
+    height="1254"
   />
   <figcaption>macOS System Preferences (Sequoia 15.6.1)</figcaption>
 </figure>
@@ -153,8 +153,8 @@ System Preferences app for a concrete example.
   <img
     alt=""
     src="./assets/img/mac-system-preferences2.webp"
-    width="827"
-    height="810"
+    width="1280"
+    height="1254"
   />
   <figcaption>(1) text cursor; (2, 3) regular select background on hover</figcaption>
 </figure>
@@ -169,8 +169,8 @@ change on hover.
   <img
     alt=""
     src="./assets/img/google.webp"
-    width="2624"
-    height="1466"
+    width="1280"
+    height="715"
   />
   <figcaption>google.com</figcaption>
 </figure>
@@ -184,8 +184,8 @@ input) uses the pointer cursor (👆).
   <img
     alt=""
     src="./assets/img/google-links.webp"
-    width="2624"
-    height="1466"
+    width="1280"
+    height="715"
   />
   <figcaption>google.com: links</figcaption>
 </figure>
@@ -200,8 +200,8 @@ click + open in new tab, control-click, command-click, and long-press.
   <img
     alt=""
     src="./assets/img/google-buttons.webp"
-    width="2624"
-    height="1466"
+    width="1280"
+    height="715"
   />
   <figcaption>google.com: buttons</figcaption>
 </figure>
@@ -217,8 +217,8 @@ in a way that could be done with a link. Oops!
   <img
     alt=""
     src="./assets/img/google-failures.webp"
-    width="2624"
-    height="1466"
+    width="1280"
+    height="715"
   />
   <figcaption>google.com: failed links that act like buttons</figcaption>
 </figure>

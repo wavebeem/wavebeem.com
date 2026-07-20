@@ -108,10 +108,10 @@ dare._
   </summary>
   <p>
     <img
-      src="./assets/zen1.webp"
+      src="./assets/bigshot/zen1.webp"
       loading="lazy"
-      width="2624"
-      height="6500"
+      width="1280"
+      height="3171"
     />
   </p>
 </details>
@@ -122,10 +122,10 @@ dare._
   </summary>
   <p>
     <img
-      src="./assets/zen2.webp"
+      src="./assets/bigshot/zen2.webp"
       loading="lazy"
-      width="2624"
-      height="7118"
+      width="1280"
+      height="3472"
     />
   </p>
 </details>
@@ -136,10 +136,10 @@ dare._
   </summary>
   <p>
     <img
-      src="./assets/zen3.webp"
+      src="./assets/bigshot/zen3.webp"
       loading="lazy"
-      width="2624"
-      height="11516"
+      width="1280"
+      height="5618"
     />
   </p>
 </details>
