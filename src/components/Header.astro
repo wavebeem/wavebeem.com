@@ -5,12 +5,6 @@ import IconClose from "./IconClose.astro";
 import ThemeSelect from "./ThemeSelect.astro";
 import MenuLinks from "./MenuLinks.astro";
 import { groups } from "@/data/menu";
-
-interface Props {
-  pathname: string;
-}
-const { pathname } = Astro.props;
-const isMenuPage = pathname === "/menu/";
 ---
 
 <header class="header">
@@ -21,17 +15,9 @@ const isMenuPage = pathname === "/menu/";
       </a>
     </span>
     <nav class="nav">
-      {
-        isMenuPage ? (
-          <a href="/" class="hamburger" data-action="back">
-            <IconClose />
-          </a>
-        ) : (
-          <a href="/menu/" class="hamburger" data-action="">
-            <IconMenu />
-          </a>
-        )
-      }
+      <a href="/menu/" class="hamburger" data-action="">
+        <IconMenu />
+      </a>
     </nav>
   </div>
   <dialog class="nav-menu">
@@ -171,26 +157,33 @@ const isMenuPage = pathname === "/menu/";
   }
 
   .nav .hamburger {
-    border: 2px solid var(--theme-hover-dark);
-    border-radius: var(--rounded-large);
-    stroke: currentColor;
-    aspect-ratio: 1;
-    height: 40px;
-    box-sizing: border-box;
+    display: flex;
     justify-content: center;
     align-items: center;
-    display: flex;
+    flex-shrink: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 2px solid var(--theme-header-card);
+    border-radius: var(--rounded-large);
+    background: var(--theme-header-bg);
+    color: inherit;
+    stroke: currentColor;
+    cursor: pointer;
+    pointer-events: auto;
+    box-shadow: none;
 
     @media (hover) {
       &:hover {
         border-color: transparent;
-        background: var(--theme-hover-dark);
+        background-image: radial-gradient(var(--theme-header-card));
       }
     }
 
     &:focus-visible {
       outline-color: currentColor;
-      outline-offset: -1px;
+      outline-offset: -2px;
     }
 
     /* Sidebar.astro replaces this at desktop width. */
@@ -277,9 +270,9 @@ const isMenuPage = pathname === "/menu/";
     width: 40px;
     height: 40px;
     box-sizing: border-box;
-    border: none;
+    border: 2px solid var(--theme-sidebar-card);
     border-radius: var(--rounded-large);
-    background: var(--theme-header-card);
+    background: var(--theme-sidebar-bg);
     color: inherit;
     stroke: currentColor;
     cursor: pointer;
@@ -288,7 +281,8 @@ const isMenuPage = pathname === "/menu/";
 
     @media (hover) {
       &:hover {
-        background-image: radial-gradient(var(--theme-header-hover));
+        border-color: transparent;
+        background-image: radial-gradient(var(--theme-sidebar-card));
       }
     }
 

@@ -2,9 +2,8 @@
 interface Props {
   title: string;
   description: string;
-  pathname: string;
 }
-const { title, description, pathname } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <meta charset="UTF-8" />
@@ -28,7 +27,20 @@ const { title, description, pathname } = Astro.props;
   href="/fonts/PPMori-Regular.woff2"
   crossorigin
 />
-{pathname !== "/menu/" && <link rel="prefetch" href="/menu/" />}
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href="/fonts/PPMori-Black.woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  as="font"
+  type="font/woff2"
+  href="/fonts/PPMori-Extrabold.woff2"
+  crossorigin
+/>
 <meta name="og:title" content={title} />
 <meta name="og:description" content={description} />
 <meta property="og:type" content="website" />

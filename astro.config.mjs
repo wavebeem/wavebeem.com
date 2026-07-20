@@ -11,14 +11,20 @@ export default defineConfig({
     // (/theme-init.js, /resume/assets/print.css) without 'self'. Build/preview
     // only, astro dev doesn't apply CSP.
     csp: {
+      directives: ["object-src 'none'"],
       scriptDirective: {
-        resources: ["'self'"],
+        // 'unsafe-inline' is ignored by browsers that support the hashes
+        // Astro adds alongside it; it's only here as a fallback for older
+        // browsers that don't.
+        resources: ["'self'", "'unsafe-inline'"],
       },
       // unsafe-inline on style-src is ignored once Astro adds a hash there, so
-      // it's scoped to style-src-attr instead (never hashed).
+      // it's scoped to style-src-attr instead (never hashed). 'self' is scoped
+      // to style-src-elem since style-src-attr doesn't fall back to style-src
+      // once it's explicitly set, and 'self' isn't a valid style-src-attr value.
       styleDirective: {
         resources: [
-          "'self'",
+          { resource: "'self'", kind: "element" },
           { resource: "'unsafe-inline'", kind: "attribute" },
         ],
       },

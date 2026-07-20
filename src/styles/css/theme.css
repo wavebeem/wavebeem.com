@@ -20,7 +20,7 @@
   --color-offblack: oklch(20% 40% 140);
   --color-moss0: oklch(38% 8% 140);
   --color-moss1: oklch(32% 8% 140);
-  --color-moss1b: oklch(30% 8% 140);
+  --color-moss1b: oklch(31% 8% 140);
   --color-moss2: oklch(28% 8% 140);
   --color-moss3: oklch(24% 8% 140);
 
@@ -37,25 +37,19 @@
      darker than --theme-page-bg, not a stark inverted panel). */
   --theme-sidebar-bg: light-dark(var(--color-black), var(--color-moss1b));
   --theme-sidebar-text: light-dark(var(--color-white), var(--color-offwhite));
-  /* Nav-link pill background for use on top of --theme-header-bg (the
-     desktop sidebar) instead of --theme-page-bg — --theme-infobox pairs
-     with dark text and goes unreadable under --theme-header-text (white
-     in light mode). Reuses already-validated pairings rather than new
-     contrast math: moss1 is dark mode's own --theme-page-bg (already
-     proven against white/offwhite text), mint2 is light mode's own
-     --theme-infobox (already proven against dark text) — just swapped
-     to the opposite theme so each still lands on the color it was
-     tuned for. */
   --theme-header-card: light-dark(
+    rgb(from var(--color-mint1) r g b / 5%),
+    rgb(from var(--color-moss1) r g b / 10%)
+  );
+  --theme-header-hover: light-dark(
+    rgb(from var(--color-mint3) r g b / 10%),
+    rgb(from var(--color-moss3) r g b / 20%)
+  );
+  --theme-sidebar-card: light-dark(
     rgb(from var(--color-mint1) r g b / 5%),
     rgb(from var(--color-moss0) r g b / 50%)
   );
-  /* Hover overlay for --theme-header-card pills — the light-dark() order
-     is intentionally reversed from --theme-hover-light: moss1 (this
-     theme's header-card in light mode) is the same color dark mode uses
-     for --theme-page-bg, so it reuses dark mode's own hover tint
-     (moss3/10%), and vice versa for mint2 in dark mode. */
-  --theme-header-hover: light-dark(
+  --theme-sidebar-hover: light-dark(
     rgb(from var(--color-mint3) r g b / 10%),
     rgb(from var(--color-moss3) r g b / 20%)
   );

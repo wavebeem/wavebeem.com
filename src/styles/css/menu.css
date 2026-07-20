@@ -105,10 +105,10 @@
   background: transparent;
 
   > :is(a, *) {
-    background: var(--theme-header-card);
+    background: var(--theme-sidebar-card);
 
     &:where(:hover:not(:active)) {
-      background-image: radial-gradient(var(--theme-header-hover));
+      background-image: radial-gradient(var(--theme-sidebar-hover));
     }
   }
 }

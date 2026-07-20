@@ -194,11 +194,11 @@ const { drawer = false } = Astro.props;
   /* Same swap as .menu-drawer in menu.css; sits on --theme-sidebar-bg
      instead of the page background. */
   .theme-select-drawer .theme-select-trigger {
-    background: var(--theme-header-card);
+    background: var(--theme-sidebar-card);
 
     @media (hover) {
       &:hover {
-        background-image: radial-gradient(var(--theme-header-hover));
+        background-image: radial-gradient(var(--theme-sidebar-hover));
       }
     }
   }
@@ -208,26 +208,28 @@ const { drawer = false } = Astro.props;
        specificity, so display must stay scoped to [open], or this
        renders in-flow even when closed. */
     flex-direction: column;
-    gap: 8px;
+    gap: 2px;
     box-sizing: border-box;
     width: min(280px, calc(100vw - 32px));
-    padding: 16px;
+    padding: 8px;
     border: none;
-    border-radius: var(--rounded-large);
+    border-radius: calc(8px + var(--rounded-large));
+    /* border-radius: var(--rounded-xlarge); */
     background: var(--theme-page-bg);
     color: var(--theme-page-text);
+    box-shadow: 0 0 32px rgb(from var(--theme-text) r g b / 20%);
 
     &[open] {
       display: flex;
     }
 
     &::backdrop {
-      background: rgb(from var(--theme-text) r g b / 50%);
+      background: rgb(from var(--theme-text) r g b / 30%);
     }
   }
 
   .theme-select-option {
-    padding: 12px 16px;
+    padding: 8px 16px;
     border: none;
     border-radius: var(--rounded-large);
     background: var(--theme-infobox);
@@ -236,6 +238,17 @@ const { drawer = false } = Astro.props;
     text-align: center;
     cursor: pointer;
 
+    :where(&) + & {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:has(+ &) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+
     @media (hover) {
       &:hover {
         background-image: radial-gradient(var(--theme-hover-light));
@@ -243,20 +256,16 @@ const { drawer = false } = Astro.props;
     }
 
     &:focus-visible {
-      /* Not currentColor: --theme-button-text is high-chroma, fine as
-         text but garish as a ring. */
       outline-color: var(--theme-page-text);
       outline-offset: -2px;
+      z-index: 1;
     }
 
-    /* The current theme stands out with inverted, high-contrast colors
-       instead of a checkmark or radio dot. */
     &[aria-pressed="true"] {
       background: var(--theme-button-bg);
       color: var(--theme-button-text);
 
-      /* Outside, not inset: against this button's inverted fill, an
-         inset ring reads muddy instead of a clean halo. */
+      /* Standard text color is invisible against background, so offset it */
       &:focus-visible {
         outline-offset: 2px;
       }
