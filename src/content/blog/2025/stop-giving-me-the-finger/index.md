@@ -9,7 +9,7 @@ description: >-
 
 <script type="module" src="./assets/element.mjs"></script>
 
-## What's the Problem?
+## What's the problem?
 
 Changing the CSS
 [cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor) property is
@@ -37,7 +37,7 @@ them with Tab._
 The differences are subtle, but the right column of buttons inspires a lot more
 confidence to me than the top, despite no pointer cursor (👆).
 
-## When Should I Use the Pointer Cursor?
+## When should I use the pointer cursor?
 
 I think that the CSS
 [cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor) property
@@ -105,7 +105,7 @@ a relatively positioned "hitbox" inside the main link of your card.
 }
 ```
 
-### Progressive Enhancement
+### Progressive enhancement
 
 For progressively enhanced web pages, it can be desirable to have a link to a
 different page upgrade to a button that performs an on-page action.
@@ -117,7 +117,7 @@ listener... but you run the risk of confusing people with the slightly different
 keyboard behavior of links and buttons (buttons activate on Space OR Enter, but
 links only activate on Enter).
 
-### What About Links That Look Like Buttons?
+### What about links that look like buttons?
 
 They're still links. If it's an `<a href="...">`, just leave the default pointer
 cursor on it. This communicates that it can still be opened in a new tab, or
@@ -126,14 +126,14 @@ activate the link with Space, which only works on buttons. You could add a
 [keydown](https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event)
 listener, but I'm not sure if that's a best practice.
 
-### What About Buttons That Look Like Links?
+### What about buttons that look like links?
 
 Definitely don't put the cursor pointer on these! I think these sorts of
 elements should make their functionality obvious by placement or text content.
 Making this text blue or underlined can confuse people into treating it like a
 link.
 
-## Apple Doesn't Need Hover States
+## Apple doesn't need hover states
 
 macOS barely has any hover states at all, and the cursor rarely changes to
 anything besides the text I-beam cursor within apps. Let's look at the macOS
@@ -163,7 +163,7 @@ macOS barely uses any hover effects, including alternate cursors. In the System
 Preferences app, only text fields (1) and "ghost" selects (2, 3) have any visual
 change on hover.
 
-## Even Google Search Doesn't Do It Right
+## Even Google Search doesn't do it right
 
 <figure>
   <img
@@ -211,7 +211,7 @@ submitting your search query... well, except for the microphone icon (voice
 search) and the camera icon (image search)... those just take you to new pages
 in a way that could be done with a link. Oops!
 
-### Confusing Link-Buttons
+### Confusing link-buttons
 
 <figure>
   <img
@@ -241,7 +241,7 @@ The NFL link in the center of the page? It's inexplicably an `<a>` tag
 completely missing an `href`, despite that it seems to merely navigate the page
 on click.
 
-## Help Restore the Pointer Cursor to its Former Glory
+## Help restore the pointer cursor to its former glory
 
 Perhaps web design is too far gone for the pointer cursor to have a strong "this
 is a link" association, but I like to think we can still fix it. Join me in

@@ -49,7 +49,7 @@ description: >-
   <figcaption>Pokémon™ Crystal Version © 2001 GAME FREAK inc.</figcaption>
 </figure>
 
-## Allow Me to Gush for a Moment About the Game Boy Color
+## Allow me to gush for a moment about the Game Boy Color
 
 I think the Game Boy Color is the peak of video game graphics. I was a very
 impressionable age when this device was in its prime, but hear me out. The
@@ -67,7 +67,7 @@ actually present. I feel like there has to be some relation here to why film
 looks best 24 fps, even though that's barely enough fidelity for our brains to
 register something as movement.
 
-## Starting My Adventure
+## Starting my adventure
 
 <figure>
   <div class="gbc-frame">
@@ -94,7 +94,7 @@ appeared in the wild. Pretty early on I snagged a Geodude who I used for like
 half the game. I probably should've hung onto Hopplip or Bellsprout, because
 after passing them up I didn't stumble upon many Grass types for a while.
 
-## Density and Scale
+## Density and scale
 
 <figure>
   <div class="gbc-frame">
@@ -116,7 +116,7 @@ me to think _about a house_ rather than seeing a highly literal full 3D house on
 display. The imperfect colors around tile edges? A gorgeous compromise, in my
 mind, between memory usage and perfection.
 
-## Grinding, Balance, and Party Diversity
+## Grinding, balance, and party diversity
 
 <figure>
   <div class="gbc-frame">
@@ -266,7 +266,7 @@ action/stealth minigame most of the time. I genuinely had fun hunting down
 monsters in that game, and would catch repeats of the same guy just for fun. And
 you got XP for catching Pokémon there!
 
-## Two Regions in One Game?
+## Two regions in one game?
 
 <figure>
   <div class="gbc-frame">
@@ -285,7 +285,7 @@ like... 51 I think? a 20+ level gap is too challenging for a noob like me, even
 with me counter-picking every Pokémon specifically to take him down. And I
 wasn't about to grind to make it happen.
 
-## Did I Enjoy Myself?
+## Did I enjoy myself?
 
 <figure>
   <div class="gbc-frame">

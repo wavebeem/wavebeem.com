@@ -136,7 +136,7 @@ easily. Unfortunately, Babel ships with two different Symbols compilation modes,
 both with large caveats. Technically the "library" portions of ES6 are covered
 by the [core-js][7] project, but Babel encourages you to use it.
 
-## Global Symbols
+## Global symbols
 
 The first polyfill route for symbols is to put all symbol keys as properties on
 `Object.prototype`, meaning that a seemingly harmless loop like this actually

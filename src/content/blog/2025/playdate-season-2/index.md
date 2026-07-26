@@ -83,7 +83,7 @@ exploration, so I guess you could call it a cross between a point and click
 adventure game with a kinetic visual novel. I had a lot of fun with this one. I
 played it almost nonstop until completion.
 
-## Other Games
+## Other games
 
 ### Wheelsprung
 
@@ -165,7 +165,7 @@ marketing copy do the talking. It seems neat, but I don't care enough to bother.
 > Blippo+ is an 11-week, live-action, over-the-top television experience. New
 > episodes, programs, and messages arrive every Thursday at 10am PT.
 
-## Final Thoughts
+## Final thoughts
 
 I didn't care for Season 2 as much as Season 1, but I still had fun with it. I
 hope they continue making Playdate seasons, but maybe a bit shorter.

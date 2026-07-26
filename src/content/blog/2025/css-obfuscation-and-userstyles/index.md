@@ -7,13 +7,13 @@ description: >-
   userstyles are essentially over, and they're not likely to come back.
 ---
 
-## Why I'm Writing This
+## Why I'm writing this
 
 I was initially writing this post for the new defunct website
 [Cohost](https://cohost.org). This topic came up a _lot_ in my circles on that
 website, and I still want to publish my thoughts even though the site is gone.
 
-## What Are Userstyles
+## What are userstyles
 
 Userstyles are CSS stylesheets supplied by the user's web browser, rather than
 the website being visited. These stylesheets are applied after the website's
@@ -54,7 +54,7 @@ have a long history of making custom themes, and I'm extremely picky about UIs.
 But even the nicest markup still requires ongoing support from the userstyle
 author to respond to changes in the page structure.
 
-## Userstyles Range From Easy to Impossibly Hard to Maintain
+## Userstyles range from easy to impossibly hard to maintain
 
 In the early days of CSS, it was more common to see readable class names like
 `button` or `accordion` or `checkbox-label`. With modern technologies like
@@ -79,7 +79,7 @@ in a different file.
 I'm not a fan of CSS-in-JS for many reasons, but CSS Modules offers similar
 benefits without sacrificing performance.
 
-## It's Not Personal
+## It's not personal
 
 I'd wager that unless an obfuscated class name shows up only on a malicious UI
 element (e.g. an advertisement or a dialog gating access to a page), that
@@ -93,7 +93,7 @@ _heard_ of userstyles plugins like Stylus or Stylish ever. And the ones that
 have certainly aren't pushing for the sites they work on to be conducive to
 this.
 
-## CSS Zen Garden was 10 Billion Years Ago
+## CSS Zen Garden was 10 billion years ago
 
 If you weren't around for [CSS Zen Garden](https://csszengarden.com) in its
 moment, the idea was one static HTML page that users would submit fully custom
@@ -154,7 +154,7 @@ distinction---[something I've ranted about in the past](/blog/2023/the-web-is-an
 but it seems like web app development tools are increasingly being used even for
 simple relatively static websites these days.
 
-## And Then There's Tailwind
+## And then there's Tailwind
 
 Call me a hipster, but I was using [Tailwind](https://tailwindcss.com) before it
 was Tailwind. I used [Tachyons](https://tachyons.io) for years on a few of my

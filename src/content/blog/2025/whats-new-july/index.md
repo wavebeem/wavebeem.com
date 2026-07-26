@@ -6,7 +6,7 @@ description:
   Playdate Season Two, a new site theme, and health updates."
 ---
 
-## It's Been a Minute
+## It's been a minute
 
 Wow, look at all the things I want to write about. This is going to be a bit of
 a longer post since I haven't been blogging as much recently. Buckle up!
@@ -159,7 +159,7 @@ shingles and occasionally rolling my eyes at
   Trans Rep 101 so all the cis dudes playing this game understand what's going
   on, or whatever.
 
-## New Theme
+## New theme
 
 Yeah, here I go again. This isn't the first time I've redesigned my website to
 be more warm and orange colored in Summer. This time it's a lot more restrained
@@ -235,7 +235,7 @@ a new [Keita Takahashi](https://en.wikipedia.org/wiki/Keita_Takahashi) game. I
 didn't care for the time limits, but you can turn those off and have fun
 exploring.
 
-## Health Stuff
+## Health stuff
 
 I'm getting a colonoscopy and endoscopy tomorrow! Not my first rodeo, but it's
 gonna be a barrel of fun again I'm sure. My primary care doctor thinks I

@@ -88,7 +88,7 @@ of this month.
   <figcaption>Lebanne was cooler than I expected</figcaption>
 </figure>
 
-## New Site Design & Updates
+## New site design & updates
 
 <figure>
   <img src="./assets/home.webp" alt="" width="2560" height="5466" loading="lazy" />

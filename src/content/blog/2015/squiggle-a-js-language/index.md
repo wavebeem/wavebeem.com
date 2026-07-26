@@ -48,7 +48,7 @@ console.log("Hello, World!")
 “But that’s just JavaScript without a semicolon,” you think. “Are they just
 making another CoffeeScript?” No.
 
-## Factorial Example
+## Factorial example
 
 Let’s look at a more involved example:
 
