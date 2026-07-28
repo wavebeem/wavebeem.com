@@ -174,5 +174,7 @@ article:where(.page) {
   p > img:where(:not([data-background="transparent"])) {
     outline: 2px dotted var(--theme-border);
     outline-offset: -2px;
+    background-color: var(--theme-image);
+    border-radius: var(--rounded-large);
   }
 }
