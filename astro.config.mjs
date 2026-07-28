@@ -5,6 +5,7 @@ import webpWatch from "./integrations/webpWatch.mjs";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://www.wavebeem.com",
   integrations: [webpWatch()],
   security: {
     // Astro's CSP auto-hashing doesn't cover external same-origin files
