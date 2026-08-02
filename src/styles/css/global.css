@@ -368,7 +368,7 @@ article header small {
   vertical-align: middle;
 }
 
-:focus-visible {
+:where(:focus-visible) {
   outline: 3px solid currentColor;
   outline-offset: 2px;
   text-decoration-line: none;

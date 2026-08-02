@@ -66,7 +66,8 @@
     }
 
     :where(&:focus-visible) {
-      outline: none;
+      outline: 3px solid;
+      outline-offset: -3px;
     }
 
     @media (hover) {
@@ -99,13 +100,6 @@
 
   :where(&[open] summary)::after {
     border-image: conic-gradient(var(--c) 0 0) 1 / calc(50% - 1px) 2px;
-  }
-
-  &:has(> :where(summary:focus-visible)) {
-    box-shadow: none;
-    outline: 3px solid;
-    outline-offset: -3px;
-    /* border-radius: var(--rounded-small); */
   }
 
   :where(&[open] > summary) {
