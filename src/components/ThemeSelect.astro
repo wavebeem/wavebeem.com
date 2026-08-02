@@ -223,7 +223,13 @@ const { drawer = false } = Astro.props;
     }
 
     &::backdrop {
-      background: rgb(from var(--theme-text) r g b / 30%);
+      background: var(--theme-text);
+      opacity: 0.3;
+      transition: opacity 150ms;
+
+      @starting-style {
+        opacity: 0;
+      }
     }
   }
 
@@ -237,13 +243,13 @@ const { drawer = false } = Astro.props;
     text-align: center;
 
     :where(&) + & {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
+      border-top-left-radius: var(--rounded-small);
+      border-top-right-radius: var(--rounded-small);
     }
 
     &:has(+ &) {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
+      border-bottom-left-radius: var(--rounded-small);
+      border-bottom-right-radius: var(--rounded-small);
     }
 
     @media (hover) {

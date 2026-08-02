@@ -1,6 +1,5 @@
-/* Every selector here is wrapped in :where(), so this whole file has zero
-   specificity. Any toy can opt out with one plain class, see .crime-frame
-   and .details-reset in toybox.css. */
+/* Every selector here is wrapped in :where(), so this whole file has zero specificity. Any toy can
+   opt out with one plain class, see .crime-frame and .details-reset in toybox.css. */
 
 :where(main details) {
   display: grid;
@@ -10,18 +9,20 @@
   background: var(--theme-infobox);
   padding-inline: 16px;
 
-  border-radius: var(--rounded-large);
+  /* We can't use `border-radius: inherit` since the internal shadow DOM messes it up */
+  --details-radius-top: var(--rounded-large);
+  --details-radius-bottom: var(--rounded-large);
+  border-radius: var(--details-radius-top) var(--details-radius-top)
+    var(--details-radius-bottom) var(--details-radius-bottom);
 
   & + & {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    --details-radius-top: var(--rounded-small);
     margin-top: calc(var(--infobox-gap) - 1.5rem);
     /* margin-top: calc(-1.5rem); */
   }
 
   &:has(+ &) {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    --details-radius-bottom: var(--rounded-small);
   }
 
   :where(&:hover) {
@@ -41,7 +42,7 @@
   -webkit-user-select: none;
   user-select: none;
   cursor: default;
-  padding-block: 16px;
+  padding-block: 8px;
   padding-inline: 16px;
   margin-inline: -16px;
 }
@@ -53,17 +54,8 @@
     align-items: center;
     gap: 16px;
 
-    border-radius: var(--rounded-large);
-
-    & + & {
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-    }
-
-    &:has(+ &) {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-    }
+    border-radius: var(--details-radius-top) var(--details-radius-top)
+      var(--details-radius-bottom) var(--details-radius-bottom);
 
     :where(&:focus-visible) {
       outline: 3px solid;

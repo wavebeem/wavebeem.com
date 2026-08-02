@@ -20,13 +20,13 @@
   border-radius: var(--rounded-large);
 
   :where(&) + & {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    border-top-left-radius: var(--rounded-small);
+    border-top-right-radius: var(--rounded-small);
   }
 
   &:has(+ &) {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-bottom-left-radius: var(--rounded-small);
+    border-bottom-right-radius: var(--rounded-small);
   }
 
   & + & {
@@ -97,15 +97,15 @@
     }
     :where(&) + & {
       a {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0;
+        border-top-left-radius: var(--rounded-small);
+        border-top-right-radius: var(--rounded-small);
       }
     }
 
     &:has(+ &) {
       a {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+        border-bottom-left-radius: var(--rounded-small);
+        border-bottom-right-radius: var(--rounded-small);
       }
     }
   }
