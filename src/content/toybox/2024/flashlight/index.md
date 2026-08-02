@@ -10,7 +10,7 @@ date: "2024-01-24"
 ></script>
 
 <wavebeem-toybox-flashlight>
-  <button>Toggle flashlight mode</button>
+  <button class="button">Toggle flashlight mode</button>
 </wavebeem-toybox-flashlight>
 
 [View source](./assets/wavebeem-toybox-flashlight.mjs)

@@ -1,5 +1,49 @@
 // @ts-check
 const html = String.raw;
+const css = String.raw;
+
+const sheet = new CSSStyleSheet();
+sheet.replaceSync(css`
+  :host {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    background: white;
+    max-width: max-content;
+  }
+
+  #game {
+    max-width: 100%;
+  }
+
+  #reset {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0.5rem;
+    background: #333;
+    color: #fff;
+    font: inherit;
+    font-size: 12px;
+    font-weight: bold;
+    border: 0;
+    padding: 0.25rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 9999px;
+    border: 2px solid #fff;
+
+    &:hover {
+      border-color: transparent;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #333;
+      outline-offset: 2px;
+    }
+  }
+`);
 
 export class WavebeemDisjointGraphUnion extends HTMLElement {
   /** @type {AbortController} */
@@ -32,49 +76,8 @@ export class WavebeemDisjointGraphUnion extends HTMLElement {
     if (!shadow) {
       shadow = this.attachShadow({ mode: "open" });
     }
-    // There needs to be a better way to adopt stylesheets from the parent, wtf
+    shadow.adoptedStyleSheets = [sheet];
     shadow.innerHTML = html`
-      <style>
-        :host {
-          position: relative;
-          display: flex;
-          flex-flow: column;
-          align-items: flex-start;
-          background: white;
-          max-width: max-content;
-        }
-
-        #game {
-          max-width: 100%;
-        }
-
-        #reset {
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          margin: 0.5rem;
-          background: #333;
-          color: #fff;
-          font: inherit;
-          font-size: 12px;
-          font-weight: bold;
-          border: 0;
-          padding: 0.25rem 1rem;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          border-radius: 9999px;
-          border: 2px solid #fff;
-
-          &:hover {
-            border-color: transparent;
-          }
-
-          &:focus-visible {
-            outline: 2px solid #333;
-            outline-offset: 2px;
-          }
-        }
-      </style>
       <canvas id="game" width="400" height="400"></canvas>
       <button id="reset">Reset</button>
     `;

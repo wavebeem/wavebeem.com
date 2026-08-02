@@ -31,7 +31,7 @@ Press the button for a bad time.
         style="
           user-select: none;
           cursor: pointer;
-          font-size: clamp(1rem, 3vw, 2rem);
+          font-size: clamp(0.875rem, 2.5vw, 1.5rem);
           background: white;
           color: black;
           font-weight: bold;
@@ -61,7 +61,7 @@ Press the button for a bad time.
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: max(1.5rem, 7vw);
+        font-size: max(1.5rem, 5vw);
         color: #ff0;
         text-align: left;
         text-shadow: #000 0 0 4px, #000 0 0 8px, #000 0 0 12px, #000 0 0 16px;

@@ -1,4 +1,18 @@
 const html = String.raw;
+const css = String.raw;
+
+const sheet = new CSSStyleSheet();
+sheet.replaceSync(css`
+  :host {
+    display: block;
+  }
+
+  #game {
+    background: white;
+    display: block;
+    max-width: 100%;
+  }
+`);
 
 export class WavebeemFunAlgebra extends HTMLElement {
   constructor() {
@@ -6,18 +20,8 @@ export class WavebeemFunAlgebra extends HTMLElement {
     if (!this.shadowRoot) {
       this.attachShadow({ mode: "open" });
     }
+    this.shadowRoot.adoptedStyleSheets = [sheet];
     this.shadowRoot.innerHTML = html`
-      <style>
-        :root {
-          display: block;
-        }
-
-        #game {
-          background: white;
-          display: block;
-          max-width: 100%;
-        }
-      </style>
       <canvas id="game" width="400" height="400"></canvas>
     `;
   }

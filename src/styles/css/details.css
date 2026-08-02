@@ -1,4 +1,8 @@
-main details {
+/* Every selector here is wrapped in :where(), so this whole file has zero
+   specificity. Any toy can opt out with one plain class, see .crime-frame
+   and .details-reset in toybox.css. */
+
+:where(main details) {
   display: grid;
   margin: 1.5rem 0;
   /* border-bottom: 1px solid var(--theme-divider); */
@@ -8,9 +12,11 @@ main details {
 
   border-radius: var(--rounded-large);
 
-  :where(&) + & {
+  & + & {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    margin-top: calc(var(--infobox-gap) - 1.5rem);
+    /* margin-top: calc(-1.5rem); */
   }
 
   &:has(+ &) {
@@ -18,25 +24,20 @@ main details {
     border-bottom-right-radius: 0;
   }
 
+  :where(&:hover) {
+    z-index: 100;
+  }
+
   @media (width < 40rem) {
     /* margin-inline: -16px; */
   }
-}
-
-main details:hover {
-  z-index: 100;
 }
 
 /* main details:where(:last-of-type, :has(+ :not(details))) {
   border-bottom: 1px solid var(--theme-border);
 } */
 
-main details + details {
-  margin-top: calc(var(--infobox-gap) - 1.5rem);
-  /* margin-top: calc(-1.5rem); */
-}
-
-main summary {
+:where(main summary) {
   -webkit-user-select: none;
   user-select: none;
   cursor: default;
@@ -45,8 +46,8 @@ main summary {
   margin-inline: -16px;
 }
 
-main details {
-  summary {
+:where(main details) {
+  :where(& summary) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +55,7 @@ main details {
 
     border-radius: var(--rounded-large);
 
-    :where(&) + & {
+    & + & {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
@@ -63,18 +64,25 @@ main details {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
+
+    :where(&:focus-visible) {
+      outline: none;
+    }
+
+    @media (hover) {
+      :where(&:hover:not(:active)) {
+        background-image: radial-gradient(var(--theme-hover-light));
+      }
+    }
   }
 
-  &[open] summary {
+  :where(&[open] summary) {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  /* Previous circle-badge version (https://css-shape.com/plus/ and
-     /minus/), kept here commented out in case the plain-glyph version
-     below doesn't stick — uncomment this block and delete the two
-     summary::after rules below to revert.
-  summary::after {
+  /* Circle badge instead of a plain +/- glyph. */
+  :where(& summary)::after {
     content: "";
     --c: var(--theme-shadow);
     height: 24px;
@@ -89,53 +97,24 @@ main details {
     clip-path: circle();
   }
 
-  &[open] summary::after {
+  :where(&[open] summary)::after {
     border-image: conic-gradient(var(--c) 0 0) 1 / calc(50% - 1px) 2px;
   }
-  */
 
-  /* Bare glyph instead of a circle badge, matching how .menu links use a
-     plain "→" with no background — the row itself already carries the
-     interactive affordance (background, hover fill), so the icon doesn't
-     need its own. U+2212 MINUS SIGN below (not the ASCII hyphen) so its
-     bar lines up with the "+"'s crossbar width. */
-  summary::after {
-    content: "+";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 1.5em;
-    padding-right: 8px;
-    line-height: 1;
+  &:has(> :where(summary:focus-visible)) {
+    box-shadow: none;
+    outline: 3px solid;
+    outline-offset: -3px;
+    /* border-radius: var(--rounded-small); */
   }
 
-  &[open] summary::after {
-    content: "\2212";
-  }
-
-  @media (hover) {
-    summary:hover:where(:not(:active)) {
-      background-image: radial-gradient(var(--theme-hover-light));
-    }
+  :where(&[open] > summary) {
+    margin-bottom: -0.5rem;
+    border-bottom: 2px dotted;
+    position: relative;
   }
 }
 
 /* main summary:hover:active::after {
   opacity: 0.5;
 } */
-
-main details:has(> summary:focus-visible) {
-  box-shadow: none;
-  outline: 3px solid;
-  outline-offset: -3px;
-  /* border-radius: var(--rounded-small); */
-}
-
-main details summary:focus-visible {
-  outline: none;
-}
-
-main details[open] > summary {
-  margin-bottom: -0.5rem;
-  border-bottom: 2px dotted;
-  position: relative;
-}
