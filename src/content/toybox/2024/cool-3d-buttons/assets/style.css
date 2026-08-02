@@ -12,7 +12,8 @@
   color: #444;
   border-radius: 0.5rem;
   border: 1px solid transparent;
-  background: linear-gradient(#fff, #ddd) padding-box,
+  background:
+    linear-gradient(#fff, #ddd) padding-box,
     linear-gradient(#0001, #0006) border-box;
 }
 
@@ -33,13 +34,15 @@
 }
 
 .toybox-toy button[data-type="1"] {
-  background: linear-gradient(#ddd, #fff) content-box,
+  background:
+    linear-gradient(#ddd, #fff) content-box,
     linear-gradient(#fff, #ccc) padding-box,
     linear-gradient(#ccc, #fff) border-box;
 }
 
 .toybox-toy button[data-type="2"] {
-  background: linear-gradient(#fff, #ccc) padding-box,
+  background:
+    linear-gradient(#fff, #ccc) padding-box,
     linear-gradient(#ddd, #fff) border-box;
 }
 
