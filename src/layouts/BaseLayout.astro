@@ -95,11 +95,12 @@ const { title, description = "" } = Astro.props;
     flex: 1;
     display: flex;
     flex-direction: column;
-    padding-right: 8px;
 
     @media (width >= 70rem) {
       /* Overrides .page-shell's align-items: start just for this item. */
       align-self: stretch;
+      /* Balances the sidebar's own left padding. */
+      padding-right: 8px;
     }
 
     /* page.css's article margin-inline: auto centers off-true once a
