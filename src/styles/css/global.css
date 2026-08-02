@@ -13,8 +13,12 @@
   /* https://dbushell.com/2024/11/05/webkit-font-smoothing/ */
   /* https://www.joshwcomeau.com/css/custom-css-reset/ */
   -webkit-font-smoothing: antialiased;
-  /* Make sure scrollbars show on every page, for consistent nav bar size */
-  overflow-y: scroll;
+  /* Make sure scrollbars show on every page, for consistent nav bar size.
+     Using scrollbar-gutter instead of overflow-y: scroll because the latter
+     implicitly forces overflow-x to "auto" too (per spec, when one axis is
+     non-visible the other can't stay visible), which turns any stray
+     sub-pixel horizontal overflow into a visible scrollbar. */
+  scrollbar-gutter: stable;
   color-scheme: light dark;
   scrollbar-color: var(--theme-scrollbar) transparent;
   font-synthesis: none;
