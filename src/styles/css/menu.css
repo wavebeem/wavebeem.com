@@ -23,8 +23,7 @@
 
     border-radius: var(--rounded-large);
 
-    /* Only links navigate you away — a button (e.g. the theme picker
-       trigger) doesn't, so it shouldn't get an arrow implying it does. */
+    /* Only links navigate away, so only they get the arrow. */
     &:is(a)::after {
       content: "\2192";
       flex-shrink: 0;
@@ -89,19 +88,10 @@
   }
 }
 
-/* Modifier for use alongside .menu (not standalone) when the menu sits on
-   a solid panel background rather than directly on --theme-page-bg.
-   Only used by the mobile nav drawer (Header.astro's .nav-menu) — the
-   desktop sidebar (Sidebar.astro) has no panel of its own anymore (see
-   its comment), so plain .menu already looks right there. The drawer
-   still needs one: it's a modal overlay covering the page behind it,
-   so unlike the sidebar it can't just go transparent and blend in —
-   text color is deliberately NOT set here though, it inherits from
-   .nav-menu. */
+/* Modifier for .menu on a solid panel background, used by the mobile
+   nav drawer. Text color isn't set here, it inherits from .nav-menu. */
 .menu-drawer {
-  /* Transparent rather than repainting --theme-page-bg over the panel's
-     own background — this only shows through the small gaps between
-     pills. */
+  /* Shows through the small gaps between pills. */
   background: transparent;
 
   > :is(a, *) {

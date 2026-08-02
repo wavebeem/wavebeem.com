@@ -76,15 +76,15 @@ const { title, description = "" } = Astro.props;
       align-items: start;
     }
 
-    /* Past this width, a viewport-pinned sidebar drifts too far from
-       the (re-centering) reading column. Cap and center the whole
-       shell instead. Safe since nothing here owns its own scrollbar;
-       the real page scrollbar stays at the window edge regardless. */
+    /* Past this width, cap and center the whole shell instead of
+       leaving the sidebar pinned to the viewport edge. */
     @media (width >= 100rem) {
-      /* Empty third column matching the sidebar's width, so .content
-         is centered in the box, not just within its own track (which
-         the unbalanced sidebar column would otherwise skew). */
+      /* Third empty column balances the sidebar, so .content centers
+         in the box instead of skewing toward it. */
       grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
+      /* width: 100% needed: as a flex item, auto margins here would
+         otherwise override stretch and shrink this to fit-content. */
+      width: 100%;
       max-width: var(--page-shell-max-width);
       margin-inline: auto;
     }
@@ -102,10 +102,8 @@ const { title, description = "" } = Astro.props;
       align-self: stretch;
     }
 
-    /* article margin-inline: auto (page.css) centers within .content's
-       leftover width, which sits right of true center once a sidebar's
-       involved. Left-align instead so content reads anchored to the
-       sidebar. */
+    /* page.css's article margin-inline: auto centers off-true once a
+       sidebar's involved; left-align instead, anchored to the sidebar. */
     @media (width >= 70rem) {
       :global(article:where(.page) > :is(header, section, footer)) {
         margin-inline: 0;
@@ -120,10 +118,7 @@ const { title, description = "" } = Astro.props;
       }
     }
 
-    /* Footer.astro centers its content unconditionally; force
-       left-align at desktop widths to match .page's content above.
-       It's just a copyright line, no reason to chase the reading
-       column. */
+    /* Footer.astro centers unconditionally; match .page's left-align here. */
     @media (width >= 70rem) {
       :global(.footer > *) {
         margin-inline: 0;

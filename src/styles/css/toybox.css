@@ -9,17 +9,12 @@
   width: 100% !important;
 }
 
-/* Fully hand-rolled <details>/<summary> presentation for a toy, opting out
-   of the sitewide details.css chrome (background, padding, +/- glyph, etc).
-   Used both standalone (.details-reset) and inside .crime-frame, which adds
-   its own unrelated layout opinions (overflow, flex, forced child width). */
+/* Opts a toy's <details>/<summary> out of the sitewide details.css chrome. */
 .crime-frame :where(details, summary),
 .details-reset :where(details, summary) {
   all: initial;
   display: block;
-  /* `all: initial` resets inherited properties to their CSS-spec initial
-     value, not to "inherit from parent" — re-establish inheritance for the
-     two that toys actually rely on. */
+  /* all: initial resets these to CSS-initial, not inherited; restore inheritance. */
   font: inherit;
   color: inherit;
 }

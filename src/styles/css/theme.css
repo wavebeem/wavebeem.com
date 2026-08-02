@@ -29,12 +29,8 @@
 
   --theme-header-bg: light-dark(var(--color-black), var(--color-offwhite));
   --theme-header-text: light-dark(var(--color-white), var(--color-offblack));
-  /* Sidebar/nav-drawer panel color — intentionally asymmetric rather
-     than a plain light-dark() swap: light mode keeps the header bar's
-     black/white, but dark mode's equivalent (offwhite) reads as a
-     distracting wall of light against the rest of a dark page, so dark
-     mode instead gets --theme-page-alt's dark-mode value (just a touch
-     darker than --theme-page-bg, not a stark inverted panel). */
+  /* Not a plain light-dark() swap: dark mode's offwhite header would
+     read as a glaring wall of light, so it uses --theme-page-alt instead. */
   --theme-sidebar-bg: light-dark(var(--color-black), var(--color-moss1b));
   --theme-sidebar-text: light-dark(var(--color-white), var(--color-offwhite));
   --theme-header-card: light-dark(

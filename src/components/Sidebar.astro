@@ -68,10 +68,7 @@ import { groups } from "@/data/menu";
        copy, since there's no hamburger here to balance against. */
     padding: 16px;
 
-    /* Logo.astro injects raw SVG via set:html, so scoped styles don't
-       reach it; needs :global(). SVG has only a viewBox, no intrinsic
-       height, so height must be set explicitly. fill is currentColor
-       already, so .button's color inherits for free. */
+    /* :global needed: Logo.astro injects raw SVG via set:html. */
     :global(svg) {
       height: 28px;
       width: auto;

@@ -54,16 +54,8 @@
      wrapping, on top of the nav links below. */
   --sidebar-width: 22rem;
 
-  /* Past BaseLayout.astro's large-screen bailout (125rem), .page-shell
-     caps out at this width and centers instead of letting the sidebar
-     stay pinned to the true viewport edge while content drifts away
-     from it. Grid gains a third, empty column matching --sidebar-width
-     at that breakpoint too, mirroring the real sidebar on the other
-     side — without it, the content column (the true middle one) would
-     still sit off-center within this box, just less drastically than
-     before. Sidebar + reading column + phantom sidebar-width column +
-     a little breathing room — not an exact fit, just enough that the
-     content column isn't hugging the cap edge-to-edge. */
+  /* Sidebar + reading column + phantom sidebar-width column (for
+     centering) + a little breathing room. */
   --page-shell-max-width: calc(
     var(--sidebar-width) * 2 + var(--width-heading) + 4rem
   );
