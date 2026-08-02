@@ -15,7 +15,7 @@ import { groups } from "@/data/menu";
       </a>
     </span>
     <nav class="nav" aria-label="Menu">
-      <a href="/menu/" class="hamburger" data-action="">
+      <a href="/menu/" class="hamburger">
         <IconMenu />
       </a>
     </nav>
@@ -42,16 +42,8 @@ import { groups } from "@/data/menu";
     ".hamburger",
   )) {
     hamburger.addEventListener("click", (event) => {
-      if (hamburger.dataset.action === "back") {
-        const url = new URL(document.referrer, "https://fake.example");
-        if (url.hostname === location.hostname) {
-          history.back();
-          event.preventDefault();
-        }
-      } else {
-        navMenu.showModal();
-        event.preventDefault();
-      }
+      navMenu.showModal();
+      event.preventDefault();
     });
   }
 
@@ -203,7 +195,7 @@ import { groups } from "@/data/menu";
     box-sizing: border-box;
     background: var(--theme-sidebar-bg);
     color: var(--theme-sidebar-text);
-    max-width: none;
+    max-width: 18rem;
     max-height: none;
     overflow-y: auto;
     overscroll-behavior: contain;
