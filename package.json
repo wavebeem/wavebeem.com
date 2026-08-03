@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "dev:lan": "astro dev --host",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
