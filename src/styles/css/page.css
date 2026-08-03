@@ -103,7 +103,7 @@ article:where(.page) {
     figure {
       display: flex;
       flex-direction: column;
-      max-width: max-content;
+      max-width: var(--width-copy);
       gap: 8px;
 
       img,

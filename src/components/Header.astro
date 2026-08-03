@@ -15,9 +15,9 @@ import { groups } from "@/data/menu";
       </a>
     </span>
     <nav class="nav" aria-label="Menu">
-      <a href="/menu/" class="hamburger">
+      <button type="button" class="hamburger" aria-label="Open menu">
         <IconMenu />
-      </a>
+      </button>
     </nav>
   </div>
   <dialog class="nav-menu">
@@ -41,9 +41,8 @@ import { groups } from "@/data/menu";
   for (const hamburger of document.querySelectorAll<HTMLElement>(
     ".hamburger",
   )) {
-    hamburger.addEventListener("click", (event) => {
+    hamburger.addEventListener("click", () => {
       navMenu.showModal();
-      event.preventDefault();
     });
   }
 
@@ -81,12 +80,11 @@ import { groups } from "@/data/menu";
 
   .header-content {
     width: 100%;
-    max-width: var(--width-heading);
-    margin-inline: auto;
 
-    /* Left-aligned throughout (this bar only shows below 70rem); the
-       hamburger on the right already balances the logo without
-       centering it. */
+    /* No max-width: this bar only shows below 70rem, and unlike the
+       reading column below it, it's just a logo + hamburger with
+       space-between, so it should fill the bar edge-to-edge instead
+       of capping at the content width and floating in the middle. */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -94,7 +92,9 @@ import { groups } from "@/data/menu";
 
     box-sizing: border-box;
 
-    padding: 16px;
+    /* Horizontal spacing comes from .header's own padding-inline; this
+       used to also pad horizontally here, doubling up on top of that. */
+    padding-block: 16px;
   }
 
   .logo {
@@ -133,10 +133,6 @@ import { groups } from "@/data/menu";
   @media (width < 40rem) {
     .header {
       padding-top: 0px;
-    }
-
-    .header-content {
-      padding: 16px 0;
     }
   }
 
