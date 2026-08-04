@@ -4,9 +4,6 @@
     ui-monospace, "Cascadia Code", "SFMono-Regular", "Menlo", "Monaco",
     "Consolas", "Liberation Mono", "Courier New", monospace;
   --font-body: "PP Mori", var(--font-fallback-main);
-  /* Live comparison candidates -- toggle in dev tools, don't ship uncommented. */
-  /* --font-body: "Neue Montreal", var(--font-fallback-main); */
-  /* --font-body: "Frama", var(--font-fallback-main); */
   --font-heading: var(--font-body);
   --font-mono: "Iosevka Extended", var(--font-fallback-mono);
 
