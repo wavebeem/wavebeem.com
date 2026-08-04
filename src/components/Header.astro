@@ -34,6 +34,7 @@ import { groups } from "@/data/menu";
     </div>
   </dialog>
 </header>
+<hr />
 
 <script>
   const navMenu = document.querySelector<HTMLDialogElement>(".nav-menu")!;
@@ -61,10 +62,18 @@ import { groups } from "@/data/menu";
     overflow: hidden;
   }
 
+  hr {
+    margin-block: -8px;
+
+    @media (width >= 70rem) {
+      display: none;
+    }
+  }
+
   .header {
     background: var(--theme-header-bg);
     color: var(--theme-header-text);
-    box-shadow: var(--shadow1);
+    /* border-bottom: 1px solid var(--theme-divider); */
 
     display: flex;
     justify-content: center;
@@ -111,6 +120,7 @@ import { groups } from "@/data/menu";
     display: flex;
     outline-offset: 4px;
     border-radius: var(--rounded-small);
+    color: var(--theme-accent);
 
     @media (width >= 40rem) {
       height: 32px;
@@ -153,9 +163,9 @@ import { groups } from "@/data/menu";
     width: 40px;
     height: 40px;
     box-sizing: border-box;
-    border: 2px solid var(--theme-header-card);
     border-radius: var(--rounded-large);
-    background: var(--theme-header-bg);
+    border: 0;
+    background: transparent;
     color: inherit;
     stroke: currentColor;
     pointer-events: auto;
@@ -163,8 +173,7 @@ import { groups } from "@/data/menu";
 
     @media (hover) {
       &:hover {
-        border-color: transparent;
-        background-image: radial-gradient(var(--theme-header-card));
+        background-image: radial-gradient(var(--theme-hover-light));
       }
     }
 
@@ -214,7 +223,7 @@ import { groups } from "@/data/menu";
   }
 
   .nav-menu::backdrop {
-    background: rgb(from var(--theme-sidebar-bg) r g b / 50%);
+    background: rgb(from var(--theme-scrim) r g b / 50%);
     opacity: 0;
     transition:
       opacity 0.25s ease,
@@ -257,9 +266,9 @@ import { groups } from "@/data/menu";
     width: 40px;
     height: 40px;
     box-sizing: border-box;
-    border: 2px solid var(--theme-sidebar-card);
     border-radius: var(--rounded-large);
-    background: var(--theme-sidebar-bg);
+    border: 0;
+    background: transparent;
     color: inherit;
     stroke: currentColor;
     pointer-events: auto;
@@ -267,8 +276,7 @@ import { groups } from "@/data/menu";
 
     @media (hover) {
       &:hover {
-        border-color: transparent;
-        background-image: radial-gradient(var(--theme-sidebar-card));
+        background-image: radial-gradient(var(--theme-hover-light));
       }
     }
 

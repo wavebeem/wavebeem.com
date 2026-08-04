@@ -23,3 +23,23 @@ actual usage.
 Taking the user to a new page to see images larger is a bit irritating. We can
 probably get a lightbox that works well enough for desktop and mobile. Just not
 a huge priority lol.
+
+## What about defensive base styles
+
+A lot of my CSS styles get messy when I need to reuse an element. By using
+`@layer` and selectors like `hr:not([class])` I can target raw markup easily but
+not fuck up advanced use cases.
+
+## Bring back heading font
+
+It's nice to see a narrow font to save space up there...
+
+## Root out italic
+
+Tired of it. Find every italic usage across CSS and content and remove it.
+
+## Clean up navigation
+
+Let's cap out at SEVEN navigation items. Anything else can be reached from some
+other page (including a home page link!). The home page is always easy to get
+back to, and the nav bar is NOT an exhaustive list of all pages.

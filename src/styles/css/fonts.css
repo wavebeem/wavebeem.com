@@ -13,30 +13,23 @@
 
 @font-face {
   font-family: "PP Mori";
-  src: url("/fonts/PPMori-Extrabold.woff2") format("woff2");
-  font-weight: bold;
+  src: url("/fonts/PPMori-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+/* Live comparison candidates for --font-body (see vars.css). Only the
+   semibold/medium-ish weight is registered on purpose -- no bold face yet,
+   just a rough feel for the letterforms sitewide. */
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("/fonts/PPNeueMontreal-Medium.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PP Mori";
-  src: url("/fonts/PPMori-Black.woff2") format("woff2");
-  font-weight: 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori";
-  src: url("/fonts/PPMori-Italic.woff2") format("woff2");
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori";
-  src: url("/fonts/PPMori-ExtraboldItalic.woff2") format("woff2");
-  font-style: italic;
-  font-weight: bold;
+  font-family: "Frama";
+  src: url("/fonts/PPFrama-Medium.woff2") format("woff2");
   font-display: swap;
 }
 

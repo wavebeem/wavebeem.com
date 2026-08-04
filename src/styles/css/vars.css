@@ -4,13 +4,11 @@
     ui-monospace, "Cascadia Code", "SFMono-Regular", "Menlo", "Monaco",
     "Consolas", "Liberation Mono", "Courier New", monospace;
   --font-body: "PP Mori", var(--font-fallback-main);
+  /* Live comparison candidates -- toggle in dev tools, don't ship uncommented. */
+  /* --font-body: "Neue Montreal", var(--font-fallback-main); */
+  /* --font-body: "Frama", var(--font-fallback-main); */
   --font-heading: var(--font-body);
   --font-mono: "Iosevka Extended", var(--font-fallback-mono);
-
-  /* --shadow1: 0 4px 8px var(--theme-shadow); */
-  /* --shadow1: none; */
-  --shadow1: 0 4px 0 var(--theme-shadow);
-  --shadow2: 0 0 0 4px var(--theme-shadow);
 
   --infobox-gap: 2px;
   --card-gap: 2px;
@@ -42,6 +40,11 @@
 
   --rounded-pill: 9999px;
 
+  /* Shared by the zig-zag <hr> (page.css) and the wavy footer divider
+     (Footer.astro) -- same scale, different mask shape. */
+  --divider-size: 8px;
+  --divider-thickness: 1px;
+
   --width-copy: 50rem;
   --width-heading: 50rem;
 
@@ -61,7 +64,7 @@
   );
 
   --link-underline-offset: calc(1em / 8);
-  --link-underline-thickness: 2px;
+  --link-underline-thickness: 1px;
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 0px);
 
   @media (resolution >= 1.5dppx) {

@@ -5,6 +5,7 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="footer" id="footer">
+  <div class="divider-wavy"></div>
   <nav class="footer-menu" aria-label="Footer">
     {
       groups.map((group) => (
@@ -32,9 +33,23 @@ const year = new Date().getFullYear();
     padding: 1rem;
     padding-top: 5rem;
     padding-bottom: calc(1rem + env(safe-area-max-inset-bottom, 1rem));
+    color: var(--theme-bullet);
   }
 
-  .footer > * {
+  /* Shape/color come from divider.css's shared .divider-wavy rule.
+     --m tweaked here for a bit more curve than the shared default. */
+  .divider-wavy {
+    margin-bottom: 1.5rem;
+
+    /* Escape .footer's padding-inline for a true edge-to-edge wave,
+       same trick page.css uses for in-content dividers on mobile. */
+    @media (width < 40rem) {
+      margin-inline: -1rem;
+      width: calc(100% + 2rem);
+    }
+  }
+
+  .footer > :not(.divider-wavy) {
     margin-inline: auto;
     max-width: max-content;
   }
@@ -69,14 +84,9 @@ const year = new Date().getFullYear();
 
     a {
       display: block;
-      color: inherit;
+      color: var(--theme-link);
       font-size: var(--font-size-small);
-      text-decoration-line: none;
       padding: 4px;
-
-      &:hover {
-        text-decoration-line: underline;
-      }
     }
   }
 </style>

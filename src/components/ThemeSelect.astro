@@ -12,15 +12,18 @@ const { drawer = false } = Astro.props;
     Choose theme&hellip;
   </button>
   <dialog class="theme-select-dialog" aria-label="Choose theme">
-    <button type="button" class="theme-select-option" data-theme="auto">
-      Auto theme
-    </button>
-    <button type="button" class="theme-select-option" data-theme="light">
-      Light theme
-    </button>
-    <button type="button" class="theme-select-option" data-theme="dark">
-      Dark theme
-    </button>
+    <div class="theme-select-options">
+      <button type="button" class="theme-select-option" data-theme="auto">
+        Auto
+      </button>
+      <button type="button" class="theme-select-option" data-theme="light">
+        Light
+      </button>
+      <button type="button" class="theme-select-option" data-theme="dark">
+        Dark
+      </button>
+    </div>
+    <button type="button" class="button theme-select-done">Done</button>
   </dialog>
 </wavebeem-theme-select>
 
@@ -76,6 +79,8 @@ const { drawer = false } = Astro.props;
       const dialog = this.querySelector<HTMLDialogElement>(
         ".theme-select-dialog",
       )!;
+      const doneButton =
+        this.querySelector<HTMLButtonElement>(".theme-select-done")!;
       const options = [
         ...this.querySelectorAll<HTMLButtonElement>(".theme-select-option"),
       ];
@@ -108,11 +113,13 @@ const { drawer = false } = Astro.props;
           () => {
             localStorage.setItem(storageKey, option.dataset.theme!);
             applyTheme();
-            dialog.close();
+            syncOptions();
           },
           { signal },
         );
       }
+
+      doneButton.addEventListener("click", () => dialog.close(), { signal });
 
       // Close the dialog when clicking its backdrop (native <dialog>
       // doesn't do this on its own; Escape already works natively)
@@ -172,12 +179,6 @@ const { drawer = false } = Astro.props;
     font: inherit;
     text-align: left;
 
-    /* Matches .menu links' ::after arrow (menu.css). */
-    &::after {
-      content: "\2600";
-      flex-shrink: 0;
-    }
-
     @media (hover) {
       &:hover {
         background-image: radial-gradient(var(--theme-hover-light));
@@ -207,7 +208,7 @@ const { drawer = false } = Astro.props;
        specificity, so display must stay scoped to [open], or this
        renders in-flow even when closed. */
     flex-direction: column;
-    gap: 2px;
+    gap: 8px;
     box-sizing: border-box;
     width: min(280px, calc(100vw - 32px));
     padding: 8px;
@@ -223,7 +224,7 @@ const { drawer = false } = Astro.props;
     }
 
     &::backdrop {
-      background: var(--theme-text);
+      background: var(--theme-scrim);
       opacity: 0.3;
       transition: opacity 150ms;
 
@@ -233,22 +234,40 @@ const { drawer = false } = Astro.props;
     }
   }
 
+  .theme-select-options {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+  }
+
+  .theme-select-done {
+    /* m3.material.io/components/dialogs/guidelines: "Buttons are aligned
+       to the trailing edge of the dialog." Column-flex dialog defaults
+       every child to stretch full-width otherwise. */
+    align-self: flex-end;
+  }
+
   .theme-select-option {
+    flex: 1;
     padding: 8px 16px;
-    border: none;
+    border: 0;
     border-radius: var(--rounded-large);
     background: var(--theme-infobox);
     color: inherit;
     font: inherit;
     text-align: center;
 
-    :where(&) + & {
+    /* Connected button group: outer ends stay large, the corners where
+       buttons meet go small. m3.material.io/components/button-groups/specs
+       Skips the selected button -- it goes fully round regardless of
+       position, see &[aria-pressed="true"] below. */
+    :where(&) + &:not([aria-pressed="true"]) {
       border-top-left-radius: var(--rounded-small);
-      border-top-right-radius: var(--rounded-small);
+      border-bottom-left-radius: var(--rounded-small);
     }
 
-    &:has(+ &) {
-      border-bottom-left-radius: var(--rounded-small);
+    &:has(+ &):not([aria-pressed="true"]) {
+      border-top-right-radius: var(--rounded-small);
       border-bottom-right-radius: var(--rounded-small);
     }
 
@@ -265,8 +284,11 @@ const { drawer = false } = Astro.props;
     }
 
     &[aria-pressed="true"] {
-      background: var(--theme-button-bg);
-      color: var(--theme-button-text);
+      /* Selection changes shape too, not just color, per M3 button-group
+         spec ("...affect the shape of the button being selected"). */
+      border-radius: var(--rounded-pill);
+      background: var(--theme-toggle-selected-bg);
+      color: var(--theme-toggle-selected-text);
 
       /* Standard text color is invisible against background, so offset it */
       &:focus-visible {

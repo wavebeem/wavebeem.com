@@ -23,12 +23,6 @@
 
     border-radius: var(--rounded-large);
 
-    /* Only links navigate away, so only they get the arrow. */
-    &:is(a)::after {
-      content: "\2192";
-      flex-shrink: 0;
-    }
-
     :where(&) + & {
       border-top-left-radius: var(--rounded-small);
       border-top-right-radius: var(--rounded-small);

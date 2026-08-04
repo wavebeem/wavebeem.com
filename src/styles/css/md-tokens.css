@@ -1,0 +1,77 @@
+/**
+ * GENERATED. Don't hand-edit -- regenerate with: npm run generate-theme
+ *
+ * Seed: #7bd675  Variant: TONAL_SPOT  Contrast: 0
+ *
+ * Every Material 3 color role, as --md-<kebab-case-role-name>. See
+ * theme.css for how this site's --theme-* tokens map to these.
+ */
+/* prettier-ignore */
+:root {
+  --md-primary-palette-key-color: light-dark(#54824f, #54824f);
+  --md-secondary-palette-key-color: light-dark(#6b7c66, #6b7c66);
+  --md-tertiary-palette-key-color: light-dark(#517e83, #517e83);
+  --md-neutral-palette-key-color: light-dark(#747870, #747870);
+  --md-neutral-variant-palette-key-color: light-dark(#73796f, #73796f);
+  --md-error-palette-key-color: light-dark(#de3730, #de3730);
+  --md-background: light-dark(#f7fbf1, #10140f);
+  --md-on-background: light-dark(#191d17, #e0e4da);
+  --md-surface: light-dark(#f7fbf1, #10140f);
+  --md-surface-dim: light-dark(#d8dbd2, #10140f);
+  --md-surface-bright: light-dark(#f7fbf1, #363a34);
+  --md-surface-container-lowest: light-dark(#ffffff, #0b0f0a);
+  --md-surface-container-low: light-dark(#f2f5eb, #191d17);
+  --md-surface-container: light-dark(#ecefe6, #1d211b);
+  --md-surface-container-high: light-dark(#e6e9e0, #272b25);
+  --md-surface-container-highest: light-dark(#e0e4da, #323630);
+  --md-on-surface: light-dark(#191d17, #e0e4da);
+  --md-surface-variant: light-dark(#dee5d8, #424940);
+  --md-on-surface-variant: light-dark(#424940, #c2c8bd);
+  --md-inverse-surface: light-dark(#2d322b, #e0e4da);
+  --md-inverse-on-surface: light-dark(#eff2e9, #2d322b);
+  --md-outline: light-dark(#73796f, #8c9388);
+  --md-outline-variant: light-dark(#c2c8bd, #424940);
+  --md-shadow: light-dark(#000000, #000000);
+  --md-scrim: light-dark(#000000, #000000);
+  --md-surface-tint: light-dark(#3c6839, #a2d399);
+  --md-primary: light-dark(#3c6839, #a2d399);
+  --md-primary-dim: light-dark(#305c2e, #bdf0b3);
+  --md-on-primary: light-dark(#ffffff, #0c390e);
+  --md-primary-container: light-dark(#bdf0b3, #255023);
+  --md-on-primary-container: light-dark(#255023, #bdf0b3);
+  --md-primary-fixed: light-dark(#bdf0b3, #bdf0b3);
+  --md-primary-fixed-dim: light-dark(#a2d399, #a2d399);
+  --md-on-primary-fixed: light-dark(#002203, #002203);
+  --md-on-primary-fixed-variant: light-dark(#255023, #255023);
+  --md-inverse-primary: light-dark(#a2d399, #3c6839);
+  --md-secondary: light-dark(#53634f, #baccb3);
+  --md-secondary-dim: light-dark(#475743, #d6e8ce);
+  --md-on-secondary: light-dark(#ffffff, #253423);
+  --md-secondary-container: light-dark(#d6e8ce, #3b4b38);
+  --md-on-secondary-container: light-dark(#3b4b38, #d6e8ce);
+  --md-secondary-fixed: light-dark(#d6e8ce, #d6e8ce);
+  --md-secondary-fixed-dim: light-dark(#baccb3, #baccb3);
+  --md-on-secondary-fixed: light-dark(#111f0f, #111f0f);
+  --md-on-secondary-fixed-variant: light-dark(#3b4b38, #3b4b38);
+  --md-tertiary: light-dark(#38656a, #a0cfd4);
+  --md-tertiary-dim: light-dark(#2c595e, #bcebf0);
+  --md-on-tertiary: light-dark(#ffffff, #00363b);
+  --md-tertiary-container: light-dark(#bcebf0, #1e4d52);
+  --md-on-tertiary-container: light-dark(#1e4d52, #bcebf0);
+  --md-tertiary-fixed: light-dark(#bcebf0, #bcebf0);
+  --md-tertiary-fixed-dim: light-dark(#a0cfd4, #a0cfd4);
+  --md-on-tertiary-fixed: light-dark(#002022, #002022);
+  --md-on-tertiary-fixed-variant: light-dark(#1e4d52, #1e4d52);
+  --md-error: light-dark(#ba1a1a, #ffb4ab);
+  --md-error-dim: light-dark(#a80710, #ff554a);
+  --md-on-error: light-dark(#ffffff, #690005);
+  --md-error-container: light-dark(#ffdad6, #93000a);
+  --md-on-error-container: light-dark(#93000a, #ffdad6);
+
+  /* Hand-picked syntax-highlighting hues, hue-shifted toward the seed
+     color via Blend.harmonize() -- not DynamicScheme roles. */
+  --md-custom-comment: light-dark(#008814, #5fd75f);
+  --md-custom-property: light-dark(#4b14be, #b398f5);
+  --md-custom-string: light-dark(#ad4300, #fd7043);
+  --md-custom-punctuation: light-dark(#7b4c00, #d2aa53);
+}

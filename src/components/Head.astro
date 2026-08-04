@@ -12,10 +12,15 @@ const { title, description } = Astro.props;
   name="viewport"
   content="width=device-width, initial-scale=1, viewport-fit=cover"
 />
-<meta name="theme-color" content="#111" media="(prefers-color-scheme: light)" />
+<!-- Keep in sync with --theme-header-bg (md-background) in theme.css. -->
 <meta
   name="theme-color"
-  content="#b3c3b0"
+  content="#f7fbf1"
+  media="(prefers-color-scheme: light)"
+/>
+<meta
+  name="theme-color"
+  content="#10140f"
   media="(prefers-color-scheme: dark)"
 />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -37,14 +42,7 @@ const { title, description } = Astro.props;
   rel="preload"
   as="font"
   type="font/woff2"
-  href="/fonts/PPMori-Black.woff2"
-  crossorigin
-/>
-<link
-  rel="preload"
-  as="font"
-  type="font/woff2"
-  href="/fonts/PPMori-Extrabold.woff2"
+  href="/fonts/PPMori-Semibold.woff2"
   crossorigin
 />
 <meta name="og:title" content={title} />

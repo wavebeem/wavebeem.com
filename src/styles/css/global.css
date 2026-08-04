@@ -61,7 +61,6 @@
 }
 
 /* https://screenspan.net/polka/ */
-:root,
 :root[data-wallpaper="polka"] {
   --a: 8px;
   --b: calc(2 * var(--a));
@@ -279,15 +278,10 @@ main ul ::marker {
   }
 
   a {
-    /* border-bottom: var(--link-underline-thickness) solid; */
     line-height: 1.15;
     padding: 4px 8px;
-    /* padding-bottom: 6px; */
     background-color: var(--theme-infobox);
     font-weight: bold;
-    /* color: var(--theme-button-text); */
-    /* box-shadow: var(--shadow1); */
-    /* border-bottom: 2px solid; */
 
     border-radius: var(--rounded-medium);
 
@@ -338,7 +332,6 @@ video {
   border-radius: 0;
   padding: 1px;
   border: 2px solid var(--theme-border);
-  box-shadow: var(--shadow1);
 }
 
 .sharp {
