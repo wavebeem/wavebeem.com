@@ -48,7 +48,7 @@
      alternative. */
   --theme-infobox: var(--md-secondary-container);
   /* Used to share --theme-infobox's value by coincidence. */
-  --theme-code: var(--md-surface-container-high);
+  --theme-code: var(--md-surface-container-lowest);
 
   --theme-shadow: var(--md-shadow);
   --theme-scrim: var(--md-scrim);

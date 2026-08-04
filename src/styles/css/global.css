@@ -191,6 +191,7 @@ pre {
   font-variant-ligatures: none;
   overflow-x: auto;
   font-style: normal;
+  white-space: pre-wrap;
 }
 
 :not(pre) > code {
