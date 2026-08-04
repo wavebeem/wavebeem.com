@@ -3,7 +3,6 @@ import Logo from "./Logo.astro";
 import IconMenu from "./IconMenu.astro";
 import IconClose from "./IconClose.astro";
 import ThemeSelect from "./ThemeSelect.astro";
-import MenuLinks from "./MenuLinks.astro";
 import { groups } from "@/data/menu";
 ---
 
@@ -27,9 +26,21 @@ import { groups } from "@/data/menu";
       </button>
     </form>
     <div class="nav-menu-content">
-      <MenuLinks drawer groups={groups} />
+      <nav aria-label="Primary">
+        {
+          groups.map((group) => (
+            <div class="nav-group">
+              {group.map((item) => (
+                <a class="nav-link" href={item.url}>
+                  {item.title}
+                </a>
+              ))}
+            </div>
+          ))
+        }
+      </nav>
       <div class="paragraph">
-        <ThemeSelect drawer />
+        <ThemeSelect />
       </div>
     </div>
   </dialog>
@@ -243,6 +254,15 @@ import { groups } from "@/data/menu";
 
   .nav-menu-content {
     padding: 16px;
+
+    /* Scoped to this nav specifically -- .nav up top (wrapping the
+       hamburger button) is a different element. */
+    > nav {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
   }
 
   .nav-menu-toolbar {
@@ -251,8 +271,8 @@ import { groups } from "@/data/menu";
     z-index: 1;
     display: flex;
     justify-content: flex-end;
-    padding: 16px 16px 64px;
-    margin-bottom: -64px;
+    padding: 16px 16px 24px;
+    margin-bottom: -24px;
     background: linear-gradient(var(--theme-sidebar-bg), transparent);
     pointer-events: none;
   }

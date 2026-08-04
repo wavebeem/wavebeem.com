@@ -270,7 +270,7 @@ main ul ::marker {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: calc(2 * var(--infobox-gap));
+  gap: var(--infobox-gap);
   /* gap: var(--infobox-gap); */
 
   li {

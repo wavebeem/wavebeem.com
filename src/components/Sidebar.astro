@@ -65,27 +65,20 @@ import { groups } from "@/data/menu";
     gap: 24px;
   }
 
-  .nav-group {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
+  /* .nav-group/.nav-link are shared with Header.astro's mobile nav-menu
+     drawer -- see nav-link.css. */
 
-  /* Custom-built rather than reusing .menu (menu.css) -- the sidebar's
-     bare-at-rest, filled-on-hover look is different enough from .menu's
-     shared filled-pill-list treatment (still used as-is on /shrines/ and
-     the mobile drawer) that overriding it piecemeal fought Astro's
-     component-scoping specificity instead of just being simpler here. */
-  .nav-link {
+  .sidebar-top {
     display: flex;
-    align-items: center;
     padding: 8px 16px;
     border-radius: var(--rounded-large);
-    color: inherit;
-    text-decoration-line: none;
-    font-size: var(--font-size-base);
-    color: var(--theme-link);
-    font-weight: bold;
+    color: var(--theme-accent);
+
+    /* :global needed: Logo.astro injects raw SVG via set:html. */
+    :global(svg) {
+      height: 28px;
+      width: auto;
+    }
 
     @media (hover) {
       &:hover {
@@ -95,18 +88,6 @@ import { groups } from "@/data/menu";
 
     &:focus-visible {
       outline-offset: -2px;
-    }
-  }
-
-  .sidebar-top {
-    display: flex;
-    padding: 8px 16px;
-    color: var(--theme-accent);
-
-    /* :global needed: Logo.astro injects raw SVG via set:html. */
-    :global(svg) {
-      height: 28px;
-      width: auto;
     }
   }
 </style>

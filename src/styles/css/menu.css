@@ -81,18 +81,3 @@
     }
   }
 }
-
-/* Modifier for .menu on a solid panel background, used by the mobile
-   nav drawer. Text color isn't set here, it inherits from .nav-menu. */
-.menu-drawer {
-  /* Shows through the small gaps between pills. */
-  background: transparent;
-
-  > :is(a, *) {
-    background: var(--theme-sidebar-card);
-
-    &:where(:hover:not(:active)) {
-      background-image: radial-gradient(var(--theme-sidebar-hover));
-    }
-  }
-}

@@ -38,8 +38,6 @@
   /* No M3 role for these; alpha guessed. */
   --theme-header-card: rgb(from var(--md-outline-variant) r g b / 8%);
   --theme-header-hover: rgb(from var(--md-primary) r g b / 12%);
-  --theme-sidebar-card: rgb(from var(--md-outline-variant) r g b / 8%);
-  --theme-sidebar-hover: rgb(from var(--md-primary) r g b / 12%);
 
   --theme-button-bg: var(--md-primary-container);
   --theme-button-text: var(--md-on-primary-container);

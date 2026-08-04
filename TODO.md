@@ -1,18 +1,5 @@
 # TODO
 
-## Strip large files from git history
-
-Multi-MB PNGs/JPEGs (e.g. `zen1.png`, `blog/2024/curry/*.jpg`). Needs
-`git filter-repo`/BFG, own PR, force-push. Make a full git backup of the repo
-before doing this, and save to Dropbox.
-
-## Audit inline HTML in markdown content
-
-19 files use bold-paragraph-as-caption instead of `<figure>`/`<figcaption>`. Go
-through case by case. Also, we might just keep that intentionally, or switch to
-italic. It's a huge pain writing the figure markup everywhere, and it doesn't
-format well. Keeping Markdown posts simple is kind of the whole point.
-
 ## Clean up global.css
 
 538 lines. Dead commented-out selectors, audit `data-wallpaper` variants for
@@ -53,3 +40,13 @@ connected buttons. Let's try making them breathe a little bit.
 
 Logo in the sidebar just looks weird! Maybe we can do something about that on
 desktop. Put it on top?
+
+## Audit border radii
+
+Probably using too many and probably not well synced with M3.
+
+## Strip large files from git history
+
+Multi-MB PNGs/JPEGs (e.g. `zen1.png`, `blog/2024/curry/*.jpg`). Needs
+`git filter-repo`/BFG, own PR, force-push. Make a full git backup of the repo
+before doing this, and save to Dropbox.

@@ -1,0 +1,30 @@
+/* Shared by Sidebar.astro (desktop) and Header.astro's mobile nav-menu
+   drawer -- both render the same bare-at-rest, filled-on-hover primary
+   nav link list, so the treatment lives here instead of being
+   duplicated per-component. */
+.nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: var(--rounded-large);
+  color: var(--theme-link);
+  text-decoration-line: none;
+  font-size: var(--font-size-base);
+  font-weight: bold;
+
+  @media (hover) {
+    &:hover {
+      background-image: radial-gradient(var(--theme-hover-light));
+    }
+  }
+
+  &:focus-visible {
+    outline-offset: -2px;
+  }
+}

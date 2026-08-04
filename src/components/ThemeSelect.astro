@@ -1,13 +1,7 @@
 ---
-interface Props {
-  drawer?: boolean;
-}
-const { drawer = false } = Astro.props;
 ---
 
-<wavebeem-theme-select
-  class:list={["theme-select", { "theme-select-drawer": drawer }]}
->
+<wavebeem-theme-select class="theme-select">
   <button type="button" class="theme-select-trigger" aria-haspopup="dialog">
     Choose theme&hellip;
   </button>
@@ -188,18 +182,6 @@ const { drawer = false } = Astro.props;
     &:focus-visible {
       outline-color: currentColor;
       outline-offset: -2px;
-    }
-  }
-
-  /* Same swap as .menu-drawer in menu.css; sits on --theme-sidebar-bg
-     instead of the page background. */
-  .theme-select-drawer .theme-select-trigger {
-    background: var(--theme-sidebar-card);
-
-    @media (hover) {
-      &:hover {
-        background-image: radial-gradient(var(--theme-sidebar-hover));
-      }
     }
   }
 
