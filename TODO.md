@@ -50,3 +50,9 @@ Probably using too many and probably not well synced with M3.
 Multi-MB PNGs/JPEGs (e.g. `zen1.png`, `blog/2024/curry/*.jpg`). Needs
 `git filter-repo`/BFG, own PR, force-push. Make a full git backup of the repo
 before doing this, and save to Dropbox.
+
+## Maybe too much --md-surface-container-high
+
+Let's try putting this in a very small sidebar (and maybe actually usind
+surface-dim), or just slapping another squiggly divider on shit and calling it a
+day. Squiggles do add a lot of flavor and wavebeem energy.

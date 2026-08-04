@@ -65,7 +65,7 @@
      extremes. Below 70rem there's no sidebar/frame to contrast against,
      so it stays plain --md-background. */
   @media (width >= 70rem) {
-    --theme-page-bg: var(--md-surface-container-low);
+    --theme-page-bg: var(--md-surface-container-high);
   }
 
   /* Desktop main content panel, framed by the ambient page bg around it
