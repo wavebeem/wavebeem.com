@@ -174,7 +174,7 @@ const { drawer = false } = Astro.props;
     padding: 8px 16px;
     border: none;
     border-radius: var(--rounded-large);
-    background: var(--theme-infobox);
+    background: none;
     color: inherit;
     font: inherit;
     text-align: left;
@@ -208,13 +208,21 @@ const { drawer = false } = Astro.props;
        specificity, so display must stay scoped to [open], or this
        renders in-flow even when closed. */
     flex-direction: column;
-    gap: 8px;
+    /* m3.material.io/components/dialogs/specs's "padding between body
+       and actions" (24dp). */
+    gap: 24px;
     box-sizing: border-box;
-    width: min(280px, calc(100vw - 32px));
-    padding: 8px;
+    /* Same spec: container width min 280dp / max 560dp. fit-content so
+       it hugs the (small) options row instead of always sitting at the
+       floor. */
+    width: fit-content;
+    min-width: 280px;
+    max-width: min(560px, calc(100vw - 32px));
+    /* Spec: 24dp padding on all sides. */
+    padding: 24px;
     border: none;
-    border-radius: calc(8px + var(--rounded-large));
-    /* border-radius: var(--rounded-xlarge); */
+    /* Spec: 28dp corner radius. */
+    border-radius: 28px;
     background: var(--theme-page-bg);
     color: var(--theme-page-text);
     box-shadow: 0 0 32px rgb(from var(--theme-text) r g b / 20%);

@@ -1,16 +1,25 @@
 ---
-import MenuLinks from "./MenuLinks.astro";
 import Logo from "./Logo.astro";
 import ThemeSelect from "./ThemeSelect.astro";
 import { groups } from "@/data/menu";
 ---
 
 <aside class="sidebar">
-  <a href="/" role="presentation" class="sidebar-top button">
+  <a href="/" role="presentation" class="sidebar-top">
     <Logo />
   </a>
   <nav aria-label="Primary">
-    <MenuLinks groups={groups} />
+    {
+      groups.map((group) => (
+        <div class="nav-group">
+          {group.map((item) => (
+            <a class="nav-link" href={item.url}>
+              {item.title}
+            </a>
+          ))}
+        </div>
+      ))
+    }
   </nav>
   <ThemeSelect />
 </aside>
@@ -54,19 +63,45 @@ import { groups } from "@/data/menu";
     display: flex;
     flex-direction: column;
     gap: 24px;
+  }
 
-    /* MenuLinks renders each group as .menu.paragraph; cancel the
-       generic paragraph margin so gap above is the only spacing. */
-    :global(.paragraph) {
-      margin-block: 0;
+  .nav-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  /* Custom-built rather than reusing .menu (menu.css) -- the sidebar's
+     bare-at-rest, filled-on-hover look is different enough from .menu's
+     shared filled-pill-list treatment (still used as-is on /shrines/ and
+     the mobile drawer) that overriding it piecemeal fought Astro's
+     component-scoping specificity instead of just being simpler here. */
+  .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: var(--rounded-large);
+    color: inherit;
+    text-decoration-line: none;
+    font-size: var(--font-size-base);
+    color: var(--theme-link);
+    font-weight: bold;
+
+    @media (hover) {
+      &:hover {
+        background-image: radial-gradient(var(--theme-hover-light));
+      }
+    }
+
+    &:focus-visible {
+      outline-offset: -2px;
     }
   }
 
   .sidebar-top {
-    /* `button` class supplies color/shape; this is just extra padding
-       for the logo. Centered, not left-aligned like Header.astro's
-       copy, since there's no hamburger here to balance against. */
-    padding: 16px;
+    display: flex;
+    padding: 8px 16px;
+    color: var(--theme-accent);
 
     /* :global needed: Logo.astro injects raw SVG via set:html. */
     :global(svg) {

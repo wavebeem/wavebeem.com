@@ -59,6 +59,23 @@
   --theme-page-alt: var(--md-surface-container-low);
   --theme-page-text: var(--md-on-background);
 
+  /* Desktop-only: ambient page tone steps down relative to the main
+     content panel (see --theme-content-bg below), so the sidebar + top
+     inset read as a frame around it. surface-container-low rather than
+     surface-dim -- the container family is built for subtle nested-panel
+     hierarchy, not surface-dim/-bright's deliberately max-contrast
+     extremes. Below 70rem there's no sidebar/frame to contrast against,
+     so it stays plain --md-background. */
+  @media (width >= 70rem) {
+    --theme-page-bg: var(--md-surface-container-low);
+  }
+
+  /* Desktop main content panel, framed by the ambient page bg around it
+     (sidebar + top inset). Plain surface, pairing with
+     surface-container-low above for a gentle step rather than the
+     surface-dim/-bright extremes. */
+  --theme-content-bg: var(--md-surface);
+
   /* No M3 role for these. */
   --theme-scrollbar: var(--md-primary);
   --theme-bullet: var(--md-on-surface-variant);

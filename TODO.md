@@ -43,3 +43,13 @@ Tired of it. Find every italic usage across CSS and content and remove it.
 Let's cap out at SEVEN navigation items. Anything else can be reached from some
 other page (including a home page link!). The home page is always easy to get
 back to, and the nav bar is NOT an exhaustive list of all pages.
+
+## Am I overusing connected buttons?
+
+The consecutive a.infobox treatment might be an abuse of the concept of
+connected buttons. Let's try making them breathe a little bit.
+
+## Logo on top
+
+Logo in the sidebar just looks weird! Maybe we can do something about that on
+desktop. Put it on top?

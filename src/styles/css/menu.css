@@ -1,6 +1,6 @@
 .menu {
   display: grid;
-  gap: var(--infobox-gap);
+  gap: var(--connected-gap);
 
   background: var(--theme-page-bg);
   color: inherit;

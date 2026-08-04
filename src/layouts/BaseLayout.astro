@@ -99,8 +99,22 @@ const { title, description = "" } = Astro.props;
     @media (width >= 70rem) {
       /* Overrides .page-shell's align-items: start just for this item. */
       align-self: stretch;
-      /* Balances the sidebar's own left padding. */
-      padding-right: 8px;
+
+      /* Sidebar has no bg of its own, so it shows the ambient page bg;
+         this panel sits flush against it in the brighter surface tone,
+         rounded where the two meet. */
+      background: var(--theme-content-bg);
+      border-top-left-radius: var(--rounded-xlarge);
+      padding-top: 0px;
+      padding-inline: 0px;
+      margin-top: 24px;
+    }
+
+    /* Past this width, .page-shell's third balancing column pulls
+       .content's right edge away from the viewport edge too, exposing
+       the ambient bg on that side -- round to match. */
+    @media (width >= 100rem) {
+      border-top-right-radius: var(--rounded-xlarge);
     }
 
     /* page.css's article margin-inline: auto centers off-true once a

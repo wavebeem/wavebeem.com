@@ -10,7 +10,8 @@
   --font-heading: var(--font-body);
   --font-mono: "Iosevka Extended", var(--font-fallback-mono);
 
-  --infobox-gap: 2px;
+  --infobox-gap: 8px;
+  --connected-gap: 2px;
   --card-gap: 2px;
 
   /*
@@ -55,7 +56,7 @@
   /* Persistent desktop sidebar's column width. Wide enough to fit the
      logo + theme selector row (Sidebar.astro) side by side without
      wrapping, on top of the nav links below. */
-  --sidebar-width: 22rem;
+  --sidebar-width: 18rem;
 
   /* Sidebar + reading column + phantom sidebar-width column (for
      centering) + a little breathing room. */
