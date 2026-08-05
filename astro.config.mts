@@ -1,8 +1,7 @@
-// @ts-check
 import { defineConfig, passthroughImageService } from "astro/config";
 import { viteStaticCopy } from "vite-plugin-static-copy";
-import webpWatch from "./integrations/webpWatch.mjs";
-import trailingSlashRedirect from "./integrations/trailingSlashRedirect.mjs";
+import webpWatch from "./integrations/webpWatch.mts";
+import trailingSlashRedirect from "./integrations/trailingSlashRedirect.mts";
 
 // https://astro.build/config
 export default defineConfig({

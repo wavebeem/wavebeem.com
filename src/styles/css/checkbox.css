@@ -4,7 +4,7 @@ label:has(> input[type="checkbox"]:first-child) {
   gap: 0.5rem;
 
   input[type="checkbox"] {
-    accent-color: var(--theme-border);
+    accent-color: var(--theme-toggle-selected-bg);
     width: 1.5rem;
     height: 1.5rem;
     margin: 0;
