@@ -1,9 +1,8 @@
 .menu {
   display: grid;
-  gap: var(--connected-gap);
-
-  background: var(--theme-page-bg);
+  background: var(--theme-infobox);
   color: inherit;
+  border-radius: var(--rounded-large);
 
   > :is(a, *) {
     color: inherit;
