@@ -1,7 +1,9 @@
 .menu {
   display: grid;
-  background: var(--theme-infobox);
-  color: inherit;
+  /* background: var(--theme-infobox);
+  color: inherit; */
+  color: var(--theme-card-text);
+  background: var(--theme-card);
   border-radius: var(--rounded-large);
 
   > :is(a, *) {
@@ -12,11 +14,13 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    padding: 8px 16px;
+    padding: 10px 16px;
     line-height: 1.25;
 
-    color: var(--theme-infobox-text);
-    background: var(--theme-infobox);
+    color: var(--theme-card-text);
+    background: var(--theme-card);
+    /* color: var(--theme-infobox-text);
+    background: var(--theme-infobox); */
     outline-offset: -2px;
 
     font-size: var(--font-size-base);
@@ -29,6 +33,14 @@
     }
 
     &:has(+ &) {
+      border-bottom: 1px solid var(--theme-divider);
+      border-image: linear-gradient(
+          to right,
+          transparent 0 16px,
+          var(--theme-divider) 16px calc(100% - 16px),
+          transparent calc(100% - 16px)
+        )
+        1;
       border-bottom-left-radius: var(--rounded-small);
       border-bottom-right-radius: var(--rounded-small);
     }
