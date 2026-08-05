@@ -29,9 +29,8 @@
 }
 
 .button:focus-visible {
-  outline: 3px solid var(--theme-text);
-  outline-offset: 3px;
-  box-shadow: 0 0 0 3px var(--theme-page-bg);
+  outline: 2px dotted currentColor;
+  outline-offset: -4px;
 }
 
 .button:where([data-size="small"]) {

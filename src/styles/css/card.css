@@ -63,6 +63,13 @@
       border-top-right-radius: var(--rounded-large);
     }
 
+    /* A run of consecutive dt (multiple terms sharing one dd) is one
+       visual group -- only the first should get the gap-from-above
+       padding, or each extra term reads as its own separate entry. */
+    > dt + dt {
+      padding-block-start: 0;
+    }
+
     > dd {
       border-bottom-left-radius: var(--rounded-small);
       border-bottom-right-radius: var(--rounded-small);
@@ -128,8 +135,7 @@
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 3px var(--theme-card);
-    outline-width: 3px;
-    outline-offset: 3px;
+    outline: 2px dotted currentColor;
+    outline-offset: -4px;
   }
 }

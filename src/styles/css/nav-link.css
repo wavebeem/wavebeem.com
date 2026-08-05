@@ -5,7 +5,7 @@
 .nav-group {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0;
 }
 
 .nav-link {
@@ -18,6 +18,13 @@
   font-size: var(--font-size-base);
   font-weight: bold;
 
+  /* global.css's a:hover sets text-decoration-line: underline with
+     higher specificity (element + pseudo-class) than this rule's base
+     .nav-link (one class), so it wins on hover unless repeated here. */
+  &:hover {
+    text-decoration-line: none;
+  }
+
   @media (hover) {
     &:hover {
       background-image: radial-gradient(var(--theme-hover-light));
@@ -25,6 +32,7 @@
   }
 
   &:focus-visible {
-    outline-offset: -2px;
+    outline: 2px dotted currentColor;
+    outline-offset: -4px;
   }
 }

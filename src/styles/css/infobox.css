@@ -61,7 +61,8 @@
   }
 
   &:focus-visible {
-    outline-offset: -3px;
+    outline: 2px dotted currentColor;
+    outline-offset: -4px;
   }
 }
 

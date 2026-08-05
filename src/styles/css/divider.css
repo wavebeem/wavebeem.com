@@ -1,30 +1,36 @@
-/* https://css-shape.com/wavy-line/ -- <hr> gets this too, so plain
-   markdown dividers match the footer's wavy divider. */
+/* Both dividers below share one shape (a true sine wave, period 32px,
+   amplitude 3.5px, 1px stroke), sourced from src/icons/divider-wavy-h.svg
+   and -v.svg. This replaced a hand-derived CSS radial-gradient mask
+   (see git history) that went through several revisions with real
+   problems each time -- broken interlocking math, then arcs with the
+   wrong tangent direction for a sine curve (flat where it should be
+   steep), then a sine polyline whose amplitude (4px) exactly matched
+   the tile's half-width/height, leaving no room for the 1px stroke and
+   clipping the peaks flat against the tile edge. Amplitude is 3.5, not
+   4 = tile-half-size, specifically to leave that 0.5px margin. --mask-
+   wavy-h/-v are defined once in BaseLayout.astro from those source
+   files and inherited from <html>, so this file only has to reference
+   them. */
 hr,
 .divider-wavy {
   display: block;
   border: 0;
   width: 100%;
+  height: 8px;
   background: var(--theme-divider-decorative);
+  mask-image: var(--mask-wavy-h);
+  mask-repeat: repeat-x;
+  mask-size: 32px 8px;
+}
 
-  --s: var(--divider-size);
-  --b: var(--divider-thickness);
-  --m: 1; /* curvature of the wave [0 2] */
-
-  --R: calc(var(--s) * sqrt(var(--m) * var(--m) + 1) + var(--b) / 2);
-  height: calc(2 * var(--R));
-  --_g: #0000 calc(99% - var(--b)), #000 calc(101% - var(--b)) 99%, #0000 101%;
-  mask:
-    radial-gradient(
-        var(--R) at left 50% bottom calc(-1 * var(--m) * var(--s)),
-        var(--_g)
-      )
-      calc(50% - 2 * var(--s)) calc(50% - var(--s) / 2 - var(--b) / 2) /
-      calc(4 * var(--s)) calc(var(--s) + var(--b)) repeat-x,
-    radial-gradient(
-        var(--R) at left 50% top calc(-1 * var(--m) * var(--s)),
-        var(--_g)
-      )
-      50% calc(50% + var(--s) / 2 + var(--b) / 2) / calc(4 * var(--s))
-      calc(var(--s) + var(--b)) repeat-x;
+/* Vertical divider (Sidebar.astro): same shape as .divider-wavy above,
+   rotated -- period and amplitude swap axes, everything else matches. */
+.divider-wavy-vertical {
+  display: block;
+  width: 8px;
+  height: 100%;
+  background: var(--theme-divider-decorative);
+  mask-image: var(--mask-wavy-v);
+  mask-repeat: repeat-y;
+  mask-size: 8px 32px;
 }

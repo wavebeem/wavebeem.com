@@ -289,7 +289,8 @@ main ul ::marker {
     text-decoration-line: none;
 
     &:focus-visible {
-      outline-offset: -2px;
+      outline: 2px dotted currentColor;
+      outline-offset: -4px;
     }
 
     &:where(:hover:not(:active)) {
@@ -365,8 +366,8 @@ article header small {
 }
 
 :where(:focus-visible) {
-  outline: 3px solid currentColor;
-  outline-offset: 2px;
+  outline: 2px dotted currentColor;
+  outline-offset: 4px;
   text-decoration-line: none;
 }
 

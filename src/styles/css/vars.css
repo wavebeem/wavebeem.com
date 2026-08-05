@@ -55,12 +55,6 @@
      wrapping, on top of the nav links below. */
   --sidebar-width: 18rem;
 
-  /* Sidebar + reading column + phantom sidebar-width column (for
-     centering) + a little breathing room. */
-  --page-shell-max-width: calc(
-    var(--sidebar-width) * 2 + var(--width-heading) + 4rem
-  );
-
   --link-underline-offset: calc(1em / 8);
   --link-underline-thickness: 1px;
   --link-underline-thickness-hover: calc(var(--link-underline-thickness) + 0px);

@@ -177,8 +177,8 @@
     }
 
     &:focus-visible {
-      outline-color: currentColor;
-      outline-offset: -2px;
+      outline: 2px dotted currentColor;
+      outline-offset: -4px;
     }
   }
 
@@ -265,8 +265,8 @@
     }
 
     &:focus-visible {
-      outline-color: var(--theme-page-text);
-      outline-offset: -2px;
+      outline: 2px dotted currentColor;
+      outline-offset: -4px;
       z-index: 1;
     }
 
@@ -276,11 +276,6 @@
       border-radius: var(--rounded-pill);
       background: var(--theme-toggle-selected-bg);
       color: var(--theme-toggle-selected-text);
-
-      /* Standard text color is invisible against background, so offset it */
-      &:focus-visible {
-        outline-offset: 2px;
-      }
     }
   }
 </style>

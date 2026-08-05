@@ -4,15 +4,25 @@ import Head from "@/components/Head.astro";
 import Header from "@/components/Header.astro";
 import Sidebar from "@/components/Sidebar.astro";
 import Footer from "@/components/Footer.astro";
+import wavyH from "@/icons/divider-wavy-h.svg?raw";
+import wavyV from "@/icons/divider-wavy-v.svg?raw";
 
 interface Props {
   title: string;
   description?: string;
 }
 const { title, description = "" } = Astro.props;
+
+// Astro's ?raw import loads the real .svg files as source text, and
+// encodeURIComponent does the data-URI escaping correctly (a hand-rolled
+// version of this went wrong once already -- see divider.css). Exposed
+// as CSS custom properties (below) on <html> so every .astro/.css file
+// can share one definition instead of duplicating the wave shape.
+const maskWavyH = `url("data:image/svg+xml,${encodeURIComponent(wavyH)}")`;
+const maskWavyV = `url("data:image/svg+xml,${encodeURIComponent(wavyV)}")`;
 ---
 
-<html lang="en">
+<html lang="en" style={`--mask-wavy-h: ${maskWavyH}; --mask-wavy-v: ${maskWavyV};`}>
   <head>
     <Head title={title} description={description} />
   </head>
@@ -68,25 +78,13 @@ const { title, description = "" } = Astro.props;
       display: grid;
       grid-template-columns: var(--sidebar-width) 1fr;
       /* Row fills the grid's full height, so .content can stretch
-         into it below. */
+         into it below. Always 2 columns, no third balancing column or
+         width cap on .page-shell itself: the sidebar stays pinned to
+         the viewport edge at every width (a stable anchor, not
+         something that drifts and grows a scroll-distance gap as the
+         window widens); .content caps and centers itself instead, see
+         below. */
       grid-template-rows: 1fr;
-      /* Without this, the sidebar's grid item stretches to match
-         .content's height, leaving no room for position: sticky to
-         move within; sticky needs the item shorter than its track. */
-      align-items: start;
-    }
-
-    /* Past this width, cap and center the whole shell instead of
-       leaving the sidebar pinned to the viewport edge. */
-    @media (width >= 100rem) {
-      /* Third empty column balances the sidebar, so .content centers
-         in the box instead of skewing toward it. */
-      grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
-      /* width: 100% needed: as a flex item, auto margins here would
-         otherwise override stretch and shrink this to fit-content. */
-      width: 100%;
-      max-width: var(--page-shell-max-width);
-      margin-inline: auto;
     }
   }
 
@@ -97,47 +95,14 @@ const { title, description = "" } = Astro.props;
     flex-direction: column;
 
     @media (width >= 70rem) {
-      /* Overrides .page-shell's align-items: start just for this item. */
-      align-self: stretch;
-
-      /* Sidebar has no bg of its own, so it shows the ambient page bg;
-         this panel sits flush against it in the brighter surface tone,
-         rounded where the two meet. */
-      background: var(--theme-content-bg);
-      border-top-left-radius: var(--rounded-xlarge);
       padding-top: 0px;
       padding-inline: 0px;
-      margin-top: 24px;
-    }
-
-    /* Past this width, .page-shell's third balancing column pulls
-       .content's right edge away from the viewport edge too, exposing
-       the ambient bg on that side -- round to match. */
-    @media (width >= 100rem) {
-      border-top-right-radius: var(--rounded-xlarge);
-    }
-
-    /* page.css's article margin-inline: auto centers off-true once a
-       sidebar's involved; left-align instead, anchored to the sidebar. */
-    @media (width >= 70rem) {
-      :global(article:where(.page) > :is(header, section, footer)) {
-        margin-inline: 0;
-      }
-    }
-
-    /* Past this width, staying anchored to the sidebar just grows a
-       dead zone on the right; go back to centering. */
-    @media (width >= 125rem) {
-      :global(article:where(.page) > :is(header, section, footer)) {
-        margin-inline: auto;
-      }
-    }
-
-    /* Footer.astro centers unconditionally; match .page's left-align here. */
-    @media (width >= 70rem) {
-      :global(.footer > *) {
-        margin-inline: 0;
-      }
+      /* Caps and centers within the remaining 1fr column, independent
+         of the sidebar. width-heading, not page-shell-max-width: that
+         var accounted for a phantom balancing sidebar column that no
+         longer exists now that .page-shell itself isn't capped. */
+      max-width: var(--width-heading);
+      margin-inline: auto;
     }
   }
 
