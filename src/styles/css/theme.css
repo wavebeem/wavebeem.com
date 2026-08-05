@@ -51,8 +51,16 @@
   --theme-text: var(--md-on-surface);
 
   /* infobox is clickable, .card isn't. tertiary-container is the
-     alternative. */
-  --theme-infobox: var(--md-secondary-container);
+     alternative.
+     secondary-container pops much harder against this site's near-black
+     dark background than it does against the near-white light background
+     (measured contrast-vs-background: 1.99 dark vs 1.23 light) -- an M3
+     tonal-system artifact, not a WCAG issue (text contrast is fine either
+     way). surface-container's pop is a much closer match to light mode's. */
+  --theme-infobox: light-dark(
+    var(--md-secondary-container),
+    var(--md-surface-container)
+  );
   /* Used to share --theme-infobox's value by coincidence. */
   --theme-code: var(--md-surface-container-lowest);
 
@@ -75,7 +83,10 @@
   /* Big decorative dividers (zig-zag <hr>, wavy footer divider) --
      distinct from --theme-divider, which is M3's spec-correct role for
      plain/subtle dividers (outline-variant). This one's just for looks. */
-  --theme-divider-decorative: var(--md-secondary-container);
+  --theme-divider-decorative: light-dark(
+    var(--md-secondary-container),
+    var(--md-surface-container)
+  );
   --theme-border: var(--md-outline);
   /* M3 drag state-layer opacity (m3.material.io/foundations/interaction/states/state-layers) -- for outlines that need to be barely there. */
   --theme-border-faint: rgb(from var(--md-outline) r g b / 16%);
@@ -83,15 +94,19 @@
   /* Could be tertiary instead, like --theme-accent2. */
   --theme-number: var(--md-primary);
 
-  /* avatar.css has dark-mode luminosity-blend logic tuned for the old
-     color. Recheck. */
-  --theme-photo: var(--md-primary-container);
+  --theme-photo: light-dark(
+    var(--md-primary-container),
+    var(--md-primary-fixed-dim)
+  );
   --theme-image: var(--md-surface-container-lowest);
   /* Usage not audited. */
   --theme-box: var(--md-surface-container);
   /* Non-interactive, unlike --theme-infobox. Plain surface tone, not a
      container role. */
-  --theme-card: var(--md-surface-container);
+  --theme-card: light-dark(
+    var(--md-surface-container),
+    var(--md-surface-container-low)
+  );
 
   /* Shared across surface types; real M3 state layers vary by surface.
      Was 30%/10% before. */
