@@ -73,7 +73,6 @@
 
   /* No M3 role for these. */
   --theme-scrollbar: var(--md-primary);
-  --theme-bullet: var(--md-on-surface-variant);
 
   /* Vague name, usage not audited. */
   --theme-accent: var(--md-primary);
@@ -84,15 +83,18 @@
      distinct from --theme-divider, which is M3's spec-correct role for
      plain/subtle dividers (outline-variant). This one's just for looks. */
   --theme-divider-decorative: light-dark(
-    var(--md-secondary-container),
+    var(--md-outline-variant),
     var(--md-surface-container)
   );
   --theme-border: var(--md-outline);
   /* M3 drag state-layer opacity (m3.material.io/foundations/interaction/states/state-layers) -- for outlines that need to be barely there. */
   --theme-border-faint: rgb(from var(--md-outline) r g b / 16%);
+  /* Edge definition for low-contrast images. */
+  --theme-image-outline: rgb(from var(--md-outline) r g b / 8%);
 
-  /* Could be tertiary instead, like --theme-accent2. */
-  --theme-number: var(--md-primary);
+  /* Ordered/unordered list marker badge -- shared by both, see global.css. */
+  --theme-bullet-bg: var(--md-tertiary-container);
+  --theme-bullet-text: var(--md-on-tertiary-container);
 
   --theme-photo: light-dark(
     var(--md-primary-container),

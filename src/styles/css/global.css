@@ -28,52 +28,6 @@
   color: var(--theme-page-text);
 }
 
-/* https://css-pattern.com/wave-circles/ */
-/* :root, */
-:root[data-wallpaper="waves"] {
-  --s: 256px; /* control the size*/
-  --c1: var(--theme-page-bg);
-  --c2: var(--theme-page-alt);
-
-  --_g: var(--s) var(--s)
-    radial-gradient(var(--c1) 17%, var(--c2) 18% 35%, #0000 36.5%);
-  background:
-    calc(var(--s) / -4) calc(var(--s) / -4) / var(--_g),
-    calc(var(--s) / 4) calc(var(--s) / 4) / var(--_g),
-    radial-gradient(var(--c2) 34%, var(--c1) 36% 68%, #0000 70%) 0 0 /
-      calc(var(--s) / 2) calc(var(--s) / 2),
-    repeating-linear-gradient(45deg, var(--c1) -12.5% 12.5%, var(--c2) 0 37.5%)
-      0 0 / var(--s) var(--s);
-
-  background-color: var(--theme-page-bg);
-  /* background-attachment: fixed; */
-}
-
-/* :root, */
-:root[data-wallpaper="stripes"] {
-  --x: 2px;
-  background: repeating-linear-gradient(
-    to bottom,
-    var(--c1) 0 var(--x),
-    var(--c2) var(--x) calc(2 * var(--x))
-  );
-  background-color: var(--theme-page-bg);
-}
-
-/* https://screenspan.net/polka/ */
-:root[data-wallpaper="polka"] {
-  --a: 8px;
-  --b: calc(2 * var(--a));
-  background-image:
-    radial-gradient(var(--theme-page-alt) calc(30% - 1px), transparent 30%),
-    radial-gradient(var(--theme-page-alt) calc(30% - 1px), transparent 30%);
-  background-color: var(--theme-page-bg);
-  background-position:
-    0px 0px,
-    var(--a) var(--a);
-  background-size: var(--b) var(--b);
-}
-
 :where(:root[data-figure-viewer] :is(figure, p)) img {
   cursor: var(--cursor-zoom-in);
 }
@@ -238,31 +192,16 @@ main :is(blockquote, ul, ol, dl, p) {
 }
 
 main ul {
-  padding-left: var(--list-inset);
-
-  /* @media (width >= 30rem) {
-    padding-left: 0;
-  } */
+  padding-left: 2.5rem;
+  list-style-type: none;
 }
 
 main :is(ol, ul) ul {
-  padding-left: var(--list-inset);
+  padding-left: 2.5rem;
 }
 
-main ul {
-  /* list-style-type: disc; */
-  /* list-style-type: circle; */
-  list-style-type: "–\00a0";
-  list-style-type: "→\00a0";
-  list-style-type: "*\00a0";
-}
-
-main ul ::marker {
-  /* font-size: 0.5em; */
-  vertical-align: middle;
-  font-family: var(--font-mono);
-  font-weight: bold;
-  color: var(--theme-bullet);
+main ul:not(.card, .infobox, .inline-menu) > li {
+  position: relative;
 }
 
 .inline-menu {
@@ -325,6 +264,9 @@ img,
 video {
   display: block;
   /* border-radius: var(--rounded-medium); */
+  /* TODO: applies even to already-framed/high-contrast images. Maybe opt-out class/attribute. */
+  outline: 1px solid var(--theme-image-outline);
+  outline-offset: -1px;
 }
 
 .border,
@@ -476,21 +418,34 @@ ol > li {
   list-style-type: none;
 }
 
+main ul:not(.card, .infobox, .inline-menu) > li::before,
 ol > li::before {
   --size: 2rem;
   left: calc(-1 * (var(--size) + 0.5rem));
-  width: var(--size);
   top: 2px;
 
+  width: var(--size);
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: absolute;
-  display: inline;
   font-size: var(--font-size-small);
   font-family: var(--font-mono);
-  content: counter(list-item) "";
   font-weight: bold;
-  background: var(--theme-number);
-  text-align: center;
+  line-height: 1;
+  background: var(--theme-bullet-bg);
+  color: var(--theme-bullet-text);
   border-radius: var(--rounded-pill);
+}
+
+main ul:not(.card, .infobox, .inline-menu) > li::before {
+  content: "•";
+}
+
+ol > li::before {
+  content: counter(list-item) "";
 }
 
 li > :is(h2, h3) {

@@ -1,0 +1,260 @@
+---
+import PageLayout from "@/layouts/PageLayout.astro";
+
+// Hand-tokenized to match Prism's `.token.*` classes (syntax.css)
+const jsCode = `<span class="token comment">// Artisan kombucha tote bag</span>
+<span class="token keyword">function</span> <span class="token function">brew</span><span class="token punctuation">(</span>beans<span class="token punctuation">,</span> <span class="token punctuation">{</span> direct <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> roast <span class="token operator">=</span> direct <span class="token operator">?</span> <span class="token string">"single-origin"</span> <span class="token operator">:</span> <span class="token string">"blend"</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> roast <span class="token operator">+</span> <span class="token string">" — cold-pressed"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>`;
+---
+
+<PageLayout
+  title="Style guide"
+  description="An internal page exercising every themed component at once, for checking color/contrast/spacing across light and dark mode."
+>
+  <p>
+    This page exists purely to preview the theme. Every component below is
+    padded out with hipster ipsum so headings, body copy, links, and containers
+    can all be eyeballed together instead of one at a time across a dozen real
+    pages.
+  </p>
+
+  <h2>Headings & text</h2>
+
+  <p>
+    Artisan kombucha tote bag single-origin coffee, before they sold out{" "}
+    <em>cold-pressed</em> meditation retreat. Farm-to-table listicle{" "}
+    <strong>direct trade</strong> mixtape, forage sriracha chambray gluten-free viral
+    marfa. Tousled portland distillery{" "}
+    <q>you probably haven't heard of it</q>, ethical migas small batch{" "}
+    <code>--theme-accent</code> woke selvage.
+  </p>
+
+  <blockquote>
+    <p>
+      Blog quote block: artisan kombucha tote bag single-origin coffee
+      cold-pressed meditation retreat. Farm-to-table listicle direct trade
+      mixtape, forage sriracha chambray gluten-free viral marfa. Also try
+      clicking to reveal this spoiler:{" "}
+      <span tabindex="0" class="spoiler">the narwhal bacons at midnight</span>.
+    </p>
+  </blockquote>
+
+  <h3>A subheading</h3>
+
+  <p>
+    Small batch meditation retreat <small>(est. 2012)</small>, ethical migas
+    tousled distillery. Portland woke selvage forage, direct trade mixtape
+    before they sold out chambray.
+  </p>
+
+  <h2>Lists</h2>
+
+  <h3>Unordered</h3>
+  <ul>
+    <li>Artisan kombucha tote bag</li>
+    <li>Single-origin coffee, before they sold out</li>
+    <li>
+      Cold-pressed meditation retreat
+      <ul>
+        <li>Farm-to-table listicle</li>
+        <li>Direct trade mixtape</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h3>Ordered</h3>
+  <ol>
+    <li>Forage sriracha chambray</li>
+    <li>Gluten-free viral marfa</li>
+    <li>Tousled portland distillery</li>
+    <li>Ethical migas small batch</li>
+  </ol>
+
+  <h3>Definition list</h3>
+  <dl>
+    <dt>Woke selvage</dt>
+    <dd>Forage sriracha chambray gluten-free viral marfa</dd>
+    <dt>Tousled portland</dt>
+    <dd>
+      Distillery you probably haven't heard of it, ethical migas small batch
+    </dd>
+  </dl>
+
+  <h2>Table</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Roast</th>
+        <th>Origin</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Single-origin</td>
+        <td>Marfa</td>
+        <td>Cold-pressed, direct trade</td>
+      </tr>
+      <tr>
+        <td>Small batch</td>
+        <td>Portland</td>
+        <td>Woke selvage, forage</td>
+      </tr>
+      <tr>
+        <td>Artisan blend</td>
+        <td>Williamsburg</td>
+        <td>Gluten-free, viral</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>Code</h2>
+
+  <pre class="language-js"><code class="language-js" set:html={jsCode} /></pre>
+
+  <p>
+    Inline code too: <code>--theme-infobox</code> maps to{" "}
+    <code>--md-secondary-container</code>.
+  </p>
+
+  <h2>Details</h2>
+
+  <details>
+    <summary>Farm-to-table listicle</summary>
+    <p>
+      Direct trade mixtape, forage sriracha chambray gluten-free viral marfa.
+    </p>
+  </details>
+  <details>
+    <summary>Tousled portland distillery</summary>
+    <p>Ethical migas small batch, woke selvage forage sriracha.</p>
+  </details>
+
+  <h2>Cards</h2>
+
+  <ul class="card">
+    <li><p>Maintained and improved an artisan kombucha pipeline</p></li>
+    <li>
+      <p>Shipped a direct-trade mixtape aggregator, gluten-free by default</p>
+    </li>
+    <li><p>Mentored several roasters (L1&ndash;L4)</p></li>
+  </ul>
+
+  <dl class="card">
+    <dt><a href="#">Single-origin &mdash; Marfa</a></dt>
+    <dd>Cold-pressed, direct trade, small batch</dd>
+    <dt><a href="#">Woke Selvage</a></dt>
+    <dd>Forage sriracha chambray gluten-free viral marfa</dd>
+  </dl>
+
+  <dl class="card" data-layout="wide">
+    <dt>Roast</dt>
+    <dd>Single-origin</dd>
+    <dt>Origin</dt>
+    <dd>Marfa</dd>
+  </dl>
+
+  <h2>Infoboxes</h2>
+
+  <a class="infobox" href="#">
+    <div class="heading">Artisan kombucha tote bag</div>
+    <div class="description">
+      Single-origin coffee, before they sold out, cold-pressed meditation
+      retreat.
+    </div>
+  </a>
+
+  <a class="infobox" href="#">
+    <div class="heading">Farm-to-table listicle</div>
+    <div class="description">
+      Direct trade mixtape, forage sriracha chambray gluten-free viral marfa.
+    </div>
+  </a>
+
+  <ul class="infobox">
+    <li><a href="#">Tousled portland distillery</a></li>
+    <li><a href="#">Ethical migas small batch</a></li>
+    <li><a href="#">Woke selvage forage</a></li>
+  </ul>
+
+  <h2>Menu</h2>
+
+  <section class="menu">
+    <a href="#">Single-origin</a>
+    <a href="#">Cold-pressed</a>
+    <a href="#">Direct trade</a>
+    <a href="#">Small batch</a>
+    <a href="#">Woke selvage</a>
+  </section>
+
+  <h2>Buttons</h2>
+
+  <p>
+    <a class="button" href="#">Brew a batch &rarr;</a>{" "}
+    <a class="button" data-size="small" href="#">Small batch</a>
+  </p>
+
+  <ul class="inline-menu">
+    <li><a href="#">Forage</a></li>
+    <li><a href="#">Direct trade</a></li>
+    <li><a href="#">Gluten-free</a></li>
+    <li><a href="#">Viral</a></li>
+  </ul>
+
+  <h2>Media</h2>
+
+  <p>
+    Artisan kombucha tote bag single-origin coffee, before they sold out
+    cold-pressed meditation retreat. Farm-to-table listicle direct trade
+    mixtape, forage sriracha chambray gluten-free viral marfa. Tousled portland
+    distillery, ethical migas small batch woke selvage.
+  </p>
+
+  <div class="photo-grid paragraph">
+    <figure>
+      <img
+        src="/art/assets/2025-04-13-dedenne.webp"
+        alt="Dedenne"
+        width="2048"
+        height="2048"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/art/assets/2020-06-14-teeny-sanguini.webp"
+        alt="Teeny Sanguini"
+        width="1280"
+        height="1280"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/art/assets/2024-04-02-orc-awooga.webp"
+        alt="Orc Awooga"
+        width="1280"
+        height="1280"
+      />
+    </figure>
+    <figure>
+      <img
+        src="/art/assets/2024-06-28-elephant.webp"
+        alt="Elephant"
+        width="800"
+        height="800"
+      />
+    </figure>
+  </div>
+
+  <h2>Divider</h2>
+
+  <p><strong>Above the line:</strong> artisan kombucha tote bag.</p>
+
+  <hr />
+
+  <p>
+    <strong>Below the line:</strong> single-origin coffee, before they sold out.
+  </p>
+</PageLayout>
