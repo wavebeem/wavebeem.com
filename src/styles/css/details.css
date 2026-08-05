@@ -59,7 +59,7 @@
 
     :where(&:focus-visible) {
       outline: 2px dotted currentColor;
-      outline-offset: -4px;
+      outline-offset: -2px;
     }
 
     @media (hover) {
@@ -77,8 +77,8 @@
   /* Circle badge instead of a plain +/- glyph. */
   :where(& summary)::after {
     content: "";
-    --details-circle: var(--md-primary);
-    --details-text: var(--md-on-primary);
+    --details-circle: var(--theme-details-circle);
+    --details-text: var(--theme-details-text);
     height: 24px;
     aspect-ratio: 1;
     background: radial-gradient(

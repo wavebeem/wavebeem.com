@@ -18,6 +18,12 @@
   --theme-toggle-selected-bg: var(--md-primary);
   --theme-toggle-selected-text: var(--md-on-primary);
 
+  /* details.css's +/- expand indicator: same high-contrast filled badge
+     as --theme-toggle-selected above, kept as its own token (not reused
+     directly) so this can be retuned without affecting button groups. */
+  --theme-details-circle: var(--md-primary);
+  --theme-details-text: var(--md-on-primary);
+
   --theme-link: var(--md-primary);
 
   /* Was a fixed black/white redaction-bar look. Now themed. */

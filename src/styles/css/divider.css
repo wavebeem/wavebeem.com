@@ -6,11 +6,19 @@
    wrong tangent direction for a sine curve (flat where it should be
    steep), then a sine polyline whose amplitude (4px) exactly matched
    the tile's half-width/height, leaving no room for the 1px stroke and
-   clipping the peaks flat against the tile edge. Amplitude is 3.5, not
-   4 = tile-half-size, specifically to leave that 0.5px margin. --mask-
-   wavy-h/-v are defined once in BaseLayout.astro from those source
-   files and inherited from <html>, so this file only has to reference
-   them. */
+   clipping the peaks flat against the tile edge (amplitude is 3.5, not
+   4 = tile-half-size, to leave that 0.5px margin). One more fix after
+   that: the path's ends landed exactly on the tile boundary, so
+   mask-repeat's tiling had two stroke caps butting up against each
+   other at every seam instead of one continuous stroke, visible as a
+   thin pinch at the peak nearest each seam. The source SVGs now draw a
+   few extra sample points of the same periodic sin() past each edge of
+   the nominal one-period range (still real values, sin() repeats
+   exactly by construction) and let the viewBox clip the overhang, so
+   every seam falls in the middle of a continuous stroke run instead of
+   at a cap. --mask-wavy-h/-v are defined once in BaseLayout.astro from
+   those source files and inherited from <html>, so this file only has
+   to reference them. */
 hr,
 .divider-wavy {
   display: block;
