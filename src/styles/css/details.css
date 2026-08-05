@@ -69,11 +69,6 @@
     }
   }
 
-  :where(&[open] summary) {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
   /* Circle badge instead of a plain +/- glyph. */
   :where(& summary)::after {
     content: "";
@@ -99,7 +94,6 @@
 
   :where(&[open] > summary) {
     margin-bottom: -0.5rem;
-    border-bottom: 2px dotted;
     position: relative;
   }
 }
