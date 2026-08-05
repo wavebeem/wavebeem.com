@@ -1,5 +1,5 @@
 ---
-import { MenuIcon, XIcon } from "@lucide/astro";
+import { IconMenu, IconClose } from "./icons";
 import Logo from "./Logo.astro";
 import ThemeSelect from "./ThemeSelect.astro";
 import { groups } from "@/data/menu";
@@ -14,14 +14,14 @@ import { groups } from "@/data/menu";
     </span>
     <nav class="nav" aria-label="Menu">
       <button type="button" class="hamburger" aria-label="Open menu">
-        <MenuIcon />
+        <IconMenu />
       </button>
     </nav>
   </div>
   <dialog class="nav-menu">
     <form method="dialog" class="nav-menu-toolbar">
       <button type="submit" class="nav-menu-close" aria-label="Close menu">
-        <XIcon />
+        <IconClose />
       </button>
     </form>
     <div class="nav-menu-content">
