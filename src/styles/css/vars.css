@@ -10,6 +10,10 @@
   --infobox-gap: 8px;
   --connected-gap: 2px;
   --card-gap: 2px;
+  /* m3.material.io/components/button-groups/specs: standard button group
+     inner padding at the Small size tier (matches .button[data-size="small"]'s
+     padding, which .inline-menu shares). */
+  --button-group-gap: 12px;
 
   /*
    Fluid typography seems really cool, but it also kinda looks terrible unless

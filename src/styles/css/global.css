@@ -271,8 +271,7 @@ main ul ::marker {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: var(--infobox-gap);
-  /* gap: var(--infobox-gap); */
+  gap: var(--button-group-gap);
 
   li {
     display: flex;
@@ -282,9 +281,9 @@ main ul ::marker {
     line-height: 1.15;
     padding: 4px 8px;
     background-color: var(--theme-infobox);
-    font-weight: bold;
+    font-weight: 600;
 
-    border-radius: var(--rounded-medium);
+    border-radius: var(--rounded-pill);
 
     text-decoration-line: none;
 
