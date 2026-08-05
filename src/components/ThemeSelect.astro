@@ -206,6 +206,10 @@
     color: var(--theme-page-text);
     box-shadow: 0 0 32px rgb(from var(--theme-text) r g b / 20%);
 
+    &:focus-visible{
+      outline-offset: -4px;
+    }
+
     &[open] {
       display: flex;
     }
@@ -276,6 +280,8 @@
       border-radius: var(--rounded-pill);
       background: var(--theme-toggle-selected-bg);
       color: var(--theme-toggle-selected-text);
+      outline-offset: -4px;
+
     }
   }
 </style>
