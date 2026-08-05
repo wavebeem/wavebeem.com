@@ -279,7 +279,7 @@ main ul ::marker {
 
   a {
     line-height: 1.15;
-    padding: 4px 8px;
+    padding: 4px 12px;
     background-color: var(--theme-infobox);
     font-weight: 600;
 

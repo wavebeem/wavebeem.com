@@ -34,7 +34,7 @@
 }
 
 .button:where([data-size="small"]) {
-  padding: 4px 8px;
+  padding: 4px 12px;
   border-radius: var(--rounded-pill);
   font-size: var(--font-size-small);
 }
