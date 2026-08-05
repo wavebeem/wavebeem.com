@@ -2,11 +2,12 @@
 import { defineConfig, passthroughImageService } from "astro/config";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import webpWatch from "./integrations/webpWatch.mjs";
+import trailingSlashRedirect from "./integrations/trailingSlashRedirect.mjs";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.wavebeem.com",
-  integrations: [webpWatch()],
+  integrations: [webpWatch(), trailingSlashRedirect()],
   server: {
     port: 1312,
   },
