@@ -38,6 +38,11 @@ back to, and the nav bar is NOT an exhaustive list of all pages.
 Logo in the sidebar just looks weird! Maybe we can do something about that on
 desktop. Put it on top?
 
+## We need real lists
+
+M3 uses a lot of lists, and the current `.menu` should probably actually be
+lists inside of containers.
+
 ## Audit border radii
 
 Probably using too many and probably not well synced with M3.

@@ -18,11 +18,11 @@
   --theme-toggle-selected-bg: var(--md-primary);
   --theme-toggle-selected-text: var(--md-on-primary);
 
-  /* details.css's +/- expand indicator: same high-contrast filled badge
-     as --theme-toggle-selected above, kept as its own token (not reused
-     directly) so this can be retuned without affecting button groups. */
-  --theme-details-circle: var(--md-secondary);
-  --theme-details-text: var(--md-on-secondary);
+  /* details.css's chevron badge backdrop: plain surface (not
+     --theme-box/--md-surface-container, which is identical to
+     --theme-card in light mode and would disappear against its own
+     container). Reads as a hole punched through to the page background. */
+  --theme-details-circle: var(--md-surface);
 
   --theme-link: var(--md-primary);
 

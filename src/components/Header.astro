@@ -1,7 +1,6 @@
 ---
+import { MenuIcon, XIcon } from "@lucide/astro";
 import Logo from "./Logo.astro";
-import IconMenu from "./IconMenu.astro";
-import IconClose from "./IconClose.astro";
 import ThemeSelect from "./ThemeSelect.astro";
 import { groups } from "@/data/menu";
 ---
@@ -15,14 +14,14 @@ import { groups } from "@/data/menu";
     </span>
     <nav class="nav" aria-label="Menu">
       <button type="button" class="hamburger" aria-label="Open menu">
-        <IconMenu />
+        <MenuIcon />
       </button>
     </nav>
   </div>
   <dialog class="nav-menu">
     <form method="dialog" class="nav-menu-toolbar">
       <button type="submit" class="nav-menu-close" aria-label="Close menu">
-        <IconClose />
+        <XIcon />
       </button>
     </form>
     <div class="nav-menu-content">
@@ -133,7 +132,7 @@ import { groups } from "@/data/menu";
     border-radius: var(--rounded-small);
     color: var(--theme-accent);
 
-    @media (width >= 40rem) {
+    @media (width >= 70rem) {
       height: 32px;
     }
   }
@@ -220,9 +219,9 @@ import { groups } from "@/data/menu";
 
     translate: 100% 0;
     transition:
-      translate 0.25s ease,
-      overlay 0.25s ease allow-discrete,
-      display 0.25s ease allow-discrete;
+      translate var(--motion-duration-medium1) var(--motion-easing-standard),
+      overlay var(--motion-duration-medium1) var(--motion-easing-standard) allow-discrete,
+      display var(--motion-duration-medium1) var(--motion-easing-standard) allow-discrete;
 
     &[open] {
       translate: 0 0;
@@ -237,9 +236,9 @@ import { groups } from "@/data/menu";
     background: rgb(from var(--theme-scrim) r g b / 50%);
     opacity: 0;
     transition:
-      opacity 0.25s ease,
-      overlay 0.25s ease allow-discrete,
-      display 0.25s ease allow-discrete;
+      opacity var(--motion-duration-medium1) var(--motion-easing-standard),
+      overlay var(--motion-duration-medium1) var(--motion-easing-standard) allow-discrete,
+      display var(--motion-duration-medium1) var(--motion-easing-standard) allow-discrete;
   }
 
   .nav-menu[open]::backdrop {

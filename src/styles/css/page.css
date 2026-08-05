@@ -12,7 +12,7 @@ article:where(.page) {
 
   > header {
     > h1 {
-      margin-block: 2rem 1.5rem;
+      margin-block: 4rem 1.5rem;
     }
 
     > small {

@@ -20,6 +20,8 @@
 }
 
 .crime-frame :where(details, summary)::after,
-.details-reset :where(details, summary)::after {
+.details-reset :where(details, summary)::after,
+.crime-frame :where(details, summary)::before,
+.details-reset :where(details, summary)::before {
   content: none;
 }

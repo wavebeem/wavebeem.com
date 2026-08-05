@@ -100,7 +100,7 @@ h1 {
   font-size: var(--font-size-h1);
   font-family: var(--font-heading);
   font-weight: 900;
-  margin-block: 2rem 1.5rem;
+  margin-block: 4rem 1.5rem;
 }
 
 h1::after {
@@ -170,6 +170,8 @@ pre {
   background-color: var(--theme-redact-bg);
   color: transparent;
   cursor: default;
+  box-decoration-break: clone;
+  border-radius: var(--rounded-xsmall);
 }
 
 @media (hover) {
@@ -183,7 +185,8 @@ pre {
 }
 
 .spoiler:focus-visible {
-  outline: 3px solid var(--theme-text);
+  box-shadow: 0 0 0 6px var(--theme-page-bg);
+  outline: 2px dotted var(--theme-text);
   outline-offset: 2px;
 }
 

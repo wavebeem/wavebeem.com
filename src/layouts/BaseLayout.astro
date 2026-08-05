@@ -6,6 +6,8 @@ import Sidebar from "@/components/Sidebar.astro";
 import Footer from "@/components/Footer.astro";
 import wavyH from "@/icons/divider-wavy-h.svg?raw";
 import wavyV from "@/icons/divider-wavy-v.svg?raw";
+import chevronDown from "@/icons/chevron-down.svg?raw";
+import { dataUri } from "@/lib/dataUri";
 
 interface Props {
   title: string;
@@ -14,15 +16,21 @@ interface Props {
 const { title, description = "" } = Astro.props;
 
 // Astro's ?raw import loads the real .svg files as source text, and
-// encodeURIComponent does the data-URI escaping correctly (a hand-rolled
-// version of this went wrong once already -- see divider.css). Exposed
-// as CSS custom properties (below) on <html> so every .astro/.css file
-// can share one definition instead of duplicating the wave shape.
-const maskWavyH = `url("data:image/svg+xml,${encodeURIComponent(wavyH)}")`;
-const maskWavyV = `url("data:image/svg+xml,${encodeURIComponent(wavyV)}")`;
+// dataUri()'s encodeURIComponent does the data-URI escaping correctly (a
+// hand-rolled version of this went wrong once already -- see divider.css).
+// Exposed as CSS custom properties (below) on <html> so every .astro/.css
+// file can share one definition instead of duplicating the wave shape.
+const maskWavyH = dataUri("image/svg+xml", wavyH);
+const maskWavyV = dataUri("image/svg+xml", wavyV);
+const maskChevronDown = dataUri("image/svg+xml", chevronDown);
+const htmlStyle = `
+  --mask-wavy-h: ${maskWavyH};
+  --mask-wavy-v: ${maskWavyV};
+  --mask-chevron-down: ${maskChevronDown};
+`;
 ---
 
-<html lang="en" style={`--mask-wavy-h: ${maskWavyH}; --mask-wavy-v: ${maskWavyV};`}>
+<html lang="en" style={htmlStyle}>
   <head>
     <Head title={title} description={description} />
   </head>
@@ -45,20 +53,19 @@ const maskWavyV = `url("data:image/svg+xml,${encodeURIComponent(wavyV)}")`;
   .skip-link {
     position: absolute;
     z-index: 100;
-    padding: 16px 32px;
-    background: var(--theme-page-bg);
-    color: var(--theme-page-text);
-    border-radius: var(--rounded-large);
+    padding: 8px 16px;
+    background: var(--theme-button-bg);
+    color: var(--theme-button-text);
+    border-radius: var(--rounded-pill);
     /* margin: 8px; */
     translate: 16px -100%;
     text-decoration-line: none;
     font-weight: bold;
-    transition: 150ms;
-    transition-property: translate;
+    transition: translate var(--motion-duration-short3) var(--motion-easing-standard);
 
     &:focus {
       translate: 16px 16px;
-      outline-offset: -6px;
+      outline-offset: -2px;
     }
 
     @media (width < 70rem) {

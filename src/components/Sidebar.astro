@@ -62,9 +62,6 @@ import { groups } from "@/data/menu";
     flex-direction: column;
     gap: 24px;
     padding: 24px;
-    /* Aligns with the visible top of the page title's glyphs, not
-       its taller line box; not an arbitrary round number. */
-    padding-top: calc(24px + 2px);
     box-sizing: border-box;
     /* vh, not %: percentage heights don't resolve against an auto-height
        parent (.sidebar has no explicit height, just a max-height), so

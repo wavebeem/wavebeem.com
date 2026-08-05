@@ -6,8 +6,8 @@
   margin: 1.5rem 0;
   /* border-bottom: 1px solid var(--theme-divider); */
   /* border-bottom: 1px solid var(--theme-border); */
-  color: var(--theme-infobox-text);
-  background: var(--theme-infobox);
+  color: var(--theme-card-text);
+  background: var(--theme-card);
   padding-inline: 16px;
 
   /* We can't use `border-radius: inherit` since the internal shadow DOM messes it up */
@@ -19,11 +19,17 @@
   & + & {
     --details-radius-top: var(--rounded-small);
     margin-top: calc(var(--connected-gap) - 1.5rem);
-    /* margin-top: calc(-1.5rem); */
+  }
+
+  & + &[open] {
+    --details-radius-bottom: var(--rounded-small);
   }
 
   &:has(+ &) {
     --details-radius-bottom: var(--rounded-small);
+  }
+
+  [open] {
   }
 
   :where(&:hover) {
@@ -46,6 +52,7 @@
   padding-block: 8px;
   padding-inline: 16px;
   margin-inline: -16px;
+  position: relative;
 }
 
 :where(main details) {
@@ -70,32 +77,50 @@
     }
   }
 
-  /* Circle badge instead of a plain +/- glyph. */
+  /* Surface-tone circle backdrop, kept as a real flex item so
+     justify-content: space-between flushes it to the trailing edge. */
   :where(& summary)::after {
     content: "";
     --details-circle: var(--theme-details-circle);
-    --details-text: var(--theme-details-text);
     height: 24px;
     aspect-ratio: 1;
-    background: radial-gradient(
-      circle at center,
-      var(--details-text) 0 calc(100% - 6px),
-      transparent 0
-    );
-    box-shadow: 0 0 0 6px inset var(--details-circle);
-    border-image: conic-gradient(var(--details-circle) 0 0) 50% /
-      calc(50% - 1px);
-    clip-path: circle();
+    border-radius: var(--rounded-pill);
+    background: var(--details-circle);
   }
 
-  :where(&[open] summary)::after {
-    border-image: conic-gradient(var(--details-circle) 0 0) 1 / calc(50% - 1px)
-      2px;
+  /* Chevron, layered on top of the circle. Positioned relative to
+     summary (not the circle -- pseudo-elements can't nest) using the
+     same 16px summary padding-inline the circle flexes flush against,
+     so it lands centered regardless of label length. */
+  :where(& summary)::before {
+    content: "";
+    --details-text: var(--theme-text);
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    translate: 0 -50%;
+    /* Same box as the circle (::after), not just the glyph -- centering
+       a smaller box on the circle's right edge would bias it toward
+       one side instead of the middle. mask-size below shrinks the
+       visible glyph within this box without disturbing the centering. */
+    width: 24px;
+    height: 24px;
+    background: var(--details-text);
+    /* Icon source: chevron-down.svg, copied from lucide-static (stroke
+       hardcoded to black -- this is a mask source, not a rendered icon,
+       so currentColor has no CSS context to resolve against). */
+    mask-image: var(--mask-chevron-down);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 14px 14px;
+    transition: rotate var(--motion-duration-short4) var(--motion-easing-standard);
+  }
+
+  :where(&[open] summary)::before {
+    rotate: 180deg;
   }
 
   :where(&[open] > summary) {
     margin-bottom: -0.5rem;
-    position: relative;
-    border-radius: var(--rounded-small);
   }
 }

@@ -25,7 +25,6 @@
   --font-size-h1: 3rem;
   --font-size-h2: 2rem;
   --font-size-h3: 1.5rem;
-  --font-size-nav: 1.25rem;
   --font-size-base: 1.25rem;
   --font-size-small: 1rem;
   --font-size-code: 1rem;
@@ -41,6 +40,19 @@
   --rounded-xlarge: 32px;
 
   --rounded-pill: 9999px;
+
+  /* m3.material.io/styles/motion/easing-and-duration/tokens-specs.
+     Named after the M3 duration/easing tokens, not spelled out in full --
+     only the ones actually in use, added as needed. */
+  --motion-duration-short3: 150ms;
+  --motion-duration-short4: 200ms;
+  --motion-duration-medium1: 250ms;
+
+  --motion-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --motion-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
+  --motion-easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
+  --motion-easing-emphasized-decelerate: cubic-bezier(0.05, 0.7, 0.1, 1);
+  --motion-easing-emphasized-accelerate: cubic-bezier(0.3, 0, 0.8, 0.15);
 
   /* Shared by the zig-zag <hr> (page.css) and the wavy footer divider
      (Footer.astro) -- same scale, different mask shape. */
@@ -72,7 +84,6 @@
     --font-size-h2: round(1.5rem, 1px);
     --font-size-h3: round(1.25rem, 1px);
     --font-size-base: round(1.15rem, 1px);
-    --font-size-nav: round(1.15rem, 1px);
     --font-size-small: round(1rem, 1px);
   }
 }
