@@ -220,8 +220,10 @@ import { groups } from "@/data/menu";
     translate: 100% 0;
     transition:
       translate var(--motion-duration-medium1) var(--motion-easing-standard),
-      overlay var(--motion-duration-medium1) var(--motion-easing-standard) allow-discrete,
-      display var(--motion-duration-medium1) var(--motion-easing-standard) allow-discrete;
+      overlay var(--motion-duration-medium1) var(--motion-easing-standard)
+        allow-discrete,
+      display var(--motion-duration-medium1) var(--motion-easing-standard)
+        allow-discrete;
 
     &[open] {
       translate: 0 0;
@@ -237,8 +239,10 @@ import { groups } from "@/data/menu";
     opacity: 0;
     transition:
       opacity var(--motion-duration-medium1) var(--motion-easing-standard),
-      overlay var(--motion-duration-medium1) var(--motion-easing-standard) allow-discrete,
-      display var(--motion-duration-medium1) var(--motion-easing-standard) allow-discrete;
+      overlay var(--motion-duration-medium1) var(--motion-easing-standard)
+        allow-discrete,
+      display var(--motion-duration-medium1) var(--motion-easing-standard)
+        allow-discrete;
   }
 
   .nav-menu[open]::backdrop {

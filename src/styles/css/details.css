@@ -113,7 +113,8 @@
     mask-repeat: no-repeat;
     mask-position: center;
     mask-size: 14px 14px;
-    transition: rotate var(--motion-duration-short4) var(--motion-easing-standard);
+    transition: rotate var(--motion-duration-short4)
+      var(--motion-easing-standard);
   }
 
   :where(&[open] summary)::before {

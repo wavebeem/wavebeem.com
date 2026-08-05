@@ -216,7 +216,7 @@ import { IconTheme } from "./icons";
     color: var(--theme-page-text);
     box-shadow: 0 0 32px rgb(from var(--theme-text) r g b / 20%);
 
-    &:focus-visible{
+    &:focus-visible {
       outline-offset: -4px;
     }
 
@@ -227,7 +227,8 @@ import { IconTheme } from "./icons";
     &::backdrop {
       background: var(--theme-scrim);
       opacity: 0.3;
-      transition: opacity var(--motion-duration-short3) var(--motion-easing-standard);
+      transition: opacity var(--motion-duration-short3)
+        var(--motion-easing-standard);
 
       @starting-style {
         opacity: 0;
@@ -291,7 +292,6 @@ import { IconTheme } from "./icons";
       background: var(--theme-toggle-selected-bg);
       color: var(--theme-toggle-selected-text);
       outline-offset: -4px;
-
     }
   }
 </style>
