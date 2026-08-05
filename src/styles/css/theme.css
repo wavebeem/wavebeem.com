@@ -105,6 +105,7 @@
     var(--md-primary-container),
     var(--md-primary-fixed-dim)
   );
+  /* --theme-image: transparent; */
   --theme-image: var(--md-surface-container-lowest);
   /* Usage not audited. */
   --theme-box: var(--md-surface-container);

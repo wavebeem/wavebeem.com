@@ -104,7 +104,7 @@ h1 {
 }
 
 h1::after {
-  content: "\00A0//";
+  content: "\00A0/";
   color: var(--theme-accent2);
   font-weight: normal;
   font-size: 0.5em;
@@ -134,7 +134,7 @@ h3 {
 h3:where(:not(:has(a)))::after {
   text-decoration: none;
   font-size: 0.5em;
-  content: "\00A0//";
+  content: "\00A0///";
   color: var(--theme-accent2);
 }
 

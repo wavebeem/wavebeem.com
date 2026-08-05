@@ -112,10 +112,14 @@ const htmlStyle = `
     @media (width >= 70rem) {
       padding-top: 0px;
       padding-inline: 0px;
-      /* Caps and centers within the 1fr column. Below 100rem that's
-         the leftover space right of the sidebar; past it, .page-shell's
-         phantom third column balances things out so this centers on
-         the true viewport instead. */
+      /* width: 100% -- not just max-width -- so short pages (About,
+         Extras) still fill the 1fr column instead of shrinking to their
+         content; max-width then caps that at the reading width. Caps and
+         centers within the 1fr column. Below 100rem that's the leftover
+         space right of the sidebar; past it, .page-shell's phantom third
+         column balances things out so this centers on the true viewport
+         instead. */
+      width: 100%;
       max-width: var(--width-heading);
       margin-inline: auto;
     }

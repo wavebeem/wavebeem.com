@@ -4,4 +4,8 @@
 // unrelated purpose means adding a new export, not reaching for an
 // existing one that happens to look right.
 
-export { Menu as IconMenu, X as IconClose } from "@lucide/astro";
+export {
+  Menu as IconMenu,
+  X as IconClose,
+  SunMoon as IconTheme,
+} from "@lucide/astro";

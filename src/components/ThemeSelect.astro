@@ -1,6 +1,15 @@
+---
+import { IconTheme } from "./icons";
+---
+
 <wavebeem-theme-select class="theme-select">
-  <button type="button" class="theme-select-trigger" aria-haspopup="dialog">
-    Choose theme&hellip;
+  <button
+    type="button"
+    class="theme-select-trigger"
+    aria-haspopup="dialog"
+    aria-label="Choose theme…"
+  >
+    <IconTheme />
   </button>
   <dialog class="theme-select-dialog" aria-label="Choose theme">
     <div class="theme-select-options">
@@ -159,16 +168,17 @@
   .theme-select-trigger {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    width: 100%;
-    padding: 8px 16px;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0;
     border: none;
     border-radius: var(--rounded-large);
     background: none;
     color: inherit;
     font: inherit;
-    text-align: left;
 
     @media (hover) {
       &:hover {
