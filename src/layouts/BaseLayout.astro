@@ -49,13 +49,15 @@ const maskWavyV = `url("data:image/svg+xml,${encodeURIComponent(wavyV)}")`;
     background: var(--theme-page-bg);
     color: var(--theme-page-text);
     border-radius: var(--rounded-large);
-    margin: 8px;
-    translate: 0% -100%;
+    /* margin: 8px; */
+    translate: 16px -100%;
     text-decoration-line: none;
     font-weight: bold;
+    transition: 150ms;
+    transition-property: translate;
 
     &:focus {
-      translate: 0%;
+      translate: 16px 16px;
       outline-offset: -6px;
     }
 
@@ -78,13 +80,19 @@ const maskWavyV = `url("data:image/svg+xml,${encodeURIComponent(wavyV)}")`;
       display: grid;
       grid-template-columns: var(--sidebar-width) 1fr;
       /* Row fills the grid's full height, so .content can stretch
-         into it below. Always 2 columns, no third balancing column or
-         width cap on .page-shell itself: the sidebar stays pinned to
-         the viewport edge at every width (a stable anchor, not
-         something that drifts and grows a scroll-distance gap as the
-         window widens); .content caps and centers itself instead, see
-         below. */
+         into it below. The sidebar stays pinned to the viewport edge
+         at every width (a stable anchor, not something that drifts);
+         .content caps and centers itself, see below. */
       grid-template-rows: 1fr;
+    }
+
+    /* Past this width, an empty third column matching the sidebar's
+       width balances it, so .content centers on the true viewport
+       instead of the leftover space right of the sidebar (which skews
+       it right by half the sidebar's width). Nothing renders in this
+       column -- it's just a phantom spacer. */
+    @media (width >= 110rem) {
+      grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
     }
   }
 
@@ -97,10 +105,10 @@ const maskWavyV = `url("data:image/svg+xml,${encodeURIComponent(wavyV)}")`;
     @media (width >= 70rem) {
       padding-top: 0px;
       padding-inline: 0px;
-      /* Caps and centers within the remaining 1fr column, independent
-         of the sidebar. width-heading, not page-shell-max-width: that
-         var accounted for a phantom balancing sidebar column that no
-         longer exists now that .page-shell itself isn't capped. */
+      /* Caps and centers within the 1fr column. Below 100rem that's
+         the leftover space right of the sidebar; past it, .page-shell's
+         phantom third column balances things out so this centers on
+         the true viewport instead. */
       max-width: var(--width-heading);
       margin-inline: auto;
     }
