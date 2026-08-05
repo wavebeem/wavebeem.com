@@ -21,8 +21,8 @@
   /* details.css's +/- expand indicator: same high-contrast filled badge
      as --theme-toggle-selected above, kept as its own token (not reused
      directly) so this can be retuned without affecting button groups. */
-  --theme-details-circle: var(--md-primary);
-  --theme-details-text: var(--md-on-primary);
+  --theme-details-circle: var(--md-secondary);
+  --theme-details-text: var(--md-on-secondary);
 
   --theme-link: var(--md-primary);
 
@@ -59,10 +59,13 @@
      way). surface-container's pop is a much closer match to light mode's. */
   --theme-infobox: light-dark(
     var(--md-secondary-container),
-    var(--md-surface-container)
+    var(--md-secondary-container)
   );
-  /* Used to share --theme-infobox's value by coincidence. */
-  --theme-code: var(--md-surface-container-lowest);
+  --theme-infobox-text: light-dark(
+    var(--md-on-secondary-container),
+    var(--md-on-secondary-container)
+  );
+  --theme-code: var(--md-surface-container-low);
 
   --theme-shadow: var(--md-shadow);
   --theme-scrim: var(--md-scrim);
@@ -77,20 +80,22 @@
   /* Vague name, usage not audited. */
   --theme-accent: var(--md-primary);
   --theme-accent2: var(--md-primary-fixed-dim);
+  --theme-accent3: var(--md-tertiary-container);
 
   --theme-divider: var(--md-outline-variant);
   /* Big decorative dividers (zig-zag <hr>, wavy footer divider) --
      distinct from --theme-divider, which is M3's spec-correct role for
      plain/subtle dividers (outline-variant). This one's just for looks. */
   --theme-divider-decorative: light-dark(
-    var(--md-outline-variant),
-    var(--md-surface-container)
+    var(--md-surface-dim),
+    var(--md-surface-container-high)
   );
   --theme-border: var(--md-outline);
   /* M3 drag state-layer opacity (m3.material.io/foundations/interaction/states/state-layers) -- for outlines that need to be barely there. */
   --theme-border-faint: rgb(from var(--md-outline) r g b / 16%);
   /* Edge definition for low-contrast images. */
-  --theme-image-outline: rgb(from var(--md-outline) r g b / 8%);
+  --theme-image-outline: transparent;
+  /* --theme-image-outline: rgb(from var(--md-outline) r g b / 8%); */
 
   /* Ordered/unordered list marker badge -- shared by both, see global.css. */
   --theme-bullet-bg: var(--md-tertiary-container);
@@ -122,7 +127,8 @@
   --syntax-text: var(--theme-text);
   --syntax-keyword: var(--theme-text);
 
-  /* Hand-picked hues, harmonized toward the seed color. */
+  /* Generated straight from the seed color's own hue, see
+     generate-theme.mts. */
   --syntax-comment: var(--md-custom-comment);
   --syntax-property: var(--md-custom-property);
   --syntax-string: var(--md-custom-string);

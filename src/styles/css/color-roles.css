@@ -1,0 +1,314 @@
+/* Intentional exception to the theme-tokens-only rule (see theme.css):
+   this is a raw reference chart of the --md-* primitives themselves. */
+
+.color-roles-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-block: 16px;
+}
+
+.color-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.color-roles-swatch {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+  min-height: 64px;
+  padding: 8px;
+  font-size: 0.75rem;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+/* An "on-X" swatch stacked directly against the X it's meant to sit on
+   (e.g. On Primary under Primary) -- no gap, so they read as one surface
+   with two ink colors rather than two separate swatches. Matches
+   m3.material.io/styles/color/roles. */
+.color-roles-pair {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-roles-swatch--wide {
+  flex: 2;
+}
+
+.color-roles-swatch--small {
+  min-height: 40px;
+}
+
+.color-roles-accent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  flex: 3 1 480px;
+}
+
+.color-roles-accent-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.color-roles-fixed {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  flex: 3 1 480px;
+}
+
+.color-roles-fixed-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.color-roles-fixed-top {
+  display: flex;
+}
+
+.color-roles-error-inverse {
+  display: flex;
+  gap: 16px;
+  flex: 1 1 320px;
+}
+
+.color-roles-error {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 160px;
+}
+
+.color-roles-inverse {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1 1 160px;
+}
+
+.color-roles-scrim-shadow {
+  display: flex;
+  gap: 2px;
+}
+
+.color-roles-surface {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.color-roles-surface-row {
+  display: flex;
+}
+
+@media (width < 40rem) {
+  .color-roles-accent,
+  .color-roles-fixed {
+    grid-template-columns: 1fr;
+  }
+
+  .color-roles-error-inverse,
+  .color-roles-fixed-top,
+  .color-roles-scrim-shadow,
+  .color-roles-surface-row {
+    flex-direction: column;
+  }
+}
+
+/* Accent roles */
+.color-roles-section [data-role="primary"] {
+  background: var(--md-primary);
+  color: var(--md-on-primary);
+}
+.color-roles-section [data-role="on-primary"] {
+  background: var(--md-surface);
+  color: var(--md-primary);
+}
+.color-roles-section [data-role="primary-container"] {
+  background: var(--md-primary-container);
+  color: var(--md-on-primary-container);
+}
+.color-roles-section [data-role="on-primary-container"] {
+  background: var(--md-on-primary-container);
+  color: var(--md-primary-container);
+}
+
+.color-roles-section [data-role="secondary"] {
+  background: var(--md-secondary);
+  color: var(--md-on-secondary);
+}
+.color-roles-section [data-role="on-secondary"] {
+  background: var(--md-surface);
+  color: var(--md-secondary);
+}
+.color-roles-section [data-role="secondary-container"] {
+  background: var(--md-secondary-container);
+  color: var(--md-on-secondary-container);
+}
+.color-roles-section [data-role="on-secondary-container"] {
+  background: var(--md-on-secondary-container);
+  color: var(--md-secondary-container);
+}
+
+.color-roles-section [data-role="tertiary"] {
+  background: var(--md-tertiary);
+  color: var(--md-on-tertiary);
+}
+.color-roles-section [data-role="on-tertiary"] {
+  background: var(--md-surface);
+  color: var(--md-tertiary);
+}
+.color-roles-section [data-role="tertiary-container"] {
+  background: var(--md-tertiary-container);
+  color: var(--md-on-tertiary-container);
+}
+.color-roles-section [data-role="on-tertiary-container"] {
+  background: var(--md-on-tertiary-container);
+  color: var(--md-tertiary-container);
+}
+
+.color-roles-section [data-role="error"] {
+  background: var(--md-error);
+  color: var(--md-on-error);
+}
+.color-roles-section [data-role="on-error"] {
+  background: var(--md-surface);
+  color: var(--md-error);
+}
+.color-roles-section [data-role="error-container"] {
+  background: var(--md-error-container);
+  color: var(--md-on-error-container);
+}
+.color-roles-section [data-role="on-error-container"] {
+  background: var(--md-on-error-container);
+  color: var(--md-error-container);
+}
+
+/* Fixed roles */
+.color-roles-section [data-role="primary-fixed"] {
+  background: var(--md-primary-fixed);
+  color: var(--md-on-primary-fixed);
+}
+.color-roles-section [data-role="primary-fixed-dim"] {
+  background: var(--md-primary-fixed-dim);
+  color: var(--md-on-primary-fixed);
+}
+.color-roles-section [data-role="on-primary-fixed"] {
+  background: var(--md-on-primary-fixed);
+  color: var(--md-primary-fixed);
+}
+.color-roles-section [data-role="on-primary-fixed-variant"] {
+  background: var(--md-on-primary-fixed-variant);
+  color: var(--md-primary-fixed);
+}
+
+.color-roles-section [data-role="secondary-fixed"] {
+  background: var(--md-secondary-fixed);
+  color: var(--md-on-secondary-fixed);
+}
+.color-roles-section [data-role="secondary-fixed-dim"] {
+  background: var(--md-secondary-fixed-dim);
+  color: var(--md-on-secondary-fixed);
+}
+.color-roles-section [data-role="on-secondary-fixed"] {
+  background: var(--md-on-secondary-fixed);
+  color: var(--md-secondary-fixed);
+}
+.color-roles-section [data-role="on-secondary-fixed-variant"] {
+  background: var(--md-on-secondary-fixed-variant);
+  color: var(--md-secondary-fixed);
+}
+
+.color-roles-section [data-role="tertiary-fixed"] {
+  background: var(--md-tertiary-fixed);
+  color: var(--md-on-tertiary-fixed);
+}
+.color-roles-section [data-role="tertiary-fixed-dim"] {
+  background: var(--md-tertiary-fixed-dim);
+  color: var(--md-on-tertiary-fixed);
+}
+.color-roles-section [data-role="on-tertiary-fixed"] {
+  background: var(--md-on-tertiary-fixed);
+  color: var(--md-tertiary-fixed);
+}
+.color-roles-section [data-role="on-tertiary-fixed-variant"] {
+  background: var(--md-on-tertiary-fixed-variant);
+  color: var(--md-tertiary-fixed);
+}
+
+/* Surface family */
+.color-roles-section [data-role="surface-dim"] {
+  background: var(--md-surface-dim);
+  color: var(--md-on-surface);
+}
+.color-roles-section [data-role="surface"] {
+  background: var(--md-surface);
+  color: var(--md-on-surface);
+}
+.color-roles-section [data-role="surface-bright"] {
+  background: var(--md-surface-bright);
+  color: var(--md-on-surface);
+}
+.color-roles-section [data-role="surface-container-lowest"] {
+  background: var(--md-surface-container-lowest);
+  color: var(--md-on-surface);
+}
+.color-roles-section [data-role="surface-container-low"] {
+  background: var(--md-surface-container-low);
+  color: var(--md-on-surface);
+}
+.color-roles-section [data-role="surface-container"] {
+  background: var(--md-surface-container);
+  color: var(--md-on-surface);
+}
+.color-roles-section [data-role="surface-container-high"] {
+  background: var(--md-surface-container-high);
+  color: var(--md-on-surface);
+}
+.color-roles-section [data-role="surface-container-highest"] {
+  background: var(--md-surface-container-highest);
+  color: var(--md-on-surface);
+}
+.color-roles-section [data-role="on-surface"] {
+  background: var(--md-on-surface);
+  color: var(--md-surface);
+}
+.color-roles-section [data-role="on-surface-variant"] {
+  background: var(--md-on-surface-variant);
+  color: var(--md-surface);
+}
+.color-roles-section [data-role="outline"] {
+  background: var(--md-outline);
+  color: var(--md-surface);
+}
+.color-roles-section [data-role="outline-variant"] {
+  background: var(--md-outline-variant);
+  color: var(--md-on-surface);
+}
+
+/* Inverse, scrim, shadow */
+.color-roles-section [data-role="inverse-surface"] {
+  background: var(--md-inverse-surface);
+  color: var(--md-inverse-on-surface);
+}
+.color-roles-section [data-role="inverse-on-surface"] {
+  background: var(--md-inverse-on-surface);
+  color: var(--md-inverse-surface);
+}
+.color-roles-section [data-role="inverse-primary"] {
+  background: var(--md-inverse-primary);
+  color: var(--md-on-primary-container);
+}
+.color-roles-section [data-role="scrim"] {
+  background: var(--md-scrim);
+  color: white;
+}
+.color-roles-section [data-role="shadow"] {
+  background: var(--md-shadow);
+  color: white;
+}

@@ -6,6 +6,7 @@
   margin: 1.5rem 0;
   /* border-bottom: 1px solid var(--theme-divider); */
   /* border-bottom: 1px solid var(--theme-border); */
+  color: var(--theme-infobox-text);
   background: var(--theme-infobox);
   padding-inline: 16px;
 
@@ -95,9 +96,6 @@
   :where(&[open] > summary) {
     margin-bottom: -0.5rem;
     position: relative;
+    border-radius: var(--rounded-small);
   }
 }
-
-/* main summary:hover:active::after {
-  opacity: 0.5;
-} */

@@ -16,6 +16,7 @@
     padding: 8px 16px;
     line-height: 1.25;
 
+    color: var(--theme-infobox-text);
     background: var(--theme-infobox);
     outline-offset: -2px;
 

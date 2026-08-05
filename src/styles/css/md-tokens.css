@@ -1,7 +1,7 @@
 /**
  * GENERATED. Don't hand-edit -- regenerate with: npm run generate-theme
  *
- * Seed: #7bd675  Variant: TONAL_SPOT  Contrast: 0
+ * Seed: #7bd675  Variant: TONAL_SPOT light / TONAL_SPOT dark  Contrast: 0
  *
  * Every Material 3 color role, as --md-<kebab-case-role-name>. See
  * theme.css for how this site's --theme-* tokens map to these.
@@ -68,10 +68,10 @@
   --md-error-container: light-dark(#ffdad6, #93000a);
   --md-on-error-container: light-dark(#93000a, #ffdad6);
 
-  /* Hand-picked syntax-highlighting hues, hue-shifted toward the seed
-     color via Blend.harmonize() -- not DynamicScheme roles. */
-  --md-custom-comment: light-dark(#008814, #5fd75f);
-  --md-custom-property: light-dark(#4b14be, #b398f5);
-  --md-custom-string: light-dark(#ad4300, #fd7043);
-  --md-custom-punctuation: light-dark(#7b4c00, #d2aa53);
+  /* Syntax-highlighting hues: seed hue rotated by 0/90/180/270 degrees,
+     fixed chroma, tone 40/80 -- not DynamicScheme roles. */
+  --md-custom-comment: light-dark(#296b2a, #91d888);
+  --md-custom-property: light-dark(#00668a, #7cd0ff);
+  --md-custom-string: light-dark(#934b00, #ffb783);
+  --md-custom-punctuation: light-dark(#834790, #f4aeff);
 }

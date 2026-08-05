@@ -19,6 +19,7 @@
   width: var(--avatar-size);
   height: var(--avatar-size);
   box-sizing: content-box;
+  outline: none;
 }
 
 @media (width <= 50rem) {

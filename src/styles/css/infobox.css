@@ -5,7 +5,7 @@
 }
 
 .infobox:where(a) {
-  color: inherit;
+  color: var(--theme-infobox-text);
   text-decoration-line: none;
 
   margin-block: 16px;
@@ -95,6 +95,7 @@
 
   li {
     a {
+      color: var(--theme-infobox-text);
       padding: 8px 16px;
       background: var(--theme-infobox);
       border-radius: var(--rounded-large);

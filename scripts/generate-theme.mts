@@ -7,9 +7,9 @@
 import { writeFile } from "node:fs/promises";
 import path from "node:path";
 import {
-  Blend,
   DynamicScheme,
   Hct,
+  TonalPalette,
   Variant,
   argbFromHex,
   hexFromArgb,
@@ -48,6 +48,7 @@ const seedHex = "#7bd675";
 // ## FRUIT_SALAD
 // Same as RAINBOW.
 const variant = Variant.TONAL_SPOT;
+const variantDark = Variant.TONAL_SPOT;
 
 // -1 to 1, 0 = standard.
 const contrastLevel = 0;
@@ -76,7 +77,7 @@ function buildSchemes(sourceColorHct: Hct): {
   });
   const dark = new DynamicScheme({
     sourceColorHct,
-    variant,
+    variant: variantDark,
     contrastLevel,
     isDark: true,
   });
@@ -122,30 +123,46 @@ function buildRoleLines(light: DynamicScheme, dark: DynamicScheme): string {
   return lines;
 }
 
-// Nudges a hand-picked color's hue toward the seed, keeps its tone/chroma
-// so it stays recognizable. For colors that aren't a DynamicScheme role.
-function harmonizeHex(sourceColorHct: Hct, originalHex: string): string {
-  const designColor = argbFromHex(originalHex);
-  const sourceColor = sourceColorHct.toInt();
-  const harmonized = Blend.harmonize(designColor, sourceColor);
-  return hexFromArgb(harmonized);
+// Fixed chroma for the generated syntax hues -- vivid enough to read as
+// distinct categories without matching the (possibly much higher or lower)
+// chroma the seed happens to carry at its own tone.
+const customColorChroma = 48;
+
+// Same tone convention M3 uses for its own accent roles (e.g. primary):
+// tone 40 in light mode, tone 80 in dark mode, each read against the
+// near-white/near-black code background for strong contrast.
+const customColorToneLight = 40;
+const customColorToneDark = 80;
+
+// Quarter-turns around the seed's own hue. Evenly spaced by construction,
+// so the four categories can't end up clustered/similar the way picking
+// "related" hues (Blend.harmonize, TemperatureCache.analogous) did.
+function customColorHex(
+  sourceColorHct: Hct,
+  hueOffset: number,
+): {
+  light: string;
+  dark: string;
+} {
+  const hue = (sourceColorHct.hue + hueOffset) % 360;
+  const palette = TonalPalette.fromHueAndChroma(hue, customColorChroma);
+  return {
+    light: hexFromArgb(palette.tone(customColorToneLight)),
+    dark: hexFromArgb(palette.tone(customColorToneDark)),
+  };
 }
 
 function buildCustomColorLines(sourceColorHct: Hct): string {
-  const commentLight = harmonizeHex(sourceColorHct, "#008800");
-  const commentDark = harmonizeHex(sourceColorHct, "#5fd75f");
-  const propertyLight = harmonizeHex(sourceColorHct, "#6600aa");
-  const propertyDark = harmonizeHex(sourceColorHct, "#c792ea");
-  const stringLight = harmonizeHex(sourceColorHct, "#cc0000");
-  const stringDark = harmonizeHex(sourceColorHct, "#ff6b6b");
-  const punctuationLight = harmonizeHex(sourceColorHct, "#884400");
-  const punctuationDark = harmonizeHex(sourceColorHct, "#e0a458");
+  const comment = customColorHex(sourceColorHct, 0);
+  const property = customColorHex(sourceColorHct, 90);
+  const punctuation = customColorHex(sourceColorHct, 180);
+  const string = customColorHex(sourceColorHct, 270);
 
   return `\
-  --md-custom-comment: light-dark(${commentLight}, ${commentDark});
-  --md-custom-property: light-dark(${propertyLight}, ${propertyDark});
-  --md-custom-string: light-dark(${stringLight}, ${stringDark});
-  --md-custom-punctuation: light-dark(${punctuationLight}, ${punctuationDark});
+  --md-custom-comment: light-dark(${comment.light}, ${comment.dark});
+  --md-custom-property: light-dark(${property.light}, ${property.dark});
+  --md-custom-string: light-dark(${string.light}, ${string.dark});
+  --md-custom-punctuation: light-dark(${punctuation.light}, ${punctuation.dark});
 `;
 }
 
@@ -154,7 +171,7 @@ function buildOutput(roleLines: string, customColorLines: string): string {
 /**
  * GENERATED. Don't hand-edit -- regenerate with: npm run generate-theme
  *
- * Seed: ${seedHex}  Variant: ${Variant[variant]}  Contrast: ${contrastLevel}
+ * Seed: ${seedHex}  Variant: ${Variant[variant]} light / ${Variant[variantDark]} dark  Contrast: ${contrastLevel}
  *
  * Every Material 3 color role, as --md-<kebab-case-role-name>. See
  * theme.css for how this site's --theme-* tokens map to these.
@@ -162,8 +179,8 @@ function buildOutput(roleLines: string, customColorLines: string): string {
 /* prettier-ignore */
 :root {
 ${roleLines}
-  /* Hand-picked syntax-highlighting hues, hue-shifted toward the seed
-     color via Blend.harmonize() -- not DynamicScheme roles. */
+  /* Syntax-highlighting hues: seed hue rotated by 0/90/180/270 degrees,
+     fixed chroma, tone 40/80 -- not DynamicScheme roles. */
 ${customColorLines}}
 `;
 }
