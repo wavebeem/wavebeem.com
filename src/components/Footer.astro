@@ -47,6 +47,12 @@ const year = new Date().getFullYear();
       margin-inline: -1rem;
       width: calc(100% + 2rem);
     }
+
+    /* Sidebar's own vertical wavy divider already provides that texture
+       at this width -- one squiggle per layout, not two. */
+    @media (width >= 70rem) {
+      display: none;
+    }
   }
 
   .footer > :not(.divider-wavy) {
