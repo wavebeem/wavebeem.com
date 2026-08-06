@@ -83,13 +83,15 @@ a:active {
   font: inherit;
 }
 
-/* Secondary treatment for em/i now that italic is gone site-wide (PP Mori
-   has no real italic face -- font-synthesis: none above means it was never
-   actually slanting). Prototype value, not final -- see --theme-emphasis-text. */
-em,
-i {
+/* No italics. Add some color. */
+:is(em, i) {
   font-style: normal;
   color: var(--theme-emphasis-text);
+}
+
+/* Only 400 and 600 weight, so less difference. Match emphasis style. */
+:is(strong, b) {
+  color: var(--theme-strong-text);
 }
 
 :is(h1, h2, h3, h4, h5, h6) {

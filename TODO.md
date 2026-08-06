@@ -2,12 +2,9 @@
 
 ## High priority
 
-### Better footer layout
+### Update brand image assets
 
-On mobile it should use more room.
-
-On desktop it should be left aligned. No need for the repeated content there
-since we have a sticky sidebar.
+Logo and favicon and shit.
 
 ### Remap component names to better match M3
 

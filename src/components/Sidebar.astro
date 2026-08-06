@@ -138,9 +138,12 @@ import { groups } from "@/data/menu";
       width: auto;
     }
 
+    /* Same solid wash as .nav-link's hover (nav-link.css) so the logo
+       reads as part of the same interactive list, not a separate
+       treatment. */
     @media (hover) {
       &:hover {
-        background-image: radial-gradient(var(--theme-hover-light));
+        background: var(--theme-nav-link-hover);
       }
     }
 

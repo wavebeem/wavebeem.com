@@ -52,12 +52,6 @@
 
   &:hover {
     text-decoration-line: none;
-
-    .heading {
-      /* text-decoration-line: underline; */
-      text-decoration-thickness: inherit;
-      color: var(--theme-text);
-    }
   }
 
   &:focus-visible {

@@ -92,7 +92,8 @@
      treatment now that font-style: italic is gone site-wide (PP Mori has
      no real italic face). Everything else on this page still uses the
      real (blue-ish) M3 tertiary role -- see --theme-logo-glow above. */
-  --theme-emphasis-text: var(--md-custom-coral);
+  --theme-emphasis-text: var(--md-custom-emphasis);
+  --theme-strong-text: var(--md-custom-emphasis);
 
   --theme-divider: var(--md-outline-variant);
   /* Big decorative dividers (zig-zag <hr>, wavy footer divider) --
@@ -142,14 +143,15 @@
   --theme-nav-link-hover: var(--md-surface-container);
   --theme-nav-link-hover-text: var(--md-on-surface);
 
-  /* ThemeSelect.astro's trigger: surface, not tertiary -- tertiary is
-     decoration-only everywhere else on this site (logo glow, bullets),
-     so giving this one interactive control tertiary too would make it
-     read as "special/highlighted" rather than "a different kind of
-     control." Same brighter-than-surrounding-surface fix as
+  /* Chrome/utility icon buttons -- theme-select trigger, hamburger,
+     drawer close -- surface, not tertiary. Tertiary is decoration-only
+     everywhere else on this site (logo glow, bullets), so giving these
+     controls tertiary too would make them read as "special/highlighted"
+     rather than "a different kind of control" from the colored nav-item
+     badges. Same brighter-than-surrounding-surface fix as
      --theme-icon-badge-hover, so it doesn't disappear in the drawer. */
-  --theme-theme-select-badge: var(--md-surface-container-highest);
-  --theme-theme-select-badge-text: var(--md-on-surface);
+  --theme-icon-button-badge: var(--md-surface-container-highest);
+  --theme-icon-button-badge-text: var(--md-on-surface);
   /* Non-interactive, unlike --theme-infobox. Plain surface tone, not a
      container role. */
   --theme-card: light-dark(

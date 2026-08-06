@@ -56,16 +56,8 @@ const year = new Date().getFullYear();
   }
 
   .footer > :not(.divider-wavy) {
-    margin-inline: auto;
-    max-width: max-content;
-
-    /* Desktop: sidebar already repeats this nav, so only the copyright
-       line survives here (see .footer-menu's own display: none below) --
-       left-align it with the content column instead of centering it. */
-    @media (width >= 70rem) {
-      margin-inline: 0;
-      max-width: none;
-    }
+    margin-inline: 0;
+    max-width: none;
   }
 
   /* .footer > .footer-menu, not just .footer-menu: needs to match the
