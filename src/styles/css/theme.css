@@ -38,7 +38,7 @@
   --theme-header-bg: var(--md-background);
   --theme-header-text: var(--md-on-background);
   /* Only .sidebar-top and the mobile drawer use this. */
-  --theme-sidebar-bg: var(--md-surface-container);
+  --theme-sidebar-bg: var(--md-surface);
   --theme-sidebar-text: var(--md-on-surface);
 
   /* No M3 role for these; alpha guessed. */
@@ -121,6 +121,26 @@
   --theme-image: var(--md-surface-container-lowest);
   /* Usage not audited. */
   --theme-box: var(--md-surface-container);
+
+  /* nav-link.css's icon badge: a real tonal container (matches
+     --theme-logo-glow's use of the same role), not a neutral surface --
+     Android Settings' own list-item icon badges are tonal too, not gray.
+     Also sidesteps the --theme-box problem: that token is the exact same
+     value as --theme-sidebar-bg and so disappears against the mobile
+     nav-menu drawer. */
+  --theme-icon-badge: var(--md-primary-container);
+  --theme-icon-badge-text: var(--md-on-primary-container);
+  /* nav-link.css hover: secondary, not a deepened primary -- primary's
+     main tone read too intense for a hover-only state. Secondary is
+     M3's deliberately lower-chroma role, so this reads as a quieter
+     shift instead of the row suddenly shouting. Badge and label move
+     together (secondary-container's ink for the label, secondary's
+     own main/on-main pair for the badge), so the whole row still reads
+     as one coordinated change instead of a background shape. */
+  --theme-icon-badge-hover: var(--md-surface-container-highest);
+  --theme-icon-badge-hover-text: var(--md-on-surface);
+  --theme-nav-link-hover: var(--md-surface-container);
+  --theme-nav-link-hover-text: var(--md-on-surface);
   /* Non-interactive, unlike --theme-infobox. Plain surface tone, not a
      container role. */
   --theme-card: light-dark(

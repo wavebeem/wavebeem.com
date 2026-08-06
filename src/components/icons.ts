@@ -8,4 +8,11 @@ export {
   Menu as IconMenu,
   X as IconClose,
   SunMoon as IconTheme,
+  House as IconNavHome,
+  Newspaper as IconNavBlog,
+  Palette as IconNavArt,
+  FolderGit2 as IconNavProjects,
+  CircleUser as IconNavAbout,
+  Landmark as IconNavShrines,
+  Sparkles as IconNavExtras,
 } from "@lucide/astro";

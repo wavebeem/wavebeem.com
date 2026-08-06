@@ -31,6 +31,9 @@ import { groups } from "@/data/menu";
             <div class="nav-group">
               {group.map((item) => (
                 <a class="nav-link" href={item.url}>
+                  <span class="nav-link-icon">
+                    <item.icon aria-hidden="true" />
+                  </span>
                   {item.title}
                 </a>
               ))}
