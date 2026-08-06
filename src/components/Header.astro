@@ -73,7 +73,10 @@ import { groups } from "@/data/menu";
   }
 
   hr {
-    margin-block: -8px;
+    /* Pulls the wavy divider up against the header, but not all the way --
+       leaves a bit of breathing room below .header-content's own
+       padding-block instead of fully canceling it out. */
+    margin-block: -4px -8px;
 
     @media (width >= 70rem) {
       display: none;

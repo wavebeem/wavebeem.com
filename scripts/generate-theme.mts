@@ -59,7 +59,8 @@ async function main(): Promise<void> {
 
   const roleLines = buildRoleLines(light, dark);
   const customColorLines = buildCustomColorLines(sourceColorHct);
-  const output = buildOutput(roleLines, customColorLines);
+  const coralLines = buildCoralLines();
+  const output = buildOutput(roleLines, customColorLines, coralLines);
 
   const outPath = await writeOutput(output);
   console.log(`Wrote ${outPath}`);
@@ -166,7 +167,28 @@ function buildCustomColorLines(sourceColorHct: Hct): string {
 `;
 }
 
-function buildOutput(roleLines: string, customColorLines: string): string {
+// A hand-picked hue, independent of the seed -- unlike the syntax colors
+// above (seed hue + a fixed offset), this one isn't derived from the seed
+// at all, same tradeoff as picking any M3 "custom color"
+// (m3.material.io/styles/color/advanced/define-new-colors): no guaranteed
+// harmony with the seed, just an intentional standalone accent. Coral,
+// chosen 2026-08-05 as the one-off em/i emphasis color -- everything else
+// on the site still uses the real (seed-derived) M3 tertiary role.
+const coralHue = 20;
+
+function buildCoralLines(): string {
+  const palette = TonalPalette.fromHueAndChroma(coralHue, customColorChroma);
+  const light = hexFromArgb(palette.tone(customColorToneLight));
+  const dark = hexFromArgb(palette.tone(customColorToneDark));
+
+  return `  --md-custom-coral: light-dark(${light}, ${dark});\n`;
+}
+
+function buildOutput(
+  roleLines: string,
+  customColorLines: string,
+  coralLines: string,
+): string {
   return `\
 /**
  * GENERATED. Don't hand-edit -- regenerate with: npm run generate-theme
@@ -181,7 +203,10 @@ function buildOutput(roleLines: string, customColorLines: string): string {
 ${roleLines}
   /* Syntax-highlighting hues: seed hue rotated by 0/90/180/270 degrees,
      fixed chroma, tone 40/80 -- not DynamicScheme roles. */
-${customColorLines}}
+${customColorLines}
+  /* Hand-picked accent (hue ${coralHue}), not seed-derived -- see
+     buildCoralLines above. One-off em/i emphasis color. */
+${coralLines}}
 `;
 }
 

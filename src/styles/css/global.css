@@ -83,6 +83,15 @@ a:active {
   font: inherit;
 }
 
+/* Secondary treatment for em/i now that italic is gone site-wide (PP Mori
+   has no real italic face -- font-synthesis: none above means it was never
+   actually slanting). Prototype value, not final -- see --theme-emphasis-text. */
+em,
+i {
+  font-style: normal;
+  color: var(--theme-emphasis-text);
+}
+
 :is(h1, h2, h3, h4, h5, h6) {
   text-wrap: balance;
 }
@@ -124,7 +133,6 @@ h2::after {
 }
 
 h3 {
-  /* font-style: italic; */
   /* font-weight: normal; */
   font-family: inherit;
   font-size: var(--font-size-h3);
@@ -162,7 +170,6 @@ pre {
 
 .post-description {
   font-size: var(--font-size-small);
-  font-style: italic;
 }
 
 .spoiler {

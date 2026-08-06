@@ -70,7 +70,6 @@
 
     .description {
       margin: 0;
-      font-style: italic;
       font-size: var(--font-size-small);
     }
   }

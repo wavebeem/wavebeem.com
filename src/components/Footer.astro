@@ -52,34 +52,45 @@ const year = new Date().getFullYear();
   .footer > :not(.divider-wavy) {
     margin-inline: auto;
     max-width: max-content;
+
+    /* Desktop: sidebar already repeats this nav, so only the copyright
+       line survives here (see .footer-menu's own display: none below) --
+       left-align it with the content column instead of centering it. */
+    @media (width >= 70rem) {
+      margin-inline: 0;
+      max-width: none;
+    }
   }
 
-  .footer-menu {
+  /* .footer > .footer-menu, not just .footer-menu: needs to match the
+     specificity of ".footer > :not(.divider-wavy)" above so this max-width
+     actually wins over that rule's max-content, instead of losing on
+     specificity and leaving the grid hugging its own content width. */
+  .footer > .footer-menu {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 8px 32px;
     max-width: var(--width-heading);
     margin-bottom: 2.5rem;
-
-    @media (width < 40rem) {
-      grid-template-columns: repeat(3, auto);
-    }
-
-    @media (width <= 21rem) {
-      grid-template-columns: 1fr;
-    }
 
     /* Redundant with the persistent Sidebar.astro at this width. */
     @media (width >= 70rem) {
       display: none;
     }
 
+    /* data/menu.ts currently defines a single group (all 7 links), so
+       this is really styling one list, not laying multiple groups side
+       by side -- two columns instead of one long vertical run. */
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 32px;
       align-content: start;
+
+      @media (width <= 21rem) {
+        grid-template-columns: 1fr;
+      }
     }
 
     a {

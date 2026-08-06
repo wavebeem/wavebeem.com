@@ -74,4 +74,8 @@
   --md-custom-property: light-dark(#00668a, #7cd0ff);
   --md-custom-string: light-dark(#934b00, #ffb783);
   --md-custom-punctuation: light-dark(#834790, #f4aeff);
+
+  /* Hand-picked accent (hue 20), not seed-derived -- see
+     buildCoralLines above. One-off em/i emphasis color. */
+  --md-custom-coral: light-dark(#9c4141, #ffb3b0);
 }

@@ -82,6 +82,18 @@
   --theme-accent2: var(--md-primary-fixed-dim);
   --theme-accent3: var(--md-tertiary-container);
 
+  /* Sidebar.astro's .sidebar-top logo mark -- a tertiary tonal pair so it
+     reads as a distinct object instead of matching --theme-link's primary
+     green like every nav item below it. */
+  --theme-logo-text: var(--md-on-background);
+  --theme-logo-glow: var(--md-tertiary-container);
+
+  /* One-off accent, not a tertiary-role stand-in: em/i's secondary
+     treatment now that font-style: italic is gone site-wide (PP Mori has
+     no real italic face). Everything else on this page still uses the
+     real (blue-ish) M3 tertiary role -- see --theme-logo-glow above. */
+  --theme-emphasis-text: var(--md-custom-coral);
+
   --theme-divider: var(--md-outline-variant);
   /* Big decorative dividers (zig-zag <hr>, wavy footer divider) --
      distinct from --theme-divider, which is M3's spec-correct role for

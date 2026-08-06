@@ -28,7 +28,6 @@ article:where(.page) {
 
     strong {
       font-weight: normal;
-      font-style: italic;
       font-size: var(--font-size-small);
     }
   }
@@ -100,12 +99,7 @@ article:where(.page) {
       font-size: var(--font-size-small);
       /* text-wrap: balance; */
       text-wrap: pretty;
-      font-style: italic;
       margin-top: -4px;
-
-      strong {
-        font-style: normal;
-      }
     }
 
     blockquote,
@@ -129,10 +123,6 @@ article:where(.page) {
       h3 {
         margin-top: 1.5rem;
       }
-    }
-
-    blockquote {
-      font-style: italic;
     }
   }
 }
