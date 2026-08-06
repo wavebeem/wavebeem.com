@@ -108,8 +108,12 @@ import { groups } from "@/data/menu";
     display: flex;
     position: relative;
     isolation: isolate;
-    padding: 8px 16px;
-    border-radius: var(--rounded-large);
+    /* Matches .nav-link's own padding (nav-link.css) so the logo, nav
+       icons, and theme-select badge below all start at the same left
+       inset instead of drifting per-row. */
+    padding: 8px;
+    padding-right: 16px;
+    border-radius: var(--rounded-pill);
     color: var(--theme-logo-text);
 
     /* Corner "sun" -- sits behind the wordmark (negative z-index, scoped

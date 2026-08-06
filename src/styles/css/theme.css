@@ -141,6 +141,15 @@
   --theme-icon-badge-hover-text: var(--md-on-surface);
   --theme-nav-link-hover: var(--md-surface-container);
   --theme-nav-link-hover-text: var(--md-on-surface);
+
+  /* ThemeSelect.astro's trigger: surface, not tertiary -- tertiary is
+     decoration-only everywhere else on this site (logo glow, bullets),
+     so giving this one interactive control tertiary too would make it
+     read as "special/highlighted" rather than "a different kind of
+     control." Same brighter-than-surrounding-surface fix as
+     --theme-icon-badge-hover, so it doesn't disappear in the drawer. */
+  --theme-theme-select-badge: var(--md-surface-container-highest);
+  --theme-theme-select-badge-text: var(--md-on-surface);
   /* Non-interactive, unlike --theme-infobox. Plain surface tone, not a
      container role. */
   --theme-card: light-dark(

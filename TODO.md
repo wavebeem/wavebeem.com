@@ -2,16 +2,6 @@
 
 ## High priority
 
-### Root out italic
-
-Tired of it. Find every italic usage across CSS and content and remove it. We
-should give a secondary treatment to i/em tags since I don't have italics any
-more.
-
-### More padding inside mobile header bar
-
-It feels like the bottom is too close to the wavy line...
-
 ### Better footer layout
 
 On mobile it should use more room.
@@ -22,21 +12,6 @@ since we have a sticky sidebar.
 ### Remap component names to better match M3
 
 This will make it easier to reference documentation.
-
-### Sidebar
-
-The sidebar content is not aligned well. Espcially the theme selector. We should
-also add some lucide icon things to it. And maybe it should have a bit more
-"button" type treatment. Also wondering if the menu items should use the list
-treatment.
-
-### Audit border radii
-
-Probably using too many and probably not well synced with M3.
-
-### Typography
-
-How are my font sizes and spacings?
 
 ## Low priority
 

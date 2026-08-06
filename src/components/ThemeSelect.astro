@@ -174,10 +174,14 @@ import { IconTheme } from "./icons";
     height: 40px;
     box-sizing: border-box;
     padding: 0;
+    /* Matches nav-link.css's own left inset, so this badge lines up with
+       the logo and nav icons above it instead of sitting flush with the
+       row's outer edge. */
+    margin-left: 8px;
     border: none;
-    border-radius: var(--rounded-large);
-    background: none;
-    color: inherit;
+    border-radius: var(--rounded-pill);
+    background: var(--theme-theme-select-badge);
+    color: var(--theme-theme-select-badge-text);
     font: inherit;
 
     @media (hover) {
@@ -214,7 +218,7 @@ import { IconTheme } from "./icons";
     border-radius: 28px;
     background: var(--theme-page-bg);
     color: var(--theme-page-text);
-    box-shadow: 0 0 32px rgb(from var(--theme-text) r g b / 20%);
+    box-shadow: 0 0 32px rgb(from var(--theme-shadow) r g b / 20%);
 
     &:focus-visible {
       outline-offset: -4px;

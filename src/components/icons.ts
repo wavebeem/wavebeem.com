@@ -9,10 +9,10 @@ export {
   X as IconClose,
   SunMoon as IconTheme,
   House as IconNavHome,
-  Newspaper as IconNavBlog,
+  Rss as IconNavBlog,
   Palette as IconNavArt,
   FolderGit2 as IconNavProjects,
-  CircleUser as IconNavAbout,
+  UserRound as IconNavAbout,
   Landmark as IconNavShrines,
-  Sparkles as IconNavExtras,
+  Boxes as IconNavExtras,
 } from "@lucide/astro";
