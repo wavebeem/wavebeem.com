@@ -2,6 +2,4 @@
 
 # wavebeem.com
 
-It's [wavebeem.com](https://www.wavebeem.com), the website!
-
-Made with [Eleventy](https://www.11ty.dev/).
+👉 [wavebeem.com](https://www.wavebeem.com)
