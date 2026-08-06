@@ -1,9 +1,10 @@
 .menu {
   display: grid;
-  gap: var(--infobox-gap);
-
-  background: var(--theme-page-bg);
-  color: inherit;
+  /* background: var(--theme-infobox);
+  color: inherit; */
+  color: var(--theme-card-text);
+  background: var(--theme-card);
+  border-radius: var(--rounded-large);
 
   > :is(a, *) {
     color: inherit;
@@ -13,21 +14,18 @@
     align-items: center;
     justify-content: space-between;
     gap: 16px;
-    padding: 8px 16px;
+    padding: 10px 16px;
     line-height: 1.25;
 
-    background: var(--theme-infobox);
+    color: var(--theme-card-text);
+    background: var(--theme-card);
+    /* color: var(--theme-infobox-text);
+    background: var(--theme-infobox); */
     outline-offset: -2px;
 
     font-size: var(--font-size-base);
 
     border-radius: var(--rounded-large);
-
-    /* Only links navigate away, so only they get the arrow. */
-    &:is(a)::after {
-      content: "\2192";
-      flex-shrink: 0;
-    }
 
     :where(&) + & {
       border-top-left-radius: var(--rounded-small);
@@ -35,6 +33,14 @@
     }
 
     &:has(+ &) {
+      border-bottom: 1px solid var(--theme-divider);
+      border-image: linear-gradient(
+          to right,
+          transparent 0 16px,
+          var(--theme-divider) 16px calc(100% - 16px),
+          transparent calc(100% - 16px)
+        )
+        1;
       border-bottom-left-radius: var(--rounded-small);
       border-bottom-right-radius: var(--rounded-small);
     }
@@ -45,12 +51,6 @@
 
     &:where(:hover:not(:active)) {
       background-image: radial-gradient(var(--theme-hover-light));
-
-      .heading {
-        text-decoration-line: underline;
-        text-decoration-thickness: inherit;
-        color: var(--theme-text);
-      }
     }
 
     .heading {
@@ -64,7 +64,6 @@
 
     .description {
       margin: 0;
-      font-style: italic;
       font-size: var(--font-size-small);
     }
   }
@@ -84,21 +83,6 @@
       &:empty {
         display: none;
       }
-    }
-  }
-}
-
-/* Modifier for .menu on a solid panel background, used by the mobile
-   nav drawer. Text color isn't set here, it inherits from .nav-menu. */
-.menu-drawer {
-  /* Shows through the small gaps between pills. */
-  background: transparent;
-
-  > :is(a, *) {
-    background: var(--theme-sidebar-card);
-
-    &:where(:hover:not(:active)) {
-      background-image: radial-gradient(var(--theme-sidebar-hover));
     }
   }
 }

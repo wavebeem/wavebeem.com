@@ -4,15 +4,33 @@ import Head from "@/components/Head.astro";
 import Header from "@/components/Header.astro";
 import Sidebar from "@/components/Sidebar.astro";
 import Footer from "@/components/Footer.astro";
+import wavyH from "@/icons/divider-wavy-h.svg?raw";
+import wavyV from "@/icons/divider-wavy-v.svg?raw";
+import chevronDown from "@/icons/chevron-down.svg?raw";
+import { dataUri } from "@/lib/dataUri";
 
 interface Props {
   title: string;
   description?: string;
 }
 const { title, description = "" } = Astro.props;
+
+// Astro's ?raw import loads the real .svg files as source text, and
+// dataUri()'s encodeURIComponent does the data-URI escaping correctly (a
+// hand-rolled version of this went wrong once already -- see divider.css).
+// Exposed as CSS custom properties (below) on <html> so every .astro/.css
+// file can share one definition instead of duplicating the wave shape.
+const maskWavyH = dataUri("image/svg+xml", wavyH);
+const maskWavyV = dataUri("image/svg+xml", wavyV);
+const maskChevronDown = dataUri("image/svg+xml", chevronDown);
+const htmlStyle = `
+  --mask-wavy-h: ${maskWavyH};
+  --mask-wavy-v: ${maskWavyV};
+  --mask-chevron-down: ${maskChevronDown};
+`;
 ---
 
-<html lang="en">
+<html lang="en" style={htmlStyle}>
   <head>
     <Head title={title} description={description} />
   </head>
@@ -35,18 +53,20 @@ const { title, description = "" } = Astro.props;
   .skip-link {
     position: absolute;
     z-index: 100;
-    padding: 16px 32px;
-    background: var(--theme-page-bg);
-    color: var(--theme-page-text);
-    border-radius: var(--rounded-large);
-    margin: 8px;
-    translate: 0% -100%;
+    padding: 8px 16px;
+    background: var(--theme-button-bg);
+    color: var(--theme-button-text);
+    border-radius: var(--rounded-pill);
+    /* margin: 8px; */
+    translate: 16px -100%;
     text-decoration-line: none;
     font-weight: bold;
+    transition: translate var(--motion-duration-short3)
+      var(--motion-easing-standard);
 
     &:focus {
-      translate: 0%;
-      outline-offset: -6px;
+      translate: 16px 16px;
+      outline-offset: -2px;
     }
 
     @media (width < 70rem) {
@@ -68,25 +88,19 @@ const { title, description = "" } = Astro.props;
       display: grid;
       grid-template-columns: var(--sidebar-width) 1fr;
       /* Row fills the grid's full height, so .content can stretch
-         into it below. */
+         into it below. The sidebar stays pinned to the viewport edge
+         at every width (a stable anchor, not something that drifts);
+         .content caps and centers itself, see below. */
       grid-template-rows: 1fr;
-      /* Without this, the sidebar's grid item stretches to match
-         .content's height, leaving no room for position: sticky to
-         move within; sticky needs the item shorter than its track. */
-      align-items: start;
     }
 
-    /* Past this width, cap and center the whole shell instead of
-       leaving the sidebar pinned to the viewport edge. */
-    @media (width >= 100rem) {
-      /* Third empty column balances the sidebar, so .content centers
-         in the box instead of skewing toward it. */
+    /* Past this width, an empty third column matching the sidebar's
+       width balances it, so .content centers on the true viewport
+       instead of the leftover space right of the sidebar (which skews
+       it right by half the sidebar's width). Nothing renders in this
+       column -- it's just a phantom spacer. */
+    @media (width >= 110rem) {
       grid-template-columns: var(--sidebar-width) 1fr var(--sidebar-width);
-      /* width: 100% needed: as a flex item, auto margins here would
-         otherwise override stretch and shrink this to fit-content. */
-      width: 100%;
-      max-width: var(--page-shell-max-width);
-      margin-inline: auto;
     }
   }
 
@@ -97,33 +111,18 @@ const { title, description = "" } = Astro.props;
     flex-direction: column;
 
     @media (width >= 70rem) {
-      /* Overrides .page-shell's align-items: start just for this item. */
-      align-self: stretch;
-      /* Balances the sidebar's own left padding. */
-      padding-right: 8px;
-    }
-
-    /* page.css's article margin-inline: auto centers off-true once a
-       sidebar's involved; left-align instead, anchored to the sidebar. */
-    @media (width >= 70rem) {
-      :global(article:where(.page) > :is(header, section, footer)) {
-        margin-inline: 0;
-      }
-    }
-
-    /* Past this width, staying anchored to the sidebar just grows a
-       dead zone on the right; go back to centering. */
-    @media (width >= 125rem) {
-      :global(article:where(.page) > :is(header, section, footer)) {
-        margin-inline: auto;
-      }
-    }
-
-    /* Footer.astro centers unconditionally; match .page's left-align here. */
-    @media (width >= 70rem) {
-      :global(.footer > *) {
-        margin-inline: 0;
-      }
+      padding-top: 0px;
+      padding-inline: 0px;
+      /* width: 100% -- not just max-width -- so short pages (About,
+         Extras) still fill the 1fr column instead of shrinking to their
+         content; max-width then caps that at the reading width. Caps and
+         centers within the 1fr column. Below 100rem that's the leftover
+         space right of the sidebar; past it, .page-shell's phantom third
+         column balances things out so this centers on the true viewport
+         instead. */
+      width: 100%;
+      max-width: var(--width-heading);
+      margin-inline: auto;
     }
   }
 

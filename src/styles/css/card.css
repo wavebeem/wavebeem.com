@@ -13,14 +13,6 @@
   border-right-color: var(--theme-shadow);
   outline-offset: -1px;
 
-  /* box-shadow: var(--shadow1); */
-
-  @media (width < 40rem) {
-    /* margin-inline: -16px;
-    border-inline: 0;
-    width: calc(100% + 32px); */
-  }
-
   &:where(ul) {
     background: var(--theme-page-bg);
     padding: 0;
@@ -69,6 +61,13 @@
     > dt:first-child {
       border-top-left-radius: var(--rounded-large);
       border-top-right-radius: var(--rounded-large);
+    }
+
+    /* A run of consecutive dt (multiple terms sharing one dd) is one
+       visual group -- only the first should get the gap-from-above
+       padding, or each extra term reads as its own separate entry. */
+    > dt + dt {
+      padding-block-start: 0;
     }
 
     > dd {
@@ -131,13 +130,11 @@
 
   .description {
     margin: 0;
-    font-style: italic;
     font-size: var(--font-size-small);
   }
 
   &:focus-visible {
-    box-shadow: 0 0 0 3px var(--theme-card);
-    outline-width: 3px;
-    outline-offset: 3px;
+    outline: 2px dotted currentColor;
+    outline-offset: -2px;
   }
 }

@@ -13,23 +13,8 @@
 
 @font-face {
   font-family: "PP Mori";
-  src: url("/fonts/PPMori-Extrabold.woff2") format("woff2");
-  font-weight: bold;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori";
-  src: url("/fonts/PPMori-Italic.woff2") format("woff2");
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PP Mori";
-  src: url("/fonts/PPMori-ExtraboldItalic.woff2") format("woff2");
-  font-style: italic;
-  font-weight: bold;
+  src: url("/fonts/PPMori-Semibold.woff2") format("woff2");
+  font-weight: 600;
   font-display: swap;
 }
 
@@ -83,7 +68,6 @@ h2 {
 h3 {
   font-size: 1.5rem;
   font-weight: normal;
-  font-style: italic;
   margin-block: 1rem 0.5rem;
 }
 

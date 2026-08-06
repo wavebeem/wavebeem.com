@@ -1,0 +1,69 @@
+/* Shared by Sidebar.astro (desktop) and Header.astro's mobile nav-menu
+   drawer -- both render the same bare-at-rest, filled-on-hover primary
+   nav link list, so the treatment lives here instead of being
+   duplicated per-component. */
+.nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  padding-right: 16px;
+  border-radius: var(--rounded-pill);
+  color: var(--theme-link);
+  text-decoration-line: none;
+  font-size: var(--font-size-base);
+  font-weight: bold;
+
+  /* global.css's a:hover sets text-decoration-line: underline with
+     higher specificity (element + pseudo-class) than this rule's base
+     .nav-link (one class), so it wins on hover unless repeated here. */
+  &:hover {
+    text-decoration-line: none;
+  }
+
+  /* Color-only hover, not a background shape: a rounded-rect wash behind
+     an already-opaque, already-rounded icon badge just reads as two
+     competing containers (the wash gets fully hidden under the badge
+     anyway, since the badge paints on top). Both the label and the badge
+     shift together instead -- see --theme-icon-badge-hover(-text). */
+  @media (hover) {
+    &:hover {
+      background: var(--theme-nav-link-hover);
+      color: var(--theme-nav-link-hover-text);
+      /* text-decoration-line: underline; */
+
+      .nav-link-icon {
+        background: var(--theme-icon-badge-hover);
+        color: var(--theme-icon-badge-hover-text);
+      }
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px dotted currentColor;
+    outline-offset: -2px;
+  }
+}
+
+/* Leading icon badge, Android Settings-style: glyph in a tonal circle,
+   same 40px footprint as the hamburger/theme-select buttons. Its own
+   tertiary-container tone (not --theme-link) so the row's link color
+   stays on the label. */
+.nav-link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: var(--rounded-pill);
+  background: var(--theme-icon-badge);
+  color: var(--theme-icon-badge-text);
+}

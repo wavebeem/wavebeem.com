@@ -113,5 +113,5 @@ It's not like this is the main source of "bloat" on the site though: the static
 JSON files I load for translations and especially the Pokédex dwarf the JS
 bundle. And if you skim the entire Pokédex, you'll load quite a few images into
 memory (despite my best attempts to
-[optimize these with WebP](/blog/2025/imagemagick), the Pokémon Home images are
+[optimize these with WebP](/blog/2025/imagemagick/), the Pokémon Home images are
 about 20 kB each for the 512px versions loaded on retina screens).

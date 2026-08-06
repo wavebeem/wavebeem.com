@@ -1,26 +1,29 @@
 ---
-interface Props {
-  drawer?: boolean;
-}
-const { drawer = false } = Astro.props;
+import { IconTheme } from "./icons";
 ---
 
-<wavebeem-theme-select
-  class:list={["theme-select", { "theme-select-drawer": drawer }]}
->
-  <button type="button" class="theme-select-trigger" aria-haspopup="dialog">
-    Choose theme&hellip;
+<wavebeem-theme-select class="theme-select">
+  <button
+    type="button"
+    class="theme-select-trigger"
+    aria-haspopup="dialog"
+    aria-label="Choose theme…"
+  >
+    <IconTheme />
   </button>
   <dialog class="theme-select-dialog" aria-label="Choose theme">
-    <button type="button" class="theme-select-option" data-theme="auto">
-      Auto theme
-    </button>
-    <button type="button" class="theme-select-option" data-theme="light">
-      Light theme
-    </button>
-    <button type="button" class="theme-select-option" data-theme="dark">
-      Dark theme
-    </button>
+    <div class="theme-select-options">
+      <button type="button" class="theme-select-option" data-theme="auto">
+        Auto
+      </button>
+      <button type="button" class="theme-select-option" data-theme="light">
+        Light
+      </button>
+      <button type="button" class="theme-select-option" data-theme="dark">
+        Dark
+      </button>
+    </div>
+    <button type="button" class="button theme-select-done">Done</button>
   </dialog>
 </wavebeem-theme-select>
 
@@ -76,6 +79,8 @@ const { drawer = false } = Astro.props;
       const dialog = this.querySelector<HTMLDialogElement>(
         ".theme-select-dialog",
       )!;
+      const doneButton =
+        this.querySelector<HTMLButtonElement>(".theme-select-done")!;
       const options = [
         ...this.querySelectorAll<HTMLButtonElement>(".theme-select-option"),
       ];
@@ -108,11 +113,13 @@ const { drawer = false } = Astro.props;
           () => {
             localStorage.setItem(storageKey, option.dataset.theme!);
             applyTheme();
-            dialog.close();
+            syncOptions();
           },
           { signal },
         );
       }
+
+      doneButton.addEventListener("click", () => dialog.close(), { signal });
 
       // Close the dialog when clicking its backdrop (native <dialog>
       // doesn't do this on its own; Escape already works natively)
@@ -161,22 +168,21 @@ const { drawer = false } = Astro.props;
   .theme-select-trigger {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    width: 100%;
-    padding: 8px 16px;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0;
+    /* Matches nav-link.css's own left inset, so this badge lines up with
+       the logo and nav icons above it instead of sitting flush with the
+       row's outer edge. */
+    margin-left: 8px;
     border: none;
-    border-radius: var(--rounded-large);
-    background: var(--theme-infobox);
-    color: inherit;
+    border-radius: var(--rounded-pill);
+    background: var(--theme-icon-button-badge);
+    color: var(--theme-icon-button-badge-text);
     font: inherit;
-    text-align: left;
-
-    /* Matches .menu links' ::after arrow (menu.css). */
-    &::after {
-      content: "\2600";
-      flex-shrink: 0;
-    }
 
     @media (hover) {
       &:hover {
@@ -185,20 +191,8 @@ const { drawer = false } = Astro.props;
     }
 
     &:focus-visible {
-      outline-color: currentColor;
+      outline: 2px dotted currentColor;
       outline-offset: -2px;
-    }
-  }
-
-  /* Same swap as .menu-drawer in menu.css; sits on --theme-sidebar-bg
-     instead of the page background. */
-  .theme-select-drawer .theme-select-trigger {
-    background: var(--theme-sidebar-card);
-
-    @media (hover) {
-      &:hover {
-        background-image: radial-gradient(var(--theme-sidebar-hover));
-      }
     }
   }
 
@@ -207,25 +201,38 @@ const { drawer = false } = Astro.props;
        specificity, so display must stay scoped to [open], or this
        renders in-flow even when closed. */
     flex-direction: column;
-    gap: 2px;
+    /* m3.material.io/components/dialogs/specs's "padding between body
+       and actions" (24dp). */
+    gap: 24px;
     box-sizing: border-box;
-    width: min(280px, calc(100vw - 32px));
-    padding: 8px;
+    /* Same spec: container width min 280dp / max 560dp. fit-content so
+       it hugs the (small) options row instead of always sitting at the
+       floor. */
+    width: fit-content;
+    min-width: 280px;
+    max-width: min(560px, calc(100vw - 32px));
+    /* Spec: 24dp padding on all sides. */
+    padding: 24px;
     border: none;
-    border-radius: calc(8px + var(--rounded-large));
-    /* border-radius: var(--rounded-xlarge); */
+    /* Spec: 28dp corner radius. */
+    border-radius: 28px;
     background: var(--theme-page-bg);
     color: var(--theme-page-text);
-    box-shadow: 0 0 32px rgb(from var(--theme-text) r g b / 20%);
+    box-shadow: 0 0 32px rgb(from var(--theme-shadow) r g b / 20%);
+
+    &:focus-visible {
+      outline-offset: -4px;
+    }
 
     &[open] {
       display: flex;
     }
 
     &::backdrop {
-      background: var(--theme-text);
+      background: var(--theme-scrim);
       opacity: 0.3;
-      transition: opacity 150ms;
+      transition: opacity var(--motion-duration-short3)
+        var(--motion-easing-standard);
 
       @starting-style {
         opacity: 0;
@@ -233,22 +240,40 @@ const { drawer = false } = Astro.props;
     }
   }
 
+  .theme-select-options {
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+  }
+
+  .theme-select-done {
+    /* m3.material.io/components/dialogs/guidelines: "Buttons are aligned
+       to the trailing edge of the dialog." Column-flex dialog defaults
+       every child to stretch full-width otherwise. */
+    align-self: flex-end;
+  }
+
   .theme-select-option {
+    flex: 1;
     padding: 8px 16px;
-    border: none;
+    border: 0;
     border-radius: var(--rounded-large);
     background: var(--theme-infobox);
     color: inherit;
     font: inherit;
     text-align: center;
 
-    :where(&) + & {
+    /* Connected button group: outer ends stay large, the corners where
+       buttons meet go small. m3.material.io/components/button-groups/specs
+       Skips the selected button -- it goes fully round regardless of
+       position, see &[aria-pressed="true"] below. */
+    :where(&) + &:not([aria-pressed="true"]) {
       border-top-left-radius: var(--rounded-small);
-      border-top-right-radius: var(--rounded-small);
+      border-bottom-left-radius: var(--rounded-small);
     }
 
-    &:has(+ &) {
-      border-bottom-left-radius: var(--rounded-small);
+    &:has(+ &):not([aria-pressed="true"]) {
+      border-top-right-radius: var(--rounded-small);
       border-bottom-right-radius: var(--rounded-small);
     }
 
@@ -259,19 +284,18 @@ const { drawer = false } = Astro.props;
     }
 
     &:focus-visible {
-      outline-color: var(--theme-page-text);
+      outline: 2px dotted currentColor;
       outline-offset: -2px;
       z-index: 1;
     }
 
     &[aria-pressed="true"] {
-      background: var(--theme-button-bg);
-      color: var(--theme-button-text);
-
-      /* Standard text color is invisible against background, so offset it */
-      &:focus-visible {
-        outline-offset: 2px;
-      }
+      /* Selection changes shape too, not just color, per M3 button-group
+         spec ("...affect the shape of the button being selected"). */
+      border-radius: var(--rounded-pill);
+      background: var(--theme-toggle-selected-bg);
+      color: var(--theme-toggle-selected-text);
+      outline-offset: -4px;
     }
   }
 </style>

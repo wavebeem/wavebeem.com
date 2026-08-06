@@ -5,7 +5,7 @@
 }
 
 .infobox:where(a) {
-  color: inherit;
+  color: var(--theme-infobox-text);
   text-decoration-line: none;
 
   margin-block: 16px;
@@ -19,7 +19,7 @@
 
   border-radius: var(--rounded-large);
 
-  :where(&) + & {
+  /* :where(&) + & {
     border-top-left-radius: var(--rounded-small);
     border-top-right-radius: var(--rounded-small);
   }
@@ -27,7 +27,7 @@
   &:has(+ &) {
     border-bottom-left-radius: var(--rounded-small);
     border-bottom-right-radius: var(--rounded-small);
-  }
+  } */
 
   & + & {
     margin-top: calc(var(--infobox-gap) - 16px);
@@ -52,37 +52,35 @@
 
   &:hover {
     text-decoration-line: none;
-
-    .heading {
-      /* text-decoration-line: underline; */
-      text-decoration-thickness: inherit;
-      color: var(--theme-text);
-    }
   }
 
   &:focus-visible {
-    outline-offset: -3px;
+    outline: 2px dotted currentColor;
+    outline-offset: -2px;
   }
 }
 
 .infobox:where(ul) {
   display: grid;
-  gap: var(--infobox-gap);
+  gap: var(--connected-gap);
   list-style-type: none;
   padding: 0;
 
   position: relative;
 
   background: var(--theme-page-bg);
+  color: inherit;
 
   a {
     color: inherit;
-    display: block;
-    outline-offset: -3px;
-
-    &:not(:hover) {
-      text-decoration-line: none;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    line-height: 1.25;
+    font-size: var(--font-size-base);
+    outline-offset: -2px;
+    text-decoration-line: none;
 
     &:hover:where(:not(:active)) {
       background-image: radial-gradient(var(--theme-hover-light));
@@ -91,6 +89,7 @@
 
   li {
     a {
+      color: var(--theme-infobox-text);
       padding: 8px 16px;
       background: var(--theme-infobox);
       border-radius: var(--rounded-large);
@@ -108,38 +107,5 @@
         border-bottom-right-radius: var(--rounded-small);
       }
     }
-  }
-}
-
-.infobox:where(dl) {
-  background: var(--theme-page-bg);
-
-  > :is(dd, dt) {
-    background: var(--theme-infobox);
-  }
-
-  > :is(dd, dt) {
-    padding-inline: 16px;
-  }
-
-  > dt {
-    margin: 0;
-  }
-
-  > dd + dt {
-    margin-top: var(--infobox-gap);
-    padding-block: 16px 0;
-  }
-
-  > dt:first-child {
-    padding-block: 16px 0;
-  }
-
-  > dd {
-    padding-block: 0 16px;
-  }
-
-  > dd + dd {
-    margin-top: 0;
   }
 }

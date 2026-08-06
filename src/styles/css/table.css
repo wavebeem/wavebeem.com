@@ -1,0 +1,34 @@
+/* No M3 role for tables -- Material dropped the "data table" component in
+   the M3 spec entirely (it existed in M2, m3.material.io/components has no
+   equivalent). Modeled on 2bit-ui's table instead:
+   2bit-ui.wavebeem.com/docs/#tables -- rule-based rows (no vertical
+   gridlines), bold header cells, a stronger divider under the header and
+   a subtler one between rows. */
+main table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin-block: 1.5rem;
+  max-width: var(--width-copy);
+}
+
+main :is(th, td) {
+  padding: 8px 16px;
+  text-align: left;
+}
+
+main th {
+  font-weight: bold;
+}
+
+main thead {
+  border-bottom: 1px solid var(--theme-border);
+}
+
+main tbody tr {
+  border-bottom: 1px solid var(--theme-divider);
+}
+
+main tbody tr:last-child {
+  border-bottom: none;
+}

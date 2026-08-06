@@ -1,8 +1,30 @@
 import { setTimeout as sleep } from "node:timers/promises";
 import { stat, unlink } from "node:fs/promises";
 import path from "node:path";
+import type {
+  AstroIntegration,
+  AstroIntegrationLogger,
+  HookParameters,
+} from "astro";
+import type { Sharp } from "sharp";
 
-async function retry({ fn, times, delay }) {
+interface ConvertSettings {
+  lossless?: boolean;
+  quality?: number;
+  maxWidth?: number;
+  maxHeight?: number;
+  upscale?: number;
+}
+
+async function retry<T>({
+  fn,
+  times,
+  delay,
+}: {
+  fn: () => Promise<T>;
+  times: number;
+  delay: number;
+}): Promise<T> {
   for (let attempt = 1; attempt <= times; attempt++) {
     try {
       return await fn();
@@ -13,12 +35,14 @@ async function retry({ fn, times, delay }) {
       await sleep(delay);
     }
   }
+  // Unreachable: the loop always returns or throws on its final attempt.
+  throw new Error("unreachable");
 }
 
 // Folder name (anywhere in the path, any depth) picks the conversion style for
 // PNG input. JPEG always uses its own settings below, regardless of folder.
 // Anything not in one of these folders is a plain PNG: lossless, no resize.
-const folderSettings = {
+const folderSettings: Record<string, ConvertSettings> = {
   vg: { quality: 80, maxWidth: 1280, maxHeight: 720 },
   pxl: { lossless: true, maxWidth: 1280, maxHeight: 720 },
   gbc: { lossless: true, upscale: 3 },
@@ -26,7 +50,7 @@ const folderSettings = {
   playdate: { lossless: true, upscale: 3 },
   bigshot: { quality: 90, maxWidth: 1280 },
 };
-const jpegSettings = { quality: 90, maxWidth: 1280 };
+const jpegSettings: ConvertSettings = { quality: 90, maxWidth: 1280 };
 
 const largeFileBytes = 500 * 1024;
 const convertibleExtensions = new Set([".png", ".jpg", ".jpeg"]);
@@ -42,11 +66,11 @@ const sizeExceptions = new Set([
 // A raw/ folder (anywhere in the path, any depth) is never touched. For
 // images that must stay in their original format, e.g. a post that shows
 // real PNGs as content, not just illustration.
-function isRaw(filePath) {
+function isRaw(filePath: string): boolean {
   return filePath.includes(`${path.sep}raw${path.sep}`);
 }
 
-function shouldConvertToWebp(filePath) {
+function shouldConvertToWebp(filePath: string): boolean {
   if (!filePath.includes(`${path.sep}assets${path.sep}`)) {
     return false;
   }
@@ -56,7 +80,7 @@ function shouldConvertToWebp(filePath) {
   return convertibleExtensions.has(path.extname(filePath).toLowerCase());
 }
 
-function resolveSettings(filePath, ext) {
+function resolveSettings(filePath: string, ext: string): ConvertSettings {
   if (ext === ".jpg" || ext === ".jpeg") {
     return jpegSettings;
   }
@@ -69,14 +93,19 @@ function resolveSettings(filePath, ext) {
   return { lossless: true };
 }
 
-async function resizeForSettings(image, settings) {
+async function resizeForSettings(
+  image: Sharp,
+  settings: ConvertSettings,
+): Promise<Sharp> {
   if (settings.upscale) {
     const { width, height } = await image.metadata();
     // Nearest neighbour, not sharp's default lanczos3: gbc screenshots are
     // pixel art, and smooth interpolation would blur the hard edges.
-    return image.resize(width * settings.upscale, height * settings.upscale, {
-      kernel: "nearest",
-    });
+    return image.resize(
+      (width ?? 0) * settings.upscale,
+      (height ?? 0) * settings.upscale,
+      { kernel: "nearest" },
+    );
   }
   if (settings.maxWidth) {
     return image.resize(settings.maxWidth, settings.maxHeight ?? null, {
@@ -87,7 +116,11 @@ async function resizeForSettings(image, settings) {
   return image;
 }
 
-async function readAndConvert(filePath, webpPath, settings) {
+async function readAndConvert(
+  filePath: string,
+  webpPath: string,
+  settings: ConvertSettings,
+): Promise<void> {
   // Dynamic import so astro build (which loads every integration too, not just
   // astro dev) never needs sharp resolvable.
   const { default: sharp } = await import("sharp");
@@ -99,7 +132,9 @@ async function readAndConvert(filePath, webpPath, settings) {
   await image.toFile(webpPath);
 }
 
-async function convertToWebp(filePath) {
+async function convertToWebp(
+  filePath: string,
+): Promise<{ webpPath: string; lossy: boolean }> {
   const ext = path.extname(filePath).toLowerCase();
   const webpPath = filePath.slice(0, -ext.length) + ".webp";
   const settings = resolveSettings(filePath, ext);
@@ -119,7 +154,11 @@ async function convertToWebp(filePath) {
   return { webpPath, lossy: !settings.lossless };
 }
 
-async function warnIfLarge(webpPath, root, logger) {
+async function warnIfLarge(
+  webpPath: string,
+  root: string,
+  logger: AstroIntegrationLogger,
+): Promise<void> {
   const { size } = await stat(webpPath);
   if (size <= largeFileBytes) {
     return;
@@ -132,20 +171,25 @@ async function warnIfLarge(webpPath, root, logger) {
 
   logger.warn(
     `webp-watch: ${relPath} is ${(size / 1024).toFixed(0)}KB after conversion. ` +
-      `Add "${relPath}" to sizeExceptions in webpWatch.mjs if that's expected.`,
+      `Add "${relPath}" to sizeExceptions in webpWatch.mts if that's expected.`,
   );
 }
 
-async function handleAdd(filePath, { root, logger }) {
+async function handleAdd(
+  filePath: string,
+  { root, logger }: { root: string; logger: AstroIntegrationLogger },
+): Promise<void> {
   if (!shouldConvertToWebp(filePath)) {
     return;
   }
 
-  let webpPath, lossy;
+  let webpPath: string, lossy: boolean;
   try {
     ({ webpPath, lossy } = await convertToWebp(filePath));
   } catch (error) {
-    logger.error(`webp-watch: failed converting ${filePath}: ${error.message}`);
+    logger.error(
+      `webp-watch: failed converting ${filePath}: ${(error as Error).message}`,
+    );
     return;
   }
 
@@ -159,9 +203,19 @@ async function handleAdd(filePath, { root, logger }) {
 }
 
 async function handleWatcherEvent(
-  filePath,
-  { root, logger, startedAt, inFlight },
-) {
+  filePath: string,
+  {
+    root,
+    logger,
+    startedAt,
+    inFlight,
+  }: {
+    root: string;
+    logger: AstroIntegrationLogger;
+    startedAt: number;
+    inFlight: Set<string>;
+  },
+): Promise<void> {
   // Guards against a single file write producing more than one watcher event
   // for the same path (confirmed in practice: a new file fires both "add" and
   // "change" a moment apart).
@@ -192,16 +246,19 @@ async function handleWatcherEvent(
   }
 }
 
-export default function webpWatch() {
+export default function webpWatch(): AstroIntegration {
   return {
     name: "webp-watch",
     hooks: {
-      "astro:server:setup": ({ server, logger }) => {
+      "astro:server:setup": ({
+        server,
+        logger,
+      }: HookParameters<"astro:server:setup">) => {
         const root = server.config.root;
         const startedAt = Date.now();
-        const inFlight = new Set();
+        const inFlight = new Set<string>();
 
-        function onWatcherEvent(filePath) {
+        function onWatcherEvent(filePath: string) {
           // chokidar doesn't await listeners, so this must catch its own errors
           // or a bug here becomes an unhandled rejection that can crash the dev
           // server.
@@ -210,7 +267,7 @@ export default function webpWatch() {
             logger,
             startedAt,
             inFlight,
-          }).catch((error) => {
+          }).catch((error: Error) => {
             logger.error(`webp-watch: unexpected error: ${error.message}`);
           });
         }

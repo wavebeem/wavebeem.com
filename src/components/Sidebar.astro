@@ -1,18 +1,33 @@
 ---
-import MenuLinks from "./MenuLinks.astro";
 import Logo from "./Logo.astro";
 import ThemeSelect from "./ThemeSelect.astro";
 import { groups } from "@/data/menu";
 ---
 
 <aside class="sidebar">
-  <a href="/" role="presentation" class="sidebar-top button">
-    <Logo />
-  </a>
-  <nav aria-label="Primary">
-    <MenuLinks groups={groups} />
-  </nav>
-  <ThemeSelect />
+  <div class="sidebar-inner">
+    <a href="/" role="presentation" class="sidebar-top">
+      <Logo />
+    </a>
+    <nav aria-label="Primary">
+      {
+        groups.map((group) => (
+          <div class="nav-group">
+            {group.map((item) => (
+              <a class="nav-link" href={item.url}>
+                <span class="nav-link-icon">
+                  <item.icon aria-hidden="true" />
+                </span>
+                {item.title}
+              </a>
+            ))}
+          </div>
+        ))
+      }
+    </nav>
+    <ThemeSelect />
+  </div>
+  <div class="divider-wavy-vertical sidebar-divider" aria-hidden="true"></div>
 </aside>
 
 <style>
@@ -20,58 +35,121 @@ import { groups } from "@/data/menu";
     display: none;
 
     @media (width >= 70rem) {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
+      /* Grid, not flex: .sidebar-divider needs its own column that
+         doesn't scroll with .sidebar-inner's nav content (see below) --
+         it just stretches to match the row height (capped to one
+         viewport, same as .sidebar-inner), a fixed backdrop the nav
+         scrolls past rather than something that scrolls along with it. */
+      display: grid;
+      /* minmax(0, 1fr), not plain 1fr: a plain 1fr track won't shrink
+         below its content's min-content width, so .sidebar-inner would
+         overflow past the fixed sidebar-width column, pushing
+         .sidebar-divider out past the visible edge where overflow-x:
+         hidden (on .sidebar-inner now) would silently clip it. */
+      grid-template-columns: minmax(0, 1fr) auto;
       box-sizing: border-box;
-      /* Sticky, not its own scroll region (see .page-shell). Capped to
-         viewport height with its own scrollbar so a short window can't
-         strand nav items below the fold. */
+      /* Sticky, not its own scroll region (see .page-shell); capped to
+         viewport height so a short window can't strand nav items below
+         the fold. The scrolling itself happens in .sidebar-inner, not
+         here, so .sidebar-divider (this box's other grid item) stays
+         static instead of scrolling along with the nav. */
       position: sticky;
       top: 0;
       max-height: 100vh;
-      overflow-y: auto;
-      /* overflow-y: auto implicitly makes overflow-x auto too (per
-         spec), which shows a scrollbar from sub-pixel flex rounding.
-         Never supposed to scroll sideways. */
-      overflow-x: hidden;
-      /* Without this, scrolling past the nav's edge chains into
-         scrolling <body> underneath it. */
-      overscroll-behavior: contain;
-      padding: 24px;
-      /* Aligns with the visible top of the page title's glyphs, not
-         its taller line box; not an arbitrary round number. */
-      padding-top: calc(24px + 2px);
-      padding-right: 8px;
-      /* No panel background/shadow; separated from content by space,
-         not a color block, so nav reads as part of the page canvas.
-         .sidebar-top below is the one exception. */
       color: var(--theme-page-text);
     }
+  }
+
+  .sidebar-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+    box-sizing: border-box;
+    /* vh, not %: percentage heights don't resolve against an auto-height
+       parent (.sidebar has no explicit height, just a max-height), so
+       this needs the same viewport-relative value directly. */
+    max-height: 100vh;
+    overflow-y: auto;
+    /* overflow-y: auto implicitly makes overflow-x auto too (per spec),
+       which shows a scrollbar from sub-pixel flex rounding. Never
+       supposed to scroll sideways. */
+    overflow-x: hidden;
+    /* Without this, scrolling past the nav's edge chains into scrolling
+       <body> underneath it. */
+    overscroll-behavior: contain;
+  }
+
+  .sidebar-divider {
+    display: none;
+
+    /* No panel background/shadow; separated from content by this
+       instead of a color block, so nav reads as part of the page
+       canvas. .sidebar-top below is the one exception. */
+    @media (width >= 70rem) {
+      display: block;
+    }
+  }
+
+  .sidebar-divider-stroke {
+    stroke: var(--theme-divider-decorative);
   }
 
   nav {
     display: flex;
     flex-direction: column;
     gap: 24px;
-
-    /* MenuLinks renders each group as .menu.paragraph; cancel the
-       generic paragraph margin so gap above is the only spacing. */
-    :global(.paragraph) {
-      margin-block: 0;
-    }
   }
 
+  /* .nav-group/.nav-link are shared with Header.astro's mobile nav-menu
+     drawer -- see nav-link.css. */
+
   .sidebar-top {
-    /* `button` class supplies color/shape; this is just extra padding
-       for the logo. Centered, not left-aligned like Header.astro's
-       copy, since there's no hamburger here to balance against. */
-    padding: 16px;
+    display: flex;
+    position: relative;
+    isolation: isolate;
+    /* Matches .nav-link's own padding (nav-link.css) so the logo, nav
+       icons, and theme-select badge below all start at the same left
+       inset instead of drifting per-row. */
+    padding: 8px;
+    padding-right: 16px;
+    border-radius: var(--rounded-pill);
+    color: var(--theme-logo-text);
+
+    /* Corner "sun" -- sits behind the wordmark (negative z-index, scoped
+       to this element's own stacking context via isolation: isolate
+       above) rather than as a full background chip, so the logo reads as
+       marked by a glow instead of boxed in like a nav-link. */
+    /* &::before {
+      content: "";
+      position: absolute;
+      top: -3px;
+      left: 8px;
+      width: 48px;
+      height: 48px;
+      border-radius: 9999px;
+      background: var(--theme-logo-glow);
+      z-index: -1;
+    } */
 
     /* :global needed: Logo.astro injects raw SVG via set:html. */
     :global(svg) {
       height: 28px;
       width: auto;
+    }
+
+    /* Same solid wash as .nav-link's hover (nav-link.css) so the logo
+       reads as part of the same interactive list, not a separate
+       treatment. */
+    @media (hover) {
+      &:hover {
+        background: var(--theme-nav-link-hover);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px dotted currentColor;
+      outline-offset: -2px;
     }
   }
 </style>

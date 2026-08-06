@@ -4,8 +4,7 @@
   justify-content: center;
   align-items: center;
   display: inline-flex;
-  font-weight: bold;
-  /* font-style: italic; */
+  font-weight: 600;
   padding: 8px 16px;
   border-radius: var(--rounded-pill);
   text-decoration-line: none;
@@ -14,10 +13,10 @@
   /* border: 0; */
 
   background: var(--theme-button-bg);
+  background-origin: border-box;
   color: var(--theme-button-text);
 
   border: 2px solid transparent;
-  box-shadow: var(--shadow1);
 }
 
 .button:hover {
@@ -29,13 +28,12 @@
 }
 
 .button:focus-visible {
-  outline: 3px solid var(--theme-text);
-  outline-offset: 3px;
-  box-shadow: 0 0 0 3px var(--theme-button-text);
+  outline: 2px dotted currentColor;
+  outline-offset: -2px;
 }
 
 .button:where([data-size="small"]) {
-  padding: 4px 8px;
+  padding: 4px 12px;
   border-radius: var(--rounded-pill);
   font-size: var(--font-size-small);
 }

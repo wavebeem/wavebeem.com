@@ -5,6 +5,7 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="footer" id="footer">
+  <div class="divider-wavy"></div>
   <nav class="footer-menu" aria-label="Footer">
     {
       groups.map((group) => (
@@ -32,51 +33,72 @@ const year = new Date().getFullYear();
     padding: 1rem;
     padding-top: 5rem;
     padding-bottom: calc(1rem + env(safe-area-max-inset-bottom, 1rem));
+    color: var(--theme-bullet);
   }
 
-  .footer > * {
-    margin-inline: auto;
-    max-width: max-content;
+  /* Shape/color come from divider.css's shared .divider-wavy rule.
+     --m tweaked here for a bit more curve than the shared default. */
+  .divider-wavy {
+    margin-bottom: 1.5rem;
+
+    /* Escape .footer's padding-inline for a true edge-to-edge wave,
+       same trick page.css uses for in-content dividers on mobile. */
+    @media (width < 40rem) {
+      margin-inline: -1rem;
+      width: calc(100% + 2rem);
+    }
+
+    /* Sidebar's own vertical wavy divider already provides that texture
+       at this width -- one squiggle per layout, not two. */
+    @media (width >= 70rem) {
+      display: none;
+    }
   }
 
-  .footer-menu {
+  .footer > :not(.divider-wavy) {
+    margin-inline: 0;
+    max-width: none;
+  }
+
+  /* .footer > .footer-menu, not just .footer-menu: needs to match the
+     specificity of ".footer > :not(.divider-wavy)" above so this max-width
+     actually wins over that rule's max-content, instead of losing on
+     specificity and leaving the grid hugging its own content width. */
+  .footer > .footer-menu {
     display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 8px 32px;
     max-width: var(--width-heading);
     margin-bottom: 2.5rem;
-
-    @media (width < 40rem) {
-      grid-template-columns: repeat(3, auto);
-    }
-
-    @media (width <= 21rem) {
-      grid-template-columns: 1fr;
-    }
 
     /* Redundant with the persistent Sidebar.astro at this width. */
     @media (width >= 70rem) {
       display: none;
     }
 
+    /* data/menu.ts currently defines a single group (all 7 links), so
+       this is really styling one list, not laying multiple groups side
+       by side -- two columns instead of one long vertical run. */
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
       display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px 32px;
       align-content: start;
+
+      @media (width <= 21rem) {
+        grid-template-columns: 1fr;
+      }
     }
 
     a {
       display: block;
-      color: inherit;
+      color: var(--theme-link);
       font-size: var(--font-size-small);
+      /* 32px tap target meets WCAG 2.5.8 (24px min), not Lighthouse's
+         48px heuristic. Secondary list; sidebar/hamburger cover primary nav. */
+      padding: 4px 8px;
       text-decoration-line: none;
-      padding: 4px;
-
-      &:hover {
-        text-decoration-line: underline;
-      }
     }
   }
 </style>

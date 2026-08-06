@@ -1,9 +1,7 @@
 ---
+import { IconMenu, IconClose } from "./icons";
 import Logo from "./Logo.astro";
-import IconMenu from "./IconMenu.astro";
-import IconClose from "./IconClose.astro";
 import ThemeSelect from "./ThemeSelect.astro";
-import MenuLinks from "./MenuLinks.astro";
 import { groups } from "@/data/menu";
 ---
 
@@ -27,13 +25,29 @@ import { groups } from "@/data/menu";
       </button>
     </form>
     <div class="nav-menu-content">
-      <MenuLinks drawer groups={groups} />
+      <nav aria-label="Primary">
+        {
+          groups.map((group) => (
+            <div class="nav-group">
+              {group.map((item) => (
+                <a class="nav-link" href={item.url}>
+                  <span class="nav-link-icon">
+                    <item.icon aria-hidden="true" />
+                  </span>
+                  {item.title}
+                </a>
+              ))}
+            </div>
+          ))
+        }
+      </nav>
       <div class="paragraph">
-        <ThemeSelect drawer />
+        <ThemeSelect />
       </div>
     </div>
   </dialog>
 </header>
+<hr />
 
 <script>
   const navMenu = document.querySelector<HTMLDialogElement>(".nav-menu")!;
@@ -61,10 +75,21 @@ import { groups } from "@/data/menu";
     overflow: hidden;
   }
 
+  hr {
+    /* Pulls the wavy divider up against the header, but not all the way --
+       leaves a bit of breathing room below .header-content's own
+       padding-block instead of fully canceling it out. */
+    margin-block: -4px -8px;
+
+    @media (width >= 70rem) {
+      display: none;
+    }
+  }
+
   .header {
     background: var(--theme-header-bg);
     color: var(--theme-header-text);
-    box-shadow: var(--shadow1);
+    /* border-bottom: 1px solid var(--theme-divider); */
 
     display: flex;
     justify-content: center;
@@ -111,8 +136,9 @@ import { groups } from "@/data/menu";
     display: flex;
     outline-offset: 4px;
     border-radius: var(--rounded-small);
+    color: var(--theme-accent);
 
-    @media (width >= 40rem) {
+    @media (width >= 70rem) {
       height: 32px;
     }
   }
@@ -153,23 +179,22 @@ import { groups } from "@/data/menu";
     width: 40px;
     height: 40px;
     box-sizing: border-box;
-    border: 2px solid var(--theme-header-card);
-    border-radius: var(--rounded-large);
-    background: var(--theme-header-bg);
-    color: inherit;
+    border-radius: var(--rounded-pill);
+    border: 0;
+    background: var(--theme-icon-button-badge);
+    color: var(--theme-icon-button-badge-text);
     stroke: currentColor;
     pointer-events: auto;
     box-shadow: none;
 
     @media (hover) {
       &:hover {
-        border-color: transparent;
-        background-image: radial-gradient(var(--theme-header-card));
+        background-image: radial-gradient(var(--theme-hover-light));
       }
     }
 
     &:focus-visible {
-      outline-color: currentColor;
+      outline: 2px dotted currentColor;
       outline-offset: -2px;
     }
 
@@ -200,9 +225,11 @@ import { groups } from "@/data/menu";
 
     translate: 100% 0;
     transition:
-      translate 0.25s ease,
-      overlay 0.25s ease allow-discrete,
-      display 0.25s ease allow-discrete;
+      translate var(--motion-duration-medium1) var(--motion-easing-standard),
+      overlay var(--motion-duration-medium1) var(--motion-easing-standard)
+        allow-discrete,
+      display var(--motion-duration-medium1) var(--motion-easing-standard)
+        allow-discrete;
 
     &[open] {
       translate: 0 0;
@@ -214,12 +241,14 @@ import { groups } from "@/data/menu";
   }
 
   .nav-menu::backdrop {
-    background: rgb(from var(--theme-sidebar-bg) r g b / 50%);
+    background: rgb(from var(--theme-scrim) r g b / 50%);
     opacity: 0;
     transition:
-      opacity 0.25s ease,
-      overlay 0.25s ease allow-discrete,
-      display 0.25s ease allow-discrete;
+      opacity var(--motion-duration-medium1) var(--motion-easing-standard),
+      overlay var(--motion-duration-medium1) var(--motion-easing-standard)
+        allow-discrete,
+      display var(--motion-duration-medium1) var(--motion-easing-standard)
+        allow-discrete;
   }
 
   .nav-menu[open]::backdrop {
@@ -234,6 +263,15 @@ import { groups } from "@/data/menu";
 
   .nav-menu-content {
     padding: 16px;
+
+    /* Scoped to this nav specifically -- .nav up top (wrapping the
+       hamburger button) is a different element. */
+    > nav {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
   }
 
   .nav-menu-toolbar {
@@ -242,8 +280,8 @@ import { groups } from "@/data/menu";
     z-index: 1;
     display: flex;
     justify-content: flex-end;
-    padding: 16px 16px 64px;
-    margin-bottom: -64px;
+    padding: 16px 16px 24px;
+    margin-bottom: -24px;
     background: linear-gradient(var(--theme-sidebar-bg), transparent);
     pointer-events: none;
   }
@@ -257,23 +295,22 @@ import { groups } from "@/data/menu";
     width: 40px;
     height: 40px;
     box-sizing: border-box;
-    border: 2px solid var(--theme-sidebar-card);
-    border-radius: var(--rounded-large);
-    background: var(--theme-sidebar-bg);
-    color: inherit;
+    border-radius: var(--rounded-pill);
+    border: 0;
+    background: var(--theme-icon-button-badge);
+    color: var(--theme-icon-button-badge-text);
     stroke: currentColor;
     pointer-events: auto;
     box-shadow: none;
 
     @media (hover) {
       &:hover {
-        border-color: transparent;
-        background-image: radial-gradient(var(--theme-sidebar-card));
+        background-image: radial-gradient(var(--theme-hover-light));
       }
     }
 
     &:focus-visible {
-      outline-color: currentColor;
+      outline: 2px dotted currentColor;
       outline-offset: -2px;
     }
   }
