@@ -2,6 +2,14 @@
 
 ## High priority
 
+### Fix webp image watcher
+
+It seems to not be firing on Windows or something?
+
+### Update photo
+
+Optimize resolution and colors.
+
 ### Update brand image assets
 
 Logo and favicon and shit.

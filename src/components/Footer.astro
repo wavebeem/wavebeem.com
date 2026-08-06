@@ -82,8 +82,8 @@ const year = new Date().getFullYear();
       margin: 0;
       padding: 0;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px 32px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4px 32px;
       align-content: start;
 
       @media (width <= 21rem) {
@@ -95,7 +95,9 @@ const year = new Date().getFullYear();
       display: block;
       color: var(--theme-link);
       font-size: var(--font-size-small);
-      padding: 8px 8px;
+      /* 32px tap target meets WCAG 2.5.8 (24px min), not Lighthouse's
+         48px heuristic. Secondary list; sidebar/hamburger cover primary nav. */
+      padding: 4px 8px;
       text-decoration-line: none;
     }
   }
