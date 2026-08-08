@@ -2,7 +2,11 @@ import { setTimeout as sleep } from "node:timers/promises";
 import { stat, unlink } from "node:fs/promises";
 import path from "node:path";
 import type { AstroIntegration, AstroIntegrationLogger } from "astro";
-import type { Sharp } from "sharp";
+// Static import, not dynamic: a late `await import("sharp")` inside the
+// astro:config:setup hook kept racing Vite's module runner teardown and
+// crashing dev. sharp is a mandatory dependency now, so there's no reason to
+// defer loading it.
+import sharp, { type Sharp } from "sharp";
 
 interface ConvertSettings {
   lossless?: boolean;
@@ -112,19 +116,11 @@ async function resizeForSettings(
   return image;
 }
 
-// sharp is a devDependency; astro build must never resolve it. Loaded once here
-// (dev only), not lazily in readAndConvert, since a late dynamic import can
-// race Vite's module runner teardown and fail.
-let sharp: typeof import("sharp").default | undefined;
-
 async function readAndConvert(
   filePath: string,
   webpPath: string,
   settings: ConvertSettings,
 ): Promise<void> {
-  if (!sharp) {
-    throw new Error("webp-watch: sharp was never loaded (not running in dev)");
-  }
   let image = sharp(filePath);
   image = await resizeForSettings(image, settings);
   image = image.webp(
@@ -251,11 +247,6 @@ export default function webpWatch(): AstroIntegration {
   return {
     name: "webp-watch",
     hooks: {
-      "astro:config:setup": async ({ command }) => {
-        if (command === "dev") {
-          ({ default: sharp } = await import("sharp"));
-        }
-      },
       "astro:server:setup": ({ server, logger }) => {
         const root = server.config.root;
         const startedAt = Date.now();

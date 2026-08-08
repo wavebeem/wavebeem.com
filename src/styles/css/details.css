@@ -40,10 +40,6 @@
     margin-top: calc(var(--connected-gap) - 1.5rem);
   }
 
-  & + &[open] {
-    --details-radius-bottom: var(--rounded-small);
-  }
-
   &:has(+ &) {
     --details-radius-bottom: var(--rounded-small);
   }
@@ -139,5 +135,10 @@
 
   :where(&[open] > summary) {
     margin-bottom: -0.5rem;
+    /* The container keeps its own corner radius regardless of open
+       state; only the summary shrinks to the small radius, since
+       content sits flush below it while open. */
+    border-end-start-radius: var(--rounded-small);
+    border-end-end-radius: var(--rounded-small);
   }
 }

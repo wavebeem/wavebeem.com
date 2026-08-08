@@ -24,6 +24,7 @@
     "astro": "^7.1.1",
     "feed": "^6.0.0",
     "lucide-static": "^1.28.0",
+    "sharp": "^0.35.3",
     "vite-plugin-static-copy": "^4.1.1"
   },
   "devDependencies": {
@@ -31,7 +32,6 @@
     "@material/material-color-utilities": "^0.4.0",
     "prettier": "^3.9.5",
     "prettier-plugin-astro": "^0.14.1",
-    "sharp": "^0.35.3",
     "typescript": "^6.0.3"
   }
 }
