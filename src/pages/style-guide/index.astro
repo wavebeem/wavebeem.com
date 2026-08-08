@@ -5,7 +5,7 @@ import PageLayout from "@/layouts/PageLayout.astro";
 const jsCode = `<span class="token comment">// Artisan kombucha tote bag</span>
 <span class="token keyword">function</span> <span class="token function">brew</span><span class="token punctuation">(</span>beans<span class="token punctuation">,</span> <span class="token punctuation">{</span> direct <span class="token operator">=</span> <span class="token boolean">true</span> <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> roast <span class="token operator">=</span> direct <span class="token operator">?</span> <span class="token string">"single-origin"</span> <span class="token operator">:</span> <span class="token string">"blend"</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> roast <span class="token operator">+</span> <span class="token string">" — cold-pressed"</span><span class="token punctuation">;</span>
+  <span class="token keyword">return</span> roast <span class="token operator">+</span> <span class="token string">", cold-pressed"</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>`;
 ---
 
@@ -290,6 +290,30 @@ const jsCode = `<span class="token comment">// Artisan kombucha tote bag</span>
     </li>
   </ul>
 
+  <h3>Unordered, items in paragraphs</h3>
+  <ul>
+    <li><p>Artisan kombucha tote bag</p></li>
+    <li>
+      <p>
+        Single-origin coffee, before they sold out cold-pressed meditation
+        retreat. Farm-to-table listicle direct trade mixtape, forage sriracha
+        chambray gluten-free viral marfa.
+      </p>
+    </li>
+    <li>
+      <p>Cold-pressed meditation retreat, direct trade mixtape</p>
+      <ul>
+        <li><p>Farm-to-table listicle</p></li>
+        <li>
+          <p>
+            Direct trade mixtape, forage sriracha chambray gluten-free viral
+            marfa tousled portland distillery
+          </p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
   <h3>Ordered</h3>
   <ol>
     <li>Forage sriracha chambray</li>
@@ -357,6 +381,40 @@ const jsCode = `<span class="token comment">// Artisan kombucha tote bag</span>
   <details>
     <summary>Tousled portland distillery</summary>
     <p>Ethical migas small batch, woke selvage forage sriracha.</p>
+  </details>
+  <details open>
+    <summary>Ethical migas, open by default</summary>
+    <p>
+      Woke selvage forage sriracha, gluten-free viral marfa before they sold
+      out.
+    </p>
+  </details>
+
+  <h3>Longer content</h3>
+
+  <details>
+    <summary>Single-origin, cold-pressed, direct trade (long version)</summary>
+    <p>
+      Artisan kombucha tote bag single-origin coffee, before they sold out
+      cold-pressed meditation retreat. Farm-to-table listicle direct trade
+      mixtape, forage sriracha chambray gluten-free viral marfa. Tousled
+      portland distillery, ethical migas small batch woke selvage.
+    </p>
+    <p>
+      Direct trade mixtape before they sold out, small batch marfa chambray.
+      Cold-pressed listicle forage sriracha, gluten-free viral woke selvage
+      tousled distillery.
+    </p>
+    <ul>
+      <li>Artisan kombucha tote bag</li>
+      <li>Single-origin coffee, before they sold out</li>
+      <li>Cold-pressed meditation retreat</li>
+      <li>Farm-to-table listicle, direct trade mixtape</li>
+    </ul>
+    <p>
+      Ethical migas small batch, woke selvage forage sriracha chambray
+      gluten-free viral marfa tousled portland distillery.
+    </p>
   </details>
 
   <h2>Cards</h2>

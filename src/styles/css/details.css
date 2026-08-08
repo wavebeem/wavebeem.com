@@ -16,6 +16,25 @@
   border-radius: var(--details-radius-top) var(--details-radius-top)
     var(--details-radius-bottom) var(--details-radius-bottom);
 
+  /* Lets `height: auto` participate in a transition instead of snapping.
+     Chromium-only for now; other browsers just keep the instant toggle. */
+  interpolate-size: allow-keywords;
+
+  &::details-content {
+    height: 0;
+    overflow: clip;
+    /* content-visibility needs allow-discrete too, or Chrome hides it
+       the instant [open] is removed and the close never animates. */
+    transition:
+      height var(--motion-duration-medium1) var(--motion-easing-standard),
+      content-visibility var(--motion-duration-medium1)
+        var(--motion-easing-standard) allow-discrete;
+  }
+
+  &[open]::details-content {
+    height: auto;
+  }
+
   & + & {
     --details-radius-top: var(--rounded-small);
     margin-top: calc(var(--connected-gap) - 1.5rem);
@@ -27,9 +46,6 @@
 
   &:has(+ &) {
     --details-radius-bottom: var(--rounded-small);
-  }
-
-  [open] {
   }
 
   :where(&:hover) {
