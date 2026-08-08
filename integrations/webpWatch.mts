@@ -1,11 +1,7 @@
 import { setTimeout as sleep } from "node:timers/promises";
 import { stat, unlink } from "node:fs/promises";
 import path from "node:path";
-import type {
-  AstroIntegration,
-  AstroIntegrationLogger,
-  HookParameters,
-} from "astro";
+import type { AstroIntegration, AstroIntegrationLogger } from "astro";
 import type { Sharp } from "sharp";
 
 interface ConvertSettings {
@@ -116,14 +112,19 @@ async function resizeForSettings(
   return image;
 }
 
+// sharp is a devDependency; astro build must never resolve it. Loaded once here
+// (dev only), not lazily in readAndConvert, since a late dynamic import can
+// race Vite's module runner teardown and fail.
+let sharp: typeof import("sharp").default | undefined;
+
 async function readAndConvert(
   filePath: string,
   webpPath: string,
   settings: ConvertSettings,
 ): Promise<void> {
-  // Dynamic import so astro build (which loads every integration too, not just
-  // astro dev) never needs sharp resolvable.
-  const { default: sharp } = await import("sharp");
+  if (!sharp) {
+    throw new Error("webp-watch: sharp was never loaded (not running in dev)");
+  }
   let image = sharp(filePath);
   image = await resizeForSettings(image, settings);
   image = image.webp(
@@ -250,26 +251,30 @@ export default function webpWatch(): AstroIntegration {
   return {
     name: "webp-watch",
     hooks: {
-      "astro:server:setup": ({
-        server,
-        logger,
-      }: HookParameters<"astro:server:setup">) => {
+      "astro:config:setup": async ({ command }) => {
+        if (command === "dev") {
+          ({ default: sharp } = await import("sharp"));
+        }
+      },
+      "astro:server:setup": ({ server, logger }) => {
         const root = server.config.root;
         const startedAt = Date.now();
         const inFlight = new Set<string>();
 
-        function onWatcherEvent(filePath: string) {
+        async function onWatcherEvent(filePath: string) {
           // chokidar doesn't await listeners, so this must catch its own errors
           // or a bug here becomes an unhandled rejection that can crash the dev
           // server.
-          handleWatcherEvent(filePath, {
-            root,
-            logger,
-            startedAt,
-            inFlight,
-          }).catch((error: Error) => {
-            logger.error(`webp-watch: unexpected error: ${error.message}`);
-          });
+          try {
+            await handleWatcherEvent(filePath, {
+              root,
+              logger,
+              startedAt,
+              inFlight,
+            });
+          } catch (error) {
+            logger.error(`webp-watch: unexpected error: ${error}`);
+          }
         }
 
         // Both events matter: "add" for brand-new files, "change" for an
