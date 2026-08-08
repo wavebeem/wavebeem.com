@@ -276,10 +276,6 @@ canvas,
 img,
 video {
   display: block;
-  /* border-radius: var(--rounded-medium); */
-  /* TODO: applies even to already-framed/high-contrast images. Maybe opt-out class/attribute. */
-  outline: 1px solid var(--theme-image-outline);
-  outline-offset: -1px;
 }
 
 .border,

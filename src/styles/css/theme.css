@@ -71,7 +71,6 @@
   --theme-scrim: var(--md-scrim);
 
   --theme-page-bg: var(--md-background);
-  --theme-page-alt: var(--md-surface-container-low);
   --theme-page-text: var(--md-on-background);
 
   /* No M3 role for these. */
@@ -96,19 +95,15 @@
   --theme-strong-text: var(--md-custom-emphasis);
 
   --theme-divider: var(--md-outline-variant);
-  /* Big decorative dividers (zig-zag <hr>, wavy footer divider) --
-     distinct from --theme-divider, which is M3's spec-correct role for
-     plain/subtle dividers (outline-variant). This one's just for looks. */
-  --theme-divider-decorative: light-dark(
-    var(--md-surface-dim),
-    var(--md-surface-container-high)
-  );
+  /* Big decorative dividers (zig-zag <hr>, wavy footer divider) -- distinct
+     from --theme-divider, which is M3's spec-correct role for plain/subtle
+     dividers (outline-variant). This one's just for looks. */
+  --theme-divider-decorative: var(--md-surface-container-highest);
   --theme-border: var(--md-outline);
-  /* M3 drag state-layer opacity (m3.material.io/foundations/interaction/states/state-layers) -- for outlines that need to be barely there. */
+  /* M3 drag state-layer opacity
+  (m3.material.io/foundations/interaction/states/state-layers) -- for outlines
+  that need to be barely there. */
   --theme-border-faint: rgb(from var(--md-outline) r g b / 16%);
-  /* Edge definition for low-contrast images. */
-  --theme-image-outline: transparent;
-  /* --theme-image-outline: rgb(from var(--md-outline) r g b / 8%); */
 
   /* Ordered/unordered list marker badge -- shared by both, see global.css. */
   --theme-bullet-bg: var(--md-tertiary-container);

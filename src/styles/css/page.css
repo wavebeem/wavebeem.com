@@ -85,9 +85,6 @@ article:where(.page) {
 
       img,
       video {
-        outline: 1px solid var(--theme-image-outline);
-        outline-offset: -1px;
-
         &:where(:not([data-background="transparent"])) {
           background-color: var(--theme-image);
           border-radius: var(--rounded-large);
@@ -129,8 +126,6 @@ article:where(.page) {
 
 :where(.page.post) {
   p > img:where(:not([data-background="transparent"])) {
-    outline: 2px dotted var(--theme-image-outline);
-    outline-offset: -2px;
     background-color: var(--theme-image);
     border-radius: var(--rounded-large);
   }
