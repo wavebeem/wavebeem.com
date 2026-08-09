@@ -94,6 +94,10 @@ a:active {
   color: var(--theme-strong-text);
 }
 
+:is(a, .button) :is(strong, b) {
+  color: inherit;
+}
+
 :is(h1, h2, h3, h4, h5, h6) {
   text-wrap: balance;
 }
