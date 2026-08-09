@@ -106,8 +106,6 @@ import { groups } from "@/data/menu";
 
   .sidebar-top {
     display: flex;
-    position: relative;
-    isolation: isolate;
     /* Matches .nav-link's own padding (nav-link.css) so the logo, nav
        icons, and theme-select badge below all start at the same left
        inset instead of drifting per-row. */
@@ -115,22 +113,6 @@ import { groups } from "@/data/menu";
     padding-right: 16px;
     border-radius: var(--rounded-pill);
     color: var(--theme-logo-text);
-
-    /* Corner "sun" -- sits behind the wordmark (negative z-index, scoped
-       to this element's own stacking context via isolation: isolate
-       above) rather than as a full background chip, so the logo reads as
-       marked by a glow instead of boxed in like a nav-link. */
-    /* &::before {
-      content: "";
-      position: absolute;
-      top: -3px;
-      left: 8px;
-      width: 48px;
-      height: 48px;
-      border-radius: 9999px;
-      background: var(--theme-logo-glow);
-      z-index: -1;
-    } */
 
     /* :global needed: Logo.astro injects raw SVG via set:html. */
     :global(svg) {

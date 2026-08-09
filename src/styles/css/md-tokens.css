@@ -76,6 +76,6 @@
   --md-custom-punctuation: light-dark(#834790, #f4aeff);
 
   /* Hand-picked accent (hue 20), not seed-derived -- see
-     buildEmphasisLines above. One-off em/i/strong/b emphasis color. */
+     buildEmphasisLines above. One-off em/i emphasis color. */
   --md-custom-emphasis: light-dark(#9c4141, #ffb3b0);
 }

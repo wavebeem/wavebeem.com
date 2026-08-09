@@ -53,7 +53,7 @@
 
 /* Leading icon badge, Android Settings-style: glyph in a tonal circle,
    same 40px footprint as the hamburger/theme-select buttons. Its own
-   tertiary-container tone (not --theme-link) so the row's link color
+   primary-container tone (not --theme-link) so the row's link color
    stays on the label. */
 .nav-link-icon {
   display: flex;

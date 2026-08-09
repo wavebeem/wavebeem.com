@@ -81,18 +81,13 @@
   --theme-accent2: var(--md-primary-fixed-dim);
   --theme-accent3: var(--md-tertiary-container);
 
-  /* Sidebar.astro's .sidebar-top logo mark -- a tertiary tonal pair so it
-     reads as a distinct object instead of matching --theme-link's primary
-     green like every nav item below it. */
   --theme-logo-text: var(--md-on-background);
-  --theme-logo-glow: var(--md-tertiary-container);
 
   /* One-off accent, not a tertiary-role stand-in: em/i's secondary
      treatment now that font-style: italic is gone site-wide (PP Mori has
      no real italic face). Everything else on this page still uses the
-     real (blue-ish) M3 tertiary role -- see --theme-logo-glow above. */
+     real (blue-ish) M3 tertiary role -- see --theme-bullet-bg below. */
   --theme-emphasis-text: var(--md-custom-emphasis);
-  --theme-strong-text: var(--md-custom-emphasis);
 
   --theme-divider: var(--md-outline-variant);
   /* Big decorative dividers (zig-zag <hr>, wavy footer divider) -- distinct
@@ -118,12 +113,11 @@
   /* Usage not audited. */
   --theme-box: var(--md-surface-container);
 
-  /* nav-link.css's icon badge: a real tonal container (matches
-     --theme-logo-glow's use of the same role), not a neutral surface --
-     Android Settings' own list-item icon badges are tonal too, not gray.
-     Also sidesteps the --theme-box problem: that token is the exact same
-     value as --theme-sidebar-bg and so disappears against the mobile
-     nav-menu drawer. */
+  /* nav-link.css's icon badge: a real tonal container, not a neutral
+     surface -- Android Settings' own list-item icon badges are tonal
+     too, not gray. Also sidesteps the --theme-box problem: that token
+     is the exact same value as --theme-sidebar-bg and so disappears
+     against the mobile nav-menu drawer. */
   --theme-icon-badge: var(--md-primary-container);
   --theme-icon-badge-text: var(--md-on-primary-container);
   /* nav-link.css hover: secondary, not a deepened primary -- primary's

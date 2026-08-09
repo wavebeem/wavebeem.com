@@ -172,7 +172,7 @@ function buildCustomColorLines(sourceColorHct: Hct): string {
 // at all, same tradeoff as picking any M3 "custom color"
 // (m3.material.io/styles/color/advanced/define-new-colors): no guaranteed
 // harmony with the seed, just an intentional standalone accent. Coral hue,
-// chosen 2026-08-05 as the one-off em/i/strong/b emphasis color --
+// chosen 2026-08-05 as the one-off em/i emphasis color --
 // everything else on the site still uses the real (seed-derived) M3
 // tertiary role.
 const emphasisHue = 20;
@@ -206,7 +206,7 @@ ${roleLines}
      fixed chroma, tone 40/80 -- not DynamicScheme roles. */
 ${customColorLines}
   /* Hand-picked accent (hue ${emphasisHue}), not seed-derived -- see
-     buildEmphasisLines above. One-off em/i/strong/b emphasis color. */
+     buildEmphasisLines above. One-off em/i emphasis color. */
 ${emphasisLines}}
 `;
 }
