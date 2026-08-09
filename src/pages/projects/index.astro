@@ -7,7 +7,7 @@ import PageLayout from "@/layouts/PageLayout.astro";
 
   <h2>My finest work</h2>
 
-  <figure>
+  <figure data-size="large">
     <img
       loading="eager"
       src="/projects/assets/pkmn.webp"
@@ -29,9 +29,11 @@ import PageLayout from "@/layouts/PageLayout.astro";
 
   <h2>Other projects</h2>
 
-  <figure>
+  <div class="photo-grid">
+  <figure data-size="large">
     <img
       loading="lazy"
+      data-aspect="square"
       src="/projects/assets/candy.webp"
       alt=""
       width="1280"
@@ -47,9 +49,10 @@ import PageLayout from "@/layouts/PageLayout.astro";
     </figcaption>
   </figure>
 
-  <figure>
+  <figure data-size="large">
     <img
       loading="lazy"
+      data-aspect="square"
       src="/projects/assets/color-combos.webp"
       alt=""
       width="1280"
@@ -65,9 +68,10 @@ import PageLayout from "@/layouts/PageLayout.astro";
     </figcaption>
   </figure>
 
-  <figure>
+  <figure data-size="large">
     <img
       loading="lazy"
+      data-aspect="square"
       src="/projects/assets/vscode.webp"
       alt=""
       width="1311"
@@ -85,9 +89,10 @@ import PageLayout from "@/layouts/PageLayout.astro";
     </figcaption>
   </figure>
 
-  <figure>
+  <figure data-size="large">
     <img
       loading="lazy"
+      data-aspect="square"
       src="/projects/assets/netpet.webp"
       alt=""
       width="1280"
@@ -106,9 +111,11 @@ import PageLayout from "@/layouts/PageLayout.astro";
     </figcaption>
   </figure>
 
-  <figure>
+  <figure data-size="large">
     <img
       loading="lazy"
+      data-aspect="square"
+      data-position="bottom"
       src="/projects/assets/jpeg.webp"
       alt=""
       width="1024"
@@ -126,9 +133,10 @@ import PageLayout from "@/layouts/PageLayout.astro";
     </figcaption>
   </figure>
 
-  <figure>
+  <figure data-size="large">
     <img
       loading="lazy"
+      data-aspect="square"
       src="/projects/assets/1bit.webp"
       alt=""
       width="1280"
@@ -144,9 +152,10 @@ import PageLayout from "@/layouts/PageLayout.astro";
     </figcaption>
   </figure>
 
-  <figure>
+  <figure data-size="large">
     <img
       loading="lazy"
+      data-aspect="square"
       src="/projects/assets/2bit.webp"
       alt=""
       width="1280"
@@ -162,9 +171,10 @@ import PageLayout from "@/layouts/PageLayout.astro";
     </figcaption>
   </figure>
 
-  <figure>
+  <figure data-size="large">
     <img
       loading="lazy"
+      data-aspect="square"
       src="/projects/assets/kaomoji.webp"
       alt=""
       width="1280"
@@ -183,9 +193,10 @@ import PageLayout from "@/layouts/PageLayout.astro";
     </figcaption>
   </figure>
 
-  <figure>
+  <figure data-size="large">
     <img
       loading="lazy"
+      data-aspect="square"
       src="/projects/assets/bnb.webp"
       alt=""
       width="1280"
@@ -204,9 +215,10 @@ import PageLayout from "@/layouts/PageLayout.astro";
     </figcaption>
   </figure>
 
-  <figure>
+  <figure data-size="large">
     <img
       loading="lazy"
+      data-aspect="square"
       src="/projects/assets/codehost.webp"
       alt=""
       width="1280"
@@ -225,9 +237,11 @@ import PageLayout from "@/layouts/PageLayout.astro";
     </figcaption>
   </figure>
 
-  <figure>
+  <figure data-size="large">
     <img
       loading="lazy"
+      data-aspect="square"
+      data-position="top left"
       src="/projects/assets/show-colors.webp"
       alt=""
       width="1049"
@@ -246,9 +260,11 @@ import PageLayout from "@/layouts/PageLayout.astro";
     </figcaption>
   </figure>
 
-  <figure>
+  <figure data-size="large">
     <img
       loading="lazy"
+      data-aspect="square"
+      data-position="top left"
       src="/projects/assets/img-cat.webp"
       alt=""
       width="1049"
@@ -266,4 +282,5 @@ import PageLayout from "@/layouts/PageLayout.astro";
       </div>
     </figcaption>
   </figure>
+  </div>
 </PageLayout>

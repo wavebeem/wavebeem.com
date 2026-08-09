@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import type { APIRoute } from "astro";
 import { Feed } from "feed";
 import { getAllPosts } from "@/data/posts";
+import { toLocalDate } from "@/lib/localDate";
 
 export const GET: APIRoute = async ({ site }) => {
   assert.ok(site);
@@ -14,7 +15,7 @@ export const GET: APIRoute = async ({ site }) => {
     id: `${origin}/`,
     link: `${origin}/`,
     language: "en",
-    updated: posts[0].date,
+    updated: toLocalDate(posts[0].date),
     author: {
       name: "sage fennel mock",
       email: "sage@wavebeem.com",
@@ -30,7 +31,7 @@ export const GET: APIRoute = async ({ site }) => {
       title: post.title,
       id: url,
       link: url,
-      date: post.date,
+      date: toLocalDate(post.date),
       description: `${post.description} [Read more...]`,
     });
   }

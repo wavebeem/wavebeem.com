@@ -1,4 +1,6 @@
 ---
+import { toLocalDate } from "@/lib/localDate";
+
 const dateFormatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
   month: "long",
@@ -7,9 +9,10 @@ const dateFormatter = new Intl.DateTimeFormat("en-US", {
 });
 
 interface Props {
-  date: Date;
+  date: Date | string;
 }
-const { date } = Astro.props;
+const { date: dateProp } = Astro.props;
+const date = toLocalDate(dateProp);
 ---
 
 <time datetime={date.toISOString()}>{dateFormatter.format(date)}</time>

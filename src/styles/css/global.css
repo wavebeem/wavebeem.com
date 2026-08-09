@@ -165,9 +165,7 @@ pre {
 :not(pre) > code {
   font-size: 0.9em;
   font-weight: 500;
-  background: var(--theme-code);
-  border-radius: var(--rounded-small);
-  padding: 0 4px;
+  color: var(--theme-emphasis-text);
 }
 
 .description {
@@ -335,7 +333,8 @@ article header small {
 
 .photo-grid {
   display: grid;
-  gap: 1rem;
+  row-gap: 2rem;
+  column-gap: 1rem;
   justify-content: flex-start;
   align-items: flex-start;
 }
@@ -354,8 +353,26 @@ img[data-aspect="square"] {
   aspect-ratio: 1 / 1;
 }
 
-img[data-position="top"] {
-  object-position: 50% 0%;
+img[data-position] {
+  --img-position-x: 50%;
+  --img-position-y: 50%;
+  object-position: var(--img-position-x) var(--img-position-y);
+}
+
+img[data-position~="top"] {
+  --img-position-y: 0%;
+}
+
+img[data-position~="bottom"] {
+  --img-position-y: 100%;
+}
+
+img[data-position~="left"] {
+  --img-position-x: 0%;
+}
+
+img[data-position~="right"] {
+  --img-position-x: 100%;
 }
 
 @media (width >= 30rem) {

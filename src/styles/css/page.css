@@ -99,6 +99,11 @@ article:where(.page) {
       margin-top: -4px;
     }
 
+    figure[data-size="large"] figcaption {
+      font-size: var(--font-size-base);
+      margin-top: 0;
+    }
+
     blockquote,
     aside {
       padding-inline: 1rem;

@@ -1,5 +1,6 @@
 ---
 import PageLayout from "@/layouts/PageLayout.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
 import { images as artImages } from "@/data/art";
 
 const images = artImages.toReversed();
@@ -11,7 +12,7 @@ const images = artImages.toReversed();
   <div class="photo-grid">
     {
       images.map((image) => (
-        <figure>
+        <figure data-size="large">
           <img
             src={image.path}
             loading="lazy"
@@ -24,7 +25,7 @@ const images = artImages.toReversed();
               <strong>{image.title}</strong>
             </a>
             <br />
-            {image.date}
+            <FormattedDate date={image.date} />
           </figcaption>
         </figure>
       ))
