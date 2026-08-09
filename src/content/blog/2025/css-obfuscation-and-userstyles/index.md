@@ -109,7 +109,6 @@ dare._
   <p>
     <img
       src="./assets/bigshot/zen1.webp"
-      loading="lazy"
       width="1280"
       height="3171"
     />
@@ -123,7 +122,6 @@ dare._
   <p>
     <img
       src="./assets/bigshot/zen2.webp"
-      loading="lazy"
       width="1280"
       height="3472"
     />
@@ -137,7 +135,6 @@ dare._
   <p>
     <img
       src="./assets/bigshot/zen3.webp"
-      loading="lazy"
       width="1280"
       height="5618"
     />

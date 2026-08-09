@@ -22,30 +22,22 @@ something more aggressive and exciting was exactly what I needed.
       class="tcg"
       src="./assets/ga/firebloom-flourish-hvn.webp"
       width="500"
-      height="700"
-      loading="eager"
-    />
+      height="700"    />
     <img
       class="tcg"
       src="./assets/ga/glowering-conflagration-hvn.webp"
       width="500"
-      height="700"
-      loading="eager"
-    />
+      height="700"    />
     <img
       class="tcg"
       src="./assets/ga/searing-rebuke-hvn.webp"
       width="500"
-      height="700"
-      loading="eager"
-    />
+      height="700"    />
     <img
       class="tcg"
       src="./assets/ga/shimmering-refraction-hvn.webp"
       width="500"
-      height="700"
-      loading="eager"
-    />
+      height="700"    />
   </div>
   <figcaption>Key cards from my new deck</figcaption>
 </figure>
@@ -79,19 +71,19 @@ Look forward to a full review after I beat the main story. Hopefully by the end
 of this month.
 
 <figure>
-  <img src="./assets/pkmn/b.webp" alt="" width="1600" height="900" loading="lazy" />
+  <img src="./assets/pkmn/b.webp" alt="" width="1600" height="900" />
   <figcaption>I'm now 🅱️ rank</figcaption>
 </figure>
 
 <figure>
-  <img src="./assets/pkmn/lebanne.webp" alt="" width="1600" height="900" loading="lazy" />
+  <img src="./assets/pkmn/lebanne.webp" alt="" width="1600" height="900" />
   <figcaption>Lebanne was cooler than I expected</figcaption>
 </figure>
 
 ## New site design & updates
 
 <figure>
-  <img src="./assets/home.webp" alt="" width="2560" height="5466" loading="lazy" />
+  <img src="./assets/home.webp" alt="" width="2560" height="5466" />
   <figcaption>The new home page</figcaption>
 </figure>
 
@@ -110,7 +102,7 @@ everywhere as my accent, but I found it tiresome. And it made links harder to
 pick out.
 
 <figure>
-  <img src="./assets/gbc.webp" alt="" width="1800" height="1013" loading="lazy" />
+  <img src="./assets/gbc.webp" alt="" width="1800" height="1013" />
   <figcaption>Nintendo Switch Game Boy emulation tasteful halftone gradient</figcaption>
 </figure>
 
@@ -121,7 +113,7 @@ go the extra mile and make a proper halftone implementation at some point, but
 for now a pure CSS "dots + gradient" approach gets the job done.
 
 <figure>
-  <img src="./assets/toybox.webp" alt="" width="2560" height="2048" loading="lazy" />
+  <img src="./assets/toybox.webp" alt="" width="2560" height="2048" />
   <figcaption>The new toybox</figcaption>
 </figure>
 
@@ -129,7 +121,7 @@ Not much changed here, but I think my new button and card styles are really
 popping on this short and sweet page.
 
 <figure>
-  <img src="./assets/uses.webp" alt="" width="2560" height="2626" loading="lazy" />
+  <img src="./assets/uses.webp" alt="" width="2560" height="2626" />
   <figcaption>The new "things I use" page</figcaption>
 </figure>
 
@@ -137,7 +129,7 @@ I simplified the organization of the "uses" page and removed some items I don't
 care as much about. Now there's two categories: hardware and software.
 
 <figure>
-  <img src="./assets/sets-grotesk.webp" alt="" width="800" height="395" loading="lazy" />
+  <img src="./assets/sets-grotesk.webp" alt="" width="800" height="395" />
   <figcaption>Sets Grotesk font page</figcaption>
 </figure>
 

@@ -36,32 +36,32 @@ Check out a gameplay video and see if it's for you. This is a new bar for action
 platformers for me.
 
 <figure>
-  <img loading="lazy" src="./assets/pxl/eyes.webp" alt="" width="1280" height="720" />
+  <img src="./assets/pxl/eyes.webp" alt="" width="1280" height="720" />
   <figcaption>An early illustration of our pretty boy hero: Kenji.</figcaption>
 </figure>
 
 <figure>
-  <img loading="lazy" src="./assets/pxl/jetski.webp" alt="" width="1280" height="720" />
+  <img src="./assets/pxl/jetski.webp" alt="" width="1280" height="720" />
   <figcaption>There's a jet-ski level and a motorcycle level!</figcaption>
 </figure>
 
 <figure>
-  <img loading="lazy" src="./assets/pxl/kunai.webp" alt="" width="1280" height="720" />
+  <img src="./assets/pxl/kunai.webp" alt="" width="1280" height="720" />
   <figcaption>Another stunning fullscreen illustration.</figcaption>
 </figure>
 
 <figure>
-  <img loading="lazy" src="./assets/pxl/slice.webp" alt="" width="1280" height="720" />
+  <img src="./assets/pxl/slice.webp" alt="" width="1280" height="720" />
   <figcaption>The story isn't deep, but I like Kumori and Kenji's relationship.</figcaption>
 </figure>
 
 <figure>
-  <img loading="lazy" src="./assets/pxl/wink.webp" alt="" width="1280" height="720" />
+  <img src="./assets/pxl/wink.webp" alt="" width="1280" height="720" />
   <figcaption>The famous Ryu Hayabusa is your mentor.</figcaption>
 </figure>
 
 <figure>
-  <img loading="lazy" src="./assets/pxl/zoolander.webp" alt="" width="1280" height="720" />
+  <img src="./assets/pxl/zoolander.webp" alt="" width="1280" height="720" />
   <figcaption>Kenji isn't good with computers, but Kumori has his back.</figcaption>
 </figure>
 

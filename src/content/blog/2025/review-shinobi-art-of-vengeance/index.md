@@ -67,7 +67,6 @@ on a full plate of perfect ninja game immediately before playing this one.
 
 <figure>
   <img
-    loading="lazy"
     src="./assets/vg/01-wife.webp"
     alt=""
     width="1280"
@@ -78,7 +77,6 @@ on a full plate of perfect ninja game immediately before playing this one.
 
 <figure>
   <img
-    loading="lazy"
     src="./assets/vg/02-riding.webp"
     alt=""
     width="1280"
@@ -89,7 +87,6 @@ on a full plate of perfect ninja game immediately before playing this one.
 
 <figure>
   <img
-    loading="lazy"
     src="./assets/vg/03-evil.webp"
     alt=""
     width="1280"
@@ -100,7 +97,6 @@ on a full plate of perfect ninja game immediately before playing this one.
 
 <figure>
   <img
-    loading="lazy"
     src="./assets/vg/04-dog.webp"
     alt=""
     width="1280"
@@ -111,7 +107,6 @@ on a full plate of perfect ninja game immediately before playing this one.
 
 <figure>
   <img
-    loading="lazy"
     src="./assets/vg/05-bosses.webp"
     alt=""
     width="1280"
@@ -122,7 +117,6 @@ on a full plate of perfect ninja game immediately before playing this one.
 
 <figure>
   <img
-    loading="lazy"
     src="./assets/vg/06-sega.webp"
     alt=""
     width="1280"
@@ -133,7 +127,6 @@ on a full plate of perfect ninja game immediately before playing this one.
 
 <figure>
   <img
-    loading="lazy"
     src="./assets/vg/07-surf.webp"
     alt=""
     width="1280"
@@ -144,7 +137,6 @@ on a full plate of perfect ninja game immediately before playing this one.
 
 <figure>
   <img
-    loading="lazy"
     src="./assets/vg/08-brain.webp"
     alt=""
     width="1280"
@@ -155,7 +147,6 @@ on a full plate of perfect ninja game immediately before playing this one.
 
 <figure>
   <img
-    loading="lazy"
     src="./assets/vg/09-glass.webp"
     alt=""
     width="1280"
