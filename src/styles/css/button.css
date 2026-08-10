@@ -11,35 +11,30 @@
   text-decoration-line: none;
   text-decoration-thickness: var(--link-underline-thickness);
   line-height: 1.25;
-  /* border: 0; */
 
   background: var(--theme-button-bg);
   background-origin: border-box;
   color: var(--theme-button-text);
 
   border: 2px solid transparent;
-}
 
-.button:hover {
-  text-decoration-line: none;
-}
+  &:hover:where(:not(:active)) {
+    background-image: radial-gradient(var(--theme-hover));
+  }
 
-.button:hover:where(:not(:active)) {
-  background-image: radial-gradient(var(--theme-hover));
-}
+  &:active,
+  &:focus-visible {
+    background-image: radial-gradient(var(--theme-press));
+  }
 
-.button:active,
-.button:focus-visible {
-  background-image: radial-gradient(var(--theme-press));
-}
+  &:focus-visible {
+    outline: var(--theme-focus-outline);
+    outline-offset: var(--theme-focus-outline-offset);
+  }
 
-.button:focus-visible {
-  outline: var(--theme-focus-outline);
-  outline-offset: var(--theme-focus-outline-offset);
-}
-
-.button:where([data-size="small"]) {
-  padding: 4px 12px;
-  border-radius: var(--rounded-pill);
-  font-size: var(--font-size-small);
+  &:where([data-size="small"]) {
+    padding: 4px 12px;
+    border-radius: var(--rounded-pill);
+    font-size: var(--font-size-small);
+  }
 }
