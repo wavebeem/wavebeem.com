@@ -16,7 +16,7 @@
     "check": "astro check",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "ci": "npm run format:check && npm run check && npm run build"
+    "ci:check": "npm run format:check && npm run check && npm run build"
   },
   "dependencies": {
     "@lucide/astro": "^1.28.0",
