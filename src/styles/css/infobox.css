@@ -34,7 +34,12 @@
   }
 
   &:hover:where(:not(:active)) {
-    background-image: radial-gradient(var(--theme-hover-light));
+    background-image: radial-gradient(var(--theme-hover));
+  }
+
+  &:active,
+  &:focus-visible {
+    background-image: radial-gradient(var(--theme-press));
   }
 
   .heading {
@@ -55,8 +60,8 @@
   }
 
   &:focus-visible {
-    outline: 2px dotted currentColor;
-    outline-offset: -2px;
+    outline: var(--theme-focus-outline);
+    outline-offset: var(--theme-focus-outline-offset);
   }
 }
 
@@ -79,11 +84,16 @@
     gap: 16px;
     line-height: 1.25;
     font-size: var(--font-size-base);
-    outline-offset: -2px;
+    outline-offset: var(--theme-focus-outline-offset);
     text-decoration-line: none;
 
     &:hover:where(:not(:active)) {
-      background-image: radial-gradient(var(--theme-hover-light));
+      background-image: radial-gradient(var(--theme-hover));
+    }
+
+    &:active,
+    &:focus-visible {
+      background-image: radial-gradient(var(--theme-press));
     }
   }
 

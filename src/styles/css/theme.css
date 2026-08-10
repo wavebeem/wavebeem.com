@@ -120,25 +120,14 @@
      against the mobile nav-menu drawer. */
   --theme-icon-badge: var(--md-primary-container);
   --theme-icon-badge-text: var(--md-on-primary-container);
-  /* nav-link.css hover: secondary, not a deepened primary -- primary's
-     main tone read too intense for a hover-only state. Secondary is
-     M3's deliberately lower-chroma role, so this reads as a quieter
-     shift instead of the row suddenly shouting. Badge and label move
-     together (secondary-container's ink for the label, secondary's
-     own main/on-main pair for the badge), so the whole row still reads
-     as one coordinated change instead of a background shape. */
-  --theme-icon-badge-hover: var(--md-surface-container-highest);
-  --theme-icon-badge-hover-text: var(--md-on-surface);
-  --theme-nav-link-hover: var(--md-surface-container);
-  --theme-nav-link-hover-text: var(--md-on-surface);
 
   /* Chrome/utility icon buttons -- theme-select trigger, hamburger,
      drawer close -- surface, not tertiary. Tertiary is decoration-only
      everywhere else on this site (logo glow, bullets), so giving these
      controls tertiary too would make them read as "special/highlighted"
      rather than "a different kind of control" from the colored nav-item
-     badges. Same brighter-than-surrounding-surface fix as
-     --theme-icon-badge-hover, so it doesn't disappear in the drawer. */
+     badges. Same --theme-box problem as --theme-card below, hence its
+     own token instead of reusing --theme-box. */
   --theme-icon-button-badge: var(--md-surface-container-highest);
   --theme-icon-button-badge-text: var(--md-on-surface);
   /* Non-interactive, unlike --theme-infobox. Plain surface tone, not a
@@ -148,11 +137,16 @@
     var(--md-surface-container-low)
   );
 
-  /* Shared across surface types; real M3 state layers vary by surface.
-     Was 30%/10% before. */
-  --theme-hover-light: rgb(from var(--md-on-surface) r g b / 4%);
-  /* Alpha bumped to stay distinct from --theme-hover-light. */
-  --theme-hover-dark: rgb(from var(--md-on-surface) r g b / 4%);
+  /* M3 says to use the "on" color for the current context with varying opacity
+  levels. 8% for hover; 10% for focus and press. I feel like those are too dark,
+  though. */
+  --theme-hover: rgb(from currentColor r g b / 6%);
+  --theme-press: rgb(from currentColor r g b / 8%);
+
+  --theme-focus-outline: 2px solid currentColor;
+  --theme-focus-outline-offset: -4px;
+  /* --theme-hover: rgb(from currentColor r g b / 8%);
+  --theme-press: rgb(from currentColor r g b / 10%); */
 
   /* Same surface/text as --theme-code and --theme-text. */
   --syntax-background: var(--theme-code);

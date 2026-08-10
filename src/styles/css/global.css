@@ -188,7 +188,7 @@ pre {
 
 .spoiler:focus-visible {
   box-shadow: 0 0 0 6px var(--theme-page-bg);
-  outline: 2px dotted var(--theme-text);
+  outline: 2px solid var(--theme-text);
   outline-offset: 2px;
 }
 
@@ -227,18 +227,24 @@ main ul:not(.card, .infobox, .inline-menu) > li {
     color: var(--theme-infobox-text);
     background-color: var(--theme-infobox);
     font-weight: 600;
+    letter-spacing: var(--tracking-label);
 
     border-radius: var(--rounded-pill);
 
     text-decoration-line: none;
 
     &:focus-visible {
-      outline: 2px dotted currentColor;
-      outline-offset: -2px;
+      outline: var(--theme-focus-outline);
+      outline-offset: var(--theme-focus-outline-offset);
     }
 
     &:where(:hover:not(:active)) {
-      background-image: radial-gradient(var(--theme-hover-light));
+      background-image: radial-gradient(var(--theme-hover));
+    }
+
+    &:active,
+    &:focus-visible {
+      background-image: radial-gradient(var(--theme-press));
     }
   }
 }
@@ -309,7 +315,7 @@ article header small {
 }
 
 :where(:focus-visible) {
-  outline: 2px dotted currentColor;
+  outline: var(--theme-focus-outline);
   outline-offset: 4px;
   text-decoration-line: none;
 }

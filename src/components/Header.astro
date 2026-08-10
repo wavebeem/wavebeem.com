@@ -189,13 +189,18 @@ import { groups } from "@/data/menu";
 
     @media (hover) {
       &:hover {
-        background-image: radial-gradient(var(--theme-hover-light));
+        background-image: radial-gradient(var(--theme-hover));
       }
     }
 
+    &:active,
     &:focus-visible {
-      outline: 2px dotted currentColor;
-      outline-offset: -2px;
+      background-image: radial-gradient(var(--theme-press));
+    }
+
+    &:focus-visible {
+      outline: var(--theme-focus-outline);
+      outline-offset: var(--theme-focus-outline-offset);
     }
 
     /* Sidebar.astro replaces this at desktop width. */
@@ -305,13 +310,18 @@ import { groups } from "@/data/menu";
 
     @media (hover) {
       &:hover {
-        background-image: radial-gradient(var(--theme-hover-light));
+        background-image: radial-gradient(var(--theme-hover));
       }
     }
 
+    &:active,
     &:focus-visible {
-      outline: 2px dotted currentColor;
-      outline-offset: -2px;
+      background-image: radial-gradient(var(--theme-press));
+    }
+
+    &:focus-visible {
+      outline: var(--theme-focus-outline);
+      outline-offset: var(--theme-focus-outline-offset);
     }
   }
 </style>

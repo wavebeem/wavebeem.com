@@ -7,6 +7,10 @@
   --font-heading: var(--font-body);
   --font-mono: "Iosevka Extended", var(--font-fallback-mono);
 
+  /* m3.material.io/styles/typography/type-scale-tokens: label styles get
+     tracking, body/headline styles don't. */
+  --tracking-label: 0.01em;
+
   --infobox-gap: 8px;
   --connected-gap: 2px;
   --card-gap: 2px;
@@ -33,11 +37,11 @@
 
   --list-inset: 24px;
 
-  --rounded-xsmall: 2px;
-  --rounded-small: 4px;
-  --rounded-medium: 8px;
+  /* m3.material.io/styles/shape/corner-radius-scale */
+  --rounded-xsmall: 4px;
+  --rounded-small: 8px;
+  --rounded-medium: 12px;
   --rounded-large: 16px;
-  --rounded-xlarge: 32px;
 
   --rounded-pill: 9999px;
 

@@ -19,6 +19,7 @@
   text-decoration-line: none;
   font-size: var(--font-size-base);
   font-weight: bold;
+  letter-spacing: var(--tracking-label);
 
   /* global.css's a:hover sets text-decoration-line: underline with
      higher specificity (element + pseudo-class) than this rule's base
@@ -27,27 +28,31 @@
     text-decoration-line: none;
   }
 
-  /* Color-only hover, not a background shape: a rounded-rect wash behind
-     an already-opaque, already-rounded icon badge just reads as two
-     competing containers (the wash gets fully hidden under the badge
-     anyway, since the badge paints on top). Both the label and the badge
-     shift together instead -- see --theme-icon-badge-hover(-text). */
+  /* The icon badge is its own opaque, separately-painted element, so it
+     needs its own copy of the wash -- one radial-gradient on the row
+     alone would just get cut off where the badge sits on top of it. */
   @media (hover) {
-    &:hover {
-      background: var(--theme-nav-link-hover);
-      color: var(--theme-nav-link-hover-text);
-      /* text-decoration-line: underline; */
+    &:hover:where(:not(:active)) {
+      background-image: radial-gradient(var(--theme-hover));
 
       .nav-link-icon {
-        background: var(--theme-icon-badge-hover);
-        color: var(--theme-icon-badge-hover-text);
+        background-image: radial-gradient(var(--theme-hover));
       }
     }
   }
 
+  &:active,
   &:focus-visible {
-    outline: 2px dotted currentColor;
-    outline-offset: -2px;
+    background-image: radial-gradient(var(--theme-press));
+
+    .nav-link-icon {
+      background-image: radial-gradient(var(--theme-press));
+    }
+  }
+
+  &:focus-visible {
+    outline: var(--theme-focus-outline);
+    outline-offset: var(--theme-focus-outline-offset);
   }
 }
 

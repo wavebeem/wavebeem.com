@@ -21,7 +21,7 @@
     background: var(--theme-card);
     /* color: var(--theme-infobox-text);
     background: var(--theme-infobox); */
-    outline-offset: -2px;
+    outline-offset: var(--theme-focus-outline-offset);
 
     font-size: var(--font-size-base);
 
@@ -50,7 +50,11 @@
     }
 
     &:where(:hover:not(:active)) {
-      background-image: radial-gradient(var(--theme-hover-light));
+      background-image: radial-gradient(var(--theme-hover));
+    }
+
+    &:where(:active, :focus-visible) {
+      background-image: radial-gradient(var(--theme-press));
     }
 
     .heading {

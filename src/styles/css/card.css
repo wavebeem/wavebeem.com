@@ -9,8 +9,6 @@
 
   border-radius: var(--rounded-large);
   background: var(--theme-card);
-  border-bottom-color: var(--theme-shadow);
-  border-right-color: var(--theme-shadow);
   outline-offset: -1px;
 
   &:where(ul) {
@@ -134,7 +132,7 @@
   }
 
   &:focus-visible {
-    outline: 2px dotted currentColor;
-    outline-offset: -2px;
+    outline: var(--theme-focus-outline);
+    outline-offset: var(--theme-focus-outline-offset);
   }
 }

@@ -186,13 +186,18 @@ import { IconTheme } from "./icons";
 
     @media (hover) {
       &:hover {
-        background-image: radial-gradient(var(--theme-hover-light));
+        background-image: radial-gradient(var(--theme-hover));
       }
     }
 
+    &:active,
     &:focus-visible {
-      outline: 2px dotted currentColor;
-      outline-offset: -2px;
+      background-image: radial-gradient(var(--theme-press));
+    }
+
+    &:focus-visible {
+      outline: var(--theme-focus-outline);
+      outline-offset: var(--theme-focus-outline-offset);
     }
   }
 
@@ -279,13 +284,18 @@ import { IconTheme } from "./icons";
 
     @media (hover) {
       &:hover {
-        background-image: radial-gradient(var(--theme-hover-light));
+        background-image: radial-gradient(var(--theme-hover));
       }
     }
 
+    &:active,
     &:focus-visible {
-      outline: 2px dotted currentColor;
-      outline-offset: -2px;
+      background-image: radial-gradient(var(--theme-press));
+    }
+
+    &:focus-visible {
+      outline: var(--theme-focus-outline);
+      outline-offset: var(--theme-focus-outline-offset);
       z-index: 1;
     }
 

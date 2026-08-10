@@ -110,7 +110,6 @@ import { groups } from "@/data/menu";
        icons, and theme-select badge below all start at the same left
        inset instead of drifting per-row. */
     padding: 8px;
-    padding-right: 16px;
     border-radius: var(--rounded-pill);
     color: var(--theme-logo-text);
 
@@ -120,18 +119,22 @@ import { groups } from "@/data/menu";
       width: auto;
     }
 
-    /* Same solid wash as .nav-link's hover (nav-link.css) so the logo
-       reads as part of the same interactive list, not a separate
-       treatment. */
+    /* Same wash as .nav-link's hover (nav-link.css) so the logo reads as
+       part of the same interactive list, not a separate treatment. */
     @media (hover) {
-      &:hover {
-        background: var(--theme-nav-link-hover);
+      &:hover:where(:not(:active)) {
+        background-image: radial-gradient(var(--theme-hover));
       }
     }
 
+    &:active,
     &:focus-visible {
-      outline: 2px dotted currentColor;
-      outline-offset: -2px;
+      background-image: radial-gradient(var(--theme-press));
+    }
+
+    &:focus-visible {
+      outline: var(--theme-focus-outline);
+      outline-offset: var(--theme-focus-outline-offset);
     }
   }
 </style>
