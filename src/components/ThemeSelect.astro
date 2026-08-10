@@ -206,8 +206,8 @@ import { IconTheme } from "./icons";
        specificity, so display must stay scoped to [open], or this
        renders in-flow even when closed. */
     flex-direction: column;
-    /* m3.material.io/components/dialogs/specs's "padding between body
-       and actions" (24dp). */
+    /* https://m3.material.io/components/dialogs/specs
+       padding between body and actions (24dp). */
     gap: 24px;
     box-sizing: border-box;
     /* Same spec: container width min 280dp / max 560dp. fit-content so
@@ -306,8 +306,16 @@ import { IconTheme } from "./icons";
 
     &[aria-pressed="true"] {
       /* Selection changes shape too, not just color, per M3 button-group
-         spec ("...affect the shape of the button being selected"). */
-      border-radius: var(--rounded-pill);
+         spec ("...affect the shape of the button being selected").
+         Fixed px, not --rounded-pill (9999px) or 50%: 9999px clamps
+         visually at half the button's height, so animating toward it
+         spends ~all of the transition past that clamp point, invisible
+         -- looks like an instant snap. 50% has its own problem: it
+         resolves width and height independently, so on this non-square
+         button it draws an ellipse instead of a pill. A px value close
+         to (but above) the button's actual half-height still clamps to
+         a true pill, while keeping the animated range visible. */
+      border-radius: var(--rounded-xlarge);
       background-color: var(--theme-toggle-selected-bg);
       color: var(--theme-toggle-selected-text);
     }
