@@ -76,6 +76,9 @@
 
     border-radius: var(--details-radius-top) var(--details-radius-top)
       var(--details-radius-bottom) var(--details-radius-bottom);
+    transition-property: border-radius;
+    transition-duration: var(--motion-duration-short4);
+    transition-timing-function: var(--motion-easing-standard);
 
     :where(&:focus-visible) {
       outline: var(--theme-focus-outline);

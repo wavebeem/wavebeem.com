@@ -266,7 +266,12 @@ import { IconTheme } from "./icons";
     background: var(--theme-infobox);
     color: inherit;
     font: inherit;
+    font-weight: 600;
+    letter-spacing: var(--tracking-label);
     text-align: center;
+    transition-property: border-radius;
+    transition-duration: var(--motion-duration-short3);
+    transition-timing-function: var(--motion-easing-standard);
 
     /* Connected button group: outer ends stay large, the corners where
        buttons meet go small. m3.material.io/components/button-groups/specs
