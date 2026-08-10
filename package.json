@@ -29,7 +29,7 @@
     "vite-plugin-static-copy": "^4.1.1"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.9",
+    "@astrojs/check": "^0.9.10",
     "@material/material-color-utilities": "^0.4.0",
     "npm-check": "^6.0.1",
     "prettier": "^3.9.6",
