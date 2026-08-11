@@ -47,6 +47,11 @@
     > :is(dd, dt) {
       background: var(--theme-card);
       padding-inline: 16px;
+
+      a:focus-visible {
+        position: relative;
+        z-index: 1;
+      }
     }
 
     > dt {
@@ -66,12 +71,22 @@
        padding, or each extra term reads as its own separate entry. */
     > dt + dt {
       padding-block-start: 0;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
     }
 
     > dd {
       border-bottom-left-radius: var(--rounded-small);
       border-bottom-right-radius: var(--rounded-small);
       padding-block: 0 16px;
+    }
+
+    /* A run of consecutive dd (multiple values for one dt) is one
+       visual group -- only the last should get the rounded-off
+       bottom corner, or each earlier value shows a stray notch. */
+    > dd:has(+ dd) {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
     }
 
     > dd:last-child {
