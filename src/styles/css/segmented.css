@@ -1,0 +1,100 @@
+/* Segmented control: a connected row of mutually-exclusive (radio) or
+   independent (checkbox) options.
+
+   <fieldset class="segmented">
+     <label><input type="radio" ... />Light</label>
+     ...
+   </fieldset>
+
+   The input lives inside its own label so there's no id/for pair to
+   generate and the whole pill is the click target. See
+   ThemeSelect.astro's .theme-select-option for the same visual pattern
+   driven by <button aria-pressed> instead of real form controls. */
+
+.segmented {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* Fieldsets default to a UA min-width: min-content, which stops this
+     from shrinking below its widest label like a normal flex item would. */
+  min-width: 0;
+
+  > label {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: var(--rounded-large);
+    background: var(--theme-infobox);
+    color: inherit;
+    font-weight: 600;
+    letter-spacing: var(--tracking-label);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition-property: border-radius;
+    transition-duration: var(--motion-duration-short3);
+    transition-timing-function: var(--motion-easing-standard);
+
+    input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+    }
+
+    /* Connected group: outer ends stay large, the corners where segments
+       meet go small. Skips the checked segment -- it goes fully round
+       regardless of position, see &:has(> input:checked) below. */
+    :where(&) + &:not(:has(> input:checked)) {
+      border-top-left-radius: var(--rounded-small);
+      border-bottom-left-radius: var(--rounded-small);
+    }
+
+    &:has(+ &):not(:has(> input:checked)) {
+      border-top-right-radius: var(--rounded-small);
+      border-bottom-right-radius: var(--rounded-small);
+    }
+
+    @media (hover) {
+      &:hover {
+        background-image: radial-gradient(var(--theme-hover));
+      }
+    }
+
+    &:has(:active, :focus-visible) {
+      background-image: radial-gradient(var(--theme-press));
+    }
+
+    /* Focus lands on the hidden input, not this label -- :has() picks up
+       the ring here instead, and the position/z-index keeps it from being
+       painted over by the next segment (they sit flush, no gap). */
+    &:has(:focus-visible) {
+      position: relative;
+      z-index: 1;
+      outline: var(--theme-focus-outline);
+      outline-offset: var(--theme-focus-outline-offset);
+    }
+
+    &:has(> input:checked) {
+      /* Fixed px, not --rounded-pill (9999px) or 50%: 9999px clamps
+         visually at half the item's height, so animating toward it spends
+         ~all of the transition past that clamp point, invisible -- looks
+         like an instant snap. 50% has its own problem: it resolves width
+         and height independently, so on a non-square item it draws an
+         ellipse instead of a pill. A px value close to (but above) the
+         item's actual half-height still clamps to a true pill, while
+         keeping the animated range visible. */
+      border-radius: var(--rounded-xlarge);
+      background-color: var(--theme-toggle-selected-bg);
+      color: var(--theme-toggle-selected-text);
+    }
+  }
+}

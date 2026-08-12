@@ -448,10 +448,10 @@ const jsCode = `<span class="token comment">// Artisan kombucha tote bag</span>
   </dl>
 
   <dl class="card">
-    <dt><a href="#">Roast</a></dt>
-    <dt><a href="#">Origin</a></dt>
-    <dd>Single-origin</dd>
-    <dd>Marfa</dd>
+    <dt><a href="#">Ethical migas</a></dt>
+    <dt><a href="#">Chambray tousled</a></dt>
+    <dd>Direct trade, gluten-free by default</dd>
+    <dd>Before they sold out, viral marfa</dd>
   </dl>
 
   <h2>Infoboxes</h2>
@@ -500,6 +500,42 @@ const jsCode = `<span class="token comment">// Artisan kombucha tote bag</span>
     <li><a href="#">Gluten-free</a></li>
     <li><a href="#">Viral</a></li>
   </ul>
+
+  <h2>Segmented control</h2>
+
+  <h3>Single choice</h3>
+
+  <fieldset class="segmented">
+    <label>
+      <input type="radio" name="roast-style" value="cold-pressed" checked />
+      Cold-pressed
+    </label>
+    <label>
+      <input type="radio" name="roast-style" value="direct-trade" />
+      Direct trade
+    </label>
+    <label>
+      <input type="radio" name="roast-style" value="small-batch" />
+      Small batch
+    </label>
+  </fieldset>
+
+  <h3>Multiple choice</h3>
+
+  <fieldset class="segmented">
+    <label>
+      <input type="checkbox" name="roast-notes" value="forage" checked />
+      Forage
+    </label>
+    <label>
+      <input type="checkbox" name="roast-notes" value="chambray" checked />
+      Chambray
+    </label>
+    <label>
+      <input type="checkbox" name="roast-notes" value="viral-marfa" />
+      Viral marfa
+    </label>
+  </fieldset>
 
   <h2>Media</h2>
 
