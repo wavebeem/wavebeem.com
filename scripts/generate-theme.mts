@@ -48,7 +48,6 @@ const seedHex = "#7bd675";
 // ## FRUIT_SALAD
 // Same as RAINBOW.
 const variant = Variant.TONAL_SPOT;
-const variantDark = Variant.TONAL_SPOT;
 
 // -1 to 1, 0 = standard.
 const contrastLevel = 0;
@@ -57,10 +56,16 @@ async function main(): Promise<void> {
   const sourceColorHct = Hct.fromInt(argbFromHex(seedHex));
   const { light, dark } = buildSchemes(sourceColorHct);
 
+  const seedLine = buildSeedLine();
   const roleLines = buildRoleLines(light, dark);
   const customColorLines = buildCustomColorLines(sourceColorHct);
   const emphasisLines = buildEmphasisLines();
-  const output = buildOutput(roleLines, customColorLines, emphasisLines);
+  const output = buildOutput({
+    seedLine,
+    roleLines,
+    customColorLines,
+    emphasisLines,
+  });
 
   const outPath = await writeOutput(output);
   console.log(`Wrote ${outPath}`);
@@ -78,7 +83,7 @@ function buildSchemes(sourceColorHct: Hct): {
   });
   const dark = new DynamicScheme({
     sourceColorHct,
-    variant: variantDark,
+    variant,
     contrastLevel,
     isDark: true,
   });
@@ -185,22 +190,34 @@ function buildEmphasisLines(): string {
   return `  --md-custom-emphasis: light-dark(${light}, ${dark});\n`;
 }
 
-function buildOutput(
-  roleLines: string,
-  customColorLines: string,
-  emphasisLines: string,
-): string {
+// Not a DynamicScheme role. Exposed for the style guide's color palette.
+function buildSeedLine(): string {
+  return `  --md-custom-seed: ${seedHex};\n`;
+}
+
+function buildOutput({
+  seedLine,
+  roleLines,
+  customColorLines,
+  emphasisLines,
+}: {
+  seedLine: string;
+  roleLines: string;
+  customColorLines: string;
+  emphasisLines: string;
+}): string {
   return `\
 /**
  * GENERATED. Don't hand-edit -- regenerate with: npm run generate-theme
  *
- * Seed: ${seedHex}  Variant: ${Variant[variant]} light / ${Variant[variantDark]} dark  Contrast: ${contrastLevel}
+ * Seed: ${seedHex}  Variant: ${Variant[variant]}  Contrast: ${contrastLevel}
  *
  * Every Material 3 color role, as --md-<kebab-case-role-name>. See
  * theme.css for how this site's --theme-* tokens map to these.
  */
 /* prettier-ignore */
 :root {
+${seedLine}
 ${roleLines}
   /* Syntax-highlighting hues: seed hue rotated by 0/90/180/270 degrees,
      fixed chroma, tone 40/80 -- not DynamicScheme roles. */

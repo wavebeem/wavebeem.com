@@ -1,13 +1,15 @@
 /**
  * GENERATED. Don't hand-edit -- regenerate with: npm run generate-theme
  *
- * Seed: #7bd675  Variant: TONAL_SPOT light / TONAL_SPOT dark  Contrast: 0
+ * Seed: #7bd675  Variant: TONAL_SPOT  Contrast: 0
  *
  * Every Material 3 color role, as --md-<kebab-case-role-name>. See
  * theme.css for how this site's --theme-* tokens map to these.
  */
 /* prettier-ignore */
 :root {
+  --md-custom-seed: #7bd675;
+
   --md-primary-palette-key-color: light-dark(#54824f, #54824f);
   --md-secondary-palette-key-color: light-dark(#6b7c66, #6b7c66);
   --md-tertiary-palette-key-color: light-dark(#517e83, #517e83);

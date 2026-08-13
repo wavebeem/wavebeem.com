@@ -29,7 +29,7 @@ const jsCode = `<span class="token comment">// Artisan kombucha tote bag</span>
     >.
   </p>
 
-  <div class="color-roles-section">
+  <wavebeem-color-roles class="color-roles-section">
     <div class="color-roles">
       <div class="color-roles-accent">
         <div class="color-roles-accent-column">
@@ -239,7 +239,9 @@ const jsCode = `<span class="token comment">// Artisan kombucha tote bag</span>
         </div>
       </div>
     </div>
-  </div>
+
+    <div class="color-roles-swatch" data-role="seed">Seed</div>
+  </wavebeem-color-roles>
 
   <h2>Headings & text</h2>
 
@@ -625,6 +627,83 @@ const jsCode = `<span class="token comment">// Artisan kombucha tote bag</span>
   </p>
 </PageLayout>
 
+<script>
+  function toHex(channel: number) {
+    return Math.round(channel).toString(16).padStart(2, "0");
+  }
+
+  function rgbToHex(rgb: string) {
+    const [r, g, b] = rgb.match(/\d+(\.\d+)?/g)!.map(Number);
+    return `#${toHex(r)}${toHex(g)}${toHex(b)}`;
+  }
+
+  const hexButtonClassName = "color-roles-hex";
+  const hexButtonSelector = `.${hexButtonClassName}`;
+
+  class WavebeemColorRoles extends HTMLElement {
+    #abortController = new AbortController();
+    #themeObserver?: MutationObserver;
+
+    get #swatches() {
+      return this.querySelectorAll<HTMLElement>(".color-roles-swatch");
+    }
+
+    connectedCallback() {
+      this.#abortController = new AbortController();
+      const { signal } = this.#abortController;
+      this.#renderHexButtons();
+      this.#themeObserver = new MutationObserver(() =>
+        this.#renderHexButtons(),
+      );
+      this.#themeObserver.observe(document.documentElement, {
+        attributeFilter: ["data-theme"],
+      });
+      this.addEventListener("click", (event) => this.#handleClick(event), {
+        signal,
+      });
+    }
+
+    disconnectedCallback() {
+      this.#abortController.abort();
+      this.#themeObserver?.disconnect();
+    }
+
+    // Recomputed on theme change since swatches use light-dark().
+    #renderHexButtons() {
+      for (const swatch of this.#swatches) {
+        const hex = rgbToHex(getComputedStyle(swatch).backgroundColor);
+        const button = this.#ensureHexButton(swatch);
+        button.dataset.hex = hex;
+        button.textContent = hex;
+        button.setAttribute("aria-label", `Copy ${hex} to clipboard`);
+      }
+    }
+
+    #ensureHexButton(swatch: HTMLElement) {
+      let button = swatch.querySelector<HTMLButtonElement>(hexButtonSelector);
+      if (!button) {
+        button = document.createElement("button");
+        button.type = "button";
+        button.className = hexButtonClassName;
+        swatch.append(button);
+      }
+      return button;
+    }
+
+    #handleClick(event: MouseEvent) {
+      const button = (event.target as HTMLElement).closest<HTMLButtonElement>(
+        hexButtonSelector,
+      );
+      if (!button) {
+        return;
+      }
+      navigator.clipboard.writeText(button.dataset.hex!);
+    }
+  }
+
+  customElements.define("wavebeem-color-roles", WavebeemColorRoles);
+</script>
+
 <style>
   /* Intentional exception to the theme-tokens-only rule (see theme.css):
      this is a raw reference chart of the --md-* primitives themselves. */
@@ -643,6 +722,8 @@ const jsCode = `<span class="token comment">// Artisan kombucha tote bag</span>
 
     .color-roles-swatch {
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       align-items: flex-start;
       flex: 1;
       min-height: 64px;
@@ -651,6 +732,33 @@ const jsCode = `<span class="token comment">// Artisan kombucha tote bag</span>
       line-height: 1.15;
       font-weight: 600;
       letter-spacing: var(--tracking-label);
+    }
+
+    .color-roles-hex {
+      align-self: flex-end;
+      padding: 2px 4px;
+      border: none;
+      border-radius: 4px;
+      background: none;
+      color: inherit;
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      cursor: pointer;
+
+      @media (hover) {
+        &:hover {
+          background: rgb(from currentColor r g b / 20%);
+        }
+      }
+
+      &:active {
+        background: rgb(from currentColor r g b / 35%);
+      }
+
+      &:focus-visible {
+        outline: 1px solid currentColor;
+        outline-offset: 1px;
+      }
     }
 
     /* An "on-X" swatch stacked directly against the X it's meant to sit on
@@ -939,6 +1047,12 @@ const jsCode = `<span class="token comment">// Artisan kombucha tote bag</span>
     [data-role="shadow"] {
       background: var(--md-shadow);
       color: white;
+    }
+
+    /* The raw seed everything above derives from. Fixed hex, not light-dark(). */
+    [data-role="seed"] {
+      background: var(--md-custom-seed);
+      color: var(--md-on-primary-fixed);
     }
   }
 </style>
