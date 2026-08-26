@@ -55,18 +55,14 @@ const contrastLevel = 0;
 async function main(): Promise<void> {
   const sourceColorHct = Hct.fromInt(argbFromHex(seedHex));
   const { light, dark } = buildSchemes(sourceColorHct);
-
   const seedLine = buildSeedLine();
   const roleLines = buildRoleLines(light, dark);
   const customColorLines = buildCustomColorLines(sourceColorHct);
-  const emphasisLines = buildEmphasisLines();
   const output = buildOutput({
     seedLine,
     roleLines,
     customColorLines,
-    emphasisLines,
   });
-
   const outPath = await writeOutput(output);
   console.log(`Wrote ${outPath}`);
 }
@@ -172,24 +168,6 @@ function buildCustomColorLines(sourceColorHct: Hct): string {
 `;
 }
 
-// A hand-picked hue, independent of the seed -- unlike the syntax colors
-// above (seed hue + a fixed offset), this one isn't derived from the seed
-// at all, same tradeoff as picking any M3 "custom color"
-// (m3.material.io/styles/color/advanced/define-new-colors): no guaranteed
-// harmony with the seed, just an intentional standalone accent. Coral hue,
-// chosen 2026-08-05 as the one-off em/i emphasis color --
-// everything else on the site still uses the real (seed-derived) M3
-// tertiary role.
-const emphasisHue = 20;
-
-function buildEmphasisLines(): string {
-  const palette = TonalPalette.fromHueAndChroma(emphasisHue, customColorChroma);
-  const light = hexFromArgb(palette.tone(customColorToneLight));
-  const dark = hexFromArgb(palette.tone(customColorToneDark));
-
-  return `  --md-custom-emphasis: light-dark(${light}, ${dark});\n`;
-}
-
 // Not a DynamicScheme role. Exposed for the style guide's color palette.
 function buildSeedLine(): string {
   return `  --md-custom-seed: ${seedHex};\n`;
@@ -199,12 +177,10 @@ function buildOutput({
   seedLine,
   roleLines,
   customColorLines,
-  emphasisLines,
 }: {
   seedLine: string;
   roleLines: string;
   customColorLines: string;
-  emphasisLines: string;
 }): string {
   return `\
 /**
@@ -222,9 +198,7 @@ ${roleLines}
   /* Syntax-highlighting hues: seed hue rotated by 0/90/180/270 degrees,
      fixed chroma, tone 40/80 -- not DynamicScheme roles. */
 ${customColorLines}
-  /* Hand-picked accent (hue ${emphasisHue}), not seed-derived -- see
-     buildEmphasisLines above. One-off em/i emphasis color. */
-${emphasisLines}}
+}
 `;
 }
 

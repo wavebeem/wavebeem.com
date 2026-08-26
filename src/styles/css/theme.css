@@ -9,8 +9,8 @@
  * choice is a judgment call worth a second look.
  */
 :root {
-  --theme-selection-bg: var(--md-tertiary-container);
-  --theme-selection-text: var(--md-on-tertiary-container);
+  --theme-selection-bg: var(--md-secondary-container);
+  --theme-selection-text: var(--md-on-secondary-container);
 
   /* High-contrast filled style for a selected item in a connected button
      group (m3.material.io/components/button-groups/specs), not the
@@ -65,7 +65,7 @@
     var(--md-on-secondary-container),
     var(--md-on-secondary-container)
   );
-  --theme-code: var(--md-surface-container-low);
+  --theme-code: var(--md-surface-container-high);
 
   --theme-shadow: var(--md-shadow);
   --theme-scrim: var(--md-scrim);
@@ -148,9 +148,8 @@
   /* --theme-hover: rgb(from currentColor r g b / 8%);
   --theme-press: rgb(from currentColor r g b / 10%); */
 
-  /* Same surface/text as --theme-code and --theme-text. */
-  --syntax-background: var(--theme-code);
-  --syntax-border: var(--theme-code);
+  --syntax-background: var(--md-surface-container-low);
+  --syntax-border: transparent;
   --syntax-text: var(--theme-text);
   --syntax-keyword: var(--theme-text);
 

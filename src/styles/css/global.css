@@ -21,7 +21,7 @@
   scrollbar-gutter: stable;
   color-scheme: light dark;
   scrollbar-color: var(--theme-scrollbar) transparent;
-  font-synthesis: none;
+  font-synthesis: small-caps;
   padding: 0;
   margin: 0;
   background: var(--theme-page-bg);
@@ -88,10 +88,11 @@ a:where(:focus-visible, :hover, :active) {
   font: inherit;
 }
 
-/* No italics. Add some color. */
+/* No italics... */
 :is(em, i) {
   font-style: normal;
-  color: var(--theme-emphasis-text);
+  font-variant-caps: small-caps;
+  letter-spacing: calc(1em / 64);
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -159,9 +160,11 @@ pre {
 }
 
 :not(pre) > code {
-  font-size: 0.9em;
+  font-size: smaller;
   font-weight: 500;
-  color: var(--theme-emphasis-text);
+  padding: 0em 0.25em;
+  border-radius: 0.5em;
+  background: var(--theme-code);
 }
 
 .description {
