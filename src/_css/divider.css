@@ -1,0 +1,26 @@
+/* Sine wave, period 32px, amplitude 3.5px, 1px stroke; src/icons/
+   divider-wavy-h/-v.svg. Amplitude 3.5 not 4 (half the 8px tile): room
+   for the stroke, no clipped peaks. SVGs sample extra points past each
+   edge so mask-repeat seams land mid-stroke, not at a cap.
+   --mask-wavy-h/-v: layoutBase.js, inherited from <html> */
+hr,
+.divider-wavy {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: 8px;
+  background: var(--theme-divider-decorative);
+  mask-image: var(--mask-wavy-h);
+  mask-repeat: repeat-x;
+  mask-size: 32px 8px;
+}
+
+.divider-wavy-vertical {
+  display: block;
+  width: 8px;
+  height: 100%;
+  background: var(--theme-divider-decorative);
+  mask-image: var(--mask-wavy-v);
+  mask-repeat: repeat-y;
+  mask-size: 8px 32px;
+}

@@ -1,0 +1,66 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 1rem;
+  padding-top: 5rem;
+  padding-bottom: calc(1rem + env(safe-area-max-inset-bottom, 1rem));
+  color: var(--theme-bullet);
+}
+
+/* Shape/color come from divider.css's shared .divider-wavy rule.
+   --m tweaked here for a bit more curve than the shared default. */
+.footer .divider-wavy {
+  margin-bottom: 1.5rem;
+
+  /* Escape .footer's padding-inline for a true edge-to-edge wave,
+     same trick page.css uses for in-content dividers on mobile. */
+  @media (width < 40rem) {
+    margin-inline: -1rem;
+    width: calc(100% + 2rem);
+  }
+
+  /* Sidebar's own vertical wavy divider already provides that texture
+     at this width: one squiggle per layout, not two. */
+  @media (width >= 70rem) {
+    display: none;
+  }
+}
+
+.footer > :not(.divider-wavy) {
+  margin-inline: 0;
+  max-width: none;
+}
+
+.footer > .footer-menu {
+  display: grid;
+  max-width: var(--width-heading);
+  margin-bottom: 2.5rem;
+
+  @media (width >= 70rem) {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px 32px;
+    align-content: start;
+
+    @media (width <= 21rem) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  a {
+    display: block;
+    color: var(--theme-link);
+    font-size: var(--font-size-small);
+    padding: 4px 8px;
+    text-decoration-line: none;
+  }
+}

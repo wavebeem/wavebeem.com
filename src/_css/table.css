@@ -1,0 +1,31 @@
+/* No M3 role for tables (dropped after M2); modeled on 2bit-ui instead
+   (2bit-ui.wavebeem.com/docs/#tables): rule-based rows, bold headers,
+   stronger divider under the head */
+main table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin-block: 1.5rem;
+  max-width: var(--width-copy);
+}
+
+main :is(th, td) {
+  padding: 8px 16px;
+  text-align: left;
+}
+
+main th {
+  font-weight: bold;
+}
+
+main thead {
+  border-bottom: 1px solid var(--theme-border);
+}
+
+main tbody tr {
+  border-bottom: 1px solid var(--theme-divider);
+}
+
+main tbody tr:last-child {
+  border-bottom: none;
+}

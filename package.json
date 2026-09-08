@@ -8,32 +8,28 @@
   },
   "scripts": {
     "upgrade": "npm-check -u",
-    "dev": "astro dev",
-    "dev:lan": "astro dev --host",
-    "build": "astro build",
-    "preview": "astro preview",
-    "generate-theme": "node scripts/generate-theme.mts",
-    "astro": "astro",
-    "check": "astro check",
+    "dev": "node scripts/cli.js dev",
+    "prebuild": "npm run format:check",
+    "build": "node scripts/cli.js build",
+    "generate-theme": "node scripts/generate-theme.js",
     "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "ci:check": "npm run format:check && npm run check && npm run build"
+    "format:check": "prettier --check ."
   },
   "dependencies": {
-    "@lucide/astro": "^1.31.0",
-    "@types/node": "^24.13.3",
-    "astro": "^7.2.0",
+    "@11ty/eleventy": "^3.1.6",
+    "escape-html": "^1.0.3",
     "feed": "^6.0.0",
+    "lightningcss": "^1.33.0",
     "lucide-static": "^1.31.0",
-    "sharp": "^0.35.3",
-    "vite-plugin-static-copy": "^4.1.1"
+    "markdown-it": "^14.3.1",
+    "markdown-it-prism": "^4.0.0",
+    "prismjs": "^1.30.0",
+    "sharp": "^0.35.3"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.10",
     "@material/material-color-utilities": "^0.4.0",
+    "gray-matter": "^4.0.3",
     "npm-check": "^6.0.1",
-    "prettier": "^3.9.6",
-    "prettier-plugin-astro": "^0.14.1",
-    "typescript": "^6.0.3"
+    "prettier": "^3.9.6"
   }
 }
