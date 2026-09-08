@@ -67,7 +67,10 @@ export function layoutBase({ title, description = "" }, ...children) {
         <meta name="description" content="${description}" />
         <title>${title}</title>
         <meta name="author" content="wavebeem" />
-        <meta name="generator" content="wavebeem.com build" />
+        <meta
+          name="generator"
+          content="Eleventy v${process.env.ELEVENTY_VERSION}"
+        />
         <script
           defer
           data-domain="wavebeem.com"
