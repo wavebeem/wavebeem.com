@@ -1,0 +1,64 @@
+.nav-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 8px;
+  padding-right: 16px;
+  border-radius: var(--rounded-pill);
+  color: var(--theme-link);
+  text-decoration-line: none;
+  font-size: var(--font-size-base);
+  font-weight: bold;
+  letter-spacing: var(--tracking-label);
+
+  /* global.css's a:hover (element+pseudo, higher specificity) wins on
+     hover unless repeated here */
+  &:hover {
+    text-decoration-line: none;
+  }
+
+  /* Icon badge paints separately: needs its own hover wash, or the
+     row's radial-gradient gets cut off underneath */
+  @media (hover) {
+    &:hover:where(:not(:active)) {
+      background-image: radial-gradient(var(--theme-hover));
+
+      .nav-link-icon {
+        background-image: radial-gradient(var(--theme-hover));
+      }
+    }
+  }
+
+  &:active,
+  &:focus-visible {
+    background-image: radial-gradient(var(--theme-press));
+
+    .nav-link-icon {
+      background-image: radial-gradient(var(--theme-press));
+    }
+  }
+
+  &:focus-visible {
+    outline: var(--theme-focus-outline);
+    outline-offset: var(--theme-focus-outline-offset);
+  }
+}
+
+.nav-link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: var(--rounded-pill);
+  background: var(--theme-icon-badge);
+  color: var(--theme-icon-badge-text);
+}

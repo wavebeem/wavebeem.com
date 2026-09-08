@@ -1,0 +1,89 @@
+/* Segmented control: a connected row of mutually-exclusive (radio) or
+   independent (checkbox) options.
+
+   <fieldset class="segmented">
+     <label><input type="radio" ... />Light</label>
+     ...
+   </fieldset>
+
+   Input lives inside its own label: whole pill is the click target */
+
+.segmented {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* UA default min-width: min-content stops shrinking below the widest
+     label like a normal flex item would */
+  min-width: 0;
+
+  > label {
+    position: relative;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: var(--rounded-large);
+    background: var(--theme-infobox);
+    color: inherit;
+    font-weight: 600;
+    letter-spacing: var(--tracking-label);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition-property: border-radius;
+    transition-duration: var(--motion-duration-short3);
+    transition-timing-function: var(--motion-easing-standard);
+
+    input {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      clip-path: inset(50%);
+    }
+
+    :where(&) + &:not(:has(> input:checked)) {
+      border-top-left-radius: var(--rounded-small);
+      border-bottom-left-radius: var(--rounded-small);
+    }
+
+    &:has(+ &):not(:has(> input:checked)) {
+      border-top-right-radius: var(--rounded-small);
+      border-bottom-right-radius: var(--rounded-small);
+    }
+
+    @media (hover) {
+      &:hover {
+        background-image: radial-gradient(var(--theme-hover));
+      }
+    }
+
+    &:has(:active, :focus-visible) {
+      background-image: radial-gradient(var(--theme-press));
+    }
+
+    /* :has() catches focus on the hidden input; z-index keeps the ring
+       uncovered by the next (flush, no-gap) segment */
+    &:has(:focus-visible) {
+      position: relative;
+      z-index: 1;
+      outline: var(--theme-focus-outline);
+      outline-offset: var(--theme-focus-outline-offset);
+    }
+
+    &:has(> input:checked) {
+      /* Fixed px, not --rounded-pill or 50%:
+         - --rounded-pill (9999px): clamps early, reads as an instant snap
+         - 50%: resolves width/height separately, ellipse on non-square
+         Px near half-height: true pill, visible transition */
+      border-radius: var(--rounded-xlarge);
+      background-color: var(--theme-toggle-selected-bg);
+      color: var(--theme-toggle-selected-text);
+    }
+  }
+}

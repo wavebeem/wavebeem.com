@@ -1,0 +1,51 @@
+.menu {
+  display: grid;
+  gap: var(--card-gap);
+
+  > a {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 16px;
+    line-height: 1.25;
+
+    border-radius: var(--rounded-large);
+    background: var(--theme-card);
+    color: var(--theme-link);
+    text-decoration-line: none;
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    letter-spacing: var(--tracking-label);
+    outline-offset: var(--theme-focus-outline-offset);
+
+    &:hover {
+      text-decoration-line: none;
+    }
+
+    @media (hover) {
+      &:hover:not(:active) {
+        background-image: radial-gradient(var(--theme-hover));
+      }
+    }
+
+    &:active,
+    &:focus-visible {
+      background-image: radial-gradient(var(--theme-press));
+    }
+
+    &:focus-visible {
+      outline: var(--theme-focus-outline);
+      outline-offset: var(--theme-focus-outline-offset);
+    }
+  }
+
+  :where(a) + a {
+    border-top-left-radius: var(--rounded-small);
+    border-top-right-radius: var(--rounded-small);
+  }
+
+  a:has(+ a) {
+    border-bottom-left-radius: var(--rounded-small);
+    border-bottom-right-radius: var(--rounded-small);
+  }
+}

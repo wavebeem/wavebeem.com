@@ -1,0 +1,122 @@
+/**
+ * Maps --theme-* tokens to M3 role primitives (md-tokens.css, generated
+ * by scripts/generate-theme.js from one seed color). Edit THIS file for
+ * token->role changes; rerun the script only for seed/variant/contrast.
+ *
+ * TODO tokens: no clean 1:1 M3 role, or a judgment call worth revisiting
+ */
+:root {
+  --theme-selection-bg: var(--md-secondary-container);
+  --theme-selection-text: var(--md-on-secondary-container);
+
+  --theme-toggle-selected-bg: var(--md-primary);
+  --theme-toggle-selected-text: var(--md-on-primary);
+
+  /* details.css chevron badge backdrop: plain surface, not --theme-box
+     (equals --theme-card in light mode, would vanish against itself) */
+  --theme-details-circle: var(--md-surface);
+
+  --theme-link: var(--md-primary);
+
+  --theme-redact-bg: var(--md-inverse-surface);
+  --theme-redact-text: var(--md-inverse-on-surface);
+
+  --theme-header-bg: var(--md-background);
+  --theme-header-text: var(--md-on-background);
+  --theme-sidebar-bg: var(--md-surface);
+  --theme-sidebar-text: var(--md-on-surface);
+
+  --theme-header-card: rgb(from var(--md-outline-variant) r g b / 8%);
+  --theme-header-hover: rgb(from var(--md-primary) r g b / 12%);
+
+  --theme-button-bg: var(--md-primary-container);
+  --theme-button-text: var(--md-on-primary-container);
+
+  --theme-text: var(--md-on-surface);
+
+  --theme-infobox: light-dark(
+    var(--md-secondary-container),
+    var(--md-secondary-container)
+  );
+  --theme-infobox-text: light-dark(
+    var(--md-on-secondary-container),
+    var(--md-on-secondary-container)
+  );
+  --theme-code: var(--md-surface-container-high);
+
+  --theme-shadow: var(--md-shadow);
+  --theme-scrim: var(--md-scrim);
+
+  --theme-page-bg: var(--md-background);
+  --theme-page-text: var(--md-on-background);
+
+  --theme-scrollbar: var(--md-primary);
+
+  --theme-accent: var(--md-primary);
+  --theme-accent2: var(--md-primary-fixed-dim);
+  --theme-accent3: var(--md-tertiary-container);
+
+  --theme-logo-text: var(--md-on-background);
+
+  --theme-emphasis-text: var(--md-custom-emphasis);
+
+  --theme-divider: var(--md-outline-variant);
+  --theme-divider-decorative: var(--md-surface-container-highest);
+  --theme-border: var(--md-outline);
+  --theme-border-faint: rgb(from var(--md-outline) r g b / 16%);
+
+  --theme-bullet-bg: var(--md-tertiary-container);
+  --theme-bullet-text: var(--md-on-tertiary-container);
+
+  --theme-photo: light-dark(
+    var(--md-primary-container),
+    var(--md-primary-fixed-dim)
+  );
+  /* --theme-image: transparent; */
+  --theme-image: var(--md-surface-container-lowest);
+  --theme-box: var(--md-surface-container);
+
+  /* Avoids --theme-box: equals --theme-sidebar-bg, vanishes in drawer */
+  --theme-icon-badge: var(--md-primary-container);
+  --theme-icon-badge-text: var(--md-on-primary-container);
+
+  /* Same --theme-box collision as --theme-card */
+  --theme-icon-button-badge: var(--md-surface-container-highest);
+  --theme-icon-button-badge-text: var(--md-on-surface);
+  --theme-card: light-dark(
+    var(--md-surface-container),
+    var(--md-surface-container-low)
+  );
+
+  /* M3: "on" color at varying opacity, 8% hover / 10% focus+press.
+     Feels too dark though */
+  --theme-hover: rgb(from currentColor r g b / 6%);
+  --theme-press: rgb(from currentColor r g b / 8%);
+
+  --theme-focus-outline: 2px solid currentColor;
+  --theme-focus-outline-offset: -4px;
+  /* --theme-hover: rgb(from currentColor r g b / 8%);
+  --theme-press: rgb(from currentColor r g b / 10%); */
+
+  --syntax-background: var(--md-surface-container-low);
+  --syntax-border: transparent;
+  --syntax-text: var(--theme-text);
+  --syntax-keyword: var(--theme-text);
+
+  /* Generated from the seed color's own hue, see generate-theme.js */
+  --syntax-comment: var(--md-custom-comment);
+  --syntax-property: var(--md-custom-property);
+  --syntax-string: var(--md-custom-string);
+  --syntax-punctuation: var(--md-custom-punctuation);
+
+  /* color-scheme defaults to "light dark" in global.css, so light-dark()
+     (md-tokens.css) follows OS preference with zero JS; these two
+     overrides are all the manual selector needs */
+  &[data-theme="light"] {
+    color-scheme: light;
+  }
+
+  &[data-theme="dark"] {
+    color-scheme: dark;
+  }
+}
