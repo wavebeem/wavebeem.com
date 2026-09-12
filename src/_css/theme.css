@@ -87,6 +87,7 @@
     var(--md-surface-container),
     var(--md-surface-container-low)
   );
+  --theme-card-text: var(--md-on-surface);
 
   /* M3: "on" color at varying opacity, 8% hover / 10% focus+press.
      Feels too dark though */

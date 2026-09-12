@@ -1,5 +1,5 @@
 .card {
-  color: inherit;
+  color: var(--theme-card-text);
   text-decoration-line: none;
 
   display: grid;
@@ -24,13 +24,13 @@
     }
 
     :where(li) + li {
-      border-top-left-radius: var(--rounded-small);
-      border-top-right-radius: var(--rounded-small);
+      border-top-left-radius: var(--rounded-xsmall);
+      border-top-right-radius: var(--rounded-xsmall);
     }
 
     li:has(+ li) {
-      border-bottom-left-radius: var(--rounded-small);
-      border-bottom-right-radius: var(--rounded-small);
+      border-bottom-left-radius: var(--rounded-xsmall);
+      border-bottom-right-radius: var(--rounded-xsmall);
     }
   }
 
@@ -55,8 +55,8 @@
     }
 
     > dt {
-      border-top-left-radius: var(--rounded-small);
-      border-top-right-radius: var(--rounded-small);
+      border-top-left-radius: var(--rounded-xsmall);
+      border-top-right-radius: var(--rounded-xsmall);
       padding-block: 16px 0;
       margin: 0;
     }
@@ -75,8 +75,8 @@
     }
 
     > dd {
-      border-bottom-left-radius: var(--rounded-small);
-      border-bottom-right-radius: var(--rounded-small);
+      border-bottom-left-radius: var(--rounded-xsmall);
+      border-bottom-right-radius: var(--rounded-xsmall);
       padding-block: 0 16px;
     }
 
@@ -109,7 +109,7 @@
         > :is(dd, dt) {
           margin: 0;
           padding: 8px 16px;
-          border-radius: var(--rounded-small);
+          border-radius: var(--rounded-xsmall);
 
           &:nth-child(1) {
             border-top-left-radius: var(--rounded-large);

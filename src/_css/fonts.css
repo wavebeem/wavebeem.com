@@ -12,6 +12,28 @@
 }
 
 @font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Mori";
+  src: url("/fonts/PPMori-SemiboldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Big Shoulders";
+  src: url("/fonts/BigShoulders-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Iosevka Extended";
   src: url("/fonts/Iosevka-Extended.woff2") format("woff2");
   font-display: swap;

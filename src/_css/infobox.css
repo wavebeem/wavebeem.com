@@ -55,6 +55,13 @@
     margin: 0;
   }
 
+  &:not(:has(.heading)) {
+    font-weight: bold;
+    text-wrap: balance;
+    line-height: 1.25;
+    text-underline-offset: var(--link-underline-offset);
+  }
+
   &:hover {
     text-decoration-line: none;
   }
@@ -87,6 +94,12 @@
     outline-offset: var(--theme-focus-outline-offset);
     text-decoration-line: none;
 
+    &:not(:has(.heading)) {
+      font-weight: bold;
+      text-wrap: balance;
+      text-underline-offset: var(--link-underline-offset);
+    }
+
     &:hover:where(:not(:active)) {
       background-image: radial-gradient(var(--theme-hover));
     }
@@ -106,15 +119,15 @@
     }
     :where(&) + & {
       a {
-        border-top-left-radius: var(--rounded-small);
-        border-top-right-radius: var(--rounded-small);
+        border-top-left-radius: var(--rounded-xsmall);
+        border-top-right-radius: var(--rounded-xsmall);
       }
     }
 
     &:has(+ &) {
       a {
-        border-bottom-left-radius: var(--rounded-small);
-        border-bottom-right-radius: var(--rounded-small);
+        border-bottom-left-radius: var(--rounded-xsmall);
+        border-bottom-right-radius: var(--rounded-xsmall);
       }
     }
   }

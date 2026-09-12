@@ -87,9 +87,9 @@ wavebeem-theme-select {
   flex: 1;
   padding: 8px 16px;
   border: 0;
-  border-radius: var(--rounded-large);
+  border-radius: var(--rounded-xlarge);
   background: var(--theme-infobox);
-  color: inherit;
+  color: var(--theme-infobox-text);
   font: inherit;
   font-weight: 600;
   letter-spacing: var(--tracking-label);
@@ -99,13 +99,13 @@ wavebeem-theme-select {
   transition-timing-function: var(--motion-easing-standard);
 
   :where(&) + &:not([aria-pressed="true"]) {
-    border-top-left-radius: var(--rounded-small);
-    border-bottom-left-radius: var(--rounded-small);
+    border-top-left-radius: var(--rounded-xsmall);
+    border-bottom-left-radius: var(--rounded-xsmall);
   }
 
   &:has(+ &):not([aria-pressed="true"]) {
-    border-top-right-radius: var(--rounded-small);
-    border-bottom-right-radius: var(--rounded-small);
+    border-top-right-radius: var(--rounded-xsmall);
+    border-bottom-right-radius: var(--rounded-xsmall);
   }
 
   @media (hover) {

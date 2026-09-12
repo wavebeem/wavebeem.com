@@ -4,7 +4,7 @@
     ui-monospace, "Cascadia Code", "SFMono-Regular", "Menlo", "Monaco",
     "Consolas", "Liberation Mono", "Courier New", monospace;
   --font-body: "PP Mori", var(--font-fallback-main);
-  --font-heading: var(--font-body);
+  --font-heading: "Big Shoulders", var(--font-fallback-main);
   --font-mono: "Iosevka Extended", var(--font-fallback-mono);
 
   --tracking-label: 0.01em;

@@ -40,12 +40,12 @@
   }
 
   :where(a) + a {
-    border-top-left-radius: var(--rounded-small);
-    border-top-right-radius: var(--rounded-small);
+    border-top-left-radius: var(--rounded-xsmall);
+    border-top-right-radius: var(--rounded-xsmall);
   }
 
   a:has(+ a) {
-    border-bottom-left-radius: var(--rounded-small);
-    border-bottom-right-radius: var(--rounded-small);
+    border-bottom-left-radius: var(--rounded-xsmall);
+    border-bottom-right-radius: var(--rounded-xsmall);
   }
 }

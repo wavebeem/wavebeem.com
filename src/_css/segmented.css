@@ -26,9 +26,9 @@
     align-items: center;
     justify-content: center;
     padding: 8px 16px;
-    border-radius: var(--rounded-large);
+    border-radius: var(--rounded-xlarge);
     background: var(--theme-infobox);
-    color: inherit;
+    color: var(--theme-infobox-text);
     font-weight: 600;
     letter-spacing: var(--tracking-label);
     text-align: center;

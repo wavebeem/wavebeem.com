@@ -21,7 +21,6 @@
   scrollbar-gutter: stable;
   color-scheme: light dark;
   scrollbar-color: var(--theme-scrollbar) transparent;
-  font-synthesis: small-caps;
   padding: 0;
   margin: 0;
   background: var(--theme-page-bg);
@@ -88,11 +87,8 @@ a:where(:focus-visible, :hover, :active) {
   font: inherit;
 }
 
-/* No italics... */
 :is(em, i) {
-  font-style: normal;
-  font-variant-caps: small-caps;
-  letter-spacing: calc(1em / 64);
+  font-style: italic;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -111,7 +107,7 @@ p {
 h1 {
   font-size: var(--font-size-h1);
   font-family: var(--font-heading);
-  font-weight: 900;
+  font-weight: 600;
   margin-block: 4rem 1.5rem;
 }
 

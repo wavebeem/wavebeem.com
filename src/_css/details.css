@@ -36,12 +36,12 @@
   }
 
   & + & {
-    --details-radius-top: var(--rounded-small);
+    --details-radius-top: var(--rounded-xsmall);
     margin-top: calc(var(--connected-gap) - 1.5rem);
   }
 
   &:has(+ &) {
-    --details-radius-bottom: var(--rounded-small);
+    --details-radius-bottom: var(--rounded-xsmall);
   }
 
   :where(&:hover) {
@@ -139,7 +139,7 @@
     margin-bottom: -0.5rem;
     /* Container keeps its own radius regardless of open state; only
        summary shrinks, since content sits flush below while open */
-    border-end-start-radius: var(--rounded-small);
-    border-end-end-radius: var(--rounded-small);
+    border-end-start-radius: var(--rounded-xsmall);
+    border-end-end-radius: var(--rounded-xsmall);
   }
 }
