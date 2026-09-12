@@ -61,6 +61,13 @@ export function layoutBase({ title, description = "" }, ...children) {
           href="/fonts/PPMori-Semibold.woff2"
           crossorigin
         />
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/fonts/BigShoulders-SemiBold.woff2"
+          crossorigin
+        />
         <meta name="og:title" content="${title}" />
         <meta name="og:description" content="${description}" />
         <meta property="og:type" content="website" />
