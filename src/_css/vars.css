@@ -6,6 +6,7 @@
   --font-body: "PP Mori", var(--font-fallback-main);
   --font-heading: "Big Shoulders", var(--font-fallback-main);
   --font-mono: "Iosevka Extended", var(--font-fallback-mono);
+  --font-emphasis: "PP Kyoto", var(--font-body);
 
   --tracking-label: 0.01em;
 

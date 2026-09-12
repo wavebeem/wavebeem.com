@@ -89,7 +89,7 @@ a:where(:focus-visible, :hover, :active) {
 
 :is(em, i) {
   font-style: italic;
-  font-family: "PP Kyoto", var(--font-body);
+  font-family: var(--font-emphasis);
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
