@@ -27,6 +27,19 @@
 }
 
 @font-face {
+  font-family: "PP Kyoto";
+  src: url("/fonts/PPKyoto-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Kyoto";
+  src: url("/fonts/PPKyoto-RegularItalic.woff2") format("woff2");
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Big Shoulders";
   src: url("/fonts/BigShoulders-SemiBold.woff2") format("woff2");
   font-weight: 600;
