@@ -1,6 +1,7 @@
-import { html } from "../lib/html.js";
+import { html, unsafeHtml } from "../lib/html.js";
 import { layoutPage } from "../templates/layoutPage.js";
 import { groupByYear } from "../lib/groupByYear.js";
+import { renderMarkdownInline } from "../lib/markdown.js";
 
 export const data = {
   layout: false,
@@ -32,7 +33,9 @@ export function render(data) {
             (post) => html`
               <a class="infobox" href="${post.url}">
                 <span class="heading">${post.title}</span>
-                <span class="description">${post.description}</span>
+                <span class="description"
+                  >${unsafeHtml(renderMarkdownInline(post.description))}</span
+                >
               </a>
             `,
           )}
