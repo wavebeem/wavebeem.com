@@ -17,9 +17,9 @@ export function render(data) {
     html`
       <p>These posts aren't finished yet! Please don't share them.</p>
 
-      ${posts.map(
-        (post) => html`<a class="infobox" href="${post.url}">${post.title}</a>`,
-      )}
+      <section class="menu">
+        ${posts.map((post) => html`<a href="${post.url}">${post.title}</a>`)}
+      </section>
     `,
   ).html;
 }
