@@ -44,7 +44,8 @@
 
 .sidebar-top {
   display: flex;
-  padding: 8px;
+  padding-block: 8px;
+  padding-inline: 10px 14px;
   border-radius: var(--rounded-pill);
   color: var(--theme-logo-text);
 
