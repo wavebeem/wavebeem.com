@@ -16,10 +16,10 @@ Music was good, but I prefer the Gen 1-2 chiptune vibe.
 They tried to do something in this game to make it less linear, but honestly I
 just didn't care for it at all. It just feels like a lot of meaningless
 wandering and backtracking to get through the Elite Four in this game. Also, ugh
-I did not care at ALL about team magma or team aqua. They all talked so much and
-kept saying the most obnoxious stuff like "haha I'm gonna blow up a volcano
-because it's epic" like ok dude w/e can I keep playing Pokémon? At least team
-rocket was like "I'm doing crimes lol" these guys are just supervillain idiots.
+I did not care at ALL about Team Magma or Team Qqua. They all talked so much and
+kept saying the most obnoxious stuff like "haha i'm gonna blow up a volcano
+because it's epic" like ok dude w/e can I keep playing Pokémon? At least Team
+Rocket was like "I'm doing crimes lol" these guys are just supervillain idiots.
 
 There's something to be said for Gen 2 introducing a bunch of boring "it's just
 a bird" and "it's just an octopus" type monsters. Gen 3 is a bit better about
