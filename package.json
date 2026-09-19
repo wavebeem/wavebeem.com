@@ -9,6 +9,7 @@
   "scripts": {
     "upgrade": "npm-check -u",
     "dev": "node scripts/cli.js dev",
+    "post": "node scripts/post.js",
     "prebuild": "npm run format:check",
     "build": "node scripts/cli.js build",
     "generate-theme": "node scripts/generate-theme.js",
