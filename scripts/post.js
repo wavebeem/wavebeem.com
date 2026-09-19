@@ -92,13 +92,12 @@ async function promoteDraft(slug) {
   }
 
   await fs.mkdir(path.join(blogDir, year), { recursive: true });
-  if (process.platform === "win32") {
-    // Windows dev-server file watchers hold directory handles that block
-    // rename, so copy then delete instead.
-    await fs.cp(srcDir, destDir, { recursive: true });
-    await fs.rm(srcDir, { recursive: true });
-  } else {
+  try {
     await fs.rename(srcDir, destDir);
+  } catch (err) {
+    fail(
+      `Couldn't move src/drafts/${slug} to src/blog/${year}/${slug}: ${err.message}`,
+    );
   }
   await fs.writeFile(
     path.join(destDir, "index.json"),
