@@ -6,10 +6,11 @@ the group dynamic anyways.
 Absurdly charming. Really fun to explore. Interesting puzzles with real
 cooperation. Silly. A sense of wonder. I haven't felt this level of deep
 emotional response playing a game in a long time. What an incredibly special
-adventure to take with friends. We spent about 17 hours to hit the credits.
+adventure to take with friends. We spent about 17 hours to hit the credits. I'm
+tearing up just writing about it.
 
 The little characters are so cute and I love the minimalist
-customiztion/styling. Acquiring items felt really satisfyingly visceral, too.
+customization/styling. Acquiring items felt really satisfyingly visceral, too.
 
 It's kind of like playing a bunch of little escape rooms with your friends on a
 weird dessert island. The ending is really special in so many ways.
