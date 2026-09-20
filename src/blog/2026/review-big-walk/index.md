@@ -13,7 +13,7 @@ The little characters are so cute and I love the minimalist
 customization/styling. Acquiring items felt really satisfyingly visceral, too.
 
 It's kind of like playing a bunch of little escape rooms with your friends on a
-weird dessert island. The ending is really special in so many ways.
+weird desert island. The ending is really special in so many ways.
 
 Please find a trusted friend to experience this journey with.
 
