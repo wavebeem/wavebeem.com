@@ -24,6 +24,7 @@ export function layoutBase({ title, description = "" }, ...children) {
         <link rel="stylesheet" href="/base.css" />
         <script src="/theme-init.js"></script>
         <meta name="color-scheme" content="light dark" />
+        <link rel="me" href="https://cathode.church/@wavebeem" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, viewport-fit=cover"
