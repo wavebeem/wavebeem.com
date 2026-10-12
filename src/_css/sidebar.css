@@ -32,10 +32,6 @@
   }
 }
 
-.sidebar-divider-stroke {
-  stroke: var(--theme-divider-decorative);
-}
-
 .sidebar nav {
   display: flex;
   flex-direction: column;
@@ -45,7 +41,7 @@
 .sidebar-top {
   display: flex;
   padding-block: 8px;
-  padding-inline: 10px 14px;
+  padding-inline: 10px;
   border-radius: var(--rounded-pill);
   color: var(--theme-logo-text);
 
