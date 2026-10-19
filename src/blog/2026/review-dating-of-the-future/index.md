@@ -36,7 +36,7 @@ Now go listen to
 
 ---
 
-🔍 _Click these images to enjoy them at full size._
+🔍 _Click to enlarge images_
 
 <figure>
   <img src="./assets/vee.webp" alt="" width="1920" height="1080" />
