@@ -35,7 +35,7 @@ soundtrack when you're done.
 
 ---
 
-🔍 _Make sure to click these images to see them at full size._
+🔍 _Click these images to enjoy them at full size._
 
 <figure>
   <img src="./assets/vee.webp" alt="" width="1920" height="1080" />
@@ -54,7 +54,7 @@ soundtrack when you're done.
 
 <figure>
   <img src="./assets/callie.webp" alt="" width="1920" height="1080" />
-  <figcaption>God, I love Callie. ALL CAPS suits her well. She never fails to give her two cents on your life.</figcaption>
+  <figcaption>Callie, my favorite! ALL CAPS suits her well. She never fails to give her two cents on your life.</figcaption>
 </figure>
 
 <figure>

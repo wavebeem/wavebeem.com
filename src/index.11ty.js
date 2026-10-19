@@ -1,4 +1,5 @@
-import { html } from "./lib/html.js";
+import { html, unsafeHtml } from "./lib/html.js";
+import { renderMarkdownInline } from "./lib/markdown.js";
 import { layoutBase } from "./templates/layoutBase.js";
 
 export const data = {
@@ -50,7 +51,9 @@ export function render(data) {
             (post) => html`
               <a class="infobox" href="${post.url}">
                 <div class="heading">${post.title}</div>
-                <div class="description">${post.description}</div>
+                <div class="description">
+                  ${unsafeHtml(renderMarkdownInline(post.description))}
+                </div>
               </a>
             `,
           )}
