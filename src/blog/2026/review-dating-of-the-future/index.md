@@ -9,8 +9,9 @@ with friends part. If you're seeking titillation, go somewhere else. It's here
 and it's good, but it's not the focus of the game.
 
 I will admit that while I found the author endearing, the art immaculate, and
-the soundtrack next level... It wasn't exactly a page turner for me yet.
-Everything changed in the latter half of the game, though.
+[the soundtrack](https://matthewoliver.bandcamp.com/album/spectrasound) next
+level... It wasn't exactly a page turner for me yet. Everything changed in the
+latter half of the game, though.
 
 Here's a vague description: a new character shows up, and the stakes are
 immediately raised. The entire tone of the game shifts. This is when I locked
@@ -30,8 +31,8 @@ degree). And it made her part of the story stick with me, despite my initial
 assumption that she was going to be more of a vehicle for other people's
 stories.
 
-Also, the art is immaculate and the music is exceptional. Definitely grab the
-soundtrack when you're done.
+Now go listen to
+[the soundtrack](https://matthewoliver.bandcamp.com/album/spectrasound)!
 
 ---
 
