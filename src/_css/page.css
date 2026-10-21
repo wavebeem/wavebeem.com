@@ -96,7 +96,7 @@ article:where(.page) {
       font-size: var(--font-size-small);
       text-wrap: pretty;
       margin-top: -4px;
-      margin-inline: calc(-1 * var(--rounded-large));
+      margin-inline: var(--rounded-large);
     }
 
     figure[data-size="large"] figcaption {
