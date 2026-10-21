@@ -94,9 +94,9 @@ article:where(.page) {
 
     figcaption {
       font-size: var(--font-size-small);
-      /* text-wrap: balance; */
       text-wrap: pretty;
       margin-top: -4px;
+      margin-inline: calc(-1 * var(--rounded-large));
     }
 
     figure[data-size="large"] figcaption {
