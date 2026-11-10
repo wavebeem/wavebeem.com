@@ -58,10 +58,12 @@ async function main() {
   const seedLine = buildSeedLine();
   const roleLines = buildRoleLines(light, dark);
   const customColorLines = buildCustomColorLines(sourceColorHct);
+  const selectionLines = buildSelectionLines(sourceColorHct);
   const output = buildOutput({
     seedLine,
     roleLines,
     customColorLines,
+    selectionLines,
   });
   const outPath = await writeOutput(output);
   console.log(`Wrote ${outPath}`);
@@ -158,12 +160,31 @@ function buildCustomColorLines(sourceColorHct) {
 `;
 }
 
+// Highlighter pink: the seed's complement
+const selectionHueOffset = 180;
+const selectionChroma = 50;
+
+function buildSelectionLines(sourceColorHct) {
+  const hue = (sourceColorHct.hue + selectionHueOffset) % 360;
+  const palette = TonalPalette.fromHueAndChroma(hue, selectionChroma);
+  const tone = (t) => hexFromArgb(palette.tone(t));
+  return `\
+  --md-custom-selection: light-dark(${tone(90)}, ${tone(30)});
+  --md-custom-on-selection: light-dark(${tone(10)}, ${tone(90)});
+`;
+}
+
 // Not a DynamicScheme role. Exposed for the style guide's color palette.
 function buildSeedLine() {
   return `  --md-custom-seed: ${seedHex};\n`;
 }
 
-function buildOutput({ seedLine, roleLines, customColorLines }) {
+function buildOutput({
+  seedLine,
+  roleLines,
+  customColorLines,
+  selectionLines,
+}) {
   return `\
 /**
  * GENERATED. Don't hand-edit, regenerate with: npm run generate-theme
@@ -180,6 +201,9 @@ ${roleLines}
   /* Syntax-highlighting hues: seed hue rotated by 0/90/180/270 degrees,
      fixed chroma, tone 40/80, not DynamicScheme roles. */
 ${customColorLines}
+  /* Text selection: highlighter pink near the seed's complement, not a
+     DynamicScheme role. */
+${selectionLines}
 }
 `;
 }

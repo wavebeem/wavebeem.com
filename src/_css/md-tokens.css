@@ -77,4 +77,9 @@
   --md-custom-string: light-dark(#934b00, #ffb783);
   --md-custom-punctuation: light-dark(#834790, #f4aeff);
 
+  /* Text selection: highlighter pink near the seed's complement, not a
+     DynamicScheme role. */
+  --md-custom-selection: light-dark(#fdd6ff, #6a2c78);
+  --md-custom-on-selection: light-dark(#340042, #fdd6ff);
+
 }

@@ -1,0 +1,13 @@
+.tag {
+  display: inline-block;
+  line-height: 1;
+  padding: 4px;
+  letter-spacing: calc(1em / 32);
+  baseline-shift: center;
+  border-radius: var(--rounded-xsmall);
+  background: var(--theme-tag-bg);
+  color: var(--theme-tag-text);
+  font-size: var(--font-size-small);
+  white-space: nowrap;
+  font-weight: normal;
+}

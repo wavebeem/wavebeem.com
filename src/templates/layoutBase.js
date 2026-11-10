@@ -21,7 +21,7 @@ export function layoutBase({ title, description = "" }, ...children) {
             --mask-chevron-down: ${maskChevronDown};
           }
         </style>
-        <link rel="stylesheet" href="/base.css" />
+        <link rel="stylesheet" href="/base.css" media="not print" />
         <script src="/theme-init.js"></script>
         <meta name="color-scheme" content="light dark" />
         <link rel="me" href="https://cathode.church/@wavebeem" />

@@ -6,8 +6,8 @@
  * TODO tokens: no clean 1:1 M3 role, or a judgment call worth revisiting
  */
 :root {
-  --theme-selection-bg: var(--md-secondary-container);
-  --theme-selection-text: var(--md-on-secondary-container);
+  --theme-selection-bg: var(--md-custom-selection);
+  --theme-selection-text: var(--md-custom-on-selection);
 
   --theme-toggle-selected-bg: var(--md-primary);
   --theme-toggle-selected-text: var(--md-on-primary);
@@ -68,12 +68,17 @@
   --theme-bullet-bg: var(--md-tertiary-container);
   --theme-bullet-text: var(--md-on-tertiary-container);
 
+  --theme-tag-bg: var(--md-tertiary-container);
+  --theme-tag-text: var(--md-on-tertiary-container);
+
   --theme-photo: light-dark(
     var(--md-primary-container),
     var(--md-primary-fixed-dim)
   );
   /* --theme-image: transparent; */
   --theme-image: var(--md-surface-container-lowest);
+  /* Hairline so light-edged images don't dissolve into the page */
+  --theme-image-edge: rgb(from var(--md-on-surface) r g b / 10%);
   --theme-box: var(--md-surface-container);
 
   /* Avoids --theme-box: equals --theme-sidebar-bg, vanishes in drawer */

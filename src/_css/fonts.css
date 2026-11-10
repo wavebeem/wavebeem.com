@@ -27,29 +27,29 @@
 }
 
 @font-face {
-  font-family: "PP Kyoto";
-  src: url("/fonts/PPKyoto-Regular.woff2") format("woff2");
+  font-family: "Bitter";
+  src: url("/fonts/Bitter-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PP Kyoto";
-  src: url("/fonts/PPKyoto-RegularItalic.woff2") format("woff2");
+  font-family: "Bitter";
+  src: url("/fonts/Bitter-Italic.woff2") format("woff2");
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PP Kyoto";
-  src: url("/fonts/PPKyoto-Extrabold.woff2") format("woff2");
-  font-weight: 800;
+  font-family: "Bitter";
+  src: url("/fonts/Bitter-Semibold.woff2") format("woff2");
+  font-weight: 600;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "PP Kyoto";
-  src: url("/fonts/PPKyoto-ExtraboldItalic.woff2") format("woff2");
-  font-weight: 800;
+  font-family: "Bitter";
+  src: url("/fonts/Bitter-SemiboldItalic.woff2") format("woff2");
+  font-weight: 600;
   font-style: italic;
   font-display: swap;
 }

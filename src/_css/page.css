@@ -88,6 +88,8 @@ article:where(.page) {
         &:where(:not([data-background="transparent"])) {
           background-color: var(--theme-image);
           border-radius: var(--rounded-large);
+          outline: 1px solid var(--theme-image-edge);
+          outline-offset: -1px;
         }
       }
     }
@@ -96,7 +98,7 @@ article:where(.page) {
       font-size: var(--font-size-small);
       text-wrap: pretty;
       margin-top: -4px;
-      margin-inline: var(--rounded-large);
+      margin-inline: var(--rounded-xsmall);
     }
 
     figure[data-size="large"] figcaption {

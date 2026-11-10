@@ -32,7 +32,6 @@
     font-weight: 600;
     letter-spacing: var(--tracking-label);
     text-align: center;
-    cursor: pointer;
     user-select: none;
     transition-property: border-radius;
     transition-duration: var(--motion-duration-short3);

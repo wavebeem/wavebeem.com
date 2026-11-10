@@ -81,8 +81,10 @@ export function render(data) {
                 </strong>
               </div>
               <div>
-                A Pokémon web app with thousands of monthly
-                users&mdash;developed by me since 2013.
+                A Pokémon web app with
+                <a href="https://plausible.io/pkmn.help?period=12mo"
+                  >nearly 5 million visits a year</a
+                >&mdash;developed by me since 2013.
               </div>
             </figcaption>
           </figure>
