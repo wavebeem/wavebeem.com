@@ -1,8 +1,9 @@
 ## New style: fun with pastels
 
-![](assets/light.webp)
-
-**Theme inspiration: playful, pastel, slime.**
+<figure>
+  <img src="assets/light.webp" alt="" width="2624" height="2784" />
+  <figcaption>Theme inspiration: playful, pastel, slime.</figcaption>
+</figure>
 
 In my post about [10 years of themes](/blog/2024/10-years-of-themes/), I left
 off with "summer theme". I made the summer theme as an experiment, despite it
@@ -15,9 +16,10 @@ color was very fun, but it didn't feel like _me_.
 
 ## Dark mode: chocolate factory
 
-![](assets/dark.webp)
-
-**Dark theme inspiration: chocolate, matcha.**
+<figure>
+  <img src="assets/dark.webp" alt="" width="2624" height="2784" />
+  <figcaption>Dark theme inspiration: chocolate, matcha.</figcaption>
+</figure>
 
 I have difficulty reading dark themes in general, but I made one for my site
 because it's clear that dark mode is an accessibility feature that countless
@@ -63,9 +65,10 @@ on the _PP Agrandir_ page, and I've chosen _PP Object Sans_ for now.
 
 ## Improved blog post navigation
 
-![](assets/blog.webp)
-
-**My blog posts filtered by tags.**
+<figure>
+  <img src="assets/blog.webp" alt="" width="1800" height="1466" />
+  <figcaption>My blog posts filtered by tags.</figcaption>
+</figure>
 
 You can now browse my blog posts by tags. Yay!
 

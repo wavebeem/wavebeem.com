@@ -7,14 +7,18 @@ be one of the nicest looking games on the GBA.
 My only complaint is that because everything is so large, the game feels very
 "zoomed in", which can make gameplay a bit tough.
 
-![](assets/late-to-work.webp)
+<figure>
+  <img src="assets/late-to-work.webp" alt="" width="3840" height="2160" />
+</figure>
 
 ## Audio
 
 It's great! A bunch of different tunes to set the mood, and all the sound
 effects are nice too. No complaints here.
 
-![](assets/fishing.webp)
+<figure>
+  <img src="assets/fishing.webp" alt="" width="1920" height="1080" />
+</figure>
 
 ## Gameplay
 
@@ -27,7 +31,9 @@ your first visit. Each time you have one of your three core powers removed
 but the wrapping levels combined with the built-in replaying meant I felt like I
 was always walking over the same areas.
 
-![](assets/minesweeper.webp)
+<figure>
+  <img src="assets/minesweeper.webp" alt="" width="1920" height="1080" />
+</figure>
 
 The boss fights were not my thing. I've certainly fought many harder video game
 bosses, but these just felt claustrophobic and weirdly fast paced, for what is
@@ -38,7 +44,9 @@ terribly generous with checkpoints. Despite having a regenerating shield, this
 game has a lot of instant or near-instant deaths, which put a damper on my
 experience.
 
-![](assets/precise.webp)
+<figure>
+  <img src="assets/precise.webp" alt="" width="1920" height="1080" />
+</figure>
 
 Also, there's a point where you have to have 10,000 gold in order to continue,
 which was a total slog. And a different point where you need to have 50 (well,
@@ -52,9 +60,10 @@ Everyone has the cutest dang lines, and I enjoyed the storyline completely. A
 plot point is befriending 50 of the 60-some inhabitants of the solar system, and
 I adored getting to meet every single one of them.
 
-![](assets/capitalism.webp)
-
-![](assets/poverty.webp)
+<figure>
+  <img src="assets/capitalism.webp" alt="" width="3840" height="2160" />
+  <img src="assets/poverty.webp" alt="" width="3840" height="2160" />
+</figure>
 
 ## Other
 

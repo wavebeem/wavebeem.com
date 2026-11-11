@@ -8,9 +8,10 @@ still learning new things about keyboards all the time.
 
 ## Why
 
-![](assets/ducky.webp)
-
-**Ducky 9008G2 - Year Of The Tiger**
+<figure>
+  <img src="assets/ducky.webp" alt="" width="700" height="465" />
+  <figcaption>Ducky 9008G2 - Year Of The Tiger</figcaption>
+</figure>
 
 Here are some reasons you might want to get a mechanical keyboard:
 
@@ -37,9 +38,10 @@ Here are some reasons you might want to get a mechanical keyboard:
 
 ## Why not
 
-![](assets/whitefox.webp)
-
-**WhiteFox with Cherry keycaps and Filco palm rest**
+<figure>
+  <img src="assets/whitefox.webp" alt="" width="700" height="525" />
+  <figcaption>WhiteFox with Cherry keycaps and Filco palm rest</figcaption>
+</figure>
 
 Here are some reasons why you might not want to get a mechanical keyboard:
 
@@ -70,9 +72,10 @@ refers to roughly 104 keys, and everything else is measured relative to that.
 Usually it's possible to type missing keys by doing key combinations on smaller
 keyboards.
 
-![](assets/model-m.webp)
-
-**IBM Model M**
+<figure>
+  <img src="assets/model-m.webp" alt="" width="700" height="293" />
+  <figcaption>IBM Model M</figcaption>
+</figure>
 
 Pictured above is the classic IBM Model M mechanical keyboard. Fortunately,
 mechanical keyboards have gotten a lot smaller and quieter since this one was
@@ -80,9 +83,10 @@ released.
 
 ## Full size form factor
 
-![](assets/das-ultimate-4.webp)
-
-**Das Keyboard Ultimate 4**
+<figure>
+  <img src="assets/das-ultimate-4.webp" alt="" width="700" height="349" />
+  <figcaption>Das Keyboard Ultimate 4</figcaption>
+</figure>
 
 Full size keyboards are the classic size many people are used to seeing. The
 typically have around 104 keys, including a numpad and arrow keys. You
@@ -95,9 +99,10 @@ paragraphs).
 
 ## Tenkeyless form factor
 
-![](assets/tkl.webp)
-
-**MT3 /dev/tty**
+<figure>
+  <img src="assets/tkl.webp" alt="" width="700" height="394" />
+  <figcaption>MT3 /dev/tty</figcaption>
+</figure>
 
 Tenkeyless (TKL) keyboards typically have around 87 keys, including arrow keys
 but discarding the numpad area. This is usually about as many keys as a laptop
@@ -106,9 +111,10 @@ I think it's hard to go wrong with a TKL board since it makes few compromises.
 
 ## 75% form factor
 
-![](assets/race-3.webp)
-
-**Vortex Race 3 with DSA keycaps and Filco palm rest**
+<figure>
+  <img src="assets/race-3.webp" alt="" width="700" height="525" />
+  <figcaption>Vortex Race 3 with DSA keycaps and Filco palm rest</figcaption>
+</figure>
 
 75% keyboards typically have about 75% as many keys as a full size board.
 Usually these keyboards do have arrow keys, but have smaller Right Shift keys.
@@ -123,9 +129,10 @@ of desk space and keeping your hand even closer to the mouse or keyboard.
 
 ## 60% form factor
 
-![](assets/poker-3.webp)
-
-**Pok3r keyboard with custom keycabs**
+<figure>
+  <img src="assets/poker-3.webp" alt="" width="700" height="468" />
+  <figcaption>Pok3r keyboard with custom keycabs</figcaption>
+</figure>
 
 60% keyboards typically are missing the F1-F12 key strip along the top,
 generally opting for holding down the Fn key to access the numerous missing
@@ -146,9 +153,10 @@ keyboards.
 
 ## Keyboard extras
 
-![](assets/feet.webp)
-
-**Digstar StarTop USB mechanical gaming keyboard 22**
+<figure>
+  <img src="assets/feet.webp" alt="" width="700" height="464" />
+  <figcaption>Digstar StarTop USB mechanical gaming keyboard 22</figcaption>
+</figure>
 
 Additionally, you may want to consider keyboard angle. Having a very high angled
 keyboard strains your fingers more. Try miming a typing action with your fingers
@@ -156,9 +164,10 @@ angled up compared with down and you'll see how much more exhausting it is. Many
 keyboards are naturally sloped and deploying keyboard feet only makes them even
 more sloped, furthering finger fatigue.
 
-![](assets/hhkb.webp)
-
-**Happy Hacking Keyboard Professional 2**
+<figure>
+  <img src="assets/hhkb.webp" alt="" width="700" height="376" />
+  <figcaption>Happy Hacking Keyboard Professional 2</figcaption>
+</figure>
 
 Most keyboards come with black plastic cases and a matte finish. You might also
 find some in white plastic, or even aluminum. You should pick whichever material
@@ -166,9 +175,10 @@ you think will look nicest on your desk, but note that if the keys are mounted
 directly on metal with no plastic, you can have a slight metallic clang when
 fully pressing a key.
 
-![](assets/led.webp)
-
-**DigsRoccat Suora FX RGB Mechanical Keyboard Review**
+<figure>
+  <img src="assets/led.webp" alt="" width="700" height="394" />
+  <figcaption>DigsRoccat Suora FX RGB Mechanical Keyboard Review</figcaption>
+</figure>
 
 LEDs are also a topic of great interest for some folks. I generally type without
 looking at the keyboard, so I regard them mostly as a fun addition of color to
@@ -194,9 +204,10 @@ break.
 
 ## Clicky keyswitches
 
-![](assets/mx-clicky.webp)
-
-**Cherry MX Blue and Cherry MX Green Switches**
+<figure>
+  <img src="assets/mx-clicky.webp" alt="" width="700" height="525" />
+  <figcaption>Cherry MX Blue and Cherry MX Green Switches</figcaption>
+</figure>
 
 Clicky switches are the classic style that is probably most well known. Clicky
 switches are known for their somewhat high pitched clicking noise produced when
@@ -212,9 +223,10 @@ force to be pressed.
 
 ## Tactile keyswitches
 
-![](assets/mx-tactile.webp)
-
-**Cherry MX Brown and Cherry MX Clear Switches**
+<figure>
+  <img src="assets/mx-tactile.webp" alt="" width="700" height="525" />
+  <figcaption>Cherry MX Brown and Cherry MX Clear Switches</figcaption>
+</figure>
 
 Tactile switches are basically just clicky switches minus the clicky noise. They
 still have a satisfying "bump" feeling as you type on them, but they lose the
@@ -228,9 +240,10 @@ to be pressed. There's also the MX Clear which requires 65g.
 
 ## Linear keyswitches
 
-![](assets/mx-linear.webp)
-
-**Cherry MX Black and Cherry MX Red Switches**
+<figure>
+  <img src="assets/mx-linear.webp" alt="" width="700" height="525" />
+  <figcaption>Cherry MX Black and Cherry MX Red Switches</figcaption>
+</figure>
 
 Linear switches are often marketed towards gamers because they have a completely
 smooth movement as you push them, lacking the "bump" on the way down. They also
@@ -269,9 +282,10 @@ chart from PMK_][13] is also really useful.
 
 ## Medium profile keycaps
 
-![](assets/profile-cherry.webp)
-
-**WhiteFox with Cherry keycaps**
+<figure>
+  <img src="assets/profile-cherry.webp" alt="" width="700" height="525" />
+  <figcaption>WhiteFox with Cherry keycaps</figcaption>
+</figure>
 
 The most popular profile is probably OEM. Unsurprisingly it is a middle ground
 of size and shape compared to other popular profiles. Cherry profile is also
@@ -285,9 +299,10 @@ common than OEM.
 
 ## High profile keycaps
 
-![](assets/profile-mt3.webp)
-
-**Vortex Race 3 with MT3 keycaps**
+<figure>
+  <img src="assets/profile-mt3.webp" alt="" width="700" height="525" />
+  <figcaption>Vortex Race 3 with MT3 keycaps</figcaption>
+</figure>
 
 The SA keycap profile is also pretty popular. The sculpt on the keycaps is
 spherical which means it's sort of like a very shallow bowl.
@@ -300,9 +315,10 @@ is even more sculpted than SA.
 
 ## Low profile keycaps
 
-![](assets/profile-dsa.webp)
-
-**Vortex Race 3 with DSA keycaps**
+<figure>
+  <img src="assets/profile-dsa.webp" alt="" width="700" height="525" />
+  <figcaption>Vortex Race 3 with DSA keycaps</figcaption>
+</figure>
 
 The DSA keycap profile is quite short, completely uniform across all keys, and
 has a very comfortable spherical sculpt on the keycaps.

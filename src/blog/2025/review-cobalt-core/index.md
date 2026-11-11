@@ -23,21 +23,22 @@ then hopefully win. You take three characters, and the characters change which
 cards and relics you can acquire during your run. I honestly felt like I was
 learning something every run, so the game really stimulated my mind.
 
-![](./assets/pxl/map.webp)
+<figure>
+  <img src="./assets/pxl/map.webp" alt="" width="1280" height="693" />
+  <figcaption>Each run has you complete three maps with basically the same boss fights each time</figcaption>
+</figure>
 
-**Each run has you complete three maps with basically the same boss fights each
-time**
-
-![](./assets/pxl/wave-beam.webp)
-
-**OMG WAVE BEAM MENTIONED (also this card was quite good)**
+<figure>
+  <img src="./assets/pxl/wave-beam.webp" alt="" width="1280" height="720" />
+  <figcaption>OMG WAVE BEAM MENTIONED (also this card was quite good)</figcaption>
+</figure>
 
 ## Story
 
-![](./assets/pxl/grandma.webp)
-
-**Grandma is one of many silly characters you'll find at the random events on
-the map**
+<figure>
+  <img src="./assets/pxl/grandma.webp" alt="" width="1280" height="720" />
+  <figcaption>Grandma is one of many silly characters you&rsquo;ll find at the random events on the map</figcaption>
+</figure>
 
 Your party members will "speak" (little speech bulbs, no voice overs) while you
 play, which is a fun little detail that you can also completely ignore if you
@@ -46,9 +47,10 @@ too many times. Genius. Sometimes less is more. I found these lines helped
 endear me to the characters when I wasn't getting more direct story moments
 (there's not a ton of that outside of the memory cutscnes you unlock).
 
-![](./assets/pxl/riggs-gun.webp)
-
-**Riggs has the best writing and is my favorite character in the game**
+<figure>
+  <img src="./assets/pxl/riggs-gun.webp" alt="" width="1280" height="720" />
+  <figcaption>Riggs has the best writing and is my favorite character in the game</figcaption>
+</figure>
 
 The game tells the story of a space ship crew of furries trapped in a time loop.
 You don't get a lot of details at first, but you unlock moore of the story as
@@ -56,9 +58,10 @@ you complete loops and unlock memories. Sometimes memories carry over between
 loops, which can get funny. One character frequently meets an alternative
 version of themselves, which is one of my favorite story aspects of the game.
 
-![](./assets/pxl/isaac.webp)
-
-**Isaac is the cutest character in the game, but I didn't love his playstyle**
+<figure>
+  <img src="./assets/pxl/isaac.webp" alt="" width="1280" height="720" />
+  <figcaption>Isaac is the cutest character in the game, but I didn&rsquo;t love his playstyle</figcaption>
+</figure>
 
 ## Controls and UI
 
@@ -66,13 +69,15 @@ Virtually no complaints here. The tooltips can be a little awkward when using
 controller, but at least you can turn them on or off. It's definitely a
 mouse-first type of game, but fully playable without much fuss on a controller.
 
-![](./assets/pxl/memories.webp)
+<figure>
+  <img src="./assets/pxl/memories.webp" alt="" width="1280" height="720" />
+  <figcaption>Each run you unlock one memory for one character in your party</figcaption>
+</figure>
 
-**Each run you unlock one memory for one character in your party**
-
-![](./assets/pxl/riggs-memory.webp)
-
-**Memories play out as short cut scenes**
+<figure>
+  <img src="./assets/pxl/riggs-memory.webp" alt="" width="1280" height="720" />
+  <figcaption>Memories play out as short cut scenes</figcaption>
+</figure>
 
 ## Music
 
@@ -81,10 +86,10 @@ really good balance between being interesting and not overbearing. It
 complements the games story well, I think. Especially the time loop aspect.
 There's like a melancholy at times, but also it's a good vibe.
 
-![](./assets/pxl/soccer.webp)
-
-**You can even play soccer in one of the random encounters by shooting the ball
-towards the goal**
+<figure>
+  <img src="./assets/pxl/soccer.webp" alt="" width="1280" height="720" />
+  <figcaption>You can even play soccer in one of the random encounters by shooting the ball towards the goal</figcaption>
+</figure>
 
 ## Art
 
@@ -93,10 +98,10 @@ very detailed on them. The cards are nice too. I just think this game absolutely
 nails some high quality pixel art, and I really like the animated backgrounds to
 make ship fights feel more engaging.
 
-![](./assets/pxl/soggins.webp)
-
-**Soggins is one of the funniest characters you encounter, and has a really
-unique "battle" mechanic**
+<figure>
+  <img src="./assets/pxl/soggins.webp" alt="" width="1280" height="720" />
+  <figcaption>Soggins is one of the funniest characters you encounter, and has a really unique &ldquo;battle&rdquo; mechanic</figcaption>
+</figure>
 
 ## Replay value
 

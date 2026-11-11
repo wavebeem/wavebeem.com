@@ -12,9 +12,10 @@ together. Eventually they joined a health care startup as the first two
 non-founder employees. They worked together for over 7 years. Cory was an
 amazing influence on Ash and a great friend.
 
-![](assets/wizards.webp)
-
-**_Wizards_ by Ralph Bakshi, one of Cory's favorite movies.**
+<figure>
+  <img src="assets/wizards.webp" alt="" width="800" height="1223" />
+  <figcaption><em>Wizards</em> by Ralph Bakshi, one of Cory&rsquo;s favorite movies.</figcaption>
+</figure>
 
 We hung out many times, going over to each other's houses, going to karaoke,
 going out for food, watching movies, etc. Our relationship really deepened
@@ -42,9 +43,10 @@ Crucible, Gambit, a few Raids, and a lot of Dungeons. Looking at Cory's account,
 he finished all 9 unique Dungeons in the game, for a total of 96 clears and 158
 hours of playtime.
 
-![](assets/transcendent.webp)
-
-**We spent countless hours playing together to become "Transcendent".**
+<figure>
+  <img src="assets/transcendent.webp" alt="" width="1080" height="1080" />
+  <figcaption>We spent countless hours playing together to become &ldquo;Transcendent&rdquo;.</figcaption>
+</figure>
 
 We conquered many of these Dungeons with little or no outside assistance, using
 our wits and observational skills to learn boss mechanics and optimize our DPS.
@@ -60,9 +62,10 @@ spending time together as our fireteam trio just as much as I loved playing the
 game. It was truly my second place, and I was happy to be adventuring with Cory
 and shooting the breeze (and the aliens) often multiple times per week together.
 
-![](assets/webfishing.webp)
-
-**WEBFISHING was a nice relaxing break from Destiny.**
+<figure>
+  <img src="assets/webfishing.webp" alt="" width="1920" height="1080" />
+  <figcaption>WEBFISHING was a nice relaxing break from Destiny.</figcaption>
+</figure>
 
 Being "just" friends with Cory, not family, we were worried that we might not
 get much closure from this. Fortunately, Cory's father and aunt arrived to help
@@ -90,9 +93,10 @@ Unfortunately, it was delayed several months, and it only just came out. We...
 didn't get to play it with him. And we never will. I've only logged a few hours
 and I'm having a lot of fun, but I really wish Cory could try it.
 
-![](assets/bigtime.webp)
-
-**Cory's dog, Big Time**
+<figure>
+  <img src="assets/bigtime.webp" alt="" width="1024" height="1024" />
+  <figcaption>Cory&rsquo;s dog, Big Time</figcaption>
+</figure>
 
 I'm going to miss going over to Cory's house. I'm going to miss playing with
 Cory's dog. I'm going to miss playing games with him. I'm going to miss making

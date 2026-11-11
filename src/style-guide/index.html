@@ -215,6 +215,13 @@
   </div>
 
   <div class="color-roles-swatch" data-role="seed">Seed</div>
+
+  <div class="color-roles-pair">
+    <div class="color-roles-swatch" data-role="selection">
+      Selection (Highlighter Pink)
+    </div>
+    <div class="color-roles-swatch" data-role="on-selection">On Selection</div>
+  </div>
 </wavebeem-color-roles>
 
 <h2>Headings & text</h2>
@@ -436,27 +443,27 @@
   <dd>Before they sold out, viral marfa</dd>
 </dl>
 
-<h2>Tags</h2>
+<h2>Badges</h2>
 
 <p>
-  Artisan kombucha tote bag <small class="tag">2013&ndash;2026</small>
+  Artisan kombucha tote bag <small class="badge">2013&ndash;2026</small>
   <br />
-  Single-origin coffee <small class="tag">Small batch</small>
+  Single-origin coffee <small class="badge">Small batch</small>
   <br />
-  Viral marfa listicle <small class="tag">New</small>
+  Viral marfa listicle <small class="badge">New</small>
   <br />
-  Craft beer distillery <small class="tag">18+</small>
+  Craft beer distillery <small class="badge">18+</small>
 </p>
 
 <dl class="card">
   <dt>
     <a href="#">Cold-pressed meditation retreat</a>
-    <small class="tag">2016&ndash;2017</small>
+    <small class="badge">2016&ndash;2017</small>
   </dt>
   <dd>Forage sriracha chambray</dd>
   <dt>
     <a href="#">Tousled portland distillery</a>
-    <small class="tag">2012&ndash;2015</small>
+    <small class="badge">2012&ndash;2015</small>
   </dt>
   <dd>Direct trade mixtape</dd>
 </dl>
@@ -970,6 +977,15 @@
     [data-role="seed"] {
       background: var(--md-custom-seed);
       color: var(--md-on-primary-fixed);
+    }
+
+    [data-role="selection"] {
+      background: var(--md-custom-selection);
+      color: var(--md-custom-on-selection);
+    }
+    [data-role="on-selection"] {
+      background: var(--md-custom-on-selection);
+      color: var(--md-custom-selection);
     }
   }
 </style>

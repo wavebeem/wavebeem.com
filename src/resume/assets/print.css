@@ -157,18 +157,18 @@ li > p {
   display: initial;
 }
 
-.tag {
+.badge {
   font-weight: normal;
   padding: 0;
   background: none;
   color: inherit;
 }
 
-.tag::before {
+.badge::before {
   content: "(";
 }
 
-.tag::after {
+.badge::after {
   content: ")";
 }
 

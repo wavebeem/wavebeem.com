@@ -8,7 +8,9 @@ liked. Green has been an important color in
 [nearly every theme I've made](/blog/2024/10-years-of-themes/), and it was
 really hard to make green look good in this theme.
 
-![](assets/thesis.webp)
+<figure>
+  <img src="assets/thesis.webp" alt="" width="1024" height="768" />
+</figure>
 
 - **Warm:** The warm background color is friendly
 
@@ -26,7 +28,9 @@ header.
 Unfortunately, it comes off feeling more cold than I wanted. I don't think it
 represents the roundness of "wavebeem" or the friendliness I want to project.
 
-![](assets/antithesis.webp)
+<figure>
+  <img src="assets/antithesis.webp" alt="" width="1024" height="768" />
+</figure>
 
 - **Cold:** Green is flanked with gray and grayer
 
@@ -41,7 +45,9 @@ I want to say I thought long and hard and came up with a totally original idea
 on how to resolve the gap between my "Slime" and "Cyber" designs, but it was
 inspired by something else. More on that in a moment.
 
-![](assets/synthesis.webp)
+<figure>
+  <img src="assets/synthesis.webp" alt="" width="1024" height="768" />
+</figure>
 
 - **Balanced:** Warm, cool, and neutral elements
 
@@ -60,9 +66,10 @@ me. And even though gold isn't usually on my list of colors, the champagne
 accent color works really well for subtly incorporating warmth into the design
 without distracting too much from the green.
 
-![](assets/sprite-vanilla-frost.webp)
-
-**Sprite Vanilla Frost**
+<figure>
+  <img src="assets/sprite-vanilla-frost.webp" alt="" width="928" height="928" />
+  <figcaption>Sprite Vanilla Frost</figcaption>
+</figure>
 
 ## What's next
 

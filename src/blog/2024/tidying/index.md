@@ -16,13 +16,15 @@ of every page.
 I'm trying to remind myself that _pages can link to other pages_, and that just
 giving people a massive list of information can be overwhelming.
 
-![](assets/home-before.webp)
+<figure>
+  <img src="assets/home-before.webp" alt="" width="1024" height="1024" />
+  <figcaption>Home (Before)</figcaption>
+</figure>
 
-**Home (Before)**
-
-![](assets/home-after.webp)
-
-**Home (After)**
+<figure>
+  <img src="assets/home-after.webp" alt="" width="1024" height="1024" />
+  <figcaption>Home (After)</figcaption>
+</figure>
 
 I also reorganized "Recent posts" to be above the home page links section,
 because the top nav bar should already accomplish the most important
@@ -44,13 +46,15 @@ peoples site buttons. I think it unfairly privileges the few sites that actually
 have them. And I want to start organizing this page based on topics, rather than
 "has button" / "doesn't have button".
 
-![](assets/links-before.webp)
+<figure>
+  <img src="assets/links-before.webp" alt="" width="1024" height="1024" />
+  <figcaption>Links (Before)</figcaption>
+</figure>
 
-**Links (Before)**
-
-![](assets/links-after.webp)
-
-**Links (After)**
+<figure>
+  <img src="assets/links-after.webp" alt="" width="1024" height="1024" />
+  <figcaption>Links (After)</figcaption>
+</figure>
 
 In order to make up for the page being a bit boring otherwise, I'm leaning on
 the link accent color and the decorative green arrow all over the site as my
@@ -63,13 +67,15 @@ This was just a long overdue update. Making the section headers clickable let me
 shorten the descriptions of each card. It looks prettier now due to the link
 treatments I'm using all over the site, and it should be easier to browse.
 
-![](assets/projects-before.webp)
+<figure>
+  <img src="assets/projects-before.webp" alt="" width="1024" height="1024" />
+  <figcaption>Projects (Before)</figcaption>
+</figure>
 
-**Projects (Before)**
-
-![](assets/projects-after.webp)
-
-**Projects (After)**
+<figure>
+  <img src="assets/projects-after.webp" alt="" width="1024" height="1024" />
+  <figcaption>Projects (After)</figcaption>
+</figure>
 
 ## About page
 

@@ -9,7 +9,9 @@ and I usually end up a bit exhausted after a redesign. And even if I like it, it
 can be hard to remember that I'm just _tired_, not that I wasted my time or
 anything.
 
-![](./assets/jade-and-lime.webp)
+<figure>
+  <img src="./assets/jade-and-lime.webp" alt="" width="2624" height="4944" />
+</figure>
 
 ---
 
@@ -22,7 +24,9 @@ resizing it repeatedly to smooth everything out into a few shades of gray. I
 overlaid it on my accent green for fun. The whole thing is kinda reminding me of
 those old iPod ads in the best way.
 
-![](./assets/ipod.webp)
+<figure>
+  <img src="./assets/ipod.webp" alt="" width="1280" height="772" />
+</figure>
 
 ---
 
@@ -36,7 +40,9 @@ page. Perhaps I will add another easter egg in the future.
 I also updated my Pokémon Crystal screenshots to have a cool new Game Boy
 Color-style frame around them:
 
-![](./assets/gbc.webp)
+<figure>
+  <img src="./assets/gbc.webp" alt="" width="615" height="631" />
+</figure>
 
 ---
 

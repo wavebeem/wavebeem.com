@@ -68,8 +68,8 @@
   --theme-bullet-bg: var(--md-tertiary-container);
   --theme-bullet-text: var(--md-on-tertiary-container);
 
-  --theme-tag-bg: var(--md-tertiary-container);
-  --theme-tag-text: var(--md-on-tertiary-container);
+  --theme-badge-bg: var(--md-tertiary-container);
+  --theme-badge-text: var(--md-on-tertiary-container);
 
   --theme-photo: light-dark(
     var(--md-primary-container),

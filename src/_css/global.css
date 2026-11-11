@@ -165,8 +165,9 @@ pre {
   font-size: inherit;
   font-size-adjust: var(--font-body-adjust);
   font-weight: 500;
-  padding: 0em 0.25em;
-  border-radius: 0.5em;
+  padding: 0 2px;
+  baseline-shift: center;
+  border-radius: var(--rounded-xsmall);
   background: var(--theme-code);
 }
 

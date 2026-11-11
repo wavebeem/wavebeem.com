@@ -341,13 +341,15 @@ have dedicated arrow keys, so you will need to program your keyboard to have
 arrow keys in a different way (many people use the Function key with WASD or
 IJKL).
 
-![](assets/ansi60.webp)
+<figure>
+  <img src="assets/ansi60.webp" alt="" width="830" height="290" />
+  <figcaption>ANSI (US) 60% layout</figcaption>
+</figure>
 
-**ANSI (US) 60% layout**
-
-![](assets/iso60.webp)
-
-**ISO (European) 60% layout**
+<figure>
+  <img src="assets/iso60.webp" alt="" width="830" height="290" />
+  <figcaption>ISO (European) 60% layout</figcaption>
+</figure>
 
 40% keyboards are relatively quick to build, and some don't even have
 stabilizers. However there are far fewer options. These keyboards lack number
@@ -355,33 +357,38 @@ keys, so you have to hold down a function key in order to type those. This is my
 personal favorite kind, but be advised it will take a few weeks to get back up
 to good typing speed if you need to type a lot symbols or numbers.
 
-![](assets/jd40.webp)
+<figure>
+  <img src="assets/jd40.webp" alt="" width="668" height="236" />
+  <figcaption>JD40 40% layout</figcaption>
+</figure>
 
-**JD40 40% layout**
-
-![](assets/zlant.webp)
-
-**Zlant 40% layout**
+<figure>
+  <img src="assets/zlant.webp" alt="" width="709" height="236" />
+  <figcaption>Zlant 40% layout</figcaption>
+</figure>
 
 Ortholinear keyboards make the rows of keys all line up to form a perfect grid,
 instead of the jagged edge you see on most keyboards. There's no research
 showing if this has any benefits, but I personally think it's more comfortable.
 
-![](assets/planck.webp)
-
-**Planck 40% ortholinear layout**
+<figure>
+  <img src="assets/planck.webp" alt="" width="668" height="236" />
+  <figcaption>Planck 40% ortholinear layout</figcaption>
+</figure>
 
 Split keyboards are great for maintaining good posture and a healthy shoulder
 spread through your work day. They are harder to build, and there are few
 options, but many people never go back once trying them.
 
-![](assets/ergodox.webp)
+<figure>
+  <img src="assets/ergodox.webp" alt="" width="1073" height="424" />
+  <figcaption>Ergodox split layout</figcaption>
+</figure>
 
-**Ergodox split layout**
-
-![](assets/letssplit.webp)
-
-**Let's Split split layout**
+<figure>
+  <img src="assets/letssplit.webp" alt="" width="830" height="236" />
+  <figcaption>Let&rsquo;s Split split layout</figcaption>
+</figure>
 
 ## My favorite shops
 

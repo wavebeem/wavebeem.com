@@ -1,12 +1,14 @@
 [Pokémon Type Calculator](https://www.pkmn.help/)
 
-![](./assets/dex-old.webp)
+<figure>
+  <img src="./assets/dex-old.webp" alt="" width="2560" height="2080" />
+  <figcaption>Before</figcaption>
+</figure>
 
-**Before**
-
-![](./assets/dex-new.webp)
-
-**After**
+<figure>
+  <img src="./assets/dex-new.webp" alt="" width="2560" height="2080" />
+  <figcaption>After</figcaption>
+</figure>
 
 ## Changelog
 

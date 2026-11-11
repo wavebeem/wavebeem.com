@@ -28,13 +28,15 @@ them to be easier to tell apart from each other.
 I specifically decided **not** to use my "cool" font for `<h3>` because the page
 felt "over-seasoned" with that much quirky font back to back lol.
 
-![](assets/blog-before.webp)
+<figure>
+  <img src="assets/blog-before.webp" alt="" width="1706" height="1466" />
+  <figcaption>Before</figcaption>
+</figure>
 
-**Before**
-
-![](assets/blog-after.webp)
-
-**After**
+<figure>
+  <img src="assets/blog-after.webp" alt="" width="1706" height="1466" />
+  <figcaption>After</figcaption>
+</figure>
 
 ## "Infobox"
 
@@ -44,13 +46,15 @@ place in the middle of the page. Also, it's a color that decreases the contrast
 of the foreground, which I'm not in love with. I like dotted borders a lot, and
 this felt like a really natural place to use them again.
 
-![](assets/info-before.webp)
+<figure>
+  <img src="assets/info-before.webp" alt="" width="1706" height="1466" />
+  <figcaption>Before</figcaption>
+</figure>
 
-**Before**
-
-![](assets/info-after.webp)
-
-**After**
+<figure>
+  <img src="assets/info-after.webp" alt="" width="1706" height="1466" />
+  <figcaption>After</figcaption>
+</figure>
 
 ## "Projects" page
 
@@ -58,13 +62,15 @@ The repeated bold headers with the same font felt completely overwhelming no
 this page. Switching up the `<h3>` font and using _italic_ text (well,
 _oblique_, really), helped break up the monotony.
 
-![](assets/projects-before.webp)
+<figure>
+  <img src="assets/projects-before.webp" alt="" width="1706" height="1466" />
+  <figcaption>Before</figcaption>
+</figure>
 
-**Before**
-
-![](assets/projects-after.webp)
-
-**After**
+<figure>
+  <img src="assets/projects-after.webp" alt="" width="1706" height="1466" />
+  <figcaption>After</figcaption>
+</figure>
 
 ## "Things I use" page
 
@@ -76,13 +82,15 @@ Apparently the `<summary>` element is seen as a button by default to assistive
 technologies, so the `<h3>` tags were being downgraded to plain text anyways...
 so for this one I just changed to using the `<i>` tag.
 
-![](assets/uses-before.webp)
+<figure>
+  <img src="assets/uses-before.webp" alt="" width="1706" height="1466" />
+  <figcaption>Before</figcaption>
+</figure>
 
-**Before**
-
-![](assets/uses-after.webp)
-
-**After**
+<figure>
+  <img src="assets/uses-after.webp" alt="" width="1706" height="1466" />
+  <figcaption>After</figcaption>
+</figure>
 
 ## I'm having fun
 

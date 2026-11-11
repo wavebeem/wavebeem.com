@@ -19,13 +19,12 @@ Seeing this I think "this is a well established tool made by a small group of
 quirky people". It seems like a good fit for an individual web enthusiast like
 me.
 
-![](assets/11ty-home.webp)
-
-![](assets/11ty-home2.webp)
-
-![](assets/11ty-docs.webp)
-
-**Eleventy's home page & documentation page**
+<figure>
+  <img src="assets/11ty-home.webp" alt="" width="2624" height="1466" />
+  <img src="assets/11ty-home2.webp" alt="" width="2624" height="1466" />
+  <img src="assets/11ty-docs.webp" alt="" width="2624" height="1466" />
+  <figcaption>Eleventy&rsquo;s home page &amp; documentation page</figcaption>
+</figure>
 
 ## Astro's vibes
 
@@ -40,13 +39,12 @@ underlined by a huge list of famous logos for some social proof.
 After that, we see a really cool hacker-esque set of code snippets about...
 building an e-commerce platform. I just want a blog with sprinkles lol.
 
-![](assets/astro-home.webp)
-
-![](assets/astro-home2.webp)
-
-![](assets/astro-docs.webp)
-
-**Astro's home page & documentation page**
+<figure>
+  <img src="assets/astro-home.webp" alt="" width="2624" height="1466" />
+  <img src="assets/astro-home2.webp" alt="" width="2624" height="1466" />
+  <img src="assets/astro-docs.webp" alt="" width="2624" height="1466" />
+  <figcaption>Astro&rsquo;s home page &amp; documentation page</figcaption>
+</figure>
 
 ## What does it mean to be "simpler"?
 

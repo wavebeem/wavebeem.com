@@ -7,8 +7,8 @@
   --font-heading: "Big Shoulders", var(--font-fallback-main);
   --font-mono: "Iosevka Extended", var(--font-fallback-mono);
   --font-emphasis: "Shantell Sans", var(--font-body);
-  /* PP Mori x-height, so emphasis and code line up with body text */
-  --font-body-adjust: 0.53;
+  /* Below PP Mori's 0.53 x-height; matches its "o" height by eye */
+  --font-body-adjust: 0.51;
 
   --tracking-label: 0.01em;
 

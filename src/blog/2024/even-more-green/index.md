@@ -5,13 +5,15 @@ didn't have enough of it on the page. I broke free from my "no borders"
 approach, leaning on colorful green borders to lend some fun to the light mode,
 without making the backgrounds awkward.
 
-![](assets/1-light-old.webp)
+<figure>
+  <img src="assets/1-light-old.webp" alt="" width="1280" height="800" />
+  <figcaption>Before (Light #1)</figcaption>
+</figure>
 
-**Before (Light #1)**
-
-![](assets/1-light-new.webp)
-
-**After (Light #1)**
+<figure>
+  <img src="assets/1-light-new.webp" alt="" width="1280" height="800" />
+  <figcaption>After (Light #1)</figcaption>
+</figure>
 
 Dark mode looked... bad before. I should've remembered one of my old designs had
 a nice dark, desaturated green background. Going green with the text didn't
@@ -19,38 +21,44 @@ really look good on the gray background, but white text on the dark green looks
 great, I think. If you like green websites, definitely check out
 [Illuminesce](https://illuminesce.net/).
 
-![](assets/1-dark-old.webp)
+<figure>
+  <img src="assets/1-dark-old.webp" alt="" width="1280" height="800" />
+  <figcaption>Before (Dark #1)</figcaption>
+</figure>
 
-**Before (Dark #1)**
-
-![](assets/1-dark-new.webp)
-
-**After (Dark #1)**
+<figure>
+  <img src="assets/1-dark-new.webp" alt="" width="1280" height="800" />
+  <figcaption>After (Dark #1)</figcaption>
+</figure>
 
 ## Page middle
 
 There is so much champagne on screen! It's cute, but it's _not me_. Bring the
 green!
 
-![](assets/2-light-old.webp)
+<figure>
+  <img src="assets/2-light-old.webp" alt="" width="1280" height="800" />
+  <figcaption>Before (Light #2)</figcaption>
+</figure>
 
-**Before (Light #2)**
-
-![](assets/2-light-new.webp)
-
-**After (Light #2)**
+<figure>
+  <img src="assets/2-light-new.webp" alt="" width="1280" height="800" />
+  <figcaption>After (Light #2)</figcaption>
+</figure>
 
 The dark gray is certainly less divisive than champagne, but it doesn't have any
 of my style _at all_. Infusing the page with a dark green background made me
 really like the dark theme again.
 
-![](assets/2-dark-old.webp)
+<figure>
+  <img src="assets/2-dark-old.webp" alt="" width="1280" height="800" />
+  <figcaption>Before (Dark #2)</figcaption>
+</figure>
 
-**Before (Dark #2)**
-
-![](assets/2-dark-new.webp)
-
-**After (Dark #2)**
+<figure>
+  <img src="assets/2-dark-new.webp" alt="" width="1280" height="800" />
+  <figcaption>After (Dark #2)</figcaption>
+</figure>
 
 ## Page bottom
 
@@ -58,21 +66,25 @@ This was the worst spot for me. Green is drowned out by so many other colors.
 It's all green now! Also, I think the borders make the areas of interest a bit
 more obvious on the page anyways.
 
-![](assets/3-light-old.webp)
+<figure>
+  <img src="assets/3-light-old.webp" alt="" width="1280" height="800" />
+  <figcaption>Before (Light #3)</figcaption>
+</figure>
 
-**Before (Light #3)**
+<figure>
+  <img src="assets/3-light-new.webp" alt="" width="1280" height="800" />
+  <figcaption>After (Light #3)</figcaption>
+</figure>
 
-![](assets/3-light-new.webp)
+<figure>
+  <img src="assets/3-dark-old.webp" alt="" width="1280" height="800" />
+  <figcaption>Before (Dark #3)</figcaption>
+</figure>
 
-**After (Light #3)**
-
-![](assets/3-dark-old.webp)
-
-**Before (Dark #3)**
-
-![](assets/3-dark-new.webp)
-
-**After (Dark #3)**
+<figure>
+  <img src="assets/3-dark-new.webp" alt="" width="1280" height="800" />
+  <figcaption>After (Dark #3)</figcaption>
+</figure>
 
 ## The new font
 
@@ -88,6 +100,7 @@ My Firefox theme is nearly complete, though I never release those publicly
 anyway. I'm using my new Visual Studio Code theme _right now_, and plan to
 release that in the coming weeks. The fresh green is making me smile right now.
 
-![](assets/vscode.webp)
-
-**WIP version of my VS Code theme**
+<figure>
+  <img src="assets/vscode.webp" alt="" width="1184" height="797" />
+  <figcaption>WIP version of my VS Code theme</figcaption>
+</figure>

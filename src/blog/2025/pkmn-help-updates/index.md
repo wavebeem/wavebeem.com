@@ -13,14 +13,15 @@ A few things bothered me about the defense screen:
 So I consolidated the 2-3 type pickers into a single type picker and increased
 the size of the type color area without changing the overall component size.
 
-![](./assets/defense-old.webp)
+<figure>
+  <img src="./assets/defense-old.webp" alt="" width="1280" height="800" />
+  <figcaption>Before: The defense screen is very tall</figcaption>
+</figure>
 
-**Before: The defense screen is very tall**
-
-![](./assets/defense-new.webp)
-
-**After: The defense screen fits better without scrolling, a huge boon for
-mobile users (~44.6% of my traffic)**
+<figure>
+  <img src="./assets/defense-new.webp" alt="" width="1280" height="800" />
+  <figcaption>After: The defense screen fits better without scrolling, a huge boon for mobile users (~44.6% of my traffic)</figcaption>
+</figure>
 
 ## Improving the settings experience
 
@@ -34,13 +35,15 @@ So I designed a custom component `<RadioGroup>` that wraps around native
 `<label>` and `<input type="radio">` with fancy CSS to make it look really
 inviting, somewhat like an iOS settings screen.
 
-![](./assets/settings-old.webp)
+<figure>
+  <img src="./assets/settings-old.webp" alt="" width="768" height="1024" />
+  <figcaption>Old: Most information is hidden off screen</figcaption>
+</figure>
 
-**Old: Most information is hidden off screen**
-
-![](./assets/settings-new.webp)
-
-**New: Most information is shown on one screen without clicking**
+<figure>
+  <img src="./assets/settings-new.webp" alt="" width="768" height="1024" />
+  <figcaption>New: Most information is shown on one screen without clicking</figcaption>
+</figure>
 
 Given that most users shouldn't need to adjust their language settings, and
 there are a _lot_ of languages, I decided to keep those as a select element.
@@ -59,17 +62,20 @@ navigate. I had to add a few subtle background colors, but I still kept the main
 page background as pure black. Ideally the type colors would be toned down
 somewhat in this mode too, but that's something I'll think about later, if ever.
 
-![](./assets/theme-light.webp)
+<figure>
+  <img src="./assets/theme-light.webp" alt="" width="1024" height="768" />
+  <figcaption>Light theme</figcaption>
+</figure>
 
-**Light theme**
+<figure>
+  <img src="./assets/theme-dark.webp" alt="" width="1024" height="768" />
+  <figcaption>Dark theme</figcaption>
+</figure>
 
-![](./assets/theme-dark.webp)
-
-**Dark theme**
-
-![](./assets/theme-night.webp)
-
-**Night theme**
+<figure>
+  <img src="./assets/theme-night.webp" alt="" width="1024" height="768" />
+  <figcaption>Night theme</figcaption>
+</figure>
 
 ## Translations
 
@@ -80,9 +86,10 @@ Despite its smaller population, I actually get
 [more visitors](https://plausible.io/pkmn.help) from Vietnam than Japan or even
 China!
 
-![](./assets/pokedex-vietnamese.webp)
-
-**Vietnamese translations on the Pokédex page**
+<figure>
+  <img src="./assets/pokedex-vietnamese.webp" alt="" width="1024" height="768" />
+  <figcaption>Vietnamese translations on the Pokédex page</figcaption>
+</figure>
 
 I'm so glad that the font Roboto has good international support, because there
 is seemingly no end to the typographical sins committed against the Vietnamese
