@@ -85,7 +85,7 @@ article:where(.page) {
 
       img,
       video {
-        &:where(:not([data-background="transparent"])) {
+        &:where(:not([data-background="transparent"], .border)) {
           background-color: var(--theme-image);
           border-radius: var(--rounded-large);
           outline: 1px solid var(--theme-image-edge);

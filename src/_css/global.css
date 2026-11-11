@@ -289,9 +289,7 @@ video {
 
 .border,
 .frame {
-  background: var(--theme-card);
   border-radius: 0;
-  padding: 1px;
   border: 2px solid var(--theme-border);
 }
 
