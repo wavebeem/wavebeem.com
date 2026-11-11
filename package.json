@@ -13,8 +13,8 @@
     "prebuild": "npm run format:check",
     "build": "node scripts/cli.js build",
     "generate-theme": "node scripts/generate-theme.js",
-    "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format": "prettier --write --cache .",
+    "format:check": "prettier --check --cache ."
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.6",

@@ -1,4 +1,3 @@
----
 Yeah, I made a [new design for my web page](/past-designs/). Again.
 
 This one is partially a throwback to my older themes that were more "white and
@@ -11,6 +10,7 @@ can be hard to remember that I'm just _tired_, not that I wasted my time or
 anything.
 
 ![](./assets/jade-and-lime.webp)
+
 ---
 
 I'm particularly happy with how the "card" component came out. The faded

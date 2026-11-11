@@ -90,7 +90,7 @@ a:where(:focus-visible, :hover, :active) {
 :is(em, i) {
   font-style: italic;
   font-family: var(--font-emphasis);
-  font-size-adjust: var(--font-emphasis-adjust);
+  font-size-adjust: var(--font-body-adjust);
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -162,7 +162,8 @@ pre {
 }
 
 :not(pre) > code {
-  font-size: smaller;
+  font-size: inherit;
+  font-size-adjust: var(--font-body-adjust);
   font-weight: 500;
   padding: 0em 0.25em;
   border-radius: 0.5em;
@@ -511,10 +512,6 @@ dl > dd + dt {
     transition: none !important;
     animation: none !important;
   }
-}
-
-[data-media="print"] {
-  display: hidden;
 }
 
 .page-footer--congrats {

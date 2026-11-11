@@ -1,5 +1,3 @@
----
-
 I beat [Öoo](https://store.steampowered.com/app/2721890/oo/) a few weeks ago,
 but I forgot to post my review at the time.
 

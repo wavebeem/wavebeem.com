@@ -1,5 +1,3 @@
----
-
 Curry passed away on 2024 November 24.
 
 Back in February, Curry almost died. She had stopped eating, stopped drinking,

@@ -1,5 +1,3 @@
----
-
 I really wanted to like
 [Pipistrello and the Cursed Yoyo](https://store.steampowered.com/app/2870350/Pipistrello_and_the_Cursed_Yoyo/)
 more than I did. I _love_ the old 2D Zelda games, but indie devs don't seem to

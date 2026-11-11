@@ -1,5 +1,3 @@
----
-
 A [Potemkin village](https://en.wikipedia.org/wiki/Potemkin_village), according
 to Wikipedia:
 

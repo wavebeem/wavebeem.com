@@ -1,5 +1,3 @@
----
-
 The new
 [NINJA GAIDEN: Ragebound](https://store.steampowered.com/app/2542120/NINJA_GAIDEN_Ragebound/)
 is perfection. At $25 and 12 hours, there's no chance for it to overstay its

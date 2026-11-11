@@ -1,4 +1,3 @@
----
 The [**Pokémon Type Calculator**](https://www.pkmn.help/) is
 [juicier](/blog/2025/i-need-juicier-interfaces/) than ever before. See for
 yourself in these before & after screenshots!
@@ -14,6 +13,7 @@ yourself in these before & after screenshots!
 - Darker background helps content stand out better
 
 - Types are now more colorful and easier to recognize
+
 ---
 
 <figure>

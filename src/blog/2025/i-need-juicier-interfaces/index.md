@@ -1,5 +1,3 @@
----
-
 Is anyone else sick of flat design? Humans have a remarkable ability to
 interpret lighting, and we so rarely lean on that. Maybe it's because I bounce
 back and forth between video games---where ornamental user interfaces are

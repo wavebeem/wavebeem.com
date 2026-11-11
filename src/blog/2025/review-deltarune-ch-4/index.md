@@ -1,5 +1,3 @@
----
-
 Fuck, this series is good. I was in no rush to get caught up on DELTARUNE
 considering that I'm gonna have to wait until at least 2026 to get the next
 chapter. But damn, I'm so glad to have finally finished chapters 3 and 4.

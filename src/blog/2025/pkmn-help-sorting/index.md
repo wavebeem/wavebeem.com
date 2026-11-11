@@ -1,9 +1,8 @@
----
-Recently I received a nice Pokéfan email about [Pokémon Type
-Calculator](https://www.pkmn.help/). They didn't request anything, but I decided
-to ask them if they had any suggestions. They told me that being able to sort
-the Pokédex by stats would be really useful. I agree! It wasn't too bad to
-implement either.
+Recently I received a nice Pokéfan email about
+[Pokémon Type Calculator](https://www.pkmn.help/). They didn't request anything,
+but I decided to ask them if they had any suggestions. They told me that being
+able to sort the Pokédex by stats would be really useful. I agree! It wasn't too
+bad to implement either.
 
 While I was in the code... well... I haven't done much with the site in the last
 3 months, and certain UI problems have really been weighing on me.
@@ -26,7 +25,7 @@ nearly the rest of the day changing other things in the UI.
 - The type labels are much simpler and easier to read
 
 - I very carefully generated extra darkened text shadow colors and simulated a
-text stroke to make the text readable against the type colored backgrounds
+  text stroke to make the text readable against the type colored backgrounds
 
 <figure> <img src="./assets/dex-new.webp" width="1280" height="1024">
 <figcaption>Pokédex (new)</figcaption> </figure>
@@ -35,7 +34,7 @@ text stroke to make the text readable against the type colored backgrounds
 <figcaption>Pokédex (old)</figcaption> </figure>
 
 - Added the "Sort by" select, allowing you to sort automatically, or descending
-by any stat (or BST)
+  by any stat (or BST)
 
 - Type labels are much smaller in the Pokédex
 
@@ -53,6 +52,7 @@ library for a few icons.
 <figcaption>Mobile layout</figcaption> </figure>
 
 I love the look of the large red header area on mobile especially :3
+
 ---
 
 Switching from two versions of the Roboto font to Roboto (Variable) barely

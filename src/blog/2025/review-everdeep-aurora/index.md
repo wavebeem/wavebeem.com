@@ -1,5 +1,3 @@
----
-
 [Everdeep Aurora](https://store.steampowered.com/app/2251400/Everdeep_Aurora/)
 is initially fun to dig around and explore in this digging-centric highly
 vertical exploration story game. I heard it was a Metroidvania, but honestly

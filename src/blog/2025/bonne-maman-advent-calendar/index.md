@@ -1,4 +1,3 @@
----
 This was my first year doing the [Bonne Maman](https://bonnemaman.us) advent
 calendar, and I'm so glad I did. I got another copy for my family, and we texted
 every day to chat about the flavors.
@@ -8,6 +7,7 @@ Bread "White Bread Done Right" toast (I gave the other piece to Ash). Some of
 these spreads would definitely be better suited to crackers or ice cream (or
 just straight from the jar to your mouth), if I wanted to maximize enjoyment,
 though.
+
 ---
 
 1. **Wild blueberry Maple**

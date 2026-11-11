@@ -1,5 +1,3 @@
----
-
 [Pokémon Type Calculator](https://www.pkmn.help/)
 
 ![](./assets/dex-old.webp)

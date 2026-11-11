@@ -1,5 +1,3 @@
----
-
 In case you missed it, 2025 was Ninja Gaiden's "Year of the Ninja":
 
 - [NINJA GAIDEN 2 Black](https://store.steampowered.com/app/3287520/NINJA_GAIDEN_2_Black/)

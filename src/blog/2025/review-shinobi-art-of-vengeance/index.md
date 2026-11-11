@@ -1,5 +1,3 @@
----
-
 The new
 [SHINOBI: Art of Vengeance](https://store.steampowered.com/app/2361770/SHINOBI_Art_of_Vengeance/)
 is fun, but nowhere near as

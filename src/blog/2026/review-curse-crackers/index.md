@@ -1,5 +1,3 @@
----
-
 I just finished
 [Ninja Gaiden 4](https://store.steampowered.com/app/2627260/NINJA_GAIDEN_4/),
 and I now have four games in my review backlog. So, I'm going to start by

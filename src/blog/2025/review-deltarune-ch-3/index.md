@@ -1,5 +1,3 @@
----
-
 Due to various reasons, I restarted from Chapter 1 before playing this. It's
 incredible seeing the evolution of Deltarune across these three chapters.
 Chapter 3 especially has _so much_ gameplay that's wholly different from the

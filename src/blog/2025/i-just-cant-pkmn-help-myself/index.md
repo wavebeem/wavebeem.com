@@ -1,5 +1,3 @@
----
-
 All this despite what I said in my last post. I even did a big redesign that I'm
 really proud of. I'm commissioning my pal Z.H. to work on icons and a new logo
 for the site, too. I can't wait to unveil the new icons and logo when they're

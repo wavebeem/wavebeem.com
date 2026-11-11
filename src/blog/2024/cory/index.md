@@ -1,5 +1,3 @@
----
-
 Cory was one of my closest friends. He passed away on 6 November 2024
 (Wednesday). I learned what happened on Saturday. Another group of friends went
 to visit his house before we did. Our close friend and former roommate of many

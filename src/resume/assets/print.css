@@ -26,6 +26,12 @@
 }
 
 @font-face {
+  font-family: "Iosevka Extended";
+  src: url("/fonts/Iosevka-Extended.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Merriweather";
   src: url("/fonts/Merriweather-Regular.woff2") format("woff2");
   font-display: swap;
@@ -46,6 +52,11 @@
   --font-serif: "Merriweather", var(--font-fallback-serif);
   --font-sans: "PP Mori", var(--font-fallback-sans);
   --font-heading: "Big Shoulders", var(--font-sans);
+  --font-mono:
+    "Iosevka Extended", ui-monospace, "Cascadia Code", "SFMono-Regular",
+    "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
+  /* Merriweather x-height, so code lines up with body text */
+  --font-serif-adjust: 0.555;
 
   font-family: var(--font-serif);
   line-height: 1.3;
@@ -75,18 +86,11 @@ h2 {
   margin-block: 1rem 0.5rem;
 }
 
-/* Same wave as divider.css; --mask-wavy-h comes from layoutBase.js */
 h2::before {
   content: "";
   display: block;
-  height: 8px;
-  /* margin-top: 2px; */
   margin-block: 1rem;
-  background: rgb(from currentColor r g b / 20%);
-  mask-image: var(--mask-wavy-h);
-  mask-repeat: repeat-x;
-  mask-size: 32px 8px;
-  print-color-adjust: exact;
+  border-top: 1px solid rgb(from currentColor r g b / 20%);
 }
 
 h3 {
@@ -121,6 +125,12 @@ li {
 p,
 dd {
   text-wrap: pretty;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size-adjust: var(--font-serif-adjust);
+  font-variant-ligatures: none;
 }
 
 p {
