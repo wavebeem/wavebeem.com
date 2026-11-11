@@ -1,8 +1,15 @@
 import escapeHtmlLib from "escape-html";
 
+// Eleventy's watch mode can load this module more than once (cache busting), so
+// `instanceof` fails across copies. A global symbol survives that.
+const isSafeHtml = Symbol.for("wavebeem.isSafeHtml");
+
 class SafeHtml {
   constructor(html) {
     this.html = html;
+  }
+  get [isSafeHtml]() {
+    return true;
   }
   toString() {
     return this.html;
@@ -14,7 +21,7 @@ export function unsafeHtml(value) {
 }
 
 function stringifyValue(value) {
-  if (value instanceof SafeHtml) {
+  if (value?.[isSafeHtml]) {
     return value.html;
   }
   if (Array.isArray(value)) {

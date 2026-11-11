@@ -6,7 +6,9 @@
   --font-body: "PP Mori", var(--font-fallback-main);
   --font-heading: "Big Shoulders", var(--font-fallback-main);
   --font-mono: "Iosevka Extended", var(--font-fallback-mono);
-  --font-emphasis: "Bitter", var(--font-body);
+  --font-emphasis: "Shantell Sans", var(--font-body);
+  /* PP Mori x-height, so emphasis lowercase lines up with body text */
+  --font-emphasis-adjust: 0.53;
 
   --tracking-label: 0.01em;
 
