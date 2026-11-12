@@ -88,8 +88,8 @@ article:where(.page) {
         &:where(:not([data-background="transparent"], .border)) {
           background-color: var(--theme-image);
           border-radius: var(--rounded-large);
-          outline: 1px solid var(--theme-image-edge);
-          outline-offset: -1px;
+          outline: 2px dotted var(--theme-image-edge);
+          outline-offset: -2px;
         }
       }
     }
