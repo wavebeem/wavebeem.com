@@ -1,29 +1,33 @@
 <link rel="stylesheet" href="/resume/assets/print.css" media="print" />
 
-<p hidden data-media="print">
-  <small>
-    they/them ::
+<ul hidden data-media="print" class="resume-vitals">
+  <li>they/them</li>
+  <li>
     <a href="mailto:sage@wavebeem.com">sage<wbr />@wavebeem.com</a>
-    :: <a href="https://wavebeem.com">wavebeem.com</a>
-    :: Portland, OR / Remote
-  </small>
-</p>
+  </li>
+  <li><a href="https://wavebeem.com">wavebeem.com</a></li>
+  <li>
+    <a href="https://linkedin.com/in/wavebeem/">LinkedIn</a>
+  </li>
+  <li>Portland, OR / Remote</li>
+</ul>
 
 <p>
   <span data-media="screen"><a href="/bio/">Sage Fennel Mock</a> is a</span
   ><span hidden data-media="print">A</span> frontend web developer with 14 years
   of professional experience, specializing in design systems and the web
-  platform. They love TypeScript, component and API design, accessibility,
-  color, and working closely with designers to create excellent user
-  experiences.
+  platform. They love TypeScript, component design, accessibility, color, and
+  working closely with designers to create excellent user experiences. They're
+  also a <a href="https://www.pkmn.help/">Pokémon master</a>, and the CEO of the
+  color green :-)
 </p>
 
 <h2>Work experience</h2>
 
 <h3><a href="https://zapier.com/">Zapier</a></h3>
-<small>AI workflow automation platform</small>
+<small>Workflow automation platform</small>
 <p>
-  <span>Sr. Engineer, Frontend (IC4)</span>
+  <span>Senior Engineer, Frontend (IC4)</span>
   <!-- 2023 May - 2026 Nov -->
   <small class="badge">2023&ndash;2026</small>
   <br />
@@ -37,54 +41,54 @@
   <small class="badge">2024&ndash;2026</small>
 </p>
 <ul class="card">
+  <!-- Prep: reread notes on the visual refresh rollout -->
   <li>
     <p>
-      <!-- Prep: reread notes on the visual refresh rollout -->
       Shipped three large design system releases to core product apps and led
       engineering for the last one: a company-wide visual refresh
     </p>
   </li>
+  <!-- Prep: reread notes on the token API -->
   <li>
     <p>
-      <!-- Prep: reread notes on the token API -->
       Created a semantic color token API for TypeScript and Sass, checked at
       compile time and themable at runtime with CSS variables
     </p>
   </li>
+  <!-- Prep: reread notes on the chat input API -->
   <li>
     <p>
-      <!-- Prep: reread notes on the chat input API -->
       Designed the API for an AI chat input component with attachments, toolbar
       actions, and server-side search, and directed its agent-built
       implementation; adopted by multiple product teams
     </p>
   </li>
-  <li>
+  <!-- Prep: reread notes on accessibility testing -->
+  <!-- <li>
     <p>
-      <!-- Prep: reread notes on accessibility testing -->
       Made accessibility checks automatic in component tests and CI, rebuilt
       menus to be accessible, and wrote testing guides for other teams
     </p>
-  </li>
+  </li> -->
+  <!-- Prep: reread notes on the icon library -->
   <li>
     <p>
-      <!-- Prep: reread notes on the icon library -->
       Sped up first contentful paint by designing a tree-shakable icon library
       (with a migration codemod) and moving components from CSS-in-JS to CSS
       Modules
     </p>
   </li>
-  <li>
+  <!-- <li>
     <p>
       Built AI agent workflows for the design system, including a component
       scaffolding skill, Figma MCP drafting of components from designs, docs
       that steer LLM coding agents to the new token API
     </p>
-  </li>
+  </li> -->
   <li>
     <p>
-      Rewrote component detection for an internal tool that automatically tracks
-      design system adoption across codebases
+      Rewrote React component detection logic to better track design system
+      usage
     </p>
   </li>
 </ul>
@@ -136,9 +140,9 @@
 <ul class="card">
   <li>
     <p>
-      Created <a href="https://www.npmjs.com/package/jsx-info">JSX Info</a>, an
-      open source tool that analyzes React component and prop usage across
-      codebases, to help evolve the company's component library
+      Created
+      <a href="https://www.npmjs.com/package/jsx-info">JSX Info</a> (React
+      component usage analysis) to help evolve component libraries safely
     </p>
   </li>
   <li>
@@ -148,7 +152,7 @@
         href="https://docs.meridianapps.com/hc/en-us/articles/360053058953-Map-Editor-Routing"
         >graph editing application</a
       >
-      for indoor routing, and built a real-time asset visualization
+      for indoor routing, and built a live asset visualization
       <a href="https://github.com/arubanetworks/meridian-web-sdk/"
         >SDK for the web</a
       >
@@ -156,11 +160,9 @@
   </li>
   <li>
     <p>
-      Proposed, designed, and implemented a real-time
-      <a href="/resume/assets/meridian-editor-disjoint.webp"
-        >graph coloring algorithm</a
-      >
-      to address a common customer pain point around accidental disjoint
+      Proposed, designed, and implemented
+      <a href="/resume/assets/meridian-editor-disjoint.webp">graph coloring</a>
+      to address a common customer issue around accidental disjoint
       <a href="/resume/assets/meridian-editor-routing.webp">graph creation</a>
     </p>
   </li>
@@ -208,7 +210,6 @@
 <ul class="card">
   <li>
     <p>
-      Widely shared by Pokémon fans:
       <a href="https://plausible.io/pkmn.help?period=12mo"
         >4.9M visits in the past 12&nbsp;months</a
       >
@@ -229,7 +230,7 @@
 </ul>
 
 <h3>Other projects</h3>
-<dl class="card">
+<dl class="card resume-inline">
   <dt>
     <a
       href="https://color-combos.wavebeem.com/?fg=oklch%2850%25+50%25+180%29%0Ahsl%28270+50%25+50%25%29&bg=%23fff%0Aantiquewhite&group_by=background"
@@ -260,17 +261,73 @@
   </dt>
   <dd>Parser combinator library for TypeScript with strong type inference</dd>
 
-  <dt>
+  <!-- <dt>
     <a href="https://squiggle.wavebeem.com/">Squiggle</a>
   </dt>
-  <dd>Compile-to-JS programming language</dd>
+  <dd>Compile-to-JS programming language</dd> -->
 </dl>
+
+<h2>Writing</h2>
+
+<ul class="menu">
+  <li>
+    <a href="https://www.wavebeem.com/blog/2025/stop-giving-me-the-finger/"
+      >Argument against the pointer cursor</a
+    >
+  </li>
+  <li>
+    <a href="https://www.wavebeem.com/blog/2020/tagged-unions/"
+      >Tagged unions in JavaScript</a
+    >
+  </li>
+  <li>
+    <a href="https://www.wavebeem.com/blog/2022/why-i-dont-like-usestate/"
+      >Why I don't like useState</a
+    >
+  </li>
+  <li>
+    <a href="https://www.wavebeem.com/blog/2025/js-for-of-loop/"
+      >In defense of the <q>for...of</q> Loop</a
+    >
+  </li>
+  <!-- <li>
+    <a href="https://www.wavebeem.com/blog/2025/imagemagick/"
+      >Image editing with ImageMagick</a
+    >
+  </li> -->
+  <!-- <li>
+    <a href="https://www.wavebeem.com/blog/2024/querying-shadow-dom/"
+      >How to query shadow DOM</a
+    >
+  </li> -->
+  <!-- <li>
+    <a href="http://localhost:1312/blog/2018/better-bash-7-tips/"
+      >7 tips for better bash</a
+    >
+  </li> -->
+  <li>
+    <a href="https://www.wavebeem.com/blog/2024/js-context-managers/"
+      >JS context managers</a
+    >
+  </li>
+  <li>
+    <a
+      href="https://www.wavebeem.com/blog/2024/js-proxy-and-private-properties/"
+      >JS proxy and private properties</a
+    >
+  </li>
+  <!-- <li>
+    <a href="https://www.wavebeem.com/blog/2024/spoilers-element-no-js/"
+      >HTML <q>spoilers</q> element with no JS</a
+    >
+  </li> -->
+</ul>
 
 <h2>Key technical skills</h2>
 
 <dl class="card">
   <dt>Design systems</dt>
-  <!-- Prep: reread Mise-en-Mode for theming -->
+  <!-- Prep: skim Mise-en-Mode section 1 for theming -->
   <dd>Design tokens, theming, accessibility (WCAG), Storybook, Figma</dd>
 
   <dt>Frontend</dt>
@@ -281,20 +338,14 @@
 
   <dt>Web platform</dt>
   <dd>
-    iframes, <code>postMessage</code>, third-party cookies, CSP, Shadow DOM
+    iframes, <code>postMessage</code>, third-party cookies, CSP, shadow DOM
   </dd>
 
   <dt>Programming languages</dt>
-  <dd>
-    TypeScript, JavaScript, HTML, CSS (<code>light-dark()</code>, relative
-    colors, OKLCH, <code>:has()</code>), Sass, Python, Bash
-  </dd>
+  <dd>TypeScript, JavaScript, HTML, modern CSS, Sass, Python, Ruby, Bash</dd>
 
   <dt>Language tooling</dt>
   <dd>Parsers, compilers, codemods (jscodeshift), AST analysis (ts-morph)</dd>
-
-  <dt>AI &amp; LLM tooling</dt>
-  <dd>Claude Code, agent skills, MCP server development</dd>
 
   <dt>Testing &amp; tooling</dt>
   <dd>Playwright, GitLab CI, npm publishing</dd>

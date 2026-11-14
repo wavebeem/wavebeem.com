@@ -1,13 +1,19 @@
+/* For backwards compatibility, menu can either take direct <a> children, or be
+placed on a <ul> */
 .menu {
   display: grid;
   gap: var(--card-gap);
+  padding: 0;
 
-  > a {
-    display: flex;
-    align-items: center;
+  li {
+    display: contents;
+  }
+
+  a {
     gap: 16px;
     padding: 10px 16px;
     line-height: 1.25;
+    display: block;
 
     border-radius: var(--rounded-large);
     background: var(--theme-card);
@@ -37,14 +43,20 @@
       outline: var(--theme-focus-outline);
       outline-offset: var(--theme-focus-outline-offset);
     }
+
+    small {
+      font-weight: 400;
+    }
   }
 
+  :where(li:has(> a)) + li > a,
   :where(a) + a {
     border-top-left-radius: var(--rounded-xsmall);
     border-top-right-radius: var(--rounded-xsmall);
   }
 
-  a:has(+ a) {
+  li:has(+ li > a) > a,
+  > a:has(+ a) {
     border-bottom-left-radius: var(--rounded-xsmall);
     border-bottom-right-radius: var(--rounded-xsmall);
   }

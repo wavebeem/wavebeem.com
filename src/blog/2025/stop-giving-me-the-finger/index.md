@@ -169,7 +169,7 @@ change on hover.
 Much to my chagrin, every single clickable element on this page (except the text
 input) uses the pointer cursor (👆).
 
-### True Links
+### True links
 
 <figure>
   <img

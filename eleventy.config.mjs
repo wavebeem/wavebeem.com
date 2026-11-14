@@ -3,6 +3,9 @@ import { compileCss } from "./src/lib/compileCss.js";
 import { compare } from "./src/lib/compare.js";
 
 export default function configureEleventy(eleventyConfig) {
+  // TODO: Set default timezone when Eleventy 4 is out
+  // https://github.com/11ty/buildawesome/issues/3668#issuecomment-6643969700
+
   eleventyConfig.setLibrary("md", markdownIt);
 
   // stops an initial "---" (<hr>) from misparsing as frontmatter

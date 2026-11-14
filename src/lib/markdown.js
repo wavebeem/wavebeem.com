@@ -15,6 +15,12 @@ export const markdownIt = new MarkdownIt({
   highlightInlineCode: true,
 });
 
+const markdownItInline = new MarkdownIt({
+  html: true,
+  linkify: false,
+  typographer: true,
+});
+
 export function renderMarkdownInline(content) {
-  return markdownIt.renderInline(content || "");
+  return markdownItInline.renderInline(content || "");
 }

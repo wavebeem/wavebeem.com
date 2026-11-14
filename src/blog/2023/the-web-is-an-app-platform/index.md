@@ -27,7 +27,7 @@ perform side-effects, enabling the creation of web apps.
 This gave the web everything necessary to replace paper forms. The ECMAScript
 open standard for JS released only two years later.
 
-The _XMLHttpRequest_ standard released in 2006, marking the beginning of
+The `XMLHttpRequest` standard released in 2006, marking the beginning of
 client-side web apps. At 17 years, this API has been around for over 50% of the
 web's life.
 
