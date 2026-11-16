@@ -28,7 +28,7 @@
     "sharp": "^0.35.3"
   },
   "devDependencies": {
-    "@material/material-color-utilities": "^0.4.0",
+    "@materialx/material-color-utilities": "^0.4.8",
     "npm-check": "^6.0.1",
     "prettier": "^3.9.6"
   }

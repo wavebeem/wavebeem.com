@@ -9,11 +9,12 @@ import path from "node:path";
 import {
   DynamicScheme,
   Hct,
+  SpecVersion,
   TonalPalette,
   Variant,
   argbFromHex,
   hexFromArgb,
-} from "@material/material-color-utilities";
+} from "@materialx/material-color-utilities";
 
 // Only subjective input. Everything else derives from this.
 const seedHex = "#7bd675";
@@ -47,7 +48,9 @@ const seedHex = "#7bd675";
 //
 // ## FRUIT_SALAD
 // Same as RAINBOW.
-const variant = Variant.TONAL_SPOT;
+const variant = Variant.CONTENT;
+
+const specVersion = SpecVersion.SPEC_2025;
 
 // -1 to 1, 0 = standard.
 const contrastLevel = 0;
@@ -74,12 +77,14 @@ function buildSchemes(sourceColorHct) {
     sourceColorHct,
     variant,
     contrastLevel,
+    specVersion,
     isDark: false,
   });
   const dark = new DynamicScheme({
     sourceColorHct,
     variant,
     contrastLevel,
+    specVersion,
     isDark: true,
   });
   return { light, dark };
