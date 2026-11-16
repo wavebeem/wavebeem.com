@@ -133,8 +133,8 @@ html:has(.nav-menu[open]) {
   overflow-y: auto;
   overscroll-behavior: contain;
   box-shadow:
-    0 0 16px rgb(from var(--theme-shadow) r g b / 40%),
-    0 0 32px rgb(from var(--theme-shadow) r g b / 20%);
+    0 0 16px rgb(from var(--theme-shadow) r g b / 10%),
+    0 0 32px rgb(from var(--theme-shadow) r g b / 5%);
 
   translate: 100% 0;
   transition:

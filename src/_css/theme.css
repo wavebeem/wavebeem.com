@@ -21,8 +21,8 @@
   --theme-redact-bg: var(--md-inverse-surface);
   --theme-redact-text: var(--md-inverse-on-surface);
 
-  --theme-header-bg: var(--md-background);
-  --theme-header-text: var(--md-on-background);
+  --theme-header-bg: var(--theme-page-bg);
+  --theme-header-text: var(--theme-page-text);
   --theme-sidebar-bg: var(--md-surface);
   --theme-sidebar-text: var(--md-on-surface);
 
@@ -51,10 +51,7 @@
     var(--md-surface-container-lowest),
     var(--md-background)
   );
-  --theme-page-text: light-dark(
-    var(--md-on-surface-container-lowest),
-    var(--md-on-background)
-  );
+  --theme-page-text: light-dark(var(--md-on-surface), var(--md-on-background));
 
   --theme-scrollbar: var(--md-primary);
 
