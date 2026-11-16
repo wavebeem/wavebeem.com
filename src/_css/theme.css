@@ -47,8 +47,14 @@
   --theme-shadow: var(--md-shadow);
   --theme-scrim: var(--md-scrim);
 
-  --theme-page-bg: var(--md-background);
-  --theme-page-text: var(--md-on-background);
+  --theme-page-bg: light-dark(
+    var(--md-surface-container-lowest),
+    var(--md-background)
+  );
+  --theme-page-text: light-dark(
+    var(--md-on-surface-container-lowest),
+    var(--md-on-background)
+  );
 
   --theme-scrollbar: var(--md-primary);
 
@@ -61,7 +67,7 @@
   --theme-emphasis-text: var(--md-custom-emphasis);
 
   --theme-divider: var(--md-outline-variant);
-  --theme-divider-decorative: var(--md-surface-container-highest);
+  --theme-divider-decorative: var(--md-surface-container-high);
   --theme-border: var(--md-outline);
   --theme-border-faint: rgb(from var(--md-outline) r g b / 16%);
 
