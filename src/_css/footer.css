@@ -48,7 +48,7 @@
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4px 32px;
+    gap: 2px;
     align-content: start;
 
     @media (width <= 21rem) {
@@ -58,9 +58,13 @@
 
   a {
     display: block;
+    font-weight: 600;
+    border-radius: var(--rounded-xsmall);
+    background: var(--theme-card);
     color: var(--theme-link);
     font-size: var(--font-size-small);
     padding: 4px 8px;
     text-decoration-line: none;
+    text-align: center;
   }
 }
