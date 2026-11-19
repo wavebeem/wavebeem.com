@@ -9,6 +9,7 @@ import path from "node:path";
 import {
   DynamicScheme,
   Hct,
+  Platform,
   SpecVersion,
   TonalPalette,
   Variant,
@@ -49,8 +50,8 @@ const seedHex = "#7bd675";
 // ## FRUIT_SALAD
 // Same as RAINBOW.
 const variant = Variant.FIDELITY;
-
 const specVersion = SpecVersion.SPEC_2025;
+const platform = Platform.PHONE;
 
 // -1 to 1, 0 = standard.
 const contrastLevel = 0;
@@ -78,6 +79,7 @@ function buildSchemes(sourceColorHct) {
     variant,
     contrastLevel,
     specVersion,
+    platform,
     isDark: false,
   });
   const dark = new DynamicScheme({
@@ -85,6 +87,7 @@ function buildSchemes(sourceColorHct) {
     variant,
     contrastLevel,
     specVersion,
+    platform,
     isDark: true,
   });
   return { light, dark };
