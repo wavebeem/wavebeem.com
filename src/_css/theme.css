@@ -89,8 +89,8 @@
   --theme-icon-badge-text: var(--md-on-primary-container);
 
   /* Same --theme-box collision as --theme-card */
-  --theme-icon-button-badge: var(--md-surface-container-highest);
-  --theme-icon-button-badge-text: var(--md-on-surface);
+  --theme-icon-button-badge: var(--md-secondary-container);
+  --theme-icon-button-badge-text: var(--md-on-secondary-container);
   --theme-card: light-dark(
     var(--md-surface-container),
     var(--md-surface-container-low)

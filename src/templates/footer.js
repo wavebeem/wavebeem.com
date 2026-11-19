@@ -13,7 +13,7 @@ export function footer() {
               ${group.map(
                 (item) => html`
                   <li>
-                    <a href="${item.url}">${item.title}</a>
+                    <a href="${item.url}">${item.icon} ${item.title}</a>
                   </li>
                 `,
               )}
@@ -23,7 +23,7 @@ export function footer() {
       </nav>
       <div>
         <small>
-          &copy; ${site.foundedYear}&ndash;${new Date().getFullYear()}
+          &copy; ${site.foundedYear}&ndash;${site.buildDate.getFullYear()}
           ${site.name}
         </small>
       </div>

@@ -48,7 +48,7 @@ const seedHex = "#7bd675";
 //
 // ## FRUIT_SALAD
 // Same as RAINBOW.
-const variant = Variant.CONTENT;
+const variant = Variant.FIDELITY;
 
 const specVersion = SpecVersion.SPEC_2025;
 

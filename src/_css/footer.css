@@ -45,26 +45,20 @@
   ul {
     list-style: none;
     margin: 0;
+    margin-inline: -8px;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
     align-content: start;
-
-    @media (width <= 21rem) {
-      grid-template-columns: 1fr;
-    }
   }
 
   a {
-    display: block;
     font-weight: 600;
-    border-radius: var(--rounded-xsmall);
-    background: var(--theme-card);
+    border-radius: var(--rounded-medium);
     color: var(--theme-link);
-    font-size: var(--font-size-small);
-    padding: 4px 8px;
+    padding: 12px 8px;
     text-decoration-line: none;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 1ch;
   }
 }

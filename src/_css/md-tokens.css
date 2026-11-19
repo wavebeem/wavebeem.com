@@ -1,7 +1,7 @@
 /**
  * GENERATED. Don't hand-edit, regenerate with: npm run generate-theme
  *
- * Seed: #7bd675  Variant: CONTENT  Contrast: 0
+ * Seed: #7bd675  Variant: FIDELITY  Contrast: 0
  *
  * Every Material 3 color role, as --md-<kebab-case-role-name>. See
  * theme.css for how this site's --theme-* tokens map to these.
@@ -12,7 +12,7 @@
 
   --md-primary-palette-key-color: light-dark(#2e8832, #2e8832);
   --md-secondary-palette-key-color: light-dark(#5d8057, #5d8057);
-  --md-tertiary-palette-key-color: light-dark(#00d6e1, #00d6e1);
+  --md-tertiary-palette-key-color: light-dark(#ffaca8, #ffaca8);
   --md-neutral-palette-key-color: light-dark(#737970, #737970);
   --md-neutral-variant-palette-key-color: light-dark(#707a6b, #707a6b);
   --md-error-palette-key-color: light-dark(#de3730, #de3730);
@@ -55,15 +55,15 @@
   --md-secondary-fixed-dim: light-dark(#b8dfaf, #b8dfaf);
   --md-on-secondary-fixed: light-dark(#264724, #264724);
   --md-on-secondary-fixed-variant: light-dark(#42643e, #42643e);
-  --md-tertiary: light-dark(#006a70, #a7f9ff);
-  --md-tertiary-dim: light-dark(#005d62, #48f2fd);
-  --md-on-tertiary: light-dark(#e6fdff, #006166);
-  --md-tertiary-container: light-dark(#48f2fd, #48f2fd);
-  --md-on-tertiary-container: light-dark(#00575c, #00575c);
-  --md-tertiary-fixed: light-dark(#48f2fd, #48f2fd);
-  --md-tertiary-fixed-dim: light-dark(#30e4ef, #30e4ef);
-  --md-on-tertiary-fixed: light-dark(#004347, #004347);
-  --md-on-tertiary-fixed-variant: light-dark(#006267, #006267);
+  --md-tertiary: light-dark(#8d4c4a, #ffbfbc);
+  --md-tertiary-dim: light-dark(#7f413f, #feaba7);
+  --md-on-tertiary: light-dark(#fff7f6, #6f3432);
+  --md-tertiary-container: light-dark(#feaba7, #feaba7);
+  --md-on-tertiary-container: light-dark(#632b2a, #632b2a);
+  --md-tertiary-fixed: light-dark(#feaba7, #feaba7);
+  --md-tertiary-fixed-dim: light-dark(#ef9e9a, #ef9e9a);
+  --md-on-tertiary-fixed: light-dark(#491717, #491717);
+  --md-on-tertiary-fixed-variant: light-dark(#6e3432, #6e3432);
   --md-error: light-dark(#bb1b1b, #ff7164);
   --md-error-dim: light-dark(#a90810, #da342e);
   --md-on-error: light-dark(#fff7f6, #4a0002);

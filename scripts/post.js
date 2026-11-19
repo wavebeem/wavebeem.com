@@ -43,6 +43,17 @@ async function ask(prompt) {
   return resp.trim();
 }
 
+async function move(srcDir, destDir) {
+  // Windows is horrible at allowing `rename`... So try that first but fall back
+  // to "copy then delete"
+  try {
+    await fs.rename(srcDir, destDir);
+  } catch (err) {
+    await fs.cp(srcDir, destDir, { recursive: true, force: true });
+    await fs.rm(srcDir, { recursive: true, force: true });
+  }
+}
+
 async function createDraft() {
   const title = await ask("Title: ");
   if (!title) {
@@ -93,7 +104,7 @@ async function promoteDraft(slug) {
 
   await fs.mkdir(path.join(blogDir, year), { recursive: true });
   try {
-    await fs.rename(srcDir, destDir);
+    await move(srcDir, destDir);
   } catch (err) {
     fail(
       `Couldn't move src/drafts/${slug} to src/blog/${year}/${slug}: ${err.message}`,
