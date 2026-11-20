@@ -32,12 +32,12 @@ export function layoutBase({ title, description = "" }, ...children) {
         <!-- Keep in sync with --md-primary in md-tokens.css. -->
         <meta
           name="theme-color"
-          content="#3c6839"
+          content="#c6edbd"
           media="(prefers-color-scheme: light)"
         />
         <meta
           name="theme-color"
-          content="#a2d399"
+          content="#224320"
           media="(prefers-color-scheme: dark)"
         />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
