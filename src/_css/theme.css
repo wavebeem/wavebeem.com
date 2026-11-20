@@ -23,8 +23,8 @@
 
   --theme-header-bg: var(--theme-page-bg);
   --theme-header-text: var(--theme-page-text);
-  --theme-sidebar-bg: var(--md-surface);
-  --theme-sidebar-text: var(--md-on-surface);
+  --theme-sidebar-bg: var(--theme-page-bg);
+  --theme-sidebar-text: var(--theme-page-text);
 
   --theme-header-card: rgb(from var(--md-outline-variant) r g b / 8%);
   --theme-header-hover: rgb(from var(--md-primary) r g b / 12%);

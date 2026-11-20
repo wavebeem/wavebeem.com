@@ -46,7 +46,7 @@ html:has(.nav-menu[open]) {
   display: flex;
   outline-offset: 4px;
   border-radius: var(--rounded-small);
-  color: var(--theme-accent);
+  color: inherit;
 
   @media (width >= 70rem) {
     height: 32px;
