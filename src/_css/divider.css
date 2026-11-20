@@ -3,6 +3,19 @@
    for the stroke, no clipped peaks. SVGs sample extra points past each
    edge so mask-repeat seams land mid-stroke, not at a cap.
    --mask-wavy-h/-v: layoutBase.js, inherited from <html> */
+
+hr {
+  --divider-gap: 0px;
+}
+
+.divider-wavy {
+  --divider-gap: 16px;
+}
+
+.divider-wavy-vertical {
+  --divider-gap: 16px;
+}
+
 hr,
 .divider-wavy {
   display: block;
@@ -12,8 +25,8 @@ hr,
   background: var(--theme-divider-decorative);
   background: linear-gradient(
     to right,
-    transparent 0 8px,
-    var(--theme-divider-decorative) 0 calc(100% - 8px),
+    transparent 0 var(--divider-gap),
+    var(--theme-divider-decorative) 0 calc(100% - var(--divider-gap)),
     transparent 0
   );
   mask-image: var(--mask-wavy-h);
@@ -28,8 +41,8 @@ hr,
   background: var(--theme-divider-decorative);
   background: linear-gradient(
     to bottom,
-    transparent 0 8px,
-    var(--theme-divider-decorative) 0 calc(100% - 8px),
+    transparent 0 var(--divider-gap),
+    var(--theme-divider-decorative) 0 calc(100% - var(--divider-gap)),
     transparent 0
   );
   mask-image: var(--mask-wavy-v);

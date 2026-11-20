@@ -2,7 +2,7 @@ html:has(.nav-menu[open]) {
   overflow: hidden;
 }
 
-.header + hr {
+.header + .divider-wavy {
   margin-block: -4px -8px;
 
   @media (width >= 70rem) {

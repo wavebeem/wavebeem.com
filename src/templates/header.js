@@ -46,6 +46,6 @@ export function header() {
         </div>
       </dialog>
     </header>
-    <hr />
+    <div class="divider-wavy"></div>
   `;
 }
